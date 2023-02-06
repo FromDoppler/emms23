@@ -1,0 +1,71 @@
+version: '3'
+services:
+
+  web:
+    build:
+      context: ./config/php
+    container_name: web_${COMPOSE_PROJECT_NAME}
+    environment:
+      MYSQL_HOST: ${MYSQL_HOST}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+      ID_SPREADSHEET: ${ID_SPREADSHEET}
+      ACCOUNT_DOPPLER: ${ACCOUNT_DOPPLER}
+      API_KEY_DOPPLER: ${API_KEY_DOPPLER}
+      ACCOUNT_RELAY: ${ACCOUNT_RELAY}
+      API_KEY_RELAY: ${API_KEY_RELAY}
+      CONSUMER_KEY: ${CONSUMER_KEY}
+      CONSUMER_SECRET: ${CONSUMER_SECRET}
+      OATH_TOKEN: ${OATH_TOKEN}
+      OATH_TOKEN_SECRET : ${OATH_TOKEN_SECRET}
+      BEARER_TOKEN : ${BEARER_TOKEN}
+
+    volumes:
+      - ${REPO}:/var/www/html
+    restart: always
+    depends_on:
+      - db
+
+  db:
+    container_name: db_${COMPOSE_PROJECT_NAME}
+    image: mysql
+    #command: --lower_case_table_names=1
+    volumes:
+      - ./db/:/docker-entrypoint-initdb.d
+      - ./db/data:/var/lib/mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+        - ${MYSQL_PORT}:3306
+    restart: always
+
+  phpmyadmin:
+    container_name: phpmyadmin_${COMPOSE_PROJECT_NAME}
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_USER:  ${PMA_USER}
+    ports:
+      - ${PMA_PORT}:80
+    restart: always
+    depends_on:
+      - db
+
+  nginx:
+    build:
+      context: ./config/nginx
+      args:
+        WEB_PORT: ${WEB_PORT}
+    container_name: nginx_${COMPOSE_PROJECT_NAME}
+    depends_on:
+      - web
+    ports:
+      - ${WEB_PORT}:80
+    volumes:
+      - ${REPO}:/var/www/html
+      - ${NGINX_LOG_DIR}:/var/log/nginx
+      - ${CERTS_DIR}:/etc/letsencrypt
+    restart: always
