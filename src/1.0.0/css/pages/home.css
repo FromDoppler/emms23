@@ -1,0 +1,169 @@
+/* Hero */
+
+.emms__home__hero {
+    background: #000 url("../../../img/back-hero--dk.png") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    padding: 178px 0 108px 0;
+    animation: hero-back 3s;
+}
+
+@keyframes hero-back {
+    0% {
+        background-size: 120%;
+    }
+
+    100% {
+        background-size: 100%;
+    }
+}
+
+.emms__home__hero__title {
+    max-width: 610px;
+    width: 90%;
+    margin: 0 auto 89px auto;
+    text-align: center;
+}
+
+.emms__home__hero__title h1 {
+    font-size: 50px;
+    line-height: 52px;
+    font-weight: 700;
+    color: #fff;
+
+}
+
+.emms__home__hero__title h1 em {
+    font-size: 14px;
+    line-height: 20px;
+    font-style: normal;
+    display: block;
+    margin: 0 0 20px 0;
+}
+
+.emms__home__hero__title h2 {
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #fff;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    padding: 15px 0;
+    margin: 15px 0;
+}
+
+.emms__home__hero__title p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+}
+
+
+/* Central Video */
+
+.emms__home .emms__centralvideo .emms__background-a {
+    width: 1000px;
+    height: 900px;
+    position: absolute;
+    transform: translate(-72%, 2%);
+}
+
+
+/* Speakers */
+
+.emms__home__speakers {
+    text-align: center;
+    padding: 58px 0 51px 0;
+    position: relative;
+}
+
+.emms__home__speakers h2 {
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0 0 57px 0;
+    animation-delay: .1s;
+}
+
+.emms__home__speakers small {
+    font-size: 16px;
+    line-height: 22px;
+    color: #333333;
+    display: block;
+    margin: 0 0 36px 0;
+}
+
+.emms__home__speakers .emms__background-a {
+    width: 1000px;
+    height: 920px;
+    position: absolute;
+    transform: translate(82%, -60%);
+    right: 0;
+}
+
+
+/* Users Comments */
+
+.emms__home .emms__userscomments {
+    padding: 60px 0 150px 0;
+}
+
+
+/* Frequent questions */
+
+.emms__home .emms__frequentquestions .emms__background-a {
+    width: 1002px;
+    height: 919px;
+    position: absolute;
+    transform: translate(-72%, -5%) rotate(180deg);
+}
+
+
+/* --------------------------------------------------- Responsive --------------------------------------------------- */
+
+
+@media(max-width:992px) {
+    .emms__home .emms__centralvideo .emms__background-a {
+        width: 434px;
+        height: 400px;
+        transform: translate(-74%, -72%);
+    }
+
+    .emms__home__speakers .emms__background-a {
+        display: none;
+    }
+}
+
+@media(max-width:620px) {
+    .emms__home__hero {
+        background: #000 url("../../img/back-hero--mb.png") no-repeat;
+        background-size: 100%;
+        background-position: center;
+        padding: 120px 0 165px 0;
+    }
+
+    .emms__home__hero__title {
+        margin: 0 auto 50px auto;
+    }
+
+    .emms__home__hero__title h1 {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .emms__home__hero__title h2 {
+        font-size: 16px;
+    }
+
+    .emms__home__speakers {
+        text-align: center;
+        padding: 80px 0;
+    }
+
+    .emms__home .emms__frequentquestions .emms__background-a {
+        width: 434px;
+        height: 399px;
+        transform: translate(-79%, -80%) rotate(0deg);
+    }
+}
