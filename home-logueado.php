@@ -9,7 +9,7 @@ require_once('././config.php');
     <?php include_once('././src/components/head.php'); ?>
 </head>
 
-<body class="emms__home">
+<body class="emms__home emms__home-logueado">
 
     <!-- Header -->
     <header class="emms__header">
@@ -74,7 +74,8 @@ require_once('././config.php');
                                 <p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <a href="">Regístrate gratis →</a>
+                                    <a href="">Acceder →</a>
+                                    <p class="orange">YA ESTÁS REGISTRADO</p>
                                 </div>
                             </div>
                         </li>
@@ -178,9 +179,9 @@ require_once('././config.php');
                     <span></span>
                     <video src="src/img/video-ejemplo.mp4" controls></video>
                 </div>
-                <div class="emms__centralvideo__cta emms__fade-in">
+                <!-- <div class="emms__centralvideo__cta emms__fade-in">
                     <a href="" class="emms__cta">REGÍSTRATE AHORA</a>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -271,7 +272,7 @@ require_once('././config.php');
                     </ul>
                 </div>
                 <small class="emms__fade-in">Próximamente anunciaremos los Speakers 2023.<br>Regístrate gratis ahora y descubre antes que nadie las últimas novedades del EMMS.</small>
-                <a href="" class="emms__cta emms__fade-in">RESERVA TU LUGAR</a>
+                <!-- <a href="" class="emms__cta emms__fade-in">RESERVA TU LUGAR</a> -->
             </div>
             <div class="emms__background-a"></div>
         </section>
