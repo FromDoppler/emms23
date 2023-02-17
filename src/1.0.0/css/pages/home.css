@@ -91,7 +91,10 @@
     line-height: 22px;
     color: #333333;
     display: block;
-    margin: 0 0 36px 0;
+}
+
+.emms__home__speakers .emms__cta{
+    margin: 36px 0 0 0;
 }
 
 .emms__home__speakers .emms__background-a {
