@@ -1,0 +1,96 @@
+.emms__userscomments {
+    text-align: center;
+}
+
+.emms__userscomments h2 {
+    font-size: 40px;
+    line-height: 42px;
+    font-weight: 800;
+    color: #333333;
+    margin: 0 0 59px 0;
+    animation-delay: .1s;
+}
+
+.emms__userscomments .emms__userscomments__list {
+    display: flex;
+    justify-content: space-between;
+    animation-delay: .2s;
+}
+
+.emms__userscomments .emms__userscomments__list--mb {
+    display: none;
+}
+
+.emms__userscomments .emms__userscomments__list .emms__userscomments__list__item {
+    width: 24%;
+    padding: 26px 0 107px 0;
+    border-top: solid 2px #BD7AFF;
+    border-bottom: solid 2px #BD7AFF;
+    position: relative;
+}
+
+.emms__userscomments .emms__userscomments__list .emms__userscomments__list__item p {
+    font-size: 18px;
+    line-height: 30px;
+    font-style: italic;
+    color: #333333;
+}
+
+.emms__userscomments .emms__userscomments__list .emms__userscomments__list__item p em {
+    font-weight: 600;
+    font-style: normal;
+    display: block;
+    position: absolute;
+    bottom: 17px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.emms__userscomments .emms__userscomments__list .emms__userscomments__list__item p em img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* ---------------------------------------------- Responsive ---------------------------------------------- */
+
+
+@media(max-width:992px) {
+
+    .emms__userscomments .emms__userscomments__list--mb {
+        display: block;
+        max-width: 620px;
+        margin: 0 auto;
+    }
+
+    .emms__userscomments .emms__userscomments__list--dk {
+        display: none;
+    }
+
+    .emms__userscomments .emms__userscomments__list .emms__userscomments__list__item {
+        width: 100%;
+    }
+
+    .emms__userscomments .emms__userscomments__list--mb.main-carousel .flickity-button.flickity-prev-next-button {
+        display: none;
+    }
+
+    .emms__userscomments .emms__userscomments__list--mb.main-carousel .flickity-page-dots .dot {
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media(max-width:620px) {
+
+    .emms__userscomments .emms__userscomments__list--mb {
+        max-width: 280px;
+    }
+
+    .emms__userscomments h2 {
+        font-size: 30px;
+        line-height: 36px;
+        margin: 0 0 47px 0;
+    }
+}
