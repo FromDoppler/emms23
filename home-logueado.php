@@ -185,6 +185,9 @@ require_once('././config.php');
             </div>
         </section>
 
+        <!-- Separator -->
+        <div class="emms__separator mb"></div>
+
         <!-- Event numbers -->
         <section class="emms__eventnumbers" id="boxNumber">
             <div class="emms__container--lg">

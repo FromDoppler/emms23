@@ -36,6 +36,7 @@
 
 .emms__centralvideo__video video {
     width: 100%;
+    background: #000;
 }
 
 .emms__centralvideo__video span {
