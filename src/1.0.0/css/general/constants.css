@@ -14,7 +14,7 @@ body {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background: #f6f6f6;
     overflow-x: hidden;
 }
@@ -61,7 +61,7 @@ p {
 
 /* General CTA */
 
-.emms__cta{
+.emms__cta {
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
@@ -73,13 +73,13 @@ p {
     transition-duration: .2s;
 }
 
-.emms__cta:hover{
+.emms__cta:hover {
     background: #026C3C;
     transition-duration: .2s;
 }
 
-@media(max-width:620px){
-    .emms__cta{
+@media(max-width:620px) {
+    .emms__cta {
         display: block;
     }
 }
@@ -132,7 +132,7 @@ p {
 
 /* Backgrounds */
 
-.emms__background-a{
+.emms__background-a {
     background: url("../../../img/background-a.png") no-repeat;
     background-size: contain;
     background-position: center;
@@ -141,7 +141,7 @@ p {
 
 /* Separator */
 
-.emms__separator{
+.emms__separator {
     background: url("../../../img/icons/icon-separator.svg") no-repeat;
     background-size: contain;
     width: 21px;
@@ -150,13 +150,32 @@ p {
 }
 
 
-/* Flickity styles */
+/* Hide in responsive */
 
-.flickity-prev-next-button .flickity-button-icon{
+.mb {
     display: none;
 }
 
-.flickity-prev-next-button.previous{
+@media(max-width:620px) {
+    .mb {
+        display: block;
+    }
+}
+
+@media(max-width:620px) {
+    .dk {
+        display: none;
+    }
+}
+
+
+/* Flickity styles */
+
+.flickity-prev-next-button .flickity-button-icon {
+    display: none;
+}
+
+.flickity-prev-next-button.previous {
     background: url("../../../img/icons/icon-carousel-arrow-left.svg") no-repeat;
     background-size: contain;
     background-position: center;
@@ -166,7 +185,7 @@ p {
     height: 29px;
 }
 
-.flickity-prev-next-button.next{
+.flickity-prev-next-button.next {
     background: url("../../../img/icons/icon-carousel-arrow-right.svg") no-repeat;
     background-size: contain;
     background-position: center;
@@ -176,11 +195,11 @@ p {
     height: 29px;
 }
 
-.flickity-page-dots{
+.flickity-page-dots {
     bottom: -55px;
 }
 
-.flickity-page-dots .dot{
+.flickity-page-dots .dot {
     position: relative;
     width: 18px;
     height: 18px;
@@ -191,7 +210,7 @@ p {
     box-shadow: 0px 2px 8px #000;
 }
 
-.flickity-page-dots .dot.is-selected::after{
+.flickity-page-dots .dot.is-selected::after {
     content: "";
     position: absolute;
     left: 2.5px;
