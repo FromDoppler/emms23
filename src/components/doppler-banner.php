@@ -20,7 +20,7 @@
                     <li>Clases teóricas y prácticas</li>
                     <li>Gratis</li>
                 </ul>
-                <a href="https://academy.fromdoppler.com/bootcamp/?origin=emms-2023" target="_blank" class="emms__cta emms__fade-in">ACCEDE AHORA</a>
+                <a href="https://academy.fromdoppler.com/bootcamp/?utm_source=emmsecom&utm_medium=goemms&utm_campaign=et-sitio-registrado-emmsecom-23" target="_blank" class="emms__cta emms__fade-in">ACCEDE AHORA</a>
             </div>
         </div>
     </div>
