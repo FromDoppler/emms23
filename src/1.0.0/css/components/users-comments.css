@@ -53,6 +53,19 @@
     margin: 0 auto;
 }
 
+/* Dark Version */
+
+.emms__userscomments.emms__userscomments--dark{
+    background: #310E44;
+    padding: 77px 0 107px 0;
+}
+
+.emms__userscomments.emms__userscomments--dark h2,
+.emms__userscomments.emms__userscomments--dark .emms__userscomments__list .emms__userscomments__list__item p{
+    color: #fff;
+}
+
+
 
 /* ---------------------------------------------- Responsive ---------------------------------------------- */
 
@@ -92,5 +105,9 @@
         font-size: 30px;
         line-height: 36px;
         margin: 0 0 47px 0;
+    }
+
+    .emms__userscomments.emms__userscomments--dark{
+        padding: 55px 0 137px 0;
     }
 }

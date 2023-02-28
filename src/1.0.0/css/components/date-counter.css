@@ -1,0 +1,71 @@
+.emms__counter h5{
+    font-size: 13px;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0 0 10px 0;
+}
+
+.emms__counter li{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    color: #fff;
+    margin-right: 12px;
+}
+
+.emms__counter li div{
+    width: 58px;
+    height: 60px;
+    background: #474747;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.emms__counter li div span{
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    line-height: 60px;
+    z-index: 1;
+    position: relative;
+}
+
+.emms__counter li div::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: #191919;
+}
+
+.emms__counter li .emms__counter__number--data{
+    font-size: 13px;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* ---------------------------------------------- Responsive ---------------------------------------------- */
+
+
+@media(max-width:620px){
+
+    .emms__counter h5{
+        font-style: normal;
+    }
+
+    .emms__counter li:nth-child(1){
+        display: block;
+        text-align: center;
+        margin: 0 0 18px 0;
+    }
+
+    .emms__counter li{
+        margin-right: 5px;
+    }
+
+}

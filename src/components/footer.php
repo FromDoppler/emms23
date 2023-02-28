@@ -19,4 +19,4 @@
  </footer>
 
  <script src="src/<?= VERSION ?>/flickity/flickity.pkgd.min.js"></script>
- <script src="src/<?= VERSION ?>/js/animations.js"></script>
+ <script src="src/<?= VERSION ?>/js/commonAnimations.js"></script>
