@@ -6,8 +6,8 @@
 <link rel="stylesheet" href="src/<?= VERSION ?>/flickity/flickity.min.css">
 <link rel="stylesheet" href="src/<?= VERSION ?>/css/styles.css">
 
-<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="src/img/favicon-16x16.png">
 
 <!-- Font Proxima Nova -->
 <link rel="stylesheet" href="https://use.typekit.net/fbq8dbp.css" />

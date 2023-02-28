@@ -1,9 +1,9 @@
-.emms__companies{
+.emms__companies {
     padding: 56px 0 70px 0;
     text-align: center;
 }
 
-.emms__companies h2{
+.emms__companies h2 {
     font-size: 20px;
     line-height: 23px;
     font-weight: 700;
@@ -12,7 +12,7 @@
     animation-delay: .1s;
 }
 
-.emms__companies h3{
+.emms__companies h3 {
     font-size: 20px;
     line-height: 26px;
     font-weight: 700;
@@ -20,24 +20,28 @@
     animation-delay: .2s;
 }
 
-.emms__companies .emms__companies__list{
+.emms__companies .emms__companies__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     animation-delay: .3s;
 }
 
-.emms__companies .emms__companies__list .emms__companies__list__item{
-    height: 40px;
-    margin: 0 15px 32px 15px;
+.emms__companies .emms__companies__list .emms__companies__list__item {
+    height: 50px;
+    margin: 0 13px 32px 13px;
 }
 
-.emms__companies .emms__companies__list .emms__companies__list__item img{
+.emms__companies .emms__companies__list.emms__companies__list--lg .emms__companies__list__item {
+    height: 60px;
+}
+
+.emms__companies .emms__companies__list .emms__companies__list__item img {
     height: 100%;
     display: block;
 }
 
-.emms__companies small{
+.emms__companies small {
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
@@ -47,29 +51,45 @@
     animation-delay: .3s;
 }
 
-.emms__companies small a{
+.emms__companies small a {
     font-weight: 700;
     color: #33AD73;
 }
 
-.emms__companies small a:hover{
+.emms__companies small a:hover {
     text-decoration: underline;
 }
 
 /* ------ With CATEGORIES ------ */
 
-.emms__companies.emms__companies--categories{
+.emms__companies.emms__companies--categories {
     padding: 70px 0;
 }
+
 .emms__companies.emms__companies--categories h2,
-.emms__companies.emms__companies--categories h3{
+.emms__companies.emms__companies--categories h3 {
     margin: 0 0 31px 0;
 }
 
-.emms__companies.emms__companies--categories .emms__companies__divisor{
+.emms__companies.emms__companies--categories .emms__companies__divisor {
     height: 65px;
 }
 
-.emms__companies.emms__companies--categories small{
-    margin: 50px 0 0 0;
+.emms__companies.emms__companies--categories small {
+    margin: 50px auto 0;
+    max-width: 500px;
+}
+
+
+
+/* ---------------------------------------------- Responsive ---------------------------------------------- */
+
+
+@media(max-width:992px) {
+
+    .emms__companies .emms__companies__list .emms__companies__list__item,
+    .emms__companies .emms__companies__list.emms__companies__list--lg .emms__companies__list__item {
+        height: 40px;
+    }
+
 }

@@ -19,9 +19,9 @@ require_once('././config.php');
             </div>
             <a class="emms__header__nav--mb" id="btn-burger"></a>
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
-                <ul>
-                    <li><a href="./home.php" class="active">home</a></li>
-                    <li><a href="">ecommerce</a></li>
+                <ul class="emms__header__nav__menu">
+                    <li><a href="#" class="active">home</a></li>
+                    <li><a href="./ecommerce-registrado.php">ecommerce</a></li>
                 </ul>
             </nav>
         </div>
@@ -367,6 +367,9 @@ require_once('././config.php');
 
     <!-- Footer -->
     <?php include_once('././src/components/footer.php'); ?>
+    <script src="src/<?= VERSION ?>/js/counterAnimation.js"></script>
+    <script src="src/<?= VERSION ?>/js/collapsibles.js"></script>
+
 </body>
 
 </html>

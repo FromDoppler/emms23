@@ -1,0 +1,209 @@
+.emms__hero-form {
+    padding: 190px 0 88px 0;
+    background: #000;
+    position: relative;
+}
+
+.emms__hero-form .emms__container--lg {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1022px;
+}
+
+.emms__hero-form .emms__hero-form__text {
+    width: 48%;
+    color: #fff;
+    animation-delay: .2s;
+}
+
+.emms__hero-form .emms__hero-form__text h1 {
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+.emms__hero-form .emms__hero-form__text h1 em {
+    font-size: 14px;
+    line-height: 20px;
+    font-style: normal;
+    margin: 0 0 20px 0;
+    display: block;
+}
+
+.emms__hero-form .emms__hero-form__text p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 24px 0 0 0;
+}
+
+.emms__hero-form .emms__hero-form__text .emms__hero-form__text__checklist {
+    margin: 30px 0 0 0;
+}
+
+.emms__hero-form .emms__hero-form__text .emms__hero-form__text__checklist li {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 10px 0;
+    padding: 0 0 0 28px;
+    position: relative;
+}
+
+.emms__hero-form .emms__hero-form__text .emms__hero-form__text__checklist li:last-child {
+    margin: 0;
+}
+
+.emms__hero-form .emms__hero-form__text .emms__hero-form__text__checklist li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    background: url("../../../img/icons/icon-check--purple.svg") no-repeat;
+    background-size: contain;
+}
+
+.emms__hero-form .emms__hero-form__form {
+    max-width: 425px;
+    width: 50%;
+    animation-delay: .4s;
+}
+
+.emms__hero-form .emms__hero-form__bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    animation-delay: .4s;
+}
+
+.emms__hero-form .emms__hero-form__bottom p {
+    font-size: 22px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #EF2AAC;
+    white-space: nowrap;
+    margin: 0 5px 0 0;
+    animation: text-bottom 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes text-bottom {
+    0% {
+        transform: translateX(0%)
+    }
+
+    100% {
+        transform: translateX(-100%)
+    }
+}
+
+
+
+/* Registered */
+
+.emms__hero-form--registered{
+    background: #310E44;
+    padding: 177px 0 57px 0;
+    text-align: center;
+}
+
+.emms__hero-form--registered .emms__container--md{
+    max-width: 630px;
+}
+
+.emms__hero-form--registered h1{
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #FFFFFF;
+    animation-delay: .1s;
+}
+
+.emms__hero-form--registered p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    margin: 30px 0 0 0;
+    animation-delay: .5s;
+}
+
+.emms__hero-form--registered p a{
+    font-weight: 700;
+    color: #33AD73;
+}
+
+.emms__hero-form--registered p a:hover{
+    text-decoration: underline;
+}
+
+
+/* ---------------------------------------------- Responsive ---------------------------------------------- */
+
+
+@media(max-width:992px) {
+
+    .emms__hero-form{
+        padding: 300px 0 88px 0;
+    }
+
+    .emms__hero-form .emms__container--lg {
+        display: block;
+        max-width: 620px;
+    }
+
+    .emms__hero-form .emms__hero-form__text {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0 0 50px 0;
+    }
+
+    .emms__hero-form .emms__hero-form__text .emms__hero-form__text__checklist li{
+        margin: 0;
+        padding: 10px 0;
+        border-bottom: solid 1px #BD7AFF;
+    }
+
+    .emms__hero-form .emms__hero-form__text .emms__hero-form__text__checklist li:last-child{
+        border-bottom: none;
+    }
+
+    .emms__hero-form .emms__hero-form__text .emms__hero-form__text__checklist li::before {
+        display: none;
+    }
+
+    .emms__hero-form .emms__hero-form__form {
+        max-width: initial;
+        width: 100%;
+    }
+
+    #emmsCounter {
+        position: absolute;
+        top: 140px;
+        left: 0;
+        width: 100%;
+    }
+
+}
+
+@media(max-width:620px){
+
+    .emms__hero-form .emms__hero-form__text h1{
+        font-size: 22px;
+    line-height: 24px;
+    }
+
+    .emms__hero-form--registered{
+        padding: 140px 0 57px 0;
+    }
+
+    .emms__hero-form--registered h1{
+        font-size: 22px;
+        line-height: 24px;
+    }
+
+}
