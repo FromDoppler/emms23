@@ -121,7 +121,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="name" class="form-label">Name:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?= $fetched_row['name'] ?>" class="form-control" id="name" name="name">
+                                <input type="text" value="<?= $fetched_row['name'] ?>" class="form-control" id="name" name="name" required>
                             </td>
                         </tr>
                         <tr>
@@ -130,7 +130,7 @@ if (isset($_POST['btn-cancel'])) {
                             </td>
                             <td>
                                 <img src="uploads/<?= $fetched_row['image'] ?>" alt="<?= $fetched_row['alt_image'] ?>" width="150" height="150">
-                                <input type="file" value="<?= $fetched_row['image'] ?>" class="form-control" id="image" name="image">
+                                <input type="file" value="<?= $fetched_row['image'] ?>" class="form-control" id="image" name="image" required>
                             </td>
                         </tr>
                         <tr>
@@ -138,7 +138,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="alt_image" class="form-label">Alt_image:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?= $fetched_row['alt_image'] ?>" class="form-control" id="alt_image" name="alt_image">
+                                <input type="text" value="<?= $fetched_row['alt_image'] ?>" class="form-control" id="alt_image" name="alt_image" required>
                             </td>
                         </tr>
                         <tr>
@@ -146,7 +146,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="job" class="form-label">Job:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?= $fetched_row['job'] ?>" class="form-control" id="job" name="job">
+                                <input type="text" value="<?= $fetched_row['job'] ?>" class="form-control" id="job" name="job" required>
                             </td>
                         </tr>
                         <tr>
@@ -186,7 +186,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="description" class="form-label">Description:</label>
                             </td>
                             <td>
-                                <textarea rows="5" class="form-control" id="description" name="description"><?= $fetched_row['description'] ?></textarea>
+                                <textarea rows="5" class="form-control" id="description" name="description" required><?= $fetched_row['description'] ?></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -194,7 +194,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="bio" class="form-label">Bio:</label>
                             </td>
                             <td>
-                                <textarea rows="5" class="form-control" id="bio" name="bio"><?= $fetched_row['bio'] ?></textarea>
+                                <textarea rows="5" class="form-control" id="bio" name="bio" required><?= $fetched_row['bio'] ?></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -203,7 +203,7 @@ if (isset($_POST['btn-cancel'])) {
                             </td>
                             <td>
                                 <img src="uploads/<?= $fetched_row['image_company'] ?>" alt="<?= $fetched_row['alt_image_company'] ?>" width="70" height="70">
-                                <input type="file" value="<?= $fetched_row['image_company'] ?>" class="form-control" id="image_company" name="image_company">
+                                <input type="file" value="<?= $fetched_row['image_company'] ?>" class="form-control" id="image_company" name="image_company"required>
                             </td>
                         </tr>
                         <tr>
@@ -211,7 +211,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="alt_image_company" class="form-label">Alt_image_company:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?= $fetched_row['alt_image_company'] ?>" class="form-control" id="alt_image_company" name="alt_image_company">
+                                <input type="text" value="<?= $fetched_row['alt_image_company'] ?>" class="form-control" id="alt_image_company" name="alt_image_company" required>
                             </td>
                         </tr>
                         <tr>
@@ -236,9 +236,11 @@ if (isset($_POST['btn-cancel'])) {
                             </td>
                             <td>
                                 <select name="day" class="form-select">
-                                    <option <?= ($fetched_row['day'] === '1') ? 'selected ' : '' ?>value="1">Martes</option>
-                                    <option <?= ($fetched_row['day'] === '2') ? 'selected ' : '' ?>value="2">Miercoles</option>
-                                    <option <?= ($fetched_row['day'] === '3') ? 'selected ' : '' ?>value="3">Jueves</option>
+                                    <option <?= ($fetched_row['day'] === '1') ? 'selected ' : '' ?>value="1">Lunes</option>
+                                    <option <?= ($fetched_row['day'] === '2') ? 'selected ' : '' ?>value="2">Martes</option>
+                                    <option <?= ($fetched_row['day'] === '3') ? 'selected ' : '' ?>value="3">Miercoles</option>
+                                    <option <?= ($fetched_row['day'] === '4') ? 'selected ' : '' ?>value="4">Jueves</option>
+                                    <option <?= ($fetched_row['day'] === '5') ? 'selected ' : '' ?>value="5">Viernes</option>
                                 </select>
                             </td>
                         </tr>
@@ -255,7 +257,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="slug" class="form-label">Slug:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?= $fetched_row['slug'] ?>" class="form-control" id="slug" name="slug">
+                                <input type="text" value="<?= $fetched_row['slug'] ?>" class="form-control" id="slug" name="slug" required>
                             </td>
                         </tr>
                         <tr>

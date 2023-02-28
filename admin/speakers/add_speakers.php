@@ -209,9 +209,11 @@ if (isset($_POST['btn-save'])) {
                             </td>
                             <td>
                                 <select name="day" class="form-select">
-                                    <option selected value="1">Martes</option>
-                                    <option value="2">Miercoles</option>
-                                    <option value="3">Jueves</option>
+                                    <option value="1" selected>Lunes</option>
+                                    <option value="2">Martes</option>
+                                    <option value="3">Miercoles</option>
+                                    <option value="4">Jueves</option>
+                                    <option value="5">Viernes</option>
                                 </select>
                             </td>
                         </tr>
@@ -220,7 +222,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="orden" class="form-label">Orden:</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" id="orden" name="orden" required placeholder="Orden">
+                                <input type="text" class="form-control" id="orden" name="orden" placeholder="Orden">
                             </td>
                         </tr>
                         <tr>
@@ -252,7 +254,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="meta_description" class="form-label">SEO Description:</label>
                             </td>
                             <td>
-                                <textarea rows="5" id="meta_description" name="meta_description" required></textarea>
+                                <textarea rows="5" id="meta_description" name="meta_description"></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -260,7 +262,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="meta_twitter" class="form-label">SEO Twitter:</label>
                             </td>
                             <td>
-                                <textarea rows="5" id="meta_twitter" name="meta_twitter" required></textarea>
+                                <textarea rows="5" id="meta_twitter" name="meta_twitter"></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -268,7 +270,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="meta_image" class="form-label">Image Share:</label>
                             </td>
                             <td>
-                                <input type="file" class="form-control" id="meta_image" name="meta_image" required placeholder="Image Share">
+                                <input type="file" class="form-control" id="meta_image" name="meta_image" placeholder="Image Share">
                             </td>
                         </tr>
 
