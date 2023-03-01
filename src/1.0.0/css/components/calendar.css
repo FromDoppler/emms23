@@ -13,7 +13,7 @@
 /* Title */
 
 .emms__calendar__title {
-    max-width: 780px;
+    max-width: 460px;
     margin: 0 auto 30px;
     text-align: center;
     animation-delay: .1s;
@@ -165,10 +165,9 @@
 }
 
 .emms__calendar__list__item__card__btn-bio {
-    font-size: 13px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #33AD73;
+    font-size: 14px;
+    font-weight: 700;
+    color: #008046;
     cursor: pointer;
     transition-duration: .2s;
 }
@@ -242,15 +241,14 @@
 }
 
 .emms__calendar__list__item__card__bio a {
-    font-size: 13px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #33AD73;
+    font-size: 14px;
+    font-weight: 700;
+    color: #008046;
     cursor: pointer;
     transition-duration: .2s;
     position: absolute;
     bottom: 22px;
-    right: 17px;
+    left: 17px;
 }
 
 .emms__calendar__list__item__card__bio a:hover {
@@ -287,6 +285,55 @@
     transition-duration: .2s;
 }
 
+/* Special Card */
+
+.emms__calendar__list__item.emms__calendar__list__item--special .emms__calendar__list__item__card__speaker__image{
+    width: 100%;
+}
+
+.emms__calendar__list__item.emms__calendar__list__item--special .emms__calendar__list__item__card__business{
+    justify-content: right;
+}
+
+.emms__calendar__list__item.emms__calendar__list__item--special .emms__calendar__list__item__card__description h4{
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0 0 10px 0;
+}
+
+.emms__calendar__list__item.emms__calendar__list__item--special .emms__calendar__list__item__card__bio ul{
+    padding: 5px 0 0 16px;
+}
+
+.emms__calendar__list__item.emms__calendar__list__item--special .emms__calendar__list__item__card__bio ul li{
+    position: relative;
+    margin: 0 0 2px 0;
+}
+
+.emms__calendar__list__item.emms__calendar__list__item--special .emms__calendar__list__item__card__bio ul li::before{
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background: #333333;
+}
+
+.emms__calendar__list__item.emms__calendar__list__item--special .emms__calendar__list__item__card__bio ul li p{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.emms__calendar__list__item.emms__calendar__list__item--special .emms__calendar__list__item__card__bio ul li p span{
+    font-weight: 400;
+    display: block;
+}
+
 @media(max-width:992px) {
 
     .emms__calendar__list--dk .emms__calendar__list__item {
@@ -303,7 +350,7 @@
     }
 
     .emms__calendar__list--mb .flickity-page-dots{
-        bottom: 40px;
+        bottom: 35px;
     }
 
     .emms__calendar__list--mb .flickity-page-dots .dot{

@@ -84,6 +84,7 @@ p {
     .emms__cta {
         display: block;
         width: 100%;
+        padding: 20px 25px;
         box-sizing: border-box;
     }
 }

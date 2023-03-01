@@ -68,6 +68,7 @@
 /* Logueado */
 
 .emms__ecommerce-logueado .emms__calendar__title{
+    max-width: 780px;
     animation-delay: .6s;
 }
 
