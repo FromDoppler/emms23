@@ -54,9 +54,10 @@ require_once('././config.php');
         <!-- Hero -->
         <section class="emms__home__hero">
             <div class="emms__home__hero__title emms__fade-top">
-                <h1><em>EL EVENTO DE MARKETING DIGITAL QUE REVOLUCIONA LA INDUSTRIA</em> Vuelve el EMMS recargado</h1>
-                <h2>EVENTOS ONLINE EN UN MISMO LUGAR</h2>
-                <p>Luego de 15 ediciones, en 2023 podrás disfrutar de diferentes eventos online, con speakers internacionales de renombre, 100% gratuito y online.</p>
+                <h1><em>TODAS LAS TENDENCIAS DE MARKETING DIGITAL EN UN SOLO LUGAR</em> Vuelve el EMMS, ¡recargado!</h1>
+                <h2>ONLINE Y GRATUITO</h2>
+                <p>Tras <strong>15 años</strong> como el evento líder en Latam y España, <strong>el EMMS evoluciona</strong>. En 2023 tendrás <strong>3 eventos exclusivos</strong> para capacitarte e inspirarte con los referentes de tu industria.</p>
+                <div id="EMMS2023-ediciones"></div>
             </div>
             <!-- Event cards -->
             <div class="emms__eventCards">
@@ -68,13 +69,13 @@ require_once('././config.php');
                             </div>
                             <div class="emms__eventCards__list__item__text">
                                 <div class="emms__eventCards__list__item__text--corner">
-                                    <p><span>20</span>MAY</p>
+                                    <p><span>16</span>MAY</p>
                                 </div>
-                                <h3>EMMS ECOMMERCE</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur.</p>
+                                <h3>EMMS E-commerce</h3>
+                                <p>Los mayores referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <a href="">Regístrate gratis →</a>
+                                    <a href="./ecommerce.php">Regístrate gratis →</a>
                                 </div>
                             </div>
                         </li>
@@ -86,8 +87,8 @@ require_once('././config.php');
                                 <div class="emms__eventCards__list__item__text--corner">
                                     <p>AGO</p>
                                 </div>
-                                <h3>EMMS FINTECH</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur.</p>
+                                <h3>EMMS Fintech</h3>
+                                <p>Descubre cuáles son las <strong>estrategias</strong> que implementan las marcas líderes en el sector financiero: <strong>banca online, billeteras virtuales, industria de seguros</strong> y ¡mucho más!</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
                                     <p class="purple">PRÓXIMAMENTE</p>
@@ -102,8 +103,8 @@ require_once('././config.php');
                                 <div class="emms__eventCards__list__item__text--corner">
                                     <p>NOV</p>
                                 </div>
-                                <h3>EMMS DIGITAL TRENDS</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur.</p>
+                                <h3>EMMS Digital Trends</h3>
+                                <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
                                     <p class="purple">PRÓXIMAMENTE</p>
@@ -118,10 +119,10 @@ require_once('././config.php');
                             </div>
                             <div class="emms__eventCards__list__item__text">
                                 <div class="emms__eventCards__list__item__text--corner">
-                                    <p><span>20</span>MAY</p>
+                                    <p><span>16</span>MAY</p>
                                 </div>
-                                <h3>EMMS ECOMMERCE</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur.</p>
+                                <h3>EMMS E-commerce</h3>
+                                <p>Los mayores referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
                                     <a href="">Regístrate gratis →</a>
@@ -136,12 +137,11 @@ require_once('././config.php');
                                 <div class="emms__eventCards__list__item__text--corner">
                                     <p>AGO</p>
                                 </div>
-                                <h3>EMMS FINTECH</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur.</p>
+                                <h3>EMMS Fintech</h3>
+                                <p>Descubre cuáles son las <strong>estrategias</strong> que implementan las marcas líderes en el sector financiero: <strong>banca online, billeteras virtuales, industria de seguros</strong> y ¡mucho más!</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <a href="">Acceder →</a>
-                                    <p class="orange">YA ESTÁS REGISTRADO</p>
+                                    <p class="purple">PRÓXIMAMENTE</p>
                                 </div>
                             </div>
                         </li>
@@ -153,8 +153,8 @@ require_once('././config.php');
                                 <div class="emms__eventCards__list__item__text--corner">
                                     <p>NOV</p>
                                 </div>
-                                <h3>EMMS DIGITAL TRENDS</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur.</p>
+                                <h3>EMMS Digital Trends</h3>
+                                <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
                                     <p class="purple">PRÓXIMAMENTE</p>
@@ -171,15 +171,15 @@ require_once('././config.php');
             <div class="emms__background-a"></div>
             <div class="emms__container--md">
                 <div class="emms__centralvideo__title emms__fade-in">
-                    <h2>Llega una nueva versión del EMMS 2023, el evento online más esperado del año</h2>
-                    <p>Inspírate y capacítate desde la comodidad de tu casa. Súmate ahora al evento que te acercará a los mayores expertos de Marketing Digital</p>
+                    <h2>Llega una nueva versión del EMMS. Ahora, con una edición exclusiva por industria</h2>
+                    <p>Descubre en este video por qué más de <strong>70.000 personas</strong> este año eligen EMMS para conocer las <strong>últimas tendencias en Marketing Digital</strong>.</p>
                 </div>
                 <div class="emms__centralvideo__video emms__fade-in">
                     <span></span>
                     <video src="src/img/video-ejemplo.mp4" controls></video>
                 </div>
                 <div class="emms__centralvideo__cta emms__fade-in">
-                    <a href="" class="emms__cta">REGÍSTRATE AHORA</a>
+                    <a href="#EMMS2023-ediciones" class="emms__cta">REGÍSTRATE AHORA</a>
                 </div>
             </div>
         </section>
@@ -190,10 +190,10 @@ require_once('././config.php');
         <!-- Event numbers -->
         <section class="emms__eventnumbers" id="boxNumber">
             <div class="emms__container--lg">
-                <h2 class="emms__fade-in">El evento más importante de Marketing Digital en números</h2>
+                <h2 class="emms__fade-in">El EMMS en números</h2>
                 <ul class="emms__fade-in">
                     <li>
-                        <p class="number" id="count1">200.000</p>
+                        <p class="number" id="count1">250.000</p>
                         <span>Inscritos</span>
                     </li>
                     <li>
@@ -218,7 +218,7 @@ require_once('././config.php');
         <!-- Speakers -->
         <section class="emms__home__speakers">
             <div class="emms__container--lg">
-                <h2 class="emms__fade-in">Algunos de los conferencistas que han pasado por las últimas ediciones de EMMS:</h2>
+                <h2 class="emms__fade-in">Algunos de los conferencistas que nos han acompañado en las últimas ediciones:</h2>
                 <div class="emms__speakerslist emms__fade-in">
                     <ul>
                         <li class="emms__speakerslist__item">
@@ -237,14 +237,9 @@ require_once('././config.php');
                             <img src="src/img/logos/logo-timash.png" alt="TimAsh.com" class="emms__speakerslist__item__logo">
                         </li>
                         <li class="emms__speakerslist__item">
-                            <img src="src/img/people/speaker-pablo-castellano.png" alt="Pablo Castellano" class="emms__speakerslist__item__photo">
-                            <p>Pablo Castellano</p>
-                            <img src="src/img/logos/logo-socialmood.png" alt="Socialmood" class="emms__speakerslist__item__logo">
-                        </li>
-                        <li class="emms__speakerslist__item">
-                            <img src="src/img/people/speaker-marcos-pueyrredon.png" alt="Marcos Pueyrredón " class="emms__speakerslist__item__photo">
-                            <p>Marcos Pueyrredón </p>
-                            <img src="src/img/logos/logo-vtex.png" alt="Vtex" class="emms__speakerslist__item__logo">
+                            <img src="src/img/people/speaker-vedant-misra.png" alt="Vedant Misra" class="emms__speakerslist__item__photo">
+                            <p>Vedant Misra</p>
+                            <img src="src/img/logos/logo-google.png" alt="Google" class="emms__speakerslist__item__logo">
                         </li>
                         <li class="emms__speakerslist__item">
                             <img src="src/img/people/speaker-julia-rayeb.png" alt="Julia Rayeb" class="emms__speakerslist__item__photo">
@@ -252,29 +247,34 @@ require_once('././config.php');
                             <img src="src/img/logos/logo-facebook.png" alt="Facebook" class="emms__speakerslist__item__logo">
                         </li>
                         <li class="emms__speakerslist__item">
-                            <img src="src/img/people/speaker-alan-schulte.png" alt="Alan Schulte" class="emms__speakerslist__item__photo">
-                            <p>Alan Schulte</p>
-                            <img src="src/img/logos/logo-linkedin.png" alt="LinkedIn" class="emms__speakerslist__item__logo">
+                            <img src="src/img/people/speaker-pablo-laucirica.png" alt="Pablo Laucirica" class="emms__speakerslist__item__photo">
+                            <p>Pablo Laucirica</p>
+                            <img src="src/img/logos/logo-microsoft.png" alt="Microsoft" class="emms__speakerslist__item__logo">
                         </li>
                         <li class="emms__speakerslist__item">
-                            <img src="src/img/people/speaker-ivette-chalela.png" alt="Ivette Chalela Naffah" class="emms__speakerslist__item__photo">
-                            <p>Ivette Chalela Naffah</p>
-                            <img src="src/img/logos/logo-waze.png" alt="Waze" class="emms__speakerslist__item__logo">
+                            <img src="src/img/people/speaker-vilma-nunez.png" alt="Vilma Nuñez" class="emms__speakerslist__item__photo">
+                            <p>Vilma Nuñez</p>
+                            <img src="src/img/logos/logo-vilma.png" alt="Vilma" class="emms__speakerslist__item__logo">
                         </li>
                         <li class="emms__speakerslist__item">
-                            <img src="src/img/people/speaker-lolo-alvarez-diaz.png" alt="Lolo Alvarez Díaz" class="emms__speakerslist__item__photo">
-                            <p>Lolo Alvarez Díaz</p>
-                            <img src="src/img/logos/logo-arcosdorados.png" alt="Arcos Dorados" class="emms__speakerslist__item__logo">
+                            <img src="src/img/people/speaker-marcos-pueyrredon.png" alt="Marcos Pueyrredón " class="emms__speakerslist__item__photo">
+                            <p>Marcos Pueyrredón </p>
+                            <img src="src/img/logos/logo-vtex.png" alt="Vtex" class="emms__speakerslist__item__logo">
                         </li>
                         <li class="emms__speakerslist__item">
-                            <img src="src/img/people/speaker-gustavo-orjuela.png" alt="Gustavo Orjuela" class="emms__speakerslist__item__photo">
-                            <p>Gustavo Orjuela</p>
-                            <img src="src/img/logos/logo-wayra.png" alt="Wayra" class="emms__speakerslist__item__logo">
+                            <img src="src/img/people/speaker-angela-blones.png" alt="Ángela Blones" class="emms__speakerslist__item__photo">
+                            <p>Ángela Blones</p>
+                            <img src="src/img/logos/logo-angela-blones.png" alt="Ángela Blones" class="emms__speakerslist__item__logo">
+                        </li>
+                        <li class="emms__speakerslist__item">
+                            <img src="src/img/people/speaker-albert-esplugas.png" alt="Albert Esplugas" class="emms__speakerslist__item__photo">
+                            <p>Albert Esplugas</p>
+                            <img src="src/img/logos/logo-amazon.png" alt="Amazon" class="emms__speakerslist__item__logo">
                         </li>
                     </ul>
                 </div>
-                <small class="emms__fade-in">Próximamente anunciaremos los Speakers 2023.<br>Regístrate gratis ahora y descubre antes que nadie las últimas novedades del EMMS.</small>
-                <a href="" class="emms__cta emms__fade-in">RESERVA TU LUGAR</a>
+                <small class="emms__fade-in">Próximamente conocerás la agenda 2023.<br>Regístrate gratis y entérate antes que nadie de todas las novedades del EMMS.</small>
+                <a href="#EMMS2023-ediciones" class="emms__cta emms__fade-in">RESERVA TU LUGAR AHORA</a>
             </div>
             <div class="emms__background-a"></div>
         </section>
@@ -288,24 +288,24 @@ require_once('././config.php');
                 <h2 class="emms__fade-in">Nuestros usuarios dicen...</h2>
                 <ul class="emms__userscomments__list emms__userscomments__list--dk emms__fade-in">
                     <li class="emms__userscomments__list__item">
-                        <p>“No podía configurar el dominio en mi cuenta de Doppler. Muy buena explicación, ahora todo es más claro”<em>Santiago<img src="src/img/flag-argentina.png" alt="Argentina"></em></p>
+                        <p>“Lo que más valoro del EMMS es poder ver en qué están las empresas más importantes del sector, ¡y gratis!”<em>Yolanda<img src="src/img/flag-mexico.png" alt="México"></em></p>
                     </li>
                     <li class="emms__userscomments__list__item">
-                        <p>““He desperdiciado mucho tiempo antes, ahora sé cómo implementar una buena estrategia de Email Marketing para mi negocio””<em>Luciana<img src="src/img/flag-mexico.png" alt="México"></em></p>
+                        <p>“Ver las conferencias online es increíble. Pude disfrutar de la última edición en el trabajo y verlo con mis compañeros”<em>Pedro<img src="src/img/flag-espana.png" alt="España"></em></p>
                     </li>
                     <li class="emms__userscomments__list__item">
-                        <p>““He logrado aumentar las ventas de mi Tienda Online desde que comencé a utilizar Doppler, ¡gracias!””<em>Lisbeth<img src="src/img/flag-colombia.png" alt="Colombia"></em></p>
+                        <p>“Me encanta poder irme con ideas nuevas para mi negocio cada año, además de pasar tiempo con expertos y colegas”.<em>Nadia<img src="src/img/flag-argentina.png" alt="Argentina"></em></p>
                     </li>
                 </ul>
                 <ul class="emms__userscomments__list emms__userscomments__list--mb main-carousel" data-flickity>
                     <li class="emms__userscomments__list__item">
-                        <p>“No podía configurar el dominio en mi cuenta de Doppler. Muy buena explicación, ahora todo es más claro”<em>Santiago<img src="src/img/flag-argentina.png" alt="Argentina"></em></p>
+                        <p>“Lo que más valoro del EMMS es poder ver en qué están las empresas más importantes del sector, ¡y gratis!”<em>Yolanda<img src="src/img/flag-mexico.png" alt="México"></em></p>
                     </li>
                     <li class="emms__userscomments__list__item">
-                        <p>““He desperdiciado mucho tiempo antes, ahora sé cómo implementar una buena estrategia de Email Marketing para mi negocio””<em>Luciana<img src="src/img/flag-mexico.png" alt="México"></em></p>
+                        <p>“Ver las conferencias online es increíble. Pude disfrutar de la última edición en el trabajo y verlo con mis compañeros”<em>Pedro<img src="src/img/flag-espana.png" alt="España"></em></p>
                     </li>
                     <li class="emms__userscomments__list__item">
-                        <p>““He logrado aumentar las ventas de mi Tienda Online desde que comencé a utilizar Doppler, ¡gracias!””<em>Lisbeth<img src="src/img/flag-colombia.png" alt="Colombia"></em></p>
+                        <p>“Me encanta poder irme con ideas nuevas para mi negocio cada año, además de pasar tiempo con expertos y colegas”.<em>Nadia<img src="src/img/flag-argentina.png" alt="Argentina"></em></p>
                     </li>
                 </ul>
             </div>
@@ -318,20 +318,52 @@ require_once('././config.php');
                 <h2 class="emms__fade-in">Preguntas frecuentes</h2>
                 <ul class="emms__frequentquestions__list emms__fade-in">
                     <li class="emms__frequentquestions__list__item open">
-                        <button class="emms__frequentquestions__list__item__head">¿Cómo puedo participar en el Global Marketing Day 2023?</button>
-                        <p class="emms__frequentquestions__list__item__content">El Global Marketing Day 2023 es un evento online. Por favor, inscríbete rellenando el formulario y entra en <a href="https://www.globalmarketingday.com/" target="_blank">globalmarketingday.com</a> el 16 de febrero de 2023. ¡La retransmisión en directo estará disponible en la web! Te avisaremos con antelación sobre la retransmisión.</p>
+                        <button class="emms__frequentquestions__list__item__head">🕵️‍♀️ ¿Por qué asistir al EMMS?</button>
+                        <p class="emms__frequentquestions__list__item__content">Es el <strong>evento online y gratuito de Marketing Digital</strong> más importante de <strong>España y Latinoamérica</strong>. Cada año nos eligen expertos de compañías líderes de la industria para dar a conocer las principales tendencias en su sector.</p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
-                        <button class="emms__frequentquestions__list__item__head">¿Cómo puedo participar en el Global Marketing Day 2023?</button>
-                        <p class="emms__frequentquestions__list__item__content">El Global Marketing Day 2023 es un evento online. Por favor, inscríbete rellenando el formulario y entra en <a href="https://www.globalmarketingday.com/" target="_blank">globalmarketingday.com</a> el 16 de febrero de 2023. ¡La retransmisión en directo estará disponible en la web! Te avisaremos con antelación sobre la retransmisión.</p>
+                        <button class="emms__frequentquestions__list__item__head">🎁 ¿Qué obtengo al registrarme al evento?</button>
+                        <p class="emms__frequentquestions__list__item__content">Con tu registro podrás acceder a todas las conferencias de esta y todas las ediciones anteriores para siempre. Además, desbloquearás <strong>contenidos exclusivos como E-books, Plantillas, descuentos y material audiovisual</strong> para que puedas hacer crecer tu negocio aún más.</p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
-                        <button class="emms__frequentquestions__list__item__head">¿Cómo puedo participar en el Global Marketing Day 2023?</button>
-                        <p class="emms__frequentquestions__list__item__content">El Global Marketing Day 2023 es un evento online. Por favor, inscríbete rellenando el formulario y entra en <a href="https://www.globalmarketingday.com/" target="_blank">globalmarketingday.com</a> el 16 de febrero de 2023. ¡La retransmisión en directo estará disponible en la web! Te avisaremos con antelación sobre la retransmisión.</p>
+                        <button class="emms__frequentquestions__list__item__head">📅 ¿Cuándo se realizará el EMMS 2023?</button>
+                        <p class="emms__frequentquestions__list__item__content">El EMMS 2023 constará de 3 ediciones: <strong>E-commerce, Fintech y Digital Trends</strong>, a realizarse en <strong>mayo, agosto y noviembre</strong>, respectivamente. Registrándote en el evento recibirás todos las novedades por Email y la confirmación de cada fecha.</p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
-                        <button class="emms__frequentquestions__list__item__head">¿Cómo puedo participar en el Global Marketing Day 2023?</button>
-                        <p class="emms__frequentquestions__list__item__content">El Global Marketing Day 2023 es un evento online. Por favor, inscríbete rellenando el formulario y entra en <a href="https://www.globalmarketingday.com/" target="_blank">globalmarketingday.com</a> el 16 de febrero de 2023. ¡La retransmisión en directo estará disponible en la web! Te avisaremos con antelación sobre la retransmisión.</p>
+                        <button class="emms__frequentquestions__list__item__head">📍 ¿Dónde serán los eventos?</button>
+                        <p class="emms__frequentquestions__list__item__content">El EMMS es un evento <strong>online</strong>. Es decir, podrás verlo en vivo desde cualquier dispositivo, estés donde estés.</p>
+                    </li>
+                    <li class="emms__frequentquestions__list__item close">
+                        <button class="emms__frequentquestions__list__item__head">💵 ¿Tengo que pagar inscripción?</button>
+                        <p class="emms__frequentquestions__list__item__content">No, el EMMS es <strong>totalmente gratuito</strong>. Solamente deberás registrarte para acceder a las conferencias o ver las grabaciones una vez finalizado el evento y acceder a todo el material exclusivo de regalo.</p>
+                    </li>
+                    <li class="emms__frequentquestions__list__item close">
+                        <button class="emms__frequentquestions__list__item__head">✍ ¿Cómo puedo registrarme?</button>
+                        <p class="emms__frequentquestions__list__item__content">Elige <a href="#EMMS2023-ediciones">aquí</a> la edición a la que te interese asistir. Allí encontrarás un formulario en el que deberás completar tus datos para reservar tu lugar.</p>
+                    </li>
+                    <li class="emms__frequentquestions__list__item close">
+                        <button class="emms__frequentquestions__list__item__head">💻 ¿Cómo accedo a la transmisión del EMMS una vez registrado?</button>
+                        <p class="emms__frequentquestions__list__item__content">Podrás ver los eventos desde esta misma Web en las fechas indicadas. Una vez que te registres, te enviaremos recordatorios y recibirás también el link para conectarte ese día.</p>
+                    </li>
+                    <li class="emms__frequentquestions__list__item close">
+                        <button class="emms__frequentquestions__list__item__head">🎥 ¿Van a estar disponibles las grabaciones después del evento?</button>
+                        <p class="emms__frequentquestions__list__item__content">Sí, cuando haya finalizado cada EMMS quedarán subidas al sitio web del evento las grabaciones de todas las charlas para que puedas revivirlas las veces que desees.</p>
+                    </li>
+                    <li class="emms__frequentquestions__list__item close">
+                        <button class="emms__frequentquestions__list__item__head">🤔 Me anoté al evento y aún no recibí el Email de confirmación, ¿qué hago?</button>
+                        <p class="emms__frequentquestions__list__item__content">Comunícate con el equipo de Atención al Cliente de Doppler enviando un Email a <a href="mailto:soporte@fromdoppler.com">soporte@fromdoppler.com</a> para ayudarte a resolverlo.</p>
+                    </li>
+                    <li class="emms__frequentquestions__list__item close">
+                        <button class="emms__frequentquestions__list__item__head">📣 Me interesa ser aliado en el evento, ¿todavía estoy a tiempo de sumarme?</button>
+                        <p class="emms__frequentquestions__list__item__content">¡Sí claro! Comunícate al Email <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a> para que podamos contarte cuáles son las oportunidades de participar y cómo podrías sumarte.</p>
+                    </li>
+                    <li class="emms__frequentquestions__list__item close">
+                        <button class="emms__frequentquestions__list__item__head">🎙Quiero ser speaker del EMMS 2023, ¿puedo postularme?</button>
+                        <p class="emms__frequentquestions__list__item__content">¡Por supuesto! Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a> para comentarnos por qué deberías ser ponente en EMMS 2023 y te responderemos a la brevedad.</p>
+                    </li>
+                    <li class="emms__frequentquestions__list__item close">
+                        <button class="emms__frequentquestions__list__item__head">📝 ¿Obtengo un certificado de participación por asistir al evento?</button>
+                        <p class="emms__frequentquestions__list__item__content">¡Sí! Podrás descargar tu certificado de asistencia a cada edición del EMMS 2023 durante la transmisión del evento desde la misma URL donde vives la transmisión. ¿Te olvidaste de hacerlo? Comunícate a <a href="mailto:soporte@fromdoppler.com">soporte@fromdoppler.com</a>.</p>
                     </li>
                 </ul>
             </div>
@@ -343,9 +375,7 @@ require_once('././config.php');
                 <h2 class="emms__fade-in">Nos han acompañado en ediciones anteriores</h2>
                 <ul class="emms__companies__list emms__fade-in">
                     <li class="emms__companies__list__item"><img src="src/img/logos/logo-metricool.png" alt="Metricool"></li>
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-wayra.png" alt="Wayra"></li>
                     <li class="emms__companies__list__item"><img src="src/img/logos/logo-asociacion-marketing-espana.png" alt="Asociación de Marketing de España"></li>
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-camece.png" alt="Camece"></li>
                     <li class="emms__companies__list__item"><img src="src/img/logos/logo-capece.png" alt="Capece"></li>
                     <li class="emms__companies__list__item"><img src="src/img/logos/logo-amvo.png" alt="AMVO"></li>
                     <li class="emms__companies__list__item"><img src="src/img/logos/logo-linkedin.png" alt="LinkedIn"></li>
@@ -357,8 +387,10 @@ require_once('././config.php');
                     <li class="emms__companies__list__item"><img src="src/img/logos/logo-banco-frances.png" alt="BBVA Francés"></li>
                     <li class="emms__companies__list__item"><img src="src/img/logos/logo-airbnb.png" alt="Airbnb"></li>
                     <li class="emms__companies__list__item"><img src="src/img/logos/logo-woocomerce.png" alt="Woocommerce"></li>
+                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-doofinder.png" alt="Doofinder"></li>
+                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-easycommerce.png" alt="Easycommerce"></li>
                 </ul>
-                <small class="emms__fade-in">¿Quieres ser Media Partner del EMMS 2022? Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></small>
+                <small class="emms__fade-in">¿Quieres ser aliado del EMMS E-commerce 2023? ¡Hablemos! Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></small>
             </div>
         </section>
 

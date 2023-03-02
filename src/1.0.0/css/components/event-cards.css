@@ -85,6 +85,10 @@
     margin: 0 0 13px 0;
 }
 
+.emms__eventCards__list__item__text h3 + p{
+    min-height: 90px;
+}
+
 .emms__eventCards__list__item__text--feature{
     margin: 20px 0 0 0;
 }
@@ -158,6 +162,7 @@
 
     .emms__eventCards__list__item__text{
         padding: 19px 19px 54px 19px;
+        min-height: 180px;
     }
 
     .emms__eventCards__list__item__text h3{
