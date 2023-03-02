@@ -19,7 +19,7 @@ const observerBoxNumber = new IntersectionObserver((entries) => {
                 };
                 window.requestAnimationFrame(step);
             };
-            counterAnim("#count1", 0, 200000, 1000);
+            counterAnim("#count1", 0, 250000, 1000);
             counterAnim("#count2", 0, 15, 1200);
             counterAnim("#count3", 0, 10, 1400);
             counterAnim("#count4", 0, 150, 1600);
@@ -30,3 +30,4 @@ const observerBoxNumber = new IntersectionObserver((entries) => {
     });
 });
 observerBoxNumber.observe(boxNumber);
+

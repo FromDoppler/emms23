@@ -57,7 +57,7 @@ require_once('././config.php');
     <main>
 
         <!-- Hero -->
-        <section class="emms__hero-form">
+        <section class="emms__hero-form" id="registro">
             <div class="emms__container--lg">
                 <div class="emms__hero-form__text emms__fade-in">
                     <h1><em>EVENTO ONLINE Y GRATUITO - 16 DE ABRIL</em> EMMS E-commerce 2023</h1>
@@ -406,7 +406,7 @@ require_once('././config.php');
                 </ul>
                 <!-- End list -->
                 <div class="emms__calendar__bottom emms__fade-in">
-                    <a href="" class="emms__cta">INSCRÍBETE GRATIS AHORA</a>
+                    <a href="#registro" class="emms__cta">INSCRÍBETE GRATIS AHORA</a>
                 </div>
             </div>
         </section>
@@ -429,7 +429,7 @@ require_once('././config.php');
                     <video src="src/img/video-ejemplo.mp4" controls></video>
                 </div>
                 <div class="emms__centralvideo__cta emms__fade-in">
-                    <a href="" class="emms__cta">REGÍSTRATE AHORA</a>
+                    <a href="#registro" class="emms__cta">REGÍSTRATE AHORA</a>
                     <small><i>¿Tienes dudas sobre el EMMS 2023?</i> Haz <a href="./home.php#preguntas-frecuentes" target="_blank">click aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                 </div>
             </div>
