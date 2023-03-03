@@ -72,11 +72,11 @@ require_once('././config.php');
                                     <p><span>16</span>MAY</p>
                                 </div>
                                 <h3>EMMS E-commerce</h3>
-                                <p>Los mayores referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
+                                <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
+                                    <p class="emms__eventCards__list__item__tag dark-purple">YA ESTÁS REGISTRADO</p>
                                     <a href="./ecommerce-registrado.php">Acceder →</a>
-                                    <p class="orange">YA ESTÁS REGISTRADO</p>
                                 </div>
                             </div>
                         </li>
@@ -92,7 +92,7 @@ require_once('././config.php');
                                 <p>Descubre cuáles son las <strong>estrategias</strong> que implementan las marcas líderes en el sector financiero: <strong>banca online, billeteras virtuales, industria de seguros</strong> y ¡mucho más!</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <p class="purple">PRÓXIMAMENTE</p>
+                                    <p class="emms__eventCards__list__item__tag purple">PRÓXIMAMENTE</p>
                                 </div>
                             </div>
                         </li>
@@ -108,7 +108,7 @@ require_once('././config.php');
                                 <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <p class="purple">PRÓXIMAMENTE</p>
+                                    <p class="emms__eventCards__list__item__tag purple">PRÓXIMAMENTE</p>
                                 </div>
                             </div>
                         </li>
@@ -117,23 +117,24 @@ require_once('././config.php');
                         <li class="emms__eventCards__list__item">
                             <div class="emms__eventCards__list__item__picture">
                                 <img src="src/img/card-image-ecommerce.png" alt="Image Ecommerce">
+                                <p class="emms__eventCards__list__item__tag dark-purple">YA ESTÁS REGISTRADO</p>
                             </div>
                             <div class="emms__eventCards__list__item__text">
                                 <div class="emms__eventCards__list__item__text--corner">
                                     <p><span>16</span>MAY</p>
                                 </div>
                                 <h3>EMMS E-commerce</h3>
-                                <p>Los mayores referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
+                                <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
                                     <a href="./ecommerce-registrado.php">Acceder →</a>
-                                    <p class="orange">YA ESTÁS REGISTRADO</p>
                                 </div>
                             </div>
                         </li>
                         <li class="emms__eventCards__list__item">
                             <div class="emms__eventCards__list__item__picture">
                                 <img src="src/img/card-image-fintech.png" alt="Image Fintech">
+                                <p class="emms__eventCards__list__item__tag purple">PRÓXIMAMENTE</p>
                             </div>
                             <div class="emms__eventCards__list__item__text">
                                 <div class="emms__eventCards__list__item__text--corner">
@@ -143,13 +144,13 @@ require_once('././config.php');
                                 <p>Descubre cuáles son las <strong>estrategias</strong> que implementan las marcas líderes en el sector financiero: <strong>banca online, billeteras virtuales, industria de seguros</strong> y ¡mucho más!</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <p class="purple">PRÓXIMAMENTE</p>
                                 </div>
                             </div>
                         </li>
                         <li class="emms__eventCards__list__item">
                             <div class="emms__eventCards__list__item__picture">
                                 <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                <p class="emms__eventCards__list__item__tag purple">PRÓXIMAMENTE</p>
                             </div>
                             <div class="emms__eventCards__list__item__text">
                                 <div class="emms__eventCards__list__item__text--corner">
@@ -159,7 +160,6 @@ require_once('././config.php');
                                 <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <p class="purple">PRÓXIMAMENTE</p>
                                 </div>
                             </div>
                         </li>
@@ -174,7 +174,7 @@ require_once('././config.php');
             <div class="emms__container--md">
                 <div class="emms__centralvideo__title emms__fade-in">
                     <h2>Llega una nueva versión del EMMS. Ahora, con una edición exclusiva por industria</h2>
-                    <p>Descubre en este video por qué más de <strong>70.000 personas</strong> este año eligen EMMS para conocer las <strong>últimas tendencias en Marketing Digital</strong>.</p>
+                    <p>Descubre en este video por qué más de <strong>70.000 personas</strong> eligen este año el EMMS para conocer las <strong>últimas tendencias en Marketing Digital</strong>.</p>
                 </div>
                 <div class="emms__centralvideo__video emms__fade-in">
                     <span></span>
@@ -325,7 +325,7 @@ require_once('././config.php');
                     </li>
                     <li class="emms__frequentquestions__list__item close">
                         <button class="emms__frequentquestions__list__item__head">📅 ¿Cuándo se realizará el EMMS 2023?</button>
-                        <p class="emms__frequentquestions__list__item__content">El EMMS 2023 constará de 3 ediciones: <strong>E-commerce, Fintech y Digital Trends</strong>, a realizarse en <strong>mayo, agosto y noviembre</strong>, respectivamente. Registrándote en el evento recibirás todos las novedades por Email y la confirmación de cada fecha.</p>
+                        <p class="emms__frequentquestions__list__item__content">El EMMS 2023 constará de 3 ediciones: <strong>E-commerce, Fintech y Digital Trends</strong>, a realizarse en <strong>mayo, agosto y noviembre</strong>, respectivamente. Registrándote al evento recibirás todos las novedades por Email y la confirmación de cada fecha.</p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
                         <button class="emms__frequentquestions__list__item__head">📍 ¿Dónde serán los eventos?</button>
@@ -341,7 +341,7 @@ require_once('././config.php');
                     </li>
                     <li class="emms__frequentquestions__list__item close">
                         <button class="emms__frequentquestions__list__item__head">🎥 ¿Van a estar disponibles las grabaciones después del evento?</button>
-                        <p class="emms__frequentquestions__list__item__content">Sí, cuando haya finalizado cada EMMS quedarán subidas al sitio web del evento las grabaciones de todas las charlas para que puedas revivirlas las veces que desees.</p>
+                        <p class="emms__frequentquestions__list__item__content">Sí, cuando haya finalizado cada EMMS quedarán subidas al sitio web del evento las grabaciones de todas las charlas. Podrás revivirlas las veces que desees.</p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
                         <button class="emms__frequentquestions__list__item__head">🤔 Me anoté al evento y aún no recibí el Email de confirmación, ¿qué hago?</button>
@@ -357,7 +357,7 @@ require_once('././config.php');
                     </li>
                     <li class="emms__frequentquestions__list__item close">
                         <button class="emms__frequentquestions__list__item__head">📝 ¿Obtengo un certificado de participación por asistir al evento?</button>
-                        <p class="emms__frequentquestions__list__item__content">¡Sí! Podrás descargar tu certificado de asistencia a cada edición del EMMS 2023 durante la transmisión del evento desde la misma URL donde vives la transmisión. ¿Te olvidaste de hacerlo? Comunícate a <a href="mailto:soporte@fromdoppler.com">soporte@fromdoppler.com</a>.</p>
+                        <p class="emms__frequentquestions__list__item__content">¡Sí! Podrás descargar tu certificado de asistencia a cada edición del EMMS 2023 durante la transmisión del evento desde la misma página. ¿Te olvidaste de hacerlo? Comunícate a <a href="mailto:soporte@fromdoppler.com">soporte@fromdoppler.com</a>.</p>
                     </li>
                 </ul>
             </div>
