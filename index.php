@@ -7,6 +7,16 @@ require_once('././config.php');
 
 <head>
     <?php include_once('././src/components/head.php'); ?>
+    <script type="module">
+        import {
+            isUserLogged,
+            getUrlWithParams
+        } from './src/<?= VERSION ?>/js/common/index.js';
+
+        if (isUserLogged()) {
+            window.location.href = getUrlWithParams('/registrado.php');
+        }
+    </script>
 </head>
 
 <body class="emms__home">
@@ -75,7 +85,7 @@ require_once('././config.php');
                                 <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <a href="./ecommerce.php">Regístrate gratis →</a>
+                                    <a href="#" id="redirectRegisterButton">Regístrate gratis →</a>
                                 </div>
                             </div>
                         </li>
@@ -400,6 +410,7 @@ require_once('././config.php');
     <?php include_once('././src/components/footer.php'); ?>
     <script src="src/<?= VERSION ?>/js/counterAnimation.js"></script>
     <script src="src/<?= VERSION ?>/js/collapsibles.js"></script>
+    <script src="src/<?= VERSION ?>/js/home.js" type="module"></script>
 
 </body>
 
