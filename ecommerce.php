@@ -8,6 +8,16 @@ require_once('././config.php');
 <head>
     <?php include_once('././src/components/head-ecommerce.php'); ?>
     <?php include_once('././src/components/head.php'); ?>
+    <script type="module">
+        import {
+            isUserLogged,
+            getUrlWithParams
+        } from './src/<?= VERSION ?>/js/common/index.js';
+
+        if (isUserLogged()) {
+            window.location.href = getUrlWithParams('/ecommerce-registrado.php');
+        }
+    </script>
 </head>
 
 <body class="emms__ecommerce">
@@ -76,12 +86,12 @@ require_once('././config.php');
                 </div>
                 <div class="emms__hero-form__form emms__fade-in">
                     <!-- Form -->
-                    <form class="emms__form" id="formModal" novalidate autocomplete="off">
+                    <form class="emms__form" id="ecommerceForm" novalidate autocomplete="off">
                         <ul class="emms__form__field-group">
                             <li class="emms__form__field-item">
                                 <div class="holder">
-                                    <label class="required-label" for="firstname">Nombre *</label>
-                                    <input type="text" name="firstname" id="firstname" placeholder="Tu nombre" class="required error-name nameLength" autocomplete="off">
+                                    <label class="required-label" for="name">Nombre *</label>
+                                    <input type="text" name="name" id="name" placeholder="Tu nombre" class="required error-name nameLength" autocomplete="off">
                                 </div>
                             </li>
                             <li class="emms__form__field-item">
@@ -107,7 +117,7 @@ require_once('././config.php');
                             </li>
                         </ul>
                         <div class="emms__form__btn">
-                            <button class="emms__cta" id="register-button">REGÍSTRATE GRATIS</button>
+                            <button class="emms__cta" id="register-button" type="button"><span class="button__text">REGÍSTRATE GRATIS</span></button>
                         </div>
                         <div class="emms__form__legal close">
                             <a class="emms__form__legal__btn" id="legalBtn">Información básica sobre privacidad </a>
@@ -540,6 +550,8 @@ require_once('././config.php');
     <script src="src/<?= VERSION ?>/js/collapsibles.js"></script>
     <script src="src/<?= VERSION ?>/js/dateCounter.js"></script>
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
+    <script src="src/<?= VERSION ?>/js/homeEcommerce.js" type="module"></script>
+    <script src="src/<?= VERSION ?>/js/user.js" type="module"></script>
 
 </body>
 
