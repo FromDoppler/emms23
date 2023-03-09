@@ -30,6 +30,7 @@ function setDataRequest($ip, $countryGeo)
 {
     $_POST = json_decode(file_get_contents('php://input'), true);
     $email = isset($_POST['email']) ? $_POST['email'] : null;
+    $encode_email = isset($_POST['encodeEmail']) ? $_POST['encodeEmail'] : null;
     $firstname = isset($_POST['name']) ? $_POST['name'] : null;
     $lastname = isset($_POST['lastname']) ? $_POST['lastname']    : null;
     $phone = isset($_POST['phone']) ? $_POST['phone'] : null;
@@ -50,6 +51,7 @@ function setDataRequest($ip, $countryGeo)
         'firstname' => $firstname,
         'lastname' => $lastname,
         'email' => $email,
+        'encode_email' => $encode_email,
         'privacy' => $privacy,
         'promotions' => $promotions,
         'phone' => $phone,
@@ -74,7 +76,6 @@ function setDataRequest($ip, $countryGeo)
         Validator::validateEmail($email);
         Validator::validateBool('privacy', $privacy);
         Validator::validateBool('promotions', $promotions);
-        Validator::validateRequired('industry', $industry);
         return $user;
     } catch (Exception $e) {
         processError("setDataRequest (Captura datos)", $e->getMessage(), ['user' => $user]);
