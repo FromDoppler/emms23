@@ -26,26 +26,14 @@ class Doppler {
         if(isset($data['firstname']) && (trim($data['firstname']) != '')) {
             array_push($customFields, array('name' => 'FIRSTNAME', 'Value' => $data['firstname']));
         }
-        if(isset($data['lastname']) && (trim($data['lastname']) != '')) {
-            array_push($customFields, array('name' => 'LASTNAME', 'Value' => $data['lastname']));
+        if(isset($data['encode_email']) && (trim($data['encode_email']) != '')) {
+            array_push($customFields, array('name' => 'EmmsEncodeEmail', 'Value' => $data['encode_email']));
         }
         if(isset($data['privacy']) && (trim($data['privacy']) != '')) {
             array_push($customFields, array('name' => 'AceptoPoliticaPrivacidad', 'Value' => boolval($data['privacy'])));
         }
         if(isset($data['promotions']) && (trim($data['promotions']) != '')) {
             array_push($customFields, array('name' => 'AceptoPromocionesDopplerAliados', 'Value' => boolval($data['promotions'])));
-        }
-        if(isset($data['phone']) && (trim($data['phone']) != '')) {
-            array_push($customFields, array('name' => 'tel', 'Value' => $data['phone']));
-        }
-        if(isset($data['country']) && (trim($data['country']) != '')) {
-            array_push($customFields, array('name' => 'pais', 'Value' => $data['country']));
-        }
-        if(isset($data['industry']) && (trim($data['industry']) != '')) {
-            array_push($customFields, array('name' => 'Industria', 'Value' => $data['industry']));
-        }
-        if(isset($data['company']) && (trim($data['company']) != '')) {
-            array_push($customFields, array('name' => 'Company', 'Value' => $data['company']));
         }
         if(isset($data['ip']) && (trim($data['ip']) != '')) {
             array_push($customFields, array('name' => 'IP', 'Value' => $data['ip']));
