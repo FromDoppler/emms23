@@ -26,6 +26,9 @@ class Doppler {
         if(isset($data['firstname']) && (trim($data['firstname']) != '')) {
             array_push($customFields, array('name' => 'FIRSTNAME', 'Value' => $data['firstname']));
         }
+        if(isset($data['encode_email']) && (trim($data['encode_email']) != '')) {
+            array_push($customFields, array('name' => 'EmmsEncodeEmail', 'Value' => $data['encode_email']));
+        }
         if(isset($data['privacy']) && (trim($data['privacy']) != '')) {
             array_push($customFields, array('name' => 'AceptoPoliticaPrivacidad', 'Value' => boolval($data['privacy'])));
         }
