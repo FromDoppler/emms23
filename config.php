@@ -61,9 +61,9 @@ if (!defined('LIST_LANDING')) define('LIST_LANDING', 28547158);
 if (!defined('ACCOUNT_RELAY')) define('ACCOUNT_RELAY', $ACCOUNT_RELAY);
 if (!defined('API_KEY_RELAY')) define('API_KEY_RELAY', $API_KEY_RELAY);
 
-if (!defined('SUBJECT_PRE')) define('SUBJECT_PRE', 'Agrega #EMMS2022 a tu calendario');
-if (!defined('SUBJECT_DURING')) define('SUBJECT_DURING', '¡Te damos la bienvenida al #EMMS2022!');
-if (!defined('SUBJECT_POST')) define('SUBJECT_POST', '¡Te damos la bienvenida al #EMMS2022!');
+if (!defined('SUBJECT_PRE')) define('SUBJECT_PRE', 'Agrega #EMMSECOMMERCE2023 a tu calendario');
+if (!defined('SUBJECT_DURING')) define('SUBJECT_DURING', '¡Te damos la bienvenida al #EMMSECOMMERCE2023!');
+if (!defined('SUBJECT_POST')) define('SUBJECT_POST', 'Ya puedes ver lo que fue el EMMSECOMMERCE2023');
 
 #GOOGLE SPREADSHEET
 //https://docs.google.com/spreadsheets/d/1HpSLWrz5lLcUKFyVGGF7PQ2FJvsydTV0IMahZogbQt0/edit#gid=0
