@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: db
--- Generation Time: Nov 16, 2022 at 07:14 PM
--- Server version: 8.0.29
--- PHP Version: 8.0.19
+-- Servidor: db
+-- Tiempo de generación: 13-03-2023 a las 12:13:28
+-- Versión del servidor: 8.0.22
+-- Versión de PHP: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,18 +18,17 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `EMMS22`
+-- Base de datos: `EMMS23`
 --
-CREATE DATABASE IF NOT EXISTS `EMMS22` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
-USE `EMMS22`;
+CREATE DATABASE IF NOT EXISTS `EMMS23` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+USE `EMMS23`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `aliados_media_partner`
+-- Estructura de tabla para la tabla `aliados_media_partner`
 --
 
-DROP TABLE IF EXISTS `aliados_media_partner`;
 CREATE TABLE `aliados_media_partner` (
   `id` int NOT NULL,
   `name` varchar(255) DEFAULT NULL,
@@ -40,7 +39,7 @@ CREATE TABLE `aliados_media_partner` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `aliados_media_partner`
+-- Volcado de datos para la tabla `aliados_media_partner`
 --
 
 INSERT INTO `aliados_media_partner` (`id`, `name`, `image_home`, `alt_image_home`, `orden_home`, `status`) VALUES
@@ -111,10 +110,9 @@ INSERT INTO `aliados_media_partner` (`id`, `name`, `image_home`, `alt_image_home
 -- --------------------------------------------------------
 
 --
--- Table structure for table `aliados_media_partner_bk`
+-- Estructura de tabla para la tabla `aliados_media_partner_bk`
 --
 
-DROP TABLE IF EXISTS `aliados_media_partner_bk`;
 CREATE TABLE `aliados_media_partner_bk` (
   `id` int NOT NULL,
   `name` varchar(255) DEFAULT NULL,
@@ -125,7 +123,7 @@ CREATE TABLE `aliados_media_partner_bk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `aliados_media_partner_bk`
+-- Volcado de datos para la tabla `aliados_media_partner_bk`
 --
 
 INSERT INTO `aliados_media_partner_bk` (`id`, `name`, `image_home`, `alt_image_home`, `orden_home`, `status`) VALUES
@@ -178,10 +176,9 @@ INSERT INTO `aliados_media_partner_bk` (`id`, `name`, `image_home`, `alt_image_h
 -- --------------------------------------------------------
 
 --
--- Table structure for table `aliados_pro`
+-- Estructura de tabla para la tabla `aliados_pro`
 --
 
-DROP TABLE IF EXISTS `aliados_pro`;
 CREATE TABLE `aliados_pro` (
   `id` int NOT NULL,
   `name` varchar(255) DEFAULT NULL,
@@ -209,7 +206,7 @@ CREATE TABLE `aliados_pro` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `aliados_pro`
+-- Volcado de datos para la tabla `aliados_pro`
 --
 
 INSERT INTO `aliados_pro` (`id`, `name`, `image_home`, `alt_image_home`, `link_site`, `orden_home`, `title`, `description_card`, `slug`, `orden_card`, `description`, `image_landing`, `alt_image_landing`, `youtube`, `image_youtube`, `alt_image_youtube`, `title_magnet`, `description_magnet`, `link_magnet`, `title_learnmore`, `description_learnmore`, `link_learnmore`, `status`) VALUES
@@ -224,10 +221,9 @@ INSERT INTO `aliados_pro` (`id`, `name`, `image_home`, `alt_image_home`, `link_s
 -- --------------------------------------------------------
 
 --
--- Table structure for table `aliados_starter`
+-- Estructura de tabla para la tabla `aliados_starter`
 --
 
-DROP TABLE IF EXISTS `aliados_starter`;
 CREATE TABLE `aliados_starter` (
   `id` int NOT NULL,
   `name` varchar(255) DEFAULT NULL,
@@ -257,18 +253,17 @@ CREATE TABLE `aliados_starter` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `google_oauth`
+-- Estructura de tabla para la tabla `google_oauth`
 --
 
-DROP TABLE IF EXISTS `google_oauth`;
 CREATE TABLE `google_oauth` (
   `id` int NOT NULL,
   `provider` varchar(255) NOT NULL,
   `provider_value` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `google_oauth`
+-- Volcado de datos para la tabla `google_oauth`
 --
 
 INSERT INTO `google_oauth` (`id`, `provider`, `provider_value`) VALUES
@@ -326,20 +321,19 @@ INSERT INTO `google_oauth` (`id`, `provider`, `provider_value`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `log_errors`
+-- Estructura de tabla para la tabla `log_errors`
 --
 
-DROP TABLE IF EXISTS `log_errors`;
 CREATE TABLE `log_errors` (
   `id` int NOT NULL,
   `date` varchar(150) NOT NULL,
   `function_name` varchar(300) NOT NULL,
   `description` text NOT NULL,
   `data` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `log_errors`
+-- Volcado de datos para la tabla `log_errors`
 --
 
 INSERT INTO `log_errors` (`id`, `date`, `function_name`, `description`, `data`) VALUES
@@ -357,10 +351,9 @@ INSERT INTO `log_errors` (`id`, `date`, `function_name`, `description`, `data`) 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `registered`
+-- Estructura de tabla para la tabla `registered`
 --
 
-DROP TABLE IF EXISTS `registered`;
 CREATE TABLE `registered` (
   `id` bigint NOT NULL,
   `register` varchar(50) NOT NULL,
@@ -370,7 +363,6 @@ CREATE TABLE `registered` (
   `lastname` varchar(150) DEFAULT NULL,
   `country` varchar(150) DEFAULT NULL,
   `phone` varchar(300) DEFAULT NULL,
-  `industry` varchar(300) NOT NULL,
   `company` varchar(300) DEFAULT NULL,
   `source_utm` text,
   `medium_utm` text,
@@ -380,36 +372,35 @@ CREATE TABLE `registered` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `registered`
+-- Volcado de datos para la tabla `registered`
 --
 
-INSERT INTO `registered` (`id`, `register`, `phase`, `email`, `firstname`, `lastname`, `country`, `phone`, `industry`, `company`, `source_utm`, `medium_utm`, `campaign_utm`, `content_utm`, `term_utm`) VALUES
-(1, '2022-10-19 11:26:36 AM', 'preevento', 'hcardoso+new+fields@fromdoppler.com', 'Fede', NULL, NULL, NULL, 'Agencias-de-comunicacion-Publicidad-Consultor', NULL, 'direct', '', '', '', ''),
-(2, '2022-11-09 11:52:47 AM', 'during', 'hernan.f.cardoso@gmail.com', 'fede', '', '', '', 'Agencias-de-Empleo', '', 'direct', '', '', '', ''),
-(3, '2022-10-26 12:54:36 PM', 'pre', 'hcardoso+pre@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Agencias-de-comunicacion-Publicidad-Consultor', NULL, 'direct', '', '', '', ''),
-(4, '2022-10-26 01:00:27 PM', 'during', 'hcardoso+during@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Entretenimiento', NULL, 'direct', '', '', '', ''),
-(5, '2022-10-26 01:04:21 PM', 'post', 'hcardoso+post@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Belleza-Cosmética', NULL, 'direct', '', '', '', ''),
-(6, '2022-10-26 01:13:57 PM', 'during', 'hcardoso+simulador+during@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Salud', NULL, 'direct', '', '', '', ''),
-(7, '2022-10-26 01:29:38 PM', 'post', 'hcardoso+post+1@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Entretenimiento', NULL, 'direct', '', '', '', ''),
-(8, '2022-10-26 01:30:43 PM', 'during', 'hcardoso+during+1@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Educación', NULL, 'direct', '', '', '', ''),
-(9, '2022-10-26 01:31:57 PM', 'pre', 'hcardoso+simulador+pre@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Agencias-de-Empleo', NULL, 'direct', '', '', '', ''),
-(10, '2022-10-27 10:48:35 AM', 'pre', 'hcardoso+during+local@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Supermercado', NULL, 'direct', '', '', '', ''),
-(11, '2022-10-27 10:53:34 AM', 'during', 'hcardoso+during+local+2@fromdoppler.com', 'fede', NULL, NULL, NULL, 'Servicios', NULL, 'direct', '', '', '', '');
+INSERT INTO `registered` (`id`, `register`, `phase`, `email`, `firstname`, `lastname`, `country`, `phone`, `company`, `source_utm`, `medium_utm`, `campaign_utm`, `content_utm`, `term_utm`) VALUES
+(1, '2022-10-19 11:26:36 AM', 'preevento', 'hcardoso+new+fields@fromdoppler.com', 'Fede', NULL, NULL, NULL, NULL, 'direct', '', '', '', ''),
+(2, '2022-11-09 11:52:47 AM', 'during', 'hernan.f.cardoso@gmail.com', 'fede', '', '', '', '', 'direct', '', '', '', ''),
+(3, '2022-10-26 12:54:36 PM', 'pre', 'hcardoso+pre@fromdoppler.com', 'fede', NULL, NULL, NULL, NULL, 'direct', '', '', '', ''),
+(4, '2022-10-26 01:00:27 PM', 'during', 'hcardoso+during@fromdoppler.com', 'fede', NULL, NULL, NULL, NULL, 'direct', '', '', '', ''),
+(5, '2022-10-26 01:04:21 PM', 'post', 'hcardoso+post@fromdoppler.com', 'fede', NULL, NULL, NULL, NULL, 'direct', '', '', '', ''),
+(6, '2022-10-26 01:13:57 PM', 'during', 'hcardoso+simulador+during@fromdoppler.com', 'fede', NULL, NULL, NULL, NULL, 'direct', '', '', '', ''),
+(7, '2022-10-26 01:29:38 PM', 'post', 'hcardoso+post+1@fromdoppler.com', 'fede', NULL, NULL, NULL, NULL, 'direct', '', '', '', ''),
+(8, '2022-10-26 01:30:43 PM', 'during', 'hcardoso+during+1@fromdoppler.com', 'fede', NULL, NULL, NULL, NULL, 'direct', '', '', '', ''),
+(9, '2022-10-26 01:31:57 PM', 'pre', 'hcardoso+simulador+pre@fromdoppler.com', 'fede', NULL, NULL, NULL, NULL, 'direct', '', '', '', ''),
+(10, '2022-10-27 10:48:35 AM', 'pre', 'hcardoso+during+local@fromdoppler.com', 'fede', NULL, NULL, NULL, NULL, 'direct', '', '', '', ''),
+(11, '2022-10-27 10:53:34 AM', 'during', 'hcardoso+during+local+2@fromdoppler.com', 'fede', NULL, NULL, NULL, NULL, 'direct', '', '', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `settings_during_days`
+-- Estructura de tabla para la tabla `settings_during_days`
 --
 
-DROP TABLE IF EXISTS `settings_during_days`;
 CREATE TABLE `settings_during_days` (
   `day` int NOT NULL,
   `live` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `settings_during_days`
+-- Volcado de datos para la tabla `settings_during_days`
 --
 
 INSERT INTO `settings_during_days` (`day`, `live`) VALUES
@@ -418,18 +409,17 @@ INSERT INTO `settings_during_days` (`day`, `live`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `settings_phase`
+-- Estructura de tabla para la tabla `settings_phase`
 --
 
-DROP TABLE IF EXISTS `settings_phase`;
 CREATE TABLE `settings_phase` (
   `pre` tinyint NOT NULL,
   `during` tinyint NOT NULL,
   `post` tinyint NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `settings_phase`
+-- Volcado de datos para la tabla `settings_phase`
 --
 
 INSERT INTO `settings_phase` (`pre`, `during`, `post`) VALUES
@@ -438,19 +428,18 @@ INSERT INTO `settings_phase` (`pre`, `during`, `post`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `settings_simulator`
+-- Estructura de tabla para la tabla `settings_simulator`
 --
 
-DROP TABLE IF EXISTS `settings_simulator`;
 CREATE TABLE `settings_simulator` (
   `enabled` tinyint NOT NULL,
   `pre` tinyint NOT NULL,
   `during` tinyint NOT NULL,
   `post` tinyint NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `settings_simulator`
+-- Volcado de datos para la tabla `settings_simulator`
 --
 
 INSERT INTO `settings_simulator` (`enabled`, `pre`, `during`, `post`) VALUES
@@ -459,17 +448,16 @@ INSERT INTO `settings_simulator` (`enabled`, `pre`, `during`, `post`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `settings_simulator_during_days`
+-- Estructura de tabla para la tabla `settings_simulator_during_days`
 --
 
-DROP TABLE IF EXISTS `settings_simulator_during_days`;
 CREATE TABLE `settings_simulator_during_days` (
   `day` int NOT NULL,
   `live` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `settings_simulator_during_days`
+-- Volcado de datos para la tabla `settings_simulator_during_days`
 --
 
 INSERT INTO `settings_simulator_during_days` (`day`, `live`) VALUES
@@ -478,17 +466,16 @@ INSERT INTO `settings_simulator_during_days` (`day`, `live`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `settings_transmission`
+-- Estructura de tabla para la tabla `settings_transmission`
 --
 
-DROP TABLE IF EXISTS `settings_transmission`;
 CREATE TABLE `settings_transmission` (
   `problems` tinyint(1) NOT NULL,
   `youtube` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `settings_transmission`
+-- Volcado de datos para la tabla `settings_transmission`
 --
 
 INSERT INTO `settings_transmission` (`problems`, `youtube`) VALUES
@@ -497,61 +484,111 @@ INSERT INTO `settings_transmission` (`problems`, `youtube`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `speakers`
+-- Estructura de tabla para la tabla `speakers`
 --
 
-DROP TABLE IF EXISTS `speakers`;
 CREATE TABLE `speakers` (
   `id` int NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  `alt_image` varchar(255) DEFAULT NULL,
-  `job` varchar(255) DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `alt_image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `job` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `sm_twitter` varchar(255) DEFAULT NULL,
   `sm_linkedin` varchar(255) DEFAULT NULL,
   `sm_instagram` varchar(255) DEFAULT NULL,
   `sm_facebook` varchar(255) DEFAULT NULL,
-  `description` text,
-  `bio` text,
-  `image_company` varchar(255) DEFAULT NULL,
-  `alt_image_company` varchar(255) DEFAULT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `bio` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `image_company` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `alt_image_company` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `time` varchar(255) DEFAULT NULL,
-  `link_time` varchar(500) NOT NULL,
+  `link_time` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `orden` varchar(255) DEFAULT NULL,
-  `day` varchar(1) NOT NULL,
-  `youtube` varchar(20) CHARACTER SET utf8mb3 COLLATE utf8_general_ci NOT NULL,
-  `slug` varchar(250) CHARACTER SET utf8mb3 COLLATE utf8_general_ci NOT NULL,
+  `day` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `youtube` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `slug` varchar(250) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `status` enum('0','1') DEFAULT NULL,
-  `meta_title` varchar(350) CHARACTER SET utf8mb3 COLLATE utf8_general_ci NOT NULL,
-  `meta_description` text CHARACTER SET utf8mb3 COLLATE utf8_general_ci NOT NULL,
-  `meta_image` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8_general_ci NOT NULL,
-  `meta_twitter` text CHARACTER SET utf8mb3 COLLATE utf8_general_ci NOT NULL
+  `meta_title` varchar(350) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `meta_description` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `meta_image` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `meta_twitter` text CHARACTER SET utf8 COLLATE utf8_general_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `speakers`
+-- Volcado de datos para la tabla `speakers`
 --
 
 INSERT INTO `speakers` (`id`, `name`, `image`, `alt_image`, `job`, `sm_twitter`, `sm_linkedin`, `sm_instagram`, `sm_facebook`, `description`, `bio`, `image_company`, `alt_image_company`, `time`, `link_time`, `orden`, `day`, `youtube`, `slug`, `status`, `meta_title`, `meta_description`, `meta_image`, `meta_twitter`) VALUES
-(5, 'Raquel Oberlander', 'raquel-oberlander-site (1).png', 'Raquel Oberlander', ' CEO en Hep!c Marketing', 'https://twitter.com/raquelober?lang=es', 'https://www.linkedin.com/in/raqueloberlander?originalSubdomain=uy', 'https://www.instagram.com/raquelober/?hl=es', 'https://www.facebook.com/RaquelOberlanderErnst', '¿Por qué el Contenido es la nueva publicidad?', NULL, 'hepc-speaker.png', 'Hep!c Marketing', '1', '', '3', '1', '', '', NULL, '', '', '', ''),
-(7, 'Vedant Misra', 'vedant-misra-site.png', 'Vedan Misra', 'AI Researcher en Google <br>                                                                                    ', 'https://twitter.com/vedantmisra?lang=es', 'https://www.linkedin.com/in/vedantmisra/', '', '', 'Cómo la Inteligencia Artificial transformará la generación de demanda', NULL, 'google-speaker.png', 'Google', '1', '', '10', '2', '', '', NULL, '', '', '', ''),
-(8, 'Leo Larrea', 'leo-larrea-site.png', 'Metricool', 'Social Media Manager en Metricool', 'https://twitter.com/leo_la', 'https://www.linkedin.com/in/leolarreavelasco/?originalSubdomain=es', 'https://www.instagram.com/leolarrea/?hl=es', 'https://www.facebook.com/leolarrea', 'Cómo crecer en Instagram con datos reales en la mano', NULL, 'metricool-speaker.png', 'Metricool', '1', '', '4', '1', '', '', NULL, '', '', '', ''),
-(9, 'Álvaro Fontela', 'alvaro-raiola-site.png', 'Alvaro Fontela', 'CEO en Raiola Networks', '', 'https://www.linkedin.com/in/alvarofontela/?originalSubdomain=es', 'https://www.instagram.com/alvarofontela/?hl=es', 'https://www.facebook.com/afontelasanchez', '10 tareas de Marketing Digital que puedes solucionar con WordPress', NULL, 'raiola-speaker.png', 'Raiola Networks', '1', '', '5', '1', '', '', NULL, '', '', '', ''),
-(10, 'Mariano Platner', 'mariano-platner-site.png', 'Mariano Platner', 'Co-fundador en Tiendup', 'https://mobile.twitter.com/marianasso', 'https://www.linkedin.com/in/mariano-platner-47473b110/?originalSubdomain=ar', '', '', 'Sobre tendencias en Negocios Digitales: todos somos creadores', NULL, 'tiendup-speaker.png', 'Tiendup', '1', '', '6', '1', '', '', NULL, '', '', '', ''),
-(11, 'Llorenç Palomas', 'lloren-palomas-site (1).png', 'Llorenç Palomas', 'CMO & Head of Marketing en Doofinder', 'https://twitter.com/llorensp', 'https://www.linkedin.com/in/llorencpalomas/?originalSubdomain=es', '', '', 'El valor de los datos: caza tendencias para tu eCommerce ', NULL, 'doofinder-speaker.png', 'Doofinder', '1', '', '30', '2', '', '', NULL, '', '', '', ''),
-(12, 'Oscar Nogueras', 'oscar-noregas-site.png', 'Oscar Nogueras', 'CEO en Ontranslation', 'https://twitter.com/oscarnogueras', 'https://www.linkedin.com/in/oscarnogueras/?originalSubdomain=es', '', '', '10 consejos para vender cross-border con éxito', NULL, 'on-translation-speaker.png', 'Ontranslation', '1', '', '30', '2', '', '', NULL, '', '', '', ''),
-(13, 'Juan Lombana', 'juan-lombana-site.png', 'Juan Lombana', 'CEO en Mercatitlán', '', 'https://www.linkedin.com/in/juanglombana/', 'https://www.instagram.com/juanlombana/', 'https://www.facebook.com/mercatitlan/', 'Los 4 ingredientes para triunfar en redes sociales', '', 'mercatitlan-speaker.png', 'Mercatitlan', '1', 'https://www.timeanddate.com/worldclock/fixedtime.html?msg=Juan+Lombana%3A+Los+4+ingredientes+para+triunfar+en+Social+Media&iso=20221108T11&p1=51&am=40', '10', '1', '', '', NULL, '', '', '', ''),
-(14, 'Ángela Blones', 'angela-blones-site (1).png', 'Ángela Blones', 'Directora en RRBRANDSS', 'https://twitter.com/AngelaBlones', '', 'https://www.instagram.com/angelablones/', '', 'Cómo potenciar tu negocio a través del Branding', NULL, 'ab-speaker.png', 'Angela Blones', '1', '', '20', '2', '', '', NULL, '', '', '', ''),
-(15, 'Andreína Espino', 'andreina-espino-site.png', 'Andreina Espino', 'CCO en Brainwave', 'https://mobile.twitter.com/andreinaespino', 'https://www.linkedin.com/in/andreinaespino/', 'https://www.instagram.com/andreinaespino/?hl=es', 'https://www.facebook.com/andreinaespinotv', 'El poder de Reels, Tiktok y Youtube Shorts en Tu Estrategia de Marketing', NULL, 'brainwave-site.png', 'Brainwave', '1', '', '25', '2', '', '', NULL, '', '', '', ''),
-(18, 'Albert Esplugas', 'alberto-esplugas-site.png', 'Albert Esplugas', 'Head of AI Solutions Marketing en Amazon Web Services', 'https://twitter.com/albert_esplugas', 'https://www.linkedin.com/in/albertesplugas/', '', '', 'Aplicación de Inteligencia Artificial en Marketing y casos de uso', 'Inició su carrera en Apple. Durante los siguientes 10 años creó y dirigió diversas empresas, hasta que se unió a Microsoft. Actualmente es el Responsable de Marketing de los Servicios de IA en Amazon Web Services.', 'aws-speaker.png', 'Amazon Web Services', '13:30', 'https://www.timeanddate.com/worldclock/fixedtime.html?msg=Albert+Esplugas%3A+Aplicaci%C3%B3n+de+Inteligencia+Artificial+en+Marketing+y+casos+de+uso&iso=20221108T1330&p1=51&ah=1', '3', '1', 'SzsghlcoqPU', 'albertesplugas', NULL, 'titulo seo', 'descripcion para e l seo', 'batman-logo.png', 'texto para le twiiter');
+(5, 'Raquel Oberlander', 'raquel-oberlander-site (1).png', 'Raquel Oberlander', ' CEO en Hep!c Marketing', 'https://twitter.com/raquelober?lang=es', 'https://www.linkedin.com/in/raqueloberlander?originalSubdomain=uy', 'https://www.instagram.com/raquelober/?hl=es', 'https://www.facebook.com/RaquelOberlanderErnst', '¿Por qué el Contenido es la nueva publicidad?', 'Inició su carrera en Apple. Durante los siguientes 10 años creó y dirigió diversas empresas, hasta que se unió a Microsoft. Actualmente es el Responsable de Marketing de los Servicios de IA en Amazon Web Services.', 'hepc-speaker.png', 'Hep!c Marketing', '1', '', '3', '1', '', '', NULL, '', '', '', ''),
+(7, 'Vedant Misra', 'vedant-misra-site.png', 'Vedan Misra', 'AI Researcher en Google <br>                                                                                    ', 'https://twitter.com/vedantmisra?lang=es', 'https://www.linkedin.com/in/vedantmisra/', '', '', 'Cómo la Inteligencia Artificial transformará la generación de demanda', 'Inició su carrera en Apple. Durante los siguientes 10 años creó y dirigió diversas empresas, hasta que se unió a Microsoft. Actualmente es el Responsable de Marketing de los Servicios de IA en Amazon Web Services.', 'google-speaker.png', 'Google', '1', '', '10', '2', '', '', NULL, '', '', '', ''),
+(8, 'Leo Larrea', 'leo-larrea-site.png', 'Metricool', 'Social Media Manager en Metricool', 'https://twitter.com/leo_la', 'https://www.linkedin.com/in/leolarreavelasco/?originalSubdomain=es', 'https://www.instagram.com/leolarrea/?hl=es', 'https://www.facebook.com/leolarrea', 'Cómo crecer en Instagram con datos reales en la mano', 'Inició su carrera en Apple. Durante los siguientes 10 años creó y dirigió diversas empresas, hasta que se unió a Microsoft. Actualmente es el Responsable de Marketing de los Servicios de IA en Amazon Web Services.', 'metricool-speaker.png', 'Metricool', '1', '', '4', '1', '', '', NULL, '', '', '', ''),
+(9, 'Álvaro Fontela', 'alvaro-raiola-site.png', 'Alvaro Fontela', 'CEO en Raiola Networks', '', 'https://www.linkedin.com/in/alvarofontela/?originalSubdomain=es', 'https://www.instagram.com/alvarofontela/?hl=es', 'https://www.facebook.com/afontelasanchez', '10 tareas de Marketing Digital que puedes solucionar con WordPress', 'Inició su carrera en Apple. Durante los siguientes 10 años creó y dirigió diversas empresas, hasta que se unió a Microsoft. Actualmente es el Responsable de Marketing de los Servicios de IA en Amazon Web Services.', 'raiola-speaker.png', 'Raiola Networks', '1', '', '5', '1', '', '', NULL, '', '', '', ''),
+(10, 'Mariano Platner', 'mariano-platner-site.png', 'Mariano Platner', 'Co-fundador en Tiendup', 'https://mobile.twitter.com/marianasso', 'https://www.linkedin.com/in/mariano-platner-47473b110/?originalSubdomain=ar', '', '', 'Sobre tendencias en Negocios Digitales: todos somos creadores', 'Inició su carrera en Apple. Durante los siguientes 10 años creó y dirigió diversas empresas, hasta que se unió a Microsoft. Actualmente es el Responsable de Marketing de los Servicios de IA en Amazon Web Services.', 'tiendup-speaker.png', 'Tiendup', '1', '', '6', '1', '', '', NULL, '', '', '', ''),
+(11, 'Llorenç Palomas', 'lloren-palomas-site (1).png', 'Llorenç Palomas', 'CMO & Head of Marketing en Doofinder', 'https://twitter.com/llorensp', 'https://www.linkedin.com/in/llorencpalomas/?originalSubdomain=es', '', '', 'El valor de los datos: caza tendencias para tu eCommerce ', 'Inició su carrera en Apple. Durante los siguientes 10 años creó y dirigió diversas empresas, hasta que se unió a Microsoft. Actualmente es el Responsable de Marketing de los Servicios de IA en Amazon Web Services.', 'doofinder-speaker.png', 'Doofinder', '1', '', '30', '2', '', '', NULL, '', '', '', ''),
+(12, 'Oscar Nogueras', 'oscar-noregas-site.png', 'Oscar Nogueras', 'CEO en Ontranslation', 'https://twitter.com/oscarnogueras', 'https://www.linkedin.com/in/oscarnogueras/?originalSubdomain=es', '', '', '10 consejos para vender cross-border con éxito', 'Inició su carrera en Apple. Durante los siguientes 10 años creó y dirigió diversas empresas, hasta que se unió a Microsoft. Actualmente es el Responsable de Marketing de los Servicios de IA en Amazon Web Services.', 'on-translation-speaker.png', 'Ontranslation', '1', '', '30', '2', '', '', NULL, '', '', '', ''),
+(13, 'Juan Lombana', 'juan-lombana-site.png', 'Juan Lombana', 'CEO en Mercatitlán', '', 'https://www.linkedin.com/in/juanglombana/', 'https://www.instagram.com/juanlombana/', 'https://www.facebook.com/mercatitlan/', 'Los 4 ingredientes para triunfar en redes sociales', 'Inició su carrera en Apple. Durante los siguientes 10 años creó y dirigió diversas empresas, hasta que se unió a Microsoft. Actualmente es el Responsable de Marketing de los Servicios de IA en Amazon Web Services.', 'mercatitlan-speaker.png', 'Mercatitlan', '1', 'https://www.timeanddate.com/worldclock/fixedtime.html?msg=Juan+Lombana%3A+Los+4+ingredientes+para+triunfar+en+Social+Media&iso=20221108T11&p1=51&am=40', '10', '1', '', '', NULL, '', '', '', ''),
+(14, 'Ángela Blones', 'angela-blones-site (1).png', 'Ángela Blones', 'Directora en RRBRANDSS', 'https://twitter.com/AngelaBlones', '', 'https://www.instagram.com/angelablones/', '', 'Cómo potenciar tu negocio a través del Branding', 'Inició su carrera en Apple. Durante los siguientes 10 años creó y dirigió diversas empresas, hasta que se unió a Microsoft. Actualmente es el Responsable de Marketing de los Servicios de IA en Amazon Web Services.', 'ab-speaker.png', 'Angela Blones', '1', '', '20', '2', '', '', NULL, '', '', '', ''),
+(15, 'Andreína Espino', 'andreina-espino-site.png', 'Andreina Espino', 'CCO en Brainwave', 'https://mobile.twitter.com/andreinaespino', 'https://www.linkedin.com/in/andreinaespino/', 'https://www.instagram.com/andreinaespino/?hl=es', 'https://www.facebook.com/andreinaespinotv', 'El poder de Reels, Tiktok y Youtube Shorts en Tu Estrategia de Marketing', 'Inició su carrera en Apple. Durante los siguientes 10 años creó y dirigió diversas empresas, hasta que se unió a Microsoft. Actualmente es el Responsable de Marketing de los Servicios de IA en Amazon Web Services.', 'brainwave-site.png', 'Brainwave', '1', '', '25', '2', '', '', NULL, '', '', '', ''),
+(18, 'Albert Esplugas', 'alberto-esplugas-site.png', 'Albert Esplugas', 'Head of AI Solutions Marketing en Amazon Web Services', 'https://twitter.com/albert_esplugas', 'https://www.linkedin.com/in/albertesplugas/', '', '', 'Aplicación de Inteligencia Artificial en Marketing y casos de uso', 'Inició su carrera en Apple. Durante los siguientes 10 años creó y dirigió diversas empresas, hasta que se unió a Microsoft. Actualmente es el Responsable de Marketing de los Servicios de IA en Amazon Web Services.', 'aws-speaker.png', 'Amazon Web Services', '13:30', 'https://www.timeanddate.com/worldclock/fixedtime.html?msg=Albert+Esplugas%3A+Aplicaci%C3%B3n+de+Inteligencia+Artificial+en+Marketing+y+casos+de+uso&iso=20221108T1330&p1=51&ah=1', '3', '1', 'SzsghlcoqPU', 'albertesplugas', NULL, 'titulo seo', 'descripcion para e l seo', 'batman-logo.png', 'texto para le twiiter'),
+(19, 'harold', 'harold.jpg', 'harold', 'home office', '', '', '', '', 'developer', 'good boy', 'harold.jpg', 'harold', '', '', '', '1', '', 'slug', NULL, '', '', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `subscriptions_doppler`
+-- Estructura de tabla para la tabla `sponsors`
 --
 
-DROP TABLE IF EXISTS `subscriptions_doppler`;
+CREATE TABLE `sponsors` (
+  `sponsor_id` int NOT NULL,
+  `sponsor_type` enum('SPONSOR','PREMIUM','STARTER') DEFAULT NULL,
+  `name_company` varchar(255) NOT NULL,
+  `logo_company` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `alt_logo_company` varchar(255) NOT NULL,
+  `link_site` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `priority_home` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `conference_name` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `description` text,
+  `description_card` varchar(255) DEFAULT NULL,
+  `slug` varchar(255) DEFAULT NULL,
+  `priority_card` varchar(255) DEFAULT NULL,
+  `image_landing` varchar(255) DEFAULT NULL,
+  `alt_image_landing` varchar(255) DEFAULT NULL,
+  `youtube` varchar(255) DEFAULT NULL,
+  `image_youtube` varchar(255) DEFAULT NULL,
+  `alt_image_youtube` varchar(255) DEFAULT NULL,
+  `title_magnet` text,
+  `description_magnet` text,
+  `link_magnet` varchar(255) DEFAULT NULL,
+  `title_promo_company` text,
+  `description_promo_company` text,
+  `link_promo_company` varchar(255) DEFAULT NULL,
+  `status` enum('0','1') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Volcado de datos para la tabla `sponsors`
+--
+
+INSERT INTO `sponsors` (`sponsor_id`, `sponsor_type`, `name_company`, `logo_company`, `alt_logo_company`, `link_site`, `priority_home`, `conference_name`, `title`, `description`, `description_card`, `slug`, `priority_card`, `image_landing`, `alt_image_landing`, `youtube`, `image_youtube`, `alt_image_youtube`, `title_magnet`, `description_magnet`, `link_magnet`, `title_promo_company`, `description_promo_company`, `link_promo_company`, `status`) VALUES
+(29, 'STARTER', 'matias', '20230307T134309991Z274226.png', 'hola', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0'),
+(30, 'STARTER', 'dhdfg', '20230307T182528141Z089579.png', 'ertertert', NULL, '56', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0'),
+(31, 'STARTER', 'tato', '20230307T193830460Z935945.png', 'werwerwer', NULL, '34', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0'),
+(32, 'STARTER', 'tato2', '20230307T194046354Z134835.png', '34343', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0'),
+(33, 'STARTER', 'tato', '20230307T195744336Z767859.png', 'thrfh', NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0'),
+(34, 'STARTER', 'pedro uno', '20230307T215747327Z242801.png', 'thrfh', NULL, '6', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0'),
+(35, 'STARTER', 'pedro2', '20230307T215757180Z468480.jpg', 'laaaaaargo', NULL, '6', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0'),
+(36, 'STARTER', 'juan ', '20230308T133520649Z381769.png', 'juan', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0'),
+(37, 'STARTER', 'mario', NULL, 'mario', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0'),
+(38, 'STARTER', 'laura', NULL, 'laura', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0'),
+(39, 'STARTER', 'tttt', '20230309T212229890Z520904.png', 'uuuu', NULL, '6', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `subscriptions_doppler`
+--
+
 CREATE TABLE `subscriptions_doppler` (
   `id` int NOT NULL,
   `email` varchar(250) NOT NULL,
@@ -562,7 +599,6 @@ CREATE TABLE `subscriptions_doppler` (
   `lastname` varchar(150) DEFAULT NULL,
   `phone` varchar(300) DEFAULT NULL,
   `country` varchar(150) DEFAULT NULL,
-  `industry` varchar(300) NOT NULL,
   `company` varchar(300) DEFAULT NULL,
   `ip` varchar(150) NOT NULL,
   `country_ip` varchar(150) NOT NULL,
@@ -576,136 +612,148 @@ CREATE TABLE `subscriptions_doppler` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `subscriptions_doppler`
+-- Volcado de datos para la tabla `subscriptions_doppler`
 --
 
-INSERT INTO `subscriptions_doppler` (`id`, `email`, `list`, `register`, `form_id`, `firstname`, `lastname`, `phone`, `country`, `industry`, `company`, `ip`, `country_ip`, `privacy`, `promotions`, `source_utm`, `medium_utm`, `campaign_utm`, `content_utm`, `term_utm`) VALUES
-(1, 'hcardoso+new+fields@fromdoppler.com', '28547158', '2022-10-19 11:26:38 AM', 'preevento', 'Fede', NULL, NULL, NULL, 'Agencias-de-comunicacion-Publicidad-Consultor', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(2, 'hernan.f.cardoso@gmail.com', '28547158', '2022-10-25 02:11:08 PM', 'preevento', 'fede', NULL, NULL, NULL, 'Supermercado', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(3, 'hcardoso+pre@fromdoppler.com', '28547158', '2022-10-26 12:54:39 PM', 'pre', 'fede', NULL, NULL, NULL, 'Agencias-de-comunicacion-Publicidad-Consultor', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(4, 'hcardoso+during@fromdoppler.com', '28547158', '2022-10-26 01:00:29 PM', 'during', 'fede', NULL, NULL, NULL, 'Entretenimiento', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(5, 'hcardoso+post@fromdoppler.com', '28547158', '2022-10-26 01:04:27 PM', 'post', 'fede', NULL, NULL, NULL, 'Belleza-Cosmética', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(6, 'hcardoso+simulador+during@fromdoppler.com', '28547158', '2022-10-26 01:13:59 PM', 'during', 'fede', NULL, NULL, NULL, 'Salud', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(7, 'hcardoso+post+1@fromdoppler.com', '28547158', '2022-10-26 01:29:41 PM', 'post', 'fede', NULL, NULL, NULL, 'Entretenimiento', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(8, 'hcardoso+during+1@fromdoppler.com', '28547158', '2022-10-26 01:30:45 PM', 'during', 'fede', NULL, NULL, NULL, 'Educación', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(9, 'hcardoso+simulador+pre@fromdoppler.com', '28547158', '2022-10-26 01:32:11 PM', 'pre', 'fede', NULL, NULL, NULL, 'Agencias-de-Empleo', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(10, 'hcardoso+during+local@fromdoppler.com', '28547158', '2022-10-27 10:48:37 AM', 'pre', 'fede', NULL, NULL, NULL, 'Supermercado', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(11, 'hcardoso+during+local+2@fromdoppler.com', '28547158', '2022-10-27 10:53:36 AM', 'during', 'fede', NULL, NULL, NULL, 'Servicios', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(12, 'hernan.f.cardoso@gmail.com', '28547158', '2022-10-31 02:27:49 PM', 'during', 'fede', NULL, NULL, NULL, 'Servicios', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
-(13, 'hernan.f.cardoso@gmail.com', '28547158', '2022-11-09 11:52:53 AM', 'during', 'fede', NULL, NULL, NULL, 'Agencias-de-Empleo', NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', '');
+INSERT INTO `subscriptions_doppler` (`id`, `email`, `list`, `register`, `form_id`, `firstname`, `lastname`, `phone`, `country`, `company`, `ip`, `country_ip`, `privacy`, `promotions`, `source_utm`, `medium_utm`, `campaign_utm`, `content_utm`, `term_utm`) VALUES
+(1, 'hcardoso+new+fields@fromdoppler.com', '28547158', '2022-10-19 11:26:38 AM', 'preevento', 'Fede', NULL, NULL, NULL, NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(2, 'hernan.f.cardoso@gmail.com', '28547158', '2022-10-25 02:11:08 PM', 'preevento', 'fede', NULL, NULL, NULL, NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(3, 'hcardoso+pre@fromdoppler.com', '28547158', '2022-10-26 12:54:39 PM', 'pre', 'fede', NULL, NULL, NULL, NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(4, 'hcardoso+during@fromdoppler.com', '28547158', '2022-10-26 01:00:29 PM', 'during', 'fede', NULL, NULL, NULL, NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(5, 'hcardoso+post@fromdoppler.com', '28547158', '2022-10-26 01:04:27 PM', 'post', 'fede', NULL, NULL, NULL, NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(6, 'hcardoso+simulador+during@fromdoppler.com', '28547158', '2022-10-26 01:13:59 PM', 'during', 'fede', NULL, NULL, NULL, NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(7, 'hcardoso+post+1@fromdoppler.com', '28547158', '2022-10-26 01:29:41 PM', 'post', 'fede', NULL, NULL, NULL, NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(8, 'hcardoso+during+1@fromdoppler.com', '28547158', '2022-10-26 01:30:45 PM', 'during', 'fede', NULL, NULL, NULL, NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(9, 'hcardoso+simulador+pre@fromdoppler.com', '28547158', '2022-10-26 01:32:11 PM', 'pre', 'fede', NULL, NULL, NULL, NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(10, 'hcardoso+during+local@fromdoppler.com', '28547158', '2022-10-27 10:48:37 AM', 'pre', 'fede', NULL, NULL, NULL, NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(11, 'hcardoso+during+local+2@fromdoppler.com', '28547158', '2022-10-27 10:53:36 AM', 'during', 'fede', NULL, NULL, NULL, NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(12, 'hernan.f.cardoso@gmail.com', '28547158', '2022-10-31 02:27:49 PM', 'during', 'fede', NULL, NULL, NULL, NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', ''),
+(13, 'hernan.f.cardoso@gmail.com', '28547158', '2022-11-09 11:52:53 AM', 'during', 'fede', NULL, NULL, NULL, NULL, '172.18.0.1', 'Not Recognized', 1, 0, 'direct', '', '', '', '');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `aliados_media_partner`
+-- Indices de la tabla `aliados_media_partner`
 --
 ALTER TABLE `aliados_media_partner`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `aliados_media_partner_bk`
+-- Indices de la tabla `aliados_media_partner_bk`
 --
 ALTER TABLE `aliados_media_partner_bk`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `aliados_pro`
+-- Indices de la tabla `aliados_pro`
 --
 ALTER TABLE `aliados_pro`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `aliados_starter`
+-- Indices de la tabla `aliados_starter`
 --
 ALTER TABLE `aliados_starter`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `google_oauth`
+-- Indices de la tabla `google_oauth`
 --
 ALTER TABLE `google_oauth`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `log_errors`
+-- Indices de la tabla `log_errors`
 --
 ALTER TABLE `log_errors`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `registered`
+-- Indices de la tabla `registered`
 --
 ALTER TABLE `registered`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `speakers`
+-- Indices de la tabla `speakers`
 --
 ALTER TABLE `speakers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `subscriptions_doppler`
+-- Indices de la tabla `sponsors`
+--
+ALTER TABLE `sponsors`
+  ADD PRIMARY KEY (`sponsor_id`);
+
+--
+-- Indices de la tabla `subscriptions_doppler`
 --
 ALTER TABLE `subscriptions_doppler`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `aliados_media_partner`
+-- AUTO_INCREMENT de la tabla `aliados_media_partner`
 --
 ALTER TABLE `aliados_media_partner`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 
 --
--- AUTO_INCREMENT for table `aliados_media_partner_bk`
+-- AUTO_INCREMENT de la tabla `aliados_media_partner_bk`
 --
 ALTER TABLE `aliados_media_partner_bk`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
--- AUTO_INCREMENT for table `aliados_pro`
+-- AUTO_INCREMENT de la tabla `aliados_pro`
 --
 ALTER TABLE `aliados_pro`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `aliados_starter`
+-- AUTO_INCREMENT de la tabla `aliados_starter`
 --
 ALTER TABLE `aliados_starter`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `google_oauth`
+-- AUTO_INCREMENT de la tabla `google_oauth`
 --
 ALTER TABLE `google_oauth`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
--- AUTO_INCREMENT for table `log_errors`
+-- AUTO_INCREMENT de la tabla `log_errors`
 --
 ALTER TABLE `log_errors`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `registered`
+-- AUTO_INCREMENT de la tabla `registered`
 --
 ALTER TABLE `registered`
   MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `speakers`
+-- AUTO_INCREMENT de la tabla `speakers`
 --
 ALTER TABLE `speakers`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `subscriptions_doppler`
+-- AUTO_INCREMENT de la tabla `sponsors`
+--
+ALTER TABLE `sponsors`
+  MODIFY `sponsor_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT de la tabla `subscriptions_doppler`
 --
 ALTER TABLE `subscriptions_doppler`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
