@@ -551,7 +551,6 @@ require_once('././config.php');
     <script src="src/<?= VERSION ?>/js/dateCounter.js"></script>
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
     <script src="src/<?= VERSION ?>/js/homeEcommerce.js" type="module"></script>
-    <script src="src/<?= VERSION ?>/js/user.js" type="module"></script>
 
 </body>
 
