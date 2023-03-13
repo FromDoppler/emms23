@@ -8,6 +8,16 @@ require_once('././config.php');
 <head>
     <?php include_once('././src/components/head-home.php'); ?>
     <?php include_once('././src/components/head.php'); ?>
+     <script type="module">
+        import {
+            isUserLogged,
+            getUrlWithParams
+        } from './src/<?= VERSION ?>/js/common/index.js';
+
+        if (!isUserLogged()) {
+            window.location.href = getUrlWithParams('/index.php');
+        }
+    </script>
 </head>
 
 <body class="emms__home emms__home-logueado">
