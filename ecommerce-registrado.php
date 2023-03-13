@@ -8,6 +8,16 @@ require_once('././config.php');
 <head>
     <?php include_once('././src/components/head-ecommerce.php'); ?>
     <?php include_once('././src/components/head.php'); ?>
+    <script type="module">
+        import {
+            isUserLogged,
+            getUrlWithParams
+        } from './src/<?= VERSION ?>/js/common/index.js';
+
+        if (!isUserLogged()) {
+            window.location.href = getUrlWithParams('/ecommerce.php');
+        }
+    </script>
 </head>
 
 <body class="emms__ecommerce emms__ecommerce-logueado">
