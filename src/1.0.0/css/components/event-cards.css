@@ -1,6 +1,6 @@
 .emms__eventCards__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     animation-delay: .2s;
 }
 
@@ -15,6 +15,7 @@
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
     border-radius: 3px;
     overflow: hidden;
+    margin: 0 20px;
 }
 
 .emms__eventCards__list__item__picture {

@@ -1,6 +1,6 @@
  <footer class="emms__footer">
      <div class="emms__footer__event emms__fade-in">
-         <p><strong>EMMS 2023</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/" target="_blank"><img src="src/img/logos/logo-doppler--neg.svg" alt="Doppler"></a></p>
+         <p><strong>EMMS 2023</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/?utm_source=emms&utm_medium=goemms&utm_campaign=et-sitio-emms-23" target="_blank"><img src="src/img/logos/logo-doppler--neg.svg" alt="Doppler"></a></p>
      </div>
      <div class="emms__footer__social emms__fade-in">
          <ul>
