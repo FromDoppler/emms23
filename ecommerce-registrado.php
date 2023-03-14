@@ -84,103 +84,12 @@ require_once('././config.php');
                 </div>
                 <!-- List -->
                 <ul class="emms__calendar__list emms__calendar__list--dk emms__fade-in">
-                    <li class="emms__calendar__list__item">
-                        <div class="emms__calendar__list__item__card">
-                            <div class="emms__calendar__list__item__card__speaker">
-                                <div class="emms__calendar__list__item__card__speaker__image">
-                                    <img src="src/img/example-speaker.png" alt="Speaker">
-                                </div>
-                                <div class="emms__calendar__list__item__card__speaker__text">
-                                    <h4>Nombre speaker</h4>
-                                    <h5>Posición del speaker</h5>
-                                    <ul>
-                                        <li><a href="" target="_blank"><img src="src/img/icons/icono-twitter-b.svg" alt="Twitter"></a></li>
-                                        <li><a href="" target="_blank"><img src="src/img/icons/icono-linkedin-b.svg" alt="LinkedIn"></a></li>
-                                        <li><a href="" target="_blank"><img src="src/img/icons/icono-instagram-b.svg" alt="Instagram"></a></li>
-                                        <li><a href="" target="_blank"><img src="src/img/icons/icono-facebook-b.svg" alt="Facebook"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="emms__calendar__list__item__card__description">
-                                <p>Descripción</p>
-                            </div>
-                            <div class="emms__calendar__list__item__card__business">
-                                <img src="src/img/example-speaker-company.png" alt="Logo">
-                                <!-- <a href="../../speakers-interna.php?slug=nombrespeaker" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a> -->
-                                <a class="emms__calendar__list__item__card__btn-bio">Ver Bio →</a>
-                                <div class="emms__calendar__list__item__card__bio emms__calendar__list__item__card__bio--hide bio-speaker">
-                                    <h4>Nombre speaker</h4>
-                                    <p>Biografía</p>
-                                    <a class="emms__calendar__list__item__card__btn-bio-hide"> ← Volver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="emms__calendar__list__item">
-                        <div class="emms__calendar__list__item__card">
-                            <div class="emms__calendar__list__item__card__speaker">
-                                <div class="emms__calendar__list__item__card__speaker__image">
-                                    <img src="src/img/example-speaker.png" alt="Speaker">
-                                </div>
-                                <div class="emms__calendar__list__item__card__speaker__text">
-                                    <h4>Nombre speaker</h4>
-                                    <h5>Posición del speaker</h5>
-                                    <ul>
-                                        <li><a href="" target="_blank"><img src="src/img/icons/icono-twitter-b.svg" alt="Twitter"></a></li>
-                                        <li><a href="" target="_blank"><img src="src/img/icons/icono-linkedin-b.svg" alt="LinkedIn"></a></li>
-                                        <li><a href="" target="_blank"><img src="src/img/icons/icono-instagram-b.svg" alt="Instagram"></a></li>
-                                        <li><a href="" target="_blank"><img src="src/img/icons/icono-facebook-b.svg" alt="Facebook"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="emms__calendar__list__item__card__description">
-                                <p>Descripción</p>
-                            </div>
-                            <div class="emms__calendar__list__item__card__business">
-                                <img src="src/img/example-speaker-company.png" alt="Logo">
-                                <!-- <a href="../../speakers-interna.php?slug=nombrespeaker" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a> -->
-                                <a class="emms__calendar__list__item__card__btn-bio">Ver Bio →</a>
-                                <div class="emms__calendar__list__item__card__bio emms__calendar__list__item__card__bio--hide bio-speaker">
-                                    <h4>Nombre speaker</h4>
-                                    <p>Biografía</p>
-                                    <a class="emms__calendar__list__item__card__btn-bio-hide"> ← Volver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="emms__calendar__list__item">
-                        <div class="emms__calendar__list__item__card">
-                            <div class="emms__calendar__list__item__card__speaker">
-                                <div class="emms__calendar__list__item__card__speaker__image">
-                                    <img src="src/img/example-speaker.png" alt="Speaker">
-                                </div>
-                                <div class="emms__calendar__list__item__card__speaker__text">
-                                    <h4>Nombre speaker</h4>
-                                    <h5>Posición del speaker</h5>
-                                    <ul>
-                                        <li><a href="" target="_blank"><img src="src/img/icons/icono-twitter-b.svg" alt="Twitter"></a></li>
-                                        <li><a href="" target="_blank"><img src="src/img/icons/icono-linkedin-b.svg" alt="LinkedIn"></a></li>
-                                        <li><a href="" target="_blank"><img src="src/img/icons/icono-instagram-b.svg" alt="Instagram"></a></li>
-                                        <li><a href="" target="_blank"><img src="src/img/icons/icono-facebook-b.svg" alt="Facebook"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="emms__calendar__list__item__card__description">
-                                <p>Descripción</p>
-                            </div>
-                            <div class="emms__calendar__list__item__card__business">
-                                <img src="src/img/example-speaker-company.png" alt="Logo">
-                                <!-- <a href="../../speakers-interna.php?slug=nombrespeaker" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a> -->
-                                <a class="emms__calendar__list__item__card__btn-bio">Ver Bio →</a>
-                                <div class="emms__calendar__list__item__card__bio emms__calendar__list__item__card__bio--hide bio-speaker">
-                                    <h4>Nombre speaker</h4>
-                                    <p>Biografía</p>
-                                    <a class="emms__calendar__list__item__card__btn-bio-hide"> ← Volver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="emms__calendar__list__item emms__calendar__list__item--special">
+
+
+                    <?php require_once('./src/components/speakers.php') ?>
+
+
+                    <!-- <li class="emms__calendar__list__item emms__calendar__list__item--special">
                         <div class="emms__calendar__list__item__card">
                             <div class="emms__calendar__list__item__card__speaker">
                                 <div class="emms__calendar__list__item__card__speaker__image">
@@ -192,7 +101,7 @@ require_once('././config.php');
                                 <p>Descripción</p>
                             </div>
                             <div class="emms__calendar__list__item__card__business">
-                                <!-- <a href="../../speakers-interna.php?slug=nombrespeaker" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a> -->
+                           <a href="../../speakers-interna.php?slug=nombrespeaker" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
                                 <a class="emms__calendar__list__item__card__btn-bio">Conoce los Speakers →</a>
                                 <div class="emms__calendar__list__item__card__bio emms__calendar__list__item__card__bio--hide bio-speaker">
                                     <ul>
@@ -213,7 +122,8 @@ require_once('././config.php');
                                 </div>
                             </div>
                         </div>
-                    </li>
+                    </li> -->
+
                 </ul>
                 <ul class="emms__calendar__list emms__calendar__list--mb main-carousel emms__fade-in" data-flickity>
                     <li class="emms__calendar__list__item">
