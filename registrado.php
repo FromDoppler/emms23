@@ -189,7 +189,7 @@ require_once('././config.php');
                 </div>
                 <div class="emms__centralvideo__video emms__fade-in">
                     <span></span>
-                    <video src="src/img/video-ejemplo.mp4" controls></video>
+                    <video src="src/img/20230313-EMMS-General.mp4" controls></video>
                 </div>
             </div>
         </section>

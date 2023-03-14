@@ -437,7 +437,7 @@ require_once('././config.php');
                     <p>Conoce en este video por qué este evento es el lugar ideal para capacitarte y aprender cómo escalar tu Tienda</p>
                 </div>
                 <div class="emms__centralvideo__video emms__fade-in">
-                    <video src="src/img/video-ejemplo.mp4" controls></video>
+                    <video src="src/img/EmmsEcommerce.mp4" controls></video>
                 </div>
                 <div class="emms__centralvideo__cta emms__fade-in">
                     <a href="#registro" class="emms__cta">REGÍSTRATE AHORA</a>
