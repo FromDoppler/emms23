@@ -486,7 +486,7 @@ require_once('././config.php');
                 <ul class="emms__companies__list emms__companies__list--lg  emms__fade-in">
                     <li class="emms__companies__list__item"><a href="https://www.siteground.es/" target="_blank"><img src="src/img/logos/logo-siteground.png" alt="Siteground"></a></li>
                     <li class="emms__companies__list__item"><a href="https://raiolanetworks.es/" target="_blank"><img src="src/img/logos/logo-raiola.png" alt="Raiola"></a></li>
-                    <li class="emms__companies__list__item"><a href="https://dinorank.com/?utm_campaign=emms-ecommerce" target="_blank"><img src="src/img/logos/logo-dinorank.png" alt="Dinorank"></a></li>
+                    <li class="emms__companies__list__item"><a href="https://dinorank.com/" target="_blank"><img src="src/img/logos/logo-dinorank.png" alt="Dinorank"></a></li>
                     <li class="emms__companies__list__item"><a href="https://ecommercenights.com.pa/" target="_blank"><img src="src/img/logos/logo-ecommerce-nights.png" alt="Ecommerce Nights"></a></li>
                 </ul>
                 <small class="emms__fade-in"><strong>¿Quieres ser aliado del EMMS E-commerce 2023?</strong> ¡Hablemos! Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></small>
@@ -496,7 +496,30 @@ require_once('././config.php');
     </main>
 
     <!-- Footer -->
-    <?php include_once('././src/components/footer.php'); ?>
+    <footer class="emms__footer">
+        <div class="emms__footer__event emms__fade-in">
+            <p><strong>EMMS 2023</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/?utm_source=emmsecom&utm_campaign=et-interna-emmsecom-23" target="_blank"><img src="src/img/logos/logo-doppler--neg.svg" alt="Doppler"></a></p>
+        </div>
+        <div class="emms__footer__social emms__fade-in">
+            <ul>
+                <li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img src="src/img/icons/icono-instagram.svg" alt="Instagram"></a></li>
+                <li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img src="src/img/icons/icono-facebook.svg" alt="Facebook"></a></li>
+                <li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img src="src/img/icons/icono-youtube.svg" alt="Youtube"></a>
+                </li>
+                <li><a href="https://www.linkedin.com/company/228261" target="_blank"><img src="src/img/icons/icono-linkedin.svg" alt="LinkedIn"></a></li>
+                <li><a href="https://twitter.com/fromDoppler" target="_blank"><img src="src/img/icons/icono-twitter.svg" alt="Twitter"></a></li>
+            </ul>
+        </div>
+        <div class="emms__footer__actions emms__fade-in">
+            <a onclick="OneTrust.ToggleInfoDisplay()" id="ot-sdk-btn" class="ot-sdk-show-settings">Configuración de Cookies.</a>
+            <a href="https://www.fromdoppler.com/es/legal/privacidad/" target="_blank">Políticas de privacidad y legales</a>
+        </div>
+    </footer>
+
+    <script src="src/<?= VERSION ?>/flickity/flickity.pkgd.min.js"></script>
+    <script src="src/<?= VERSION ?>/js/commonAnimations.js"></script>
+
+
     <script src="src/<?= VERSION ?>/js/collapsibles.js"></script>
     <script src="src/<?= VERSION ?>/js/dateCounter.js"></script>
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>

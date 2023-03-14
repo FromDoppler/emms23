@@ -67,7 +67,7 @@ require_once('././config.php');
             <div class="emms__home__hero__title emms__fade-top">
                 <h1><em>TODAS LAS TENDENCIAS DE MARKETING DIGITAL EN UN SOLO LUGAR</em> Vuelve el EMMS, ¡recargado!</h1>
                 <h2>ONLINE Y GRATUITO</h2>
-                <p>Tras <strong>15 años</strong> como el evento líder en Latam y España, <strong>el EMMS evoluciona</strong>. En 2023 tendrás <strong>3 eventos exclusivos</strong> para capacitarte e inspirarte con los referentes de tu industria.</p>
+                <p>Tras <strong>15 años</strong> como el evento líder en Latam y España, <strong>el EMMS evoluciona</strong>. En 2023 tendrás <strong>2 eventos exclusivos</strong> para capacitarte e inspirarte con los referentes de tu industria.</p>
                 <div id="EMMS2023-ediciones"></div>
             </div>
             <!-- Event cards -->
@@ -92,27 +92,11 @@ require_once('././config.php');
                         </li>
                         <li class="emms__eventCards__list__item">
                             <div class="emms__eventCards__list__item__picture">
-                                <img src="src/img/card-image-fintech.png" alt="Image Fintech">
-                            </div>
-                            <div class="emms__eventCards__list__item__text">
-                                <div class="emms__eventCards__list__item__text--corner">
-                                    <p>AGO</p>
-                                </div>
-                                <h3>EMMS Fintech</h3>
-                                <p>Descubre cuáles son las <strong>estrategias</strong> que implementan las marcas líderes en el sector financiero: <strong>banca online, billeteras virtuales, industria de seguros</strong> y ¡mucho más!</p>
-                                <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
-                                <div class="emms__eventCards__list__item__text--bottom">
-                                    <p class="emms__eventCards__list__item__tag purple">PRÓXIMAMENTE</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="emms__eventCards__list__item">
-                            <div class="emms__eventCards__list__item__picture">
                                 <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
                             </div>
                             <div class="emms__eventCards__list__item__text">
                                 <div class="emms__eventCards__list__item__text--corner">
-                                    <p>NOV</p>
+                                    <p>OCT</p>
                                 </div>
                                 <h3>EMMS Digital Trends</h3>
                                 <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -142,28 +126,12 @@ require_once('././config.php');
                         </li>
                         <li class="emms__eventCards__list__item">
                             <div class="emms__eventCards__list__item__picture">
-                                <img src="src/img/card-image-fintech.png" alt="Image Fintech">
-                                <p class="emms__eventCards__list__item__tag purple">PRÓXIMAMENTE</p>
-                            </div>
-                            <div class="emms__eventCards__list__item__text">
-                                <div class="emms__eventCards__list__item__text--corner">
-                                    <p>AGO</p>
-                                </div>
-                                <h3>EMMS Fintech</h3>
-                                <p>Descubre cuáles son las <strong>estrategias</strong> que implementan las marcas líderes en el sector financiero: <strong>banca online, billeteras virtuales, industria de seguros</strong> y ¡mucho más!</p>
-                                <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
-                                <div class="emms__eventCards__list__item__text--bottom">
-                                </div>
-                            </div>
-                        </li>
-                        <li class="emms__eventCards__list__item">
-                            <div class="emms__eventCards__list__item__picture">
                                 <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
                                 <p class="emms__eventCards__list__item__tag purple">PRÓXIMAMENTE</p>
                             </div>
                             <div class="emms__eventCards__list__item__text">
                                 <div class="emms__eventCards__list__item__text--corner">
-                                    <p>NOV</p>
+                                    <p>OCT</p>
                                 </div>
                                 <h3>EMMS Digital Trends</h3>
                                 <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -190,7 +158,7 @@ require_once('././config.php');
                     <video src="src/img/20230313-EMMS-General.mp4" controls></video>
                 </div>
                 <div class="emms__centralvideo__cta emms__fade-in">
-                    <a href="#EMMS2023-ediciones" class="emms__cta">REGÍSTRATE AHORA</a>
+                    <a href="./ecommerce.php" class="emms__cta">REGÍSTRATE AHORA</a>
                 </div>
             </div>
         </section>
@@ -285,7 +253,7 @@ require_once('././config.php');
                     </ul>
                 </div>
                 <small class="emms__fade-in">Próximamente conocerás la agenda 2023.<br>Regístrate gratis y entérate antes que nadie de todas las novedades del EMMS.</small>
-                <a href="#EMMS2023-ediciones" class="emms__cta emms__fade-in">RESERVA TU LUGAR AHORA</a>
+                <a href="./ecommerce.php" class="emms__cta emms__fade-in">RESERVA TU LUGAR AHORA</a>
             </div>
             <div class="emms__background-a"></div>
         </section>
@@ -338,7 +306,7 @@ require_once('././config.php');
                     </li>
                     <li class="emms__frequentquestions__list__item close">
                         <button class="emms__frequentquestions__list__item__head">📅 ¿Cuándo se realizará el EMMS 2023?</button>
-                        <p class="emms__frequentquestions__list__item__content">El EMMS 2023 constará de 3 ediciones: <strong>E-commerce, Fintech y Digital Trends</strong>, a realizarse en <strong>mayo, agosto y noviembre</strong>, respectivamente. Registrándote al evento recibirás todos las novedades por Email y la confirmación de cada fecha.</p>
+                        <p class="emms__frequentquestions__list__item__content">El EMMS 2023 constará de 2 ediciones: <strong>E-commerce y Digital Trends</strong>, a realizarse en <strong>mayo y octubre</strong>, respectivamente. Registrándote al evento recibirás todos las novedades por Email y la confirmación de cada fecha.</p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
                         <button class="emms__frequentquestions__list__item__head">📍 ¿Dónde serán los eventos?</button>
