@@ -1,0 +1,59 @@
+/* Hero */
+
+.emms__sponsors__hero {
+    background: #000 url("../../../img/back-hero-sponsors--dk.png") no-repeat;
+    background-size: cover;
+    background-position: 70%;
+    padding: 178px 0 80px 0;
+    animation: sponsors-hero-back 3s;
+}
+
+@keyframes sponsors-hero-back {
+    0% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 70%;
+    }
+}
+
+.emms__sponsors__hero__title {
+    max-width: 580px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.emms__sponsors__hero__title h1 {
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #fff;
+
+}
+
+.emms__sponsors__hero__title h1 em {
+    font-size: 14px;
+    line-height: 20px;
+    font-style: normal;
+    display: block;
+    margin: 0 0 20px 0;
+}
+
+.emms__sponsors__hero__title p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    margin: 25px 0 0 0;
+}
+
+.emms__sponsors__hero__title .emms__cta{
+    margin: 50px 0 0 0;
+}
+
+
+
+/* Sponsors List */
+
+

@@ -1,4 +1,4 @@
-import { getSponrsors } from "./getSponsors.js";
+import { getSponsors } from "./getSponsors.js";
 import { showSponsorsPage } from "./../sponsors-list/sponsorsList.js";
 import { showSponsorForm } from "./../sponsor-form/sponsorForm.js";
 const removeSponsor = async (sponsorId, currentSponsorType) => {
@@ -34,7 +34,7 @@ const btnEditSponsorListener = (currentSponsorType) => {
 };
 
 export const sponsorsRows = async (currentSponsorType) => {
-    const filteredSponsors = await getSponrsors(currentSponsorType);
+    const filteredSponsors = await getSponsors(currentSponsorType);
     const sponsorsList = document.getElementById("sponsorsList");
     filteredSponsors && filteredSponsors.length
         ? filteredSponsors.map(
