@@ -241,6 +241,13 @@ class DB
 
     /********DATA ABMS*************/
 
+    public function getAllSpeakers()
+    {
+        $sql = $this->query("SELECT * FROM speakers  order by orden");
+        $result = $sql->fetchAll();
+        return $result;
+    }
+
     public function getSpeakersByDay($day)
     {
         $sql = $this->query("SELECT * FROM speakers WHERE day = " . $day . " order by orden");
