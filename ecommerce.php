@@ -71,7 +71,7 @@ require_once('././config.php');
         <section class="emms__hero-form" id="registro">
             <div class="emms__container--lg">
                 <div class="emms__hero-form__text emms__fade-in">
-                    <h1><em>EVENTO ONLINE Y GRATUITO - 16 DE ABRIL</em> EMMS E-commerce 2023</h1>
+                    <h1><em>EVENTO ONLINE Y GRATUITO - 16 DE MAYO</em> EMMS E-commerce 2023</h1>
                     <p>¡El EMMS evoluciona! Ahora podrás inspirarte y aprender con un evento exclusivo pensado para tu Tienda Online.</p>
                     <ul class="emms__hero-form__text__checklist">
                         <li>SPEAKERS INTERNACIONALES</li>
