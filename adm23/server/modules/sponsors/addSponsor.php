@@ -1,26 +1,33 @@
 <?php
 include_once '../../config/config.php';
+
 header('Content-Type: application/json; charset=utf-8');
 
-    foreach ($_FILES as $file) {
-        print_r($file);
-        move_uploaded_file($file["tmp_name"],"uploads/".$file["name"]);
-    };
+$config = new Config();
+$config->VPNMiddleware();
+$con = $config->getCon();
 
-    $body = json_decode($_POST["str"], true);
-    $mapped = array_map(function($k, $v) {
-        return "`".$k."` = '". $v ."'";
-    },array_keys($body),
-    array_values($body));
+foreach ($_FILES as $file) {
+    print_r($file);
+    move_uploaded_file($file["tmp_name"], "uploads/" . $file["name"]);
+};
 
-    if (isset($body["sponsor_id"]))
-    {
-        $sql_query ="UPDATE sponsors SET ".implode(", ",$mapped)." WHERE sponsor_id=" . $body["sponsor_id"];
-    } else {
-        $sql_query = "INSERT INTO `sponsors` SET ".implode(", ",$mapped);
-    }
+$body = json_decode($_POST["str"], true);
+$mapped = array_map(
+    function ($k, $v) {
+        return "`" . $k . "` = '" . $v . "'";
+    },
+    array_keys($body),
+    array_values($body)
+);
 
-    echo $sql_query;
+if (isset($body["sponsor_id"])) {
+    $sql_query = "UPDATE sponsors SET " . implode(", ", $mapped) . " WHERE sponsor_id=" . $body["sponsor_id"];
+} else {
+    $sql_query = "INSERT INTO `sponsors` SET " . implode(", ", $mapped);
+}
 
-    if (mysqli_query($con, $sql_query))
-        echo json_encode("success");
+echo $sql_query;
+
+if (mysqli_query($con, $sql_query))
+    echo json_encode("success");

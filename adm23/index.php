@@ -1,5 +1,7 @@
 <?php
 include_once './server/config/config.php';
+$config = new Config();
+$config->VPNMiddleware();
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,48 +1,51 @@
 <?php
+class Config {
+    private const DB_HOST = 'db';
+    private const DB_USER = 'root';
+    private const DB_PASSWORD = '';
+    private const DB_NAME = 'EMMS23';
+    private const RESTRICTED_SERVERS = ['167.71.254.179'];
+    private const ALLOW_IPS = ['200.5.229.58'];
 
-function getIpAddress()
-{
-    if (!empty($_SERVER['HTTP_CLIENT_IP'])) { //check ip from share internet
-        $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
-    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) { // proxy pass ip
-        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    } else {
-        $ipaddress = $_SERVER['REMOTE_ADDR'];
+
+    public static function getCon() {
+        return mysqli_connect(self::DB_HOST, self::DB_USER, self::DB_PASSWORD, self::DB_NAME);
     }
-    list($ipaddress) = explode(',', $ipaddress);
-    return $ipaddress;
-}
 
-function needSecurityServer() {
-    $ip_server = $_SERVER['SERVER_ADDR'];
-    $RESTRICTED_SERVERS = ['167.71.254.179'];
-    if (in_array($ip_server, $RESTRICTED_SERVERS)) {
-        return true;
-    }
-    return false;
-}
-
-function VPNMiddleware()
-{
-    $ALLOW_IPS = ['200.5.229.58'];
-    if (needSecurityServer()) {
-        $ip = getIpAddress();
-        if (in_array($ip, $ALLOW_IPS))
-            return true;
-        else{
-            header('Location: /');
-            die();
+    private static function getIpAddress()
+    {
+        if (!empty($_SERVER['HTTP_CLIENT_IP'])) { //check ip from share internet
+            $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+        } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) { // proxy pass ip
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        } else {
+            $ipaddress = $_SERVER['REMOTE_ADDR'];
         }
-    } else {
-        return true;
+        list($ipaddress) = explode(',', $ipaddress);
+        return $ipaddress;
+    }
+
+    private static function needSecurityServer() {
+        $ip_server = $_SERVER['SERVER_ADDR'];
+
+        if (in_array($ip_server, self::RESTRICTED_SERVERS)) {
+            return true;
+        }
+        return false;
+    }
+
+    public static function VPNMiddleware()
+    {
+        if (self::needSecurityServer()) {
+            $ip = self::getIpAddress();
+            if (in_array($ip, self::ALLOW_IPS))
+                return true;
+            else{
+                header('Location: /');
+                die();
+            }
+        } else {
+            return true;
+        }
     }
 }
-
-VPNMiddleware();
-
-$DB_HOST = 'db';
-$DB_USER = 'root';
-$DB_PASSWORD = '';
-$DB_NAME = 'EMMS23';
-
-$con = mysqli_connect($DB_HOST,$DB_USER,$DB_PASSWORD,$DB_NAME);
