@@ -155,80 +155,74 @@ require_once('././config.php');
 
                     <?php include('./src/components/speakers.php') ?>
 
-                    <!-- <li class="emms__calendar__list__item emms__calendar__list__item--special">
+                    <li class="emms__calendar__list__item emms__calendar__list__item--special">
                         <div class="emms__calendar__list__item__card">
                             <div class="emms__calendar__list__item__card__speaker">
                                 <div class="emms__calendar__list__item__card__speaker__image">
-                                    <img src="src/img/example-speakers.png" alt="Speaker">
+                                    <img src="src/img/people/speakers-debate.png" alt="Speakers">
                                 </div>
                             </div>
                             <div class="emms__calendar__list__item__card__description">
                                 <h4>Mesa de debate</h4>
-                                <p>Descripción</p>
+                                <p>IA y Chat GPT: Oportunidades y riesgos en Ecommerce</p>
                             </div>
                             <div class="emms__calendar__list__item__card__business">
-                                <a href="../../speakers-interna.php?slug=nombrespeaker" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
-                                <a class="emms__calendar__list__item__card__btn-bio">Conoce los Speakers →</a>
+                                <!-- <a href="../../speakers-interna.php?slug=nombrespeaker" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a> -->
+                                <a class="emms__calendar__list__item__card__btn-bio">Conoce a los Speakers →</a>
                                 <div class="emms__calendar__list__item__card__bio emms__calendar__list__item__card__bio--hide bio-speaker">
                                     <ul>
                                         <li>
-                                            <p>Nombre del speaker <span>Puesto en la empresa</span></p>
+                                            <p>Alicia Macías Hernandez <span>Fundadora de eCommerce efectivo</span></p>
                                         </li>
                                         <li>
-                                            <p>Nombre del speaker <span>Puesto en la empresa</span></p>
+                                            <p>Ana Laura Fleba <span>Digital Selling & Commerce Director en Unilever</span></p>
                                         </li>
                                         <li>
-                                            <p>Nombre del speaker <span>Puesto en la empresa</span></p>
-                                        </li>
-                                        <li>
-                                            <p>Nombre del speaker <span>Puesto en la empresa</span></p>
+                                            <p>Federico Osorio <span>Co-fundador de Tiipe</span></p>
                                         </li>
                                     </ul>
                                     <a class="emms__calendar__list__item__card__btn-bio-hide"> ← Volver</a>
                                 </div>
                             </div>
                         </div>
-                    </li> -->
+                    </li>
 
                 </ul>
                 <ul class="emms__calendar__list emms__calendar__list--mb main-carousel emms__fade-in" data-flickity>
 
-                   <?php include('./src/components/speakers.php') ?>
+                    <?php include('./src/components/speakers.php') ?>
 
-                    <!-- <li class="emms__calendar__list__item emms__calendar__list__item--special">
+                    <li class="emms__calendar__list__item emms__calendar__list__item--special">
                         <div class="emms__calendar__list__item__card">
                             <div class="emms__calendar__list__item__card__speaker">
                                 <div class="emms__calendar__list__item__card__speaker__image">
-                                    <img src="src/img/example-speakers.png" alt="Speaker">
+                                    <img src="src/img/people/speakers-debate.png" alt="Speakers">
                                 </div>
                             </div>
                             <div class="emms__calendar__list__item__card__description">
-                                <h4>Mesa de Debate</h4>
-                                <p>Descripción</p>
+                                <h4>Mesa de debate</h4>
+                                <p>IA y Chat GPT: Oportunidades y riesgos en Ecommerce</p>
                             </div>
                             <div class="emms__calendar__list__item__card__business">
-                                <a href="../../speakers-interna.php?slug=nombrespeaker" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
-                                <a class="emms__calendar__list__item__card__btn-bio">Conoce los Speakers →</a>
+                                <!-- <a href="../../speakers-interna.php?slug=nombrespeaker" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a> -->
+                                <a class="emms__calendar__list__item__card__btn-bio">Conoce a los Speakers →</a>
                                 <div class="emms__calendar__list__item__card__bio emms__calendar__list__item__card__bio--hide bio-speaker">
                                     <ul>
                                         <li>
-                                            <p>Nombre del speaker <span>Puesto en la empresa</span></p>
+                                            <p>Alicia Macías Hernandez <span>Fundadora de eCommerce efectivo</span></p>
                                         </li>
                                         <li>
-                                            <p>Nombre del speaker <span>Puesto en la empresa</span></p>
+                                            <p>Ana Laura Fleba <span>Digital Selling & Commerce Director en Unilever</span></p>
                                         </li>
                                         <li>
-                                            <p>Nombre del speaker <span>Puesto en la empresa</span></p>
-                                        </li>
-                                        <li>
-                                            <p>Nombre del speaker <span>Puesto en la empresa</span></p>
+                                            <p>Federico Osorio <span>Co-fundador de Tiipe</span></p>
                                         </li>
                                     </ul>
                                     <a class="emms__calendar__list__item__card__btn-bio-hide"> ← Volver</a>
                                 </div>
                             </div>
                         </div>
-                    </li> -->
+                    </li>
 
                 </ul>
                 <!-- End list -->
@@ -344,4 +338,3 @@ require_once('././config.php');
 </body>
 
 </html>
-

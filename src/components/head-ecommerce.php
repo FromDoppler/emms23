@@ -4,7 +4,7 @@
 <meta name="description" content="Inscríbete gratis al mayor evento online sobre E-commerce. Aprende e inspírate con los mayores referentes internacionales, accede a beneficios, contenido exclusivo, ¡y más!">
 
 <meta property="og:url" content="https://goemms.com/">
-<meta property="og:title" content="EMMS E-commerce: Conferencias gratis y onlin">
+<meta property="og:title" content="EMMS E-commerce: Conferencias gratis y online">
 <meta property="og:description" content="Inscríbete gratis al mayor evento online sobre E-commerce. Aprende e inspírate con los mayores referentes internacionales, accede a beneficios, contenido exclusivo, ¡y más!">
 <meta property="og:image" content="https://goemms.com/share-ecommerce-2023.png">
 <meta name="twitter:image" content="https://goemms.com/share-ecommerce-2023.png">

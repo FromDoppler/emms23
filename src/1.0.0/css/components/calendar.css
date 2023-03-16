@@ -327,11 +327,11 @@
     line-height: 20px;
     font-weight: 700;
     color: #333333;
+    margin: 0 0 20px 0;
 }
 
 .emms__calendar__list__item.emms__calendar__list__item--special .emms__calendar__list__item__card__bio ul li p span{
     font-weight: 400;
-    display: block;
 }
 
 @media(max-width:1200px){
@@ -375,6 +375,10 @@
     .emms__calendar__list--mb .emms__calendar__list__item {
         width: 100%;
         height: 280px;
+    }
+
+    .emms__calendar__list__item__card__speaker{
+        height: 115px;
     }
 }
 
