@@ -20,3 +20,4 @@
 
  <script src="src/<?= VERSION ?>/flickity/flickity.pkgd.min.js"></script>
  <script src="src/<?= VERSION ?>/js/commonAnimations.js"></script>
+ <script src="https://www.fromdoppler.com/wp-content/themes/doppler_site/utm/utm.js"></script>
