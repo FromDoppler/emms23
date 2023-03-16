@@ -389,7 +389,7 @@ require_once('././config.php');
             <div class="emms__container--lg">
                 <h2 class="emms__fade-in">Nos acompañan en esta edición:</h2>
                 <ul class="emms__companies__list emms__companies__list--lg  emms__fade-in">
-                    <li class="emms__companies__list__item"><a href="https://www.siteground.es/" target="_blank"><img src="src/img/logos/logo-siteground.png" alt="Siteground"></a></li>
+                    <li class="emms__companies__list__item"><a href="https://www.siteground.es/?utm_medium=link&utm_source=event&utm_campaign=EMMS23" target="_blank"><img src="src/img/logos/logo-siteground.png" alt="Siteground"></a></li>
                     <li class="emms__companies__list__item"><a href="https://raiolanetworks.es/" target="_blank"><img src="src/img/logos/logo-raiola.png" alt="Raiola"></a></li>
                     <li class="emms__companies__list__item"><a href="https://dinorank.com/" target="_blank"><img src="src/img/logos/logo-dinorank.png" alt="Dinorank"></a></li>
                     <li class="emms__companies__list__item"><a href="https://ecommercenights.com.pa/" target="_blank"><img src="src/img/logos/logo-ecommerce-nights.png" alt="Ecommerce Nights"></a></li>
