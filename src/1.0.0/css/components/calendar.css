@@ -44,7 +44,6 @@
 .emms__calendar__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     max-width: 1000px;
     margin: 0 auto;
     animation-delay: .2s;
@@ -142,6 +141,7 @@
 
 .emms__calendar__list__item__card__description {
     padding: 20px 15px;
+    min-height: 35px;
 }
 
 .emms__calendar__list__item__card__description p {
@@ -334,6 +334,12 @@
     display: block;
 }
 
+@media(max-width:1200px){
+    .emms__calendar__list__item__card__description {
+        min-height: 51px;
+    }
+}
+
 @media(max-width:992px) {
 
     .emms__calendar__list--dk .emms__calendar__list__item {
@@ -350,7 +356,7 @@
     }
 
     .emms__calendar__list--mb .flickity-page-dots{
-        bottom: 35px;
+        display: none;
     }
 
     .emms__calendar__list--mb .flickity-page-dots .dot{
