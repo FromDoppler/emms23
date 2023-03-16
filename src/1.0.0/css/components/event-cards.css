@@ -184,6 +184,10 @@ p.emms__eventCards__list__item__tag.purple {
         display: none;
     }
 
+    .emms__eventCards__list--mb .flickity-viewport{
+        height: 450px !important;
+    }
+
     .emms__eventCards__list__item {
         width: 100%;
         box-shadow: none;
