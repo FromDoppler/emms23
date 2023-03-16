@@ -19,10 +19,11 @@
 }
 
 .emms__sponsors__hero__title {
-    max-width: 580px;
+    max-width: 560px;
     width: 90%;
     margin: 0 auto;
     text-align: center;
+    animation-delay: .1s;
 }
 
 .emms__sponsors__hero__title h1 {
@@ -41,19 +42,174 @@
     margin: 0 0 20px 0;
 }
 
-.emms__sponsors__hero__title p{
+.emms__sponsors__hero__title p {
     font-size: 16px;
     line-height: 24px;
     color: #fff;
     margin: 25px 0 0 0;
 }
 
-.emms__sponsors__hero__title .emms__cta{
+.emms__sponsors__hero__title .emms__cta {
     margin: 50px 0 0 0;
+    animation-delay: .3s;
+}
+
+@media(max-width:620px) {
+
+    .emms__sponsors__hero {
+        padding: 120px 0 45px 0;
+    }
+
+    .emms__sponsors__hero__title h1 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .emms__sponsors__hero__title p {
+        margin: 20px 0 0 0;
+    }
+
+    .emms__sponsors__hero__title .emms__cta {
+        margin: 30px 0 0 0;
+    }
 }
 
 
 
 /* Sponsors List */
 
+.emms__sponsors__list {
+    padding: 72px 0 55px 0;
+}
 
+.emms__sponsors__list .emms__sponsors__list__title {
+    text-align: center;
+    margin: 0 0 95px 0;
+}
+
+.emms__sponsors__list .emms__sponsors__list__title h2 {
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #333333;
+    animation-delay: .1s;
+}
+
+.emms__sponsors__list .emms__sponsors__list__title ul {
+    margin: 40px 0 0 0;
+    animation-delay: .2s;
+}
+
+.emms__sponsors__list .emms__sponsors__list__title ul li {
+    font-size: 16px;
+    color: #333333;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 0 0 0 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.emms__sponsors__list .emms__sponsors__list__title ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 20px;
+    height: 20px;
+    background: url("../../../img/icons/icon-check--purple.svg") no-repeat;
+    background-size: contain;
+}
+
+.emms__sponsors__list .emms__sponsors__list__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1080px;
+    margin: 0 auto;
+    animation-delay: .3s;
+}
+
+.emms__sponsors__list .emms__sponsors__list__content .emms__sponsors__list__item {
+    width: 28%;
+    margin: 0 0 100px 0;
+}
+
+.emms__sponsors__list .emms__sponsors__list__content .emms__sponsors__list__item .emms__sponsors__list__item__logo {
+    border-bottom: solid 1px #B4B4B4;
+    margin: 0 0 20px 0;
+}
+
+.emms__sponsors__list .emms__sponsors__list__content .emms__sponsors__list__item .emms__sponsors__list__item__logo img {
+    height: 50px;
+}
+
+.emms__sponsors__list .emms__sponsors__list__content .emms__sponsors__list__item h3 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0 0 30px 0;
+}
+
+.emms__sponsors__list .emms__sponsors__list__content .emms__sponsors__list__item p {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.emms__sponsors__list .emms__sponsors__list__content .emms__sponsors__list__item a {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #33AD73;
+    margin: 30px 0 0 0;
+    display: inline-block;
+    transition-duration: .2s;
+}
+
+.emms__sponsors__list .emms__sponsors__list__content .emms__sponsors__list__item a:hover {
+    color: #026C3C;
+    transition-duration: .2s;
+}
+
+@media(max-width:992px) {
+
+    .emms__sponsors__list .emms__sponsors__list__title ul {
+        max-width: 300px;
+        margin: 20px auto 0 auto;
+    }
+
+    .emms__sponsors__list .emms__sponsors__list__title ul li {
+        width: 48%;
+        margin: 25px 0 0 0;
+        text-align: left;
+    }
+}
+
+@media(max-width:620px) {
+
+    .emms__sponsors__list{
+        padding: 36px 0 0 0;
+    }
+
+    .emms__sponsors__list .emms__sponsors__list__title h2 {
+        font-size: 22px;
+    }
+
+    .emms__sponsors__list .emms__sponsors__list__title ul {
+        margin: 0 auto;
+    }
+
+    .emms__sponsors__list .emms__sponsors__list__title {
+        margin: 0 0 85px 0;
+    }
+
+    .emms__sponsors__list .emms__sponsors__list__content .emms__sponsors__list__item {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto 78px auto;
+        text-align: center;
+    }
+}
