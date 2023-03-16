@@ -1,0 +1,126 @@
+.emms__doppleracademybanner {
+    background: #5E3E94;
+    padding: 66px 0 92px 0;
+}
+
+.emms__doppleracademybanner .emms__container--lg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.emms__doppleracademybanner__image {
+    width: 34%;
+    animation-delay: .1s;
+}
+
+.emms__doppleracademybanner__image img {
+    width: 100%;
+}
+
+.emms__doppleracademybanner__description {
+    width: 63%;
+    color: #FFFFFF;
+    animation-delay: .2s;
+}
+
+.emms__doppleracademybanner__description h2 {
+    font-size: 27px;
+    line-height: 31px;
+    font-weight: 300;
+    margin: 0 0 22px 0;
+}
+
+.emms__doppleracademybanner__description p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 24px 0;
+}
+
+.emms__doppleracademybanner__description p strong {
+    font-weight: 700;
+}
+
+.emms__doppleracademybanner__description__bottom {
+    margin: 50px 0 0 0;
+}
+
+.emms__doppleracademybanner__description__bottom h3 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.emms__doppleracademybanner__description__bottom h3 strong {
+    font-weight: 700;
+}
+
+.emms__doppleracademybanner__description__bottom ul {
+    display: flex;
+    margin: 30px 0 0 0;
+}
+
+.emms__doppleracademybanner__description__bottom ul li {
+    font-size: 16px;
+    margin: 0 20px 0 0;
+    padding: 0 0 0 30px;
+    box-sizing: border-box;
+    position: relative;
+    white-space: nowrap;
+}
+
+.emms__doppleracademybanner__description__bottom ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 20px;
+    height: 20px;
+    background: url("../../../img/icons/icon-check--purple.svg") no-repeat;
+    background-size: contain;
+}
+
+.emms__doppleracademybanner__description__bottom .emms__cta {
+    margin: 44px 0 0 0;
+    text-align: center;
+}
+
+
+/* ---------------------------------------------- Responsive ---------------------------------------------- */
+
+
+@media(max-width:1250px) {
+
+    .emms__doppleracademybanner__description__bottom ul {
+        flex-wrap: wrap;
+    }
+
+    .emms__doppleracademybanner__description__bottom ul li {
+        white-space: initial;
+        width: 250px;
+        margin: 0 0 23px 0;
+    }
+}
+
+@media(max-width:992px) {
+
+    .emms__doppleracademybanner__image {
+        display: none;
+    }
+
+    .emms__doppleracademybanner__description {
+        width: 100%;
+    }
+}
+
+@media(max-width:620px) {
+
+    .emms__doppleracademybanner {
+        padding: 45px 0 73px 0;
+    }
+
+    .emms__doppleracademybanner__description h2 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
