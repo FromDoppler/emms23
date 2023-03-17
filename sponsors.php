@@ -11,7 +11,7 @@ require_once('././config.php');
 </head>
 
 <body class="emms__sponsors">
-
+    <?php include_once('././src/components/gtm.php'); ?>
     <!-- Header -->
     <header class="emms__header">
         <div class="emms__container--lg emms__fade-in">
