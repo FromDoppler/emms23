@@ -379,7 +379,6 @@ require_once('././config.php');
     <?php include_once('././src/components/footer.php'); ?>
     <script src="src/<?= VERSION ?>/js/counterAnimation.js"></script>
     <script src="src/<?= VERSION ?>/js/collapsibles.js"></script>
-    <script src="src/<?= VERSION ?>/js/home.js" type="module"></script>
 
 </body>
 
