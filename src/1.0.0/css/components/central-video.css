@@ -8,7 +8,7 @@
 }
 
 .emms__centralvideo__title {
-    max-width: 540px;
+    max-width: 620px;
     margin: 0 auto 36px;
     text-align: center;
     animation-delay: .1s;
@@ -19,7 +19,7 @@
     line-height: 22px;
     font-weight: 700;
     color: #333333;
-    max-width: 400px;
+    max-width: 480px;
     margin: 0 auto;
 }
 

@@ -152,8 +152,8 @@ require_once('././config.php');
             <div class="emms__background-a"></div>
             <div class="emms__container--md">
                 <div class="emms__centralvideo__title emms__fade-in">
-                    <h2>Llega una nueva versión del EMMS. Ahora, con una edición exclusiva por industria</h2>
-                    <p>Descubre en este video por qué más de <strong>70.000 personas</strong> eligen este año el EMMS para conocer las <strong>últimas tendencias en Marketing Digital</strong>.</p>
+                    <h2>Llega una nueva versión del EMMS. Ahora, también disfruta de una edición exclusiva para E-commerce</h2>
+                    <p>Descubre en este video por qué profesionales y expertos de la industria eligen este año el EMMS para conocer las <strong>últimas tendencias en Marketing Digital</strong>.</p>
                 </div>
                 <div class="emms__centralvideo__video emms__fade-in">
                     <span></span>
@@ -251,7 +251,7 @@ require_once('././config.php');
                         </li>
                     </ul>
                 </div>
-                <small class="emms__fade-in">Próximamente conocerás la agenda 2023.<br>Regístrate gratis y entérate antes que nadie de todas las novedades del EMMS.</small>
+                <small class="emms__fade-in"><strong>¡Ya puedes conocer a los speakers de EMMS Ecommerce!</strong><br>Accede y mira la agenda <a href="./ecommerce-registrado.php#agenda">haciendo clic aquí</a>.</small>
             </div>
             <div class="emms__background-a"></div>
         </section>
@@ -262,7 +262,7 @@ require_once('././config.php');
         <!-- Users comments -->
         <section class="emms__userscomments">
             <div class="emms__container--lg">
-                <h2 class="emms__fade-in">Nuestros usuarios dicen...</h2>
+                <h2 class="emms__fade-in">Nuestros asistentes dicen...</h2>
                 <ul class="emms__userscomments__list emms__userscomments__list--dk emms__fade-in">
                     <li class="emms__userscomments__list__item">
                         <p>“Lo que más valoro del EMMS es poder ver en qué están las empresas más importantes del sector, ¡y gratis!”<em>Yolanda<img src="src/img/flag-mexico.png" alt="México"></em></p>

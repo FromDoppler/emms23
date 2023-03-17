@@ -71,6 +71,9 @@
     transform: translate(-72%, 2%);
 }
 
+.emms__home.emms__home-logueado .emms__centralvideo__title h2{
+    max-width: 560px;
+}
 
 /* Speakers */
 
@@ -94,6 +97,14 @@
     line-height: 22px;
     color: #333333;
     display: block;
+}
+
+.emms__home__speakers small a{
+    color: #026c3c;
+}
+
+.emms__home__speakers small a:hover{
+    text-decoration: underline;
 }
 
 .emms__home__speakers .emms__cta{
