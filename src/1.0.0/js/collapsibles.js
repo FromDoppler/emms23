@@ -19,7 +19,7 @@ function toggleItem() {
 // Collapsible Legal
 
 var legalBtn = document.getElementById('legalBtn');
-legalBtn.addEventListener('click', toggleItemLegal);
+if (legalBtn) legalBtn.addEventListener('click', toggleItemLegal);
 function toggleItemLegal() {
     var legalClass = this.parentNode.className;
 
