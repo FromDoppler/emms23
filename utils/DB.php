@@ -255,21 +255,21 @@ class DB
         return $result;
     }
 
-    public function getAliadosPro($orden)
+    public function getSponsors($orden)
     {
         $sql = $this->query("SELECT * FROM aliados_pro order by " . $orden);
         $result = $sql->fetchAll();
         return $result;
     }
 
-    public function getAliadosStarter($orden)
+    public function getMediaPartnersStarter($orden)
     {
         $sql = $this->query("SELECT * FROM aliados_starter order by " . $orden);
         $result = $sql->fetchAll();
         return $result;
     }
 
-    public function getAliadosMedia($orden)
+    public function getMediaPartnersExclusive($orden)
     {
         $sql = $this->query("SELECT * FROM aliados_media_partner order by " . $orden);
         $result = $sql->fetchAll();
