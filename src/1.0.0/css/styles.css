@@ -19,6 +19,7 @@
 @import 'components/calendar.css';
 @import 'components/doppler-banner.css';
 @import 'components/doppler-academy-banner.css';
+@import 'components/register-modal.css';
 
 /* Pages */
 @import 'pages/ecommerce.css';
