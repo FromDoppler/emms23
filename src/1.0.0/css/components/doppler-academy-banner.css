@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1000px;
 }
 
 .emms__doppleracademybanner__image {
@@ -27,7 +28,7 @@
 .emms__doppleracademybanner__description h2 {
     font-size: 27px;
     line-height: 31px;
-    font-weight: 300;
+    font-weight: 700;
     margin: 0 0 22px 0;
 }
 
@@ -41,35 +42,23 @@
     font-weight: 700;
 }
 
-.emms__doppleracademybanner__description__bottom {
-    margin: 50px 0 0 0;
-}
-
-.emms__doppleracademybanner__description__bottom h3 {
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 400;
-}
-
-.emms__doppleracademybanner__description__bottom h3 strong {
-    font-weight: 700;
-}
-
-.emms__doppleracademybanner__description__bottom ul {
+.emms__doppleracademybanner__description ul {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 480px;
     margin: 30px 0 0 0;
 }
 
-.emms__doppleracademybanner__description__bottom ul li {
+.emms__doppleracademybanner__description ul li {
     font-size: 16px;
-    margin: 0 20px 0 0;
+    margin: 0 20px 25px 0;
     padding: 0 0 0 30px;
     box-sizing: border-box;
     position: relative;
     white-space: nowrap;
 }
 
-.emms__doppleracademybanner__description__bottom ul li::before {
+.emms__doppleracademybanner__description ul li::before {
     content: "";
     position: absolute;
     left: 0;
@@ -80,8 +69,8 @@
     background-size: contain;
 }
 
-.emms__doppleracademybanner__description__bottom .emms__cta {
-    margin: 44px 0 0 0;
+.emms__doppleracademybanner__description .emms__cta {
+    margin: 25px 0 0 0;
     text-align: center;
 }
 
@@ -91,11 +80,11 @@
 
 @media(max-width:1250px) {
 
-    .emms__doppleracademybanner__description__bottom ul {
+    .emms__doppleracademybanner__description ul {
         flex-wrap: wrap;
     }
 
-    .emms__doppleracademybanner__description__bottom ul li {
+    .emms__doppleracademybanner__description ul li {
         white-space: initial;
         width: 250px;
         margin: 0 0 23px 0;

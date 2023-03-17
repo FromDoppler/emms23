@@ -33,9 +33,8 @@ require_once('././config.php');
         <!-- Hero -->
         <section class="emms__sponsors__hero">
             <div class="emms__sponsors__hero__title emms__fade-top">
-                <h1><em>Herramientas gratuitas para potenciar tu negocio</em> Contenido Premium para registrados al EMMS E-commerce 2023</h1>
-                <p>🔒 Desbloquea ahora todas las herramientas y recursos que nuestros aliados han preparado para que puedas optimizar tu Tienda Online.</p>
-                <a href="" class="emms__cta emms__fade-in">REGÍSTRATE GRATIS AHORA</a>
+                <h1><em>Herramientas gratis para optimizar tu Tienda Online</em> Contenido Premium para registrados al EMMS E-commerce 2023</h1>
+                <p>Descubre todas las herramientas, recursos descargables y material audiovisual que nuestros aliados han preparado para ti</p>
             </div>
         </section>
 
@@ -59,7 +58,6 @@ require_once('././config.php');
                         </div>
                         <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
                         <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                        <a data-target="modalRegister" data-toggle="emms__register-modal">Acceder →</a>
                     </li>
                     <li class="emms__sponsors__list__item">
                         <div class="emms__sponsors__list__item__logo">
@@ -67,7 +65,6 @@ require_once('././config.php');
                         </div>
                         <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
                         <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                        <a data-target="modalRegister" data-toggle="emms__register-modal">Acceder →</a>
                     </li>
                     <li class="emms__sponsors__list__item">
                         <div class="emms__sponsors__list__item__logo">
@@ -75,7 +72,6 @@ require_once('././config.php');
                         </div>
                         <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
                         <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                        <a data-target="modalRegister" data-toggle="emms__register-modal">Acceder →</a>
                     </li>
                     <li class="emms__sponsors__list__item">
                         <div class="emms__sponsors__list__item__logo">
@@ -83,7 +79,6 @@ require_once('././config.php');
                         </div>
                         <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
                         <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                        <a data-target="modalRegister" data-toggle="emms__register-modal">Acceder →</a>
                     </li>
                     <li class="emms__sponsors__list__item">
                         <div class="emms__sponsors__list__item__logo">
@@ -91,7 +86,6 @@ require_once('././config.php');
                         </div>
                         <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
                         <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                        <a data-target="modalRegister" data-toggle="emms__register-modal">Acceder →</a>
                     </li>
                     <li class="emms__sponsors__list__item">
                         <div class="emms__sponsors__list__item__logo">
@@ -99,7 +93,6 @@ require_once('././config.php');
                         </div>
                         <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
                         <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                        <a data-target="modalRegister" data-toggle="emms__register-modal">Acceder →</a>
                     </li>
                 </ul>
             </div>
@@ -178,7 +171,7 @@ require_once('././config.php');
                         <li>20 lecciones de 15 minutos</li>
                         <li>Clases teóricas y prácticas</li>
                     </ul>
-                    <a href="https://academy.fromdoppler.com/bootcamp/?utm_source=emmsecom&utm_medium=goemms&utm_campaign=et-contenidoexclusivo-noregistrado-emmsecom-23" target="_blank" class="emms__cta emms__fade-in">ACCEDE AHORA</a>
+                    <a href="https://academy.fromdoppler.com/bootcamp/?utm_source=emmsecom&utm_medium=goemms&utm_campaign=et-contenidoexclusivo-registrado-emmsecom-23" target="_blank" class="emms__cta emms__fade-in">ACCEDE AHORA</a>
                 </div>
             </div>
         </section>

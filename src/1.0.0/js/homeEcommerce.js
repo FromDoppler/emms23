@@ -86,6 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         localStorage.setItem('events', JSON.stringify(events));
                         localStorage.setItem('lastEventsUpdateTime', new Date());
                         window.location.href = getUrlWithParams('/ecommerce-registrado.php');
+                        if (window.location.pathname === '/sponsors.php'){
+                            window.location.href = getUrlWithParams('/sponsors-registrado.php');
+                        }
                     })
                     .catch((error) => {
                         customError('Eccomerce post error', error);
