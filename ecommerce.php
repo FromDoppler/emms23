@@ -193,7 +193,7 @@ require_once('././config.php');
                 </ul>
                 <ul class="emms__calendar__list emms__calendar__list--mb main-carousel emms__fade-in" data-flickity>
 
-                   <?php include('./src/components/speakers.php') ?>
+                    <?php include('./src/components/speakers.php') ?>
 
                     <!-- <li class="emms__calendar__list__item emms__calendar__list__item--special">
                         <div class="emms__calendar__list__item__card">
@@ -299,11 +299,29 @@ require_once('././config.php');
         <section class="emms__companies emms__companies--categories" id="aliados">
             <div class="emms__container--lg">
                 <h2 class="emms__fade-in">Nos acompañan en esta edición:</h2>
+                <h3>SPONSORS</h3>
                 <ul class="emms__companies__list emms__companies__list--lg  emms__fade-in">
-                    <li class="emms__companies__list__item"><a href="https://www.siteground.es/?utm_medium=link&utm_source=event&utm_campaign=EMMS23" target="_blank"><img src="src/img/logos/logo-siteground.png" alt="Siteground"></a></li>
-                    <li class="emms__companies__list__item"><a href="https://raiolanetworks.es/" target="_blank"><img src="src/img/logos/logo-raiola.png" alt="Raiola"></a></li>
-                    <li class="emms__companies__list__item"><a href="https://dinorank.com/" target="_blank"><img src="src/img/logos/logo-dinorank.png" alt="Dinorank"></a></li>
-                    <li class="emms__companies__list__item"><a href="https://ecommercenights.com.pa/" target="_blank"><img src="src/img/logos/logo-ecommerce-nights.png" alt="Ecommerce Nights"></a></li>
+                    <?php $pro_sponsors = $db->getSponsors('orden_home');
+                    foreach ($pro_sponsors as $pro) : ?>
+                        <li class="emms__companies__list__item">
+                            <?php if ($pro['link_site']) : ?>
+                                <a href="<?= $pro['link_site'] ?>" target="_blank">
+                                <?php endif ?>
+                                <img src="../../admin/aliados_pro/uploads/<?= $pro['image_home'] ?>" alt="<?= $pro['alt_image_home'] ?>">
+                                <?php if ($pro['link_site']) : ?>
+                                </a>
+                            <?php endif ?>
+                        </li>
+
+                    <?php endforeach; ?>
+                </ul>
+                <div class="emms__companies__divisor"></div>
+                <h3>MEDIA PARTNERS EXCLUSIVE</h3>
+                <ul class="emms__companies__list emms__companies__list  emms__fade-in" id="mediaPartenersExclusive">
+                </ul>
+                <div class="emms__companies__divisor"></div>
+                <h3>MEDIA PARTNERS STARTERS</h3>
+                <ul class="emms__companies__list emms__companies__list  emms__fade-in" id="mediaPartenersStarters">
                 </ul>
                 <small class="emms__fade-in"><strong>¿Quieres ser aliado del EMMS E-commerce 2023?</strong> ¡Hablemos! Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></small>
             </div>
@@ -339,9 +357,9 @@ require_once('././config.php');
     <script src="src/<?= VERSION ?>/js/collapsibles.js"></script>
     <script src="src/<?= VERSION ?>/js/dateCounter.js"></script>
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
+    <script src="src/<?= VERSION ?>/js/mediaPartners.js"></script>
     <script src="src/<?= VERSION ?>/js/homeEcommerce.js" type="module"></script>
 
 </body>
 
 </html>
-
