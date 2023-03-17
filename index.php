@@ -32,7 +32,7 @@ require_once('././config.php');
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
                 <ul class="emms__header__nav__menu">
                     <li><a href="#" class="active">home</a></li>
-                    <li><a href="./ecommerce.php">ecommerce</a></li>
+                    <li><a href="./ecommerce.php">e-commerce</a></li>
                 </ul>
             </nav>
         </div>

@@ -32,7 +32,7 @@ require_once('././config.php');
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
                 <ul class="emms__header__nav__menu">
                     <li><a href="./registrado.php">home</a></li>
-                    <li class="emms__header__nav__menu__dropdown"><a href="#" class="active">ecommerce</a>
+                    <li class="emms__header__nav__menu__dropdown"><a href="#" class="active">e-commerce</a>
                         <ul class="emms__header__nav__submenu">
                             <li><a href="#agenda">AGENDA</a></li>
                             <li><a href="#aprende-con-doppler">APRENDE CON DOPPLER</a></li>
@@ -80,7 +80,7 @@ require_once('././config.php');
             <div class="emms__container--lg">
                 <div class="emms__calendar__title emms__fade-in">
                     <h2>Conoce a los Speakers del EMMS E-commerce 2023</h2>
-                    <p>Estos son los <strong>ponentes</strong> que nos acompañarán en esta edición y las <strong>temáticas</strong> de sus charlas. ¡Presta atención! Seguimos sumando conferencias a la agenda y te avisaremos de esto y mucho más vía Email.</p>
+                    <p>Estos son los <strong>ponentes</strong> que nos acompañarán en esta edición y las <strong>temáticas</strong> de sus charlas. </p>
                 </div>
                 <!-- List -->
                 <ul class="emms__calendar__list emms__calendar__list--dk emms__fade-in">
@@ -158,6 +158,9 @@ require_once('././config.php');
 
                 </ul>
                 <!-- End list -->
+                <div class="emms__calendar__bottom emms__fade-in">
+                    <p>¡Presta atención! <strong>Seguimos sumando conferencias a la agenda</strong>. Te avisaremos de esto y mucho más vía Email.</p>
+                </div>
             </div>
         </section>
 

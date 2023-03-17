@@ -32,7 +32,7 @@ require_once('././config.php');
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
                 <ul class="emms__header__nav__menu">
                     <li><a href="./index.php">home</a></li>
-                    <li class="emms__header__nav__menu__dropdown"><a href="#" class="active">ecommerce</a>
+                    <li class="emms__header__nav__menu__dropdown"><a href="#" class="active">e-commerce</a>
                         <ul class="emms__header__nav__submenu">
                             <li><a href="#agenda">AGENDA</a></li>
                             <li><a href="#aliados">ALIADOS</a></li>
@@ -147,7 +147,7 @@ require_once('././config.php');
         <section class="emms__calendar" id="agenda">
             <div class="emms__container--lg">
                 <div class="emms__calendar__title emms__fade-in">
-                    <h2>Agenda EMMS E-commerce 2023</h2>
+                    <h2>Conoce a los Speakers del EMMS E-commerce 2023</h2>
                     <p>Descubre antes que nadie a los <strong>ponentes</strong> que nos acompañarán en esta edición y las temáticas de sus charlas</p>
                 </div>
                 <!-- List -->
@@ -227,6 +227,7 @@ require_once('././config.php');
                 </ul>
                 <!-- End list -->
                 <div class="emms__calendar__bottom emms__fade-in">
+                    <p>¡Presta atención! <strong>Seguimos sumando conferencias a la agenda</strong>. Mantente al tanto de las novedades para no perderte a los nuevos speakers.</p>
                     <a href="#registro" class="emms__cta">INSCRÍBETE GRATIS AHORA</a>
                 </div>
             </div>
@@ -262,7 +263,7 @@ require_once('././config.php');
             <div class="emms__background-b mb"></div>
             <div class="emms__background-b mb"></div>
             <div class="emms__container--lg">
-                <h2 class="emms__fade-in">Nuestros usuarios dicen:</h2>
+                <h2 class="emms__fade-in">Nuestros asistentes dicen:</h2>
                 <ul class="emms__userscomments__list emms__userscomments__list--dk emms__fade-in">
                     <li class="emms__userscomments__list__item">
                         <p>“Con el EMMS siempre me llevo muchos tips para mi tienda. Y ahora, la edición para E-commerce ¡no me lo pierdo!”.<em>María Alejandra<img src="src/img/flag-colombia.png" alt="Colombia"></em></p>
