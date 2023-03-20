@@ -76,6 +76,10 @@
     animation-delay: .7s;
 }
 
+.emms__ecommerce-logueado .emms__calendar__bottom{
+    max-width: 460px;
+}
+
 
 /* ---------------------------------------------- Responsive ---------------------------------------------- */
 
