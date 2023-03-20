@@ -42,12 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // We generate the subgroups
         mediaPartners.forEach((mediaPartner, index) => {
+            groupOfPartners.push(mediaPartner);
             if (flag === groupLength || (index === (mediaPartners.length - 1))) {
                 flag = 0;
                 groupsOfMediaPartners.push(groupOfPartners);
                 groupOfPartners = [];
             }
-            groupOfPartners.push(mediaPartner);
             flag++;
         });
 
@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     li.classList.add('emms__fade-in-animation');
                     li.classList.add('emms__companies__list__item');
                     const img = document.createElement('img');
-                    img.src = `/admin/aliados_media_partner/uploads/${mediaPartner.image_home}`;
-                    img.alt = `${mediaPartner.alt_image_home}`;
+                    img.src = `./adm23/server/modules/sponsors/uploads/${mediaPartner.logo_company}`;
+                    img.alt = `${mediaPartner.alt_logo_company}`;
                     li.appendChild(img);
                     container.appendChild(li);
                 })

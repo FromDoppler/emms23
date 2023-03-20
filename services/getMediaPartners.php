@@ -32,11 +32,11 @@ function getMediaPartnersByType($type)
 
     $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     if ($type === 'exclusive') {
-        $allies = $db->getMediaPartnersExclusive("orden_home");
+        $allies = $db->getSponsorsByType("PREMIUM");
         $db->close();
         return $allies;
     } else if ($type === 'starters') {
-        $allies = $db->getMediaPartnersStarter("orden_home");
+        $allies = $db->getSponsorsByType("STARTER");
         $db->close();
         return $allies;
     }
