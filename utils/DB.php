@@ -241,6 +241,13 @@ class DB
 
     /********DATA ABMS*************/
 
+     public function getSponsorsByType($type)
+    {
+        $sql = $this->query("SELECT * FROM sponsors  WHERE status = '1' AND sponsor_type = '$type' ORDER BY priority_home");
+        $result = $sql->fetchAll();
+        return $result;
+    }
+
     public function getAllSpeakers()
     {
         $sql = $this->query("SELECT * FROM speakers  order by orden");
