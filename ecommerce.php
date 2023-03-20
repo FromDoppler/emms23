@@ -296,14 +296,14 @@ require_once('././config.php');
                 <h2 class="emms__fade-in">Nos acompañan en esta edición:</h2>
                 <h3>SPONSORS</h3>
                 <ul class="emms__companies__list emms__companies__list--lg  emms__fade-in">
-                    <?php $pro_sponsors = $db->getSponsors('orden_home');
-                    foreach ($pro_sponsors as $pro) : ?>
+                    <?php $sponsors = $db->getSponsorsByType('SPONSOR');
+                    foreach ($sponsors as $sponsor) : ?>
                         <li class="emms__companies__list__item">
-                            <?php if ($pro['link_site']) : ?>
-                                <a href="<?= $pro['link_site'] ?>" target="_blank">
+                            <?php if ($sponsor['link_site']) : ?>
+                                <a href="<?= $sponsor['link_site'] ?>" target="_blank">
                                 <?php endif ?>
-                                <img src="../../admin/aliados_pro/uploads/<?= $pro['image_home'] ?>" alt="<?= $pro['alt_image_home'] ?>">
-                                <?php if ($pro['link_site']) : ?>
+                                <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['logo_company'] ?>" alt="<?= $sponsor['alt_logo_company'] ?>">
+                                <?php if ($sponsor['link_site']) : ?>
                                 </a>
                             <?php endif ?>
                         </li>
