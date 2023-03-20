@@ -130,7 +130,7 @@ if (isset($_POST['btn-cancel'])) {
                             </td>
                             <td>
                                 <img src="uploads/<?= $fetched_row['image'] ?>" alt="<?= $fetched_row['alt_image'] ?>" width="150" height="150">
-                                <input type="file" value="<?= $fetched_row['image'] ?>" class="form-control" id="image" name="image" required>
+                                <input type="file" value="<?= $fetched_row['image'] ?>" class="form-control" id="image" name="image">
                             </td>
                         </tr>
                         <tr>
@@ -203,7 +203,7 @@ if (isset($_POST['btn-cancel'])) {
                             </td>
                             <td>
                                 <img src="uploads/<?= $fetched_row['image_company'] ?>" alt="<?= $fetched_row['alt_image_company'] ?>" width="70" height="70">
-                                <input type="file" value="<?= $fetched_row['image_company'] ?>" class="form-control" id="image_company" name="image_company"required>
+                                <input type="file" value="<?= $fetched_row['image_company'] ?>" class="form-control" id="image_company" name="image_company">
                             </td>
                         </tr>
                         <tr>
