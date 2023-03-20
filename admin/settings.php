@@ -25,7 +25,7 @@
         </div>
         <div class="mt-5 row">
             <div class="col-3">
-                <a class=" btn btn-primary mt-2" href="/admin/index.php?token=<?= $_GET['token'] ?>"> Menu Principal</a>
+                <a class=" btn btn-primary mt-2" href="/adm23?token=<?= $_GET['token'] ?>"> Menu Principal</a>
             </div>
 
             <div class="col text-center">

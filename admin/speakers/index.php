@@ -58,7 +58,7 @@ if (isset($_GET['changestatus_id'])) {
         </div>
 
         <div id="container">
-            <br /><a href="/admin/index.php?token=<?= $_GET['token'] ?>"> Menu Principal</a>
+            <br /><a href="/adm23?token=<?= $_GET['token'] ?>"> Menu Principal</a>
             <div id="table-responsive">
 
                 <table class="table table-striped">

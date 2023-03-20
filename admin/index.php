@@ -1,4 +1,6 @@
 <?php
+header('Location: /');
+die();
 include_once 'config.php';
 include_once '../utils/GeoIp.php';
 $ip = GeoIp::getIp();
