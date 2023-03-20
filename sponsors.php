@@ -16,12 +16,12 @@ require_once('././config.php');
     <header class="emms__header">
         <div class="emms__container--lg emms__fade-in">
             <div class="emms__header__logo">
-                <a href="./index.php"><img src="src/img/logos/logo-emms.png" alt="Emms 2023"></a>
+                <a href="/"><img src="src/img/logos/logo-emms.png" alt="Emms 2023"></a>
             </div>
             <a class="emms__header__nav--mb" id="btn-burger"></a>
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
                 <ul class="emms__header__nav__menu">
-                    <li><a href="./index.php">home</a></li>
+                    <li><a href="/">home</a></li>
                     <li><a href="#" class="active">contenido exclusivo</a></li>
                 </ul>
             </nav>
