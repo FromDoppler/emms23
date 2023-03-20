@@ -252,7 +252,7 @@ require_once('././config.php');
                         </li>
                     </ul>
                 </div>
-                <small class="emms__fade-in"><strong>¡Ya puedes conocer a los speakers de EMMS Ecommerce!</strong><br>Accede y descbre quiénes son y las temáticas de sus conferencias</small>
+                <small class="emms__fade-in"><strong>¡Ya puedes conocer a los speakers de EMMS Ecommerce!</strong><br>Accede y descubre quiénes son y las temáticas de sus conferencias</small>
                 <a href="./ecommerce.php" class="emms__cta emms__fade-in">CONOCE LA AGENDA</a>
             </div>
             <div class="emms__background-a"></div>
