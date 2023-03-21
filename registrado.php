@@ -26,13 +26,13 @@ require_once('././config.php');
     <header class="emms__header">
         <div class="emms__container--lg emms__fade-in">
             <div class="emms__header__logo">
-                <a href="./index.php"><img src="src/img/logos/logo-emms.png" alt="Emms 2023"></a>
+                <a href="/"><img src="src/img/logos/logo-emms.png" alt="Emms 2023"></a>
             </div>
             <a class="emms__header__nav--mb" id="btn-burger"></a>
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
                 <ul class="emms__header__nav__menu">
                     <li><a href="#" class="active">home</a></li>
-                    <li><a href="./ecommerce-registrado.php">e-commerce</a></li>
+                    <li><a href="/ecommerce-registrado">ecommerce</a></li>
                 </ul>
             </nav>
         </div>
@@ -87,7 +87,7 @@ require_once('././config.php');
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
                                     <p class="emms__eventCards__list__item__tag dark-purple">YA ESTÁS REGISTRADO</p>
-                                    <a href="./ecommerce-registrado.php">Acceder →</a>
+                                    <a href="/ecommerce-registrado">Acceder →</a>
                                 </div>
                             </div>
                         </li>
@@ -122,7 +122,7 @@ require_once('././config.php');
                                 <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <a href="./ecommerce-registrado.php">Acceder →</a>
+                                    <a href="/ecommerce-registrado">Acceder →</a>
                                 </div>
                             </div>
                         </li>

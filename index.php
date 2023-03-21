@@ -15,7 +15,7 @@ require_once('././config.php');
         } from './src/<?= VERSION ?>/js/common/index.js';
 
         if (isUserLogged()) {
-            window.location.href = getUrlWithParams('/registrado.php');
+            window.location.href = getUrlWithParams('/registrado');
         }
     </script>
 </head>
@@ -26,13 +26,13 @@ require_once('././config.php');
     <header class="emms__header">
         <div class="emms__container--lg emms__fade-in">
             <div class="emms__header__logo">
-                <a href="./index.php"><img src="src/img/logos/logo-emms.png" alt="Emms 2023"></a>
+                <a href="/"><img src="src/img/logos/logo-emms.png" alt="Emms 2023"></a>
             </div>
             <a class="emms__header__nav--mb" id="btn-burger"></a>
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
                 <ul class="emms__header__nav__menu">
                     <li><a href="#" class="active">home</a></li>
-                    <li><a href="./ecommerce.php">e-commerce</a></li>
+                    <li><a href="./ecommerce">e-commerce</a></li>
                 </ul>
             </nav>
         </div>
@@ -120,7 +120,7 @@ require_once('././config.php');
                                 <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <a href="ecommerce.php">Regístrate gratis →</a>
+                                    <a href="ecommerce">Regístrate gratis →</a>
                                 </div>
                             </div>
                         </li>
@@ -158,7 +158,7 @@ require_once('././config.php');
                     <video src="src/img/20230313-EMMS-General.mp4" controls></video>
                 </div>
                 <div class="emms__centralvideo__cta emms__fade-in">
-                    <a href="./ecommerce.php" class="emms__cta">REGÍSTRATE AHORA</a>
+                    <a href="./ecommerce" class="emms__cta">REGÍSTRATE AHORA</a>
                 </div>
             </div>
         </section>
@@ -253,7 +253,7 @@ require_once('././config.php');
                     </ul>
                 </div>
                 <small class="emms__fade-in"><strong>¡Ya puedes conocer a los speakers de EMMS Ecommerce!</strong><br>Accede y descubre quiénes son y las temáticas de sus conferencias</small>
-                <a href="./ecommerce.php" class="emms__cta emms__fade-in">CONOCE LA AGENDA</a>
+                <a href="./ecommerce" class="emms__cta emms__fade-in">CONOCE LA AGENDA</a>
             </div>
             <div class="emms__background-a"></div>
         </section>
