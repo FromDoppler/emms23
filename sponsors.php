@@ -1,5 +1,6 @@
 <?php
 require_once('././config.php');
+require_once('./utils/DB.php');
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +36,7 @@ require_once('././config.php');
             <div class="emms__sponsors__hero__title emms__fade-top">
                 <h1><em>Herramientas gratuitas para potenciar tu negocio</em> Contenido Premium para registrados al EMMS E-commerce 2023</h1>
                 <p>🔒 Desbloquea ahora todas las herramientas y recursos que nuestros aliados han preparado para que puedas optimizar tu Tienda Online.</p>
-                <a href="" class="emms__cta emms__fade-in">REGÍSTRATE GRATIS AHORA</a>
+                <a class="emms__cta emms__fade-in" data-target="modalRegister" data-toggle="emms__register-modal">REGÍSTRATE GRATIS AHORA</a>
             </div>
         </section>
 
@@ -53,54 +54,31 @@ require_once('././config.php');
                     </ul>
                 </div>
                 <ul class="emms__sponsors__list__content emms__fade-in">
-                    <li class="emms__sponsors__list__item">
-                        <div class="emms__sponsors__list__item__logo">
-                            <img src="src/img/logos/logo-siteground.png" alt="Siteground">
-                        </div>
-                        <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
-                        <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                        <a data-target="modalRegister" data-toggle="emms__register-modal">Acceder →</a>
-                    </li>
-                    <li class="emms__sponsors__list__item">
-                        <div class="emms__sponsors__list__item__logo">
-                            <img src="src/img/logos/logo-siteground.png" alt="Siteground">
-                        </div>
-                        <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
-                        <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                        <a data-target="modalRegister" data-toggle="emms__register-modal">Acceder →</a>
-                    </li>
-                    <li class="emms__sponsors__list__item">
-                        <div class="emms__sponsors__list__item__logo">
-                            <img src="src/img/logos/logo-siteground.png" alt="Siteground">
-                        </div>
-                        <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
-                        <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                        <a data-target="modalRegister" data-toggle="emms__register-modal">Acceder →</a>
-                    </li>
-                    <li class="emms__sponsors__list__item">
-                        <div class="emms__sponsors__list__item__logo">
-                            <img src="src/img/logos/logo-siteground.png" alt="Siteground">
-                        </div>
-                        <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
-                        <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                        <a data-target="modalRegister" data-toggle="emms__register-modal">Acceder →</a>
-                    </li>
-                    <li class="emms__sponsors__list__item">
-                        <div class="emms__sponsors__list__item__logo">
-                            <img src="src/img/logos/logo-siteground.png" alt="Siteground">
-                        </div>
-                        <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
-                        <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                        <a data-target="modalRegister" data-toggle="emms__register-modal">Acceder →</a>
-                    </li>
-                    <li class="emms__sponsors__list__item">
-                        <div class="emms__sponsors__list__item__logo">
-                            <img src="src/img/logos/logo-siteground.png" alt="Siteground">
-                        </div>
-                        <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
-                        <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                        <a data-target="modalRegister" data-toggle="emms__register-modal">Acceder →</a>
-                    </li>
+                    <?php
+                    $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                    $sponsors = $db->getSponsorsByType('SPONSOR');
+                    foreach ($sponsors as $sponsor) : ?>
+                        <li class="emms__sponsors__list__item">
+                            <div class="emms__sponsors__list__item__logo">
+                                <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['logo_company'] ?>" alt="<?= $sponsor['alt_logo_company'] ?>">
+                            </div>
+                            <h3><?= $sponsor['title'] ?></h3>
+                            <p><?= $sponsor['description_card'] ?></p>
+                            <a data-target="modalRegister" data-toggle="emms__register-modal" slug=<?= $sponsor['slug'] ?>>Acceder →</a>
+                        </li>
+                    <?php endforeach; ?>
+                    <?php
+                    $sponsors = $db->getSponsorsByType('PREMIUM');
+                    foreach ($sponsors as $sponsor) : ?>
+                        <li class="emms__sponsors__list__item">
+                            <div class="emms__sponsors__list__item__logo">
+                                <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['logo_company'] ?>" alt="<?= $sponsor['alt_logo_company'] ?>">
+                            </div>
+                            <h3><?= $sponsor['title'] ?></h3>
+                            <p><?= $sponsor['description_card'] ?></p>
+                            <a data-target="modalRegister" data-toggle="emms__register-modal"  slug=<?= $sponsor['slug'] ?>>Acceder →</a>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </section>
@@ -109,7 +87,7 @@ require_once('././config.php');
         <div id="modalRegister" class="emms__register-modal">
             <div class="emms__register-modal__window">
                 <!-- Form -->
-                <form class="emms__form" id="ecommerceForm" novalidate autocomplete="off">
+                <form class="emms__form" id="sponsorsForm" novalidate autocomplete="off">
                     <h4>Regístrate gratis para acceder a este contenido 🙂</h4>
                     <ul class="emms__form__field-group">
                         <li class="emms__form__field-item">
@@ -189,8 +167,7 @@ require_once('././config.php');
     <?php include_once('././src/components/footer.php'); ?>
 
     <script src="src/<?= VERSION ?>/js/collapsibles.js"></script>
-    <script src="src/<?= VERSION ?>/js/sponsors.js"></script>
-    <script src="src/<?= VERSION ?>/js/homeEcommerce.js" type="module"></script>
+    <script src="src/<?= VERSION ?>/js/sponsors.js" type="module"></script>
 
 </body>
 
