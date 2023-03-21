@@ -86,7 +86,7 @@ require_once('././config.php');
                                 <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <a href="ecommerce.php">Regístrate gratis →</a>
+                                    <a href="ecommerce" class="emms__cta">REGÍSTRATE GRATIS</a>
                                 </div>
                             </div>
                         </li>
@@ -102,7 +102,7 @@ require_once('././config.php');
                                 <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <p class="emms__eventCards__list__item__tag purple">PRÓXIMAMENTE</p>
+                                    <p><strong>PRÓXIMAMENTE:</strong> ¡En breve te comunicaremos todas las novedades de este evento!</p>
                                 </div>
                             </div>
                         </li>
@@ -120,14 +120,13 @@ require_once('././config.php');
                                 <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <a href="ecommerce">Regístrate gratis →</a>
+                                    <a href="ecommerce" class="emms__cta">REGÍSTRATE GRATIS</a>
                                 </div>
                             </div>
                         </li>
                         <li class="emms__eventCards__list__item">
                             <div class="emms__eventCards__list__item__picture">
                                 <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
-                                <p class="emms__eventCards__list__item__tag purple">PRÓXIMAMENTE</p>
                             </div>
                             <div class="emms__eventCards__list__item__text">
                                 <div class="emms__eventCards__list__item__text--corner">
@@ -137,6 +136,7 @@ require_once('././config.php');
                                 <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
+                                    <p><strong>PRÓXIMAMENTE:</strong> ¡En breve te comunicaremos todas las novedades de este evento!</p>
                                 </div>
                             </div>
                         </li>
