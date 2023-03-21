@@ -16,7 +16,7 @@ require_once('./utils/DB.php');
         } from './src/<?= VERSION ?>/js/common/index.js';
 
         if (isUserLogged()) {
-            window.location.href = getUrlWithParams('/sponsors');
+            window.location.href = getUrlWithParams('/sponsors-registrado');
         }
     </script>
 </head>
