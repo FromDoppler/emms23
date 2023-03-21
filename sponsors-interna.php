@@ -7,9 +7,6 @@ if (isset($_GET['slug'])) {
     $sponsor = $db->getSponsorsBySlug($_GET['slug']);
     if (count($sponsor) != 0) {
         $sponsor = $sponsor[0];
-        echo '<code>';
-        var_dump($sponsor);
-        echo '</code>';
     } else {
         header('Location: ' . 'sponsors');
     }
