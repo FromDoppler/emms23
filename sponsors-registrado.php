@@ -1,5 +1,6 @@
 <?php
 require_once('././config.php');
+require_once('./utils/DB.php');
 ?>
 
 <!DOCTYPE html>
@@ -8,6 +9,16 @@ require_once('././config.php');
 <head>
     <?php include_once('././src/components/head-ecommerce.php'); ?>
     <?php include_once('././src/components/head.php'); ?>
+    <script type="module">
+        import {
+            isUserLogged,
+            getUrlWithParams
+        } from './src/<?= VERSION ?>/js/common/index.js';
+
+        if (!isUserLogged()) {
+            window.location.href = getUrlWithParams('/sponsors');
+        }
+    </script>
 </head>
 
 <body class="emms__sponsors">
@@ -52,48 +63,31 @@ require_once('././config.php');
                     </ul>
                 </div>
                 <ul class="emms__sponsors__list__content emms__fade-in">
-                    <li class="emms__sponsors__list__item">
-                        <div class="emms__sponsors__list__item__logo">
-                            <img src="src/img/logos/logo-siteground.png" alt="Siteground">
-                        </div>
-                        <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
-                        <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                    </li>
-                    <li class="emms__sponsors__list__item">
-                        <div class="emms__sponsors__list__item__logo">
-                            <img src="src/img/logos/logo-siteground.png" alt="Siteground">
-                        </div>
-                        <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
-                        <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                    </li>
-                    <li class="emms__sponsors__list__item">
-                        <div class="emms__sponsors__list__item__logo">
-                            <img src="src/img/logos/logo-siteground.png" alt="Siteground">
-                        </div>
-                        <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
-                        <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                    </li>
-                    <li class="emms__sponsors__list__item">
-                        <div class="emms__sponsors__list__item__logo">
-                            <img src="src/img/logos/logo-siteground.png" alt="Siteground">
-                        </div>
-                        <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
-                        <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                    </li>
-                    <li class="emms__sponsors__list__item">
-                        <div class="emms__sponsors__list__item__logo">
-                            <img src="src/img/logos/logo-siteground.png" alt="Siteground">
-                        </div>
-                        <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
-                        <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                    </li>
-                    <li class="emms__sponsors__list__item">
-                        <div class="emms__sponsors__list__item__logo">
-                            <img src="src/img/logos/logo-siteground.png" alt="Siteground">
-                        </div>
-                        <h3>Acá va el titlulo de la capsula. Acá va el titulo de la capsula.</h3>
-                        <p>Comunicación del regalo / beneficio / el plus que aporta</p>
-                    </li>
+                    <?php
+                    $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                    $sponsors = $db->getSponsorsByType('SPONSOR');
+                    foreach ($sponsors as $sponsor) : ?>
+                        <li class="emms__sponsors__list__item">
+                            <div class="emms__sponsors__list__item__logo">
+                                <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['logo_company'] ?>" alt="<?= $sponsor['alt_logo_company'] ?>">
+                            </div>
+                            <h3><?= $sponsor['title'] ?></h3>
+                            <p><?= $sponsor['description_card'] ?></p>
+                            <a href="sponsors-interna?slug=<?= $sponsor['slug'] ?>" >Acceder →</a>
+                        </li>
+                    <?php endforeach; ?>
+                    <?php
+                    $sponsors = $db->getSponsorsByType('PREMIUM');
+                    foreach ($sponsors as $sponsor) : ?>
+                        <li class="emms__sponsors__list__item">
+                            <div class="emms__sponsors__list__item__logo">
+                                <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['logo_company'] ?>" alt="<?= $sponsor['alt_logo_company'] ?>">
+                            </div>
+                            <h3><?= $sponsor['title'] ?></h3>
+                            <p><?= $sponsor['description_card'] ?></p>
+                            <a href="sponsors-interna?slug=<?= $sponsor['slug'] ?>">Acceder →</a>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </section>
@@ -182,8 +176,7 @@ require_once('././config.php');
     <?php include_once('././src/components/footer.php'); ?>
 
     <script src="src/<?= VERSION ?>/js/collapsibles.js"></script>
-    <script src="src/<?= VERSION ?>/js/sponsors.js"></script>
-    <script src="src/<?= VERSION ?>/js/homeEcommerce.js" type="module"></script>
+    <script src="src/<?= VERSION ?>/js/sponsors.js" type="module"></script>
 
 </body>
 
