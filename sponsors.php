@@ -9,6 +9,16 @@ require_once('./utils/DB.php');
 <head>
     <?php include_once('././src/components/head-ecommerce.php'); ?>
     <?php include_once('././src/components/head.php'); ?>
+    <script type="module">
+        import {
+            isUserLogged,
+            getUrlWithParams
+        } from './src/<?= VERSION ?>/js/common/index.js';
+
+        if (isUserLogged()) {
+            window.location.href = getUrlWithParams('/sponsors');
+        }
+    </script>
 </head>
 
 <body class="emms__sponsors">
@@ -76,7 +86,7 @@ require_once('./utils/DB.php');
                             </div>
                             <h3><?= $sponsor['title'] ?></h3>
                             <p><?= $sponsor['description_card'] ?></p>
-                            <a data-target="modalRegister" data-toggle="emms__register-modal"  slug=<?= $sponsor['slug'] ?>>Acceder →</a>
+                            <a data-target="modalRegister" data-toggle="emms__register-modal" slug=<?= $sponsor['slug'] ?>>Acceder →</a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
