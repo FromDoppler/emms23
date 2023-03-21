@@ -4,7 +4,7 @@ class Config {
     private const DB_USER = 'root';
     private const DB_PASSWORD = '';
     private const DB_NAME = 'EMMS23';
-    private const RESTRICTED_SERVERS = ['167.71.254.179'];
+    private const RESTRICTED_SERVERS = ['167.71.254.179','165.227.176.189'];
     private const ALLOW_IPS = ['200.5.229.58'];
 
 
