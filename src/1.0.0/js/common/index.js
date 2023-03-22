@@ -3,4 +3,6 @@ export * from './decodeEmail.js';
 export * from './formsValidators.js';
 export * from './utm.js';
 export * from './user.js';
+export * from './submitForm.js';
+
 
