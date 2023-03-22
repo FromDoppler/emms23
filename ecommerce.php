@@ -231,17 +231,29 @@ require_once('././config.php');
                     <a href="#registro" class="emms__cta">INSCRÍBETE GRATIS AHORA</a>
                 </div>
             </div>
+            <div class="emms__background-b"></div>
         </section>
 
 
-        <!-- Separator -->
-        <div class="emms__separator"></div>
+        <!-- Premium content -->
+        <section class="emms__premium-content emms__premium-content--dark">
+            <div class="emms__container--lg">
+                <div class="emms__premium-content__text emms__fade-in">
+                    <h2>Desbloquea Contenido Premium ¡gratis! </h2>
+                    <p>Descubre <strong>recursos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas ponerlos en práctica y potenciar tu Tienda Online.</p>
+                    <a href="./sponsors" class="emms__cta emms__fade-in">DESCÚBRELO AQUÍ</a>
+                </div>
+                <div class="emms__premium-content__picture emms__fade-in">
+                    <img src="src/img/download--locked.png" alt="Contenido Premium">
+                </div>
+            </div>
+        </section>
 
 
         <!-- Central Video -->
         <section class="emms__centralvideo">
             <div class="emms__background-b"></div>
-            <div class="emms__background-b"></div>
+            <div class="emms__background-a"></div>
             <div class="emms__container--md">
                 <div class="emms__centralvideo__title emms__fade-in">
                     <h2>Llega una nueva versión del EMMS. Ahora, con una edición exclusiva para E-commerce</h2>
@@ -325,28 +337,7 @@ require_once('././config.php');
     </main>
 
     <!-- Footer -->
-    <footer class="emms__footer">
-        <div class="emms__footer__event emms__fade-in">
-            <p><strong>EMMS 2023</strong> - Un evento creado por <a href="https://www.fromdoppler.com/es/?utm_source=emmsecom&utm_campaign=et-interna-emmsecom-23" target="_blank"><img src="src/img/logos/logo-doppler--neg.svg" alt="Doppler"></a></p>
-        </div>
-        <div class="emms__footer__social emms__fade-in">
-            <ul>
-                <li><a href="https://www.instagram.com/fromdoppler/" target="_blank"><img src="src/img/icons/icono-instagram.svg" alt="Instagram"></a></li>
-                <li><a href="https://www.facebook.com/DopplerEmailMarketing" target="_blank"><img src="src/img/icons/icono-facebook.svg" alt="Facebook"></a></li>
-                <li><a href="https://www.youtube.com/user/FromDoppler" target="_blank"><img src="src/img/icons/icono-youtube.svg" alt="Youtube"></a>
-                </li>
-                <li><a href="https://www.linkedin.com/company/228261" target="_blank"><img src="src/img/icons/icono-linkedin.svg" alt="LinkedIn"></a></li>
-                <li><a href="https://twitter.com/fromDoppler" target="_blank"><img src="src/img/icons/icono-twitter.svg" alt="Twitter"></a></li>
-            </ul>
-        </div>
-        <div class="emms__footer__actions emms__fade-in">
-            <a onclick="OneTrust.ToggleInfoDisplay()" id="ot-sdk-btn" class="ot-sdk-show-settings">Configuración de Cookies.</a>
-            <a href="https://www.fromdoppler.com/es/legal/privacidad/" target="_blank">Políticas de privacidad y legales</a>
-        </div>
-    </footer>
-
-    <script src="src/<?= VERSION ?>/flickity/flickity.pkgd.min.js"></script>
-    <script src="src/<?= VERSION ?>/js/commonAnimations.js"></script>
+    <?php include_once('././src/components/footer.php'); ?>
 
 
     <script src="src/<?= VERSION ?>/js/collapsibles.js"></script>

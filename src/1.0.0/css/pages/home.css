@@ -71,7 +71,7 @@
     transform: translate(-72%, 2%);
 }
 
-.emms__home.emms__home-logueado .emms__centralvideo__title h2{
+.emms__home.emms__home-logueado .emms__centralvideo__title h2 {
     max-width: 560px;
 }
 
@@ -79,8 +79,9 @@
 
 .emms__home__speakers {
     text-align: center;
-    padding: 58px 0 51px 0;
+    padding: 58px 0 85px 0;
     position: relative;
+    z-index: 1;
 }
 
 .emms__home__speakers h2 {
@@ -99,41 +100,52 @@
     display: block;
 }
 
-.emms__home__speakers small a{
+.emms__home__speakers small a {
     color: #026c3c;
 }
 
-.emms__home__speakers small a:hover{
+.emms__home__speakers small a:hover {
     text-decoration: underline;
 }
 
-.emms__home__speakers .emms__cta{
+.emms__home__speakers .emms__cta {
     margin: 36px 0 0 0;
 }
 
-.emms__home__speakers .emms__background-a {
+.emms__home.emms__home-logueado .emms__home__speakers .emms__background-a {
     width: 1000px;
     height: 920px;
     position: absolute;
-    transform: translate(82%, -60%);
+    transform: translate(73%, -56%) rotate(180deg);
     right: 0;
     z-index: -1;
 }
 
 @keyframes button-loading-spinner {
-  from {
-    transform: rotate(0turn);
-  }
+    from {
+        transform: rotate(0turn);
+    }
 
-  to {
-    transform: rotate(1turn);
-  }
+    to {
+        transform: rotate(1turn);
+    }
 }
 
 /* Users Comments */
 
 .emms__home .emms__userscomments {
-    padding: 60px 0 150px 0;
+    padding: 114px 0 150px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.emms__home .emms__userscomments .emms__background-a {
+    width: 1000px;
+    height: 920px;
+    position: absolute;
+    transform: translate(73%, -56%) rotate(180deg);
+    right: 0;
+    z-index: -1;
 }
 
 
@@ -149,7 +161,7 @@
 
 /* Companies list */
 
-.emms__home .emms__companies .emms__companies__list .emms__companies__list__item{
+.emms__home .emms__companies .emms__companies__list .emms__companies__list__item {
     height: 40px;
 }
 
@@ -164,7 +176,11 @@
         transform: translate(-74%, -72%);
     }
 
-    .emms__home__speakers .emms__background-a {
+    .emms__home.emms__home-logueado .emms__home__speakers .emms__background-a{
+        display: none;
+    }
+
+    .emms__home .emms__userscomments .emms__background-a {
         display: none;
     }
 }
@@ -193,6 +209,10 @@
     .emms__home__speakers {
         text-align: center;
         padding: 80px 0;
+    }
+
+    .emms__home .emms__userscomments{
+        padding: 75px 0 150px 0;
     }
 
     .emms__home .emms__frequentquestions .emms__background-a {

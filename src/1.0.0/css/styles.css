@@ -20,6 +20,7 @@
 @import 'components/doppler-banner.css';
 @import 'components/doppler-academy-banner.css';
 @import 'components/register-modal.css';
+@import 'components/premium-content-banner.css';
 
 /* Pages */
 @import 'pages/ecommerce.css';
