@@ -2,7 +2,6 @@
 
 import {
     customError,
-    getEncodeURLEmail,
     getUrlWithParams,
     submitFormFetch,
 } from './common/index.js';
@@ -11,37 +10,6 @@ import {
 
 document.addEventListener('DOMContentLoaded', () => {
     const ecommerceForm = document.getElementById('ecommerceForm');
-    const userEmail = getEncodeURLEmail();
-
-    // if (userEmail) {
-    //     const endPoint = 'exampleEndPointForGetUserEvents';
-    //     const userData = {
-    //         email: fromHex(userEmail)
-    //     }
-
-    //     const getUserEvents = async () => {
-    //         //TODO: Poner el endPoint correspondiente cuando este listo
-    //         const resp = await fetch(endPoint, {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             },
-    //             body: JSON.stringify(userData),
-    //         });
-    //         const userEvents = await resp.json()
-    //         return userEvents;
-    //     }
-
-    //     const loadUserInterface = (userEvents) => {
-    //         //TODO: Interactuar con la maqueta cuando este lista
-    //         console.log('Cargando interfaz');
-    //     };
-
-    //     getUserEvents().then(userEvents => {
-    //         loadUserInterface(userEvents);
-    //     });
-    // }
-
 
     const submitForm = async (e) => {
 
