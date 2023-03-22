@@ -50,8 +50,8 @@ if (isset($_GET['slug'])) {
                     <p><?= $sponsor['description'] ?></p>
                 </div>
                 <div class="emms__internal-sponsors__hero__video">
-                    <?php if (!empty($sponsor['image_youtube'])) :  ?>
-                        <video src="<?= $sponsor['youtube'] ?>" controls></video>
+                    <?php if (!empty($sponsor['youtube'])) :  ?>
+                        <iframe src="https://www.youtube.com/embed/<?= $sponsor['youtube'] ?>"></iframe>
                     <?php else : ?>
                         <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['image_youtube'] ?>" alt="<?= $sponsor['alt_image_youtube'] ?>" />
                     <?php endif; ?>
