@@ -17,7 +17,7 @@ document.addEventListener('click', (e) => {
         if (target.hasAttribute('data-target')) {
             const m_ID = target.getAttribute('data-target');
             document.getElementById(m_ID).classList.add('open');
-            this.body.style.overflow = 'hidden';
+            document.querySelector('body').style.overflow = 'hidden';
             e.preventDefault();
         }
     }
@@ -25,7 +25,7 @@ document.addEventListener('click', (e) => {
     if ((target.hasAttribute('data-dismiss') && target.getAttribute('data-dismiss') == 'emms__register-modal') || target.classList.contains('emms__register-modal')) {
         const modal = document.querySelector('[class="emms__register-modal open"]');
         modal.classList.remove('open');
-        this.body.style.overflow = 'scroll';
+        document.querySelector('body').style.overflow = 'scroll';
         e.preventDefault();
     }
 
