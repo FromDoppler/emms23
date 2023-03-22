@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
 
 
-        submitFormFetch(ecommerceForm, 'ecommerce').then(({ fetchResp: resp, encodeEmail }) => {
+        await submitFormFetch(ecommerceForm, 'ecommerce').then(({ fetchResp: resp, encodeEmail }) => {
 
             if (!resp.ok) throw new Error('Server error on eccomerce fetch', resp?.status);
 
