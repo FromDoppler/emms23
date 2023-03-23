@@ -256,8 +256,19 @@ require_once('././config.php');
             <div class="emms__background-a"></div>
         </section>
 
-        <!-- Separator -->
-        <div class="emms__separator"></div>
+        <!-- Premium content -->
+        <section class="emms__premium-content emms__premium-content--dark">
+            <div class="emms__container--lg">
+                <div class="emms__premium-content__text emms__fade-in">
+                    <h2>Desbloquea Contenido Premium ¡gratis! </h2>
+                    <p>Descubre <strong>recursos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas ponerlos en práctica y potenciar tu negocio.</p>
+                    <a href="./sponsors-registrado" class="emms__cta emms__fade-in">ACCEDE AHORA</a>
+                </div>
+                <div class="emms__premium-content__picture emms__fade-in">
+                    <img src="src/img/download--locked.png" alt="Contenido Premium">
+                </div>
+            </div>
+        </section>
 
         <!-- Users comments -->
         <section class="emms__userscomments">

@@ -255,14 +255,25 @@ require_once('././config.php');
                 <small class="emms__fade-in"><strong>¡Ya puedes conocer a los speakers de EMMS Ecommerce!</strong><br>Accede y descubre quiénes son y las temáticas de sus conferencias</small>
                 <a href="./ecommerce" class="emms__cta emms__fade-in">CONOCE LA AGENDA</a>
             </div>
-            <div class="emms__background-a"></div>
         </section>
 
-        <!-- Separator -->
-        <div class="emms__separator"></div>
+        <!-- Premium content -->
+        <section class="emms__premium-content emms__premium-content--dark">
+            <div class="emms__container--lg">
+                <div class="emms__premium-content__text emms__fade-in">
+                    <h2>Desbloquea Contenido Premium ¡gratis! </h2>
+                    <p>Descubre <strong>recursos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas ponerlos en práctica y potenciar tu negocio.</p>
+                    <a href="./sponsors" class="emms__cta emms__fade-in">ACCEDE AHORA</a>
+                </div>
+                <div class="emms__premium-content__picture emms__fade-in">
+                    <img src="src/img/download--locked.png" alt="Contenido Premium">
+                </div>
+            </div>
+        </section>
 
         <!-- Users comments -->
         <section class="emms__userscomments">
+        <div class="emms__background-a"></div>
             <div class="emms__container--lg">
                 <h2 class="emms__fade-in">Nuestros asistentes dicen...</h2>
                 <ul class="emms__userscomments__list emms__userscomments__list--dk emms__fade-in">
