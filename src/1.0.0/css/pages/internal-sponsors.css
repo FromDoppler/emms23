@@ -14,7 +14,6 @@
 }
 
 .emms__internal-sponsors .emms__header__logo {
-    width: auto;
     height: 33px;
 }
 
@@ -24,6 +23,7 @@
 
 .emms__internal-sponsors .emms__header__logo img {
     height: 100%;
+    width: auto;
 }
 
 @media (max-width: 992px) {
