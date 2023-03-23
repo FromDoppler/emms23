@@ -45,6 +45,7 @@ function setDataRequest($ip, $countryGeo)
     $content_utm = isset($_POST['utm_content']) ? $_POST['utm_content'] : null;
     $term_utm = isset($_POST['utm_term']) ? $_POST['utm_term'] : null;
     $origin = isset($_POST['origin']) ? $_POST['origin'] : null;
+    $type = isset($_POST['type']) ? $_POST['type'] : null;
     $phase = getCurrentPhase();
     $user = array(
         'register' => date("Y-m-d h:i:s A"),
@@ -66,6 +67,7 @@ function setDataRequest($ip, $countryGeo)
         'content_utm' => $content_utm,
         'term_utm' => $term_utm,
         'origin' => $origin,
+        'type' => $type,
         'form_id' => $phase,
         'list' => LIST_LANDING,
         'subject' => getSubjectEmail($phase)
@@ -79,7 +81,6 @@ function setDataRequest($ip, $countryGeo)
         return $user;
     } catch (Exception $e) {
         processError("setDataRequest (Captura datos)", $e->getMessage(), ['user' => $user]);
-
     }
 }
 
