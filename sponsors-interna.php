@@ -53,7 +53,7 @@ if (isset($_GET['slug'])) {
                     <?php if (!empty($sponsor['youtube'])) :  ?>
                         <iframe src="https://www.youtube.com/embed/<?= $sponsor['youtube'] ?>"></iframe>
                     <?php else : ?>
-                        <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['image_youtube'] ?>" alt="<?= $sponsor['alt_image_youtube'] ?>" />
+                        <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['image_landing'] ?>" alt="<?= $sponsor['alt_image_landing'] ?>" />
                     <?php endif; ?>
                 </div>
             </div>
