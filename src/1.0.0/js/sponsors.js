@@ -9,7 +9,6 @@ import {
 document.addEventListener('click', (e) => {
     e = e || window.event;
     const target = e.target || e.srcElement;
-    const slug = target.getAttribute('slug');
     const sponsorsForm = document.getElementById('sponsorsForm');
 
 
@@ -32,12 +31,13 @@ document.addEventListener('click', (e) => {
 
     const submitForm = async (e) => {
 
+        const slug = target.getAttribute('slug');
 
-        await submitFormFetch(sponsorsForm).then(({ fetchResp: resp, encodeEmail }) => {
+        await submitFormFetch(sponsorsForm, 'ecommerce').then(({ fetchResp: resp, encodeEmail }) => {
             if (!resp.ok) throw new Error('Server error on Sponsor fetch', resp?.status);
             localStorage.setItem('dplrid', encodeEmail);
             localStorage.setItem('lastEventsUpdateTime', new Date());
-            window.location.href = getUrlWithParams(`/sponsors-interna?slug=${slug}`);
+            window.location.href = (`/sponsors-interna?slug=${slug}`);
         })
             .catch((error) => {
                 customError('Sponsor post error', error);
