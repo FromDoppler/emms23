@@ -37,7 +37,7 @@ document.addEventListener('click', (e) => {
             if (!resp.ok) throw new Error('Server error on Sponsor fetch', resp?.status);
             localStorage.setItem('dplrid', encodeEmail);
             localStorage.setItem('lastEventsUpdateTime', new Date());
-            window.location.href = getUrlWithParams(`/sponsors-interna?slug=${slug}`);
+            window.location.href = (`/sponsors-interna?slug=${slug}`);
         })
             .catch((error) => {
                 customError('Sponsor post error', error);
