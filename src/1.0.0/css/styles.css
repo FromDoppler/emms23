@@ -21,6 +21,8 @@
 @import 'components/doppler-academy-banner.css';
 @import 'components/register-modal.css';
 @import 'components/premium-content-banner.css';
+@import 'components/hero-during.css';
+@import 'components/certificate-modal.css';
 
 /* Pages */
 @import 'pages/ecommerce.css';
