@@ -2,7 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const partnersExclusiveUl = document.getElementById('mediaPartenersExclusive');
     const partnersStartersUl = document.getElementById('mediaPartenersStarters');
     const endPoint = '../services/getMediaPartners.php';
 
@@ -70,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    getMediaPartners('exclusive').then(mediaPartnersExclusive => printMediaPartners(mediaPartnersExclusive, partnersExclusiveUl));
     getMediaPartners('starters').then(mediaPartnersStarters => printMediaPartners(mediaPartnersStarters, partnersStartersUl));
 
 
