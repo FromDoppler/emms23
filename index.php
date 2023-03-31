@@ -33,6 +33,7 @@ require_once('././config.php');
                 <ul class="emms__header__nav__menu">
                     <li><a href="#" class="active">home</a></li>
                     <li><a href="./ecommerce">e-commerce</a></li>
+                    <li><a href="/sponsors">contenido exclusivo</a></li>
                 </ul>
             </nav>
         </div>

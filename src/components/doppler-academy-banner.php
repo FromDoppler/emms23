@@ -1,5 +1,5 @@
         <!-- Doppler Academy Banner -->
-        <section class="emms__doppleracademybanner">
+        <section class="emms__doppleracademybanner" id="aprende-con-doppler">
             <div class="emms__container--lg">
                 <div class="emms__doppleracademybanner__image emms__fade-in">
                     <img src="src/img/woman-picture-b.png" alt="Doppler">

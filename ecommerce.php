@@ -38,6 +38,7 @@ require_once('././config.php');
                             <li><a href="#aliados">ALIADOS</a></li>
                         </ul>
                     </li>
+                    <li><a href="/sponsors">contenido exclusivo</a></li>
                 </ul>
             </nav>
         </div>
@@ -112,7 +113,7 @@ require_once('././config.php');
                             <li class="emms__form__field-item emms__form__field-item__checkbox">
                                 <div class="holder">
                                     <input name="promotions" type="checkbox" id="acepto-promociones" value="true"><span class="checkmark"></span><label for="acepto-promociones">
-                                        Acepto recibir promociones de Doppler y sus aliados</label>
+                                        Acepto recibir promociones de Doppler</label>
                                 </div>
                             </li>
                         </ul>
