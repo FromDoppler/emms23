@@ -69,7 +69,6 @@ require_once('./utils/DB.php');
                     $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
                     $sponsors = $db->getSponsorsByType('SPONSOR');
                     foreach ($sponsors as $sponsor) : ?>
-                        <?php if (!empty($sponsor['description_card'])) :  ?>
                             <li class="emms__sponsors__list__item">
                                 <div class="emms__sponsors__list__item__logo">
                                     <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['logo_company'] ?>" alt="<?= $sponsor['alt_logo_company'] ?>">
@@ -78,7 +77,6 @@ require_once('./utils/DB.php');
                                 <p><?= $sponsor['description_card'] ?></p>
                                 <a data-target="modalRegister" data-toggle="emms__register-modal" slug=<?= $sponsor['slug'] ?>>Acceder →</a>
                             </li>
-                        <?php endif; ?>
                     <?php endforeach; ?>
                 </ul>
             </div>
