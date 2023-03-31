@@ -272,7 +272,6 @@ require_once('././config.php');
 
                     <?php endforeach; ?>
                 </ul>
-                </ul>
                 <div class="emms__companies__divisor"></div>
                 <h3>MEDIA PARTNERS STARTERS</h3>
                 <ul class="emms__companies__list emms__companies__list  emms__fade-in" id="mediaPartenersStarters">
