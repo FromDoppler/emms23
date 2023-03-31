@@ -57,7 +57,7 @@ export const sponsorsRows = async (currentSponsorType) => {
                         <span> ${el.priority_card} </span>
                     </td>
                     <td>
-                        <span> ${el.image_landing} </span>
+                        <span> <img src="server/modules/sponsors/uploads/${el.image_landing}" width="65"> </span>
                     </td>
                     <td>
                         <button type="button" name="editSponsor" data-editid='${JSON.stringify(el)}' class="btn btn-primary">

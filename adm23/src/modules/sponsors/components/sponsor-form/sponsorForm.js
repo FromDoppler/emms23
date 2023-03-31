@@ -34,11 +34,16 @@ const formObj = () => {
     const elements = document.querySelector('form').elements;
     const myObject = {}
     Array.prototype.forEach.call(elements, (element) => {
-        if (element.value.length !== 0 && element.value !== "undefined")
-            if (element.type === "file")
-                myObject[element.id] = getRandomFileName(element.files[0].name);
-            else
-                myObject[element.id] = element.value
+        if (element.id.length !== 0){
+            if (element.type === "file") {
+                if (element.value.length !== 0 && element.value !== "undefined")
+                {
+                    myObject[element.id] = getRandomFileName(element.files[0].name);
+                }
+            } else {
+                myObject[element.id] = element.value;
+            }
+        }
     });
     return myObject;
 };
