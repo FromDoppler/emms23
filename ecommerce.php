@@ -256,7 +256,21 @@ require_once('././config.php');
                 </ul>
                 <div class="emms__companies__divisor"></div>
                 <h3>MEDIA PARTNERS EXCLUSIVE</h3>
-                <ul class="emms__companies__list emms__companies__list  emms__fade-in" id="mediaPartenersExclusive">
+                <ul class="emms__companies__list emms__companies__list  emms__fade-in">
+                    <?php $sponsors = $db->getSponsorsByType('PREMIUM');
+                    foreach ($sponsors as $sponsor) : ?>
+                        <li class="emms__companies__list__item">
+                            <?php if ($sponsor['link_site']) : ?>
+                                <a href="<?= $sponsor['link_site'] ?>" target="_blank">
+                                <?php endif ?>
+                                <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['logo_company'] ?>" alt="<?= $sponsor['alt_logo_company'] ?>">
+                                <?php if ($sponsor['link_site']) : ?>
+                                </a>
+                            <?php endif ?>
+                        </li>
+
+                    <?php endforeach; ?>
+                </ul>
                 </ul>
                 <div class="emms__companies__divisor"></div>
                 <h3>MEDIA PARTNERS STARTERS</h3>
