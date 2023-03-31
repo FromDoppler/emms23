@@ -1,6 +1,5 @@
 <?php
 //session_start();
-
 $ALLOW_IPS = array('::1', '200.5.229.58', '200.5.253.210', '127.0.0.1', '172.18.0.1');
 $ACCOUNT_DOPPLER = getenv("ACCOUNT_DOPPLER");
 $API_KEY_DOPPLER = getenv("API_KEY_DOPPLER");
@@ -15,6 +14,9 @@ $DB_PASSWORD = getenv("MYSQL_PASSWORD");
 $DB_HOST = getenv("MYSQL_HOST");
 $SECRET_REFRESH = getenv("SECRET_REFRESH");
 
+#ADMIN
+$ADMIN_RESTRICTED_SERVERS = json_decode(getenv("ADMIN_RESTRICTED_SERVERS"));
+$ADMIN_ALLOW_IPS = json_decode(getenv("ADMIN_ALLOW_IPS"));
 
 if (!defined('VERSION')) define('VERSION', '1.0.0');
 if (!defined('PRODUCTION')) define('PRODUCTION', false);
@@ -79,6 +81,10 @@ if (!defined('DB_NAME')) define('DB_NAME', $DB_NAME);
 if (!defined('DB_USER')) define('DB_USER', $DB_USER);
 if (!defined('DB_PASSWORD')) define('DB_PASSWORD', $DB_PASSWORD);
 if (!defined('DB_HOST')) define('DB_HOST', $DB_HOST);
+
+#ADMIN
+if (!defined('ADMIN_RESTRICTED_SERVERS')) define('ADMIN_RESTRICTED_SERVERS', $ADMIN_RESTRICTED_SERVERS);
+if (!defined('ADMIN_ALLOW_IPS')) define('ADMIN_ALLOW_IPS', $ADMIN_ALLOW_IPS);
 
 #SERVER NODE SOCKET
 
