@@ -74,7 +74,7 @@ require_once('./utils/DB.php');
                                 </div>
                                 <h3><?= $sponsor['title'] ?></h3>
                                 <p><?= $sponsor['description_card'] ?></p>
-                                <a href="sponsors-interna?slug=<?= $sponsor['slug'] ?>">Acceder →</a>
+                                <a href="sponsors-interna?slug=<?= $sponsor['slug'] ?>" target="_blank">Acceder →</a>
                             </li>
                     <?php endforeach; ?>
                 </ul>
