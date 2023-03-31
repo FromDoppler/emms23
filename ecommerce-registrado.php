@@ -38,6 +38,7 @@ require_once('././config.php');
                             <li><a href="#aprende-con-doppler">APRENDE CON DOPPLER</a></li>
                         </ul>
                     </li>
+                    <li><a href="/sponsors-registrado">contenido exclusivo</a></li>
                 </ul>
             </nav>
         </div>

@@ -34,7 +34,7 @@ if (isset($_GET['slug'])) {
                 <a href="./index.php"><img src="src/img/logos/logo-emms.png" alt="Emms 2023"></a>
             </div>
             <div class="emms__header__logo">
-                <a href="./index.php"><img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['logo_company'] ?>" alt="<?= $sponsor['alt_logo_company'] ?>"></a>
+                <a href="./index.php"><img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['image_landing'] ?>" alt="<?= $sponsor['alt_image_landing'] ?>"></a>
             </div>
         </div>
     </header>
@@ -53,7 +53,7 @@ if (isset($_GET['slug'])) {
                     <?php if (!empty($sponsor['youtube'])) :  ?>
                         <iframe src="https://www.youtube.com/embed/<?= $sponsor['youtube'] ?>"></iframe>
                     <?php else : ?>
-                        <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['image_landing'] ?>" alt="<?= $sponsor['alt_image_landing'] ?>" />
+                        <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['image_youtube'] ?>" alt="<?= $sponsor['alt_image_youtube'] ?>" />
                     <?php endif; ?>
                 </div>
             </div>
@@ -77,7 +77,7 @@ if (isset($_GET['slug'])) {
         <section class="emms__internal-sponsors__description">
             <div class="emms__background-a"></div>
             <div class="emms__container--md emms__fade-in">
-                <h2>Conoce más sobre <?= $sponsor['title_promo_company'] ?></h2>
+                <h2><?= $sponsor['title_promo_company'] ?></h2>
                 <p><?= $sponsor['description_promo_company'] ?></p>
                 <a href="<?= $sponsor['link_promo_company'] ?>" class="emms__cta">CONOCE MÁS</a>
             </div>

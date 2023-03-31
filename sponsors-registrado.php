@@ -33,6 +33,7 @@ require_once('./utils/DB.php');
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
                 <ul class="emms__header__nav__menu">
                     <li><a href="./index.php">home</a></li>
+                    <li><a href="./ecommerce-registrado">e-commerce</a></li>
                     <li><a href="#" class="active">contenido exclusivo</a></li>
                 </ul>
             </nav>
@@ -73,7 +74,7 @@ require_once('./utils/DB.php');
                             </div>
                             <h3><?= $sponsor['title'] ?></h3>
                             <p><?= $sponsor['description_card'] ?></p>
-                            <a href="sponsors-interna?slug=<?= $sponsor['slug'] ?>" >Acceder →</a>
+                            <a href="sponsors-interna?slug=<?= $sponsor['slug'] ?>" target="_blank" >Acceder →</a>
                         </li>
                     <?php endforeach; ?>
                     <?php
@@ -123,7 +124,7 @@ require_once('./utils/DB.php');
                         <li class="emms__form__field-item emms__form__field-item__checkbox">
                             <div class="holder">
                                 <input name="promotions" type="checkbox" id="acepto-promociones" value="true"><span class="checkmark"></span><label for="acepto-promociones">
-                                    Acepto recibir promociones de Doppler y sus aliados</label>
+                                    Acepto recibir promociones de Doppler</label>
                             </div>
                         </li>
                     </ul>
