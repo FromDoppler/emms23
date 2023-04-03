@@ -1,5 +1,5 @@
-FROM php:7.4-fpm
-LABEL Maintainer = "Hernan Cardoso <hcardoso@fromdoppler.com>"
+FROM php:8.1.10-fpm
+LABEL Maintainer = "Matias Cappato <mcappato@fromdoppler.com>"
 
 COPY ./php.conf.ini /usr/local/etc/php/conf.d/conf.ini
 
