@@ -32,7 +32,7 @@ services:
 
   db:
     container_name: db_${COMPOSE_PROJECT_NAME}
-    image: mysql
+    image: mariadb:10.5.18
     #command: --lower_case_table_names=1
     volumes:
       - ./db/:/docker-entrypoint-initdb.d
@@ -46,7 +46,7 @@ services:
 
   phpmyadmin:
     container_name: phpmyadmin_${COMPOSE_PROJECT_NAME}
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin/phpmyadmin:5.1.3
     environment:
       PMA_USER:  ${PMA_USER}
     ports:
