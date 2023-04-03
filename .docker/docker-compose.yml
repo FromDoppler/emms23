@@ -22,7 +22,8 @@ services:
       OATH_TOKEN: ${OATH_TOKEN}
       OATH_TOKEN_SECRET : ${OATH_TOKEN_SECRET}
       BEARER_TOKEN : ${BEARER_TOKEN}
-
+      ADMIN_RESTRICTED_SERVERS: ${ADMIN_RESTRICTED_SERVERS}
+      ADMIN_ALLOW_IPS: ${ADMIN_ALLOW_IPS}
     volumes:
       - ${REPO}:/var/www/html
     restart: always
