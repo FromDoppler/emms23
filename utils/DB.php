@@ -182,7 +182,7 @@ class DB
             $update = $this->query("UPDATE registered SET $fields WHERE email='" . $subscription['email'] . "'");
         } else {
             //insert
-            $fields = "(email, phase, register, firstname, lastname, country, phone, company, ";
+            $fields = "(email, phase, register, firstname, ";
             $fields .= "source_utm, medium_utm, campaign_utm, content_utm, term_utm)";
 
             $values = array(
@@ -190,17 +190,13 @@ class DB
                 $subscription['form_id'],
                 $subscription['register'],
                 $subscription['firstname'],
-                $subscription['lastname'],
-                $subscription['country'],
-                $subscription['phone'],
-                $subscription['company'],
                 $subscription['source_utm'],
                 $subscription['medium_utm'],
                 $subscription['campaign_utm'],
                 $subscription['content_utm'],
                 $subscription['term_utm']
             );
-            $this->query("INSERT INTO registered $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
+            $this->query("INSERT INTO registered $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
         }
     }
 
