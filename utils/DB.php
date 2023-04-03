@@ -368,6 +368,12 @@ class DB
         $this->query("UPDATE settings_transmission SET problems =" . $problems . ", youtube =" . $youtube . " where 1=1");
     }
 
+    public function getAllRegistersEMMS()
+    {
+        $result = $this->query("SELECT * FROM registered WHERE 1=1");
+        return $result->fetchAll();
+    }
+
     /******* log errors */
     public function insertLogErrors($date, $functionName, $description, $data)
     {
