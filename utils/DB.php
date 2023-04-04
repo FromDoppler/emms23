@@ -240,6 +240,13 @@ class DB
         return $result;
     }
 
+    public function getSponsorsCards($type)
+    {
+        $sql = $this->query("SELECT * FROM sponsors  WHERE sponsors.visible_card = '1' AND sponsor_type = '$type' ORDER BY priority_card");
+        $result = $sql->fetchAll();
+        return $result;
+    }
+
     public function getSponsorsBySlug($slug)
     {
         $sql = $this->query("SELECT * FROM sponsors  WHERE status = '1' AND slug = '$slug'");

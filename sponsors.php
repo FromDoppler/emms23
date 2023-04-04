@@ -67,16 +67,17 @@ require_once('./utils/DB.php');
                 <ul class="emms__sponsors__list__content emms__fade-in">
                     <?php
                     $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-                    $sponsors = $db->getSponsorsByType('SPONSOR');
-                    foreach ($sponsors as $sponsor) : ?>
-                            <li class="emms__sponsors__list__item">
-                                <div class="emms__sponsors__list__item__logo">
-                                    <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['logo_company'] ?>" alt="<?= $sponsor['alt_logo_company'] ?>">
-                                </div>
-                                <h3><?= $sponsor['title'] ?></h3>
-                                <p><?= $sponsor['description_card'] ?></p>
-                                <a data-target="modalRegister" data-toggle="emms__register-modal" slug=<?= $sponsor['slug'] ?>>Acceder →</a>
-                            </li>
+                    $sponsors = $db->getSponsorsCards('SPONSOR');
+                    foreach ($sponsors as $sponsor) :
+                    ?>
+                        <li class="emms__sponsors__list__item">
+                            <div class="emms__sponsors__list__item__logo">
+                                <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['logo_company'] ?>" alt="<?= $sponsor['alt_logo_company'] ?>">
+                            </div>
+                            <h3><?= $sponsor['title'] ?></h3>
+                            <p><?= $sponsor['description_card'] ?></p>
+                            <a data-target="modalRegister" data-toggle="emms__register-modal" slug=<?= $sponsor['slug'] ?>>Acceder →</a>
+                        </li>
                     <?php endforeach; ?>
                 </ul>
             </div>
