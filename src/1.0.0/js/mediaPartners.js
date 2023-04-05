@@ -2,7 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const partnersStartersUl = document.getElementById('mediaPartenersStarters');
     const endPoint = '../services/getMediaPartners.php';
 
 
@@ -23,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    const printMediaPartners = (mediaPartners, container) => {
+    const printMediaPartners = (mediaPartners) => {
+        const partnersStartersUl = document.getElementById('mediaPartenersStarters');
 
         // This function divides the entire group of mediaPartners into subgroups
         // to generate less load on the front when doing so many image requests
@@ -62,14 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     img.src = `./adm23/server/modules/sponsors/uploads/${mediaPartner.logo_company}`;
                     img.alt = `${mediaPartner.alt_logo_company}`;
                     li.appendChild(img);
-                    container.appendChild(li);
+                    partnersStartersUl.appendChild(li);
                 })
             }, 800 * index);
         })
 
     }
 
-    getMediaPartners('starters').then(mediaPartnersStarters => printMediaPartners(mediaPartnersStarters, partnersStartersUl));
+    getMediaPartners('starters').then(mediaPartnersStarters => printMediaPartners(mediaPartnersStarters));
 
 
 });
