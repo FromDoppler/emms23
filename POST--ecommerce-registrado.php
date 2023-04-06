@@ -20,7 +20,7 @@ require_once('././config.php');
     </script>
 </head>
 
-<body class="emms__ecommerce emms__ecommerce-logueado emms__ecommerce-logueado--during">
+<body class="emms__ecommerce emms__ecommerce-logueado emms__ecommerce-logueado--post">
     <?php include_once('././src/components/gtm.php'); ?>
     <!-- Header -->
     <header class="emms__header">
@@ -70,24 +70,19 @@ require_once('././config.php');
     <main>
 
         <!-- Hero -->
-        <section class="emms__hero-conference emms__hero-conference--chat">
-            <div class="emms__container--lg">
-                <h1 class="emms__fade-in">EN VIVO</h1>
-                <div class="emms__hero-conference__video emms__fade-in">
-                    <div class="emms__cropper-cont-16-9">
-                        <div class="emms__cropper-cont ">
-                            <div class="emms__cropper-cont-interno">
-                                <iframe src="https://www.youtube.com/embed/yjg-HjGfK8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                    <small>Recuerda activar el sonido 🔉</small>
-                </div>
-                <div class="emms__hero-conference__aside emms__fade-in">
-                    <iframe src="https://www.youtube.com/live_chat?v=yjg-HjGfK8A&embed_domain=goemms.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <p class="emms__hero-conference__certificate emms__fade-in">Descarga <a data-target="certificateModal" data-toggle="emms__certificate-modal">aquí</a> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag #EMMSECOMMERCE :)</p>
+        <section class="emms__hero-registration--registered emms__hero-registration--registered--post">
+            <div class="emms__container--md">
+                <h1 class="emms__fade-top">Accede a todas las Conferencias del EMMS 2023</h1>
+                <p class="emms__fade-in">Del 8 al 10 de noviembre de 2022 se reunieron en el mayor evento de Marketing Digital de Iberoamérica los mayores referentes del mundo. Descubre todo el contenido que compartieron en sus ponencias.</p>
             </div>
+            <!-- List -->
+            <ul class="emms__calendar__list emms__calendar__list--dk emms__fade-in">
+                    <?php include('./src/components/speakers.php') ?>
+                </ul>
+                <ul class="emms__calendar__list emms__calendar__list--mb main-carousel emms__fade-in" data-flickity>
+                    <?php include('./src/components/speakers.php') ?>
+                </ul>
+                <!-- End list -->
         </section>
 
         <!-- Certificate modal -->
@@ -116,60 +111,6 @@ require_once('././config.php');
                 </div>
             </div>
         </section>
-
-        <!-- Separator -->
-        <div class="emms__separator"></div>
-
-        <!-- Calendar -->
-        <section class="emms__calendar" id="agenda">
-            <div class="emms__container--lg">
-                <div class="emms__calendar__title emms__fade-in">
-                    <h2>Conoce a los Speakers del EMMS E-commerce 2023</h2>
-                    <p>Estos son los <strong>ponentes</strong> que nos acompañarán en esta edición y las <strong>temáticas</strong> de sus charlas. </p>
-                </div>
-                <!-- List -->
-                <ul class="emms__calendar__list emms__calendar__list--dk emms__fade-in">
-                    <?php include('./src/components/speakers.php') ?>
-                </ul>
-                <ul class="emms__calendar__list emms__calendar__list--mb main-carousel emms__fade-in" data-flickity>
-                    <?php include('./src/components/speakers.php') ?>
-                </ul>
-                <!-- End list -->
-                <div class="emms__calendar__bottom emms__fade-in">
-                    <p>¡Presta atención! <strong>Seguimos sumando conferencias a la agenda</strong>. Te avisaremos de esto y mucho más vía Email.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Separator -->
-        <div class="emms__separator"></div>
-
-        <!-- Checklist -->
-        <div class="emms__checklist">
-            <div class="emms__container--md">
-                <div class="emms__checklist__title emms__fade-in">
-                    <h2>¡Estás a un paso de registrarte al EMMS Digital Trends!</h2>
-                    <p>En Octubre estaremos realizando una nueva edición del EMMS y ya puedes asegurar tu lugar. Conoce las temáticas que estaremos abordando con speakers de renombre internacional.</p>
-                </div>
-                <ul class="emms__checklist__items emms__fade-in">
-                    <li>
-                        <p><em>Contenido Subtitulo:</em> Desarrollo. Desarrollo. Desarrollo. Desarrollo. Desarrollo.</p>
-                    </li>
-                    <li>
-                        <p><em>Contenido Subtitulo:</em> Desarrollo. Desarrollo. Desarrollo. Desarrollo. Desarrollo.</p>
-                    </li>
-                    <li>
-                        <p><em>Contenido Subtitulo:</em> Desarrollo. Desarrollo. Desarrollo. Desarrollo. Desarrollo.</p>
-                    </li>
-                    <li>
-                        <p><em>Contenido Subtitulo:</em> Desarrollo. Desarrollo. Desarrollo. Desarrollo. Desarrollo.</p>
-                    </li>
-                </ul>
-                <div class="emms__checklist__cta">
-                    <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
-                </div>
-            </div>
-        </div>
 
         <!-- Doppler Banner -->
         <?php include_once('././src/components/doppler-academy-banner.php'); ?>

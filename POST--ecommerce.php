@@ -20,7 +20,7 @@ require_once('././config.php');
     </script>
 </head>
 
-<body class="emms__ecommerce">
+<body class="emms__ecommerce emms__ecommerce--post">
     <?php include_once('././src/components/gtm.php'); ?>
     <!-- Header -->
     <header class="emms__header">
@@ -38,6 +38,7 @@ require_once('././config.php');
                             <li><a href="#aliados">ALIADOS</a></li>
                         </ul>
                     </li>
+                    <li><a href="/digital-trends">digital trends</a></li>
                     <li><a href="/sponsors">contenido exclusivo</a></li>
                 </ul>
             </nav>
@@ -68,22 +69,17 @@ require_once('././config.php');
 
     <main>
 
-        <!-- Hero -->
-        <section class="emms__hero-registration emms__hero-registration--with-counter" id="registro">
+        <!-- Hero with form-->
+        <section class="emms__hero-registration" id="registro">
             <div class="emms__hero-registration__columns">
                 <div class="emms__hero-registration__text emms__fade-in">
-                    <h1><em>EVENTO ONLINE Y GRATUITO - 16 DE MAYO</em> EMMS E-commerce 2023</h1>
+                    <h1>EMMS E-commerce 2023</h1>
                     <p>¡El EMMS evoluciona! Ahora podrás inspirarte y aprender con un evento exclusivo pensado para tu Tienda Online.</p>
                     <ul class="emms__hero-registration__text__checklist">
                         <li>SPEAKERS INTERNACIONALES</li>
                         <li>TENDENCIAS E INNOVACIÓN</li>
                         <li>HERRAMIENTAS Y RECURSOS</li>
                     </ul>
-                    <!-- Date counter -->
-                    <div id="emmsCounter" value="2023-05-20T14:00:00.000Z">
-                        <?php include_once('././src/components/date-counter.php'); ?>
-                    </div>
-                    <!-- End date counter -->
                 </div>
                 <div class="emms__hero-registration__form emms__fade-in">
                     <!-- Form -->
@@ -136,6 +132,19 @@ require_once('././config.php');
                     </form>
                     <!-- End form -->
                 </div>
+            </div>
+            <div class="emms__hero-registration__bottom emms__fade-in">
+                <p>IA >> AUTOMATION MARKETING >> UX >> CRO >> MARKETPLACES >> SEO >> RETARGETING >> SOCIAL SELLING >> EMAIL MARKETING >> ESTRATEGIAS DE VENTA >></p>
+                <p>IA >> AUTOMATION MARKETING >> UX >> CRO >> MARKETPLACES >> SEO >> RETARGETING >> SOCIAL SELLING >> EMAIL MARKETING >> ESTRATEGIAS DE VENTA >></p>
+            </div>
+        </section>
+
+        <!-- Hero without form-->
+        <section class="emms__hero-registration emms__hero-registration--noform" id="registro">
+            <div class="emms__hero-registration__text emms__fade-in">
+                <h1>¡Estás a un paso de acceder al EMMS Ecommerce!</h1>
+                <p><a href="#agenda">Revisa la Agenda</a> que tenemos preparada para ti con referentes de la industria, de renombre mundial. Gracias por sumarte al multiuniverso EMMS 2023 :)</p>
+                <button id="register-button" type="button" class="emms__cta">ACCEDER</button>
             </div>
             <div class="emms__hero-registration__bottom emms__fade-in">
                 <p>IA >> AUTOMATION MARKETING >> UX >> CRO >> MARKETPLACES >> SEO >> RETARGETING >> SOCIAL SELLING >> EMAIL MARKETING >> ESTRATEGIAS DE VENTA >></p>

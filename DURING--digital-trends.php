@@ -20,19 +20,23 @@ require_once('././config.php');
     </script>
 </head>
 
-<body class="emms__ecommerce">
+<body class="emms__digitaltrends emms__digitaltrends--during">
     <?php include_once('././src/components/gtm.php'); ?>
     <!-- Header -->
     <header class="emms__header">
         <div class="emms__container--lg emms__fade-in">
             <div class="emms__header__logo emms__header__logo--ecommerce">
-                <a href="/"><img src="src/img/logos/logo-emms-ecommerce.png" alt="Emms Ecommerce 2023"></a>
+                <a href="/"><img src="src/img/logos/logo-emms-digitaltrends.png" alt="Digital Trends 2023"></a>
+            </div>
+            <div class="emms__header__live">
+                <p>¡ESTAMOS EN VIVO!</p>
             </div>
             <a class="emms__header__nav--mb" id="btn-burger"></a>
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
                 <ul class="emms__header__nav__menu">
                     <li><a href="/">home</a></li>
-                    <li class="emms__header__nav__menu__dropdown"><a href="#" class="active">e-commerce</a>
+                    <li><a href="/ecommerce">e-commerce</a></li>
+                    <li class="emms__header__nav__menu__dropdown"><a href="#" class="active">digital trends</a>
                         <ul class="emms__header__nav__submenu">
                             <li><a href="#agenda">AGENDA</a></li>
                             <li><a href="#aliados">ALIADOS</a></li>
@@ -68,11 +72,11 @@ require_once('././config.php');
 
     <main>
 
-        <!-- Hero -->
+        <!-- Hero with form-->
         <section class="emms__hero-registration emms__hero-registration--with-counter" id="registro">
             <div class="emms__hero-registration__columns">
                 <div class="emms__hero-registration__text emms__fade-in">
-                    <h1><em>EVENTO ONLINE Y GRATUITO - 16 DE MAYO</em> EMMS E-commerce 2023</h1>
+                    <h1><em>EVENTO ONLINE Y GRATUITO - 16 DE OCTUBRE</em> EMMS Digital Trends</h1>
                     <p>¡El EMMS evoluciona! Ahora podrás inspirarte y aprender con un evento exclusivo pensado para tu Tienda Online.</p>
                     <ul class="emms__hero-registration__text__checklist">
                         <li>SPEAKERS INTERNACIONALES</li>
@@ -80,7 +84,7 @@ require_once('././config.php');
                         <li>HERRAMIENTAS Y RECURSOS</li>
                     </ul>
                     <!-- Date counter -->
-                    <div id="emmsCounter" value="2023-05-20T14:00:00.000Z">
+                    <div id="emmsCounter" value="2023-10-16T14:00:00.000Z">
                         <?php include_once('././src/components/date-counter.php'); ?>
                     </div>
                     <!-- End date counter -->
@@ -143,12 +147,30 @@ require_once('././config.php');
             </div>
         </section>
 
+        <!-- Hero without form-->
+        <section class="emms__hero-registration emms__hero-registration--noform emms__hero-registration--with-counter" id="registro">
+            <div class="emms__hero-registration__text emms__fade-in">
+                <h1><em>EVENTO ONLINE Y GRATUITO - 16 DE OCTUBRE</em> Título relacionado a EMMS Digital Trends</h1>
+                <p><a href="#agenda">Revisa la Agenda</a> que tenemos preparada para ti con referentes de la industria, de renombre mundial. Gracias por sumarte al multiuniverso EMMS 2023 :)</p>
+                <button id="register-button" type="button" class="emms__cta">INSCRÍBETE GRATIS AHORA</button>
+                <!-- Date counter -->
+                <div id="emmsCounter" value="2023-10-16T14:00:00.000Z">
+                    <?php include_once('././src/components/date-counter.php'); ?>
+                </div>
+                <!-- End date counter -->
+            </div>
+            <div class="emms__hero-registration__bottom emms__fade-in">
+                <p>IA >> AUTOMATION MARKETING >> UX >> CRO >> MARKETPLACES >> SEO >> RETARGETING >> SOCIAL SELLING >> EMAIL MARKETING >> ESTRATEGIAS DE VENTA >></p>
+                <p>IA >> AUTOMATION MARKETING >> UX >> CRO >> MARKETPLACES >> SEO >> RETARGETING >> SOCIAL SELLING >> EMAIL MARKETING >> ESTRATEGIAS DE VENTA >></p>
+            </div>
+        </section>
+
 
         <!-- Calendar -->
         <section class="emms__calendar" id="agenda">
             <div class="emms__container--lg">
                 <div class="emms__calendar__title emms__fade-in">
-                    <h2>Conoce a los Speakers del EMMS E-commerce 2023</h2>
+                    <h2>Agenda EMMS Digital Trends</h2>
                     <p>Descubre antes que nadie a los <strong>ponentes</strong> que nos acompañarán en esta edición y las temáticas de sus charlas</p>
                 </div>
                 <!-- List -->
@@ -164,7 +186,6 @@ require_once('././config.php');
                     <a href="#registro" class="emms__cta">INSCRÍBETE GRATIS AHORA</a>
                 </div>
             </div>
-            <div class="emms__background-b"></div>
         </section>
 
 
@@ -185,7 +206,6 @@ require_once('././config.php');
 
         <!-- Central Video -->
         <section class="emms__centralvideo">
-            <div class="emms__background-b"></div>
             <div class="emms__background-a"></div>
             <div class="emms__container--md">
                 <div class="emms__centralvideo__title emms__fade-in">
