@@ -1,4 +1,4 @@
-.emms__certificate-modal{
+.emms__certificate-modal {
     position: fixed;
     align-items: center;
     top: 0;
@@ -10,11 +10,11 @@
     display: none;
 }
 
-.emms__certificate-modal.open{
+.emms__certificate-modal.open {
     display: flex;
 }
 
-.emms__certificate-modal__window{
+.emms__certificate-modal__window {
     text-align: center;
     background: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -27,18 +27,19 @@
     animation: show-modal-certificate .4s;
 }
 
-@keyframes show-modal-certificate{
-    0%{
+@keyframes show-modal-certificate {
+    0% {
         opacity: 0;
         transform: translateY(-40px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateY(0px);
     }
 }
 
-.emms__certificate-modal__window h3{
+.emms__certificate-modal__window h3 {
     font-size: 30px;
     line-height: 32px;
     font-weight: 700;
@@ -46,13 +47,13 @@
     margin: 0 0 20px 0;
 }
 
-.emms__certificate-modal__window p{
+.emms__certificate-modal__window p {
     font-size: 18px;
     line-height: 22px;
     color: #333333;
 }
 
-.emms__certificate-modal__window input{
+.emms__certificate-modal__window input {
     font-family: "Proxima-Nova", "helvetica", "sans-serif";
     font-size: 14px;
     color: #333333;
@@ -67,13 +68,13 @@
     border-radius: 3px;
 }
 
-.emms__certificate-modal__window input::placeholder{
+.emms__certificate-modal__window input::placeholder {
     font-size: 14px;
     font-style: italic;
     color: #838370;
 }
 
-.emms__certificate-modal__window span{
+.emms__certificate-modal__window span {
     font-size: 13px;
     color: #ff1010;
     font-style: italic;
@@ -84,14 +85,14 @@
     margin: 5px auto 0 auto;
 }
 
-.emms__certificate-modal__window .emms__cta{
+.emms__certificate-modal__window .emms__cta {
     margin: 59px auto 0 auto;
     max-width: 247px;
     display: block;
     box-sizing: border-box;
 }
 
-.emms__certificate-modal__window__close{
+.emms__certificate-modal__window__close {
     position: absolute;
     top: 22px;
     right: 22px;
@@ -101,4 +102,35 @@
     background: url("../../../img/icons/icon-close--bold.svg") no-repeat;
     background-size: contain;
     cursor: pointer;
+}
+
+
+/* ---------------------------------------------- Responsive ---------------------------------------------- */
+
+
+@media(max-width:620px) {
+    .emms__certificate-modal__window {
+        padding: 66px 20px 57px 20px;
+    }
+
+    .emms__certificate-modal__window h3 {
+        font-size: 22px;
+        line-height: 24px;
+        margin: 0 0 10px 0;
+    }
+
+    .emms__certificate-modal__window p {
+        font-size: 16px;
+    }
+
+    .emms__certificate-modal__window input {
+        margin: 25px auto 0 auto;
+    }
+
+    .emms__certificate-modal__window .emms__cta {
+        font-size: 13px;
+        font-weight: 600;
+        padding: 12px 25px;
+        margin: 44px auto 0 auto;
+    }
 }

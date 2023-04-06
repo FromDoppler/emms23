@@ -4,7 +4,7 @@
 
 /* Components */
 @import 'components/header.css';
-@import 'components/hero-form.css';
+@import 'components/hero-registration.css';
 @import 'components/central-video.css';
 @import 'components/companies-list.css';
 @import 'components/event-cards.css';
@@ -21,11 +21,14 @@
 @import 'components/doppler-academy-banner.css';
 @import 'components/register-modal.css';
 @import 'components/premium-content-banner.css';
-@import 'components/hero-during.css';
+@import 'components/hero-conference.css';
 @import 'components/certificate-modal.css';
+@import 'components/checklist.css';
+@import 'components/golive-banner.css';
 
 /* Pages */
 @import 'pages/ecommerce.css';
+@import 'pages/digital-trends.css';
 @import 'pages/home.css';
 @import 'pages/sponsors.css';
 @import 'pages/internal-sponsors.css';

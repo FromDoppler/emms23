@@ -1,5 +1,6 @@
 .emms__premium-content {
     padding: 83px 0 69px 0;
+    position: relative;
 }
 
 .emms__premium-content .emms__container--lg {

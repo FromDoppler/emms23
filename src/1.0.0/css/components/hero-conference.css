@@ -1,0 +1,300 @@
+.emms__hero-conference {
+    background: #1C0329;
+    padding: 220px 0;
+}
+
+.emms__hero-conference .emms__container--lg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.emms__hero-conference h1{
+    animation-delay: .1s;
+}
+
+.emms__hero-conference__video {
+    width: 70%;
+    position: relative;
+    animation-delay: .2s;
+}
+
+.emms__hero-conference__video .emms__form{
+    padding: 37px 50% 37px 37px;
+    text-align: left;
+}
+
+.emms__hero-conference__video .emms__form__legal{
+    position: absolute;
+    top: 0;
+    right: 37px;
+    width: 40%;
+}
+
+.emms__hero-conference__video__register{
+    text-align: center;
+    background: #310E44E5;
+    padding: 150px 0;
+}
+
+.emms__hero-conference__video__register__content{
+    max-width: 560px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.emms__hero-conference__video__register h3{
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 0 14px 0;
+}
+
+.emms__hero-conference__video__register p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.emms__hero-conference__video__register .emms__cta{
+    margin: 50px 0 0 0;
+}
+
+.emms__hero-conference iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.emms__hero-conference__video small {
+    font-size: 16px;
+    font-style: italic;
+    color: #FFFFFF;
+    margin: 30px 0 0 0;
+    display: block;
+}
+
+.emms__hero-conference__certificate {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+    width: 70%;
+    margin: 45px 0 0 0;
+    padding: 0 0 0 90px;
+    box-sizing: border-box;
+    position: relative;
+    animation-delay: .2s;
+}
+
+.emms__hero-conference__certificate::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 74px;
+    height: 74px;
+    background: url("../../../img/certificate-cup.png") no-repeat;
+    background-size: contain;
+}
+
+.emms__hero-conference__certificate a {
+    font-weight: 700;
+    color: #33AD73;
+    cursor: pointer;
+}
+
+.emms__hero-conference__certificate a:hover {
+    text-decoration: underline;
+}
+
+.emms__hero-conference__aside {
+    width: 26%;
+    animation-delay: .3s;
+}
+
+
+/* ---------------------------------------------- Responsive ---------------------------------------------- */
+
+
+@media(max-width:992px) {
+
+    .emms__hero-conference__video {
+        width: 100%;
+    }
+
+    .emms__hero-conference__certificate {
+        width: 100%;
+    }
+}
+
+@media(max-width:620px) {
+
+    .emms__hero-conference {
+        padding: 125px 0 70px 0;
+    }
+
+    .emms__hero-conference__video .emms__form{
+        padding: 25px;
+    }
+
+    .emms__hero-conference__video .emms__form__legal{
+        position: initial;
+        width: 100%;
+    }
+
+    .emms__hero-conference__video__register{
+        padding: 100px 0;
+    }
+
+    .emms__hero-conference__video__register h3 {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .emms__hero-conference__video small {
+        margin: 12px 0 0 0;
+    }
+
+    .emms__hero-conference__certificate {
+        margin: 35px 0 0 0;
+        padding: 0;
+    }
+
+    .emms__hero-conference__certificate::before {
+        display: none;
+    }
+}
+
+
+/* ---------------- With chat ---------------- */
+
+.emms__hero-conference--chat h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ED1E79;
+    position: relative;
+    padding: 0 0 0 31px;
+    margin: 0 0 20px 0;
+    width: 70%;
+}
+
+.emms__hero-conference--chat h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 7px;
+    width: 24px;
+    height: 13px;
+    background: url("../../../img/icons/icon-live.svg") no-repeat;
+    background-size: contain;
+}
+
+@media(max-width:992px) {
+
+    .emms__hero-conference--chat h1 {
+        width: 100%;
+    }
+
+    .emms__hero-conference--chat .emms__hero-conference__aside {
+        display: none;
+    }
+}
+
+@media(max-width:620px) {
+    .emms__hero-conference--chat h1 {
+        font-size: 16px;
+        position: relative;
+        bottom: 0;
+        margin: 0 0 22px 0;
+    }
+
+    .emms__hero-conference--chat h1::before {
+        bottom: 4px;
+    }
+}
+
+
+/* ---------------- With bio ---------------- */
+
+
+.emms__hero-conference--bio h1 {
+    font-size: 34px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #FAB221;
+    margin: 0 0 30px 0;
+    width: 70%;
+}
+
+.emms__hero-conference--bio .emms__hero-conference__aside h2 {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 0 10px 0;
+}
+
+.emms__hero-conference--bio .emms__hero-conference__aside p {
+    font-size: 17px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.emms__hero-conference--bio .emms__hero-conference__aside ul {
+    display: flex;
+    margin: 30px 0 0 0;
+}
+
+.emms__hero-conference--bio .emms__hero-conference__aside ul li {
+    margin: 0 8px 0 0;
+}
+
+.emms__hero-conference--bio .emms__hero-conference__aside ul li a {
+    width: 25px;
+    height: 25px;
+    background: #FFFFFF;
+    border-radius: 100%;
+    display: block;
+    padding: 5px;
+    box-sizing: border-box;
+    transition-duration: 0.2s;
+}
+
+.emms__hero-conference--bio .emms__hero-conference__aside ul li a:hover{
+    opacity: .8;
+    transition-duration: 0.2s;
+}
+
+.emms__hero-conference--bio .emms__hero-conference__aside ul li a img {
+    width: 100%;
+}
+
+@media(max-width:992px) {
+    .emms__hero-conference--bio h1 {
+        width: 100%;
+    }
+
+    .emms__hero-conference--bio .emms__hero-conference__aside {
+        width: 100%;
+        margin: 30px 0 0 0;
+    }
+}
+
+@media(max-width:620px) {
+    .emms__hero-conference--bio h1 {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .emms__hero-conference--bio .emms__hero-conference__aside h2 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .emms__hero-conference--bio .emms__hero-conference__aside p {
+        font-size: 16px;
+        line-height: 21px;
+    }
+}

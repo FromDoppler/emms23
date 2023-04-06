@@ -107,6 +107,27 @@
     font-weight: 700;
     color: #333333;
     margin: 0 0 13px 0;
+    position: relative;
+}
+
+.emms__eventCards__list__item__text h3 span{
+    font-size: 16px;
+    font-weight: 700;
+    color: #ED1E79;
+    position: absolute;
+    right: -8px;
+    padding: 0 0 0 31px;
+}
+
+.emms__eventCards__list__item__text h3 span::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 24px;
+    height: 13px;
+    background: url("../../../img/icons/icon-live.svg") no-repeat;
+    background-size: contain;
 }
 
 .emms__eventCards__list__item__text h3+p {
@@ -153,6 +174,11 @@
 }
 
 @media(max-width:1100px){
+    .emms__eventCards__list__item__text h3 span {
+        font-size: 12px;
+        right: -12px;
+        padding: 0 0 0 27px;
+    }
     .emms__eventCards__list__item__text--bottom .emms__cta{
         padding: 20px 30px;
     }
@@ -189,6 +215,10 @@
 
     .emms__eventCards__list__item__text h3 {
         margin: 0 0 8px 0;
+    }
+
+    .emms__eventCards__list__item__text h3 span {
+        right: -8px;
     }
 
     .emms__eventCards__list__item__text--feature {

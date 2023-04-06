@@ -20,25 +20,26 @@ require_once('././config.php');
     </script>
 </head>
 
-<body class="emms__ecommerce emms__ecommerce-logueado">
+<body class="emms__digitaltrends emms__digitaltrends-logueado">
     <?php include_once('././src/components/gtm.php'); ?>
     <!-- Header -->
     <header class="emms__header">
         <div class="emms__container--lg emms__fade-in">
             <div class="emms__header__logo emms__header__logo--ecommerce">
-                <a href="/"><img src="src/img/logos/logo-emms-ecommerce.png" alt="Emms Ecommerce 2023"></a>
+                <a href="/"><img src="src/img/logos/logo-emms-digitaltrends.png" alt="Digital Trends 2023"></a>
             </div>
             <a class="emms__header__nav--mb" id="btn-burger"></a>
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
                 <ul class="emms__header__nav__menu">
-                    <li><a href="/registrado">home</a></li>
-                    <li class="emms__header__nav__menu__dropdown"><a href="#" class="active">e-commerce</a>
+                    <li><a href="/">home</a></li>
+                    <li><a href="/ecommerce">e-commerce</a></li>
+                    <li class="emms__header__nav__menu__dropdown"><a href="#" class="active">digital trends</a>
                         <ul class="emms__header__nav__submenu">
                             <li><a href="#agenda">AGENDA</a></li>
                             <li><a href="#aprende-con-doppler">APRENDE CON DOPPLER</a></li>
                         </ul>
                     </li>
-                    <li><a href="/sponsors-registrado">contenido exclusivo</a></li>
+                    <li><a href="/sponsors">contenido exclusivo</a></li>
                 </ul>
             </nav>
         </div>
@@ -71,7 +72,7 @@ require_once('././config.php');
         <!-- Hero -->
         <section class="emms__hero-registration--registered">
             <div class="emms__container--md">
-                <h1 class="emms__fade-top">¡Ya eres parte del EMMS E-commerce!</h1>
+                <h1 class="emms__fade-top">¡Ya eres parte del EMMS Digital Trends!</h1>
                 <p class="emms__fade-in">Te damos la bienvenida a este gran evento. <a href="#agenda">Revisa la Agenda</a> que hemos planeado para ti y prepárate para vivir el primer EMMS para Tiendas Online. ¡Gracias por sumarte! :)</p>
             </div>
         </section>
@@ -80,7 +81,7 @@ require_once('././config.php');
         <section class="emms__calendar" id="agenda">
             <div class="emms__container--lg">
                 <div class="emms__calendar__title emms__fade-in">
-                    <h2>Conoce a los Speakers del EMMS E-commerce 2023</h2>
+                    <h2>Conoce a los Speakers del EMMS Digital Trends 2023</h2>
                     <p>Estos son los <strong>ponentes</strong> que nos acompañarán en esta edición y las <strong>temáticas</strong> de sus charlas. </p>
                 </div>
                 <!-- List -->
@@ -108,7 +109,7 @@ require_once('././config.php');
                 <div class="emms__premium-content__text emms__fade-in">
                     <h2>Desbloquea Contenido Premium ¡gratis! </h2>
                     <p>Descubre <strong>recursos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas ponerlos en práctica y potenciar tu Tienda Online.</p>
-                    <a href="./sponsors-registrado" class="emms__cta emms__fade-in">DESCÚBRELO AQUÍ</a>
+                    <a href="./sponsors" class="emms__cta emms__fade-in">DESCÚBRELO AQUÍ</a>
                 </div>
                 <div class="emms__premium-content__picture emms__fade-in">
                     <img src="src/img/download--locked.png" alt="Contenido Premium">
