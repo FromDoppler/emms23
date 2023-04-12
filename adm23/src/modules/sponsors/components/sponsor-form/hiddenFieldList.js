@@ -24,6 +24,10 @@ export const id_field_col_array = [
         hiddenType: ["STARTER"],
     },
     {
+        col: "visible_card_field_col",
+        hiddenType: ["STARTER"],
+    },
+    {
         col: "priority_card_field_col",
         hiddenType: ["STARTER"],
     },
