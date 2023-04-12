@@ -40,6 +40,11 @@ const formObj = () => {
                 {
                     myObject[element.id] = getRandomFileName(element.files[0].name);
                 }
+            } if (element.type === "checkbox") {
+                if (element.checked)
+                    myObject[element.id] = "1";
+                else
+                    myObject[element.id] = "0";
             } else {
                 myObject[element.id] = element.value;
             }
@@ -77,16 +82,16 @@ const addSponsor = async (currentSponsorType, sponsorId) => {
     }
 };
 
+
 const loadSponsorData = (objSponsor) => {
     const elements = document.querySelector('form').elements;
     Array.prototype.forEach.call(elements, (element) => {
-        if (element.type !== "file") {
+        if (element.type === "checkbox") {
+            if (objSponsor[element.id] === "1")
+                element.checked = true;
+        }else if (element.type !== "file") {
             element.value = objSponsor[element.id];
         } else {
-            /*                 const img = document.createElement('img');
-                            img.src =`server/modules/sponsors/uploads/${objSponsor[element.id]}`;
-                            img.width= 65;
-                            element.parentNode.insertBefore(img, element.nextSibling); */
             const newlabel = document.createElement("Label");
             newlabel.setAttribute("for", element.id);
             newlabel.innerHTML = "reemplazar";
