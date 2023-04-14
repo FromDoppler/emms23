@@ -40,7 +40,7 @@ const formObj = () => {
                 {
                     myObject[element.id] = getRandomFileName(element.files[0].name);
                 }
-            } if (element.type === "checkbox") {
+            } else if (element.type === "checkbox") {
                 if (element.checked)
                     myObject[element.id] = "1";
                 else
@@ -91,7 +91,7 @@ const loadSponsorData = (objSponsor) => {
                 element.checked = true;
         }else if (element.type !== "file") {
             element.value = objSponsor[element.id];
-        } else {
+        } else if (element.type === "file") {
             const newlabel = document.createElement("Label");
             newlabel.setAttribute("for", element.id);
             newlabel.innerHTML = "reemplazar";
