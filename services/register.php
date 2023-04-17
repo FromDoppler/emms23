@@ -28,7 +28,12 @@ function isSubmitValid($ip)
 
 function setDataRequest($ip, $countryGeo)
 {
+
     $_POST = json_decode(file_get_contents('php://input'), true);
+    $events =isset($_POST['events']) ? $_POST['events'] : null;
+    $events = json_decode($events);
+    $ecommerce = ($events[0] === 'ecommerce' || $events[1] === 'ecommerce') ? 1 : 0;
+    $digital_trends = ($events[0] === 'digitalTrends' || $events[1] === 'digitalTrends') ? 1 : 0;
     $email = isset($_POST['email']) ? $_POST['email'] : null;
     $encode_email = isset($_POST['encodeEmail']) ? $_POST['encodeEmail'] : null;
     $firstname = isset($_POST['name']) ? $_POST['name'] : null;
@@ -46,6 +51,8 @@ function setDataRequest($ip, $countryGeo)
         'register' => date("Y-m-d h:i:s A"),
         'firstname' => $firstname,
         'email' => $email,
+        'ecommerce' => $ecommerce,
+        'digital_trends' => $digital_trends,
         'encode_email' => $encode_email,
         'privacy' => $privacy,
         'promotions' => $promotions,
