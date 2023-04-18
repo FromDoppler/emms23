@@ -15,16 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         e.preventDefault();
 
-
-        await submitFormFetch(ecommerceForm, 'ecommerce').then(({ fetchResp: resp, encodeEmail }) => {
-
+        await submitFormFetch(ecommerceForm, 'ecommerce').then(({ fetchResp: resp}) => {
             if (!resp.ok) throw new Error('Server error on eccomerce fetch', resp?.status);
 
-            const events = ['ecommerce'];
-
-            localStorage.setItem('dplrid', encodeEmail);
-            localStorage.setItem('events', JSON.stringify(events));
-            localStorage.setItem('lastEventsUpdateTime', new Date());
             window.location.href = getUrlWithParams('/ecommerce-registrado.php');
             if (window.location.pathname === '/sponsors.php') {
                 window.location.href = getUrlWithParams('/sponsors-registrado.php');

@@ -175,28 +175,29 @@ class DB
         $registered = $this->query("SELECT id FROM registered WHERE email='" . $subscription['email'] . "'");
         if ($registered->fetchArray()) {
             //update
-            $fields = "firstname ='" . $subscription['firstname'] . "', lastname ='" . $subscription['lastname'] . "', register ='" . $subscription['register'] . "', phase ='" . $subscription['form_id'] . "', ";
-            $fields .= "country ='" . $subscription['country'] . "', phone ='" . $subscription['phone'] . "', company ='" . $subscription['company'] . "', ";
-            $fields .= "source_utm ='" . $subscription['source_utm'] . "', medium_utm ='" . $subscription['medium_utm'] . "', campaign_utm ='" . $subscription['campaign_utm'] . "', ";
+            $fields = "firstname ='" . $subscription['firstname'] . "', register ='" . $subscription['register'] . "', phase ='" . $subscription['form_id'] . "', ";
+            $fields .= "ecommerce ='" . $subscription['ecommerce'] . "', `digital-trends` ='" . $subscription['digital_trends'] . "', source_utm ='" . $subscription['source_utm'] . "', medium_utm ='" . $subscription['medium_utm'] . "', campaign_utm ='" . $subscription['campaign_utm'] . "', ";
             $fields .= "content_utm ='" . $subscription['content_utm'] . "', term_utm ='" . $subscription['term_utm'] . "' ";
             $update = $this->query("UPDATE registered SET $fields WHERE email='" . $subscription['email'] . "'");
         } else {
             //insert
-            $fields = "(email, phase, register, firstname, ";
-            $fields .= "source_utm, medium_utm, campaign_utm, content_utm, term_utm)";
+            $fields = "(`email`, `phase`, `register`, `firstname`, `ecommerce`, `digital-trends`, ";
+            $fields .= "`source_utm`, `medium_utm`, `campaign_utm`, `content_utm`, `term_utm`)";
 
             $values = array(
                 $subscription['email'],
                 $subscription['form_id'],
                 $subscription['register'],
                 $subscription['firstname'],
+                $subscription['ecommerce'],
+                $subscription['digital_trends'],
                 $subscription['source_utm'],
                 $subscription['medium_utm'],
                 $subscription['campaign_utm'],
                 $subscription['content_utm'],
                 $subscription['term_utm']
             );
-            $this->query("INSERT INTO registered $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
+            $this->query("INSERT INTO `registered` $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
         }
     }
 
