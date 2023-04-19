@@ -84,7 +84,7 @@ require_once('././config.php');
                         <li>HERRAMIENTAS Y RECURSOS</li>
                     </ul>
                     <!-- Date counter -->
-                    <div id="emmsCounter" value="2023-10-16T14:00:00.000Z">
+                    <div id="emmsCounter">
                         <?php include_once('././src/components/date-counter.php'); ?>
                     </div>
                     <!-- End date counter -->
@@ -154,7 +154,7 @@ require_once('././config.php');
                 <p><a href="#agenda">Revisa la Agenda</a> que tenemos preparada para ti con referentes de la industria, de renombre mundial. Gracias por sumarte al multiuniverso EMMS 2023 :)</p>
                 <button id="register-button" type="button" class="emms__cta">INSCRÍBETE GRATIS AHORA</button>
                 <!-- Date counter -->
-                <div id="emmsCounter" value="2023-10-16T14:00:00.000Z">
+                <div id="emmsCounter">
                     <?php include_once('././src/components/date-counter.php'); ?>
                 </div>
                 <!-- End date counter -->

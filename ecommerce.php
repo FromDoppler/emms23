@@ -80,7 +80,7 @@ require_once('././config.php');
                         <li>HERRAMIENTAS Y RECURSOS</li>
                     </ul>
                     <!-- Date counter -->
-                    <div id="emmsCounter" value="2023-05-20T14:00:00.000Z">
+                    <div id="emmsCounter">
                         <?php include_once('././src/components/date-counter.php'); ?>
                     </div>
                     <!-- End date counter -->
