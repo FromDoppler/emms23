@@ -1,7 +1,7 @@
 // Date Counter
 
 const utcDate = '2023-05-16T12:00:00.000Z';
-var target_date = new Date(utcDate).getTime();
+const targetDate = new Date(utcDate).getTime();
 
 let days, hours, minutes, seconds;
 
@@ -13,7 +13,7 @@ const secondsContainer = document.getElementById("s");
 if (daysContainer != null) {
     function update() {
         const currentDate = new Date().getTime();
-        let secondsLeft = (target_date - currentDate) / 1000;
+        let secondsLeft = (targetDate - currentDate) / 1000;
 
         days = parseInt(secondsLeft / 86400);
         secondsLeft = secondsLeft % 86400;
