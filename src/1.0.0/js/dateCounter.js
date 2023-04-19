@@ -3,31 +3,31 @@
 const utcDate = '2023-05-16T12:00:00.000Z';
 var target_date = new Date(utcDate).getTime();
 
-var days, hours, minutes, seconds;
+let days, hours, minutes, seconds;
 
-var $days = document.getElementById("d");
-var $hours = document.getElementById("h");
-var $minutes = document.getElementById("m");
-var $seconds = document.getElementById("s");
+const daysContainer = document.getElementById("d");
+const hoursContainer = document.getElementById("h");
+const minutesContainer = document.getElementById("m");
+const secondsContainer = document.getElementById("s");
 
-if ($days != null) {
+if (daysContainer != null) {
     function update() {
-        var current_date = new Date().getTime();
-        var seconds_left = (target_date - current_date) / 1000;
+        const currentDate = new Date().getTime();
+        let secondsLeft = (target_date - currentDate) / 1000;
 
-        days = parseInt(seconds_left / 86400);
-        seconds_left = seconds_left % 86400;
+        days = parseInt(secondsLeft / 86400);
+        secondsLeft = secondsLeft % 86400;
 
-        hours = parseInt(seconds_left / 3600);
-        seconds_left = seconds_left % 3600;
+        hours = parseInt(secondsLeft / 3600);
+        secondsLeft = secondsLeft % 3600;
 
-        minutes = parseInt(seconds_left / 60);
-        seconds = parseInt(seconds_left % 60);
+        minutes = parseInt(secondsLeft / 60);
+        seconds = parseInt(secondsLeft % 60);
 
-        $days.innerHTML = pad(days, 2);
-        $hours.innerHTML = pad(hours, 2);
-        $minutes.innerHTML = pad(minutes, 2);
-        $seconds.innerHTML = pad(seconds, 2);
+        daysContainer.innerHTML = pad(days, 2);
+        hoursContainer.innerHTML = pad(hours, 2);
+        minutesContainer.innerHTML = pad(minutes, 2);
+        secondsContainer.innerHTML = pad(seconds, 2);
     }
     update();
 }
