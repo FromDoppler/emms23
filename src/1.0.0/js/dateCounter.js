@@ -1,8 +1,5 @@
 // Date Counter
 
-var now = new Date();
-var current_year = now.getFullYear();
-var next_year = current_year + 1;
 const utcDate = '2023-05-16T12:00:00.000Z';
 var target_date = new Date(utcDate).getTime();
 
