@@ -3,9 +3,7 @@
 var now = new Date();
 var current_year = now.getFullYear();
 var next_year = current_year + 1;
-//const utcDate = '2023-05-20T14:00:00.000Z';
-var emmsCounter = document.getElementById("emmsCounter");
-var utcDate = emmsCounter.getAttribute("value");
+const utcDate = '2023-05-16T12:00:00.000Z';
 var target_date = new Date(utcDate).getTime();
 
 var days, hours, minutes, seconds;
