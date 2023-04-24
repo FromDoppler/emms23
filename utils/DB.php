@@ -317,10 +317,10 @@ class DB
 
         $this->query("UPDATE settings_phase SET pre =" . $phases['pre'] . ", during =" . $phases['during'] . ", post=" . $phases['post'] . " where 1=1");
     }
-    public function getCurrentPhase()
+    public function getCurrentPhase($event)
     {
 
-        $sql = $this->query("SELECT * from settings_phase where 1=1");
+        $sql = $this->query("SELECT * from settings_phase WHERE event='".$event."' AND 1=1");
         $result = $sql->fetchAll();
         return $result;
     }
