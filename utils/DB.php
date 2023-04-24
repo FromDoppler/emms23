@@ -141,7 +141,7 @@ class DB
     public function insertSubscriptionDoppler($subscription)
     {
 
-        $fields = "(email, list, form_id, register, firstname, ";
+        $fields = "(email, list, form_id, register, firstname, ecommerce, `digital-trends`,";
         $fields .= "ip, country_ip, privacy, promotions, source_utm, medium_utm, campaign_utm, content_utm, term_utm)";
         date_default_timezone_set('America/Argentina/Buenos_Aires');
         $values = array(
@@ -150,6 +150,8 @@ class DB
             $subscription['form_id'],
             date("Y-m-d h:i:s A"),
             $subscription['firstname'],
+            $subscription['ecommerce'],
+            $subscription['digital_trends'],
             $subscription['ip'],
             $subscription['country_ip'],
             intval($subscription['privacy']),
@@ -160,7 +162,7 @@ class DB
             $subscription['content_utm'],
             $subscription['term_utm']
         );
-        $this->query("INSERT INTO subscriptions_doppler $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
+        $this->query("INSERT INTO subscriptions_doppler $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
     }
 
     public function getSubscriptionsDoppler()
