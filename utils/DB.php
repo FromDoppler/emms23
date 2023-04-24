@@ -322,7 +322,7 @@ class DB
     public function getCurrentPhase($event)
     {
 
-        $sql = $this->query("SELECT * from settings_phase WHERE event='".$event."' AND 1=1");
+        $sql = $this->query("SELECT * from settings_phase WHERE event='" . $event . "' AND 1=1");
         $result = $sql->fetchAll();
         return $result;
     }
