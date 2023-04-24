@@ -46,7 +46,7 @@ function setDataRequest($ip, $countryGeo)
     $term_utm = isset($_POST['utm_term']) ? $_POST['utm_term'] : null;
     $origin = isset($_POST['origin']) ? $_POST['origin'] : null;
     $type = isset($_POST['type']) ? $_POST['type'] : null;
-    $phase = getCurrentPhase();
+    $phase = getCurrentPhase($type);
     $user = array(
         'register' => date("Y-m-d h:i:s A"),
         'firstname' => $firstname,
@@ -94,12 +94,12 @@ function getSubjectEmail($phase)
     return $subject;
 }
 
-function getCurrentPhase()
+function getCurrentPhase($type)
 {
     try {
         $ip = GeoIp::getIp();
         $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-        $phases = $db->getCurrentPhase()[0];
+        $phases = $db->getCurrentPhase($type)[0];
         $simulator = $db->getSimulator()[0];
         $enabled = array_shift($simulator);
         $phaseToShow =  ($enabled && in_array($ip, ALLOW_IPS)) ? array_search(1, $simulator) : array_search(1, $phases);
