@@ -18,6 +18,11 @@
     animation-delay: .2s;
 }
 
+.emms__hero-registration .emms_mobile-counter .emms__hero-registration__text {
+    position: relative;
+    padding-bottom: 117px;
+}
+
 .emms__hero-registration .emms__hero-registration__text h1 {
     font-size: 30px;
     line-height: 32px;
@@ -153,7 +158,7 @@
     }
 
     .emms__hero-registration.emms__hero-registration--with-counter {
-        padding: 300px 0 88px 0;
+        padding: 100px 0 88px 0;
     }
 
     .emms__hero-registration__columns {
@@ -189,7 +194,7 @@
 
     #emmsCounter {
         position: absolute;
-        top: 140px;
+        top: 50px;
         left: 0;
         width: 100%;
     }

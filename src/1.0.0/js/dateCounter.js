@@ -5,12 +5,12 @@ const targetDate = new Date(utcDate).getTime();
 
 let days, hours, minutes, seconds;
 
-const daysContainer = document.getElementById("d");
-const hoursContainer = document.getElementById("h");
-const minutesContainer = document.getElementById("m");
-const secondsContainer = document.getElementById("s");
+const daysContainers = document.querySelectorAll(".d");
+const hoursContainers = document.querySelectorAll(".h");
+const minutesContainers = document.querySelectorAll(".m");
+const secondsContainers = document.querySelectorAll(".s");
 
-if (daysContainer != null) {
+if (daysContainers != null) {
     function update() {
         const currentDate = new Date().getTime();
         let secondsLeft = (targetDate - currentDate) / 1000;
@@ -24,10 +24,11 @@ if (daysContainer != null) {
         minutes = parseInt(secondsLeft / 60);
         seconds = parseInt(secondsLeft % 60);
 
-        daysContainer.innerHTML = pad(days, 2);
-        hoursContainer.innerHTML = pad(hours, 2);
-        minutesContainer.innerHTML = pad(minutes, 2);
-        secondsContainer.innerHTML = pad(seconds, 2);
+        printTimeInContainers(daysContainers, days);
+        printTimeInContainers(hoursContainers, hours);
+        printTimeInContainers(minutesContainers, minutes);
+        printTimeInContainers(secondsContainers, seconds);
+
     }
     update();
 }
@@ -38,4 +39,8 @@ function pad(num, size) {
     var s = num + "";
     while (s.length < size) s = "0" + s;
     return s;
+}
+
+function printTimeInContainers(containers, time) {
+    containers.forEach(container => { container.innerHTML = pad(time, 2) });
 }
