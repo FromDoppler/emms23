@@ -80,8 +80,8 @@ require_once('././config.php');
                         <li>HERRAMIENTAS Y RECURSOS</li>
                     </ul>
                     <!-- Date counter -->
-                    <div id="emmsCounter">
-                        <?php include_once('././src/components/date-counter.php'); ?>
+                    <div id="emmsCounter" class="mb--tablet ">
+                        <?php include('././src/components/date-counter.php'); ?>
                     </div>
                     <!-- End date counter -->
                 </div>
@@ -135,6 +135,16 @@ require_once('././config.php');
                         </div>
                     </form>
                     <!-- End form -->
+                </div>
+
+            </div>
+            <div class="emms_mobile-counter mb--tablet__on">
+                <div class="emms__hero-registration__text emms__fade-in">
+                    <!-- Date counter -->
+                    <div id="emmsCounter" class="mb--tablet__on">
+                        <?php include('././src/components/date-counter.php'); ?>
+                    </div>
+                    <!-- End date counter -->
                 </div>
             </div>
             <div class="emms__hero-registration__bottom emms__fade-in">
