@@ -158,7 +158,7 @@ p {
 
 /* Hide in responsive */
 
-.mb {
+.mb, .mb--tablet__on {
     display: none;
 }
 
@@ -171,6 +171,15 @@ p {
 @media (max-width: 620px) {
     .dk {
         display: none;
+    }
+}
+
+@media (max-width: 993px) {
+    .mb--tablet {
+        display: none;
+    }
+    .mb--tablet__on{
+        display: block;
     }
 }
 
