@@ -39,6 +39,102 @@
 
 
 
+/* Date */
+
+.emms__calendar__date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 10px 0;
+    border-bottom: solid 1px #B4B4B4;
+    margin: 100px 0 48px 0;
+    width: 100%;
+    animation-delay: .2s;
+}
+
+.emms__calendar__date h3{
+    font-size: 27px;
+    font-weight: 300;
+    color: #333333;
+    margin: 0;
+}
+
+.emms__calendar__date h3 strong{
+    font-weight: 400;
+}
+
+.emms__calendar__date__country{
+    text-align: right;
+}
+
+.emms__calendar__date__country span{
+    font-size: 12px;
+    font-weight: 300;
+    color: #333333;
+    display: block;
+}
+
+.emms__calendar__date__country span img{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.emms__calendar__date__country a{
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+    color: #33AD73;
+    display: block;
+}
+
+.emms__calendar__date__country a:hover{
+    color: #008046;
+    transition-duration: .2s;
+}
+
+.emms__calendar__date__conferences-add p{
+    font-size: 16px;
+    font-weight: 700;
+    color: #BD7AFF;
+    margin: 0;
+}
+
+@media(max-width:620px){
+    .emms__calendar__date{
+        display: block;
+        padding: 0;
+        margin: 20px 0 28px 0;
+    }
+
+    .emms__calendar__date h3{
+        font-size: 16px;
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+
+    .emms__calendar__date__conferences-add p{
+        text-align: center;
+        max-width: 300px;
+        margin: 0 auto 20px auto;
+    }
+
+    .emms__calendar__date__country{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0 0 0;
+    }
+
+    .emms__calendar__date__country span img{
+        width: 26px;
+        height: 26px;
+    }
+}
+
+
+
 /* List */
 
 .emms__calendar__list {
@@ -63,20 +159,33 @@
 .emms__calendar__list__item__card {
     background: #fff;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-    padding: 11px 0 0 0;
     border-radius: 4px;
     overflow: hidden;
     position: relative;
 }
 
-.emms__calendar__list__item__card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+.emms__calendar__list__item__card__label{
     width: 100%;
-    height: 11px;
-    background: #BD7AFF;
+    height: 12px;
+    position: relative;
+}
+
+.emms__calendar__list__item__card__label--interview{
+    background: #0050EA;
+}
+
+.emms__calendar__list__item__card__label p{
+    font-size: 10px;
+    font-weight: 500;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    padding: 12px 16px 6px 16px;
+    border-radius: 2px;
+}
+
+.emms__calendar__list__item__card__label--interview p{
+    background: #0050EA;
 }
 
 .emms__calendar__list__item__card__speaker {
@@ -95,7 +204,7 @@
 }
 
 .emms__calendar__list__item__card__speaker__text {
-    padding: 18px 18px 0 18px;
+    padding: 26px 18px 0 18px;
     box-sizing: border-box;
     width: 70%;
 }
@@ -193,10 +302,10 @@
 
 .emms__calendar__list__item__card__bio {
     position: absolute;
-    top: 10px;
+    top: 12px;
     left: 0;
     width: 100%;
-    height: calc(100% - 10px);
+    height: calc(100% - 12px);
     background: #fff;
     padding: 17px 17px 50px 17px;
     box-sizing: border-box;
