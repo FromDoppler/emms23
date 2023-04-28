@@ -32,6 +32,12 @@ if (isset($_GET['view_id'])) {
                 </tr>
                 <tr>
                     <td>
+                        <label for="exposes" class="form-label">Tipo de Exposición:</label>
+                    </td>
+                    <th colspan="5"> <?= $fetched_row['exposes'] ?></th>
+                </tr>
+                <tr>
+                    <td>
                         <label for="name" class="form-label">Name:</label>
                     </td>
                     <th colspan="5"> <?= $fetched_row['name'] ?></th>
