@@ -234,6 +234,13 @@ class DB
         }
     }
 
+    public function getUserNameByEmail($email)
+    {
+        $sql = $this->query("SELECT firstname FROM registered WHERE email = '$email'");
+        $result = $sql->fetchAll();
+        return $result;
+    }
+
     /********DATA ABMS*************/
 
     public function getSponsorsByType($type)
