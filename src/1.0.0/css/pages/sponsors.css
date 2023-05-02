@@ -214,3 +214,154 @@
         text-align: center;
     }
 }
+
+
+
+
+/* Conferences section */
+
+.emms__conferences {
+    background: #310e44;
+    padding: 114px 0;
+}
+
+.emms__conferences__container {
+    display: flex;
+    max-width: 990px;
+    margin: auto;
+    width: 90%;
+    justify-content: center;
+}
+
+.emms__conferences__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.emms__conferences__title {
+    text-align: center;
+    margin: 0 auto 50px auto;
+}
+.emms__conferences__title h2 {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.emms__conferences__title p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    margin: 30px auto 0 auto;
+    max-width: 620px;
+}
+
+.emms__conferences__cards__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.emms__conferences__cards img {
+    width: 100%;
+    transition-duration: .3s;
+}
+
+.emms__conferences__cards {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 30px 18px;
+    box-sizing: border-box;
+}
+.emms__conferences__cards h4 {
+    color: #ffffff;
+    margin: 35px 0;
+    min-height: 40px;
+}
+.emms__conferences__cards p {
+    color: #ffffff;
+    margin: 0;
+}
+
+.emms__conferences__cards span {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 22px;
+    color: #33ad73;
+    margin: 35px 0 0 0;
+    display: block;
+    transition-duration: .3s;
+}
+
+.emms__conferences__cards a:hover img {
+    opacity: .8;
+    transition-duration: .3s;
+}
+
+.emms__conferences__cards a:hover span{
+    text-decoration: underline;
+    transition-duration: .3s;
+}
+
+.emms__conferences__cards a:hover,
+.emms__conferences__first__card__text a:hover {
+    color: #008046;
+    transition: all 0.35s ease;
+}
+
+@media only screen and (max-width: 1025px) {
+    .emms__conferences__title h2 {
+        padding: 0 2rem;
+    }
+
+    .emms__conferences__title p {
+        padding: 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 898px) {
+
+    .emms__conferences__title h2 {
+        padding: 0rem;
+    }
+
+    .emms__conferences__title p {
+        padding: 0rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .emms__conferences__cards{
+        max-width: initial;
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    .emms__conferences__cards:last-child{
+        margin: 0;
+    }
+
+    .emms__conferences__cards img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 620px) {
+    .emms__conferences {
+        padding: 60px 0;
+    }
+    .emms__conferences__title h2 {
+        font-size: 32px;
+        line-height: 35px;
+    }
+}

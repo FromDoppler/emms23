@@ -138,6 +138,29 @@ require_once('./utils/DB.php');
             </div>
         </div>
 
+        <!-- Section conferences -->
+        <section class="emms__conferences">
+            <div class="emms__conferences__container">
+                <div class="emms__conferences__wrapper">
+                    <div class="emms__conferences__title emms__fade-in">
+                        <h2>Conferencias exclusivas de nuestros Media Partners</h2>
+                        <p>Los siguientes expertos comparten contigo las últimas tendencias y estrategias en Marketing Digital para que pongas en práctica ahora mismo en tu negocio.</p>
+                        <p>¡Capacítate con EMMS 2023!</p>
+                    </div>
+                    <div class="emms__conferences__cards__container">
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a href="https://www.youtube.com/watch?v=QsVkJsqDEUU" target="_blank">
+                                <img src="src/img/conferences/portada-youtube-mujeresqueemprenden.png" alt="Conferencias exclusivas">
+                                <h4>Trucos para vender más en tu E-commerce</h4>
+                                <p>Duración: 00:19:45</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Doppler Academy Banner -->
         <?php include_once('././src/components/doppler-academy-banner.php'); ?>
 
