@@ -10,13 +10,9 @@ require_once('././config.php');
     <?php include_once('././src/components/head.php'); ?>
     <script type="module">
         import {
-            isUserLogged,
-            getUrlWithParams
-        } from './src/<?= VERSION ?>/js/common/index.js';
-
-        if (!isUserLogged()) {
-            window.location.href = getUrlWithParams('/ecommerce');
-        }
+            hiddenOrShowUserUI
+        } from './src/<?= VERSION ?>/js/user.js';
+        hiddenOrShowUserUI('digital-trends');
     </script>
 </head>
 
@@ -137,10 +133,10 @@ require_once('././config.php');
         </section>
 
         <!-- Separator -->
-        <div class="emms__separator"></div>
+        <div class="emms__separator eventHiddenElements"></div>
 
         <!-- Checklist -->
-        <div class="emms__checklist">
+        <div class="emms__checklist eventHiddenElements">
             <div class="emms__container--md">
                 <div class="emms__checklist__title emms__fade-in">
                     <h2>¡Estás a un paso de registrarte al EMMS Digital Trends!</h2>

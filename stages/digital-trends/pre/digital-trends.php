@@ -8,16 +8,6 @@ require_once('././config.php');
 <head>
     <?php include_once('././src/components/head-ecommerce.php'); ?>
     <?php include_once('././src/components/head.php'); ?>
-    <script type="module">
-        import {
-            isUserLogged,
-            getUrlWithParams
-        } from './src/<?= VERSION ?>/js/common/index.js';
-
-        if (isUserLogged()) {
-            window.location.href = getUrlWithParams('/digital-trends-registrado.php');
-        }
-    </script>
 </head>
 
 <body class="emms__digitaltrends">
@@ -88,7 +78,7 @@ require_once('././config.php');
                 </div>
                 <div class="emms__hero-registration__form emms__fade-in">
                     <!-- Form -->
-                    <form class="emms__form" id="ecommerceForm" novalidate autocomplete="off">
+                    <form class="emms__form" id="digitalForm" novalidate autocomplete="off">
                         <ul class="emms__form__field-group">
                             <li class="emms__form__field-item">
                                 <div class="holder">
@@ -301,7 +291,7 @@ require_once('././config.php');
     <script src="src/<?= VERSION ?>/js/dateCounter.js"></script>
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
     <script src="src/<?= VERSION ?>/js/mediaPartners.js"></script>
-    <script src="src/<?= VERSION ?>/js/homeEcommerce.js" type="module"></script>
+    <script src="src/<?= VERSION ?>/js/homeDigital.js" type="module"></script>
 
 </body>
 

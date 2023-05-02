@@ -10,13 +10,9 @@ require_once('././config.php');
     <?php include_once('././src/components/head.php'); ?>
     <script type="module">
         import {
-            isUserLogged,
-            getUrlWithParams
-        } from './src/<?= VERSION ?>/js/common/index.js';
-
-        if (isUserLogged()) {
-            window.location.href = getUrlWithParams('/ecommerce-registrado.php');
-        }
+            hiddenOrShowUserUI
+        } from './src/<?= VERSION ?>/js/user.js';
+        hiddenOrShowUserUI('digital-trends');
     </script>
 </head>
 
@@ -73,7 +69,7 @@ require_once('././config.php');
     <main>
 
         <!-- Hero with form-->
-        <section class="emms__hero-registration" id="registro">
+        <section class="emms__hero-registration eventHiddenElements" id="registro">
             <div class="emms__hero-registration__columns">
                 <div class="emms__hero-registration__text emms__fade-in">
                     <p class="emms__hero-registration__text__live">EN VIVO</p>
@@ -144,12 +140,12 @@ require_once('././config.php');
         </section>
 
         <!-- Hero without form-->
-        <section class="emms__hero-registration emms__hero-registration--noform" id="registro">
-            <div class="emms__hero-registration__text emms__fade-in">
+        <section class="emms__hero-registration emms__hero-registration--noform eventHiddenElements eventShowElements" id="registro">
+            <div class="emms__hero-registration__text">
                 <p class="emms__hero-registration__text__live">EN VIVO</p>
                 <h1>¡Estás a un paso de acceder al EMMS Ecommerce!</h1>
                 <p><a href="#agenda">Revisa la Agenda</a> que tenemos preparada para ti con referentes de la industria, de renombre mundial. Gracias por sumarte al multiuniverso EMMS 2023 :)</p>
-                <button id="register-button" type="button" class="emms__cta">ACCEDER AL VIVO</button>
+                <button id="ecommerceBtn" type="button" class="emms__cta"><span class="button__text">ACCEDER AL VIVO</span></button>
             </div>
             <div class="emms__hero-registration__bottom emms__fade-in">
                 <p>IA >> AUTOMATION MARKETING >> UX >> CRO >> MARKETPLACES >> SEO >> RETARGETING >> SOCIAL SELLING >> EMAIL MARKETING >> ESTRATEGIAS DE VENTA >></p>
