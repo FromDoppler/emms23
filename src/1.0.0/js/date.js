@@ -1,8 +1,9 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', () => {
-    const dateStr = '2022-11-09 11:00:00';
-    const utcDate = '2022-11-09T14:00:00.000Z';
+    const dateStr = '2023-05-16 12:00:00';
+    const utcDate = '2023-05-16T15:00:00.000Z';
+    const isEnablePlusDts = false;
     var eventDate = new Date(utcDate);
     const today = new Date();
 
@@ -68,13 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
             flagContainers.forEach(flagContainer => {
                 flagContainer.innerHTML = '';
                 flagContainer.appendChild(img);
-                flagContainer.innerHTML += '(' + countryCode + ') ' + '08' + ':00 (CDMX)';
+                flagContainer.innerHTML += '(' + countryCode + ') ' + '09' + ':00 (CDMX)';
             });
         } else if (countryCode === "ES") {
             flagContainers.forEach(flagContainer => {
                 flagContainer.innerHTML = '';
                 flagContainer.appendChild(img);
-                flagContainer.innerHTML += '(' + countryCode + ') ' + '15' + ':00 (Madrid)';
+                flagContainer.innerHTML += '(' + countryCode + ') ' + '16' + ':00 (Madrid)';
             });
         }
 
@@ -94,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let hours = date.getHours().toString();
         hours = (hours.length < 2) ? '0' + hours : hours;
 
-        if (countryCode === "MX" || countryCode === "ES") {
+        if ((countryCode === "MX" || countryCode === "ES") && isEnablePlusDts) {
             changeCountryHour(countryCode, flagContainers, img)
         } else {
             flagContainers.forEach(flagContainer => {
