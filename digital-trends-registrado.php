@@ -14,7 +14,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/services/functions.php');
         window.location.href = getUrlWithParams('/digital-trends');
     }
 </script>
-<?
+<?php
 $response = processPhaseToShow('digital-trends');
 require_once($_SERVER['DOCUMENT_ROOT'] . "/stages/digital-trends/$response[phaseToShow]/digital-trends-registrado.php");
 ?>
