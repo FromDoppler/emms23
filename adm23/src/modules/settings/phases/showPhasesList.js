@@ -59,7 +59,6 @@ const sendDataCurrentPhase = async (e, event) => {
 
     const transition = currentTransition;
 
-    console.log(selectedPhase);
     e.preventDefault();
     await setPhase(event, selectedPhase, transition);
     showAlert(event+'_current-alert-success');
@@ -68,7 +67,7 @@ const sendDataCurrentPhase = async (e, event) => {
 //getPhase
 const checkRadiosPhase = async (event) => {
     const objResult = await getPhase(event);
-    console.log(event,objResult);
+
     document.getElementById(event+'_'+objResult.current_phase).checked = true;
     if (objResult.transition === "live-on")
         document.getElementById(event+"_toggle-live").checked = true;
