@@ -13,8 +13,9 @@ try {
     while ($row = mysqli_fetch_array($result_set, MYSQLI_ASSOC)) {
         $fetched_row[] = $row;
     }
-    $current_phase = array_search(1, $fetched_row[0]);
-    echo json_encode($current_phase);
+    $result['current_phase'] = array_search(1, $fetched_row[0]);
+    $result['transition'] = $fetched_row[0]['transition'];
+    echo json_encode($result);
 } catch (Exception $e) {
     processError("getPhase", $e->getMessage(), []);
     header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);

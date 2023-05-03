@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db
--- Tiempo de generación: 27-04-2023 a las 12:42:14
+-- Tiempo de generación: 03-05-2023 a las 13:35:22
 -- Versión del servidor: 10.5.18-MariaDB-1:10.5.18+maria~ubu2004
 -- Versión de PHP: 8.0.15
 
@@ -2208,6 +2208,7 @@ CREATE TABLE IF NOT EXISTS `settings_phase` (
   `pre` tinyint(4) NOT NULL,
   `during` tinyint(4) NOT NULL,
   `post` tinyint(4) NOT NULL,
+  `transition` varchar(255) NOT NULL,
   PRIMARY KEY (`event`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -2215,9 +2216,9 @@ CREATE TABLE IF NOT EXISTS `settings_phase` (
 -- Volcado de datos para la tabla `settings_phase`
 --
 
-INSERT INTO `settings_phase` (`event`, `pre`, `during`, `post`) VALUES
-('digital-trends', 0, 1, 0),
-('ecommerce', 0, 0, 1);
+INSERT INTO `settings_phase` (`event`, `pre`, `during`, `post`, `transition`) VALUES
+('digital-trends', 1, 0, 0, 'live-off'),
+('ecommerce', 0, 0, 1, 'live-on');
 
 -- --------------------------------------------------------
 

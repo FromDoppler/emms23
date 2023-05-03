@@ -38,16 +38,39 @@ function showAlert(id) {
     }, 2000)
 }
 
+const getTransition = (event) => {
+    const isLive = document.getElementById(event+"_toggle-live").checked;
+    if (isLive)
+        return "live-on";
+    return "live-off";
+}
+
+//setPhase
 const sendDataCurrentPhase = async (e, event) => {
     const selectedPhase = document.querySelector('input[name="'+event+'_phase"]:checked').getAttribute('data-phase');
-    console.log(selectedPhase);
+
+    let currentTransition;
+    if (selectedPhase !=="during"){
+        currentTransition = "live-off";
+        document.getElementById(event+"_toggle-live").checked = false;
+    }
+    else
+        currentTransition = getTransition(event);
+
+    const transition = currentTransition;
+
     e.preventDefault();
-    await setPhase(event,selectedPhase);
+    await setPhase(event, selectedPhase, transition);
     showAlert(event+'_current-alert-success');
 }
 
+//getPhase
 const checkRadiosPhase = async (event) => {
-    const currentPhase = await getPhase(event);
-    console.log(event+'_'+currentPhase);
-    document.getElementById(event+'_'+currentPhase).checked = true;
+    const objResult = await getPhase(event);
+
+    document.getElementById(event+'_'+objResult.current_phase).checked = true;
+    if (objResult.transition === "live-on")
+        document.getElementById(event+"_toggle-live").checked = true;
+    else
+        document.getElementById(event+"_toggle-live").checked = false;
 }

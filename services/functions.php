@@ -24,3 +24,9 @@ function processPhaseToShow($event)
     $phaseToShow =  array_search(1, $phases);
     return array('phaseToShow' => $phaseToShow, 'problemsTransmission' => $transmission['problems'], 'isTransmissionYoutube' => $transmission['youtube']);
 }
+
+function getTransition($event) {
+    $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    $phase = $db->getCurrentPhase($event)[0];
+    return $phase['transition'];
+}
