@@ -8,16 +8,6 @@ require_once('././config.php');
 <head>
     <?php include_once('././src/components/head-ecommerce.php'); ?>
     <?php include_once('././src/components/head.php'); ?>
-    <script type="module">
-        import {
-            isUserLogged,
-            getUrlWithParams
-        } from './src/<?= VERSION ?>/js/common/index.js';
-
-        if (!isUserLogged()) {
-            window.location.href = getUrlWithParams('/ecommerce');
-        }
-    </script>
 </head>
 
 <body class="emms__digitaltrends emms__digitaltrends-logueado">
@@ -30,7 +20,7 @@ require_once('././config.php');
             </div>
             <a class="emms__header__nav--mb" id="btn-burger"></a>
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
-            <ul class="emms__header__nav__menu">
+                <ul class="emms__header__nav__menu">
                     <li><a href="/">home</a></li>
                     <li><a href="/ecommerce">e-commerce</a></li>
                     <li class="emms__header__nav__menu__dropdown"><a href="#" class="active">digital trends</a>

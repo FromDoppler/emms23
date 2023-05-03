@@ -30,13 +30,19 @@ function setDataRequest($ip, $countryGeo)
 {
 
     $_POST = json_decode(file_get_contents('php://input'), true);
-    $events =isset($_POST['events']) ? $_POST['events'] : null;
+    $events = isset($_POST['events']) ? $_POST['events'] : null;
     $events = json_decode($events);
     $ecommerce = ($events[0] === 'ecommerce' || $events[1] === 'ecommerce') ? 1 : 0;
-    $digital_trends = ($events[0] === 'digitalTrends' || $events[1] === 'digitalTrends') ? 1 : 0;
+    $digital_trends = ($events[0] === 'digital-trends' || $events[1] === 'digital-trends') ? 1 : 0;
     $email = isset($_POST['email']) ? $_POST['email'] : null;
     $encode_email = isset($_POST['encodeEmail']) ? $_POST['encodeEmail'] : null;
     $firstname = isset($_POST['name']) ? $_POST['name'] : null;
+    if ($firstname === null) {
+        $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        $firstname = $db->getUserNameByEmail($email)[0];
+        $db->close();
+        $firstname = $firstname["firstname"];
+    }
     $privacy     = isset($_POST['acceptPolicies']) ? $_POST['acceptPolicies']     : false;
     $promotions = isset($_POST['acceptPromotions']) ? $_POST['acceptPromotions'] : false;
     $source_utm = isset($_POST['utm_source']) ? $_POST['utm_source'] : null;
@@ -47,6 +53,7 @@ function setDataRequest($ip, $countryGeo)
     $origin = isset($_POST['origin']) ? $_POST['origin'] : null;
     $type = isset($_POST['type']) ? $_POST['type'] : null;
     $phase = getCurrentPhase($type);
+    $list = ($type === 'ecommerce' ? LIST_LANDING_ECOMMERCE : LIST_LANDING_DIGITALT);
     $user = array(
         'register' => date("Y-m-d h:i:s A"),
         'firstname' => $firstname,
@@ -66,12 +73,10 @@ function setDataRequest($ip, $countryGeo)
         'origin' => $origin,
         'type' => $type,
         'form_id' => $phase,
-        'list' => LIST_LANDING,
+        'list' => $list,
         'subject' => getSubjectEmail($phase)
     );
     try {
-
-        Validator::validateRequired('firstname', $firstname);
         Validator::validateEmail($email);
         Validator::validateBool('privacy', $privacy);
         Validator::validateBool('promotions', $promotions);
@@ -184,5 +189,6 @@ isSubmitValid($ip);
 $user = setDataRequest($ip, $countryGeo);
 saveSubscriptionDoppler($user);
 saveSubscriptionDopplerTable($user);
+//TODO: AGREGAR COLUMNA EXTRA EN EL SPREAD con eventos
 saveSubscriptionSpreadSheet($user);
 sendEmail($user, $user['subject']);

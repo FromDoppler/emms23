@@ -10,13 +10,9 @@ require_once('././config.php');
     <?php include_once('././src/components/head.php'); ?>
     <script type="module">
         import {
-            isUserLogged,
-            getUrlWithParams
-        } from './src/<?= VERSION ?>/js/common/index.js';
-
-        if (isUserLogged()) {
-            window.location.href = getUrlWithParams('/ecommerce-registrado.php');
-        }
+            hiddenOrShowUserUI
+        } from './src/<?= VERSION ?>/js/user.js';
+        hiddenOrShowUserUI('ecommerce');
     </script>
 </head>
 
@@ -73,7 +69,7 @@ require_once('././config.php');
     <main>
 
         <!-- Hero with form-->
-        <section class="emms__hero-registration emms__hero-registration--with-counter" id="registro">
+        <section class="emms__hero-registration emms__hero-registration--with-counter eventHiddenElements" id="registro">
             <div class="emms__hero-registration__columns">
                 <div class="emms__hero-registration__text emms__fade-in">
                     <h1><em>EVENTO ONLINE Y GRATUITO - 16 DE OCTUBRE</em> EMMS Digital Trends</h1>
@@ -91,7 +87,7 @@ require_once('././config.php');
                 </div>
                 <div class="emms__hero-registration__form emms__fade-in">
                     <!-- Form -->
-                    <form class="emms__form" id="ecommerceForm" novalidate autocomplete="off">
+                    <form class="emms__form" id="digitalForm" novalidate autocomplete="off">
                         <ul class="emms__form__field-group">
                             <li class="emms__form__field-item">
                                 <div class="holder">
@@ -148,11 +144,11 @@ require_once('././config.php');
         </section>
 
         <!-- Hero without form-->
-        <section class="emms__hero-registration emms__hero-registration--noform emms__hero-registration--with-counter" id="registro">
-            <div class="emms__hero-registration__text emms__fade-in">
+        <section class="emms__hero-registration emms__hero-registration--noform emms__hero-registration--with-counter eventHiddenElements eventShowElements" id="registro">
+            <div class="emms__hero-registration__text">
                 <h1><em>EVENTO ONLINE Y GRATUITO - 16 DE OCTUBRE</em> Título relacionado a EMMS Digital Trends</h1>
                 <p><a href="#agenda">Revisa la Agenda</a> que tenemos preparada para ti con referentes de la industria, de renombre mundial. Gracias por sumarte al multiuniverso EMMS 2023 :)</p>
-                <button id="register-button" type="button" class="emms__cta">INSCRÍBETE GRATIS AHORA</button>
+                <button id="digitalTrendsBtn" type="button" class="emms__cta">INSCRÍBETE GRATIS AHORA</button>
                 <!-- Date counter -->
                 <div id="emmsCounter">
                     <?php include_once('././src/components/date-counter.php'); ?>
@@ -310,7 +306,7 @@ require_once('././config.php');
     <script src="src/<?= VERSION ?>/js/dateCounter.js"></script>
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
     <script src="src/<?= VERSION ?>/js/mediaPartners.js"></script>
-    <script src="src/<?= VERSION ?>/js/homeEcommerce.js" type="module"></script>
+    <script src="src/<?= VERSION ?>/js/homeDigital.js" type="module"></script>
 
 </body>
 
