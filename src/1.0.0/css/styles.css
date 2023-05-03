@@ -25,6 +25,7 @@
 @import 'components/certificate-modal.css';
 @import 'components/checklist.css';
 @import 'components/golive-banner.css';
+@import 'components/hellobar.css';
 
 /* Pages */
 @import 'pages/ecommerce.css';

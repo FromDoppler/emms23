@@ -74,8 +74,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    height: 123px;
-    width: 77px;
+    height: 124px;
+    width: 144px;
     border-radius: 0px 0px 0px 20px;
     background: #BD7AFF;
 }
@@ -83,22 +83,30 @@
 .emms__eventCards__list__item__text--corner p {
     font-size: 22px;
     font-weight: 700;
-    text-align: center;
+    text-align: right;
     color: #FFFFFF;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: 75%;
 }
 
 .emms__eventCards__list__item__text--corner p span {
     display: block;
     font-size: 42px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 20px;
     padding: 0 0 12px 0;
     border-bottom: solid 1px;
-    margin: 0 0 5px 0;
+    margin: 0 0 7px 0;
+}
+
+.emms__eventCards__list__item__text--corner p span em{
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    vertical-align: bottom;
 }
 
 .emms__eventCards__list__item__text h3 {

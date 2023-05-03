@@ -7,6 +7,7 @@
 
 .emms__header.emms__header-scroll {
     position: fixed;
+    top: 0;
     padding: 15px 0;
     background: #000;
     z-index: 2;
