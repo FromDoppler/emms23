@@ -1,0 +1,80 @@
+.emms__hellobar {
+    background: #FF4FB6;
+    height: 50px;
+    animation: hellobar .5s;
+}
+
+@keyframes hellobar {
+    0% {
+        margin-top: -50px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+.emms__hellobar__container {
+    max-width: 780px;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-delay: .2s;
+}
+
+.emms__hellobar__container p {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #212121;
+}
+
+.emms__hellobar__container a {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+    color: #212121;
+    text-align: center;
+    white-space: nowrap;
+    border: solid 1px #212121;
+    border-radius: 100px;
+    margin: 0 0 0 50px;
+    padding: 8px 20px;
+    transition-duration: .2s;
+}
+
+.emms__hellobar__container a:hover {
+    box-shadow: 0px 0px 7px rgba(33, 33, 33, 0.4);
+    transition-duration: .2s;
+}
+
+@media(max-width: 992px){
+    .emms__hellobar__container{
+        max-width: 500px;
+    }
+    .emms__hellobar__container a{
+        margin: 0 0 0 20px;
+    }
+}
+
+
+@media(max-width: 620px) {
+    .emms__hellobar {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .emms__hellobar__container {
+        text-align: center;
+        max-width: 328px;
+        display: block;
+    }
+
+    .emms__hellobar__container a {
+        margin: 8px 0 0 0px;
+        display: inline-block;
+    }
+}

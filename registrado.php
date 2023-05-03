@@ -22,6 +22,14 @@ require_once('././config.php');
 
 <body class="emms__home emms__home-logueado">
     <?php include_once('././src/components/gtm.php'); ?>
+
+    <!-- Hellobar -->
+    <div class="emms__hellobar">
+        <div class="emms__hellobar__container emms__fade-in">
+            <p><strong>EMMS Ecommerce:</strong> ¡disfruta de un día más de aprendizaje! <strong>16 y 17 de mayo</strong></p>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="emms__header">
         <div class="emms__container--lg emms__fade-in">
@@ -82,7 +90,7 @@ require_once('././config.php');
                             </div>
                             <div class="emms__eventCards__list__item__text">
                                 <div class="emms__eventCards__list__item__text--corner">
-                                    <p><span>16</span>MAY</p>
+                                    <p><span>16 <em>y</em> 17</span>MAYO</p>
                                 </div>
                                 <h3>EMMS E-commerce</h3>
                                 <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
@@ -98,7 +106,7 @@ require_once('././config.php');
                             </div>
                             <div class="emms__eventCards__list__item__text">
                                 <div class="emms__eventCards__list__item__text--corner">
-                                    <p>OCT</p>
+                                    <p>OCTUBRE</p>
                                 </div>
                                 <h3>EMMS Digital Trends</h3>
                                 <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -117,7 +125,7 @@ require_once('././config.php');
                             </div>
                             <div class="emms__eventCards__list__item__text">
                                 <div class="emms__eventCards__list__item__text--corner">
-                                    <p><span>16</span>MAY</p>
+                                    <p><span>16 <em>y</em> 17</span>MAYO</p>
                                 </div>
                                 <h3>EMMS E-commerce</h3>
                                 <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
@@ -133,7 +141,7 @@ require_once('././config.php');
                             </div>
                             <div class="emms__eventCards__list__item__text">
                                 <div class="emms__eventCards__list__item__text--corner">
-                                    <p>OCT</p>
+                                    <p>OCTUBRE</p>
                                 </div>
                                 <h3>EMMS Digital Trends</h3>
                                 <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>

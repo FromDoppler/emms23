@@ -12,6 +12,14 @@ require_once('././config.php');
 
 <body class="emms__ecommerce emms__ecommerce-logueado">
     <?php include_once('././src/components/gtm.php'); ?>
+
+    <!-- Hellobar -->
+    <div class="emms__hellobar">
+        <div class="emms__hellobar__container emms__fade-in">
+            <p><strong>EMMS Ecommerce:</strong> ¡disfruta de un día más de aprendizaje! <strong>16 y 17 de mayo</strong></p>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="emms__header">
         <div class="emms__container--lg emms__fade-in">
