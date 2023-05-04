@@ -8,8 +8,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/services/functions.php');
         getUrlWithParams
     } from './src/<?= VERSION ?>/js/common/index.js';
     import {
-        userRegisteredInEvent
+        userRegisteredInEvent,
+        checkEncodeUrl
     } from './src/<?= VERSION ?>/js/user.js';
+    checkEncodeUrl();
     if (userRegisteredInEvent('ecommerce')) {
         window.location.href = getUrlWithParams('/ecommerce-registrado');
     }

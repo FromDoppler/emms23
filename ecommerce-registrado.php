@@ -9,7 +9,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/services/functions.php');
     } from './src/<?= VERSION ?>/js/common/index.js';
     import {
         userRegisteredInEvent,
+        checkEncodeUrl
     } from './src/<?= VERSION ?>/js/user.js';
+    checkEncodeUrl();
     if (!userRegisteredInEvent('ecommerce')) {
         window.location.href = getUrlWithParams('/ecommerce');
     }
