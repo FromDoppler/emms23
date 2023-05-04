@@ -8,18 +8,27 @@ let localStorageEvents = localStorage.getItem('events');
 
 const checkEncodeUrl = () => {
     if (encodeUser) {
-        const userData = JSON.parse(encodeUser);
-        const userEvents = JSON.parse(userData.userEvents);
-        // Check localStorage
-        if (localStorageEvents) {
-            localStorageEvents = JSON.parse(localStorageEvents);
-            if (userEvents.length > localStorageEvents.length) {
-                localStorage.setItem('events', JSON.stringify(userEvents));
+        //Check if it is an old user that was saved before the new JSON logic
+        if (encodeUser.includes('{')) {
+            const userData = JSON.parse(encodeUser);
+            const userEvents = JSON.parse(userData.userEvents);
+            // Check localStorage
+            if (localStorageEvents) {
+                localStorageEvents = JSON.parse(localStorageEvents);
+                if (userEvents.length > localStorageEvents.length) {
+                    localStorage.setItem('events', JSON.stringify(userEvents));
+                    localStorage.setItem('lastEventsUpdateTime', new Date());
+                }
+            } else {
+                localStorage.setItem('dplrid', toHex(user.email));
+                localStorage.setItem('events', JSON.stringify(events));
                 localStorage.setItem('lastEventsUpdateTime', new Date());
             }
         } else {
-            localStorage.setItem('dplrid', toHex(user.email));
-            localStorage.setItem('events', JSON.stringify(events));
+            //If it is false, we know that its only event to save was ecommerce
+            const oldEcommerce = ['ecommerce'];
+            localStorage.setItem('dplrid', toHex(encodeUser));
+            localStorage.setItem('events', JSON.stringify(oldEcommerce));
             localStorage.setItem('lastEventsUpdateTime', new Date());
         }
     }
