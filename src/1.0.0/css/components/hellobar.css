@@ -71,6 +71,7 @@
         text-align: center;
         max-width: 328px;
         display: block;
+        height: auto;
     }
 
     .emms__hellobar__container a {
