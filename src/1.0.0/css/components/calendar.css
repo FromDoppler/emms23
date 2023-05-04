@@ -115,13 +115,13 @@
     .emms__calendar__date{
         display: block;
         padding: 0;
-        margin: 20px 0 28px 0;
+        margin: 20px 0 0 0;
     }
 
     .emms__calendar__date h3{
         font-size: 16px;
         text-align: center;
-        margin: 0 0 20px 0;
+        margin: 0 0 10px 0;
     }
 
     .emms__calendar__date__conferences-add p{
@@ -131,10 +131,12 @@
     }
 
     .emms__calendar__date__country{
-        display: flex;
+        text-align: center;
+        display: block;
         align-items: center;
         justify-content: space-between;
         margin: 10px 0 0 0;
+        padding: 0 0 4px 0;
     }
 
     .emms__calendar__date__country span img{
@@ -504,6 +506,7 @@
     .emms__calendar__list--mb{
         display: block;
         max-width: 300px;
+        margin: 20px auto 0;
     }
 
     .emms__calendar__list--mb .flickity-page-dots{
