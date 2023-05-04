@@ -100,6 +100,7 @@ if (isset($_POST['btn-save'])) {
                                 <select name="exposes" class="form-select">
                                     <option value="conference">Conferencia</option>
                                     <option value="interview">Entrevista</option>
+                                    <option value="successful-case">Caso de Exito</option>
                                 </select>
                             </td>
                         </tr>
