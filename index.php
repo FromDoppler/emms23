@@ -26,7 +26,7 @@ require_once('././config.php');
     <!-- Hellobar -->
     <div class="emms__hellobar">
         <div class="emms__hellobar__container emms__fade-in">
-            <p><strong>EMMS Ecommerce:</strong> ¡disfruta de un día más de aprendizaje! <strong>16 y 17 de mayo</strong></p>
+            <p><strong>EMMS E-commerce:</strong> ¡disfruta de un día más de aprendizaje! <strong>16 y 17 de mayo</strong></p>
             <a href="./ecommerce">ASEGURA TU CUPO GRATIS</a>
         </div>
     </div>

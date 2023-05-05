@@ -16,7 +16,7 @@ require_once('././config.php');
     <!-- Hellobar -->
     <div class="emms__hellobar">
         <div class="emms__hellobar__container emms__fade-in">
-            <p><strong>EMMS Ecommerce:</strong> ¡disfruta de un día más de aprendizaje! <strong>16 y 17 de mayo</strong></p>
+            <p><strong>EMMS E-commerce:</strong> ¡disfruta de un día más de aprendizaje! <strong>16 y 17 de mayo</strong></p>
         </div>
     </div>
 
@@ -70,8 +70,8 @@ require_once('././config.php');
         <section class="emms__hero-registration emms__hero-registration--with-counter" id="registro">
             <div class="emms__hero-registration__columns">
                 <div class="emms__hero-registration__text emms__fade-in">
-                    <h1><em>EVENTO ONLINE Y GRATUITO - 16 DE MAYO</em> EMMS E-commerce 2023</h1>
-                    <p>¡El EMMS evoluciona! Ahora podrás inspirarte y aprender con un evento exclusivo pensado para tu Tienda Online.</p>
+                    <h1><em>EVENTO ONLINE Y GRATUITO - 16 Y 17 DE MAYO</em> EMMS E-commerce 2023</h1>
+                    <p>¡El EMMS evoluciona! Inspírate y aprende con un evento exclusivo pensado para tu Tienda Online.</p>
                     <ul class="emms__hero-registration__text__checklist">
                         <li>SPEAKERS INTERNACIONALES</li>
                         <li>TENDENCIAS E INNOVACIÓN</li>
@@ -163,7 +163,6 @@ require_once('././config.php');
                 <?php include('./src/components/speakers.php') ?>
                 <!-- End list -->
                 <div class="emms__calendar__bottom emms__fade-in">
-                    <p>¡Presta atención! <strong>Seguimos sumando conferencias a la agenda</strong>. Mantente al tanto de las novedades para no perderte a los nuevos speakers.</p>
                     <a href="#registro" class="emms__cta">INSCRÍBETE GRATIS AHORA</a>
                 </div>
             </div>
