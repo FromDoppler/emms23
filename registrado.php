@@ -26,7 +26,7 @@ require_once('././config.php');
     <!-- Hellobar -->
     <div class="emms__hellobar">
         <div class="emms__hellobar__container emms__fade-in">
-            <p><strong>EMMS Ecommerce:</strong> ¡disfruta de un día más de aprendizaje! <strong>16 y 17 de mayo</strong></p>
+            <p><strong>EMMS E-commerce:</strong> ¡disfruta de un día más de aprendizaje! <strong>16 y 17 de mayo</strong></p>
         </div>
     </div>
 
@@ -96,7 +96,7 @@ require_once('././config.php');
                                 <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <a href="/ecommerce-registrado" class="emms__cta">ACCEDER</a>
+                                    <a href="/ecommerce-registrado" class="emms__cta">ACCEDE</a>
                                 </div>
                             </div>
                         </li>

@@ -156,6 +156,14 @@ require_once('./utils/DB.php');
                                 <span>¡No te lo pierdas!</span>
                             </a>
                         </div>
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a href="https://youtu.be/6vAI_hk37Lw" target="_blank">
+                                <img src="src/img/conferences/portada-youtube-chinarodriguez.png" alt="Conferencias exclusivas">
+                                <h4>Campañas de remarketing de alto impacto</h4>
+                                <p>Duración: 00:20:48</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

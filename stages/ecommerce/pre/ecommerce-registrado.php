@@ -16,7 +16,7 @@ require_once('././config.php');
     <!-- Hellobar -->
     <div class="emms__hellobar">
         <div class="emms__hellobar__container emms__fade-in">
-            <p><strong>EMMS Ecommerce:</strong> ¡disfruta de un día más de aprendizaje! <strong>16 y 17 de mayo</strong></p>
+            <p><strong>EMMS E-commerce:</strong> ¡disfruta de un día más de aprendizaje! <strong>16 y 17 de mayo</strong></p>
         </div>
     </div>
 
@@ -84,9 +84,6 @@ require_once('././config.php');
                 <!-- Speakers -->
                 <?php include('./src/components/speakers.php') ?>
                 <!-- End list -->
-                <div class="emms__calendar__bottom emms__fade-in">
-                    <p>¡Presta atención! <strong>Seguimos sumando conferencias a la agenda</strong>. Te avisaremos de esto y mucho más vía Email.</p>
-                </div>
             </div>
         </section>
 

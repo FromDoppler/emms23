@@ -148,7 +148,7 @@
 </div>
 
 <div class="emms__calendar__subtitle emms__fade-in">
-    <h4>Charlas sobre Inteligencia Artificial</h4>
+    <h4>Inteligencia Artificial y Chat GPT para tiendas online</h4>
 </div>
 
 <!-- List -->
