@@ -166,6 +166,7 @@ require_once('././config.php');
                     <a href="#registro" class="emms__cta">INSCRÍBETE GRATIS AHORA</a>
                 </div>
             </div>
+            <div class="emms__background-c"></div>
             <div class="emms__background-b"></div>
         </section>
 

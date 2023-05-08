@@ -146,6 +146,12 @@ p {
     background-position: center;
 }
 
+.emms__background-c {
+    background: url("../../../img/background-c.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
 /* Separator */
 
 .emms__separator {
