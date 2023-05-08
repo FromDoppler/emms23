@@ -85,6 +85,7 @@ require_once('././config.php');
                 <?php include('./src/components/speakers.php') ?>
                 <!-- End list -->
             </div>
+            <div class="emms__background-c"></div>
         </section>
 
 

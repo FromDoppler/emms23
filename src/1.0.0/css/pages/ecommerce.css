@@ -43,6 +43,16 @@
     z-index: -1;
 }
 
+.emms__ecommerce .emms__calendar .emms__background-c{
+    width: 250px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(0%, 124%);
+    z-index: -1;
+}
+
 
 /* Central Video */
 
@@ -100,6 +110,13 @@
 
 
 /* ---------------------------------------------- Responsive ---------------------------------------------- */
+
+
+@media(max-width:1480px){
+    .emms__ecommerce .emms__calendar .emms__background-c{
+       display: none;
+    }
+}
 
 
 @media(max-width:1100px) {
