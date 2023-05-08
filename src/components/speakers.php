@@ -19,11 +19,11 @@
             <div class="emms__calendar__list__item__card">
                 <?php if ($speaker['exposes'] === "conference") : ?>
                     <div class="emms__calendar__list__item__card__label emms__calendar__list__item__card__label--interview">
-                        <p>Entrevista</p>
+                        <p>Conferencia</p>
                     </div>
                 <?php elseif ($speaker['exposes'] === "interview") : ?>
                     <div class="emms__calendar__list__item__card__label emms__calendar__list__item__card__label--conference">
-                        <p>Conferencia</p>
+                        <p>Entrevista</p>
                     </div>
                 <?php endif; ?>
                 <div class="emms__calendar__list__item__card__speaker">
@@ -81,11 +81,11 @@
             <div class="emms__calendar__list__item__card">
                 <?php if ($speaker['exposes'] === "conference") : ?>
                     <div class="emms__calendar__list__item__card__label emms__calendar__list__item__card__label--interview">
-                        <p>Entrevista</p>
+                        <p>Conferencia</p>
                     </div>
                 <?php elseif ($speaker['exposes'] === "interview") : ?>
                     <div class="emms__calendar__list__item__card__label emms__calendar__list__item__card__label--conference">
-                        <p>Conferencia</p>
+                        <p>Entrevista</p>
                     </div>
                 <?php endif; ?>
                 <div class="emms__calendar__list__item__card__speaker">
@@ -163,11 +163,11 @@
                 <div class="emms__calendar__list__item__card">
                     <?php if ($speaker['exposes'] === "conference") : ?>
                         <div class="emms__calendar__list__item__card__label emms__calendar__list__item__card__label--interview">
-                            <p>Entrevista</p>
+                            <p>Conferencia</p>
                         </div>
                     <?php elseif ($speaker['exposes'] === "interview") : ?>
                         <div class="emms__calendar__list__item__card__label emms__calendar__list__item__card__label--conference">
-                            <p>Conferencia</p>
+                            <p>Entrevista</p>
                         </div>
                     <?php endif; ?>
                     <div class="emms__calendar__list__item__card__speaker">
@@ -227,11 +227,11 @@
                 <div class="emms__calendar__list__item__card">
                     <?php if ($speaker['exposes'] === "conference") : ?>
                         <div class="emms__calendar__list__item__card__label emms__calendar__list__item__card__label--interview">
-                            <p>Entrevista</p>
+                            <p>Conferencia</p>
                         </div>
                     <?php elseif ($speaker['exposes'] === "interview") : ?>
                         <div class="emms__calendar__list__item__card__label emms__calendar__list__item__card__label--conference">
-                            <p>Conferencia</p>
+                            <p>Entrevista</p>
                         </div>
                     <?php endif; ?>
                     <div class="emms__calendar__list__item__card__speaker">
