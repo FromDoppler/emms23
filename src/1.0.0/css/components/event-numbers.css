@@ -126,37 +126,59 @@
     }
 }
 
-/* @media(max-width:620px) {
-    .emms__eventnumbers {
-        padding: 60px 0 30px 0;
-    }
 
-    .emms__eventnumbers .emms22__container--lg .parallax-waves {
-        display: none;
-    }
 
-    .emms__eventnumbers h2 {
-        font-size: 17px;
-        line-height: 19px;
-        max-width: 280px;
-        margin: 0 auto 40px auto;
-    }
+/* Large version */
 
-    .emms__eventnumbers h3 {
-        font-size: 17px;
-        line-height: 19px;
-        margin: 0 0 30px 0;
-    }
+.emms__eventnumbers--large ul li{
+    width: auto;
+    padding: 5px 77px;
+}
 
-    .emms__eventnumbers ul li {
-        margin: 0 0 35px 0;
-    }
+.emms__eventnumbers--large ul li:first-child{
+    width: auto;
+}
 
-    .emms__eventnumbers ul li::after {
-        display: none;
-    }
+.emms__eventnumbers--large ul li:first-child p::after{
+    content: "K";
+}
 
-    .emms__eventnumbers ul li p {
-        font-size: 40px;
+.emms__eventnumbers--large ul li p{
+    font-size: 96px;
+    color: #FF4FB6;
+}
+
+.emms__eventnumbers--large ul li span{
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #212121;
+    text-align: right;
+}
+
+@media(max-width:1350px){
+    .emms__eventnumbers--large ul li{
+        padding: 5px 40px;
     }
-} */
+    .emms__eventnumbers--large ul li p{
+        font-size: 80px;
+    }
+}
+
+@media(max-width:992px){
+    .emms__eventnumbers--large ul li {
+        padding: 5px 40px 40px 40px;
+    }
+    .emms__eventnumbers ul li span{
+        text-align: center;
+    }
+}
+
+@media(max-width:620px){
+    .emms__eventnumbers--large ul li p{
+        font-size: 60px;
+    }
+    .emms__eventnumbers--large ul li span{
+        font-size: 16px;
+    }
+}
