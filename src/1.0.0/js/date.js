@@ -3,7 +3,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const dateStr = '2023-05-16 12:00:00';
     const utcDate = '2023-05-16T15:00:00.000Z';
-    const isEnablePlusDts = false;
     var eventDate = new Date(utcDate);
     const today = new Date();
 
@@ -75,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             flagContainers.forEach(flagContainer => {
                 flagContainer.innerHTML = '';
                 flagContainer.appendChild(img);
-                flagContainer.innerHTML += '(' + countryCode + ') ' + '16' + ':00 (Madrid)';
+                flagContainer.innerHTML += '(' + countryCode + ') ' + '17' + ':00 (Madrid)';
             });
         }
 
@@ -95,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let hours = date.getHours().toString();
         hours = (hours.length < 2) ? '0' + hours : hours;
 
-        if ((countryCode === "MX" || countryCode === "ES") && isEnablePlusDts) {
+        if (countryCode === "ES") {
             changeCountryHour(countryCode, flagContainers, img)
         } else {
             flagContainers.forEach(flagContainer => {
@@ -128,10 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
             span.appendChild(img)
             let hour = eventHours[index].getHours().toString();
             hour = (hour.length < 2) ? '0' + hour : hour;
-
             let min = eventHours[index].getMinutes().toString();;
             min = (min.length < 2) ? min + '0' : min;
-
             span.innerHTML += '(' + (countryCode === 'AR' ? 'ARG' : countryCode) + ')' + ' ' + hour + ':' + min;
         });
     }
@@ -146,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let numb = txt.match(/\d/g);
             numb = numb.join("");
             let hourAndMin = numb.match(/.{1,2}/g);
-            let newDate = new Date(`2022-11-09T${hourAndMin[0]}:${hourAndMin[1]}:00.000-03:00`);
+            let newDate = new Date(`2023-05-16T${hourAndMin[0]}:${hourAndMin[1]}:00.000-03:00`);
             eventHours.push(structuredClone(newDate));
         });
 
@@ -157,3 +154,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
