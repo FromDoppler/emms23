@@ -15,6 +15,7 @@ try {
     }
     $result['current_phase'] = array_search(1, $fetched_row[0]);
     $result['transition'] = $fetched_row[0]['transition'];
+    $result['transmission'] = $fetched_row[0]['transmission'];
     echo json_encode($result);
 } catch (Exception $e) {
     processError("getPhase", $e->getMessage(), []);

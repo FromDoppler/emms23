@@ -1,5 +1,7 @@
 import {getPhase} from './services/getPhase.js'
 import {setPhase} from './services/setPhase.js'
+import {setTransmission} from './services/setPhase.js'
+
 
 export const showPhasesListPage = async () => {
     const phasesListUrl = 'src/modules/settings/phases/phases-list.html';
@@ -17,9 +19,21 @@ export const showPhasesListPage = async () => {
         sendDataCurrentPhase(e,"digital-trends");
     });
 
+    const ecommerceTransmissionForm = document.getElementById('ecommerce_transmission');
+    ecommerceTransmissionForm.addEventListener('submit', function (e) {
+        sendDataCurrentTransmission(e,"ecommerce");
+    });
+
+    const digitalTrendsTransmissionForm = document.getElementById('digital-trends_transmission');
+    digitalTrendsTransmissionForm.addEventListener('submit', function (e) {
+        sendDataCurrentTransmission(e,"digital-trends");
+    });
+
     hideAlerts();
     checkRadiosPhase("ecommerce");
     checkRadiosPhase("digital-trends");
+    checkRadiosTransmission("ecommerce");
+    checkRadiosTransmission("digital-trends");
 }
 
 
@@ -28,6 +42,10 @@ function hideAlerts() {
     eco.style.display = 'none';
     const dt = document.getElementById('digital-trends_current-alert-success');
     dt.style.display = 'none';
+    const ecoLive = document.getElementById('ecommerce_transmission-alert-success');
+    ecoLive.style.display = 'none';
+    const dtLive = document.getElementById('digital-trends_transmission-alert-success');
+    dtLive.style.display = 'none';
 }
 
 function showAlert(id) {
@@ -73,4 +91,16 @@ const checkRadiosPhase = async (event) => {
         document.getElementById(event+"_toggle-live").checked = true;
     else
         document.getElementById(event+"_toggle-live").checked = false;
+}
+
+const sendDataCurrentTransmission = async (e, event) => {
+    e.preventDefault();
+    const transmission = document.querySelector('input[name="'+event+'_transmission"]:checked').value;
+    await setTransmission(event, transmission);
+    showAlert(event+'_transmission-alert-success');
+}
+
+const checkRadiosTransmission = async (event) => {
+    const objResult = await getPhase(event);
+    document.getElementById(event+'_'+objResult.transmission).checked = true;
 }
