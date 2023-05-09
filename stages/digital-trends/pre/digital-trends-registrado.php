@@ -2,6 +2,12 @@
 require_once('././config.php');
 ?>
 
+<?php
+require_once('./utils/DB.php');
+$db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+$settings_phase = $db->getCurrentPhase('ecommerce')[0]; ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +18,18 @@ require_once('././config.php');
 
 <body class="emms__digitaltrends emms__digitaltrends-logueado">
     <?php include_once('././src/components/gtm.php'); ?>
+
+    <?php if (($settings_phase['event'] === "ecommerce") && ($settings_phase['transition'] === "live-on")) : ?>
+        <!-- Hellobar -->
+        <div class="emms__hellobar">
+            <div class="emms__hellobar__container emms__fade-in">
+                <p><strong>¡YA COMENZÓ EL EMMS E-COMMERCE!</strong></p>
+                <a href="./ecommerce">SÚMATE AHORA</a>
+            </div>
+        </div>
+    <?php endif; ?>
+
+
     <!-- Header -->
     <header class="emms__header">
         <div class="emms__container--lg emms__fade-in">
@@ -23,11 +41,7 @@ require_once('././config.php');
                 <ul class="emms__header__nav__menu">
                     <li><a href="/">home</a></li>
                     <li><a href="/ecommerce">e-commerce</a></li>
-                    <li class="emms__header__nav__menu__dropdown"><a href="#" class="active">digital trends</a>
-                        <ul class="emms__header__nav__submenu">
-                            <li><a href="#agenda">AGENDA</a></li>
-                            <li><a href="#aprende-con-doppler">APRENDE CON DOPPLER</a></li>
-                        </ul>
+                    <li><a href="#" class="active">digital trends</a>
                     </li>
                     <li><a href="/sponsors">contenido exclusivo</a></li>
                 </ul>
@@ -62,51 +76,32 @@ require_once('././config.php');
         <!-- Hero -->
         <section class="emms__hero-registration--registered">
             <div class="emms__container--md">
-                <h1 class="emms__fade-top">¡Ya eres parte de Digital Trends!</h1>
-                <p class="emms__fade-in">Te damos la bienvenida a este gran evento. <a href="#agenda">Revisa la Agenda</a> que hemos planeado para ti y prepárate para vivir el primer EMMS para Tiendas Online. ¡Gracias por sumarte! :)</p>
+                <h1 class="emms__fade-top">¡Ya eres parte del EMMS Digital Trends 2023!</h1>
+                <?php if (($settings_phase['event'] === "ecommerce") && ($settings_phase['transition'] === "live-on")) : ?>
+                    <p class="emms__fade-in">Mantente pendiente de tu casilla de correo y descubrirás todas las novedades del evento. Mientras tanto, te invitamos al <a href="./ecommerce">EMMS E-commerce 2023</a> ¡que ya ha comenzado!</p>
+                <?php else : ?>
+                    <p>Texto cuando el ecommerce no esta en vivo (transition y post)</p>
+                <?php endif; ?>
             </div>
         </section>
 
-        <!-- Calendar -->
-        <section class="emms__calendar" id="agenda">
-            <div class="emms__container--lg">
-                <div class="emms__calendar__title emms__fade-in">
-                    <h2>Conoce a los Speakers de Digital Trends 2023</h2>
-                    <p>Estos son los <strong>ponentes</strong> que nos acompañarán en esta edición y las <strong>temáticas</strong> de sus charlas. </p>
+        <?php if (($settings_phase['event'] === "ecommerce") && ($settings_phase['transition'] === "live-on")) : ?>
+            <!-- Go live -->
+            <section class="emms__golive-banner">
+                <div class="emms__background-a"></div>
+                <div class="emms__container--md">
+                    <div class="emms__golive-banner__picture emms__fade-in">
+                        <img src="src/img/mic.png" alt="En vivo">
+                    </div>
+                    <div class="emms__golive-banner__text emms__fade-in">
+                        <span>YA COMENZÓ</span>
+                        <h2>Súmate ahora al EMMS E-commerce</h2>
+                        <p>Descubre la Agenda y las temáticas que estamos abordando en <strong>el mayor evento para Tiendas Online</strong>. Ingresa ahora y aprovecha todas las Conferencias, Entrevistas y Casos de Éxito que tenemos para ti.</p>
+                        <a href="/ecommerce" class="emms__cta">ACCEDE GRATIS</a>
+                    </div>
                 </div>
-                <!-- List -->
-                <ul class="emms__calendar__list emms__calendar__list--dk emms__fade-in">
-                    <?php include('./src/components/speakers.php') ?>
-                </ul>
-                <ul class="emms__calendar__list emms__calendar__list--mb main-carousel emms__fade-in" data-flickity>
-                    <?php include('./src/components/speakers.php') ?>
-                </ul>
-                <!-- End list -->
-                <div class="emms__calendar__bottom emms__fade-in">
-                    <p>¡Presta atención! <strong>Seguimos sumando conferencias a la agenda</strong>. Te avisaremos de esto y mucho más vía Email.</p>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Separator -->
-        <div class="emms__separator"></div>
-
-
-        <!-- Premium content -->
-        <section class="emms__premium-content">
-            <div class="emms__container--lg">
-                <div class="emms__premium-content__text emms__fade-in">
-                    <h2>Desbloquea Contenido Premium ¡gratis! </h2>
-                    <p>Descubre <strong>recursos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas ponerlos en práctica y potenciar tu Tienda Online.</p>
-                    <a href="./sponsors-registrado" class="emms__cta emms__fade-in">DESCÚBRELO AQUÍ</a>
-                </div>
-                <div class="emms__premium-content__picture emms__fade-in">
-                    <img src="src/img/download--locked.png" alt="Contenido Premium">
-                </div>
-            </div>
-        </section>
-
+            </section>
+        <?php endif; ?>
 
         <!-- Doppler Banner -->
         <?php include_once('././src/components/doppler-academy-banner.php'); ?>
