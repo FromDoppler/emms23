@@ -1,7 +1,7 @@
 import {getPhase} from './services/getPhase.js'
 import {setPhase} from './services/setPhase.js'
 import {setTransmission} from './services/setPhase.js'
-
+import {sendRefresh} from './services/sendRefresh.js'
 
 export const showPhasesListPage = async () => {
     const phasesListUrl = 'src/modules/settings/phases/phases-list.html';
@@ -80,6 +80,7 @@ const sendDataCurrentPhase = async (e, event) => {
     e.preventDefault();
     await setPhase(event, selectedPhase, transition);
     showAlert(event+'_current-alert-success');
+    await sendRefresh();
 }
 
 //getPhase
@@ -98,6 +99,10 @@ const sendDataCurrentTransmission = async (e, event) => {
     const transmission = document.querySelector('input[name="'+event+'_transmission"]:checked').value;
     await setTransmission(event, transmission);
     showAlert(event+'_transmission-alert-success');
+    const objResult = await getPhase(event);
+    if (objResult.transition === "live-on") {
+        await sendRefresh();
+    }
 }
 
 const checkRadiosTransmission = async (event) => {
