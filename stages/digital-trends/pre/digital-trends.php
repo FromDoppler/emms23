@@ -2,12 +2,24 @@
 require_once('././config.php');
 ?>
 
+<?php
+require_once('./utils/DB.php');
+$db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+$settings_phase = $db->getCurrentPhase('ecommerce')[0];
+$db->close(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <?php include_once('././src/components/head-ecommerce.php'); ?>
+    <?php include_once('././src/components/head-digitaltrends.php'); ?>
     <?php include_once('././src/components/head.php'); ?>
+    <script type="module">
+        import {
+            hiddenOrShowUserUI
+        } from './src/<?= VERSION ?>/js/user.js';
+        hiddenOrShowUserUI('ecommerce');
+    </script>
 </head>
 
 <body class="emms__digitaltrends">
@@ -22,6 +34,11 @@ require_once('././config.php');
             <div class="emms__header__logo emms__header__logo--ecommerce">
                 <a href="/"><img src="src/img/logos/logo-emms-digitaltrends.png" alt="Digital Trends 2023"></a>
             </div>
+            <?php if (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on")) : ?>
+                <div class="emms__header__live">
+                    <p>¡ESTAMOS EN VIVO!</p>
+                </div>
+            <?php endif; ?>
             <a class="emms__header__nav--mb" id="btn-burger"></a>
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
                 <ul class="emms__header__nav__menu">
@@ -40,17 +57,17 @@ require_once('././config.php');
         <a id="btn-share" class="emms__share__open-list"><img src="src/img/icons/icon-share.svg" alt="Share"></a>
         <ul id="list-share" class="emms__share__list">
             <li>
-                <a href="javascript: void(0);" onclick="window.open ('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgoemms.com%2Fecommerce', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
+                <a href="javascript: void(0);" onclick="window.open ('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgoemms.com%2Findex.php', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
                     <img src="src/img/Facebook-w.svg" alt="Facebook">
                 </a>
             </li>
             <li>
-                <a href="javascript: void(0);" onclick="window.open ('https://twitter.com/intent/tweet?url=https%3A%2F%2Fgoemms.com%2Fecommerce&text=Vuelve%20el%20EMMS%20%C2%A1y%20con%20una%20nueva%20edici%C3%B3n!%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20la%20industria%20E-commerce.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20lugar%20ahora!%20', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
+                <a href="javascript: void(0);" onclick="window.open ('https://twitter.com/intent/tweet?url=https%3A%2F%2Fgoemms.com%2Findex.php&text=Llega%20una%20nueva%20edici%C3%B3n%20del%20EMMS.%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20Marketing%20Digital.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20plaza!', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
                     <img src="src/img/Twitter-w.svg" alt="Twitter">
                 </a>
             </li>
             <li>
-                <a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgoemms.com%2Fecommerce&title=Vuelve%20el%20EMMS%20%C2%A1y%20con%20una%20nueva%20edici%C3%B3n!%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20la%20industria%20E-commerce.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20lugar%20ahora!%20', 'Linkedin', 'toolbar=0, status=0, width=550, height=550');">
+                <a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgoemms.com%2Findex.php&title=Llega%20una%20nueva%20edici%C3%B3n%20del%20EMMS.%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20Marketing%20Digital.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20plaza!', 'Linkedin', 'toolbar=0, status=0, width=550, height=550');">
                     <img src="src/img/LinkedIn-w.svg" alt="LinkedIn">
                 </a>
             </li>
@@ -59,8 +76,8 @@ require_once('././config.php');
 
     <main>
 
-        <!-- Hero -->
-        <section class="emms__hero-registration emms__hero-registration--with-counter" id="registro">
+        <!-- Hero with form -->
+        <section class="emms__hero-registration emms__hero-registration--with-counter eventHiddenElements" id="registro">
             <div class="emms__hero-registration__columns">
                 <div class="emms__hero-registration__text emms__fade-in">
                     <h1><em>EVENTO ONLINE Y GRATUITO - OCTUBRE</em> ¡Vuelve el EMMS!</h1>
@@ -104,7 +121,7 @@ require_once('././config.php');
                             </li>
                         </ul>
                         <div class="emms__form__btn">
-                            <button class="emms__cta" id="register-button" type="button"><span class="button__text">ASEGURA TU CUPO GRATIS</span></button>
+                            <button class="emms__cta" id="register-button" type="button"><span class="button__text">REGÍSTRATE GRATIS</span></button>
                         </div>
                         <div class="emms__form__legal close">
                             <a class="emms__form__legal__btn" id="legalBtn">Información básica sobre privacidad </a>
@@ -122,6 +139,19 @@ require_once('././config.php');
                     </form>
                     <!-- End form -->
                 </div>
+            </div>
+            <div class="emms__hero-registration__bottom emms__fade-in">
+                <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
+                <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
+            </div>
+        </section>
+
+        <!-- Hero without form-->
+        <section class="emms__hero-registration emms__hero-registration--noform eventHiddenElements eventShowElements" id="registro">
+            <div class="emms__hero-registration__text">
+                <h1>¡Vuelve el EMMS!</h1>
+                <p>¡Regístrate ahora y desbloquea la sección de contenidos premium!</p>
+                <button type="button" class="emms__cta"><span class="button__text">REGÍSTRATE GRATIS</span></button>
             </div>
             <div class="emms__hero-registration__bottom emms__fade-in">
                 <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
@@ -245,7 +275,7 @@ require_once('././config.php');
                     <p>Descubre en este vídeo por qué el EMMS Digital Trends 2023 es el lugar ideal para capacitarte e inspirarte con las últimas tendencias en Marketing Digital</p>
                 </div>
                 <div class="emms__centralvideo__video emms__fade-in">
-                    <video src="src/img/EmmsEcommerce.mp4" controls></video>
+                    <video src="src/img/EmmsDigitalTrends.mp4" controls></video>
                 </div>
                 <div class="emms__centralvideo__cta emms__fade-in">
                     <a href="#registro" class="emms__cta">REGÍSTRATE GRATIS</a>

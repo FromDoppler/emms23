@@ -7,9 +7,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 }
 
-.emms__hero-conference h1{
+.emms__hero-conference h1 {
     animation-delay: .1s;
 }
 
@@ -19,31 +20,31 @@
     animation-delay: .2s;
 }
 
-.emms__hero-conference__video .emms__form{
+.emms__hero-conference__video .emms__form {
     padding: 37px 50% 37px 37px;
     text-align: left;
 }
 
-.emms__hero-conference__video .emms__form__legal{
+.emms__hero-conference__video .emms__form__legal {
     position: absolute;
     top: 0;
     right: 37px;
     width: 40%;
 }
 
-.emms__hero-conference__video__register{
+.emms__hero-conference__video__register {
     text-align: center;
     background: #310E44E5;
     padding: 150px 0;
 }
 
-.emms__hero-conference__video__register__content{
+.emms__hero-conference__video__register__content {
     max-width: 560px;
     width: 90%;
     margin: 0 auto;
 }
 
-.emms__hero-conference__video__register h3{
+.emms__hero-conference__video__register h3 {
     font-size: 30px;
     line-height: 32px;
     font-weight: 700;
@@ -51,13 +52,13 @@
     margin: 0 0 14px 0;
 }
 
-.emms__hero-conference__video__register p{
+.emms__hero-conference__video__register p {
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
 }
 
-.emms__hero-conference__video__register .emms__cta{
+.emms__hero-conference__video__register .emms__cta {
     margin: 50px 0 0 0;
 }
 
@@ -135,16 +136,16 @@
         padding: 125px 0 70px 0;
     }
 
-    .emms__hero-conference__video .emms__form{
+    .emms__hero-conference__video .emms__form {
         padding: 25px;
     }
 
-    .emms__hero-conference__video .emms__form__legal{
+    .emms__hero-conference__video .emms__form__legal {
         position: initial;
         width: 100%;
     }
 
-    .emms__hero-conference__video__register{
+    .emms__hero-conference__video__register {
         padding: 100px 0;
     }
 
@@ -166,6 +167,9 @@
         display: none;
     }
 }
+
+
+
 
 
 /* ---------------- With chat ---------------- */
@@ -216,6 +220,8 @@
 }
 
 
+
+
 /* ---------------- With bio ---------------- */
 
 
@@ -262,7 +268,7 @@
     transition-duration: 0.2s;
 }
 
-.emms__hero-conference--bio .emms__hero-conference__aside ul li a:hover{
+.emms__hero-conference--bio .emms__hero-conference__aside ul li a:hover {
     opacity: .8;
     transition-duration: 0.2s;
 }
@@ -296,5 +302,115 @@
     .emms__hero-conference--bio .emms__hero-conference__aside p {
         font-size: 16px;
         line-height: 21px;
+    }
+}
+
+
+
+
+
+/* ------ Transition ------ */
+
+.emms__hero-conference__video.emms__hero-conference__video--transition {
+    background: #fff;
+    padding: 150px 50px 150px 120px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.emms__hero-conference__video.emms__hero-conference__video--transition::before {
+    content: "";
+    position: absolute;
+    left: -185px;
+    bottom: -50px;
+    width: 443px;
+    height: 443px;
+    background: url("../../../img/mic2.png") no-repeat;
+    background-size: contain;
+}
+
+.emms__hero-conference__video.emms__hero-conference__video--transition h2 {
+    font-size: 44px;
+    line-height: 47px;
+    font-weight: 800;
+    color: #1C0329;
+}
+
+.emms__hero-conference__video.emms__hero-conference__video--transition small {
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    color: #333333;
+}
+
+.emms__hero-conference__video.emms__hero-conference__video--transition small a {
+    color: #008046;
+    font-weight: 700;
+}
+
+.emms__hero-conference__video.emms__hero-conference__video--transition small a:hover {
+    text-decoration: underline;
+}
+
+.emms__hero-conference__aside.emms__hero-conference__aside--transition p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+}
+
+.emms__hero-conference__aside.emms__hero-conference__aside--transition .emms__cta {
+    margin: 34px 0 0 0;
+    text-align: center;
+}
+
+@media(max-width:1100px) {
+    .emms__hero-conference__video.emms__hero-conference__video--transition {
+        padding: 100px 50px 100px 120px;
+    }
+}
+
+@media(max-width:992px) {
+    .emms__hero-conference__video.emms__hero-conference__video--transition {
+        padding: 90px 50px 100px 60px;
+    }
+
+    .emms__hero-conference__video.emms__hero-conference__video--transition::before {
+        left: -72px;
+        bottom: -20px;
+        width: 180px;
+        height: 180px;
+    }
+
+    .emms__hero-conference__video.emms__hero-conference__video--transition h2 {
+        font-size: 26px;
+        line-height: 30px;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    .emms__hero-conference__video.emms__hero-conference__video--transition small {
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 380px;
+        margin: 20px auto 0 auto;
+    }
+
+    .emms__hero-conference--chat .emms__hero-conference__aside.emms__hero-conference__aside--transition {
+        display: block;
+        width: 100%;
+        margin: 50px 0 0 0;
+    }
+}
+
+@media(max-width:620px){
+    .emms__hero-conference__video.emms__hero-conference__video--transition {
+        padding: 70px 50px 70px 60px;
+    }
+    .emms__hero-conference__video.emms__hero-conference__video--transition h2 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .emms__hero-conference__video.emms__hero-conference__video--transition small {
+        font-size: 13px;
     }
 }

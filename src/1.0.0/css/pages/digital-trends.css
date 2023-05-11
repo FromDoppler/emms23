@@ -18,7 +18,7 @@
     }
 }
 
-.emms__digitaltrends .emms__hero-registration .emms__hero-registration__text{
+.emms__digitaltrends .emms__hero-registration .emms__hero-registration__text {
     width: 38%;
     padding: 60px 0 0 0;
 }
@@ -34,11 +34,11 @@
 
 /* Calendar */
 
-.emms__digitaltrends .emms__calendar{
+.emms__digitaltrends .emms__calendar {
     position: relative;
 }
 
-.emms__digitaltrends .emms__calendar .emms__background-b{
+.emms__digitaltrends .emms__calendar .emms__background-b {
     width: 627px;
     height: 445px;
     position: absolute;
@@ -90,24 +90,31 @@
 
 /* Logueado */
 
-.emms__digitaltrends-logueado .emms__calendar__title{
+
+.emms__digitaltrends-logueado .emms__hero-registration--registered .emms__container--md {
+    max-width: 400px;
+}
+
+.emms__digitaltrends-logueado .emms__calendar__title {
     max-width: 560px;
     animation-delay: .6s;
 }
 
-.emms__digitaltrends-logueado .emms__calendar__list{
+.emms__digitaltrends-logueado .emms__calendar__list {
     animation-delay: .7s;
 }
 
-.emms__digitaltrends-logueado .emms__calendar__bottom{
+.emms__digitaltrends-logueado .emms__calendar__bottom {
     max-width: 460px;
 }
+
 
 
 /* ---------------------------------------------- Responsive ---------------------------------------------- */
 
 
 @media(max-width:1100px) {
+
     .emms__digitaltrends .emms__centralvideo .emms__background-b,
     .emms__digitaltrends .emms__centralvideo .emms__background-a {
         display: none;
@@ -116,7 +123,7 @@
 
 @media(max-width:992px) {
 
-    .emms__digitaltrends .emms__hero-registration .emms__hero-registration__text{
+    .emms__digitaltrends .emms__hero-registration .emms__hero-registration__text {
         width: 100%;
         padding: 0;
     }
@@ -125,12 +132,12 @@
         margin: 0;
     }
 
-    .emms__digitaltrends .emms__calendar .emms__background-b{
+    .emms__digitaltrends .emms__calendar .emms__background-b {
         display: none;
     }
 }
 
-@media(max-width:400px){
+@media(max-width:400px) {
     .emms__digitaltrends .emms__userscomments .emms__background-b:nth-child(2) {
         transform: translate(-60%, 188%);
     }
@@ -143,11 +150,11 @@
 
 /* No Logueado */
 
-.emms__digitaltrends--during .emms__hero-registration .emms__hero-registration__columns{
+.emms__digitaltrends--during .emms__hero-registration .emms__hero-registration__columns {
     align-items: center;
 }
 
-.emms__digitaltrends--during .emms__hero-registration__text p.emms__hero-registration__text__live{
+.emms__digitaltrends--during .emms__hero-registration__text p.emms__hero-registration__text__live {
     font-size: 16px;
     font-weight: 700;
     color: #ED1E79;
@@ -157,7 +164,7 @@
     display: none;
 }
 
-.emms__digitaltrends--during .emms__hero-registration__text p.emms__hero-registration__text__live::before{
+.emms__digitaltrends--during .emms__hero-registration__text p.emms__hero-registration__text__live::before {
     content: "";
     position: absolute;
     left: 0;
@@ -168,16 +175,16 @@
     background-size: contain;
 }
 
-.emms__digitaltrends--during .emms__hero-registration.emms__hero-registration--noform{
+.emms__digitaltrends--during .emms__hero-registration.emms__hero-registration--noform {
     padding: 220px 0 158px 0;
 }
 
-.emms__digitaltrends--during .emms__hero-registration.emms__hero-registration--noform.emms__hero-registration--with-counter{
+.emms__digitaltrends--during .emms__hero-registration.emms__hero-registration--noform.emms__hero-registration--with-counter {
     padding: 220px 0 98px 0;
 }
 
-@media(max-width:992px){
-    .emms__digitaltrends--during .emms__hero-registration__text p.emms__hero-registration__text__live{
+@media(max-width:992px) {
+    .emms__digitaltrends--during .emms__hero-registration__text p.emms__hero-registration__text__live {
         display: inline-block;
     }
 }
@@ -185,17 +192,17 @@
 
 /* Logueado */
 
-.emms__digitaltrends-logueado--during .emms__premium-content .emms__background-a{
+.emms__digitaltrends-logueado--during .emms__premium-content .emms__background-a {
     width: 893px;
     height: 819px;
     position: absolute;
     left: 0;
     top: 0;
-    transform: translate(-65%,0%) rotate(180deg);
+    transform: translate(-65%, 0%) rotate(180deg);
 }
 
-@media(max-width:1280px){
-    .emms__digitaltrends-logueado--during .emms__premium-content .emms__background-a{
+@media(max-width:1280px) {
+    .emms__digitaltrends-logueado--during .emms__premium-content .emms__background-a {
         display: none;
     }
 }
@@ -208,11 +215,11 @@
 
 /* No Logueado */
 
-.emms__digitaltrends--post .emms__hero-registration .emms__hero-registration__columns{
+.emms__digitaltrends--post .emms__hero-registration .emms__hero-registration__columns {
     align-items: center;
 }
 
-.emms__digitaltrends--post .emms__hero-registration__text p.emms__hero-registration__text__live{
+.emms__digitaltrends--post .emms__hero-registration__text p.emms__hero-registration__text__live {
     font-size: 16px;
     font-weight: 700;
     color: #ED1E79;
@@ -222,7 +229,7 @@
     display: none;
 }
 
-.emms__digitaltrends--post .emms__hero-registration__text p.emms__hero-registration__text__live::before{
+.emms__digitaltrends--post .emms__hero-registration__text p.emms__hero-registration__text__live::before {
     content: "";
     position: absolute;
     left: 0;
@@ -233,16 +240,16 @@
     background-size: contain;
 }
 
-.emms__digitaltrends--post .emms__hero-registration.emms__hero-registration--noform{
+.emms__digitaltrends--post .emms__hero-registration.emms__hero-registration--noform {
     padding: 220px 0 158px 0;
 }
 
-.emms__digitaltrends--post .emms__hero-registration.emms__hero-registration--noform.emms__hero-registration--with-counter{
+.emms__digitaltrends--post .emms__hero-registration.emms__hero-registration--noform.emms__hero-registration--with-counter {
     padding: 220px 0 98px 0;
 }
 
-@media(max-width:992px){
-    .emms__digitaltrends--post .emms__hero-registration__text p.emms__hero-registration__text__live{
+@media(max-width:992px) {
+    .emms__digitaltrends--post .emms__hero-registration__text p.emms__hero-registration__text__live {
         display: inline-block;
     }
 }

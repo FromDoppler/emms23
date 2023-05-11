@@ -5,30 +5,26 @@ require_once('././config.php');
 <?php
 require_once('./utils/DB.php');
 $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-$settings_phase = $db->getCurrentPhase('ecommerce')[0]; ?>
+$settings_phase = $db->getCurrentPhase('ecommerce')[0];
+$db->close(); ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <?php include_once('././src/components/head-ecommerce.php'); ?>
+    <?php include_once('././src/components/head-digitaltrends.php'); ?>
     <?php include_once('././src/components/head.php'); ?>
+    <script type="module">
+        import {
+            hiddenOrShowUserUI
+        } from './src/<?= VERSION ?>/js/user.js';
+        hiddenOrShowUserUI('ecommerce');
+    </script>
 </head>
 
 <body class="emms__digitaltrends emms__digitaltrends-logueado">
     <?php include_once('././src/components/gtm.php'); ?>
-
-    <?php if (($settings_phase['event'] === "ecommerce") && ($settings_phase['transition'] === "live-on")) : ?>
-        <!-- Hellobar -->
-        <div class="emms__hellobar">
-            <div class="emms__hellobar__container emms__fade-in">
-                <p><strong>¡YA COMENZÓ EL EMMS E-COMMERCE!</strong></p>
-                <a href="./ecommerce">SÚMATE AHORA</a>
-            </div>
-        </div>
-    <?php endif; ?>
-
 
     <!-- Header -->
     <header class="emms__header">
@@ -36,6 +32,11 @@ $settings_phase = $db->getCurrentPhase('ecommerce')[0]; ?>
             <div class="emms__header__logo emms__header__logo--ecommerce">
                 <a href="/"><img src="src/img/logos/logo-emms-digitaltrends.png" alt="Digital Trends 2023"></a>
             </div>
+            <?php if (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on")) : ?>
+                <div class="emms__header__live">
+                    <p>¡ESTAMOS EN VIVO!</p>
+                </div>
+            <?php endif; ?>
             <a class="emms__header__nav--mb" id="btn-burger"></a>
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
                 <ul class="emms__header__nav__menu">
@@ -54,17 +55,17 @@ $settings_phase = $db->getCurrentPhase('ecommerce')[0]; ?>
         <a id="btn-share" class="emms__share__open-list"><img src="src/img/icons/icon-share.svg" alt="Share"></a>
         <ul id="list-share" class="emms__share__list">
             <li>
-                <a href="javascript: void(0);" onclick="window.open ('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgoemms.com%2Fecommerce', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
+                <a href="javascript: void(0);" onclick="window.open ('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgoemms.com%2Findex.php', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
                     <img src="src/img/Facebook-w.svg" alt="Facebook">
                 </a>
             </li>
             <li>
-                <a href="javascript: void(0);" onclick="window.open ('https://twitter.com/intent/tweet?url=https%3A%2F%2Fgoemms.com%2Fecommerce&text=Vuelve%20el%20EMMS%20%C2%A1y%20con%20una%20nueva%20edici%C3%B3n!%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20la%20industria%20E-commerce.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20lugar%20ahora!%20', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
+                <a href="javascript: void(0);" onclick="window.open ('https://twitter.com/intent/tweet?url=https%3A%2F%2Fgoemms.com%2Findex.php&text=Llega%20una%20nueva%20edici%C3%B3n%20del%20EMMS.%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20Marketing%20Digital.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20plaza!', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
                     <img src="src/img/Twitter-w.svg" alt="Twitter">
                 </a>
             </li>
             <li>
-                <a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgoemms.com%2Fecommerce&title=Vuelve%20el%20EMMS%20%C2%A1y%20con%20una%20nueva%20edici%C3%B3n!%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20la%20industria%20E-commerce.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20lugar%20ahora!%20', 'Linkedin', 'toolbar=0, status=0, width=550, height=550');">
+                <a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgoemms.com%2Findex.php&title=Llega%20una%20nueva%20edici%C3%B3n%20del%20EMMS.%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20Marketing%20Digital.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20plaza!', 'Linkedin', 'toolbar=0, status=0, width=550, height=550');">
                     <img src="src/img/LinkedIn-w.svg" alt="LinkedIn">
                 </a>
             </li>
@@ -77,15 +78,16 @@ $settings_phase = $db->getCurrentPhase('ecommerce')[0]; ?>
         <section class="emms__hero-registration--registered">
             <div class="emms__container--md">
                 <h1 class="emms__fade-top">¡Ya eres parte del EMMS Digital Trends 2023!</h1>
-                <?php if (($settings_phase['event'] === "ecommerce") && ($settings_phase['transition'] === "live-on")) : ?>
+                <?php if (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on")) : ?>
                     <p class="emms__fade-in">Mantente pendiente de tu casilla de correo y descubrirás todas las novedades del evento. Mientras tanto, te invitamos al <a href="./ecommerce">EMMS E-commerce 2023</a> ¡que ya ha comenzado!</p>
                 <?php else : ?>
-                    <p>Texto cuando el ecommerce no esta en vivo (transition y post)</p>
+                    <p>Mantente pendiente de tu casilla de correo y descubrirás todas las novedades del evento.</p>
                 <?php endif; ?>
             </div>
         </section>
 
-        <?php if (($settings_phase['event'] === "ecommerce") && ($settings_phase['transition'] === "live-on")) : ?>
+
+        <?php if (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1)) : ?>
             <!-- Go live -->
             <section class="emms__golive-banner">
                 <div class="emms__background-a"></div>
@@ -101,7 +103,38 @@ $settings_phase = $db->getCurrentPhase('ecommerce')[0]; ?>
                     </div>
                 </div>
             </section>
+        <?php elseif (($settings_phase['event'] === "ecommerce") && ($settings_phase['post'] === 1)) : ?>
+            <!-- Go live -->
+            <section class="emms__golive-banner eventHiddenElements">
+                <div class="emms__background-a"></div>
+                <div class="emms__container--md">
+                    <div class="emms__golive-banner__picture emms__fade-in">
+                        <img src="src/img/mic.png" alt="En vivo">
+                    </div>
+                    <div class="emms__golive-banner__text emms__fade-in">
+                        <h2>Descubre el EMMS E-commerce</h2>
+                        <p>Ahora también podrás inspirarte y aprender con un evento exclusivo pensado para tu Tienda Online. Ingresa ahora y aprovecha todas las Conferencias, Entrevistas y Casos de Éxito que tenemos para ti.</p>
+                        <a href="/ecommerce" class="emms__cta">ACCEDE GRATIS</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Separator -->
+            <div class="emms__separator eventHiddenElements"></div>
+            <!-- Premium content -->
+            <section class="emms__premium-content eventShowElements">
+                <div class="emms__container--lg">
+                    <div class="emms__premium-content__text emms__fade-in">
+                        <h2>Desbloquea Contenido Premium ¡gratis! </h2>
+                        <p>Descubre <strong>recursos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas ponerlos en práctica y potenciar tu negocio.</p>
+                        <a href="./sponsors" class="emms__cta emms__fade-in">ACCEDE AHORA</a>
+                    </div>
+                    <div class="emms__premium-content__picture emms__fade-in">
+                        <img src="src/img/download--locked.png" alt="Contenido Premium">
+                    </div>
+                </div>
+            </section>
         <?php endif; ?>
+
 
         <!-- Doppler Banner -->
         <?php include_once('././src/components/doppler-academy-banner.php'); ?>
