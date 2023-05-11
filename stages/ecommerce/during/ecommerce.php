@@ -2,6 +2,12 @@
 require_once('././config.php');
 ?>
 
+<?php
+require_once('./utils/DB.php');
+$db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+$settings_phase = $db->getCurrentPhase('ecommerce')[0];
+$db->close();?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,9 +30,11 @@ require_once('././config.php');
             <div class="emms__header__logo emms__header__logo--ecommerce">
                 <a href="/"><img src="src/img/logos/logo-emms-ecommerce.png" alt="Emms Ecommerce 2023"></a>
             </div>
-            <div class="emms__header__live">
-                <p>¡ESTAMOS EN VIVO!</p>
-            </div>
+            <?php if (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on")) : ?>
+                <div class="emms__header__live">
+                    <p>¡ESTAMOS EN VIVO!</p>
+                </div>
+            <?php endif; ?>
             <a class="emms__header__nav--mb" id="btn-burger"></a>
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
                 <ul class="emms__header__nav__menu">
@@ -73,8 +81,8 @@ require_once('././config.php');
             <div class="emms__hero-registration__columns">
                 <div class="emms__hero-registration__text emms__fade-in">
                     <p class="emms__hero-registration__text__live">EN VIVO</p>
-                    <h1><em>EVENTO ONLINE Y GRATUITO - 16 DE MAYO</em> EMMS E-commerce 2023</h1>
-                    <p>¡El EMMS evoluciona! Ahora podrás inspirarte y aprender con un evento exclusivo pensado para tu Tienda Online.</p>
+                    <h1><em>EVENTO ONLINE Y GRATUITO - 16 Y 17 DE MAYO</em> EMMS E-commerce 2023</h1>
+                    <p>Inspírate y aprende con un evento exclusivo pensado para tu Tienda Online. No te lo pierdas, ¡ya comenzó! </p>
                     <ul class="emms__hero-registration__text__checklist">
                         <li>SPEAKERS INTERNACIONALES</li>
                         <li>TENDENCIAS E INNOVACIÓN</li>
@@ -114,7 +122,7 @@ require_once('././config.php');
                             </li>
                         </ul>
                         <div class="emms__form__btn">
-                            <button class="emms__cta" id="register-button" type="button"><span class="button__text">REGÍSTRATE GRATIS</span></button>
+                            <button class="emms__cta" id="register-button" type="button"><span class="button__text">ACCEDE GRATIS</span></button>
                         </div>
                         <div class="emms__form__legal close">
                             <a class="emms__form__legal__btn" id="legalBtn">Información básica sobre privacidad </a>
@@ -142,10 +150,9 @@ require_once('././config.php');
         <!-- Hero without form-->
         <section class="emms__hero-registration emms__hero-registration--noform eventHiddenElements eventShowElements" id="registro">
             <div class="emms__hero-registration__text">
-                <p class="emms__hero-registration__text__live">EN VIVO</p>
                 <h1>¡Estás a un paso de acceder al EMMS Ecommerce!</h1>
-                <p><a href="#agenda">Revisa la Agenda</a> que tenemos preparada para ti con referentes de la industria, de renombre mundial. Gracias por sumarte al multiuniverso EMMS 2023 :)</p>
-                <button id="ecommerceBtn" type="button" class="emms__cta"><span class="button__text">ACCEDER AL VIVO</span></button>
+                <p>Inspírate y aprende cómo potenciar tu Tienda Online en un evento exclusivo para tu industria, 100% gratis. Revisa en la <a href="#agenda">agenda</a> los referentes internacionales que nos acompañan.</p>
+                <button id="ecommerceBtn" type="button" class="emms__cta"><span class="button__text">ACCEDE AL VIVO</span></button>
             </div>
             <div class="emms__hero-registration__bottom emms__fade-in">
                 <p>IA >> AUTOMATION MARKETING >> UX >> CRO >> MARKETPLACES >> SEO >> RETARGETING >> SOCIAL SELLING >> EMAIL MARKETING >> ESTRATEGIAS DE VENTA >></p>
@@ -158,15 +165,14 @@ require_once('././config.php');
         <section class="emms__calendar" id="agenda">
             <div class="emms__container--lg">
                 <div class="emms__calendar__title emms__fade-in">
-                    <h2>Conoce a los Speakers del EMMS E-commerce 2023</h2>
-                    <p>Descubre antes que nadie a los <strong>ponentes</strong> que nos acompañarán en esta edición y las temáticas de sus charlas</p>
+                    <h2>Agenda EMMS E-commerce 2023</h2>
                 </div>
                 <!-- Speakers -->
                 <?php include('./src/components/speakers.php') ?>
                 <!-- End list -->
                 <div class="emms__calendar__bottom emms__fade-in">
-                    <p>¡Presta atención! <strong>Seguimos sumando conferencias a la agenda</strong>. Mantente al tanto de las novedades para no perderte a los nuevos speakers.</p>
-                    <a href="#registro" class="emms__cta">INSCRÍBETE GRATIS AHORA</a>
+                    <p>Recuerda que al finalizar el evento podrás acceder a los videos de todas las conferencias.</p>
+                    <a href="#registro" class="emms__cta">ACCEDE AL VIVO</a>
                 </div>
             </div>
             <div class="emms__background-b"></div>
@@ -178,8 +184,8 @@ require_once('././config.php');
             <div class="emms__container--lg">
                 <div class="emms__premium-content__text emms__fade-in">
                     <h2>Desbloquea Contenido Premium ¡gratis! </h2>
-                    <p>Descubre <strong>recursos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas ponerlos en práctica y potenciar tu Tienda Online.</p>
-                    <a href="./sponsors" class="emms__cta emms__fade-in">DESCÚBRELO AQUÍ</a>
+                    <p>Descubre <strong>recursos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas ponerlos en práctica y potenciar tu E-commerce.</p>
+                    <a href="./sponsors" class="emms__cta emms__fade-in">ACCEDE AHORA</a>
                 </div>
                 <div class="emms__premium-content__picture emms__fade-in">
                     <img src="src/img/download--locked.png" alt="Contenido Premium">
@@ -194,14 +200,14 @@ require_once('././config.php');
             <div class="emms__background-a"></div>
             <div class="emms__container--md">
                 <div class="emms__centralvideo__title emms__fade-in">
-                    <h2>Llega una nueva versión del EMMS. Ahora, con una edición exclusiva para E-commerce</h2>
-                    <p>Conoce en este video por qué este evento es el lugar ideal para capacitarte y aprender cómo escalar tu Tienda</p>
+                    <h2>Comenzó una nueva edición del EMMS, exclusiva para la industria E-commerce</h2>
+                    <p>Conoce en este video por qué es el lugar ideal para capacitarte y aprender cómo escalar tu Tienda.</p>
                 </div>
                 <div class="emms__centralvideo__video emms__fade-in">
                     <video src="src/img/EmmsEcommerce.mp4" controls></video>
                 </div>
                 <div class="emms__centralvideo__cta emms__fade-in">
-                    <a href="#registro" class="emms__cta">REGÍSTRATE AHORA</a>
+                    <a href="#registro" class="emms__cta">REGÍSTRATE GRATIS</a>
                     <small><i>¿Tienes dudas sobre el EMMS 2023?</i> Haz <a href="./home.php#preguntas-frecuentes" target="_blank">click aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                 </div>
             </div>
