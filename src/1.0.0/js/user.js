@@ -47,13 +47,36 @@ const userRegisteredInEvent = (event) => {
 const hiddenOrShowUserUI = (event) => {
     const hiddenElements = document.querySelectorAll('.eventHiddenElements');
     const showElements = document.querySelectorAll('.eventShowElements');
+    showElements.forEach(element => element.style.display = 'none');
     if (!userRegisteredInEvent(event)) return;
     hiddenElements.forEach(element => element.style.display = 'none');
     showElements.forEach(element => element.style.display = 'block');
 }
 
+const registerEventsCardsCheck = () => {
+
+    const ecommerceCards = document.querySelectorAll('.ecommerceCard');
+    const digitalTCards = document.querySelectorAll('.digitalTCard');
+
+    if (userRegisteredInEvent('ecommerce')) {
+        ecommerceCards.forEach(ecommerceCard => {
+            ecommerceCard.querySelector('.not--loged').classList.add('nodisplay--card');
+            ecommerceCard.querySelector('.loged').classList.add('display--card');
+        });
+    }
+
+    if (userRegisteredInEvent('digital-trends')) {
+        digitalTCards.forEach(digitalTCard => {
+            digitalTCard.querySelector('.not--loged').classList.add('nodisplay--card');
+            digitalTCard.querySelector('.loged').classList.add('display--card');
+        });
+    }
+
+}
+
 export {
     checkEncodeUrl,
     userRegisteredInEvent,
-    hiddenOrShowUserUI
+    hiddenOrShowUserUI,
+    registerEventsCardsCheck
 };
