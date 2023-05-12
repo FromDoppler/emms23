@@ -94,29 +94,18 @@ if (!defined('PATH_REFRESH')) define('PATH_REFRESH', 'emms-socket');
 if (!defined('SECRET_REFRESH')) define('SECRET_REFRESH', $SECRET_REFRESH);
 
 #During Days System
+$dayDuring = 1;
 $duringDaysArray = array(
-    "d1" => array(
-        "youtube" => "wHn1_QVoXGM",
+    "1" => array(
+        "youtube" => "0phrH-5u21U",
         "twitch" => "duckvilleusa",
-        "hashtag-chat" => "#EMMS2022 ",
-        "hashtag-gral" => "EMMS2022",
         "banner-transition" => "placa-dia01-transition",
         "banner-nolive" => "placa-dia01-nolive"
     ),
-    "d2" => array(
+    "2" => array(
         "youtube" => "InSydaLSSlw",
         "twitch" => "hoothouselivestream",
-        "hashtag-chat" => "#GOEMMS ",
-        "hashtag-gral" => "GOEMMS",
         "banner-transition" => "placa-dia02-transition",
         "banner-nolive" => "placa-dia02-nolive"
-    ),
-    "d3" => array(
-        "youtube" => "XDJPzMznAjU",
-        "twitch" => "livekittytv",
-        "hashtag-chat" => "#EMMSBYDOPPLER ",
-        "hashtag-gral" => "EMMSBYDOPPLER",
-        "banner-transition" => "placa-dia03-transition",
-        "banner-nolive" => "placa-dia03-nolive"
     ),
 );
