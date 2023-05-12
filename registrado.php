@@ -44,12 +44,14 @@ $db->close();
 <body class="emms__home emms__home-logueado">
     <?php include_once('././src/components/gtm.php'); ?>
 
-    <!-- Hellobar -->
-    <div class="emms__hellobar">
-        <div class="emms__hellobar__container emms__fade-in">
-            <p><strong>EMMS E-commerce:</strong> ¡disfruta de un día más de aprendizaje! <strong>16 y 17 de mayo</strong></p>
+    <?php if ($isPre) : ?>
+        <!-- Hellobar -->
+        <div class="emms__hellobar">
+            <div class="emms__hellobar__container emms__fade-in">
+                <p><strong>EMMS E-commerce:</strong> ¡disfruta de un día más de aprendizaje! <strong>16 y 17 de mayo</strong></p>
+            </div>
         </div>
-    </div>
+    <?php endif ?>
 
     <!-- Header -->
     <header class="emms__header">
@@ -59,7 +61,7 @@ $db->close();
             </div>
             <?php if ($isLive) : ?>
                 <div class="emms__header__live">
-                    <p>¡ESTAMOS EN VIVO!</p>
+                    <p>¡ESTAMOS EN VIVO EN EMMS E-COMMERCE!</p>
                 </div>
             <?php endif ?>
 
@@ -111,17 +113,17 @@ $db->close();
                     <div id="EMMS2023-ediciones"></div>
                 </div>
             <?php endif ?>
-            <?php if ($isLive) : ?>
+            <?php if ($isDuring) : ?>
                 <div class="emms__home__hero__title emms__fade-top">
-                    <h1><em>¡LLEGÓ EL DÍA!</em> Vuelve el EMMS, ¡recargado!</h1>
+                    <h1><em>LLEGÓ EL EVENTO DE MARKETING DIGITAL MÁS ESPERADO</em> Vuelve el EMMS, ¡recargado!</h1>
                     <h2>ONLINE Y GRATUITO</h2>
-                    <p>Tras <strong>15 años</strong> como el evento líder en Latam y España, <strong>el EMMS evoluciona</strong>. En 2023 tendrás <strong>2 eventos exclusivos</strong> para capacitarte e inspirarte con los referentes de tu industria.</p>
+                    <p>Tras <strong>15 años</strong> como el evento líder en Latam y España, <strong>el EMMS evoluciona</strong>. En 2023 tendrás <strong>2 eventos exclusivos</strong> para capacitarte e inspirarte con los referentes de tu industria, ¡ya puedes sumarte al primero!.</p>
                     <div id="EMMS2023-ediciones"></div>
                 </div>
             <?php endif ?>
             <?php if ($isPost) : ?>
                 <div class="emms__home__hero__title emms__fade-top">
-                    <h1>Vuelve el EMMS, ¡recargado!</h1>
+                    <h1><em>TODAS LAS TENDENCIAS EN MARKETING DIGITAL, EN UN SOLO LUGAR</em> Volvió el EMMS, ¡recargado!</h1>
                     <h2>ONLINE Y GRATUITO</h2>
                     <p>Tras <strong>15 años</strong> como el evento líder en Latam y España, <strong>el EMMS evoluciona</strong>. En 2023 tendrás <strong>2 eventos exclusivos</strong> para capacitarte e inspirarte con los referentes de tu industria.</p>
                     <div id="EMMS2023-ediciones"></div>
@@ -136,6 +138,9 @@ $db->close();
                             <div class="not--loged">
                                 <div class="emms__eventCards__list__item__picture">
                                     <img src="src/img/card-image-ecommerce.png" alt="Image Ecommerce">
+                                    <?php if ($isPost) : ?>
+                                        <p class="top">EVENTO FINALIZADO</p>
+                                    <?php endif ?>
                                 </div>
                                 <?php if ($isLive) : ?>
                                     <div class="emms__eventCards__list__item__text">
@@ -143,19 +148,31 @@ $db->close();
                                             <p><span>16 <em>y</em> 17</span>MAYO</p>
                                         </div>
                                         <h3>EMMS E-commerce <span>EN VIVO</span></h3>
-                                        <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
+                                        <p>Súmate ahora y conoce <strong>qué tendencias y estrategias emplean los referentes de la industria en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="ecommerce" class="emms__cta">REGÍSTRATE GRATIS</a>
+                                            <a href="ecommerce" class="emms__cta">ACCEDE AL VIVO</a>
+                                        </div>
+                                    </div>
+                                <?php elseif ($isDuring) : ?>
+                                    <div class="emms__eventCards__list__item__text">
+                                        <div class="emms__eventCards__list__item__text--corner">
+                                            <p><span>16 <em>y</em> 17</span>MAYO</p>
+                                        </div>
+                                        <h3>EMMS E-commerce</h3>
+                                        <p>Súmate ahora y conoce <strong>qué tendencias y estrategias emplean los referentes de la industria en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
+                                        <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
+                                        <div class="emms__eventCards__list__item__text--bottom">
+                                            <a href="ecommerce" class="emms__cta">SÚMATE AHORA</a>
                                         </div>
                                     </div>
                                 <?php elseif ($isPost) : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <h3>EMMS E-commerce</h3>
-                                        <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
+                                        <p>Referentes internacionales de la industria comparten contigo las <strong>tendencias y estrategias que emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="/ecommerce" class="emms__cta">REVIVE LAS CONFERENCIAS</a>
+                                            <a href="/ecommerce" class="emms__cta">REVIVE EL EVENTO</a>
                                         </div>
                                     </div>
                                 <?php else : ?>
@@ -176,37 +193,53 @@ $db->close();
                                 <?php if ($isLive) : ?>
                                     <div class="emms__eventCards__list__item__picture">
                                         <img src="src/img/card-image-ecommerce.png" alt="Image Ecommerce">
-                                        <p>YA ESTÁS REGISTRADO</p>
+                                        <p>YA TE HAS REGISTRADO</p>
                                     </div>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
                                             <p><span>16 <em>y</em> 17</span>MAYO</p>
                                         </div>
                                         <h3>EMMS E-commerce <span>EN VIVO</span></h3>
-                                        <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
+                                        <p>Súmate ahora y conoce <strong>qué tendencias y estrategias emplean los referentes de la industria en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="/ecommerce-registrado" class="emms__cta">ACCEDER</a>
+                                            <a href="/ecommerce-registrado" class="emms__cta">ACCEDE AL VIVO</a>
                                         </div>
                                     </div>
-
+                                <?php elseif ($isDuring) : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-ecommerce.png" alt="Image Ecommerce">
+                                        <p>YA TE HAS REGISTRADO</p>
+                                    </div>
+                                    <div class="emms__eventCards__list__item__text">
+                                        <div class="emms__eventCards__list__item__text--corner">
+                                            <p><span>16 <em>y</em> 17</span>MAYO</p>
+                                        </div>
+                                        <h3>EMMS E-commerce</h3>
+                                        <p>Súmate ahora y conoce <strong>qué tendencias y estrategias emplean los referentes de la industria en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
+                                        <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
+                                        <div class="emms__eventCards__list__item__text--bottom">
+                                            <a href="/ecommerce-registrado" class="emms__cta">SÚMATE AHORA</a>
+                                        </div>
+                                    </div>
                                 <?php elseif ($isPost) : ?>
                                     <div class="emms__eventCards__list__item__picture">
                                         <img src="src/img/card-image-ecommerce.png" alt="Image Ecommerce">
-                                        <p>EVENTO FINALIZADO</p>
+                                        <p class="top">EVENTO FINALIZADO</p>
+                                        <p>YA TE HAS REGISTRADO</p>
                                     </div>
                                     <div class="emms__eventCards__list__item__text">
                                         <h3>EMMS E-commerce</h3>
-                                        <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
+                                        <p>Referentes internacionales de la industria comparten contigo las <strong>tendencias y estrategias que emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="/ecommerce-registrado" class="emms__cta">REVIVE LAS CONFERENCIAS</a>
+                                            <a href="/ecommerce-registrado" class="emms__cta">REVIVE EL EVENTO</a>
                                         </div>
                                     </div>
                                 <?php else : ?>
                                     <div class="emms__eventCards__list__item__picture">
                                         <img src="src/img/card-image-ecommerce.png" alt="Image Ecommerce">
-                                        <p>YA ESTÁS REGISTRADO</p>
+                                        <p>YA TE HAS REGISTRADO</p>
                                     </div>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
@@ -230,7 +263,7 @@ $db->close();
                                 <?php if ($isDuring) : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>OCT</p>
+                                            <p>OCTUBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -242,7 +275,7 @@ $db->close();
                                 <?php elseif ($isPost) : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>OCT</p>
+                                            <p>OCTUBRE</p>
                                         </div>
                                         <h3>EMMS E-commerce</h3>
                                         <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
@@ -268,30 +301,30 @@ $db->close();
                             <div class="loged">
                                 <div class="emms__eventCards__list__item__picture">
                                     <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
-                                    <p>YA ESTÁS REGISTRADO</p>
+                                    <p>YA TE HAS REGISTRADO</p>
                                 </div>
                                 <?php if ($isDuring || $isPost) : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>OCT</p>
+                                            <p>OCTUBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="/digital-trends-registrado" class="emms__cta">ACCEDER</a>
+                                            <a href="/digital-trends-registrado" class="emms__cta">ACCEDE</a>
                                         </div>
                                     </div>
                                 <?php else : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>OCT</p>
+                                            <p>OCTUBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="/digital-trends-registrado" class="emms__cta">ACCEDER</a>
+                                            <a href="/digital-trends-registrado" class="emms__cta">ACCEDE</a>
                                         </div>
                                     </div>
                                 <?php endif ?>
@@ -303,6 +336,9 @@ $db->close();
                             <div class="not--loged">
                                 <div class="emms__eventCards__list__item__picture">
                                     <img src="src/img/card-image-ecommerce.png" alt="Image Ecommerce">
+                                    <?php if ($isPost) : ?>
+                                        <p class="top">EVENTO FINALIZADO</p>
+                                    <?php endif ?>
                                 </div>
                                 <?php if ($isLive) : ?>
                                     <div class="emms__eventCards__list__item__text">
@@ -310,19 +346,31 @@ $db->close();
                                             <p><span>16 <em>y</em> 17</span>MAYO</p>
                                         </div>
                                         <h3>EMMS E-commerce <span>EN VIVO</span></h3>
-                                        <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
+                                        <p>Súmate ahora y conoce <strong>qué tendencias y estrategias emplean los referentes de la industria en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="ecommerce" class="emms__cta">REGÍSTRATE GRATIS</a>
+                                            <a href="ecommerce" class="emms__cta">ACCEDE AL VIVO</a>
+                                        </div>
+                                    </div>
+                                <?php elseif ($isDuring) : ?>
+                                    <div class="emms__eventCards__list__item__text">
+                                        <div class="emms__eventCards__list__item__text--corner">
+                                            <p><span>16 <em>y</em> 17</span>MAYO</p>
+                                        </div>
+                                        <h3>EMMS E-commerce</h3>
+                                        <p>Súmate ahora y conoce <strong>qué tendencias y estrategias emplean los referentes de la industria en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
+                                        <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
+                                        <div class="emms__eventCards__list__item__text--bottom">
+                                            <a href="ecommerce" class="emms__cta">SÚMATE AHORA</a>
                                         </div>
                                     </div>
                                 <?php elseif ($isPost) : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <h3>EMMS E-commerce</h3>
-                                        <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
+                                        <p>Referentes internacionales de la industria comparten contigo las <strong>tendencias y estrategias que emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="/ecommerce" class="emms__cta">REVIVE LAS CONFERENCIAS</a>
+                                            <a href="/ecommerce" class="emms__cta">REVIVE EL EVENTO</a>
                                         </div>
                                     </div>
                                 <?php else : ?>
@@ -343,37 +391,53 @@ $db->close();
                                 <?php if ($isLive) : ?>
                                     <div class="emms__eventCards__list__item__picture">
                                         <img src="src/img/card-image-ecommerce.png" alt="Image Ecommerce">
-                                        <p>YA ESTÁS REGISTRADO</p>
+                                        <p>YA TE HAS REGISTRADO</p>
                                     </div>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
                                             <p><span>16 <em>y</em> 17</span>MAYO</p>
                                         </div>
                                         <h3>EMMS E-commerce <span>EN VIVO</span></h3>
-                                        <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
+                                        <p>Súmate ahora y conoce <strong>qué tendencias y estrategias emplean los referentes de la industria en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="/ecommerce-registrado" class="emms__cta">ACCEDER</a>
+                                            <a href="/ecommerce-registrado" class="emms__cta">ACCEDE AL VIVO</a>
                                         </div>
                                     </div>
-
+                                <?php elseif ($isDuring) : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-ecommerce.png" alt="Image Ecommerce">
+                                        <p>YA TE HAS REGISTRADO</p>
+                                    </div>
+                                    <div class="emms__eventCards__list__item__text">
+                                        <div class="emms__eventCards__list__item__text--corner">
+                                            <p><span>16 <em>y</em> 17</span>MAYO</p>
+                                        </div>
+                                        <h3>EMMS E-commerce</h3>
+                                        <p>Súmate ahora y conoce <strong>qué tendencias y estrategias emplean los referentes de la industria en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
+                                        <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
+                                        <div class="emms__eventCards__list__item__text--bottom">
+                                            <a href="/ecommerce-registrado" class="emms__cta">SÚMATE AHORA</a>
+                                        </div>
+                                    </div>
                                 <?php elseif ($isPost) : ?>
                                     <div class="emms__eventCards__list__item__picture">
                                         <img src="src/img/card-image-ecommerce.png" alt="Image Ecommerce">
-                                        <p>EVENTO FINALIZADO</p>
+                                        <p class="top">EVENTO FINALIZADO</p>
+                                        <p>YA TE HAS REGISTRADO</p>
                                     </div>
                                     <div class="emms__eventCards__list__item__text">
                                         <h3>EMMS E-commerce</h3>
-                                        <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
+                                        <p>Referentes internacionales de la industria comparten contigo las <strong>tendencias y estrategias que emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="/ecommerce-registrado" class="emms__cta">REVIVE LAS CONFERENCIAS</a>
+                                            <a href="/ecommerce-registrado" class="emms__cta">REVIVE EL EVENTO</a>
                                         </div>
                                     </div>
                                 <?php else : ?>
                                     <div class="emms__eventCards__list__item__picture">
                                         <img src="src/img/card-image-ecommerce.png" alt="Image Ecommerce">
-                                        <p>YA ESTÁS REGISTRADO</p>
+                                        <p>YA TE HAS REGISTRADO</p>
                                     </div>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
@@ -397,7 +461,7 @@ $db->close();
                                 <?php if ($isDuring) : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>OCT</p>
+                                            <p>OCTUBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -409,7 +473,7 @@ $db->close();
                                 <?php elseif ($isPost) : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>OCT</p>
+                                            <p>OCTUBRE</p>
                                         </div>
                                         <h3>EMMS E-commerce</h3>
                                         <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
@@ -440,25 +504,25 @@ $db->close();
                                 <?php if ($isDuring || $isPost) : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>OCT</p>
+                                            <p>OCTUBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="/digital-trends-registrado" class="emms__cta">ACCEDER</a>
+                                            <a href="/digital-trends-registrado" class="emms__cta">ACCEDE</a>
                                         </div>
                                     </div>
                                 <?php else : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>OCT</p>
+                                            <p>OCTUBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="/digital-trends-registrado" class="emms__cta">ACCEDER</a>
+                                            <a href="/digital-trends-registrado" class="emms__cta">ACCEDE</a>
                                         </div>
                                     </div>
                                 <?php endif ?>
@@ -474,8 +538,18 @@ $db->close();
             <div class="emms__background-a"></div>
             <div class="emms__container--md">
                 <div class="emms__centralvideo__title emms__fade-in">
-                    <h2>Llega una nueva versión del EMMS. Ahora, también disfruta de una edición exclusiva para E-commerce</h2>
-                    <p>Descubre en este video por qué profesionales y expertos de la industria eligen este año el EMMS para conocer las <strong>últimas tendencias en Marketing Digital</strong>.</p>
+                    <?php if ($isPre) : ?>
+                        <h2>Llega una nueva versión del EMMS. Ahora, también disfruta de una edición exclusiva para E-commerce</h2>
+                        <p>Descubre en este video por qué profesionales y expertos de la industria eligen este año el EMMS para conocer las <strong>últimas tendencias en Marketing Digital</strong>.</p>
+                    <?php endif ?>
+                    <?php if ($isDuring) : ?>
+                        <h2>¡Llega un EMMS renovado! Ahora, disfruta de dos ediciones imperdibles</h2>
+                        <p>Descubre en este video con qué te sorprenderá este año el EMMS, el evento más elegido por profesionales y expertos del Marketing Digital.</p>
+                    <?php endif ?>
+                    <?php if ($isPost) : ?>
+                        <h2>¡El EMMS se renovó! Ahora, disfruta de dos ediciones imperdibles</h2>
+                        <p>Descubre en este video con qué te sorprenderá este año el EMMS, el evento más elegido por profesionales y expertos del Marketing Digital.</p>
+                    <?php endif ?>
                 </div>
                 <div class="emms__centralvideo__video emms__fade-in">
                     <span></span>
@@ -573,7 +647,17 @@ $db->close();
                         </li>
                     </ul>
                 </div>
-                <small class="emms__fade-in"><strong>¡Ya puedes conocer a los speakers de EMMS Ecommerce!</strong><br>Accede y mira la agenda <a href="./ecommerce-registrado.php#agenda">haciendo clic aquí</a>.</small>
+                <?php if ($isPre) : ?>
+                    <small class="emms__fade-in"><strong>¡Ya puedes conocer a los speakers de EMMS Ecommerce!</strong><br>Accede y mira la agenda <a href="./ecommerce-registrado.php#agenda">haciendo clic aquí</a>.</small>
+                <?php endif ?>
+                <?php if ($isDuring) : ?>
+                    <small class="emms__fade-in"><strong>¡Conoce a los speakers del EMMS E-commerce!</strong><br>Descubre quiénes son y las temáticas de sus conferencias.</small>
+                    <a href="./ecommerce#agenda" class="emms__cta">AGENDA EMMS E-COMMERCE 2023</a>
+                <?php endif ?>
+                <?php if ($isPost) : ?>
+                    <small class="emms__fade-in"><strong>¡Está llegando el EMMS Digital Trends 2023!</strong><br>Pronto podrás descubrir a los speakers que nos acompañarán en esta nueva edición.</small>
+                    <a href="./digital-trends" class="emms__cta">DESCUBRE LAS NOVEDADES</a>
+                <?php endif ?>
             </div>
             <div class="emms__background-a"></div>
         </section>

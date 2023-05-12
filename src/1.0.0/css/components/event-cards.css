@@ -49,6 +49,11 @@
     z-index: 1;
 }
 
+.emms__eventCards__list__item__picture p.top{
+    top: 14px;
+    bottom: auto;
+}
+
 .emms__eventCards__list__item__picture p::before{
     content: "";
     position: absolute;
