@@ -74,7 +74,7 @@ $db->close(); ?>
         <!-- Hero -->
         <section class="emms__hero-conference emms__hero-conference--chat">
             <div class="emms__container--lg">
-                <?php if (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on")) : ?>
+                <?php if (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on") && ($settings_phase['transmission'] === "youtube")) : ?>
                     <h1 class="emms__fade-in">EN VIVO</h1>
                     <div class="emms__hero-conference__video emms__fade-in">
                         <div class="emms__cropper-cont-16-9">
