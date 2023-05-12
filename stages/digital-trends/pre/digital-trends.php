@@ -151,7 +151,7 @@ $db->close(); ?>
             <div class="emms__hero-registration__text">
                 <h1>¡Vuelve el EMMS!</h1>
                 <p>¡Regístrate ahora y desbloquea la sección de contenidos premium!</p>
-                <button type="button" class="emms__cta"><span class="button__text">REGÍSTRATE GRATIS</span></button>
+                <button type="button" id="digitalTrendsBtn" class="emms__cta"><span class="button__text">REGÍSTRATE GRATIS</span></button>
             </div>
             <div class="emms__hero-registration__bottom emms__fade-in">
                 <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
