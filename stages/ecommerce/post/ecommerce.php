@@ -63,8 +63,8 @@ require_once('././config.php');
         <section class="emms__hero-registration" id="registro">
             <div class="emms__hero-registration__columns">
                 <div class="emms__hero-registration__text emms__fade-in">
-                    <h1>EMMS E-commerce 2023</h1>
-                    <p>¡El EMMS evoluciona! Ahora podrás inspirarte y aprender con un evento exclusivo pensado para tu Tienda Online.</p>
+                    <h1><em>EVENTO ONLINE Y GRATUITO</em> ¡El EMMS evolucionó!</h1>
+                    <p>Inspírate con un evento exclusivo pensado para tu Tienda Online. Revívelo ahora</p>
                     <ul class="emms__hero-registration__text__checklist">
                         <li>SPEAKERS INTERNACIONALES</li>
                         <li>TENDENCIAS E INNOVACIÓN</li>
@@ -104,7 +104,7 @@ require_once('././config.php');
                             </li>
                         </ul>
                         <div class="emms__form__btn">
-                            <button class="emms__cta" id="register-button" type="button"><span class="button__text">REGÍSTRATE GRATIS</span></button>
+                            <button class="emms__cta" id="register-button" type="button"><span class="button__text">ACCEDE GRATIS</span></button>
                         </div>
                         <div class="emms__form__legal close">
                             <a class="emms__form__legal__btn" id="legalBtn">Información básica sobre privacidad </a>
@@ -132,9 +132,9 @@ require_once('././config.php');
         <!-- Hero without form-->
         <section class="emms__hero-registration emms__hero-registration--noform" id="registro">
             <div class="emms__hero-registration__text emms__fade-in">
-                <h1>¡Estás a un paso de acceder al EMMS Ecommerce!</h1>
-                <p><a href="#agenda">Revisa la Agenda</a> que tenemos preparada para ti con referentes de la industria, de renombre mundial. Gracias por sumarte al multiuniverso EMMS 2023 :)</p>
-                <button id="register-button" type="button" class="emms__cta">ACCEDER</button>
+                <h1>¡Estás a un paso de acceder al EMMS E-commerce 2023!</h1>
+                <p>Revive el evento más importante de Latinoamérica y España sobre E-commerce. <strong>Más de 10.000 personas ya lo disfrutaron</strong>. ¡Ahora te toca a ti!</p>
+                <button id="register-button" type="button" class="emms__cta">REVIVE EL EVENTO</button>
             </div>
             <div class="emms__hero-registration__bottom emms__fade-in">
                 <p>IA >> AUTOMATION MARKETING >> UX >> CRO >> MARKETPLACES >> SEO >> RETARGETING >> SOCIAL SELLING >> EMAIL MARKETING >> ESTRATEGIAS DE VENTA >></p>
@@ -147,20 +147,123 @@ require_once('././config.php');
         <section class="emms__calendar" id="agenda">
             <div class="emms__container--lg">
                 <div class="emms__calendar__title emms__fade-in">
-                    <h2>Conoce a los Speakers del EMMS E-commerce 2023</h2>
-                    <p>Descubre antes que nadie a los <strong>ponentes</strong> que nos acompañarán en esta edición y las temáticas de sus charlas</p>
+                    <h2>Agenda EMMS E-commerce 2023</h2>
+                    <p>Descubre a los <strong>ponentes</strong> que nos acompañaron en esta edición y las <strong>temáticas</strong> de sus charlas</p>
                 </div>
                 <!-- List -->
                 <ul class="emms__calendar__list emms__calendar__list--dk emms__fade-in">
-                    <?php include('./src/components/speakers.php') ?>
+                    <?php
+                    require_once('./utils/DB.php');
+                    $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                    $speakers = $db->getAllSpeakers();
+                    foreach ($speakers as $speaker) : ?>
+                        <li class="emms__calendar__list__item">
+                            <div class="emms__calendar__list__item__card">
+                                <?php if ($speaker['exposes'] === "conference") : ?>
+                                    <div class="emms__calendar__list__item__card__label emms__calendar__list__item__card__label--interview">
+                                        <p>Conferencia</p>
+                                    </div>
+                                <?php elseif ($speaker['exposes'] === "interview") : ?>
+                                    <div class="emms__calendar__list__item__card__label emms__calendar__list__item__card__label--conference">
+                                        <p>Entrevista</p>
+                                    </div>
+                                <?php elseif ($speaker['exposes'] === "successful-case") : ?>
+                                    <div class="emms__calendar__list__item__card__label emms__calendar__list__item__card__label--conference">
+                                        <p>Caso de éxito</p>
+                                    </div>
+                                <?php endif; ?>
+                                <div class="emms__calendar__list__item__card__speaker">
+                                    <div class="emms__calendar__list__item__card__speaker__image">
+                                        <img src="./admin/speakers/uploads/<?= $speaker['image'] ?>" alt="<?= $speaker['alt_image'] ?>">
+                                    </div>
+                                    <div class="emms__calendar__list__item__card__speaker__text">
+                                        <h4><?= $speaker['name'] ?></h4>
+                                        <h5><?= $speaker['job'] ?></h5>
+                                        <ul>
+                                            <?php if (!empty($speaker['sm_twitter'])) : ?>
+                                                <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="src/img/icons/icono-twitter-b.svg" alt="Twitter"></a></li>
+                                            <?php endif; ?>
+                                            <?php if (!empty($speaker['sm_linkedin'])) : ?>
+                                                <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="src/img/icons/icono-linkedin-b.svg" alt="LinkedIn"></a></li>
+                                            <?php endif; ?>
+                                            <?php if (!empty($speaker['sm_instagram'])) : ?>
+                                                <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="src/img/icons/icono-instagram-b.svg" alt="Instagram"></a></li>
+                                            <?php endif; ?>
+                                            <?php if (!empty($speaker['sm_facebook'])) : ?>
+                                                <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="src/img/icons/icono-facebook-b.svg" alt="Facebook"></a></li>
+                                            <?php endif; ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="emms__calendar__list__item__card__description">
+                                    <p><?= $speaker['description'] ?></p>
+                                </div>
+                                <div class="emms__calendar__list__item__card__business">
+                                    <img src="./admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
+                                    <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
+                                </div>
+                            </div>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
                 <ul class="emms__calendar__list emms__calendar__list--mb main-carousel emms__fade-in" data-flickity>
-                    <?php include('./src/components/speakers.php') ?>
+                    <?php
+                    require_once('./utils/DB.php');
+                    $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                    $speakers = $db->getAllSpeakers();
+                    foreach ($speakers as $speaker) : ?>
+                        <li class="emms__calendar__list__item">
+                            <div class="emms__calendar__list__item__card">
+                                <?php if ($speaker['exposes'] === "conference") : ?>
+                                    <div class="emms__calendar__list__item__card__label emms__calendar__list__item__card__label--interview">
+                                        <p>Conferencia</p>
+                                    </div>
+                                <?php elseif ($speaker['exposes'] === "interview") : ?>
+                                    <div class="emms__calendar__list__item__card__label emms__calendar__list__item__card__label--conference">
+                                        <p>Entrevista</p>
+                                    </div>
+                                <?php elseif ($speaker['exposes'] === "successful-case") : ?>
+                                    <div class="emms__calendar__list__item__card__label emms__calendar__list__item__card__label--conference">
+                                        <p>Caso de éxito</p>
+                                    </div>
+                                <?php endif; ?>
+                                <div class="emms__calendar__list__item__card__speaker">
+                                    <div class="emms__calendar__list__item__card__speaker__image">
+                                        <img src="./admin/speakers/uploads/<?= $speaker['image'] ?>" alt="<?= $speaker['alt_image'] ?>">
+                                    </div>
+                                    <div class="emms__calendar__list__item__card__speaker__text">
+                                        <h4><?= $speaker['name'] ?></h4>
+                                        <h5><?= $speaker['job'] ?></h5>
+                                        <ul>
+                                            <?php if (!empty($speaker['sm_twitter'])) : ?>
+                                                <li><a href="<?= $speaker['sm_twitter'] ?>" target="_blank"><img src="src/img/icons/icono-twitter-b.svg" alt="Twitter"></a></li>
+                                            <?php endif; ?>
+                                            <?php if (!empty($speaker['sm_linkedin'])) : ?>
+                                                <li><a href="<?= $speaker['sm_linkedin'] ?>" target="_blank"><img src="src/img/icons/icono-linkedin-b.svg" alt="LinkedIn"></a></li>
+                                            <?php endif; ?>
+                                            <?php if (!empty($speaker['sm_instagram'])) : ?>
+                                                <li><a href="<?= $speaker['sm_instagram'] ?>" target="_blank"><img src="src/img/icons/icono-instagram-b.svg" alt="Instagram"></a></li>
+                                            <?php endif; ?>
+                                            <?php if (!empty($speaker['sm_facebook'])) : ?>
+                                                <li><a href="<?= $speaker['sm_facebook'] ?>" target="_blank"><img src="src/img/icons/icono-facebook-b.svg" alt="Facebook"></a></li>
+                                            <?php endif; ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="emms__calendar__list__item__card__description">
+                                    <p><?= $speaker['description'] ?></p>
+                                </div>
+                                <div class="emms__calendar__list__item__card__business">
+                                    <img src="./admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
+                                    <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
+                                </div>
+                            </div>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
                 <!-- End list -->
                 <div class="emms__calendar__bottom emms__fade-in">
-                    <p>¡Presta atención! <strong>Seguimos sumando conferencias a la agenda</strong>. Mantente al tanto de las novedades para no perderte a los nuevos speakers.</p>
-                    <a href="#registro" class="emms__cta">INSCRÍBETE GRATIS AHORA</a>
+                    <a href="#registro" class="emms__cta">ACCEDE A LAS CONFERENCIAS</a>
                 </div>
             </div>
             <div class="emms__background-b"></div>
@@ -172,8 +275,8 @@ require_once('././config.php');
             <div class="emms__container--lg">
                 <div class="emms__premium-content__text emms__fade-in">
                     <h2>Desbloquea Contenido Premium ¡gratis! </h2>
-                    <p>Descubre <strong>recursos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas ponerlos en práctica y potenciar tu Tienda Online.</p>
-                    <a href="./sponsors" class="emms__cta emms__fade-in">DESCÚBRELO AQUÍ</a>
+                    <p>Descubre <strong>recursos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas ponerlos en práctica y potenciar tu E-commerce.</p>
+                    <a href="./sponsors" class="emms__cta emms__fade-in">ACCEDE AQUÍ</a>
                 </div>
                 <div class="emms__premium-content__picture emms__fade-in">
                     <img src="src/img/download--locked.png" alt="Contenido Premium">
@@ -188,14 +291,14 @@ require_once('././config.php');
             <div class="emms__background-a"></div>
             <div class="emms__container--md">
                 <div class="emms__centralvideo__title emms__fade-in">
-                    <h2>Llega una nueva versión del EMMS. Ahora, con una edición exclusiva para E-commerce</h2>
-                    <p>Conoce en este video por qué este evento es el lugar ideal para capacitarte y aprender cómo escalar tu Tienda</p>
+                    <h2>Llegó la nueva edición del EMMS, exclusiva para la industria E-commerce</h2>
+                    <p>Conoce en este video por qué es el lugar ideal para capacitarte y aprender cómo escalar tu Tienda.</p>
                 </div>
                 <div class="emms__centralvideo__video emms__fade-in">
                     <video src="src/img/EmmsEcommerce.mp4" controls></video>
                 </div>
                 <div class="emms__centralvideo__cta emms__fade-in">
-                    <a href="#registro" class="emms__cta">REGÍSTRATE AHORA</a>
+                    <a href="#registro" class="emms__cta">ACCEDE A LAS CONFERENCIAS</a>
                     <small><i>¿Tienes dudas sobre el EMMS 2023?</i> Haz <a href="./home.php#preguntas-frecuentes" target="_blank">click aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                 </div>
             </div>
@@ -237,7 +340,7 @@ require_once('././config.php');
         <!-- Companies list -->
         <section class="emms__companies emms__companies--categories" id="aliados">
             <div class="emms__container--lg">
-                <h2 class="emms__fade-in">Nos acompañan en esta edición:</h2>
+                <h2 class="emms__fade-in">Nos acompañaron en esta edición:</h2>
                 <h3>SPONSORS</h3>
                 <ul class="emms__companies__list emms__companies__list--lg  emms__fade-in">
                     <?php $sponsors = $db->getSponsorsByType('SPONSOR');
@@ -275,7 +378,6 @@ require_once('././config.php');
                 <h3>MEDIA PARTNERS STARTERS</h3>
                 <ul class="emms__companies__list emms__companies__list  emms__fade-in" id="mediaPartenersStarters">
                 </ul>
-                <small class="emms__fade-in"><strong>¿Quieres ser aliado del EMMS E-commerce 2023?</strong> ¡Hablemos! Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></small>
             </div>
         </section>
 

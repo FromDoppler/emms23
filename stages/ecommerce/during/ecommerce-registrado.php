@@ -106,11 +106,11 @@ $db->close(); ?>
         <!-- Certificate modal -->
         <div id="certificateModal" class="emms__certificate-modal">
             <div class="emms__certificate-modal__window">
-                <h3>Estás a un paso de generar tu Certificado</h3>
-                <p>Ingresa tu Nombre y Apellido y descárgalo ahora</p>
-                <input type="text" placeholder="Ingresa aquí tu Nombre y Apellido">
-                <span>Debes ingresar tu Nombre y Apellido</span>
-                <a href="" class="emms__cta">DESCARGAR</a>
+                <h3>¡Estás a un paso de descargar tu Certificado de Asistencia!</h3>
+                <p>Ingresa tu nombre y apellido para descargarlo ahora 🙂</p>
+                <input type="text" placeholder="Nombre y apellido">
+                <span>Debes ingresar tu nombre y apellido</span>
+                <a href="" class="emms__cta">QUIERO DESCARGARLO</a>
                 <button class="emms__certificate-modal__window__close" data-dismiss="emms__certificate-modal"></button>
             </div>
         </div>

@@ -1,5 +1,15 @@
 <?php
-require_once('././config.php');
+require_once('./config.php');
+require_once('./utils/DB.php');
+
+
+if (!isset($_GET['slug']) or (trim($_GET['slug']) === '')) {
+    header("HTTP/1.0 404 Not Found");
+    //include '././common/components/404.php';
+    exit;
+}
+$db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+$speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
 ?>
 
 <!DOCTYPE html>
@@ -13,10 +23,10 @@ require_once('././config.php');
             isUserLogged,
             getUrlWithParams
         } from './src/<?= VERSION ?>/js/common/index.js';
-
-        if (!isUserLogged()) {
-            window.location.href = getUrlWithParams('/ecommerce');
-        }
+        import {
+            hiddenOrShowUserUI
+        } from './src/<?= VERSION ?>/js/user.js';
+        hiddenOrShowUserUI('digital-trends');
     </script>
 </head>
 
@@ -28,6 +38,15 @@ require_once('././config.php');
             <div class="emms__header__logo">
                 <a href="/"><img src="src/img/logos/logo-emms.png" alt="Emms 2023"></a>
             </div>
+            <a class="emms__header__nav--mb" id="btn-burger"></a>
+            <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
+                <ul class="emms__header__nav__menu">
+                    <li><a href="/registrado">home</a></li>
+                    <li><a href="/ecommerce">e-commerce</a></li>
+                    <li><a href="/digital-trends">digital trends</a></li>
+                    <li><a href="/sponsors-registrado">contenido exclusivo</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -58,84 +77,90 @@ require_once('././config.php');
         <!-- Hero -->
         <section class="emms__hero-conference emms__hero-conference--bio">
             <div class="emms__container--lg">
-                <h1 class="emms__fade-in">Branding Vs Performance: Cómo terminar una guerra donde todos ganan</h1>
+                <h1 class="emms__fade-in"><?= $speaker['description'] ?></h1>
                 <div class="emms__hero-conference__video emms__fade-in">
                     <!--Video en el caso que ya esté registrado a ambos eventos -->
-                    <!-- <div class="emms__cropper-cont-16-9">
+                    <div class="emms__cropper-cont-16-9" id="streaming" style="display:none">
                         <div class="emms__cropper-cont ">
                             <div class="emms__cropper-cont-interno">
                                 <iframe src="https://www.youtube.com/embed/yjg-HjGfK8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
-                    <!-- Registro con Form -->
-                    <form class="emms__form emms__fade-in" id="ecommerceForm" novalidate autocomplete="off">
-                        <ul class="emms__form__field-group">
-                            <li class="emms__form__field-item">
-                                <div class="holder">
-                                    <label class="required-label" for="name">Nombre *</label>
-                                    <input type="text" name="name" id="name" placeholder="Tu nombre" class="required error-name nameLength" autocomplete="off">
-                                </div>
-                            </li>
-                            <li class="emms__form__field-item">
-                                <div class="holder">
-                                    <label class="required-label" for="email">Email *</label>
-                                    <input type="email" name="email" id="email" placeholder="&iexcl;No olvides usar @!" class="email required" autocomplete="off">
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="emms__form__field-group">
-                            <li class="emms__form__field-item emms__form__field-item__checkbox">
-                                <div class="holder">
-                                    <input name="privacy" type="checkbox" id="acepto-politicas" value="true" class="required check acept-politic"><span class="checkmark"></span><label for="acepto-politicas">
-                                        Acepto la Pol&iacute;tica de Privacidad de Doppler *
-                                    </label>
-                                </div>
-                            </li>
-                            <li class="emms__form__field-item emms__form__field-item__checkbox">
-                                <div class="holder">
-                                    <input name="promotions" type="checkbox" id="acepto-promociones" value="true"><span class="checkmark"></span><label for="acepto-promociones">
-                                        Acepto recibir promociones de Doppler</label>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="emms__form__btn">
-                            <button class="emms__cta" id="register-button" type="button"><span class="button__text">REGÍSTRATE GRATIS</span></button>
-                        </div>
-                        <div class="emms__form__legal">
-                            <p>Doppler te informa que los datos de car&aacute;cter personal que nos proporciones al rellenar el presente formulario ser&aacute;n tratados por Doppler LLC como responsable de esta Web.<br>
-                                <strong>Finalidad: </strong>Gestionar el alta de registro a la capacitación, enviarte material vinculado a la misma e información sobre Doppler así como nuestros futuros eventos o capacitaciones.<br>
-                                <strong>Legitimaci&oacute;n: </strong>Consentimiento del interesado. <br>
-                                <strong>Destinatarios: </strong>Tus datos ser&aacute;n guardados por Doppler y los co-organizadores del evento, Unbounce como empresa de creaci&oacute;n de Landing Pages, DigitalOcean como empresa de hosting y Zapier como herramienta de integraci&oacute;n de apps.<br>
-                                <strong>Informaci&oacute;n adicional: </strong>En la <a href="https://www.fromdoppler.com/es/legal/privacidad/" target="_blank" rel="noopener">Pol&iacute;tica de Privacidad</a> de Doppler encontrar&aacute;s informaci&oacute;n adicional
-                                sobre la recopilaci&oacute;n y el uso de su informaci&oacute;n personal por parte de Doppler, incluida
-                                informaci&oacute;n sobre acceso, conservaci&oacute;n, rectificaci&oacute;n, eliminaci&oacute;n, seguridad,
-                                transferencias
-                                transfronterizas y otros temas. <br>
-                            </p>
-                        </div>
-                    </form>
-                    <!-- FIN Registro con Form -->
+                    <div id="registro">
+                        <!-- Registro con Form -->
+                        <form class="emms__form emms__fade-in eventHiddenElements" novalidate autocomplete="off">
+                            <ul class="emms__form__field-group">
+                                <li class="emms__form__field-item">
+                                    <div class="holder">
+                                        <label class="required-label" for="name">Nombre *</label>
+                                        <input type="text" name="name" id="name" placeholder="Tu nombre" class="required error-name nameLength" autocomplete="off">
+                                    </div>
+                                </li>
+                                <li class="emms__form__field-item">
+                                    <div class="holder">
+                                        <label class="required-label" for="email">Email *</label>
+                                        <input type="email" name="email" id="email" placeholder="&iexcl;No olvides usar @!" class="email required" autocomplete="off">
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="emms__form__field-group">
+                                <li class="emms__form__field-item emms__form__field-item__checkbox">
+                                    <div class="holder">
+                                        <input name="privacy" type="checkbox" id="acepto-politicas" value="true" class="required check acept-politic"><span class="checkmark"></span><label for="acepto-politicas">
+                                            Acepto la Pol&iacute;tica de Privacidad de Doppler *
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="emms__form__field-item emms__form__field-item__checkbox">
+                                    <div class="holder">
+                                        <input name="promotions" type="checkbox" id="acepto-promociones" value="true"><span class="checkmark"></span><label for="acepto-promociones">
+                                            Acepto recibir promociones de Doppler</label>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="emms__form__btn">
+                                <button class="emms__cta" id="register-button" type="button"><span class="button__text">REGÍSTRATE GRATIS</span></button>
+                            </div>
+                            <div class="emms__form__legal">
+                                <p>Doppler te informa que los datos de car&aacute;cter personal que nos proporciones al rellenar el presente formulario ser&aacute;n tratados por Doppler LLC como responsable de esta Web.<br>
+                                    <strong>Finalidad: </strong>Gestionar el alta de registro a la capacitación, enviarte material vinculado a la misma e información sobre Doppler así como nuestros futuros eventos o capacitaciones.<br>
+                                    <strong>Legitimaci&oacute;n: </strong>Consentimiento del interesado. <br>
+                                    <strong>Destinatarios: </strong>Tus datos ser&aacute;n guardados por Doppler y los co-organizadores del evento, Unbounce como empresa de creaci&oacute;n de Landing Pages, DigitalOcean como empresa de hosting y Zapier como herramienta de integraci&oacute;n de apps.<br>
+                                    <strong>Informaci&oacute;n adicional: </strong>En la <a href="https://www.fromdoppler.com/es/legal/privacidad/" target="_blank" rel="noopener">Pol&iacute;tica de Privacidad</a> de Doppler encontrar&aacute;s informaci&oacute;n adicional
+                                    sobre la recopilaci&oacute;n y el uso de su informaci&oacute;n personal por parte de Doppler, incluida
+                                    informaci&oacute;n sobre acceso, conservaci&oacute;n, rectificaci&oacute;n, eliminaci&oacute;n, seguridad,
+                                    transferencias
+                                    transfronterizas y otros temas. <br>
+                                </p>
+                            </div>
+                        </form>
+                        <!-- FIN Registro con Form -->
 
-                    <!-- Registro con CTA -->
-                    <!-- <div class="emms__hero-conference__video__register emms__fade-in">
-                        <div class="emms__hero-conference__video__register__content">
-                            <h3>¡Estás a un paso de registrarte!</h3>
-                            <p>Para acceder a las conferencias del EMMS Ecommerce debes registrarte, haciendo click en el siguiente botón</p>
-                            <a href="" class="emms__cta">REGÍSTRATE GRATIS</a>
+                        <!-- Registro con CTA -->
+                        <div class="emms__hero-conference__video__register emms__fade-in eventHiddenElements eventShowElements">
+                            <div class="emms__hero-conference__video__register__content">
+                                <h3>¡Estás a un paso de registrarte!</h3>
+                                <p>Para acceder a las conferencias del EMMS Ecommerce debes registrarte, haciendo click en el siguiente botón</p>
+                                <a href="" class="emms__cta">REGÍSTRATE GRATIS</a>
+                            </div>
                         </div>
-                    </div> -->
-                    <!-- FIN Registro con CTA -->
+                        <!-- FIN Registro con CTA -->
+                    </div>
 
                     <small>Recuerda activar el sonido 🔉</small>
                 </div>
                 <div class="emms__hero-conference__aside emms__fade-in">
-                    <h2>Tim Ash</h2>
-                    <p>Speaker internacional sobre psicología evolutiva y Marketing Digital, consultor, formador y emprendedor. Autor de bestsellers. Estos son sólo algunos de los títulos que podrían describir a uno de los líderes de pensamiento de la industria actual. </p>
+                    <h2><?= $speaker['name'] ?></h2>
+                    <p><?= $speaker['bio'] ?></p>
                     <ul>
-                        <li><a href=""><img src="src/img/icons/icono-linkedin-b.svg" alt="LinkedIn"></a></li>
-                        <li><a href=""><img src="src/img/icons/icono-twitter-b.svg" alt="Twitter"></a></li>
+                        <?php if ($speaker['sm_linkedin']) : ?>
+                            <li><a href="<?= $speaker['sm_linkedin'] ?>"><img src="src/img/icons/icono-linkedin-b.svg" alt="LinkedIn"></a></li>
+                        <?php endif; ?>
+                        <?php if ($speaker['sm_twitter']) : ?>
+                            <li><a href="<?= $speaker['sm_twitter'] ?>"><img src="src/img/icons/icono-twitter-b.svg" alt="Twitter"></a></li>
+                        <?php endif; ?>
                     </ul>
                 </div>
                 <p class="emms__hero-conference__certificate emms__fade-in">Descarga <a data-target="certificateModal" data-toggle="emms__certificate-modal">aquí</a> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag #EMMSECOMMERCE :)</p>
@@ -145,11 +170,11 @@ require_once('././config.php');
         <!-- Certificate modal -->
         <div id="certificateModal" class="emms__certificate-modal">
             <div class="emms__certificate-modal__window">
-                <h3>Estás a un paso de generar tu Certificado</h3>
-                <p>Ingresa tu Nombre y Apellido y descárgalo ahora</p>
-                <input type="text" placeholder="Ingresa aquí tu Nombre y Apellido">
-                <span>Debes ingresar tu Nombre y Apellido</span>
-                <a href="" class="emms__cta">DESCARGAR</a>
+                <h3>¡Estás a un paso de descargar tu Certificado de Asistencia!</h3>
+                <p>Ingresa tu nombre y apellido para descargarlo ahora 🙂</p>
+                <input type="text" placeholder="Nombre y apellido">
+                <span>Debes ingresar tu mombre y apellido</span>
+                <a href="" class="emms__cta">QUIERO DESCARGARLO</a>
                 <button class="emms__certificate-modal__window__close" data-dismiss="emms__certificate-modal"></button>
             </div>
         </div>
@@ -180,6 +205,7 @@ require_once('././config.php');
 
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
     <script src="src/<?= VERSION ?>/js/certificateModal.js"></script>
+    <script src="src/<?= VERSION ?>/js/speakersInterna.js"></script>
 
 </body>
 

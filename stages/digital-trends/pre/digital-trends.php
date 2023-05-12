@@ -186,6 +186,14 @@ $db->close(); ?>
         </section>
 
 
+        <!-- Words section -->
+        <section class="emms__words emms__fade-in">
+            <div class="emms__container--lg">
+                <p style="font-size: 40px;font-weight: 700;text-align: center;color: #d3d2d2;margin: -40px 0 50px 0;">Conferencias, Networking, Workshops</p>
+            </div>
+        </section>
+
+
         <!-- Speakers -->
         <section class="emms__home__speakers">
             <div class="emms__container--lg">
