@@ -37,8 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (digitalTrendsBtn) {
         const submitEvent = async (e) => {
+            digitalTrendsBtn.classList.add('button--loading');
             e.preventDefault();
             await submitWithoutForm('digital-trends').then(({ fetchResp: resp }) => {
+                digitalTrendsBtn.classList.remove('button--loading');
                 if (!resp.ok) throw new Error('Server error on digital fetch', resp?.status);
 
                 window.location.href = getUrlWithParams('/digital-trends-registrado.php');
