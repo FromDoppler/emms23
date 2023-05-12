@@ -24,6 +24,7 @@ services:
       BEARER_TOKEN : ${BEARER_TOKEN}
       ADMIN_RESTRICTED_SERVERS: ${ADMIN_RESTRICTED_SERVERS}
       ADMIN_ALLOW_IPS: ${ADMIN_ALLOW_IPS}
+      SECRET_REFRESH: ${SECRET_REFRESH}
     volumes:
       - ${REPO}:/var/www/html
     restart: always

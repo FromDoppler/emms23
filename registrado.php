@@ -30,6 +30,15 @@ $db->close();
         } from './src/<?= VERSION ?>/js/user.js';
         registerEventsCardsCheck();
     </script>
+    <script src='./src/<?= VERSION ?>/js/vendors/socket.io.min.js?version=<?= VERSION ?>'></script>
+    <script>
+        const socket = io("wss://<?= URL_REFRESH ?>", {
+            path: "/<?= PATH_REFRESH ?>/socket.io"
+        });
+        socket.on("state", (args) => {
+            location.reload();
+        });
+    </script>
 </head>
 
 <body class="emms__home emms__home-logueado">

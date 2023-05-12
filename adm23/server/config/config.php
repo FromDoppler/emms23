@@ -42,4 +42,23 @@ class Config {
             return true;
         }
     }
+
+    public static function sendRefresh()
+    {
+        try {
+            $headers = array(
+                'Content-Type: application/json'
+            );
+
+            $ch = curl_init("https://".URL_REFRESH."/".PATH_REFRESH."/".SECRET_REFRESH);
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+            curl_exec($ch);
+            curl_close($ch);
+        } catch (Exception $e) {
+            header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
+            exit();
+        }
+    }
 }
