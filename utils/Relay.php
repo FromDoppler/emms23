@@ -984,7 +984,7 @@ class Relay
                                                                     </p>
                                                                     <p
                                                                         style="Margin: 0;font-size: 15px;line-height: 24px;color:#333333;font-weight: 400; ">
-                                                                        <img src="ok-message.png" alt="check" width="20"
+                                                                        <img src="https://i.imgur.com/TWIOLHM.png" alt="check" width="20"
                                                                             style="width:100%;max-width:20px !important; vertical-align: middle;">&nbsp;
                                                                         <strong>Conferencias, workshops y casos de éxito</strong> de
                                                                         la mano de speakers internacionales y las empresas que
@@ -994,7 +994,7 @@ class Relay
                                                                     </p>
                                                                     <p
                                                                         style="Margin: 0;font-size: 15px;line-height: 24px;color:#333333;font-weight: 400; ">
-                                                                        <img src="ok-message.png" alt="check" width="20"
+                                                                        <img src="https://i.imgur.com/TWIOLHM.png" alt="check" width="20"
                                                                             style="width:100%;max-width:20px !important; vertical-align: middle;">&nbsp;<strong>Descuentos
                                                                             exclusivos</strong>, para aprovechar al máximo tus
                                                                         plataformas de Marketing preferidas
@@ -1003,7 +1003,7 @@ class Relay
                                                                     </p>
                                                                     <p
                                                                         style="Margin: 0;font-size: 15px;line-height: 24px;color:#333333;font-weight: 400; ">
-                                                                        <img src="ok-message.png" alt="check" width="20"
+                                                                        <img src="https://i.imgur.com/TWIOLHM.png" alt="check" width="20"
                                                                             style="width:100%;max-width:20px !important; vertical-align: middle;">&nbsp;<strong>Espacios
                                                                             de networking</strong> con profesionales y referentes en
                                                                         la industria
@@ -1012,7 +1012,7 @@ class Relay
                                                                     </p>
                                                                     <p
                                                                         style="Margin: 0;font-size: 15px;line-height: 24px;color:#333333;font-weight: 400; ">
-                                                                        <img src="ok-message.png" alt="check" width="20"
+                                                                        <img src="https://i.imgur.com/TWIOLHM.png" alt="check" width="20"
                                                                             style="width:100%;max-width:20px !important; vertical-align: middle;">&nbsp;<strong>Y
                                                                             muchas otras sorpresas</strong> que revelaremos más
                                                                         cerca de la fecha
