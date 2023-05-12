@@ -80,16 +80,25 @@ $db->close(); ?>
                         <div class="emms__cropper-cont-16-9">
                             <div class="emms__cropper-cont ">
                                 <div class="emms__cropper-cont-interno">
-                                    <iframe src="https://www.youtube.com/embed/yjg-HjGfK8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe src="https://www.youtube.com/embed/<?= $duringDaysArray[$dayDuring]['youtube'] ?>?rel=0&autoplay=1&mute=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
                         <small>Recuerda activar el sonido y configurar la calidad de reproducción en <strong>720p HD</strong> ⚙️</small>
                     </div>
-                    <div class="emms__hero-conference__aside emms__fade-in">
-                        <iframe src="https://www.youtube.com/live_chat?v=yjg-HjGfK8A&embed_domain=goemms.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="emms__hero-conference__aside emms__fade-in emms__hero-conference__video--chat">
+                        <iframe src="https://www.youtube.com/live_chat?v=<?= $duringDaysArray[$dayDuring]['youtube'] ?>&embed_domain=<?= $_SERVER['SERVER_NAME'] ?>>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <p class="emms__hero-conference__certificate emms__fade-in">Descarga <a data-target="certificateModal" data-toggle="emms__certificate-modal">aquí</a> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag #EMMSECOMMERCE :)</p>
+                <?php elseif (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transmission'] === "twitch")) : ?>
+                    <iframe src="https://player.twitch.tv/?channel=<?= $duringDaysArray[$dayDuring]['twitch'] ?>&parent=<?= $_SERVER['SERVER_NAME'] ?>">
+                    </iframe>
+                <?php elseif (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transmission'] === "twitch-migrate")) : ?>
+                    //TODO: Agregar placa de migramos a twitch
+                    <h1>Placa migramos a twitch</h1>
+                <?php elseif (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transmission'] === "technical-problems")) : ?>
+                    //TODO: Agregar placa de problemas tecnicos
+                    <h1>Placa placa de problemas tecnicos</h1>
                 <?php elseif (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-off")) : ?>
                     <div class="emms__hero-conference__video emms__hero-conference__video--transition emms__fade-in">
                         <h2>Prepárate, ¡se viene el día 2 del EMMS E-commerce 2023!</h2>
