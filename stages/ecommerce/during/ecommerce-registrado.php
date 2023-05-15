@@ -84,21 +84,24 @@ $db->close(); ?>
                                 </div>
                             </div>
                         </div>
-                        <small>Recuerda activar el sonido y configurar la calidad de reproducción en <strong>720p HD</strong> ⚙️</small>
+                        <small>Recuerda activar el sonido 🔊</small>
                     </div>
                     <div class="emms__hero-conference__aside emms__fade-in emms__hero-conference__video--chat">
                         <iframe src="https://www.youtube.com/live_chat?v=<?= $duringDaysArray[$dayDuring]['youtube'] ?>&embed_domain=<?= $_SERVER['HTTP_HOST'] ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <p class="emms__hero-conference__certificate emms__fade-in">Descarga <a data-target="certificateModal" data-toggle="emms__certificate-modal">aquí</a> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag #EMMSECOMMERCE :)</p>
                 <?php elseif (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transmission'] === "twitch")) : ?>
-                    <iframe src="https://player.twitch.tv/?channel=<?= $duringDaysArray[$dayDuring]['twitch'] ?>&parent=<?= $_SERVER['HTTP_HOST'] ?>">
-                    </iframe>
+                    <div class="emms__cropper-cont-16-9">
+                        <div class="emms__cropper-cont ">
+                            <div class="emms__cropper-cont-interno">
+                            <iframe src="https://player.twitch.tv/?channel=<?= $duringDaysArray[$dayDuring]['twitch'] ?>&parent=<?= $_SERVER['HTTP_HOST'] ?>"></iframe>
+                            </div>
+                        </div>
+                    </div>
                 <?php elseif (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transmission'] === "twitch-migrate")) : ?>
-                    //TODO: Agregar placa de migramos a twitch
-                    <h1>Placa migramos a twitch</h1>
+                    <img src="src/img/banner-migrate-twitch.png" alt="Se migró a Twitch" class="banner">
                 <?php elseif (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transmission'] === "technical-problems")) : ?>
-                    //TODO: Agregar placa de problemas tecnicos
-                    <h1>Placa placa de problemas tecnicos</h1>
+                    <img src="src/img/banner-technical-error.png" alt="Errores técnicos" class="banner">
                 <?php elseif (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-off")) : ?>
                     <div class="emms__hero-conference__video emms__hero-conference__video--transition emms__fade-in">
                         <h2>Prepárate, ¡se viene el día 2 del EMMS E-commerce 2023!</h2>
@@ -176,8 +179,8 @@ $db->close(); ?>
                     <video src="src/img/EmmsDigitalTrends.mp4" controls></video>
                 </div>
                 <div class="emms__centralvideo__cta emms__fade-in">
-                    <a href="#registro" class="emms__cta">MÁS INFORMACIÓN</a>
-                    <small><i>¿Tienes dudas sobre el EMMS 2023?</i> Haz <a href="./home.php#preguntas-frecuentes" target="_blank">click aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
+                    <a href="./digital-trends" class="emms__cta">MÁS INFORMACIÓN</a>
+                    <small><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./registrado#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                 </div>
             </div>
         </section>

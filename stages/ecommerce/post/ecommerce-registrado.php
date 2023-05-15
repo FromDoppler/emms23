@@ -121,7 +121,7 @@ require_once('././config.php');
                             </div>
                             <div class="emms__calendar__list__item__card__business">
                                 <img src="./admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                                <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
+                                <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>" target="_blank" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
                             </div>
                         </div>
                     </li>
@@ -176,7 +176,7 @@ require_once('././config.php');
                             </div>
                             <div class="emms__calendar__list__item__card__business">
                                 <img src="./admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                                <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
+                                <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>" target="_blank" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
                             </div>
                         </div>
                     </li>
@@ -262,7 +262,7 @@ require_once('././config.php');
                 </div>
                 <div class="emms__centralvideo__cta emms__fade-in">
                     <a href="./digital-trends" class="emms__cta">MÁS INFORMACIÓN</a>
-                    <small><i>¿Tienes dudas sobre el EMMS 2023?</i> Haz <a href="./home.php#preguntas-frecuentes" target="_blank">click aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
+                    <small><i>¿Tienes dudas sobre el EMMS 2023?</i> Haz <a href="./registrado#preguntas-frecuentes" target="_blank">clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                 </div>
             </div>
         </section>

@@ -10,6 +10,10 @@
     align-items: center;
 }
 
+.emms__hero-conference .emms__container--lg .banner{
+    width: 100%;
+}
+
 .emms__hero-conference h1 {
     animation-delay: .1s;
 }

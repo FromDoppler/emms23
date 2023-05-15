@@ -70,9 +70,7 @@ $db->close();
                 <ul class="emms__header__nav__menu">
                     <li><a href="#" class="active">home</a></li>
                     <li><a href="/ecommerce-registrado">e-commerce</a></li>
-                    <?php if ($isDuring || $isPost) : ?>
-                        <li><a href="/digital-trends.php">digital trends</a></li>
-                    <?php endif ?>
+                    <li><a href="/digital-trends">digital trends</a></li>
                     <li><a href="/sponsors-registrado">contenido exclusivo</a></li>
                 </ul>
             </nav>
@@ -499,7 +497,7 @@ $db->close();
                             <div class="loged">
                                 <div class="emms__eventCards__list__item__picture">
                                     <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
-                                    <p>YA ESTÁS REGISTRADO</p>
+                                    <p>YA TE HAS REGISTRADO</p>
                                 </div>
                                 <?php if ($isDuring || $isPost) : ?>
                                     <div class="emms__eventCards__list__item__text">
@@ -648,7 +646,7 @@ $db->close();
                     </ul>
                 </div>
                 <?php if ($isPre) : ?>
-                    <small class="emms__fade-in"><strong>¡Ya puedes conocer a los speakers de EMMS Ecommerce!</strong><br>Accede y mira la agenda <a href="./ecommerce-registrado.php#agenda">haciendo clic aquí</a>.</small>
+                    <small class="emms__fade-in"><strong>¡Ya puedes conocer a los speakers de EMMS Ecommerce!</strong><br>Accede y mira la agenda <a href="./ecommerce-registrado#agenda">haciendo clic aquí</a>.</small>
                 <?php endif ?>
                 <?php if ($isDuring) : ?>
                     <small class="emms__fade-in"><strong>¡Conoce a los speakers del EMMS E-commerce!</strong><br>Descubre quiénes son y las temáticas de sus conferencias.</small>

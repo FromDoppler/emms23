@@ -6,7 +6,7 @@ require_once('././config.php');
 require_once('./utils/DB.php');
 $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 $settings_phase = $db->getCurrentPhase('ecommerce')[0];
-$db->close();?>
+$db->close(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +32,7 @@ $db->close();?>
             </div>
             <?php if (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on")) : ?>
                 <div class="emms__header__live">
-                    <p>¡ESTAMOS EN VIVO!</p>
+                    <p>¡ESTAMOS EN VIVO EN EMMS E-COMMERCE!</p>
                 </div>
             <?php endif; ?>
             <a class="emms__header__nav--mb" id="btn-burger"></a>
@@ -176,6 +176,7 @@ $db->close();?>
                 </div>
             </div>
             <div class="emms__background-b"></div>
+            <div class="emms__background-c"></div>
         </section>
 
 
@@ -208,7 +209,8 @@ $db->close();?>
                 </div>
                 <div class="emms__centralvideo__cta emms__fade-in">
                     <a href="#registro" class="emms__cta">REGÍSTRATE GRATIS</a>
-                    <small><i>¿Tienes dudas sobre el EMMS 2023?</i> Haz <a href="./home.php#preguntas-frecuentes" target="_blank">click aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
+                    <small class="eventHiddenElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
+                    <small class="eventHiddenElements eventShowElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./registrado#preguntas-frecuentes" target="_blank">Haz  aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                 </div>
             </div>
         </section>

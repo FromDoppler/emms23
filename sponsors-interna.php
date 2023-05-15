@@ -31,10 +31,10 @@ if (isset($_GET['slug'])) {
     <header class="emms__header">
         <div class="emms__container--lg emms__fade-in">
             <div class="emms__header__logo">
-                <a href="./index.php"><img src="src/img/logos/logo-emms.png" alt="Emms 2023"></a>
+                <a href="./"><img src="src/img/logos/logo-emms.png" alt="Emms 2023"></a>
             </div>
             <div class="emms__header__logo">
-                <a href="./index.php"><img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['image_landing'] ?>" alt="<?= $sponsor['alt_image_landing'] ?>"></a>
+                <a href="<?= $sponsor['link_site'] ?>"><img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['image_landing'] ?>" alt="<?= $sponsor['alt_image_landing'] ?>"></a>
             </div>
         </div>
     </header>
@@ -68,7 +68,7 @@ if (isset($_GET['slug'])) {
                 <div class="emms__internal-sponsors__resource__text">
                     <h2><?= $sponsor['title_magnet'] ?></h2>
                     <p><?= $sponsor['description_magnet'] ?></p>
-                    <a href="<?= $sponsor['link_magnet'] ?>" class="emms__cta">ACCEDER</a>
+                    <a href="<?= $sponsor['link_magnet'] ?>" class="emms__cta">ACCEDE</a>
                 </div>
             </div>
         </section>

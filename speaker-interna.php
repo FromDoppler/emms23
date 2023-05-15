@@ -38,15 +38,6 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
             <div class="emms__header__logo">
                 <a href="/"><img src="src/img/logos/logo-emms.png" alt="Emms 2023"></a>
             </div>
-            <a class="emms__header__nav--mb" id="btn-burger"></a>
-            <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
-                <ul class="emms__header__nav__menu">
-                    <li><a href="/registrado">home</a></li>
-                    <li><a href="/ecommerce">e-commerce</a></li>
-                    <li><a href="/digital-trends">digital trends</a></li>
-                    <li><a href="/sponsors-registrado">contenido exclusivo</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
@@ -142,7 +133,7 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
                         <div class="emms__hero-conference__video__register emms__fade-in eventHiddenElements eventShowElements">
                             <div class="emms__hero-conference__video__register__content">
                                 <h3>¡Estás a un paso de registrarte!</h3>
-                                <p>Para acceder a las conferencias del EMMS Ecommerce debes registrarte, haciendo click en el siguiente botón</p>
+                                <p>Para acceder a las conferencias del EMMS Ecommerce debes registrarte, haciendo clic en el siguiente botón</p>
                                 <a href="" class="emms__cta">REGÍSTRATE GRATIS</a>
                             </div>
                         </div>
