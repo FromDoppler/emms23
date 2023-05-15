@@ -102,16 +102,20 @@ function getSubjectEmail($phase)
 function getCurrentPhase($type)
 {
     try {
-        $ip = GeoIp::getIp();
-        $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-        $phases = $db->getCurrentPhase($type)[0];
-        $simulator = $db->getSimulator()[0];
-        $enabled = array_shift($simulator);
-        $phaseToShow =  ($enabled && in_array($ip, ALLOW_IPS)) ? array_search(1, $simulator) : array_search(1, $phases);
-        $db->close();
+        $mem_var = new Memcached();
+        $mem_var->addServer(MEMCACHED_SERVER, 11211);
+        $settings_phase = $mem_var->get("settings_phase_".$type);
+
+        if (!$settings_phase)
+        {
+            $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+            $settings_phase = $db->getCurrentPhase($type)[0];
+            $db->close();
+            $mem_var->set("settings_phase_".$type, $settings_phase, CACHE_TIME);
+        }
+        $phaseToShow = array_search(1, $settings_phase);
         return $phaseToShow;
     } catch (Exception $e) {
-        processError("getCurrentPhase", $e->getMessage(), []);
         header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
         exit();
     }
