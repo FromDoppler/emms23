@@ -4,7 +4,7 @@
     <h3><strong>DÍA 1</strong> - MARTES 16 DE MAYO</h3>
     <div class="emms__calendar__date__country">
         <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 12:00 a.m</span>
-        <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2023&iso=20230516T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
+        <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2023&iso=20230516T12&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
     </div>
 </div>
 
@@ -143,7 +143,7 @@
     <h3><strong>DÍA 2</strong> - MIÉRCOLES 17 DE MAYO</h3>
     <div class="emms__calendar__date__country">
         <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 12:00 a.m</span>
-        <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2023&iso=20230516T11&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
+        <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+2023&iso=20230516T12&p1=51&ah=5" target="_blank">Mira el horario de tu país</a>
     </div>
 </div>
 

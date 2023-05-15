@@ -34,7 +34,7 @@ $db->close(); ?>
             </div>
             <?php if (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on")) : ?>
                 <div class="emms__header__live">
-                    <p>¡ESTAMOS EN VIVO!</p>
+                    <p>¡ESTAMOS EN VIVO EN EMMS E-COMMERCE!</p>
                 </div>
             <?php endif; ?>
             <a class="emms__header__nav--mb" id="btn-burger"></a>

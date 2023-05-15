@@ -8,6 +8,12 @@ require_once('././config.php');
 <head>
     <?php include_once('././src/components/head-ecommerce.php'); ?>
     <?php include_once('././src/components/head.php'); ?>
+    <script type="module">
+        import {
+            hiddenOrShowUserUI
+        } from './src/<?= VERSION ?>/js/user.js';
+        hiddenOrShowUserUI('digital-trends');
+    </script>
 </head>
 
 <body class="emms__ecommerce emms__ecommerce--post">
@@ -200,7 +206,7 @@ require_once('././config.php');
                                 </div>
                                 <div class="emms__calendar__list__item__card__business">
                                     <img src="./admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                                    <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
+                                    <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>" target="_blank" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
                                 </div>
                             </div>
                         </li>
@@ -255,7 +261,7 @@ require_once('././config.php');
                                 </div>
                                 <div class="emms__calendar__list__item__card__business">
                                     <img src="./admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                                    <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
+                                    <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>" target="_blank" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
                                 </div>
                             </div>
                         </li>
@@ -299,7 +305,8 @@ require_once('././config.php');
                 </div>
                 <div class="emms__centralvideo__cta emms__fade-in">
                     <a href="#registro" class="emms__cta">ACCEDE A LAS CONFERENCIAS</a>
-                    <small><i>¿Tienes dudas sobre el EMMS 2023?</i> Haz <a href="./home.php#preguntas-frecuentes" target="_blank">click aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
+                    <small class="eventHiddenElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
+                    <small class="eventHiddenElements eventShowElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./registrado#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                 </div>
             </div>
         </section>

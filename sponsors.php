@@ -34,6 +34,7 @@ require_once('./utils/DB.php');
                 <ul class="emms__header__nav__menu">
                     <li><a href="/">home</a></li>
                     <li><a href="./ecommerce">e-commerce</a></li>
+                    <li><a href="./digital-trends">digital trends</a></li>
                     <li><a href="#" class="active">contenido exclusivo</a></li>
                 </ul>
             </nav>
@@ -76,7 +77,7 @@ require_once('./utils/DB.php');
                             </div>
                             <h3><?= $sponsor['title'] ?></h3>
                             <p><?= $sponsor['description_card'] ?></p>
-                            <a data-target="modalRegister" data-toggle="emms__register-modal" slug=<?= $sponsor['slug'] ?>>Acceder →</a>
+                            <a data-target="modalRegister" data-toggle="emms__register-modal" slug=<?= $sponsor['slug'] ?>>Accede →</a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
