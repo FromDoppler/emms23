@@ -93,6 +93,9 @@ if (!defined('URL_REFRESH')) define('URL_REFRESH', 'apisqa.fromdoppler.net');
 if (!defined('PATH_REFRESH')) define('PATH_REFRESH', 'emms-socket');
 if (!defined('SECRET_REFRESH')) define('SECRET_REFRESH', $SECRET_REFRESH);
 
+#MEMCACHED
+if (!defined('MEMCACHED_SERVER')) define('MEMCACHED_SERVER', "memcached");
+
 #During Days System
 $dayDuring = 1;
 $duringDaysArray = array(
