@@ -17,7 +17,7 @@ $isPre = (($settings_phase['event'] === "ecommerce") && ($settings_phase['pre'] 
 $isLive = (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) &&  ($settings_phase['transition'] === "live-on"));
 $isDuring = (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1));
 $isPost = (($settings_phase['event'] === "ecommerce") && ($settings_phase['post'] === 1));
-$db->close();
+
 ?>
 
 <!DOCTYPE html>
