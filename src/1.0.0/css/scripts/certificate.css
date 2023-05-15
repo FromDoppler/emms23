@@ -1,0 +1,8 @@
+
+#certificateForm .certificateError{
+    display: none;
+}
+
+#certificateForm .certificateError.showError{
+    display: block;
+}

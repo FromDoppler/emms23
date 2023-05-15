@@ -117,10 +117,12 @@ $db->close(); ?>
             <div class="emms__certificate-modal__window">
                 <h3>¡Estás a un paso de descargar tu Certificado de Asistencia!</h3>
                 <p>Ingresa tu nombre y apellido para descargarlo ahora 🙂</p>
-                <input type="text" placeholder="Nombre y apellido">
-                <span>Debes ingresar tu nombre y apellido</span>
-                <a href="" class="emms__cta">QUIERO DESCARGARLO</a>
-                <button class="emms__certificate-modal__window__close" data-dismiss="emms__certificate-modal"></button>
+                <form id="certificateForm">
+                    <input type="text" placeholder="Nombre y apellido" name="fullname">
+                    <span class="certificateError">¡Ouch! Debes ingresar al menos 2 caracteres.</span>
+                    <a class="emms__cta" type="button" id="certificateCta">QUIERO DESCARGARLO</a>
+                    <button class="emms__certificate-modal__window__close" data-dismiss="emms__certificate-modal"></button>
+                </form>
             </div>
         </div>
 
@@ -193,7 +195,7 @@ $db->close(); ?>
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
     <script src="src/<?= VERSION ?>/js/certificateModal.js"></script>
     <script src="src/<?= VERSION ?>/js/date.js"></script>
-
+    <script src="src/<?= VERSION ?>/js/common/certificate.js"></script>
 
 
 </body>
