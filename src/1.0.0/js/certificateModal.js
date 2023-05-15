@@ -8,7 +8,6 @@ document.addEventListener('click', function (e) {
             document.getElementById(m_ID).classList.add('open');
             document.querySelector('body').style.overflowY = 'hidden';
             e.preventDefault();
-            console.log("hola")
         }
     }
 
