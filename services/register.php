@@ -29,6 +29,7 @@ function isSubmitValid($ip)
 function setDataRequest($ip, $countryGeo)
 {
 
+    $requestWithoutForm = false;
     $_POST = json_decode(file_get_contents('php://input'), true);
     $events = isset($_POST['events']) ? $_POST['events'] : null;
     $events = json_decode($events);
@@ -42,8 +43,12 @@ function setDataRequest($ip, $countryGeo)
         $firstname = $db->getUserNameByEmail($email)[0];
         $db->close();
         $firstname = $firstname["firstname"];
+        $requestWithoutForm = true;
     }
-    $privacy     = isset($_POST['acceptPolicies']) ? $_POST['acceptPolicies']     : false;
+    $privacy = isset($_POST['acceptPolicies']) ? $_POST['acceptPolicies']     : false;
+    if ($requestWithoutForm) {
+        $privacy = true;
+    }
     $promotions = isset($_POST['acceptPromotions']) ? $_POST['acceptPromotions'] : false;
     $source_utm = isset($_POST['utm_source']) ? $_POST['utm_source'] : null;
     $medium_utm = isset($_POST['utm_medium']) ? $_POST['utm_medium'] : null;
@@ -104,14 +109,13 @@ function getCurrentPhase($type)
     try {
         $mem_var = new Memcached();
         $mem_var->addServer(MEMCACHED_SERVER, 11211);
-        $settings_phase = $mem_var->get("settings_phase_".$type);
+        $settings_phase = $mem_var->get("settings_phase_" . $type);
 
-        if (!$settings_phase)
-        {
+        if (!$settings_phase) {
             $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
             $settings_phase = $db->getCurrentPhase($type)[0];
             $db->close();
-            $mem_var->set("settings_phase_".$type, $settings_phase, CACHE_TIME);
+            $mem_var->set("settings_phase_" . $type, $settings_phase, CACHE_TIME);
         }
         $phaseToShow = array_search(1, $settings_phase);
         return $phaseToShow;
