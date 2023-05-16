@@ -20,6 +20,8 @@ class SpreadSheetGoogle {
             $user['term_utm'] . " ",
             $user['origin'] . " ",
             $user['country_ip'] . " ",
+            $user['ecommerce'] . " ",
+            $user['digital_trends'] . " ",
         ));
         write_to_sheet($idSpreadSheet, $range, $values, $db);
     }
