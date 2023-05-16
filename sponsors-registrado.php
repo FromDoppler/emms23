@@ -7,7 +7,7 @@ require_once('./utils/DB.php');
 <html lang="en">
 
 <head>
-    <?php include_once('././src/components/head-ecommerce.php'); ?>
+    <?php include_once('././src/components/head-home.php'); ?>
     <?php include_once('././src/components/head.php'); ?>
     <script type="module">
         import {

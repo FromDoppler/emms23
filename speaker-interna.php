@@ -16,7 +16,7 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
 <html lang="en">
 
 <head>
-    <?php include_once('././src/components/head-ecommerce.php'); ?>
+    <?php include_once('././src/components/head-speaker-interna.php'); ?>
     <?php include_once('././src/components/head.php'); ?>
     <script type="module">
         import {
