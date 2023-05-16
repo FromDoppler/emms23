@@ -6,8 +6,7 @@ $mem_var = new Memcached();
 $mem_var->addServer(MEMCACHED_SERVER, 11211);
 $settings_phase = $mem_var->get("settings_phase_ecommerce");
 
-if (!$settings_phase)
-{
+if (!$settings_phase) {
     $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     $settings_phase = $db->getCurrentPhase('ecommerce')[0];
     $db->close();
@@ -47,7 +46,7 @@ if (!$settings_phase)
                         </ul>
                     </li>
                     <li><a href="/digital-trends">digital trends</a></li>
-                    <li><a href="/sponsors-registrado">contenido exclusivo</a></li>
+                    <li><a href="/sponsors">contenido exclusivo</a></li>
                 </ul>
             </nav>
         </div>
@@ -92,17 +91,18 @@ if (!$settings_phase)
                         </div>
                         <small>Recuerda activar el sonido 🔊</small>
                     </div>
-                    <div class="emms__hero-conference__aside emms__fade-in emms__hero-conference__video--chat">
-                        <iframe src="https://www.youtube.com/live_chat?v=<?= $duringDaysArray[$dayDuring]['youtube'] ?>&embed_domain=<?= $_SERVER['HTTP_HOST'] ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <p class="emms__hero-conference__certificate emms__fade-in">Descarga <a data-target="certificateModal" data-toggle="emms__certificate-modal">aquí</a> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag #EMMSECOMMERCE :)</p>
+
                 <?php elseif (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on") && ($settings_phase['transmission'] === "twitch")) : ?>
-                    <div class="emms__cropper-cont-16-9">
-                        <div class="emms__cropper-cont ">
-                            <div class="emms__cropper-cont-interno">
-                            <iframe src="https://player.twitch.tv/?channel=<?= $duringDaysArray[$dayDuring]['twitch'] ?>&parent=<?= $_SERVER['HTTP_HOST'] ?>"></iframe>
+                    <h1 class="emms__fade-in">EN VIVO</h1>
+                    <div class="emms__hero-conference__video emms__fade-in">
+                        <div class="emms__cropper-cont-16-9">
+                            <div class="emms__cropper-cont ">
+                                <div class="emms__cropper-cont-interno">
+                                    <iframe src="https://player.twitch.tv/?channel=<?= $duringDaysArray[$dayDuring]['twitch'] ?>&parent=<?= $_SERVER['HTTP_HOST'] ?>"></iframe>
+                                </div>
                             </div>
                         </div>
+                        <small>Recuerda activar el sonido 🔊</small>
                     </div>
                 <?php elseif (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on") && ($settings_phase['transmission'] === "twitch-migrate")) : ?>
                     <img src="src/img/banner-migrate-twitch.png" alt="Se migró a Twitch" class="banner">
@@ -118,6 +118,10 @@ if (!$settings_phase)
                         <a class="emms__cta" href="/sponsors-registrado">ACCEDE AHORA</a>
                     </div>
                 <?php endif; ?>
+                <div class="emms__hero-conference__aside emms__fade-in emms__hero-conference__video--chat">
+                    <iframe src="https://www.youtube.com/live_chat?v=<?= $duringDaysArray[$dayDuring]['youtube'] ?>&embed_domain=<?= $_SERVER['HTTP_HOST'] ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="emms__hero-conference__certificate emms__fade-in">Descarga <a data-target="certificateModal" data-toggle="emms__certificate-modal">aquí</a> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag #EMMSECOMMERCE :)</p>
             </div>
         </section>
 

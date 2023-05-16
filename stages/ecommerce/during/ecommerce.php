@@ -296,7 +296,7 @@ if (!$settings_phase)
                 <h3>MEDIA PARTNERS STARTERS</h3>
                 <ul class="emms__companies__list emms__companies__list  emms__fade-in" id="mediaPartenersStarters">
                 </ul>
-                <small class="emms__fade-in"><strong>¿Quieres ser aliado del EMMS E-commerce 2023?</strong> ¡Hablemos! Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></small>
+                <small class="emms__fade-in"><strong>¿Quieres ser aliado del EMMS?</strong> ¡Hablemos! Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></small>
             </div>
         </section>
 

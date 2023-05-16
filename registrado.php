@@ -79,7 +79,7 @@ $isPost = (($settings_phase['event'] === "ecommerce") && ($settings_phase['post'
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
                 <ul class="emms__header__nav__menu">
                     <li><a href="#" class="active">home</a></li>
-                    <li><a href="/ecommerce-registrado">e-commerce</a></li>
+                    <li><a href="/ecommerce">e-commerce</a></li>
                     <li><a href="/digital-trends">digital trends</a></li>
                     <li><a href="/sponsors-registrado">contenido exclusivo</a></li>
                 </ul>
@@ -788,7 +788,7 @@ $isPost = (($settings_phase['event'] === "ecommerce") && ($settings_phase['post'
                     <li class="emms__companies__list__item"><img src="src/img/logos/logo-doofinder.png" alt="Doofinder"></li>
                     <li class="emms__companies__list__item"><img src="src/img/logos/logo-easycommerce.png" alt="Easycommerce"></li>
                 </ul>
-                <small class="emms__fade-in">¿Quieres ser aliado del EMMS E-commerce 2023? ¡Hablemos! Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></small>
+                <small class="emms__fade-in">¿Quieres ser aliado del EMMS? ¡Hablemos! Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></small>
             </div>
         </section>
 
