@@ -197,6 +197,5 @@ isSubmitValid($ip);
 $user = setDataRequest($ip, $countryGeo);
 saveSubscriptionDoppler($user);
 saveSubscriptionDopplerTable($user);
-//TODO: AGREGAR COLUMNA EXTRA EN EL SPREAD con eventos
 saveSubscriptionSpreadSheet($user);
 sendEmail($user, $user['subject']);
