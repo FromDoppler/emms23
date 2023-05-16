@@ -50,7 +50,14 @@ const hiddenOrShowUserUI = (event) => {
     showElements.forEach(element => element.style.display = 'none');
     if (!userRegisteredInEvent(event)) return;
     hiddenElements.forEach(element => element.style.display = 'none');
-    showElements.forEach(element => element.style.display = 'block');
+    showElements.forEach(element => {
+        if (element.classList.contains('inline-block')) {
+            element.style.display = 'inline-block'
+        } else {
+            element.style.display = 'block'
+        }
+
+    });
 }
 
 const registerEventsCardsCheck = () => {

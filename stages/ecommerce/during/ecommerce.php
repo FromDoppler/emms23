@@ -6,8 +6,7 @@ $mem_var = new Memcached();
 $mem_var->addServer(MEMCACHED_SERVER, 11211);
 $settings_phase = $mem_var->get("settings_phase_ecommerce");
 
-if (!$settings_phase)
-{
+if (!$settings_phase) {
     $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     $settings_phase = $db->getCurrentPhase('ecommerce')[0];
     $db->close();
@@ -159,7 +158,7 @@ if (!$settings_phase)
             <div class="emms__hero-registration__text">
                 <h1>¡Estás a un paso de acceder al EMMS Ecommerce!</h1>
                 <p>Inspírate y aprende cómo potenciar tu Tienda Online en un evento exclusivo para tu industria, 100% gratis. Revisa en la <a href="#agenda">agenda</a> los referentes internacionales que nos acompañan.</p>
-                <button id="ecommerceBtn" type="button" class="emms__cta"><span class="button__text">ACCEDE AL VIVO</span></button>
+                <button type="button" class="emms__cta ecommerceBtn"><span class="button__text">ACCEDE AL VIVO</span></button>
             </div>
             <div class="emms__hero-registration__bottom emms__fade-in">
                 <p>IA >> AUTOMATION MARKETING >> UX >> CRO >> MARKETPLACES >> SEO >> RETARGETING >> SOCIAL SELLING >> EMAIL MARKETING >> ESTRATEGIAS DE VENTA >></p>
@@ -177,9 +176,13 @@ if (!$settings_phase)
                 <!-- Speakers -->
                 <?php include('./src/components/speakers.php') ?>
                 <!-- End list -->
-                <div class="emms__calendar__bottom emms__fade-in">
+                <div class="emms__calendar__bottom emms__fade-in eventHiddenElements">
                     <p>Recuerda que al finalizar el evento podrás acceder a los videos de todas las conferencias.</p>
                     <a href="#registro" class="emms__cta">ACCEDE AL VIVO</a>
+                </div>
+                <div class="emms__calendar__bottom emms__fade-in eventHiddenElements eventShowElements">
+                    <p>Recuerda que al finalizar el evento podrás acceder a los videos de todas las conferencias.</p>
+                    <a class="emms__cta ecommerceBtn"><span class="button__text">ACCEDE AL VIVO</span></a>
                 </div>
             </div>
             <div class="emms__background-b"></div>
@@ -214,10 +217,15 @@ if (!$settings_phase)
                 <div class="emms__centralvideo__video emms__fade-in">
                     <video src="src/img/EmmsEcommerce.mp4" controls></video>
                 </div>
-                <div class="emms__centralvideo__cta emms__fade-in">
+                <div class="emms__centralvideo__cta emms__fade-in eventHiddenElements">
                     <a href="#registro" class="emms__cta">REGÍSTRATE GRATIS</a>
                     <small class="eventHiddenElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
-                    <small class="eventHiddenElements eventShowElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./registrado#preguntas-frecuentes" target="_blank">Haz  aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
+                    <small class="eventHiddenElements eventShowElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./registrado#preguntas-frecuentes" target="_blank">Haz aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
+                </div>
+                <div class="emms__centralvideo__cta emms__fade-in eventHiddenElements eventShowElements">
+                    <a class="emms__cta ecommerceBtn"><span class="button__text">REGÍSTRATE GRATIS</span></a>
+                    <small class="eventHiddenElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
+                    <small class="eventHiddenElements eventShowElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./registrado#preguntas-frecuentes" target="_blank">Haz aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                 </div>
             </div>
         </section>

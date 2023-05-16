@@ -66,7 +66,7 @@ require_once('././config.php');
     <main>
 
         <!-- Hero with form-->
-        <section class="emms__hero-registration" id="registro">
+        <section class="emms__hero-registration eventHiddenElements" id="registro">
             <div class="emms__hero-registration__columns">
                 <div class="emms__hero-registration__text emms__fade-in">
                     <h1><em>EVENTO ONLINE Y GRATUITO</em> ¡El EMMS evolucionó!</h1>
@@ -136,11 +136,11 @@ require_once('././config.php');
         </section>
 
         <!-- Hero without form-->
-        <section class="emms__hero-registration emms__hero-registration--noform" id="registro">
+        <section class="emms__hero-registration emms__hero-registration--noform eventHiddenElements eventShowElements" id="registro">
             <div class="emms__hero-registration__text emms__fade-in">
                 <h1>¡Estás a un paso de acceder al EMMS E-commerce 2023!</h1>
                 <p>Revive el evento más importante de Latinoamérica y España sobre E-commerce. <strong>Más de 10.000 personas ya lo disfrutaron</strong>. ¡Ahora te toca a ti!</p>
-                <button id="register-button" type="button" class="emms__cta">REVIVE EL EVENTO</button>
+                <button type="button" class="emms__cta ecommerceBtn"><span class="button__text">REVIVE EL EVENTO</span></button>
             </div>
             <div class="emms__hero-registration__bottom emms__fade-in">
                 <p>IA >> AUTOMATION MARKETING >> UX >> CRO >> MARKETPLACES >> SEO >> RETARGETING >> SOCIAL SELLING >> EMAIL MARKETING >> ESTRATEGIAS DE VENTA >></p>
@@ -268,8 +268,11 @@ require_once('././config.php');
                     <?php endforeach; ?>
                 </ul>
                 <!-- End list -->
-                <div class="emms__calendar__bottom emms__fade-in">
+                <div class="emms__calendar__bottom emms__fade-in  eventHiddenElements">
                     <a href="#registro" class="emms__cta">ACCEDE A LAS CONFERENCIAS</a>
+                </div>
+                <div class="emms__calendar__bottom emms__fade-in  eventHiddenElements eventShowElements">
+                    <a class="emms__cta ecommerceBtn"><span class="button__text">ACCEDE A LAS CONFERENCIAS</span></a>
                 </div>
             </div>
             <div class="emms__background-b"></div>
@@ -303,8 +306,13 @@ require_once('././config.php');
                 <div class="emms__centralvideo__video emms__fade-in">
                     <video src="src/img/EmmsEcommerce.mp4" controls></video>
                 </div>
-                <div class="emms__centralvideo__cta emms__fade-in">
+                <div class="emms__centralvideo__cta emms__fade-in  eventHiddenElements ">
                     <a href="#registro" class="emms__cta">ACCEDE A LAS CONFERENCIAS</a>
+                    <small class="eventHiddenElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
+                    <small class="eventHiddenElements eventShowElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./registrado#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
+                </div>
+                <div class="emms__centralvideo__cta emms__fade-in  eventHiddenElements eventShowElements">
+                    <a class="emms__cta ecommerceBtn"><span class="button__text">ACCEDE A LAS CONFERENCIAS</span></a>
                     <small class="eventHiddenElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                     <small class="eventHiddenElements eventShowElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./registrado#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                 </div>

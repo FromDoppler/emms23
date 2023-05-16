@@ -11,7 +11,7 @@ import {
 
 document.addEventListener('DOMContentLoaded', () => {
     const digitalForm = document.getElementById('digitalForm');
-    const digitalTrendsBtn = document.getElementById('digitalTrendsBtn');
+    const digitalTrendsBtns = document.querySelectorAll('.digitalTrendsBtn');
 
     if (digitalForm) {
         const submitForm = async (e) => {
@@ -35,12 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         digitalForm.querySelector('button').addEventListener('click', submitForm);
     }
-    if (digitalTrendsBtn) {
-        const submitEvent = async (e) => {
-            digitalTrendsBtn.classList.add('button--loading');
-            e.preventDefault();
+    if (digitalTrendsBtns.length > 0) {
+        const submitEvent = async (btn) => {
+            btn.classList.add('button--loading');
             await submitWithoutForm('digital-trends').then(({ fetchResp: resp }) => {
-                digitalTrendsBtn.classList.remove('button--loading');
+                btn.classList.remove('button--loading');
                 if (!resp.ok) throw new Error('Server error on digital fetch', resp?.status);
 
                 window.location.href = getUrlWithParams('/digital-trends-registrado.php');
@@ -49,6 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-        digitalTrendsBtn.addEventListener('click', submitEvent);
+        digitalTrendsBtns.forEach( btn => btn.addEventListener('click', () => {submitEvent(btn)}));
     }
 });

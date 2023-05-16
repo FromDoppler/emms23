@@ -6,8 +6,7 @@ $mem_var = new Memcached();
 $mem_var->addServer(MEMCACHED_SERVER, 11211);
 $settings_phase = $mem_var->get("settings_phase_ecommerce");
 
-if (!$settings_phase)
-{
+if (!$settings_phase) {
     $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     $settings_phase = $db->getCurrentPhase('ecommerce')[0];
     $db->close();
@@ -158,7 +157,7 @@ if (!$settings_phase)
             <div class="emms__hero-registration__text">
                 <h1>¡Vuelve el EMMS!</h1>
                 <p>Inspírate y capacítate con los mayores referentes internacionales en Marketing Digital. Conferencias, Casos de Éxito, Workshops, Networking ¡y mucho más!</p>
-                <button type="button" id="digitalTrendsBtn" class="emms__cta"><span class="button__text">REGÍSTRATE GRATIS</span></button>
+                <button type="button" class="emms__cta digitalTrendsBtn"><span class="button__text">REGÍSTRATE GRATIS</span></button>
             </div>
             <div class="emms__hero-registration__bottom emms__fade-in">
                 <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
@@ -260,7 +259,8 @@ if (!$settings_phase)
                     </ul>
                 </div>
                 <small class="emms__fade-in"><strong>Próximamente conocerás los Speakers 2023. </strong><br>Regístrate gratis ahora y descubre antes que nadie las novedades del EMMS.</small>
-                <a href="#registro" class="emms__cta emms__fade-in">APÚNTATE AHORA</a>
+                <a href="#registro" class="emms__cta emms__fade-in eventHiddenElements">APÚNTATE AHORA</a>
+                <a class="emms__cta emms__fade-in digitalTrendsBtn eventHiddenElements eventShowElements inline-block"> <span class="button__text">APÚNTATE AHORA </span></a>
             </div>
         </section>
 
@@ -292,8 +292,15 @@ if (!$settings_phase)
                 <div class="emms__centralvideo__video emms__fade-in">
                     <video src="src/img/EmmsDigitalTrends.mp4" controls></video>
                 </div>
-                <div class="emms__centralvideo__cta emms__fade-in">
+
+                <div class="emms__centralvideo__cta emms__fade-in eventHiddenElements">
                     <a href="#registro" class="emms__cta">REGÍSTRATE GRATIS</a>
+                    <small class="eventHiddenElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
+                    <small class="eventHiddenElements eventShowElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./registrado#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
+                </div>
+
+                <div class="emms__centralvideo__cta emms__fade-in digitalTrendsBtn eventHiddenElements eventShowElements">
+                    <a class="emms__cta"><span class="button__text">REGÍSTRATE GRATIS</span></a>
                     <small class="eventHiddenElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                     <small class="eventHiddenElements eventShowElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./registrado#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                 </div>
@@ -329,8 +336,11 @@ if (!$settings_phase)
                         <p>“Todos los años el EMMS me sorprende con una propuesta más innovadora. Siempre les recomiendo a colegas del Marketing que se sumen, porque es el lugar más valioso que encuentro para aprender sobre estrategias para mi negocio”.<em>Analía<img src="src/img/flag-espana.png" alt="España"></em></p>
                     </li>
                 </ul>
-                <div class="emms__userscomments__cta">
+                <div class="emms__userscomments__cta eventHiddenElements">
                     <a href="#registro" class="emms__cta emms__fade-in">REGÍSTRATE GRATIS</a>
+                </div>
+                <div class="emms__userscomments__cta digitalTrendsBtn eventHiddenElements eventShowElements">
+                    <a class="emms__cta emms__fade-in"><span class="button__text">REGÍSTRATE GRATIS</span></a>
                 </div>
             </div>
         </section>
@@ -370,7 +380,6 @@ if (!$settings_phase)
     <script src="src/<?= VERSION ?>/js/collapsibles.js"></script>
     <script src="src/<?= VERSION ?>/js/dateCounter.js"></script>
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
-    <script src="src/<?= VERSION ?>/js/mediaPartners.js"></script>
     <script src="src/<?= VERSION ?>/js/homeDigital.js" type="module"></script>
     <script src="src/<?= VERSION ?>/js/counterAnimation.js"></script>
 
