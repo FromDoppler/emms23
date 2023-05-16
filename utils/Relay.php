@@ -680,7 +680,7 @@ class Relay
     public static function getEcommerceEmailTemplateDuring($encodeEmail)
     {
         $html = '
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+           <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
             <html lang="es">
 
             <head>
@@ -780,6 +780,10 @@ class Relay
                             text-align: center !important;
                         }
 
+                        .mobile-title {
+                            font-size: 24px !important;
+                        }
+
                         .img {
                             width: 100% !important;
                             height: auto !important;
@@ -869,7 +873,7 @@ class Relay
                                                     <td align="center" valign="top">
                                                         <a href="#" style="cursor: default;"><img src="https://i.imgur.com/sMS6CH8.png"
                                                                 alt="Logo de Doppler" width="189"
-                                                                style="width:100%;max-width:189px !important;"></a>
+                                                                style="width:100%;max-width:240px !important;"></a>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -898,13 +902,13 @@ class Relay
                                                                 <td align="center" valign="top" class="mobile"
                                                                     style="font-family: Helvetica, Arial, sans-serif; color:#FFFFFF;">
                                                                     <p
-                                                                        style="margin: 0; font-family: Helvetica, Arial, sans-serif;font-size: 15px;line-height: 15px;font-weight: 400;color:#EF2AAC;">
+                                                                        style="margin: 0; font-family: Helvetica, Arial, sans-serif;font-size: 15px;line-height: 15px;font-weight: 700;color:#EF2AAC;">
                                                                         Ya comenzó el EMMS E-commerce 2023
                                                                     </p>
                                                                     <p style="margin:0; font-size: 5px; line-height: 5px;">&nbsp;
                                                                     </p>
                                                                     <p style="margin: 0; font-size: 30px;line-height: 30px;font-weight: 700;color:#FFFFFF;"
-                                                                        class="mobile-title-fontsize">¡Gracias por registrarte!</p>
+                                                                        class="mobile-title">¡Gracias por registrarte!</p>
                                                                     <p style="margin:0; font-size: 25px; line-height: 25px;">&nbsp;
                                                                     </p>
                                                                     <p
@@ -946,14 +950,14 @@ class Relay
                                                     <td align="left" valign="top" class="container ">
                                                         <table cellpadding="0" cellspacing="0" border="0" class="container">
                                                             <tr>
-                                                                <th align="left" valign="middle" width="235"
+                                                                <th align="left" valign="middle" width="165"
                                                                     class="mobile mobile-center">
                                                                     <p
-                                                                        style="margin: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px;line-height: 29px;font-weight: 400;color:#333333;max-width: 272; ">
+                                                                        style="margin: 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px;line-height: 22px;font-weight: 400;color:#333333;max-width: 272; ">
                                                                         Mantente pendiente de todas las tendencias en el sector del
                                                                         E-commerce</p>
                                                                 </th>
-                                                                <th align="center" valign="top" width="320" class="mobile">
+                                                                <th align="center" valign="top" width="400" class="mobile">
                                                                     <a href="#" style="cursor: default !important;"><img
                                                                             src="https://i.imgur.com/mInuzae.gif"
                                                                             alt="IA - AUTOMATION MARKETING - UX - CRO - SEO - RETARGETING - SOCIAL SELLING - EMAIL MARKETING - ESTRATEGIAS DE VENTA"
@@ -963,10 +967,6 @@ class Relay
                                                             </tr>
                                                         </table>
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <td height="20" style="font-size:20px; line-height:20px;" class="mobile-pt">
-                                                        &nbsp;</td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -984,7 +984,7 @@ class Relay
                                         <td align="center" valign="top" class="container" style="background-color: #FFFFFF">
                                             <table width="555" cellpadding="0" cellspacing="0" border="0" class="container">
                                                 <tr>
-                                                    <td height="40" style="font-size:40px; line-height:40px;">&nbsp;</td>
+                                                    <td height="20" style="font-size:20px; line-height:20px;">&nbsp;</td>
                                                 </tr>
                                                 <tr>
                                                     <td align="center" valign="top">
@@ -1082,7 +1082,7 @@ class Relay
                                                                         class="container">
                                                                         <tr>
                                                                             <th align="center" valign="middle" width="200"
-                                                                                class="mobile">
+                                                                                class="mobile mobile-pt">
                                                                                 <table cellpadding="0" cellspacing="0" border="0"
                                                                                     class="container">
                                                                                     <tr>
@@ -1159,7 +1159,7 @@ class Relay
                                                                                             width="190">
                                                                                             <a href="#"
                                                                                                 style="cursor: default !important;"><img
-                                                                                                    src="]https://i.imgur.com/KsfMOBB.png"
+                                                                                                    src="https://i.imgur.com/KsfMOBB.png"
                                                                                                     alt="José A.Robles" width="91"
                                                                                                     style="width:100%; max-width:91px !important; margin-bottom: 0; padding-bottom: 0;display: block;"></a>
                                                                                         </th>
@@ -1205,7 +1205,7 @@ class Relay
                                                                         class="container">
                                                                         <tr>
                                                                             <th align="center" valign="middle" width="200"
-                                                                                class="mobile">
+                                                                                class="mobile mobile-pt">
                                                                                 <table cellpadding="0" cellspacing="0" border="0"
                                                                                     class="container">
                                                                                     <tr>
@@ -1269,7 +1269,7 @@ class Relay
                                                                 <th align="center" valign="middle" width="25" class="mobileOff">
                                                                     &nbsp;
                                                                 </th>
-                                                                <th align="center" valign="middle" width="100" class="mobile  mobile-pt">
+                                                                <th align="center" valign="middle" width="100" class="mobile">
                                                                     <table cellpadding="0" cellspacing="0" border="0"
                                                                         class="container">
                                                                         <tr>
@@ -1323,7 +1323,7 @@ class Relay
                                                                 <th align="center" valign="middle" width="25" class="mobileOff">
                                                                     &nbsp;
                                                                 </th>
-                                                                <th align="center" valign="middle" width="100" class="mobile">
+                                                                <th align="center" valign="middle" width="100" class="mobile mobile-pt">
                                                                     <table cellpadding="0" cellspacing="0" border="0"
                                                                         class="container">
                                                                         <tr>
@@ -1383,7 +1383,7 @@ class Relay
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td height="40" style="font-size:40px; line-height:40px;">&nbsp;</td>
+                                                    <td height="40" style="font-size:40px; line-height:40px;" class="mobileOff">&nbsp;</td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -1422,42 +1422,56 @@ class Relay
                                                                                     <p
                                                                                         style="Margin: 0;font-size: 24px;line-height: 24px;">
                                                                                         &nbsp;</p>
-                                                                                    <p
+
+                                                                                        <table cellpadding="0" cellspacing="0" border="0" class="container">
+                                                                                            <tr>
+                                                                                                <th align="left" valign="middle" width="250"
+                                                                                                    class="mobile mobile-center">
+                                                                                                    <p
                                                                                         style="Margin: 0;font-size: 15px;line-height: 24px;color:#333333;font-weight: 400; ">
                                                                                         <img src="https://i.imgur.com/LdnajjJ.png" alt="check"
                                                                                             width="20"
                                                                                             style="width:100%;max-width:20px !important; vertical-align: middle;">&nbsp;&nbsp;Capacitaciones
-                                                                                    </p>
-                                                                                    <p
-                                                                                        style="Margin: 0;font-size: 24px;line-height: 24px;">
+                                                                                                </p>
+                                                                                                            </th>
+                                                                                                <th align="left" valign="top" width="250" class="mobile mobile-center mobile-pt">
+                                                                                                                <p
+                                                                                                    style="Margin: 0;font-size: 15px;line-height: 24px;color:#333333;font-weight: 400; ">
+                                                                                                    <img src="https://i.imgur.com/LdnajjJ.png" alt="check"
+                                                                                                        width="20"
+                                                                                                        style="width:100%;max-width:20px !important; vertical-align: middle;">&nbsp;&nbsp;Herramientas
+                                                                                                    gratuitas
+                                                                                                </p>
+                                                                                                </th>
+
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                        <p
+                                                                                        style="Margin: 0;font-size: 24px;line-height: 24px;" class="mobileOff">
                                                                                         &nbsp;</p>
-                                                                                    <p
+                                                                                        <table cellpadding="0" cellspacing="0" border="0" class="container">
+                                                                                            <tr>
+                                                                                                <th align="left" valign="middle" width="250"
+                                                                                                    class="mobile mobile-center mobile-pt">
+                                                                                                    <p
                                                                                         style="Margin: 0;font-size: 15px;line-height: 24px;color:#333333;font-weight: 400; ">
                                                                                         <img src="https://i.imgur.com/LdnajjJ.png" alt="check"
                                                                                             width="20"
-                                                                                            style="width:100%;max-width:20px !important; vertical-align: middle;">&nbsp;&nbsp;Herramientas
-                                                                                        gratuitas
-                                                                                    </p>
-                                                                                    <p
-                                                                                        style="Margin: 0;font-size: 24px;line-height: 24px;">
-                                                                                        &nbsp;</p>
-                                                                                    <p
-                                                                                        style="Margin: 0;font-size: 15px;line-height: 24px;color:#333333;font-weight: 400; ">
-                                                                                        <img src="https://i.imgur.com/LdnajjJ.png" alt="check"
-                                                                                            width="20"
-                                                                                            style="width:100%;max-width:20px !important; vertical-align: middle;">&nbsp;&nbsp;Recursos
-                                                                                        descargables
-                                                                                    </p>
-                                                                                    <p
-                                                                                        style="Margin: 0;font-size: 24px;line-height: 24px;">
-                                                                                        &nbsp;</p>
-                                                                                    <p
-                                                                                        style="Margin: 0;font-size: 15px;line-height: 24px;color:#333333;font-weight: 400; ">
-                                                                                        <img src="https://i.imgur.com/LdnajjJ.png" alt="check"
-                                                                                            width="20"
-                                                                                            style="width:100%;max-width:20px !important; vertical-align: middle;">&nbsp;&nbsp;Beneficios
-                                                                                        y sorteos exclusivoss
-                                                                                    </p>
+                                                                                            style="width:100%;max-width:20px !important; vertical-align: middle;">&nbsp;&nbsp;Recursos descargables
+                                                                                                </p>
+                                                                                                            </th>
+                                                                                                <th align="left" valign="top" width="250" class="mobile mobile-center mobile-pt">
+                                                                                                                <p
+                                                                                                    style="Margin: 0;font-size: 15px;line-height: 24px;color:#333333;font-weight: 400; ">
+                                                                                                    <img src="https://i.imgur.com/LdnajjJ.png" alt="check"
+                                                                                                        width="20"
+                                                                                                        style="width:100%;max-width:20px !important; vertical-align: middle;">&nbsp;&nbsp;Beneficios y sorteos exclusivos
+                                                                                                </p>
+                                                                                                </th>
+
+                                                                                            </tr>
+                                                                                        </table>
+
                                                                                 </th>
                                                                             </tr>
                                                                             <tr>
@@ -1532,7 +1546,7 @@ class Relay
             <p style="font-size:10px; line-height:10px;">&nbsp;</p>
             <p
                                                                         style="margin: 0; font-family: Helvetica, Arial, sans-serif;font-size: 15px;line-height: 21px;font-weight: 400;color:#FFFFFF;max-width: 510px;">
-                                                                    Y no te olvides de<strong>descargar tu certificado</strong> de asistencia durante el vivo 📃
+                                                                    Y no te olvides de <strong>descargar tu certificado</strong> de asistencia durante el vivo 📃
                                                                     </p>
                                                                 </td>
                                                             </tr>
@@ -1748,7 +1762,6 @@ class Relay
             </body>
 
             </html>
-
         ';
 
         return $html;
