@@ -104,6 +104,9 @@ if (!$settings_phase) {
                         </div>
                         <small>Recuerda activar el sonido 🔊</small>
                     </div>
+                    <div class="emms__hero-conference__aside emms__fade-in emms__hero-conference__video--chat">
+                        <iframe src="https://www.youtube.com/live_chat?v=<?= $duringDaysArray[$dayDuring]['youtube'] ?>&embed_domain=<?= $_SERVER['HTTP_HOST'] ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 <?php elseif (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on") && ($settings_phase['transmission'] === "twitch-migrate")) : ?>
                     <img src="src/img/banner-migrate-twitch.png" alt="Se migró a Twitch" class="banner">
                 <?php elseif (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on") && ($settings_phase['transmission'] === "technical-problems")) : ?>
@@ -118,9 +121,6 @@ if (!$settings_phase) {
                         <a class="emms__cta" href="/sponsors-registrado">ACCEDE AHORA</a>
                     </div>
                 <?php endif; ?>
-                <div class="emms__hero-conference__aside emms__fade-in emms__hero-conference__video--chat">
-                    <iframe src="https://www.youtube.com/live_chat?v=<?= $duringDaysArray[$dayDuring]['youtube'] ?>&embed_domain=<?= $_SERVER['HTTP_HOST'] ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
                 <p class="emms__hero-conference__certificate emms__fade-in">Descarga <a data-target="certificateModal" data-toggle="emms__certificate-modal">aquí</a> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag #EMMSECOMMERCE :)</p>
             </div>
         </section>
