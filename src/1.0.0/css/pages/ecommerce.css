@@ -149,6 +149,10 @@
 
 /* No Logueado */
 
+.emms__ecommerce--during .emms__header__live{
+    transform: translateX(-78%);
+}
+
 .emms__ecommerce--during .emms__hero-registration .emms__hero-registration__columns{
     align-items: center;
 }

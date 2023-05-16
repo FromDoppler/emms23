@@ -157,7 +157,7 @@ if (!$settings_phase)
         <section class="emms__hero-registration emms__hero-registration--noform eventHiddenElements eventShowElements" id="registro">
             <div class="emms__hero-registration__text">
                 <h1>¡Vuelve el EMMS!</h1>
-                <p>¡Regístrate ahora y desbloquea la sección de contenidos premium!</p>
+                <p>Inspírate y capacítate con los mayores referentes internacionales en Marketing Digital. Conferencias, Casos de Éxito, Workshops, Networking ¡y mucho más!</p>
                 <button type="button" id="digitalTrendsBtn" class="emms__cta"><span class="button__text">REGÍSTRATE GRATIS</span></button>
             </div>
             <div class="emms__hero-registration__bottom emms__fade-in">
@@ -330,7 +330,7 @@ if (!$settings_phase)
                     </li>
                 </ul>
                 <div class="emms__userscomments__cta">
-                    <a href="#registro" class="emms__cta emms__fade-in">PREINSCRIPCIÓN GRATUITA</a>
+                    <a href="#registro" class="emms__cta emms__fade-in">REGÍSTRATE GRATIS</a>
                 </div>
             </div>
         </section>

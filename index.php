@@ -516,7 +516,7 @@ $isPost = (($settings_phase['event'] === "ecommerce") && ($settings_phase['post'
                     <li class="emms__companies__list__item"><img src="src/img/logos/logo-doofinder.png" alt="Doofinder"></li>
                     <li class="emms__companies__list__item"><img src="src/img/logos/logo-easycommerce.png" alt="Easycommerce"></li>
                 </ul>
-                <small class="emms__fade-in">¿Quieres ser aliado del EMMS E-commerce 2023? ¡Hablemos! Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></small>
+                <small class="emms__fade-in">¿Quieres ser aliado del EMMS? ¡Hablemos! Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></small>
             </div>
         </section>
 
