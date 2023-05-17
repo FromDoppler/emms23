@@ -34,6 +34,8 @@
 @import 'pages/sponsors.css';
 @import 'pages/internal-sponsors.css';
 
-/* Scripts */
+/* Styles used in scripts (.js) */
 @import 'scripts/cards.css';
 @import 'scripts/certificate.css';
+@import 'scripts/speakerInternca.css';
+
