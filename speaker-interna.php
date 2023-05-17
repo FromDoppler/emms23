@@ -4,12 +4,12 @@ require_once('./utils/DB.php');
 
 
 if (!isset($_GET['slug']) or (trim($_GET['slug']) === '')) {
-    header("HTTP/1.0 404 Not Found");
-    //include '././common/components/404.php';
+    header('Location: ' . 'index');
     exit;
 }
 $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
+$db->close();
 ?>
 
 <!DOCTYPE html>
@@ -18,16 +18,6 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
 <head>
     <?php include_once('././src/components/head-speaker-interna.php'); ?>
     <?php include_once('././src/components/head.php'); ?>
-    <script type="module">
-        import {
-            isUserLogged,
-            getUrlWithParams
-        } from './src/<?= VERSION ?>/js/common/index.js';
-        import {
-            hiddenOrShowUserUI
-        } from './src/<?= VERSION ?>/js/user.js';
-        hiddenOrShowUserUI('digital-trends');
-    </script>
 </head>
 
 <body class="emms__ecommerce emms__ecommerce-logueado emms__ecommerce-logueado--during">
@@ -70,18 +60,18 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
             <div class="emms__container--lg">
                 <h1 class="emms__fade-in"><?= $speaker['description'] ?></h1>
                 <div class="emms__hero-conference__video emms__fade-in">
-                    <!--Video en el caso que ya esté registrado a ambos eventos -->
-                    <div class="emms__cropper-cont-16-9" id="streaming" style="display:none">
+                    <!--Video -->
+                    <div class="emms__cropper-cont-16-9 dp--none" id="speakerVideo">
                         <div class="emms__cropper-cont ">
                             <div class="emms__cropper-cont-interno">
-                                <iframe src="https://www.youtube.com/embed/yjg-HjGfK8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/<?= $speaker['youtube'] ?>?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
 
-                    <div id="registro">
+                    <div id="formContainer" class="dp--none">
                         <!-- Registro con Form -->
-                        <form class="emms__form emms__fade-in eventHiddenElements" novalidate autocomplete="off">
+                        <form class="emms__form emms__fade-in eventHiddenElements" novalidate autocomplete="off" id="speakerForm">
                             <ul class="emms__form__field-group">
                                 <li class="emms__form__field-item">
                                     <div class="holder">
@@ -128,19 +118,8 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
                             </div>
                         </form>
                         <!-- FIN Registro con Form -->
-
-                        <!-- Registro con CTA -->
-                        <div class="emms__hero-conference__video__register emms__fade-in eventHiddenElements eventShowElements">
-                            <div class="emms__hero-conference__video__register__content">
-                                <h3>¡Estás a un paso de registrarte!</h3>
-                                <p>Para acceder a las conferencias del EMMS Ecommerce debes registrarte, haciendo clic en el siguiente botón</p>
-                                <a href="" class="emms__cta">REGÍSTRATE GRATIS</a>
-                            </div>
-                        </div>
-                        <!-- FIN Registro con CTA -->
                     </div>
 
-                    <small>Recuerda activar el sonido 🔉</small>
                 </div>
                 <div class="emms__hero-conference__aside emms__fade-in">
                     <h2><?= $speaker['name'] ?></h2>
@@ -198,7 +177,7 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
 
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
     <script src="src/<?= VERSION ?>/js/certificateModal.js"></script>
-    <script src="src/<?= VERSION ?>/js/speakersInterna.js"></script>
+    <script src="src/<?= VERSION ?>/js/speakersInterna.js" type="module"></script>
     <script src="src/<?= VERSION ?>/js/common/certificate.js"></script>
 
 </body>
