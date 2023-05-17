@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
             await submitFormFetch(ecommerceForm, 'ecommerce').then(({ fetchResp: resp }) => {
                 if (!resp.ok) throw new Error('Server error on eccomerce fetch', resp?.status);
 
-                window.location.href = getUrlWithParams('/ecommerce-registrado.php');
-                if (window.location.pathname === '/sponsors.php') {
-                    window.location.href = getUrlWithParams('/sponsors-registrado.php');
+                window.location.href = getUrlWithParams('/ecommerce-registrado');
+                if (window.location.pathname === '/sponsors') {
+                    window.location.href = getUrlWithParams('/sponsors-registrado');
                 }
             })
                 .catch((error) => {
@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!resp.ok) throw new Error('Server error on digital fetch', resp?.status);
                 btn.classList.remove('button--loading');
 
-                window.location.href = getUrlWithParams('/ecommerce-registrado.php');
-                if (window.location.pathname === '/sponsors.php') {
-                    window.location.href = getUrlWithParams('/sponsors-registrado.php');
+                window.location.href = getUrlWithParams('/ecommerce-registrado');
+                if (window.location.pathname === '/sponsors') {
+                    window.location.href = getUrlWithParams('/sponsors-registrado');
                 }
             });
         }
