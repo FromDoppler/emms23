@@ -165,6 +165,39 @@ require_once('./utils/DB.php');
                                 <span>¡No te lo pierdas!</span>
                             </a>
                         </div>
+
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a href="https://www.youtube.com/watch?v=Jb_ryd3huU4" target="_blank">
+                                <img src="src/img/conferences/portada-youtube-realtrends.png" alt="Conferencias exclusivas">
+                                <h4>Cómo profesionalizar y optimizar la comunicación con mis compradores</h4>
+                                <p>Duración: 00:11:27</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a href="https://www.youtube.com/watch?v=gcOgawrnBeg" target="_blank">
+                                <img src="src/img/conferences/portada-youtube-martin-gelpi.png" alt="Conferencias exclusivas">
+                                <h4>Marketing de escasez: la clave del furor en ventas</h4>
+                                <p>Duración: 00:08:22</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a href="https://www.youtube.com/watch?v=oWAU4RDbJu4" target="_blank">
+                                <img src="src/img/conferences/portada-youtube-christian-canizales.png" alt="Conferencias exclusivas">
+                                <h4>5 Técnicas SEO para eCommerce</h4>
+                                <p>Duración: 00:09:20</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a href="https://www.youtube.com/watch?v=RBz5KNC84YQ" target="_blank">
+                                <img src="src/img/conferences/portada-youtube-dario-conti.png" alt="Conferencias exclusivas">
+                                <h4>Matriz de Impacto Digital para lograr aumento de ventas</h4>
+                                <p>Duración: 00:22:11</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
