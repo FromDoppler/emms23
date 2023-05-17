@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
             await submitFormFetch(digitalForm, 'digital-trends').then(({ fetchResp: resp }) => {
                 if (!resp.ok) throw new Error('Server error on digital fetch', resp?.status);
 
-                window.location.href = getUrlWithParams('/digital-trends-registrado.php');
-                if (window.location.pathname === '/sponsors.php') {
-                    window.location.href = getUrlWithParams('/sponsors-registrado.php');
+                window.location.href = getUrlWithParams('/digital-trends-registrado');
+                if (window.location.pathname === '/sponsors') {
+                    window.location.href = getUrlWithParams('/sponsors-registrado');
                 }
             })
                 .catch((error) => {
@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.classList.remove('button--loading');
                 if (!resp.ok) throw new Error('Server error on digital fetch', resp?.status);
 
-                window.location.href = getUrlWithParams('/digital-trends-registrado.php');
-                if (window.location.pathname === '/sponsors.php') {
-                    window.location.href = getUrlWithParams('/sponsors-registrado.php');
+                window.location.href = getUrlWithParams('/digital-trends-registrado');
+                if (window.location.pathname === '/sponsors') {
+                    window.location.href = getUrlWithParams('/sponsors-registrado');
                 }
             });
         }

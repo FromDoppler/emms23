@@ -204,7 +204,7 @@ require_once('././config.php');
                 </div>
                 <div class="emms__centralvideo__cta emms__fade-in">
                     <a href="#registro" class="emms__cta">REGÍSTRATE AHORA</a>
-                    <small><i>¿Tienes dudas sobre el EMMS 2023?</i> Haz <a href="./home.php#preguntas-frecuentes" target="_blank">click aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
+                    <small><i>¿Tienes dudas sobre el EMMS 2023?</i> Haz <a href="./#preguntas-frecuentes" target="_blank">click aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                 </div>
             </div>
         </section>

@@ -512,7 +512,7 @@ class Relay
                                                                 <p style="margin: 0; line-height: 21px; font-size: 21px;">&nbsp;</p>
                                                                 <p style="Margin: 0;font-size: 14px;line-height: 19px;color:#333333;font-weight: 400;">
                                                                     Mientras esperas la llegada del evento, descubre en la página web las Conferencias que te esperan en el
-                                                                    <a href="https://goemms.com/ecommerce-registrado.php?utm_source=emmsecom&utm_medium=goemms&utm_campaign=et-email-confirmacionregistro-emmsecom-23&dplrid=' . $encodeEmail . '" target="_blank" style="text-decoration: none; color: #008046;font-weight: bold;" class="link-hover ">EMMS E-commerce 2023</a>.
+                                                                    <a href="https://goemms.com/ecommerce-registrado?utm_source=emmsecom&utm_medium=goemms&utm_campaign=et-email-confirmacionregistro-emmsecom-23&dplrid=' . $encodeEmail . '" target="_blank" style="text-decoration: none; color: #008046;font-weight: bold;" class="link-hover ">EMMS E-commerce 2023</a>.
                                                                 </p>
                     <p height="10" style="font-size:10px; line-height:10px;" >&nbsp;</p>
                     <p style="Margin: 0;font-size: 14px;line-height: 19px;color:#333333;font-weight: 400;">
@@ -2876,7 +2876,7 @@ class Relay
                                                                 <p style="margin: 0; line-height: 21px; font-size: 21px;">&nbsp;</p>
                                                                 <p style="Margin: 0;font-size: 14px;line-height: 19px;color:#333333;font-weight: 400;">
                                                                     Mientras esperas la llegada del evento, descubre en la página web las Conferencias que te esperan en el
-                                                                    <a href="https://goemms.com/ecommerce-registrado.php?utm_source=emmsecom&utm_medium=goemms&utm_campaign=et-email-confirmacionregistro-emmsecom-23&dplrid=' . $encodeEmail . '" target="_blank" style="text-decoration: none; color: #008046;font-weight: bold;" class="link-hover ">EMMS E-commerce 2023</a>.
+                                                                    <a href="https://goemms.com/ecommerce-registrado?utm_source=emmsecom&utm_medium=goemms&utm_campaign=et-email-confirmacionregistro-emmsecom-23&dplrid=' . $encodeEmail . '" target="_blank" style="text-decoration: none; color: #008046;font-weight: bold;" class="link-hover ">EMMS E-commerce 2023</a>.
                                                                 </p>
                     <p height="10" style="font-size:10px; line-height:10px;" >&nbsp;</p>
                     <p style="Margin: 0;font-size: 14px;line-height: 19px;color:#333333;font-weight: 400;">
