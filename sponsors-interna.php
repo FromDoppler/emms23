@@ -21,7 +21,7 @@ if (isset($_GET['slug'])) {
 <html lang="en">
 
 <head>
-    <?php include_once('././src/components/head-ecommerce.php'); ?>
+    <?php include_once('././src/components/head-home.php'); ?>
     <?php include_once('././src/components/head.php'); ?>
 </head>
 

@@ -1,0 +1,22 @@
+<?php
+require_once('././config.php');
+require_once('./utils/DB.php');
+
+$db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+$speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
+
+?>
+
+<title><?= $speaker['meta_title'] ?></title>
+
+<meta name="title" content="<?= $speaker['meta_title'] ?>">
+<meta name="description" content="<?= $speaker['meta_description'] ?>">
+
+<meta property="og:url" content="https://goemms.com/speaker-interna?slug=<?= $speaker['slug'] ?>">
+<meta property="og:title" content="<?= $speaker['meta_title'] ?>">
+<meta property="og:description" content="<?= $speaker['meta_description'] ?>">
+<meta property="og:image" content="<?= $speaker['meta_image'] ?>">
+<meta name="twitter:image" content="<?= $speaker['meta_image'] ?>">
+
+<meta property="og:site_name" content="<?= $speaker['meta_title'] ?>">
+<meta name="twitter:image:alt" content="<?= $speaker['meta_title'] ?>">
