@@ -1,19 +1,54 @@
 
 "use strict";
-/*
 import {
-	getUrlWithParams
-} from './modules/utm.js'; */
+    customError,
+    submitFormFetch,
+} from './common/index.js';
+
+import {
+    userRegisteredInEvent
+} from './user.js';
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const registerValue = localStorage.getItem("events");
-    const streaming = document.getElementById('streaming');
-    const registerForm = document.getElementById('registro');
-    console.log(registerValue)
+    const speakerVideo = document.getElementById('speakerVideo');
+    const speakerFormContainer = document.getElementById('formContainer');
+    const speakerForm = document.getElementById('speakerForm');
 
-    if ( registerValue.includes('ecommerce', 'digital-trends') ){
-        streaming.style.display = 'block';
-        registerForm.style.display = 'none';
+    const checkUserUI = () => {
+        if (userRegisteredInEvent('ecommerce') || userRegisteredInEvent('digital-trends')) {
+            speakerVideo.classList.remove('dp--none');
+            speakerFormContainer.classList.add('dp--none');
+        } else {
+            speakerFormContainer.classList.remove('dp--none');
+            speakerVideo.classList.add('dp--none');
+            addEventSubmit();
+        }
     }
+
+    const addEventSubmit = () => {
+        const submitForm = async (e) => {
+
+            e.preventDefault();
+
+            await submitFormFetch(speakerForm, 'ecommerce').then(({ fetchResp: resp }) => {
+                if (!resp.ok) throw new Error('Server error on speaker fetch', resp?.status);
+                checkUserUI();
+            })
+                .catch((error) => {
+                    customError('Speaker post error', error);
+                });
+
+
+        }
+
+        speakerForm.querySelector('button').addEventListener('click', submitForm);
+    }
+
+
+
+    checkUserUI();
+
+
 });
