@@ -15,8 +15,8 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
 <meta property="og:url" content="https://goemms.com/speaker-interna?slug=<?= $speaker['slug'] ?>">
 <meta property="og:title" content="<?= $speaker['meta_title'] ?>">
 <meta property="og:description" content="<?= $speaker['meta_description'] ?>">
-<meta property="og:image" content="<?= $speaker['meta_image'] ?>">
-<meta name="twitter:image" content="<?= $speaker['meta_image'] ?>">
+<meta property="og:image" content="https://<?= $_SERVER['HTTP_HOST'] ?>/admin/speakers/uploads/<?= $speaker['meta_image'] ?>">
 
+<meta name="twitter:image" content="https://<?= $_SERVER['HTTP_HOST'] ?>/admin/speakers/uploads/<?= $speaker['meta_image'] ?>">
 <meta property="og:site_name" content="<?= $speaker['meta_title'] ?>">
 <meta name="twitter:image:alt" content="<?= $speaker['meta_title'] ?>">
