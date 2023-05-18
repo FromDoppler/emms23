@@ -20,3 +20,7 @@ $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
 <meta name="twitter:image" content="https://<?= $_SERVER['HTTP_HOST'] ?>/admin/speakers/uploads/<?= $speaker['meta_image'] ?>">
 <meta property="og:site_name" content="<?= $speaker['meta_title'] ?>">
 <meta name="twitter:image:alt" content="<?= $speaker['meta_title'] ?>">
+
+<link rel="canonical" href="https://goemms.com/speaker-interna?slug=<?= $speaker['slug'] ?>" />
+<link hreflang="x-default" href="https://goemms.com/speaker-interna?slug=<?= $speaker['slug'] ?>" rel="alternate" />
+<link hreflang="es-ar" href="https://goemms.com/speaker-interna?slug=<?= $speaker['slug'] ?>" rel="alternate" />

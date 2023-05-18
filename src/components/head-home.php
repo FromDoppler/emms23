@@ -11,3 +11,7 @@
 
 <meta property="og:site_name" content="EMMS 2023: Conferencias online y gratuitas sobre Marketing Digital">
 <meta name="twitter:image:alt" content="EMMS 2023: Conferencias online y gratuitas sobre Marketing Digital">
+
+<link rel="canonical" href="https://goemms.com/" />
+<link hreflang="x-default" href="https://goemms.com/" rel="alternate" />
+<link hreflang="es-ar" href="https://goemms.com/" rel="alternate" />
