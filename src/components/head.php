@@ -13,10 +13,6 @@
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 
-<link rel="canonical" href="https://goemms.com/" />
-<link hreflang="x-default" href="https://goemms.com/" rel="alternate" />
-<link hreflang="es-ar" href="https://goemms.com/" rel="alternate" />
-
 <link rel="apple-touch-icon" sizes="180x180" href="common/html/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicon-16x16.png">
