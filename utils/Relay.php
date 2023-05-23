@@ -30,7 +30,6 @@ class Relay
         } else if ($user['type'] === 'digital-trends') {
             switch ($phase) {
                 case 'pre':
-                    //TODO: Cambiar funcion con la maqueta correspondiente
                     $html = self::getDigitalTEmailTemplatePREEarlyBirds($user['encode_email']);
                     break;
                 case 'during':
@@ -81,6 +80,7 @@ class Relay
         $headers[] = 'Content: ' . strlen($dataJson);
         $endPointSendEmail = self::urlBase . self::$account . "/messages";
         $response = json_decode(self::executeCurl($endPointSendEmail, $dataJson, $headers, 'POST'));
+
         if (isset($response->errorCode)) :
             throw new Exception(json_encode($response->errors));
         endif;
@@ -2715,7 +2715,7 @@ class Relay
                                                                     <p
                                                                         style="margin: 0; font-family: Helvetica, Arial, sans-serif;font-size: 15px;line-height: 20px;font-weight: 400;color:#FFFFFF;">
                                                                         Ya eres parte del <a
-                                                                            href="http://goemms.com/digitaltrends-registrado?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-earlybirds&dplrid=' . $encodeEmail . '"
+                                                                            href="http://goemms.com/digital-trends-registrado?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-earlybirds&dplrid=' . $encodeEmail . '"
                                                                             target="_blank"
                                                                             style="text-decoration: none; color: #33AD73;font-weight: bold;"
                                                                             class="link-hover ">EMMS Digital Trends.</a>

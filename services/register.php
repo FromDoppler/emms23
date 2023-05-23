@@ -59,6 +59,7 @@ function setDataRequest($ip, $countryGeo)
     $type = isset($_POST['type']) ? $_POST['type'] : null;
     $phase = getCurrentPhase($type);
     $list = ($type === 'ecommerce' ? LIST_LANDING_ECOMMERCE : LIST_LANDING_DIGITALT);
+    $subject = getSubjectEmail($type, $phase);
     $user = array(
         'register' => date("Y-m-d h:i:s A"),
         'firstname' => $firstname,
@@ -79,7 +80,7 @@ function setDataRequest($ip, $countryGeo)
         'type' => $type,
         'form_id' => $phase,
         'list' => $list,
-        'subject' => getSubjectEmail($phase)
+        'subject' => $subject
     );
     try {
         Validator::validateEmail($email);
@@ -91,16 +92,28 @@ function setDataRequest($ip, $countryGeo)
     }
 }
 
-function getSubjectEmail($phase)
+function getSubjectEmail($type, $phase)
 {
     $subject = "";
-    if ($phase === 'pre') {
-        $subject = SUBJECT_PRE;
-    } elseif ($phase === 'during') {
-        $subject = SUBJECT_DURING;
+    if ($type === "ecommerce") {
+        if ($phase === 'pre') {
+            $subject = SUBJECT_PRE_ECOMMERCE;
+        } elseif ($phase === 'during') {
+            $subject = SUBJECT_DURING_ECOMMERCE;
+        } else {
+            $subject = SUBJECT_POST_ECOMMERCE;
+        }
     } else {
-        $subject = SUBJECT_POST;
+        if ($phase === 'pre') {
+            $subject = SUBJECT_PRE_DIGITALT;
+        } elseif ($phase === 'during') {
+            $subject = SUBJECT_DURING_DIGITALT;
+        } else {
+            $subject = SUBJECT_POST_DIGITALT;
+        }
     }
+
+
     return $subject;
 }
 
