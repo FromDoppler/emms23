@@ -48,7 +48,7 @@ class Doppler
         if (isset($data['source_utm']) && (trim($data['source_utm']) != '')) {
             array_push($customFields, array('name' => 'utmsource', 'Value' => $data['source_utm']));
         }
-        if (isset($data['source_utm']) && (trim($data['source_utm']) != '')) {
+        if (isset($data['medium_utm']) && (trim($data['medium_utm']) != '')) {
             array_push($customFields, array('name' => 'utmmedium', 'Value' => $data['medium_utm']));
         }
         if (isset($data['campaign_utm']) && (trim($data['campaign_utm']) != '')) {
