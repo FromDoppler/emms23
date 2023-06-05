@@ -7,15 +7,17 @@ header("Access-Control-Allow-Origin: https://qa.goemms.com");
 $img_w = 1080;
 $img_h = 763;
 
-// Crear la imagen
-$im = imagecreatefrompng('certificadoemms2023.png');
+// El texto a dibujar
+$name = $_GET['fullname'];
+$type = $_GET['type'];
 
+$imgName =  'certificadoemms2023-' . $type . '.png';
+
+// Crear la imagen
+$im = imagecreatefrompng($imgName);
 
 // Crear algunos colores
 $txt_color = imagecolorclosest($im, 48, 33, 0);
-
-// El texto a dibujar
-$name = $_GET['fullname'];
 
 // Fuentes
 $ffontProximaItalic = './fonts/proxima-nova-italic.ttf';
