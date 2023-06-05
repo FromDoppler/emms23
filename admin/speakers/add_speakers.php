@@ -32,6 +32,7 @@ if (isset($_POST['btn-save'])) {
     $link_time = $_POST['link_time'];
     $orden = $_POST['orden'];
     $day = $_POST['day'];
+    $event = $_POST['event'];
     $exposes = $_POST['exposes'];
     $slug = $_POST['slug'];
     $youtube = $_POST['youtube'];
@@ -49,7 +50,7 @@ if (isset($_POST['btn-save'])) {
 
     // sql query for inserting data into database
 
-    $sql_query = "INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,`sm_linkedin`,`sm_instagram`,`sm_facebook`,`description`,`bio`,`image_company`,`alt_image_company`,`time`,`link_time`,`orden`,`day`,`exposes`,`slug`,`youtube`,`meta_title`,`meta_description`,`meta_twitter`,`meta_image`) VALUES('" . $name . "','" . $image . "','" . $alt_image . "','" . $job . "','" . $sm_twitter . "','" . $sm_linkedin . "','" . $sm_instagram . "','" . $sm_facebook . "','" . $description . "','" . $bio . "','" . $image_company . "','" . $alt_image_company . "','" . $time . "','" . $link_time . "','" . $orden . "','" . $day . "' ,'" . $exposes . "' ,'" . $slug . "','" . $youtube . "','" . $meta_title . "','" . $meta_description . "','" . $meta_twitter . "','" . $meta_image . "')";
+    $sql_query = "INSERT INTO speakers (`name`,`image`,`alt_image`,`job`,`sm_twitter`,`sm_linkedin`,`sm_instagram`,`sm_facebook`,`description`,`bio`,`image_company`,`alt_image_company`,`time`,`link_time`,`orden`,`day`,`event`,`exposes`,`slug`,`youtube`,`meta_title`,`meta_description`,`meta_twitter`,`meta_image`) VALUES('" . $name . "','" . $image . "','" . $alt_image . "','" . $job . "','" . $sm_twitter . "','" . $sm_linkedin . "','" . $sm_instagram . "','" . $sm_facebook . "','" . $description . "','" . $bio . "','" . $image_company . "','" . $alt_image_company . "','" . $time . "','" . $link_time . "','" . $orden . "','" . $day . "' ,'" . $event . "' ,'" . $exposes . "' ,'" . $slug . "','" . $youtube . "','" . $meta_title . "','" . $meta_description . "','" . $meta_twitter . "','" . $meta_image . "')";
     // sql query for inserting data into database
 
     // sql query execution function
@@ -91,6 +92,17 @@ if (isset($_POST['btn-save'])) {
                     <table class="table table-striped">
                         <tr>
                             <td align="center"><a href="index.php?token=<?= $_GET['token'] ?>">back to main page</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="event" class="form-label">Evento:</label>
+                            </td>
+                            <td>
+                                <select name="event" class="form-select">
+                                    <option value="ecommerce">Ecommerce</option>
+                                    <option value="digital-trends">Digital Trends</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td>
