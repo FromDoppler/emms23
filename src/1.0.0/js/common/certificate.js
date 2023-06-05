@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return (window.location.host === 'qa.goemms.com' || window.location.host === 'localhost') ? true : false;
     }
 
-    function submitCertificate(e) {
+    function submitCertificate(e, type) {
         const certificateForm = document.getElementById('certificateForm');
         e.preventDefault();
         const formData = new FormData(certificateForm);
@@ -17,24 +17,25 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             certificateForm.querySelector('span').classList.remove('showError');
         }
-        forceDownload(fullname);
+
+        forceDownload(fullname, type);
     }
 
-    function forceDownload(fullname) {
+    function forceDownload(fullname, type) {
 
-        var xhr = new XMLHttpRequest(),
+        const xhr = new XMLHttpRequest(),
             encodeFullname = encodeURI(fullname),
-            domainUrl = (checkQADomain()) ? 'certificate-emms2023qa.php' : 'certificate-emms2023.php',
-            url = 'https://textify.fromdoppler.com/' + domainUrl + '?fullname=' + encodeFullname,
-            fileName = 'certificacion-emms2023.png';
+            domainUrl = (checkQADomain()) ? `certificate-emms2023qa.php` : `certificate-emms2023.php`,
+            url = 'https://textify.fromdoppler.com/' + domainUrl + '?fullname=' + encodeFullname + '&type=' + type,
+            fileName = `certificacion-emms2023-${type}.png`;
 
 
         xhr.open("GET", url, true);
         xhr.responseType = "blob";
         xhr.onload = function () {
-            var urlCreator = window.URL || window.webkitURL;
-            var imageUrl = urlCreator.createObjectURL(this.response);
-            var tag = document.createElement('a');
+            const urlCreator = window.URL || window.webkitURL;
+            const imageUrl = urlCreator.createObjectURL(this.response);
+            const tag = document.createElement('a');
             tag.href = imageUrl;
             tag.download = fileName;
             document.body.appendChild(tag);
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('certificateModal').classList.toggle('open');
         document.body.style.overflowY = 'scroll';
     }
-    const certificateCta = document.getElementById('certificateCta');
-    certificateCta.addEventListener('click', submitCertificate);
+    const certificateCtaEcommerce = document.getElementById('certificateEcommerceCta');
+    certificateCtaEcommerce.addEventListener('click', (e) => submitCertificate(e, 'ecommerce'));
 
 });

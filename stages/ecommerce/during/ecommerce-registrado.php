@@ -120,7 +120,7 @@ require_once('././src/components/cacheSettings.php');
                 <form id="certificateForm">
                     <input type="text" placeholder="Nombre y apellido" name="fullname">
                     <span class="certificateError">¡Ouch! Debes ingresar al menos 2 caracteres.</span>
-                    <a class="emms__cta" type="button" id="certificateCta">QUIERO DESCARGARLO</a>
+                    <a class="emms__cta" type="button" id="certificateEcommerceCta">QUIERO DESCARGARLO</a>
                     <button class="emms__certificate-modal__window__close" data-dismiss="emms__certificate-modal"></button>
                 </form>
             </div>
