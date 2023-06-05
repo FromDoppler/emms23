@@ -55,6 +55,7 @@ if (isset($_POST['btn-update'])) {
     $link_time = $_POST['link_time'];
     $orden = $_POST['orden'];
     $day = $_POST['day'];
+    $event = $_POST['event'];
     $exposes = $_POST['exposes'];
     $slug = strtolower($_POST['slug']);
     $youtube = $_POST['youtube'];
@@ -66,7 +67,7 @@ if (isset($_POST['btn-update'])) {
     // variables for input data
 
     // sql query for update data into database
-    $sql_query = "UPDATE speakers SET `name`='$name',`image`='$image',`alt_image`='$alt_image',`job`='$job',`sm_twitter`='$sm_twitter',`sm_linkedin`='$sm_linkedin',`sm_instagram`='$sm_instagram',`sm_facebook`='$sm_facebook',`description`='$description',`bio`='$bio',`image_company`='$image_company',`alt_image_company`='$alt_image_company',`time`='$time',`link_time`='$link_time',`orden`='$orden',`day`='$day',`exposes`='$exposes', `slug`='$slug' , `youtube`='$youtube', `meta_title`='$meta_title', `meta_description`='$meta_description', `meta_twitter`='$meta_twitter', `meta_image`='$meta_image' WHERE id=" . $_GET['edit_id'];
+    $sql_query = "UPDATE speakers SET `name`='$name',`image`='$image',`alt_image`='$alt_image',`job`='$job',`sm_twitter`='$sm_twitter',`sm_linkedin`='$sm_linkedin',`sm_instagram`='$sm_instagram',`sm_facebook`='$sm_facebook',`description`='$description',`bio`='$bio',`image_company`='$image_company',`alt_image_company`='$alt_image_company',`time`='$time',`link_time`='$link_time',`orden`='$orden',`day`='$day',`event`='$event',`exposes`='$exposes', `slug`='$slug' , `youtube`='$youtube', `meta_title`='$meta_title', `meta_description`='$meta_description', `meta_twitter`='$meta_twitter', `meta_image`='$meta_image' WHERE id=" . $_GET['edit_id'];
     // sql query for update data into database
     // sql query execution function
     if (mysqli_query($con, $sql_query)) {
@@ -116,6 +117,17 @@ if (isset($_POST['btn-cancel'])) {
                     <table class="table table-striped">
                         <tr>
                             <td align="center"><a href="index.php?token=<?= $_GET['token'] ?>">back to main page</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="event" class="form-label">Evento:</label>
+                            </td>
+                            <td>
+                                <select name="event" class="form-select">
+                                    <option <?= ($fetched_row['event'] === 'ecommerce') ? 'selected' : '' ?> value="ecommerce">Ecommerce</option>
+                                    <option <?= ($fetched_row['event'] === 'digital-trends') ? 'selected' : '' ?> value="digital-trends">Digital Trends</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td>
