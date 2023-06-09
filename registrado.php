@@ -268,8 +268,8 @@ require_once('././src/components/cacheSettings.php');
                                         <div class="emms__eventCards__list__item__text--corner">
                                             <p>OCTUBRE</p>
                                         </div>
-                                        <h3>EMMS E-commerce</h3>
-                                        <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
+                                        <h3>EMMS Digital Trends</h3>
+                                        <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
                                             <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
@@ -466,8 +466,8 @@ require_once('././src/components/cacheSettings.php');
                                         <div class="emms__eventCards__list__item__text--corner">
                                             <p>OCTUBRE</p>
                                         </div>
-                                        <h3>EMMS E-commerce</h3>
-                                        <p>Referentes internacionales de la industria te contarán qué <strong>tendencias y estrategias emplean en sus Tiendas Online</strong> para captar nuevos clientes y aumentar sus ingresos.</p>
+                                        <h3>EMMS Digital Trends</h3>
+                                        <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
                                             <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
