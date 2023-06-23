@@ -65,6 +65,7 @@ require_once('././src/components/cacheSettings.php');
                     <li><a href="/ecommerce">e-commerce</a></li>
                     <li><a href="/digital-trends">digital trends</a></li>
                     <li><a href="/sponsors-registrado">contenido exclusivo</a></li>
+                    <li><a href="/ediciones-anteriores">ediciones anteriores</a></li>
                 </ul>
             </nav>
         </div>
