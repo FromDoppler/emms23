@@ -213,7 +213,6 @@ require_once('./utils/DB.php');
     <?php include_once('././src/components/footer.php'); ?>
 
     <script src="src/<?= VERSION ?>/js/collapsibles.js"></script>
-    <script src="src/<?= VERSION ?>/js/sponsors.js" type="module"></script>
 
 </body>
 

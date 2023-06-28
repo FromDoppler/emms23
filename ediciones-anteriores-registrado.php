@@ -277,7 +277,6 @@ require_once('./utils/DB.php');
     <!-- Footer -->
     <?php include_once('././src/components/footer.php'); ?>
 
-    <script src="src/<?= VERSION ?>/js/previousEditions.js" type="module"></script>
 
 
 </body>
