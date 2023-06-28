@@ -2,18 +2,17 @@
 
 import {
     customError,
-    getUrlWithParams,
     submitFormFetch,
 } from './common/index.js';
 
 document.addEventListener('click', (e) => {
     e = e || window.event;
     const target = e.target || e.srcElement;
-    const sponsorsForm = document.getElementById('sponsorsForm');
+    const slug = target.getAttribute('slug');
 
-
-    if (target.hasAttribute('data-toggle') && target.getAttribute('data-toggle') == 'emms__register-modal') {
-        if (target.hasAttribute('data-target')) {
+if (target.hasAttribute('data-toggle') && target.getAttribute('data-toggle') == 'emms__register-modal') {
+    if (target.hasAttribute('data-target')) {
+            sessionStorage.setItem('currentSlug', slug);
             const m_ID = target.getAttribute('data-target');
             document.getElementById(m_ID).classList.add('open');
             document.querySelector('body').style.overflow = 'hidden';
@@ -28,10 +27,15 @@ document.addEventListener('click', (e) => {
         e.preventDefault();
     }
 
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const sponsorsForm = document.getElementById('sponsorsForm');
 
     const submitForm = async (e) => {
-
-        const slug = target.getAttribute('slug');
+        const slug = sessionStorage.getItem('currentSlug')
 
         await submitFormFetch(sponsorsForm, 'ecommerce').then(({ fetchResp: resp, encodeEmail }) => {
             if (!resp.ok) throw new Error('Server error on Sponsor fetch', resp?.status);
@@ -47,7 +51,4 @@ document.addEventListener('click', (e) => {
     }
 
     sponsorsForm.querySelector('button').addEventListener('click', submitForm);
-
-
-
 });

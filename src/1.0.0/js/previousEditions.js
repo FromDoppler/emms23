@@ -2,14 +2,12 @@
 
 import {
     customError,
-    getUrlWithParams,
     submitFormFetch,
 } from './common/index.js';
 
 document.addEventListener('click', (e) => {
     e = e || window.event;
     const target = e.target || e.srcElement;
-    const editionsForm = document.getElementById('editionsForm');
 
 
     if (target.hasAttribute('data-toggle') && target.getAttribute('data-toggle') == 'emms__register-modal') {
@@ -28,8 +26,15 @@ document.addEventListener('click', (e) => {
         e.preventDefault();
     }
 
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const editionsForm = document.getElementById('editionsForm');
 
     const submitForm = async (e) => {
+
+        e.preventDefault();
 
         await submitFormFetch(editionsForm, 'digital-trends').then(({ fetchResp: resp, encodeEmail }) => {
             if (!resp.ok) throw new Error('Server error on Editions fetch', resp?.status);
@@ -41,11 +46,10 @@ document.addEventListener('click', (e) => {
                 customError('Editions post error', error);
             });
 
-
     }
 
     editionsForm.querySelector('button').addEventListener('click', submitForm);
 
-
-
 });
+
+
