@@ -208,65 +208,8 @@ require_once('././config.php');
         <!-- Separator -->
         <div class="emms__separator"></div>
 
-        <!-- Companies list -->
-        <section class="emms__companies emms__companies--categories" id="aliados">
-            <div class="emms__container--lg">
-                <h2 class="emms__fade-in">Nos acompañaron en esta edición:</h2>
-                <h3>SPONSORS</h3>
-                <ul class="emms__companies__list emms__companies__list--lg  emms__fade-in">
-                    <?php $sponsors = $db->getSponsorsByType('SPONSOR');
-                    foreach ($sponsors as $sponsor) : ?>
-                        <li class="emms__companies__list__item">
-                            <?php if ($sponsor['link_site']) : ?>
-                                <a href="<?= $sponsor['link_site'] ?>" target="_blank">
-                                <?php endif ?>
-                                <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['logo_company'] ?>" alt="<?= $sponsor['alt_logo_company'] ?>">
-                                <?php if ($sponsor['link_site']) : ?>
-                                </a>
-                            <?php endif ?>
-                        </li>
-
-                    <?php endforeach; ?>
-                </ul>
-                <div class="emms__companies__divisor"></div>
-                <h3>MEDIA PARTNERS EXCLUSIVE</h3>
-                <ul class="emms__companies__list emms__companies__list  emms__fade-in">
-                    <?php $sponsors = $db->getSponsorsByType('PREMIUM');
-                    foreach ($sponsors as $sponsor) : ?>
-                        <li class="emms__companies__list__item">
-                            <?php if ($sponsor['link_site']) : ?>
-                                <a href="<?= $sponsor['link_site'] ?>" target="_blank">
-                                <?php endif ?>
-                                <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['logo_company'] ?>" alt="<?= $sponsor['alt_logo_company'] ?>">
-                                <?php if ($sponsor['link_site']) : ?>
-                                </a>
-                            <?php endif ?>
-                        </li>
-
-                    <?php endforeach; ?>
-                </ul>
-                <div class="emms__companies__divisor"></div>
-                <h3>MEDIA PARTNERS STARTERS</h3>
-                <ul class="emms__companies__list emms__companies__list  emms__fade-in" id="mediaPartenersStarters">
-                    <?php $sponsors = $db->getSponsorsByType('STARTER');
-                    foreach ($sponsors as $sponsor) : ?>
-                        <li class="emms__companies__list__item">
-                            <?php if ($sponsor['link_site']) : ?>
-                                <a href="<?= $sponsor['link_site'] ?>" target="_blank">
-                                <?php endif ?>
-                                <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['logo_company'] ?>" alt="<?= $sponsor['alt_logo_company'] ?>">
-                                <?php if ($sponsor['link_site']) : ?>
-                                </a>
-                            <?php endif ?>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            </div>
-        </section>
-
-
         <!-- Central Video -->
-        <section class="emms__centralvideo eventHiddenElements">
+        <section class="emms__centralvideo">
             <div class="emms__background-b"></div>
             <div class="emms__background-a"></div>
             <div class="emms__container--md">
@@ -275,7 +218,7 @@ require_once('././config.php');
                     <p>Si quieres descubrir aún más <strong>tendencias en Marketing Digital</strong> para potenciar tu negocio, en <strong>octubre</strong> volvemos con muchas más conferencias y contenido exclusivo en el evento en español más elegido cada año por miles de profesionales.</p>
                 </div>
                 <div class="emms__centralvideo__video emms__fade-in">
-                    <video src="src/img/EmmsDigitalTrands.mp4" controls></video>
+                    <video src="src/img/EmmsDigitalTrends.mp4" controls></video>
                 </div>
                 <div class="emms__centralvideo__cta emms__fade-in">
                     <a href="./digital-trends" class="emms__cta">MÁS INFORMACIÓN</a>
