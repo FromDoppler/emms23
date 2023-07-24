@@ -70,6 +70,27 @@
     background-size: contain;
 }
 
+/* Center checklist in desktop */
+
+@media(min-width:992px){
+    .emms__hero-registration .emms__hero-registration__text .emms__hero-registration__text__checklist.checklist--center{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .emms__hero-registration .emms__hero-registration__text .emms__hero-registration__text__checklist.checklist--center li{
+        padding: 48px 0 0 0px;
+    }
+
+    .emms__hero-registration .emms__hero-registration__text .emms__hero-registration__text__checklist.checklist--center li::before{
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
 .emms__hero-registration .emms__hero-registration__form {
     max-width: 425px;
     width: 50%;
@@ -249,6 +270,52 @@
     margin: 45px 0 0 0;
 }
 
+
+/* ------------------------------------------------------------------------------------------- */
+/* ---------------------------------------- BACK VIDEO ------------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
+
+.emms__hero-registration.emms__hero-registration--video{
+    background: none;
+    padding: 150px 0;
+}
+
+.emms__hero-registration.emms__hero-registration--video .emms__hero-registration__back{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.emms__hero-registration.emms__hero-registration--video .emms__hero-registration__back video{
+    width: 100%;
+}
+
+.emms__hero-registration.emms__hero-registration--video .emms__hero-registration__back::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 2.95%, rgba(0, 0, 0, 0.70) 41.28%, rgba(0, 0, 0, 0.70) 65.59%, rgba(0, 0, 0, 0.00) 99.93%);
+}
+
+@media(max-width:992px){
+    .emms__hero-registration.emms__hero-registration--video{
+        padding: 100px 0 88px 0;
+    }
+    .emms__hero-registration.emms__hero-registration--video .emms__hero-registration__back video {
+        width: 500%;
+        height: 100%;
+    }
+}
 
 
 /* ------------------------------------------------------------------------------------------- */
