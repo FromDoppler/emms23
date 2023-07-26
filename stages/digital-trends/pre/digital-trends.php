@@ -79,16 +79,84 @@ require_once('././src/components/cacheSettings.php');
             <div class="emms__hero-registration__text emms__fade-in">
                 <h1><em>LOREM IPSUM DOLOR SIT AMET</em> Lorem ipsum dolor sit amet consectetuest la</h1>
                 <ul class="emms__hero-registration__text__checklist checklist--center">
-                        <li>LOREM IPSUM</li>
-                        <li>LOREM IPSUM</li>
-                        <li>LOREM IPSUM</li>
-                    </ul>
+                    <li>LOREM IPSUM</li>
+                    <li>LOREM IPSUM</li>
+                    <li>LOREM IPSUM</li>
+                </ul>
                 <p>Inspírate y capacítate con los mayores referentes internacionales en Marketing Digital. Conferencias, Casos de Éxito, Workshops, Networking ¡y mucho más!</p>
                 <a href="https://4844832.wixsite.com/emms" target="_blank" class="emms__cta">ADQUIRÍ TUS ENTRADAS</a>
             </div>
             <div class="emms__hero-registration__bottom emms__fade-in">
                 <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
                 <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
+            </div>
+        </section>
+
+        <!-- Grid -->
+        <section class="emms__grid emms__grid--3 emms__grid--bg-w">
+            <div class="emms__container--md">
+                <div class="emms__grid__title">
+                    <h2>Título (Propuestas de valor)</h2>
+                </div>
+                <ul class="emms__grid__content">
+                    <li class="emms__grid__item">
+                        <div class="emms__grid__item__image">
+                            <img src="src/img/editions/emms2018.png" alt="Image">
+                        </div>
+                        <div class="emms__grid__item__text">
+                            <h3>Titulo aqui</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Cras lectus in ligula sit. Dolor in vitae leo arcu etiam rhoncus feugiat nec. Ornare sit amet sed nec suspendisse ornare.</p>
+                        </div>
+                    </li>
+                    <li class="emms__grid__item">
+                        <div class="emms__grid__item__image">
+                            <img src="src/img/editions/emms2018.png" alt="Image">
+                        </div>
+                        <div class="emms__grid__item__text">
+                            <h3>Titulo aqui</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Cras lectus in ligula sit. Dolor in vitae leo arcu etiam rhoncus feugiat nec. Ornare sit amet sed nec suspendisse ornare.</p>
+                        </div>
+                    </li>
+                    <li class="emms__grid__item">
+                        <div class="emms__grid__item__image">
+                            <img src="src/img/editions/emms2018.png" alt="Image">
+                        </div>
+                        <div class="emms__grid__item__text">
+                            <h3>Titulo aqui</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Cras lectus in ligula sit. Dolor in vitae leo arcu etiam rhoncus feugiat nec. Ornare sit amet sed nec suspendisse ornare.</p>
+                        </div>
+                    </li>
+                    <li class="emms__grid__item">
+                        <div class="emms__grid__item__image">
+                            <img src="src/img/editions/emms2018.png" alt="Image">
+                        </div>
+                        <div class="emms__grid__item__text">
+                            <h3>Titulo aqui</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Cras lectus in ligula sit. Dolor in vitae leo arcu etiam rhoncus feugiat nec. Ornare sit amet sed nec suspendisse ornare.</p>
+                        </div>
+                    </li>
+                    <li class="emms__grid__item">
+                        <div class="emms__grid__item__image">
+                            <img src="src/img/editions/emms2018.png" alt="Image">
+                        </div>
+                        <div class="emms__grid__item__text">
+                            <h3>Titulo aqui</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Cras lectus in ligula sit. Dolor in vitae leo arcu etiam rhoncus feugiat nec. Ornare sit amet sed nec suspendisse ornare.</p>
+                        </div>
+                    </li>
+                    <li class="emms__grid__item">
+                        <div class="emms__grid__item__image">
+                            <img src="src/img/editions/emms2018.png" alt="Image">
+                        </div>
+                        <div class="emms__grid__item__text">
+                            <h3>Titulo aqui</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Cras lectus in ligula sit. Dolor in vitae leo arcu etiam rhoncus feugiat nec. Ornare sit amet sed nec suspendisse ornare.</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="emms__grid__bottom">
+                    <a href="https://4844832.wixsite.com/emms" target="_blank" class="emms__cta">ADQUIRÍ TUS ENTRADAS</a>
+                </div>
             </div>
         </section>
 
