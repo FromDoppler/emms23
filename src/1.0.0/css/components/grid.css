@@ -1,0 +1,84 @@
+.emms__grid {
+    padding: 90px 0;
+}
+
+.emms__grid.emms__grid--bg-w {
+    background: #fff;
+}
+
+.emms__grid__title h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: -1px;
+    text-align: center;
+    color: #212121;
+    margin: 0 0 66px 0;
+}
+
+.emms__grid .emms__grid__content {
+    display: grid;
+}
+
+.emms__grid.emms__grid--3 .emms__grid__content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.emms__grid__item .emms__grid__item__image {
+    margin: 0 0 24px 0;
+}
+
+.emms__grid__item .emms__grid__item__image img {
+    width: 100%;
+}
+
+.emms__grid__item .emms__grid__item__text {
+    padding: 0 12px 30px 12px;
+}
+
+.emms__grid__item .emms__grid__item__text h3 {
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #333;
+}
+
+.emms__grid__item .emms__grid__item__text p {
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #333;
+    margin: 12px 0 0 0;
+}
+
+.emms__grid__bottom {
+    margin: 42px 0 0 0;
+    text-align: center;
+}
+
+@media(max-width:992px) {
+    .emms__grid.emms__grid--3 .emms__grid__content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:620px) {
+    .emms__grid {
+        padding: 60px 0;
+    }
+
+    .emms__grid__title h2 {
+        font-size: 25px;
+        line-height: 30px;
+        margin: 0 0 50px 0;
+    }
+
+    .emms__grid.emms__grid--3 .emms__grid__content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .emms__grid__bottom {
+        margin: 10px 0 0 0;
+    }
+}
