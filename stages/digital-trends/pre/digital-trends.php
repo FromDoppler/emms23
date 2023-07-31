@@ -93,7 +93,7 @@ require_once('././src/components/cacheSettings.php');
         </section>
 
         <!-- Grid -->
-        <section class="emms__grid emms__grid--3 emms__grid--bg-w">
+        <section class="emms__grid emms__grid--3 emms__bg-w">
             <div class="emms__container--md">
                 <div class="emms__grid__title">
                     <h2>Título (Propuestas de valor)</h2>
@@ -187,7 +187,40 @@ require_once('././src/components/cacheSettings.php');
         </section>
 
 
-
+        <!-- Features -->
+        <div class="emms__features emms__features--icon-top">
+            <div class="emms__features__title emms__fade-in">
+                <img class="icon-vip" src="src/img/icons/icon-star-gradient.png" alt="Icon">
+                <h2>Módulo parte VIP</h2>
+                <p>Lorem ipsum dolor sit amet consectetur. Enim viverra enim lorem mauris.<br>Ut sit arcu sed fermentum sit in euismod sed mattis</p>
+            </div>
+            <div class="emms__features__divisor"></div>
+            <div class="emms__features__item emms__fade-in emms__features__item--reverse">
+                <div class="emms__container--md">
+                    <div class="emms__features__item__image">
+                        <img src="src/img/editions/emms2018.png" alt="Image">
+                    </div>
+                    <div class="emms__features__item__text">
+                        <h3>Lorem ipsum dolor sit</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur. Id at purus ut id. Nisi mauris faucibus nibh velit. Luctus cursus maecenas vitae mauris. Venenatis vitae aliquam lacus aliquam arcu. Facilisi.</p>
+                        <a href="https://4844832.wixsite.com/emms" target="_blank" class="emms__cta">COMPRA TUS ENTRADAS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="emms__features__divisor"></div>
+            <div class="emms__features__item emms__fade-in">
+                <div class="emms__container--md">
+                    <div class="emms__features__item__image">
+                        <img src="src/img/editions/emms2018.png" alt="Image">
+                    </div>
+                    <div class="emms__features__item__text">
+                        <h3>Lorem ipsum dolor sit</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur. Id at purus ut id. Nisi mauris faucibus nibh velit. Luctus cursus maecenas vitae mauris. Venenatis vitae aliquam lacus aliquam arcu. Facilisi.</p>
+                        <a href="https://4844832.wixsite.com/emms" target="_blank" class="emms__cta">COMPRA TUS ENTRADAS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Central Video -->
         <section class="emms__centralvideo">

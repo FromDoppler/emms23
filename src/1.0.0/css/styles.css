@@ -27,6 +27,7 @@
 @import 'components/golive-banner.css';
 @import 'components/hellobar.css';
 @import 'components/grid.css';
+@import 'components/features.css';
 
 /* Pages */
 @import 'pages/ecommerce.css';

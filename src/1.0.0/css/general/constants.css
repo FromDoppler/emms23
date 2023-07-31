@@ -81,6 +81,7 @@ p {
 
 @media (max-width: 620px) {
     .emms__cta {
+        text-align: center;
         display: block;
         width: 100%;
         padding: 20px 25px;
@@ -307,4 +308,10 @@ p {
 .emms__cropper-cont-interno {
     width: 100%;
     height: 100%;
+}
+
+/* Bg white */
+
+.emms__bg-w {
+    background: #fff;
 }
