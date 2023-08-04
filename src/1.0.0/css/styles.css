@@ -28,6 +28,7 @@
 @import 'components/hellobar.css';
 @import 'components/grid.css';
 @import 'components/features.css';
+@import 'components/prices-plans.css';
 
 /* Pages */
 @import 'pages/ecommerce.css';

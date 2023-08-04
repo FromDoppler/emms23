@@ -30,3 +30,24 @@ function toggleItemLegal() {
         this.parentNode.className = 'emms__form__legal close';
     }
 }
+
+
+// Collapsible List
+
+const listItem = document.getElementsByClassName('emms__collapse__list');
+const listBtn = document.getElementsByClassName('emms__collapse-btn');
+for (i = 0; i < listBtn.length; i++) {
+    listBtn[i].addEventListener('click', toggleItem, false);
+}
+function toggleItem() {
+    const itemClass = this.parentNode.className;
+    for (i = 0; i < listItem.length; i++) {
+        listItem[i].className = 'emms__collapse__list close';
+    }
+    if (itemClass == 'emms__collapse__list close') {
+        this.parentNode.className = 'emms__collapse__list open';
+    }
+    if (itemClass == 'emms__collapse__list open') {
+        this.parentNode.className = 'emms__collapse__list close';
+    }
+}

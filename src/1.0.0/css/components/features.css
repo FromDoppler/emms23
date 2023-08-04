@@ -2,7 +2,7 @@
     position: absolute;
     width: 159px;
     height: 159px;
-    top: 0;
+    top: -80px;
     left: 50%;
     transform: translate(-50%);
 }
@@ -17,7 +17,7 @@
 }
 
 .emms__features--icon-top .emms__features__title{
-    padding-top: 170px;
+    padding-top: 100px;
 }
 
 .emms__features__title h2 {
@@ -92,6 +92,7 @@
     .emms__features--icon-top .emms__features__title .icon-vip {
         width: 90px;
         height: 90px;
+        top: -45px;
     }
 
     .emms__features__title{
@@ -99,7 +100,7 @@
     }
 
     .emms__features--icon-top .emms__features__title{
-        padding-top: 100px;
+        padding-top: 60px;
     }
 
     .emms__features__title h2 {

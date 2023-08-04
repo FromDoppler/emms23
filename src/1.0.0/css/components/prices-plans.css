@@ -1,0 +1,511 @@
+.emms__plans {
+    position: relative;
+    padding: 150px 0;
+}
+
+.emms__plans .emms__container--lg {
+    position: relative;
+}
+
+.emms__plans__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.emms__plans__title h2 {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 60px;
+    letter-spacing: -1px;
+    color: #550871;
+    display: inline-block;
+    position: relative;
+}
+
+.emms__plans__title h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -35px;
+    width: 100%;
+    height: 12px;
+    background: #BD7AFF;
+    border-radius: 100px;
+}
+
+.emms__plans__benefits--dk {
+    position: absolute;
+    bottom: 88px;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.emms__plans__benefits--dk ul h3 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+    color: #212121;
+    padding: 0 0 12px 0;
+    border-bottom: 1px solid #333;
+}
+
+.emms__plans__benefits--dk ul li {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #333;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding: 0 0 0 16px;
+}
+
+.emms__plans__benefits--dk ul li::after {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
+
+.emms__plans__cards-container {
+    padding-left: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.emms__plans__card {
+    width: 24%;
+    padding: 42px 0 0 0;
+    position: relative;
+}
+
+.emms__plans__card--double {
+    width: 48%;
+}
+
+.emms__plans__card--premium {
+    background: #550871;
+    border-radius: 6px;
+    padding: 42px 6px 6px 6px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.emms__plans__card--premium::after {
+    content: "";
+    position: absolute;
+    top: -35px;
+    right: -20px;
+    width: 67px;
+    height: 67px;
+    background: url("../../../img/icons/icon-star-gradient.png") no-repeat;
+    background-size: contain;
+}
+
+.emms__plans__card__flex-content {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.emms__plans__card h3 {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 800;
+    color: #212121;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.emms__plans__card--premium h3 {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    z-index: 1;
+}
+
+.emms__plans__card__inside {
+    border-radius: 6px;
+    box-shadow: inset 0px 0px 0 3px #550871;
+    background: #fff;
+    width: calc(100% - 5px);
+    height: 100%;
+}
+
+.emms__plans__card--premium .emms__plans__card__inside {
+    box-shadow: none;
+    width: 100%;
+    overflow: hidden;
+}
+
+.emms__plans__card--premium.emms__plans__card--double .emms__plans__card__inside {
+    width: 49%;
+}
+
+.emms__plans__card__inside .emms__plans__card__inside__top {
+    height: 130px;
+    text-align: center;
+    padding: 12px;
+    display: flex;
+    align-items: end;
+    position: relative;
+}
+
+.emms__plans__card__inside .emms__plans__card__inside__top__off {
+    background: #BD7AFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.emms__plans__card__inside .emms__plans__card__inside__top__off p {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 800;
+    color: #333;
+    text-align: center;
+    padding-left: 18px;
+    position: relative;
+    display: inline-block;
+}
+
+.emms__plans__card__inside .emms__plans__card__inside__top__off p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background: url("../../../img/icons/icon-discount.svg");
+}
+
+.emms__plans__card__inside .emms__plans__card__inside__top--container {
+    width: 100%;
+}
+
+.emms__plans__card__inside .emms__plans__card__inside__top h4 {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #212121;
+    margin: 0 0 18px 0;
+}
+
+.emms__plans__card--premium .emms__plans__card__inside__top h4 {
+    font-weight: 800;
+}
+
+.emms__plans__card__inside .emms__plans__card__inside__top h4 span {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    display: block;
+}
+
+.emms__plans__card__inside a {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    color: #008060;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 0 2px #008060;
+    padding: 13px 10px;
+    display: block;
+    transition-duration: .2s;
+}
+
+.emms__plans__card__inside a:hover {
+    box-shadow: inset 0px 0px 0 1px #008060;
+    transition-duration: .2s;
+}
+
+.emms__plans__card--premium .emms__plans__card__inside a {
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: none;
+    background: #008060;
+    transition-duration: .2s;
+}
+
+.emms__plans__card--premium .emms__plans__card__inside a:hover {
+    background: #026c3c;
+    transition-duration: .2s;
+}
+
+.emms__plans__card__inside .emms__plans__card__inside__list ul li {
+    text-align: center;
+    padding: 0 12px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emms__plans__card__inside .emms__plans__card__inside__list ul h4 {
+    display: none;
+}
+
+.emms__plans__card__inside .emms__plans__card__inside__list ul li img {
+    width: 24px;
+    height: 24px;
+}
+
+.emms__plans__card__inside .emms__plans__card__inside__list ul li p {
+    display: none;
+}
+
+.emms__plans__card__inside .emms__plans__card__inside__list .emms__collapse-btn {
+    display: none;
+}
+
+.emms__plans__card__inside .emms__plans__card__inside__list .emms__collapse__list .emms__collapse__item {
+    display: flex;
+}
+
+.emms__plans__card__inside .emms__plans__card__inside__list .emms__collapse__list .emms__collapse-btn {
+    display: none;
+}
+
+.emms__plans__card__inside__bottom {
+    padding: 12px;
+    height: 82px;
+    box-sizing: border-box;
+}
+
+
+
+/* -------------------------------------- Responsive --------------------------------------------- */
+
+
+@media(max-width:1200px) {
+
+    .emms__plans__benefits--dk ul li {
+        font-size: 14px;
+    }
+
+    .emms__plans__cards-container {
+        padding-left: 360px;
+    }
+
+    .emms__plans__card__inside .emms__plans__card__inside__top {
+        height: 150px;
+    }
+
+    .emms__plans__card h3 {
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
+
+
+@media(max-width:992px) {
+    .emms__plans {
+        padding: 60px 0;
+    }
+
+    .emms__plans .emms__container--lg {
+        max-width: 480px;
+    }
+
+    .emms__plans__title {
+        position: relative;
+    }
+
+    .emms__plans__title h2 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .emms__plans__title h2::after {
+        bottom: -10px;
+        width: 80%;
+        height: 6px;
+    }
+
+    .emms__plans__benefits--dk {
+        display: none;
+    }
+
+    .emms__plans__card__flex-content {
+        height: auto;
+    }
+
+    .emms__plans__cards-container {
+        padding-left: 0;
+        display: block;
+    }
+
+    .emms__plans__card {
+        width: 100%;
+        margin: 0 0 18px 0;
+    }
+
+    .emms__plans__card--premium {
+        padding: 57px 6px 6px 6px;
+    }
+
+    .emms__plans__card--premium::after {
+        top: -22px;
+        right: -16px;
+    }
+
+    .emms__plans__card h3 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .emms__plans__card--premium h3 {
+        top: 18px;
+    }
+
+    .emms__plans__card__inside {
+        height: auto;
+    }
+
+    .emms__plans__card--premium.emms__plans__card--double .emms__plans__card__inside:nth-child(1) {
+        width: 100%;
+    }
+
+    .emms__plans__card--premium.emms__plans__card--double .emms__plans__card__inside:nth-child(2) {
+        position: absolute;
+        right: 6px;
+        border-left: solid 1px #550871;
+        border-radius: 0 6px 0 0;
+        width: 48%;
+    }
+
+    .emms__plans__card__inside .emms__plans__card__inside__top {
+        padding: 18px;
+        border-bottom: solid 1px #333;
+        height: auto;
+    }
+
+    .emms__plans__card--premium.emms__plans__card--double .emms__plans__card__inside__top {
+        padding: 35px 0 18px 0;
+    }
+
+    .emms__plans__card--premium.emms__plans__card--double .emms__plans__card__inside:nth-child(1) .emms__plans__card__inside__top {
+        width: 51%;
+    }
+
+    .emms__plans__card--premium.emms__plans__card--double .emms__plans__card__inside a {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .emms__plans__card__inside__list {
+        padding: 18px 18px 24px 18px;
+    }
+
+    .emms__plans__card--premium.emms__plans__card--double .emms__plans__card__inside:nth-child(2) .emms__plans__card__inside__list {
+        display: none;
+    }
+
+    .emms__plans__card__inside .emms__plans__card__inside__list ul h4 {
+        font-size: 16px;
+        font-weight: 800;
+        display: block;
+        margin: 0 0 18px 0;
+    }
+
+    .emms__plans__card__inside .emms__plans__card__inside__list ul li {
+        text-align: left;
+        padding: 0 0 0 24px;
+        height: auto;
+        display: block;
+        position: relative;
+        margin: 0 0 15px 0;
+    }
+
+    .emms__plans__card__inside .emms__plans__card__inside__list ul li img {
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        position: absolute;
+        left: 0;
+        top: 1px;
+    }
+
+    .emms__plans__card__inside .emms__plans__card__inside__list ul li p {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;
+        color: #333;
+        display: block;
+    }
+
+    .emms__plans__card__inside .emms__plans__card__inside__list .emms__collapse__list.close .emms__collapse__item {
+        display: none;
+    }
+
+    .emms__plans__card__inside .emms__plans__card__inside__list .emms__collapse__list.open .emms__collapse__item {
+        display: block;
+    }
+
+    .emms__plans__card__inside .emms__plans__card__inside__list .emms__collapse__list .emms__collapse-btn {
+        font-family: "Proxima-Nova", "helvetica", "sans-serif";
+        font-size: 16px;
+        font-weight: 600;
+        color: #008060;
+        background: none;
+        border: none;
+        padding: 0 30px 0 0;
+        margin: 24px 0 0 0;
+        position: relative;
+        display: block;
+        cursor: pointer;
+    }
+
+    .emms__plans__card__inside .emms__plans__card__inside__list .emms__collapse__list .emms__collapse-btn::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -2px;
+        width: 24px;
+        height: 24px;
+        background: url("../../../img/icons/icon-arrow--green.svg") no-repeat;
+        background-size: contain;
+    }
+
+    .emms__plans__card__inside .emms__plans__card__inside__list .emms__collapse__list.close .emms__collapse-btn::before {
+        content: "Ver todos los beneficios";
+    }
+
+    .emms__plans__card__inside .emms__plans__card__inside__list .emms__collapse__list.close .emms__collapse-btn::after{
+        transform: rotate(90deg);
+    }
+
+    .emms__plans__card__inside .emms__plans__card__inside__list .emms__collapse__list.open .emms__collapse-btn::before {
+        content: "Ver menos";
+    }
+
+    .emms__plans__card__inside .emms__plans__card__inside__list .emms__collapse__list.open .emms__collapse-btn::after{
+        transform: rotate(-90deg);
+    }
+
+    .emms__plans__card__inside__bottom {
+        padding: 0 18px 18px 18px;
+        height: auto;
+    }
+
+    .emms__plans__card--premium.emms__plans__card--double .emms__plans__card__inside__bottom {
+        display: none;
+    }
+
+
+
+
+
+
+}
