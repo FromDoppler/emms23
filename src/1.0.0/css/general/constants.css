@@ -315,3 +315,14 @@ p {
 .emms__bg-w {
     background: #fff;
 }
+
+
+/* Collapse list */
+
+.emms__collapse__list.close .emms__collapse__item{
+    display: none;
+}
+
+.emms__collapse__list.open .emms__collapse__item{
+    display: block;
+}

@@ -186,6 +186,262 @@ require_once('././src/components/cacheSettings.php');
             </div>
         </section>
 
+        <!-- Prices Plans -->
+        <div class="emms__plans emms__bg-w">
+            <div class="emms__container--lg">
+                <div class="emms__plans__title emms__fade-in">
+                    <h2>Entradas</h2>
+                </div>
+                <div class="emms__plans__benefits--dk emms__fade-in">
+                    <ul>
+                        <h3>Beneficios</h3>
+                        <li>Acceso a todas las conferencias en vivo</li>
+                        <li>Acceso a casos de éxito en vivo</li>
+                        <li>Acceso a entrevistas en vivo</li>
+                        <li>Acceso a todas las conferencias grabadas</li>
+                        <li>Acceso a todos los contenidos premium</li>
+                        <li>Acceso a los sorteos</li>
+                        <li>Descuentos en herramientas y cursos</li>
+                        <li>Certificado de participación</li>
+                        <li>Acceso a grupos de Slack con la comunidad EMMS</li>
+                        <li>Acceso ilimitado a todos los workshops prácticos</li>
+                        <li>Acceso a licencias en las herramientas de los WS</li>
+                        <li>Networking con participantes y speakers</li>
+                    </ul>
+                </div>
+                <div class="emms__plans__cards-container emms__fade-in">
+                    <div class="emms__plans__card">
+                        <div class="emms__plans__card__inside">
+                            <div class="emms__plans__card__inside__top">
+                                <div class="emms__plans__card__inside__top--container">
+                                    <h3>Asistente Free</h3>
+                                    <h4>Gratis</h4>
+                                    <a href="">Botón</a>
+                                </div>
+                            </div>
+                            <div class="emms__plans__card__inside__list">
+                                <ul class="emms__collapse__list close">
+                                    <h4>Beneficios</h4>
+                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <button class="emms__collapse-btn"></button>
+                                </ul>
+                            </div>
+                            <div class="emms__plans__card__inside__bottom">
+                                <a href="">Botón</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="emms__plans__card emms__plans__card--premium">
+                        <h3>Asistente VIP</h3>
+                        <div class="emms__plans__card__inside">
+                            <div class="emms__plans__card__inside__top">
+                                <div class="emms__plans__card__inside__top--container">
+                                    <h4>U$S 10</h4>
+                                    <a href="https://4844832.wixsite.com/emms" target="_blank">Botón</a>
+                                </div>
+                            </div>
+                            <div class="emms__plans__card__inside__list">
+                                <ul class="emms__collapse__list close">
+                                    <h4>Beneficios</h4>
+                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias en vivo</p>
+                                    </li>
+                                    <button class="emms__collapse-btn"></button>
+                                </ul>
+                            </div>
+                            <div class="emms__plans__card__inside__bottom">
+                            <a href="https://4844832.wixsite.com/emms" target="_blank">Botón</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="emms__plans__card emms__plans__card--double emms__plans__card--premium">
+                        <h3>Pack Empresas</h3>
+                        <div class="emms__plans__card__flex-content">
+                            <div class="emms__plans__card__inside">
+                                <div class="emms__plans__card__inside__top">
+                                    <div class="emms__plans__card__inside__top__off">
+                                        <p>5% OFF</p>
+                                    </div>
+                                    <div class="emms__plans__card__inside__top--container">
+                                        <h4><span>5 entradas</span>U$S 42,50</h4>
+                                        <a href="https://4844832.wixsite.com/emms" target="_blank">Botón</a>
+                                    </div>
+                                </div>
+                                <div class="emms__plans__card__inside__list">
+                                    <ul class="emms__collapse__list close">
+                                        <h4>Beneficios</h4>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <button class="emms__collapse-btn"></button>
+                                    </ul>
+                                </div>
+                                <div class="emms__plans__card__inside__bottom">
+                                    <a href="https://4844832.wixsite.com/emms" target="_blank">Botón</a>
+                                </div>
+                            </div>
+                            <div class="emms__plans__card__inside">
+                                <div class="emms__plans__card__inside__top">
+                                    <div class="emms__plans__card__inside__top__off">
+                                        <p>15% OFF</p>
+                                    </div>
+                                    <div class="emms__plans__card__inside__top--container">
+                                        <h4><span>10 entradas</span>U$S 42,50</h4>
+                                        <a href="https://4844832.wixsite.com/emms" target="_blank">Botón</a>
+                                    </div>
+                                </div>
+                                <div class="emms__plans__card__inside__list">
+                                    <ul>
+                                        <h4>Beneficios</h4>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias en vivo</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="emms__plans__card__inside__bottom">
+                                    <a href="https://4844832.wixsite.com/emms" target="_blank">Botón</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- Features -->
         <div class="emms__features emms__features--icon-top">
