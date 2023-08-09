@@ -166,7 +166,7 @@ require_once('././src/components/cacheSettings.php');
                             </div>
                             <div class="emms__eventCards__list__item__text">
                                 <div class="emms__eventCards__list__item__text--corner">
-                                    <p>OCTUBRE</p>
+                                    <p>NOVIEMBRE</p>
                                 </div>
                                 <h3>EMMS Digital Trends</h3>
                                 <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -229,7 +229,7 @@ require_once('././src/components/cacheSettings.php');
                             </div>
                             <div class="emms__eventCards__list__item__text">
                                 <div class="emms__eventCards__list__item__text--corner">
-                                    <p>OCTUBRE</p>
+                                    <p>NOVIEMBRE</p>
                                 </div>
                                 <h3>EMMS Digital Trends</h3>
                                 <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -437,7 +437,7 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                     <li class="emms__frequentquestions__list__item close">
                         <button class="emms__frequentquestions__list__item__head">📅 ¿Cuándo se realizará el EMMS 2023?</button>
-                        <p class="emms__frequentquestions__list__item__content">El EMMS 2023 constará de 2 ediciones: <strong>E-commerce y Digital Trends</strong>, a realizarse en <strong>mayo y octubre</strong>, respectivamente. Registrándote al evento recibirás todos las novedades por Email y la confirmación de cada fecha.</p>
+                        <p class="emms__frequentquestions__list__item__content">El EMMS 2023 constará de 2 ediciones: <strong>E-commerce y Digital Trends</strong>, a realizarse en <strong>mayo y noviembre</strong>, respectivamente. Registrándote al evento recibirás todos las novedades por Email y la confirmación de cada fecha.</p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
                         <button class="emms__frequentquestions__list__item__head">📍 ¿Dónde serán los eventos?</button>
