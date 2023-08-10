@@ -215,7 +215,7 @@ require_once('././config.php');
             <div class="emms__container--md">
                 <div class="emms__centralvideo__title emms__fade-in">
                     <h2>¡No dejes de aprender!</br> Vuelve el EMMS Digital Trends</h2>
-                    <p>Si quieres descubrir aún más <strong>tendencias en Marketing Digital</strong> para potenciar tu negocio, en <strong>octubre</strong> volvemos con muchas más conferencias y contenido exclusivo en el evento en español más elegido cada año por miles de profesionales.</p>
+                    <p>Si quieres descubrir aún más <strong>tendencias en Marketing Digital</strong> para potenciar tu negocio, en <strong>noviembre</strong> volvemos con muchas más conferencias y contenido exclusivo en el evento en español más elegido cada año por miles de profesionales.</p>
                 </div>
                 <div class="emms__centralvideo__video emms__fade-in">
                     <video src="src/img/EmmsDigitalTrends.mp4" controls></video>
