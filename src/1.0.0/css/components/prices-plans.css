@@ -193,7 +193,7 @@
     width: 100%;
 }
 
-.emms__plans__card__inside .emms__plans__card__inside__top--container a{
+.activeFormButton{
    cursor: pointer;
 }
 
