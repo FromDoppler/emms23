@@ -262,7 +262,7 @@ require_once('././src/components/cacheSettings.php');
                                 </ul>
                             </div>
                             <div class="emms__plans__card__inside__bottom">
-                                <a href="">Botón</a>
+                                <a class="activeFormButton">Botón</a>
                             </div>
                         </div>
                     </div>
