@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // Collapsible Questions
-    const collpasibleQuestionsListeners = () => {
+    const collapsiblesQuestionsListeners = () => {
 
         const accItem = document.querySelectorAll('.emms__frequentquestions__list__item');
         const accHD = document.querySelectorAll('.emms__frequentquestions__list__item__head');
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Collapsible Legal
-    const collpasibleLegalListeners = () => {
+    const collapsibleLegalListeners = () => {
         const legalBtn = document.getElementById('legalBtn');
         const toggleItemLegal = () => {
             legalBtn.parentNode.classList.toggle('open');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Collapsible List
-    const collpasibleListListeners = () => {
+    const collapsiblesListListeners = () => {
 
         const listItem = document.getElementsByClassName('emms__collapse__list');
         const listBtn = document.getElementsByClassName('emms__collapse-btn');
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    collpasibleQuestionsListeners();
-    collpasibleLegalListeners();
-    collpasibleListListeners();
+    collapsiblesQuestionsListeners();
+    collapsibleLegalListeners();
+    collapsiblesListListeners();
 });
