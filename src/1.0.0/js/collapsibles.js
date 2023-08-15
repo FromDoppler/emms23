@@ -31,24 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Collapsible List
     const collapsiblesListListeners = () => {
 
-        const listItem = document.getElementsByClassName('emms__collapse__list');
-        const listBtn = document.getElementsByClassName('emms__collapse-btn');
-        for (i = 0; i < listBtn.length; i++) {
-            listBtn[i].addEventListener('click', toggleItem, false);
-        }
-        function toggleItem() {
-            const itemClass = this.parentNode.className;
-            for (i = 0; i < listItem.length; i++) {
-                listItem[i].className = 'emms__collapse__list close';
-            }
+        const listItems = document.querySelectorAll('.emms__collapse__list');
+        const listBtns = document.querySelectorAll('.emms__collapse-btn');
+        const toggleItem = (btn) => {
+            const itemClass = btn.parentNode.className;
+            listItems.forEach(item => {
+                item.className = 'emms__collapse__list close';
+            })
             if (itemClass == 'emms__collapse__list close') {
-                this.parentNode.className = 'emms__collapse__list open';
+                btn.parentNode.classList.toggle('open');
             }
-            if (itemClass == 'emms__collapse__list open') {
-                this.parentNode.className = 'emms__collapse__list close';
-            }
-
         }
+
+        listBtns.forEach(btn => btn.addEventListener('click', () => { toggleItem(btn) }));
+
     }
 
 
