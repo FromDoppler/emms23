@@ -22,17 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Collapsible Legal
     const collpasibleLegalListeners = () => {
         const legalBtn = document.getElementById('legalBtn');
-        if (legalBtn) legalBtn.addEventListener('click', toggleItemLegal);
-        function toggleItemLegal() {
-            const legalClass = this.parentNode.className;
-
-            if (legalClass == 'emms__form__legal close') {
-                this.parentNode.className = 'emms__form__legal open';
-            }
-            else {
-                this.parentNode.className = 'emms__form__legal close';
-            }
+        const toggleItemLegal = () => {
+            legalBtn.parentNode.classList.toggle('open');
         }
+        if (legalBtn) legalBtn.addEventListener('click', () => { toggleItemLegal() });
     }
 
     // Collapsible List
