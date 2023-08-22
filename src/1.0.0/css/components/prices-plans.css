@@ -79,8 +79,15 @@
 
 .emms__plans__card {
     width: 24%;
-    padding: 42px 0 0 0;
+    background: #212121;
+    border-radius: 6px;
+    padding: 42px 6px 6px;
+    box-sizing: border-box;
     position: relative;
+}
+
+.emms__plans__card--premium{
+    background: #550871;
 }
 
 .emms__plans__card--double {
@@ -116,13 +123,9 @@
     font-size: 18px;
     line-height: 20px;
     font-weight: 800;
-    color: #212121;
+    color: #fff;
     text-align: center;
     margin: 0 0 10px 0;
-}
-
-.emms__plans__card--premium h3 {
-    color: #fff;
     position: absolute;
     top: 10px;
     left: 50%;
@@ -133,16 +136,8 @@
 
 .emms__plans__card__inside {
     border-radius: 6px;
-    box-shadow: inset 0px 0px 0 3px #550871;
     background: #fff;
-    width: calc(100% - 5px);
     height: 100%;
-}
-
-.emms__plans__card--premium .emms__plans__card__inside {
-    box-shadow: none;
-    width: 100%;
-    overflow: hidden;
 }
 
 .emms__plans__card--premium.emms__plans__card--double .emms__plans__card__inside {

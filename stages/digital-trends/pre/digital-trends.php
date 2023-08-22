@@ -211,10 +211,10 @@ require_once('././src/components/cacheSettings.php');
                 </div>
                 <div class="emms__plans__cards-container emms__fade-in">
                     <div class="emms__plans__card">
+                        <h3>Asistente Free</h3>
                         <div class="emms__plans__card__inside">
                             <div class="emms__plans__card__inside__top">
                                 <div class="emms__plans__card__inside__top--container">
-                                    <h3>Asistente Free</h3>
                                     <h4>Gratis</h4>
                                     <a class="activeFormButton">Botón</a>
                                 </div>
