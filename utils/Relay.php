@@ -2235,7 +2235,7 @@ class Relay
                                                                             <tr>
                                                                                 <td style="border-radius: 99px; background-color: #008046; color: #ffffff; padding: 15px 30px; text-align: center;"
                                                                                     class="button--td mobile-btn">
-                                                                                    <a href="https://goemms.com/ecommerce-registrado?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-confirmacion-registro-post-emmsecom-23&dplrid=' . $encodeEmail . '"
+                                                                                    <a href="https://goemms.com/ecommerce-registrado?utm_source=fromdoppler&utm_campaign=et-email-confirmacion-registro-emmsdt-earlybirds-23&utm_medium=email&dplrid=' . $encodeEmail . '"
                                                                                         style="color: #ffffff; font-size:15px; font-weight: bold; font-family:sans-serif; text-decoration: none; width:100%; display:inline-block"
                                                                                         target="_blank"><span>ACCEDE AHORA</span></a>
                                                                                 </td>
@@ -2715,7 +2715,7 @@ class Relay
                                                                     <p
                                                                         style="margin: 0; font-family: Helvetica, Arial, sans-serif;font-size: 15px;line-height: 20px;font-weight: 400;color:#FFFFFF;">
                                                                         Ya eres parte del <a
-                                                                            href="http://goemms.com/digital-trends-registrado?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-earlybirds&dplrid=' . $encodeEmail . '"
+                                                                            href="https://goemms.com/digital-trends-registrado?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-emmsdt-earlybirds&dplrid=' . $encodeEmail . '"
                                                                             target="_blank"
                                                                             style="text-decoration: none; color: #33AD73;font-weight: bold;"
                                                                             class="link-hover ">EMMS Digital Trends.</a>
@@ -2862,8 +2862,7 @@ class Relay
                                                         <p
                                                             style="Margin: 0; font-family: Helvetica, Arial, sans-serif;font-size: 15px;line-height: 20px;font-weight: 400;color:#FFFFFF;">
                                                             Mientras esperas por la llegada del evento, te esperamos en el
-                                                            <strong>EMMS E-commerce 2023</strong>. Ya comenzó, ¡apúrate que todavía
-                                                            queda mucho por aprender!
+                                                            <strong>EMMS E-commerce 2023</strong> para revivir las mejores conferencias, casos de éxito y entrevistas que tuvimos en la última edición.
                                                         </p>
                                                     </td>
                                                 </tr>
