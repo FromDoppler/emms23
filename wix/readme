@@ -1,0 +1,24 @@
+wix
+├── logs
+│   ├── success_wix.log
+│   ├── success_raw_wix.log
+│   └── error_wix.log
+│
+└── v1
+    │
+    └── api
+        │
+        ├── controllers
+        │   └── SubscriberController.php
+        │
+        ├── models
+        │   ├── SubscriberWix.php
+        │   ├── SubscriberDopplerList.php
+        │   └── SubscriberDatabase.php
+        │
+        │
+        ├── utils
+        │   ├── Logger.php
+        │   └── toHex.php
+        │
+        └── save_subscriber_data.php

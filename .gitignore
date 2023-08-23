@@ -1,3 +1,4 @@
 logs/*
 .docker/.env
 .docker/db/data/*
+wix/logs/*
