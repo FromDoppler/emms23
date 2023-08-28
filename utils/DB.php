@@ -318,71 +318,12 @@ class DB
         $result = $sql->fetchAll();
         return $result;
     }
-
-    public function updateCurrentPhase($phase)
-    {
-        $phases = array("pre" => 0, "during" => 0, "post" => 0);
-        $phases[$phase] = 1;
-
-        $this->query("UPDATE settings_phase SET pre =" . $phases['pre'] . ", during =" . $phases['during'] . ", post=" . $phases['post'] . " where 1=1");
-    }
     public function getCurrentPhase($event)
     {
 
         $sql = $this->query("SELECT * from settings_phase WHERE event='" . $event . "' AND 1=1");
         $result = $sql->fetchAll();
         return $result;
-    }
-
-    public function getSimulator()
-    {
-        $sql = $this->query("SELECT * from settings_simulator where 1=1");
-        $result = $sql->fetchAll();
-        return $result;
-    }
-
-    function getSettingsTransmission()
-    {
-        $sql = $this->query("SELECT * from settings_transmission where 1=1");
-        $result = $sql->fetchAll();
-        return $result;
-    }
-
-    public function getDuringDay()
-    {
-        $sql = $this->query("SELECT * from settings_during_days where 1=1");
-        $result = $sql->fetchAll();
-        return $result;
-    }
-    public function getSimulatorDuringDay()
-    {
-
-        $sql = $this->query("SELECT * from settings_simulator_during_days where 1=1");
-        $result = $sql->fetchAll();
-        return $result;
-    }
-
-    public function updateSimulator($enabled, $phase)
-    {
-        $phases = array("pre" => 0, "during" => 0, "post" => 0);
-        $phases[$phase] = 1;
-
-        $this->query("UPDATE settings_simulator SET enabled =" . $enabled . ", pre =" . $phases['pre'] . ", during =" . $phases['during'] . ", post=" . $phases['post'] . " where 1=1");
-    }
-
-    public function updateDuringDays($day, $live)
-    {
-        $this->query("UPDATE settings_during_days SET day =" . $day . ", live =" . $live . " where 1=1");
-    }
-
-    public function updateSimulatorDuringDays($day, $live)
-    {
-        $this->query("UPDATE settings_simulator_during_days SET day =" . $day . ", live =" . $live . " where 1=1");
-    }
-
-    public function updateSettingsTransmission($problems, $youtube)
-    {
-        $this->query("UPDATE settings_transmission SET problems =" . $problems . ", youtube =" . $youtube . " where 1=1");
     }
 
     public function getAllRegistersEMMS()
