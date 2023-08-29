@@ -2235,7 +2235,7 @@ class Relay
                                                                             <tr>
                                                                                 <td style="border-radius: 99px; background-color: #008046; color: #ffffff; padding: 15px 30px; text-align: center;"
                                                                                     class="button--td mobile-btn">
-                                                                                    <a href="https://goemms.com/ecommerce-registrado?utm_source=fromdoppler&utm_campaign=et-email-confirmacion-registro-emmsdt-earlybirds-23&utm_medium=email&dplrid=' . $encodeEmail . '"
+                                                                                    <a href="https://goemms.com/ecommerce-registrado?utm_source=fromdoppler&utm_campaign=et-confirmacion-registro-post-emmsecom-23&utm_medium=email&dplrid=' . $encodeEmail . '"
                                                                                         style="color: #ffffff; font-size:15px; font-weight: bold; font-family:sans-serif; text-decoration: none; width:100%; display:inline-block"
                                                                                         target="_blank"><span>ACCEDE AHORA</span></a>
                                                                                 </td>
@@ -2880,7 +2880,7 @@ class Relay
                                                                 <tr>
                                                                     <td style="border-radius: 99px; background-color: #008046; color: #ffffff; padding: 15px 52px; text-align: center;"
                                                                         class="button--td mobile-btn">
-                                                                        <a href="http://goemms.com/ecommerce?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-earlybirds-23"
+                                                                        <a href="http://goemms.com/ecommerce?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-emmsdt-earlybirds-23"
                                                                             style="color: #ffffff; font-size:15px; font-weight: bold; font-family:sans-serif; text-decoration: none; width:100%; display:inline-block"
                                                                             target="_blank"><span>SÚMATE AHORA</span></a>
                                                                     </td>
