@@ -2,38 +2,85 @@
 
 import {
     customError,
+    getUrlWithParams,
     submitFormFetch,
+    submitWithoutForm,
 } from './common/index.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
     const activeFormButton = document.querySelectorAll('.activeFormButton');
-    const modal = document.getElementById('modalRegister');
-    const popUpForm = document.getElementById('popUpForm');
+    const activeButtonWithoutForm = document.querySelectorAll('.activeButtonWithoutForm');
 
 
-    activeFormButton.forEach(btn => {
-        btn.addEventListener('click', () => {
-            modal.classList.toggle('open');
-        })
-    });
+    if (activeButtonWithoutForm) {
+        const withoutFormListeners = () => {
 
-    const submitForm = async (e) => {
+            const activeButtonsSpinners = () => {
+                activeButtonWithoutForm.forEach(btn => {
+                    btn.classList.add('button--loading');
+                });
+            }
 
-        await submitFormFetch(popUpForm, 'digital-trends').then(({ fetchResp: resp, encodeEmail }) => {
-            popUpForm.querySelector('button').classList.add('button--loading');
-            if (!resp.ok) throw new Error('Server error on Sponsor fetch', resp?.status);
-            localStorage.setItem('dplrid', encodeEmail);
-            localStorage.setItem('lastEventsUpdateTime', new Date());
-            window.location.href = (`/digital-trends-registrado`);
-        })
-            .catch((error) => {
-                popUpForm.querySelector('button').classList.remove('button--loading');
-                customError('Sponsor post error', error);
+            const submitEvent = async (btn) => {
+                activeButtonsSpinners();
+                await submitWithoutForm('digital-trends').then(({ fetchResp: resp }) => {
+                    btn.classList.remove('button--loading');
+                    if (!resp.ok) throw new Error('Server error on digital fetch', resp?.status);
+
+                    window.location.href = getUrlWithParams('/digital-trends-registrado');
+                    if (window.location.pathname === '/sponsors') {
+                        window.location.href = getUrlWithParams('/sponsors-registrado');
+                    }
+                });
+            }
+
+
+            activeButtonWithoutForm.forEach(btn => {
+                btn.addEventListener('click', () => { submitEvent(btn) });
             });
 
 
+
+        }
+        withoutFormListeners();
     }
 
-    popUpForm.querySelector('button').addEventListener('click', submitForm);
+    if (activeFormButton) {
+        const formListeners = () => {
+
+            const modal = document.getElementById('modalRegister');
+            const popUpForm = document.getElementById('popUpForm');
+
+
+            activeFormButton.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    modal.classList.toggle('open');
+                })
+            });
+
+            const submitForm = async (e) => {
+
+                await submitFormFetch(popUpForm, 'digital-trends').then(({ fetchResp: resp, encodeEmail }) => {
+                    popUpForm.querySelector('button').classList.add('button--loading');
+                    if (!resp.ok) throw new Error('Server error on Sponsor fetch', resp?.status);
+                    localStorage.setItem('dplrid', encodeEmail);
+                    localStorage.setItem('lastEventsUpdateTime', new Date());
+                    window.location.href = (`/digital-trends-registrado`);
+                })
+                    .catch((error) => {
+                        popUpForm.querySelector('button').classList.remove('button--loading');
+                        customError('Sponsor post error', error);
+                    });
+
+
+            }
+
+            popUpForm.querySelector('button').addEventListener('click', submitForm);
+        }
+        formListeners();
+    }
+
+
+
 });

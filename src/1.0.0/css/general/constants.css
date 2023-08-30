@@ -265,6 +265,10 @@ p {
     animation: button-loading-spinner 1s ease infinite;
 }
 
+.dtCursorPointer.button--loading::after {
+    border-top-color: #000000;
+}
+
 .error {
     display: block;
 }

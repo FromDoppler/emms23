@@ -216,7 +216,8 @@ require_once('././src/components/cacheSettings.php');
                             <div class="emms__plans__card__inside__top">
                                 <div class="emms__plans__card__inside__top--container">
                                     <h4>Gratis</h4>
-                                    <a class="activeFormButton">Botón</a>
+                                    <a class="dtCursorPointer activeFormButton eventHiddenElements"><span class="button__text">Botón</span></a>
+                                    <a class="dtCursorPointer activeButtonWithoutForm eventShowElements"><span class="button__text">Botón</span></a>
                                 </div>
                             </div>
                             <div class="emms__plans__card__inside__list">
@@ -262,7 +263,8 @@ require_once('././src/components/cacheSettings.php');
                                 </ul>
                             </div>
                             <div class="emms__plans__card__inside__bottom">
-                                <a class="activeFormButton">Botón</a>
+                                <a class="dtCursorPointer activeFormButton eventHiddenElements"><span class="button__text">Botón</span></a>
+                                <a class="dtCursorPointer activeButtonWithoutForm eventShowElements"><span class="button__text">Botón</span></a>
                             </div>
                         </div>
                     </div>
@@ -495,7 +497,7 @@ require_once('././src/components/cacheSettings.php');
                     </div>
                 </form>
                 <!-- End form -->
-                <button class="emms__register-modal__window__close activeFormButton"></button>
+                <button class="emms__register-modal__window__close dtCursorPointer activeFormButton eventHiddenElements"></button>
             </div>
         </div>
 
@@ -544,15 +546,14 @@ require_once('././src/components/cacheSettings.php');
                 <div class="emms__centralvideo__video emms__fade-in">
                     <video src="src/img/EmmsDigitalTrends.mp4" controls></video>
                 </div>
-
                 <div class="emms__centralvideo__cta emms__fade-in eventHiddenElements">
-                    <a href="#registro" class="emms__cta">REGÍSTRATE GRATIS</a>
+                    <a class="emms__cta activeFormButton">REGÍSTRATE GRATIS</a>
                     <small class="eventHiddenElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                     <small class="eventHiddenElements eventShowElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./registrado#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                 </div>
 
                 <div class="emms__centralvideo__cta emms__fade-in digitalTrendsBtn eventHiddenElements eventShowElements">
-                    <a class="emms__cta"><span class="button__text">REGÍSTRATE GRATIS</span></a>
+                    <a class="emms__cta activeButtonWithoutForm"><span class="button__text">REGÍSTRATE GRATIS</span></a>
                     <small class="eventHiddenElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                     <small class="eventHiddenElements eventShowElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./registrado#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                 </div>
@@ -589,10 +590,10 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                 </ul>
                 <div class="emms__userscomments__cta eventHiddenElements">
-                    <a href="#registro" class="emms__cta emms__fade-in">REGÍSTRATE GRATIS</a>
+                    <a class="emms__cta emms__fade-in activeFormButton">REGÍSTRATE GRATIS</a>
                 </div>
                 <div class="emms__userscomments__cta digitalTrendsBtn eventHiddenElements eventShowElements">
-                    <a class="emms__cta emms__fade-in"><span class="button__text">REGÍSTRATE GRATIS</span></a>
+                    <a class="emms__cta emms__fade-in activeButtonWithoutForm"><span class="button__text">REGÍSTRATE GRATIS</span></a>
                 </div>
             </div>
         </section>

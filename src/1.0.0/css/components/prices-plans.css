@@ -188,8 +188,9 @@
     width: 100%;
 }
 
-.activeFormButton{
+.dtCursorPointer{
    cursor: pointer;
+   position: relative;
 }
 
 .emms__plans__card__inside .emms__plans__card__inside__top h4 {
