@@ -30,6 +30,13 @@
 
 .emms__digitaltrends .emms__calendar {
     position: relative;
+    background: #fff;
+}
+
+.emms__digitaltrends .emms__calendar__title h2 {
+    font-size: 40px;
+    letter-spacing: -1px;
+    margin: 0 0 25px 0;
 }
 
 .emms__digitaltrends .emms__calendar .emms__background-b {

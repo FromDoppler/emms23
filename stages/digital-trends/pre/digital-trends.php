@@ -186,6 +186,21 @@ require_once('././src/components/cacheSettings.php');
             </div>
         </section>
 
+        <!-- Calendar -->
+        <section class="emms__calendar" id="agenda">
+            <div class="emms__container--lg">
+                <div class="emms__calendar__title emms__fade-in">
+                    <h2>Agenda</h2>
+                    <p>Estos son los <strong>ponentes</strong> que nos acompañarán en esta edición y las <strong>temáticas</strong> de sus charlas. </p>
+                </div>
+                <!-- Speakers -->
+                <?php include('./src/components/speakers.php') ?>
+                <!-- End list -->
+            </div>
+            <div class="emms__background-c"></div>
+            <div class="emms__background-b"></div>
+        </section>
+
         <!-- Prices Plans -->
         <div class="emms__plans emms__bg-w">
             <div class="emms__container--lg">
