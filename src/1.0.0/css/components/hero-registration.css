@@ -70,6 +70,28 @@
     background-size: contain;
 }
 
+.emms__hero-registration .emms__hero-registration__text .emms__hero-registration__text__strong{
+    margin: 32px 0 0 0;
+}
+
+.emms__hero-registration .emms__hero-registration__text .emms__hero-registration__text__strong__icon{
+    width: 48px;
+    height: 48px;
+    background: url("../../../img/icons/icon-arrow--white.svg") no-repeat;
+    background-size: 25px;
+    background-position: center;
+    border-radius: 100%;
+    border: solid 1px #fff;
+    margin: 0 auto;
+    transform: rotate(90deg);
+}
+
+.emms__hero-registration .emms__hero-registration__text .emms__hero-registration__text__strong p{
+    font-size: 22px;
+    line-height: 34px;
+    font-weight: 700;
+}
+
 /* Center checklist in desktop */
 
 @media(min-width:992px){
