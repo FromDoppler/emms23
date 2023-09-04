@@ -76,14 +76,22 @@ require_once('././src/components/cacheSettings.php');
     <main>
 
         <!-- Hero -->
-        <section class="emms__hero-registration--registered">
-            <div class="emms__container--md">
-                <h1 class="emms__fade-top">¡Ya eres parte del EMMS Digital Trends 2023!</h1>
-                <?php if (($settings_phase['event'] === "ecommerce") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on")) : ?>
-                    <p class="emms__fade-in">Mantente pendiente de tu casilla de correo y descubrirás todas las novedades del evento. Mientras tanto, te invitamos al <a href="./ecommerce">EMMS E-commerce 2023</a> ¡que ya ha comenzado!</p>
-                <?php else : ?>
-                    <p>Mantente pendiente de tu casilla de correo y descubrirás todas las novedades del evento.</p>
-                <?php endif; ?>
+        <section class="emms__hero-registration emms__hero-registration--noform emms__hero-registration--video">
+            <div class="emms__hero-registration__back emms__fade-in">
+                <video src="https://goemms.com/src/img/video-back-dt.mp4" muted autoplay loop></video>
+            </div>
+            <div class="emms__hero-registration__text emms__fade-in">
+                <h1>Lorem ipsum dolor sit amet consectetuest la</h1>
+                <p>Lorem ipsum dolor sit amet consectetur. Facilisi ut eu eget ipsum. Dolor adipiscing urna ac sed arcu sed tempus. Venenatis diam etiam nulla viverra.</p>
+                <div class="emms__hero-registration__text__strong">
+                    <div class="emms__hero-registration__text__strong__icon"></div>
+                    <p>¿Ya tienes tu entrada VIP para acceder a los Workshops y el Networking?</p>
+                </div>
+                <a href="https://4844832.wixsite.com/emms" target="_blank" class="emms__cta">NO, ACCEDER AHORA</a>
+            </div>
+            <div class="emms__hero-registration__bottom emms__fade-in">
+                <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
+                <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
             </div>
         </section>
 
