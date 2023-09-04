@@ -26,10 +26,13 @@ require_once('././config.php');
                 <ul class="emms__header__nav__menu">
                     <li><a href="/">home</a></li>
                     <li><a href="/ecommerce">e-commerce</a></li>
-                    <li class="emms__header__nav__menu__dropdown"><a href="#" class="active">digital trends</a>
+                    <li class="emms__header__nav__menu__dropdown">
+                        <a href="#" class="active">digital trends</a>
                         <ul class="emms__header__nav__submenu">
-                            <li><a href="#agenda">AGENDA</a></li>
-                            <li><a href="#aprende-con-doppler">APRENDE CON DOPPLER</a></li>
+                            <li><a href="#agenda">agenda</a></li>
+                            <li><a href="#entradas">entradas</a></li>
+                            <li><a href="#vip">secciones VIP</a></li>
+                            <li><a href="https://www.digital-trends.goemms.com/workshops?utm_source=manage.wix.com" target="_blank">contenido Premium</a></li>
                         </ul>
                     </li>
                     <li><a href="/sponsors">contenido exclusivo</a></li>
