@@ -62,6 +62,7 @@ require_once('././src/components/cacheSettings.php');
                     <li><a href="./digital-trends">digital trends</a></li>
                     <li><a href="/sponsors">contenido exclusivo</a></li>
                     <li><a href="/ediciones-anteriores">ediciones anteriores</a></li>
+                    <li><a href="https://www.digital-trends.goemms.com/" target="_blank">entradas</a></li>
                 </ul>
             </nav>
         </div>
