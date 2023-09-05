@@ -204,8 +204,7 @@ require_once('././src/components/cacheSettings.php');
                 <?php include('./src/components/speakers.php') ?>
                 <!-- End list -->
             </div>
-            <div class="emms__background-c"></div>
-            <div class="emms__background-b"></div>
+            <div id="entradas"></div>
         </section>
 
         <!-- Prices Plans -->
@@ -464,6 +463,7 @@ require_once('././src/components/cacheSettings.php');
                     </div>
                 </div>
             </div>
+            <div id="vip"></div>
         </div>
 
         <!-- Register modal -->

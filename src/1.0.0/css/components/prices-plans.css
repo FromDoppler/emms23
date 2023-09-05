@@ -1,6 +1,6 @@
 .emms__plans {
     position: relative;
-    padding: 150px 0;
+    padding: 30px 0 180px 0;
 }
 
 .emms__plans .emms__container--lg {
@@ -228,6 +228,13 @@
 .emms__plans__card__inside a:hover {
     box-shadow: inset 0px 0px 0 1px #008060;
     transition-duration: .2s;
+}
+
+.emms__plans__card__inside a.inactive{
+    color: #B4B1A5;
+    background: #E7E5DC;
+    box-shadow: inset 0px 0px 0 2px #E7E5DC;
+    pointer-events: none;
 }
 
 .emms__plans__card--premium .emms__plans__card__inside a {
