@@ -621,30 +621,77 @@ require_once('././src/components/cacheSettings.php');
         </section>
 
 
-        <!-- Companies list -->
-        <section class="emms__companies ">
-            <div class="emms__container--lg">
-                <h2 class="emms__fade-in">Nos han acompañado en ediciones anteriores</h2>
-                <ul class="emms__companies__list emms__fade-in">
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-metricool.png" alt="Metricool"></li>
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-wayra.png" alt="Wayra"></li>
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-asociacion-marketing-espana.png" alt="Asociación de Marketing de España"></li>
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-camece.png" alt="Camece"></li>
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-capece.png" alt="Capece"></li>
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-amvo.png" alt="AMVO"></li>
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-linkedin.png" alt="LinkedIn"></li>
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-bigbox.png" alt="Bigbox"></li>
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-semrush.png" alt="Semrush"></li>
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-crehana.png" alt="Crehana"></li>
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-marketing-4ecommerce.png" alt="Marketing 4 Ecommerce"></li>
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-vtex.png" alt="VTEX"></li>
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-banco-frances.png" alt="BBVA Francés"></li>
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-airbnb.png" alt="Airbnb"></li>
-                    <li class="emms__companies__list__item"><img src="src/img/logos/logo-woocomerce.png" alt="Woocommerce"></li>
-                </ul>
-                <small class="emms__fade-in">¿Quieres ser Media Partner del EMMS? Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></small>
-            </div>
-        </section>
+        <?php if (!ENABLE_DIGITALTRENDS_SPONSORS) : ?>
+            <!-- Companies list -->
+            <section class="emms__companies ">
+                <div class="emms__container--lg">
+                    <h2 class="emms__fade-in">Nos han acompañado en ediciones anteriores</h2>
+                    <ul class="emms__companies__list emms__fade-in">
+                        <li class="emms__companies__list__item"><img src="src/img/logos/logo-metricool.png" alt="Metricool"></li>
+                        <li class="emms__companies__list__item"><img src="src/img/logos/logo-wayra.png" alt="Wayra"></li>
+                        <li class="emms__companies__list__item"><img src="src/img/logos/logo-asociacion-marketing-espana.png" alt="Asociación de Marketing de España"></li>
+                        <li class="emms__companies__list__item"><img src="src/img/logos/logo-camece.png" alt="Camece"></li>
+                        <li class="emms__companies__list__item"><img src="src/img/logos/logo-capece.png" alt="Capece"></li>
+                        <li class="emms__companies__list__item"><img src="src/img/logos/logo-amvo.png" alt="AMVO"></li>
+                        <li class="emms__companies__list__item"><img src="src/img/logos/logo-linkedin.png" alt="LinkedIn"></li>
+                        <li class="emms__companies__list__item"><img src="src/img/logos/logo-bigbox.png" alt="Bigbox"></li>
+                        <li class="emms__companies__list__item"><img src="src/img/logos/logo-semrush.png" alt="Semrush"></li>
+                        <li class="emms__companies__list__item"><img src="src/img/logos/logo-crehana.png" alt="Crehana"></li>
+                        <li class="emms__companies__list__item"><img src="src/img/logos/logo-marketing-4ecommerce.png" alt="Marketing 4 Ecommerce"></li>
+                        <li class="emms__companies__list__item"><img src="src/img/logos/logo-vtex.png" alt="VTEX"></li>
+                        <li class="emms__companies__list__item"><img src="src/img/logos/logo-banco-frances.png" alt="BBVA Francés"></li>
+                        <li class="emms__companies__list__item"><img src="src/img/logos/logo-airbnb.png" alt="Airbnb"></li>
+                        <li class="emms__companies__list__item"><img src="src/img/logos/logo-woocomerce.png" alt="Woocommerce"></li>
+                    </ul>
+                    <small class="emms__fade-in">¿Quieres ser Media Partner del EMMS? Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></small>
+                </div>
+            </section>
+        <?php else : ?>
+            <!-- Companies list -->
+            <section class="emms__companies emms__companies--categories" id="aliados">
+                <div class="emms__container--lg">
+                    <h2 class="emms__fade-in">Nos acompañan en esta edición:</h2>
+                    <h3>SPONSORS</h3>
+                    <ul class="emms__companies__list emms__companies__list--lg  emms__fade-in">
+                        <?php $sponsors = $db->getSponsorsByType('SPONSOR');
+                        foreach ($sponsors as $sponsor) : ?>
+                            <li class="emms__companies__list__item">
+                                <?php if ($sponsor['link_site']) : ?>
+                                    <a href="<?= $sponsor['link_site'] ?>" target="_blank">
+                                    <?php endif ?>
+                                    <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['logo_company'] ?>" alt="<?= $sponsor['alt_logo_company'] ?>">
+                                    <?php if ($sponsor['link_site']) : ?>
+                                    </a>
+                                <?php endif ?>
+                            </li>
+
+                        <?php endforeach; ?>
+                    </ul>
+                    <div class="emms__companies__divisor"></div>
+                    <h3>MEDIA PARTNERS EXCLUSIVE</h3>
+                    <ul class="emms__companies__list emms__companies__list  emms__fade-in">
+                        <?php $sponsors = $db->getSponsorsByType('PREMIUM');
+                        foreach ($sponsors as $sponsor) : ?>
+                            <li class="emms__companies__list__item">
+                                <?php if ($sponsor['link_site']) : ?>
+                                    <a href="<?= $sponsor['link_site'] ?>" target="_blank">
+                                    <?php endif ?>
+                                    <img src="./adm23/server/modules/sponsors/uploads/<?= $sponsor['logo_company'] ?>" alt="<?= $sponsor['alt_logo_company'] ?>">
+                                    <?php if ($sponsor['link_site']) : ?>
+                                    </a>
+                                <?php endif ?>
+                            </li>
+
+                        <?php endforeach; ?>
+                    </ul>
+                    <div class="emms__companies__divisor"></div>
+                    <h3>MEDIA PARTNERS STARTERS</h3>
+                    <ul class="emms__companies__list emms__companies__list  emms__fade-in" id="mediaPartenersStarters">
+                    </ul>
+                    <small class="emms__fade-in"><strong>¿Quieres ser aliado del EMMS?</strong> ¡Hablemos! Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></small>
+                </div>
+            </section>
+        <?php endif ?>
 
     </main>
 

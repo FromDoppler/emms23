@@ -23,6 +23,7 @@ if (!defined('VERSION')) define('VERSION', '1.0.0');
 if (!defined('PRODUCTION')) define('PRODUCTION', false);
 if (!defined('SECURITYHELPER_ENABLE')) define('SECURITYHELPER_ENABLE', false);
 if (!defined('SITE_URL')) define('SITE_URL', 'http://localhost/');
+if (!defined('ENABLE_DIGITALTRENDS_SPONSORS')) define('ENABLE_DIGITALTRENDS_SPONSORS', false);
 
 #TWITTER
 
