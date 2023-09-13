@@ -19,7 +19,11 @@
 
 <!-- Flickity -->
 <link rel="stylesheet" href="src/<?= VERSION ?>/flickity/flickity.min.css">
+
 <link rel="stylesheet" href="src/<?= VERSION ?>/css/styles.css">
+
+<!-- IntelInput -->
+<link rel="stylesheet" href="src/<?= VERSION ?>/css/components/intelInput.css">
 
 <!-- Font Proxima Nova -->
 <link rel="stylesheet" href="https://use.typekit.net/fbq8dbp.css" />

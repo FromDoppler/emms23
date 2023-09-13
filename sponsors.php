@@ -104,6 +104,29 @@ require_once('./utils/DB.php');
                                 <input type="email" name="email" id="email" placeholder="&iexcl;No olvides usar @!" class="email required" autocomplete="off">
                             </div>
                         </li>
+                        <li class="emms__form__field-item">
+                            <div class="holder">
+                                <label class="required-label" for="telefono">Teléfono</label>
+                                <input type="tel" name="phone" id="phone" class="phone phone-number" autocomplete="off">
+                            </div>
+                        </li>
+                        <li class="emms__form__field-item">
+                            <div class="holder">
+                                <label class="required-label" for="company">Empresa *</label>
+                                <input type="text" name="company" id="company" placeholder="Nombre de tu empresa o negocio" class="email required" autocomplete="off">
+                            </div>
+                        </li>
+                        <li class="emms__form__field-item">
+                            <div class="holder">
+                                <label class="required-label" for="position">Cargo *</label>
+                                <select class="required" name="position" id="position" autocomplete="off">
+                                    <option disabled selected value>Elige un cargo</option>
+                                    <option value="Contenido 1">Contenido 1</option>
+                                    <option value="Contenido 2">Contenido 2</option>
+                                    <option value="Contenido 3">Contenido 3</option>
+                                </select>
+                            </div>
+                        </li>
                     </ul>
                     <ul class="emms__form__field-group">
                         <li class="emms__form__field-item emms__form__field-item__checkbox">
@@ -152,6 +175,13 @@ require_once('./utils/DB.php');
 
     <script src="src/<?= VERSION ?>/js/collapsibles.js"></script>
     <script src="src/<?= VERSION ?>/js/sponsors.js" type="module"></script>
+    <script src="src/<?= VERSION ?>/js/vendors/intlTelInput.min.js"></script>
+    <script>
+        const input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            utilsScript: "src/<?= VERSION ?>/js/vendors/utils.js",
+        });
+    </script>
 
 </body>
 

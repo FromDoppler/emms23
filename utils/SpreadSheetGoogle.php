@@ -13,6 +13,8 @@ class SpreadSheetGoogle {
             $user['privacy'],
             $user['firstname']. " ",
             $user['email'],
+            $user['company']. " ",
+            $user['position']. " ",
             $user['source_utm'] . " ",
             $user['medium_utm'] . " ",
             $user['campaign_utm'] . " ",
