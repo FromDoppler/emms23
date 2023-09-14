@@ -19,6 +19,10 @@ body {
     overflow-x: hidden;
 }
 
+body.hidden{
+    overflow: hidden;
+}
+
 ul,
 h1,
 h2,

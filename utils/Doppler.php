@@ -66,8 +66,11 @@ class Doppler
         if (isset($data['origin']) && (trim($data['origin']) != '')) {
             array_push($customFields, array('name' => 'DOrigin', 'value' => $data['origin']));
         }
-        if (isset($data['type']) && (trim($data['type']) != '')) {
-            array_push($customFields, array('name' => 'Industria', 'value' => $data['type']));
+        if(isset($data['company']) && (trim($data['company']) != '')) {
+            array_push($customFields, array('name' => 'company', 'Value' => $data['company']));
+        }
+        if(isset($data['position']) && (trim($data['position']) != '')) {
+            array_push($customFields, array('name' => 'position', 'Value' => $data['position']));
         }
         return $customFields;
     }

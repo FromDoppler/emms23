@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             activeFormButton.forEach(btn => {
                 btn.addEventListener('click', () => {
                     modal.classList.toggle('open');
+                    document.querySelector('body').classList.toggle('hidden');
                 })
             });
 
