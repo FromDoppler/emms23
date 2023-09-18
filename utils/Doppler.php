@@ -24,36 +24,36 @@ class Doppler
     }
 
     private static function getCustomFields($data)
-{
-    $customFields = [];
+    {
+        $customFields = [];
 
-    // field data name => custom doppler name
-    $fieldMappings = [
-        'firstname' => 'FIRSTNAME',
-        'encode_email' => 'EmmsEncodeEmail',
-        'privacy' => 'AceptoPoliticaPrivacidad',
-        'promotions' => 'AceptoPromocionesDopplerAliados',
-        'ip' => 'IP',
-        'country_ip' => 'PaisIP',
-        'source_utm' => 'utmsource',
-        'medium_utm' => 'utmmedium',
-        'campaign_utm' => 'utmcampaign',
-        'content_utm' => 'utmcontent',
-        'term_utm' => 'utmterm',
-        'join_url' => 'academyGTW',
-        'origin' => 'DOrigin',
-        'company' => 'company',
-        'position' => 'position',
-        'phone' => 'tel',
-    ];
+        // field data name => custom doppler name
+        $fieldMappings = [
+            'firstname' => 'FIRSTNAME',
+            'encode_email' => 'EmmsEncodeEmail',
+            'privacy' => 'AceptoPoliticaPrivacidad',
+            'promotions' => 'AceptoPromocionesDopplerAliados',
+            'ip' => 'IP',
+            'country_ip' => 'PaisIP',
+            'source_utm' => 'utmsource',
+            'medium_utm' => 'utmmedium',
+            'campaign_utm' => 'utmcampaign',
+            'content_utm' => 'utmcontent',
+            'term_utm' => 'utmterm',
+            'join_url' => 'academyGTW',
+            'origin' => 'DOrigin',
+            'company' => 'company',
+            'position' => 'position',
+            'phone' => 'tel',
+        ];
 
-    foreach ($fieldMappings as $dataKey => $customFieldName) {
-        if (isset($data[$dataKey]) && trim($data[$dataKey]) !== '') {
-            $customFields[] = ['name' => $customFieldName, 'Value' => $data[$dataKey]];
+        foreach ($fieldMappings as $dataKey => $customFieldName) {
+            if (isset($data[$dataKey]) && trim($data[$dataKey]) !== '') {
+                $customFields[] = ['name' => $customFieldName, 'Value' => $data[$dataKey]];
+            }
         }
-    }
 
-    return $customFields;
+        return $customFields;
     }
 
     public static function subscriber($data)
