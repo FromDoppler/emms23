@@ -170,7 +170,7 @@ require_once('./utils/DB.php');
                             </div>
                             <div class="emms__previous-editions__list__item__description">
                                 <h3>EMMS 2016</h3>
-                                <p>Se sumaron novedosos formatos como charlas motivacionales, entrevistas a expertos,  debates en vivo y más. Esta vez fue la audiencia quien eligió de qué manera aprender.</p>
+                                <p>Se sumaron novedosos formatos como charlas motivacionales, entrevistas a expertos, debates en vivo y más. Esta vez fue la audiencia quien eligió de qué manera aprender.</p>
                                 <span>Revive esta edición</span>
                             </div>
                         </a>
@@ -353,7 +353,7 @@ require_once('./utils/DB.php');
             <div class="emms__container--md">
                 <div class="emms__centralvideo__title emms__fade-in">
                     <h2>Se acerca una nueva edición del EMMS…</h2>
-                    <p>¡Vuelve el <strong>EMMS Digital Trends</strong>! Se vienen nuevas Conferencias, Entrevistas, Casos de Éxito, Workshops prácticos, Networking  ¡y muchas nuevas sorpresas!</p>
+                    <p>¡Vuelve el <strong>EMMS Digital Trends</strong>! Se vienen nuevas Conferencias, Entrevistas, Casos de Éxito, Workshops prácticos, Networking ¡y muchas nuevas sorpresas!</p>
                 </div>
                 <div class="emms__centralvideo__video emms__fade-in">
                     <video src="src/img/EmmsDigitalTrends.mp4" controls></video>
@@ -379,12 +379,8 @@ require_once('./utils/DB.php');
     <script src="src/<?= VERSION ?>/js/collapsibles.js"></script>
     <script src="src/<?= VERSION ?>/js/previousEditions.js" type="module"></script>
     <script src="src/<?= VERSION ?>/js/vendors/intlTelInput.min.js"></script>
-    <script>
-        const input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            utilsScript: "src/<?= VERSION ?>/js/vendors/utils.js",
-        });
-    </script>
+    <?php include_once('././src/components/intellInput.php'); ?>
+
 
 
 </body>
