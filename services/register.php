@@ -37,8 +37,9 @@ function setDataRequest($ip, $countryGeo)
     $digital_trends = ($events[0] === 'digital-trends' || $events[1] === 'digital-trends') ? 1 : 0;
     $email = isset($_POST['email']) ? $_POST['email'] : null;
     $encode_email = isset($_POST['encodeEmail']) ? $_POST['encodeEmail'] : null;
-    $empresa     = isset($_POST['empresa']) ? $_POST['empresa'] : null;
-    $cargo     = isset($_POST['cargo']) ? $_POST['cargo'] : null;
+    $company     = isset($_POST['company']) ? $_POST['company'] : null;
+    $position     = isset($_POST['position']) ? $_POST['position'] : null;
+    $phone     = isset($_POST['phone']) ? $_POST['phone'] : null;
     $firstname = isset($_POST['name']) ? $_POST['name'] : null;
     if ($firstname === null) {
         $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -66,8 +67,9 @@ function setDataRequest($ip, $countryGeo)
         'register' => date("Y-m-d h:i:s A"),
         'firstname' => $firstname,
         'email' => $email,
-        'empresa' =>  $empresa,
-        'cargo' =>  $cargo,
+        'company' =>  $company,
+        'position' =>  $position,
+        'phone' =>  $phone,
         'ecommerce' => $ecommerce,
         'digital_trends' => $digital_trends,
         'encode_email' => $encode_email,
@@ -88,8 +90,8 @@ function setDataRequest($ip, $countryGeo)
     );
     try {
         Validator::validateEmail($email);
-        Validator::validateRequired('empresa', $empresa);
-        Validator::validateRequired('cargo', $cargo);
+        Validator::validateRequired('company', $company);
+        Validator::validateRequired('position', $position);
         Validator::validateBool('privacy', $privacy);
         Validator::validateBool('promotions', $promotions);
         return $user;

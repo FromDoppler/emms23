@@ -72,6 +72,9 @@ class Doppler
         if(isset($data['position']) && (trim($data['position']) != '')) {
             array_push($customFields, array('name' => 'position', 'Value' => $data['position']));
         }
+        if(isset($data['phone']) && (trim($data['phone']) != '')) {
+            array_push($customFields, array('name' => 'tel', 'Value' => $data['phone']));
+        }
         return $customFields;
     }
 
