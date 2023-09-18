@@ -118,8 +118,8 @@ require_once('./utils/DB.php');
                         </li>
                         <li class="emms__form__field-item">
                             <div class="holder">
-                                <label class="required-label" for="position">Cargo *</label>
-                                <select class="required" name="position" id="position" autocomplete="off">
+                                <label class="required-label" for="jobPosition">Cargo *</label>
+                                <select class="required" name="jobPosition" id="jobPosition" autocomplete="off">
                                     <option disabled selected value>Elige un cargo</option>
                                     <option value="Contenido 1">Contenido 1</option>
                                     <option value="Contenido 2">Contenido 2</option>
@@ -176,12 +176,8 @@ require_once('./utils/DB.php');
     <script src="src/<?= VERSION ?>/js/collapsibles.js"></script>
     <script src="src/<?= VERSION ?>/js/sponsors.js" type="module"></script>
     <script src="src/<?= VERSION ?>/js/vendors/intlTelInput.min.js"></script>
-    <script>
-        const input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            utilsScript: "src/<?= VERSION ?>/js/vendors/utils.js",
-        });
-    </script>
+    <?php include_once('././src/components/intellInput.php'); ?>
+
 
 </body>
 

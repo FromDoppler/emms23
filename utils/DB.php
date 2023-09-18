@@ -141,7 +141,7 @@ class DB
     public function insertSubscriptionDoppler($subscription)
     {
 
-        $fields = "(email, list, form_id, register, firstname, company, position, ecommerce, `digital-trends`,";
+        $fields = "(email, list, form_id, register, firstname, phone, company, jobPosition, ecommerce, `digital-trends`,";
         $fields .= "ip, country_ip, privacy, promotions, source_utm, medium_utm, campaign_utm, content_utm, term_utm)";
         date_default_timezone_set('America/Argentina/Buenos_Aires');
         $values = array(
@@ -150,8 +150,9 @@ class DB
             $subscription['form_id'],
             date("Y-m-d h:i:s A"),
             $subscription['firstname'],
+            $subscription['phone'],
             $subscription['company'],
-            $subscription['position'],
+            $subscription['jobPosition'],
             $subscription['ecommerce'],
             $subscription['digital_trends'],
             $subscription['ip'],
@@ -164,7 +165,7 @@ class DB
             $subscription['content_utm'],
             $subscription['term_utm']
         );
-        $this->query("INSERT INTO subscriptions_doppler $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
+        $this->query("INSERT INTO subscriptions_doppler $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
     }
 
     public function getSubscriptionsDoppler()
@@ -179,13 +180,13 @@ class DB
         $registered = $this->query("SELECT id FROM registered WHERE email='" . $subscription['email'] . "'");
         if ($registered->fetchArray()) {
             //update
-            $fields = "firstname ='" . $subscription['firstname'] . "', register ='" . $subscription['register'] . "', phase ='" . $subscription['form_id'] . "', company ='" . $subscription['company'] . "', position ='" . $subscription['position'] . "' ";
+            $fields = "firstname ='" . $subscription['firstname'] . "', register ='" . $subscription['register'] . "', phase ='" . $subscription['form_id'] . "', phone ='" . $subscription['phone'] . "', company ='" . $subscription['company'] . "', jobPosition ='" . $subscription['jobPosition'] . "' ";
             $fields .= "ecommerce ='" . $subscription['ecommerce'] . "', `digital-trends` ='" . $subscription['digital_trends'] . "', source_utm ='" . $subscription['source_utm'] . "', medium_utm ='" . $subscription['medium_utm'] . "', campaign_utm ='" . $subscription['campaign_utm'] . "', ";
             $fields .= "content_utm ='" . $subscription['content_utm'] . "', term_utm ='" . $subscription['term_utm'] . "' ";
             $update = $this->query("UPDATE registered SET $fields WHERE email='" . $subscription['email'] . "'");
         } else {
             //insert
-            $fields = "(`email`, `phase`, `register`, `firstname`, `company` , `position`, `ecommerce`, `digital-trends`, ";
+            $fields = "(`email`, `phase`, `register`, `firstname`, `phone`, `company`, `jobPosition`, `ecommerce`, `digital-trends`, ";
             $fields .= "`source_utm`, `medium_utm`, `campaign_utm`, `content_utm`, `term_utm`)";
 
             $values = array(
@@ -193,8 +194,9 @@ class DB
                 $subscription['form_id'],
                 $subscription['register'],
                 $subscription['firstname'],
+                $subscription['phone'],
                 $subscription['company'],
-                $subscription['position'],
+                $subscription['jobPosition'],
                 $subscription['ecommerce'],
                 $subscription['digital_trends'],
                 $subscription['source_utm'],
@@ -203,7 +205,7 @@ class DB
                 $subscription['content_utm'],
                 $subscription['term_utm']
             );
-            $this->query("INSERT INTO `registered` $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
+            $this->query("INSERT INTO `registered` $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
         }
     }
 

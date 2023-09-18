@@ -25,53 +25,34 @@ class Doppler
 
     private static function getCustomFields($data)
     {
-        $customFields = array();
+        $customFields = [];
 
-        if (isset($data['firstname']) && (trim($data['firstname']) != '')) {
-            array_push($customFields, array('name' => 'FIRSTNAME', 'Value' => $data['firstname']));
+        // field data name => custom doppler name
+        $fieldMappings = [
+            'firstname' => 'FIRSTNAME',
+            'encode_email' => 'EmmsEncodeEmail',
+            'privacy' => 'AceptoPoliticaPrivacidad',
+            'promotions' => 'AceptoPromocionesDopplerAliados',
+            'ip' => 'IP',
+            'country_ip' => 'PaisIP',
+            'source_utm' => 'utmsource',
+            'medium_utm' => 'utmmedium',
+            'campaign_utm' => 'utmcampaign',
+            'content_utm' => 'utmcontent',
+            'term_utm' => 'utmterm',
+            'join_url' => 'academyGTW',
+            'origin' => 'DOrigin',
+            'company' => 'Company',
+            'jobPosition' => 'position',
+            'phone' => 'tel',
+        ];
+
+        foreach ($fieldMappings as $dataKey => $customFieldName) {
+            if (isset($data[$dataKey]) && trim($data[$dataKey]) !== '') {
+                $customFields[] = ['name' => $customFieldName, 'Value' => $data[$dataKey]];
+            }
         }
-        if (isset($data['encode_email']) && (trim($data['encode_email']) != '')) {
-            array_push($customFields, array('name' => 'EmmsEncodeEmail', 'Value' => $data['encode_email']));
-        }
-        if (isset($data['privacy']) && (trim($data['privacy']) != '')) {
-            array_push($customFields, array('name' => 'AceptoPoliticaPrivacidad', 'Value' => boolval($data['privacy'])));
-        }
-        if (isset($data['promotions']) && (trim($data['promotions']) != '')) {
-            array_push($customFields, array('name' => 'AceptoPromocionesDopplerAliados', 'Value' => boolval($data['promotions'])));
-        }
-        if (isset($data['ip']) && (trim($data['ip']) != '')) {
-            array_push($customFields, array('name' => 'IP', 'Value' => $data['ip']));
-        }
-        if (isset($data['country_ip']) && (trim($data['country_ip']) != '')) {
-            array_push($customFields, array('name' => 'PaisIP', 'Value' => $data['country_ip']));
-        }
-        if (isset($data['source_utm']) && (trim($data['source_utm']) != '')) {
-            array_push($customFields, array('name' => 'utmsource', 'Value' => $data['source_utm']));
-        }
-        if (isset($data['medium_utm']) && (trim($data['medium_utm']) != '')) {
-            array_push($customFields, array('name' => 'utmmedium', 'Value' => $data['medium_utm']));
-        }
-        if (isset($data['campaign_utm']) && (trim($data['campaign_utm']) != '')) {
-            array_push($customFields, array('name' => 'utmcampaign', 'Value' => $data['campaign_utm']));
-        }
-        if (isset($data['content_utm']) && (trim($data['content_utm']) != '')) {
-            array_push($customFields, array('name' => 'utmcontent', 'Value' => $data['content_utm']));
-        }
-        if (isset($data['term_utm']) && (trim($data['term_utm']) != '')) {
-            array_push($customFields, array('name' => 'utmterm', 'Value' => $data['term_utm']));
-        }
-        if (isset($data['join_url']) && (trim($data['join_url']) != '')) {
-            array_push($customFields, array('name' => 'academyGTW', 'value' => $data['join_url']));
-        }
-        if (isset($data['origin']) && (trim($data['origin']) != '')) {
-            array_push($customFields, array('name' => 'DOrigin', 'value' => $data['origin']));
-        }
-        if(isset($data['company']) && (trim($data['company']) != '')) {
-            array_push($customFields, array('name' => 'company', 'Value' => $data['company']));
-        }
-        if(isset($data['position']) && (trim($data['position']) != '')) {
-            array_push($customFields, array('name' => 'position', 'Value' => $data['position']));
-        }
+
         return $customFields;
     }
 
