@@ -9,7 +9,6 @@ import {
 } from './index.js';
 
 const submitFormFetch = async (form, fetchType) => {
-
     const endPoint = './services/register.php';
     const formData = new FormData(form);
     const user = {
@@ -22,7 +21,7 @@ const submitFormFetch = async (form, fetchType) => {
         'name': formData.get('name'),
         'email': formData.get('email'),
         'company': formData.get('company'),
-        'position': formData.get('position'),
+        'jobPosition': formData.get('jobPosition'),
         'phone': (formData.get('phone').trim() != '') ? dialCode + formData.get('phone') : null,
         'encodeEmail': encodeEmail,
         'acceptPolicies': (formData.get('privacy') === 'true') ? true : null,

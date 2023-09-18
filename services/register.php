@@ -38,7 +38,7 @@ function setDataRequest($ip, $countryGeo)
     $email = isset($_POST['email']) ? $_POST['email'] : null;
     $encode_email = isset($_POST['encodeEmail']) ? $_POST['encodeEmail'] : null;
     $company     = isset($_POST['company']) ? $_POST['company'] : null;
-    $position     = isset($_POST['position']) ? $_POST['position'] : null;
+    $jobPosition     = isset($_POST['jobPosition']) ? $_POST['jobPosition'] : null;
     $phone     = isset($_POST['phone']) ? $_POST['phone'] : null;
     $firstname = isset($_POST['name']) ? $_POST['name'] : null;
     if ($firstname === null) {
@@ -68,7 +68,7 @@ function setDataRequest($ip, $countryGeo)
         'firstname' => $firstname,
         'email' => $email,
         'company' =>  $company,
-        'position' =>  $position,
+        'jobPosition' =>  $jobPosition,
         'phone' =>  $phone,
         'ecommerce' => $ecommerce,
         'digital_trends' => $digital_trends,
@@ -91,7 +91,7 @@ function setDataRequest($ip, $countryGeo)
     try {
         Validator::validateEmail($email);
         Validator::validateRequired('company', $company);
-        Validator::validateRequired('position', $position);
+        Validator::validateRequired('jobPosition', $jobPosition);
         Validator::validateBool('privacy', $privacy);
         Validator::validateBool('promotions', $promotions);
         return $user;

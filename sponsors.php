@@ -118,8 +118,8 @@ require_once('./utils/DB.php');
                         </li>
                         <li class="emms__form__field-item">
                             <div class="holder">
-                                <label class="required-label" for="position">Cargo *</label>
-                                <select class="required" name="position" id="position" autocomplete="off">
+                                <label class="required-label" for="jobPosition">Cargo *</label>
+                                <select class="required" name="jobPosition" id="jobPosition" autocomplete="off">
                                     <option disabled selected value>Elige un cargo</option>
                                     <option value="Contenido 1">Contenido 1</option>
                                     <option value="Contenido 2">Contenido 2</option>
