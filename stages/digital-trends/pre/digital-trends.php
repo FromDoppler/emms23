@@ -44,10 +44,10 @@ require_once('././src/components/cacheSettings.php');
                             <li><a href="#agenda">agenda</a></li>
                             <li><a href="#entradas">entradas</a></li>
                             <li><a href="#vip">secciones VIP</a></li>
-                            <li><a href="https://www.digital-trends.goemms.com/workshops?utm_source=manage.wix.com" target="_blank">contenido Premium</a></li>
                         </ul>
                     </li>
                     <li><a href="/sponsors">contenido exclusivo</a></li>
+                    <li><a href="https://www.digital-trends.goemms.com/">entradas</a></li>
                     <li><a href="/ediciones-anteriores">ediciones anteriores</a></li>
                 </ul>
             </nav>
@@ -84,14 +84,14 @@ require_once('././src/components/cacheSettings.php');
                 <video src="https://goemms.com/src/img/video-back-dt.mp4" muted autoplay loop></video>
             </div>
             <div class="emms__hero-registration__text emms__fade-in">
-                <h1><em>LOREM IPSUM DOLOR SIT AMET</em> Lorem ipsum dolor sit amet consectetuest la</h1>
+                <h1><em>EVENTO ONLINE Y GRATUITO - DEL 13 AL 16 DE NOV</em> ¡Vuelve el EMMS Digital Trends!</h1>
                 <ul class="emms__hero-registration__text__checklist checklist--center">
-                    <li>LOREM IPSUM</li>
-                    <li>LOREM IPSUM</li>
-                    <li>LOREM IPSUM</li>
+                    <li>Conferencias</li>
+                    <li>Networking</li>
+                    <li>Workshops</li>
                 </ul>
-                <p>Inspírate y capacítate con los mayores referentes internacionales en Marketing Digital. Conferencias, Casos de Éxito, Workshops, Networking ¡y mucho más!</p>
-                <a href="https://4844832.wixsite.com/emms" target="_blank" class="emms__cta">ADQUIRÍ TUS ENTRADAS</a>
+                <p>Reserva tu lugar en el mayor evento hispano de Marketing Digital. Regístrate ahora y desbloquea Contenidos Premium para empezar a inspirarte. </p>
+                <a href="#entradas" class="emms__cta">OBTÉN TU ENTRADA</a>
             </div>
             <div class="emms__hero-registration__bottom emms__fade-in">
                 <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
@@ -103,7 +103,7 @@ require_once('././src/components/cacheSettings.php');
         <section class="emms__grid emms__grid--3 emms__bg-w">
             <div class="emms__container--md">
                 <div class="emms__grid__title">
-                    <h2>Título (Propuestas de valor)</h2>
+                    <h2>Vive la experiencia completa en EMMS Digital Trends</h2>
                 </div>
                 <ul class="emms__grid__content">
                     <li class="emms__grid__item">
@@ -111,8 +111,8 @@ require_once('././src/components/cacheSettings.php');
                             <img src="src/img/editions/emms2018.png" alt="Image">
                         </div>
                         <div class="emms__grid__item__text">
-                            <h3>Titulo aqui</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur. Cras lectus in ligula sit. Dolor in vitae leo arcu etiam rhoncus feugiat nec. Ornare sit amet sed nec suspendisse ornare.</p>
+                            <h3>Conferencias</h3>
+                            <p>Encuentra a tus máximos referentes internacionales compartiendo ideas y experiencias en un mismo lugar. Además, descubre las últimas tendencias implementadas por las marcas más reconocidas de la industria.</p>
                         </div>
                     </li>
                     <li class="emms__grid__item">
@@ -120,8 +120,8 @@ require_once('././src/components/cacheSettings.php');
                             <img src="src/img/editions/emms2018.png" alt="Image">
                         </div>
                         <div class="emms__grid__item__text">
-                            <h3>Titulo aqui</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur. Cras lectus in ligula sit. Dolor in vitae leo arcu etiam rhoncus feugiat nec. Ornare sit amet sed nec suspendisse ornare.</p>
+                            <h3>Entrevistas</h3>
+                            <p>Asiste a conversaciones íntimas en las que directivos y experimentados profesionales que marcan tendencia con sus negocios brindan sus mejores consejos, experiencias y proyecciones del mercado. </p>
                         </div>
                     </li>
                     <li class="emms__grid__item">
@@ -129,8 +129,8 @@ require_once('././src/components/cacheSettings.php');
                             <img src="src/img/editions/emms2018.png" alt="Image">
                         </div>
                         <div class="emms__grid__item__text">
-                            <h3>Titulo aqui</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur. Cras lectus in ligula sit. Dolor in vitae leo arcu etiam rhoncus feugiat nec. Ornare sit amet sed nec suspendisse ornare.</p>
+                            <h3>Casos de Éxito</h3>
+                            <p>Escucha directamente de los representantes de compañías líderes cuáles fueron las estrategias que impulsaron el éxito de sus negocios y conoce sus mejores tácticas para vender más.</p>
                         </div>
                     </li>
                     <li class="emms__grid__item">
@@ -138,8 +138,8 @@ require_once('././src/components/cacheSettings.php');
                             <img src="src/img/editions/emms2018.png" alt="Image">
                         </div>
                         <div class="emms__grid__item__text">
-                            <h3>Titulo aqui</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur. Cras lectus in ligula sit. Dolor in vitae leo arcu etiam rhoncus feugiat nec. Ornare sit amet sed nec suspendisse ornare.</p>
+                            <h3>Networking</h3>
+                            <p>Únete a valiosas conversaciones con los exponentes del sector y expande las redes de tu negocio para impulsar su crecimiento.</p>
                         </div>
                     </li>
                     <li class="emms__grid__item">
@@ -147,8 +147,8 @@ require_once('././src/components/cacheSettings.php');
                             <img src="src/img/editions/emms2018.png" alt="Image">
                         </div>
                         <div class="emms__grid__item__text">
-                            <h3>Titulo aqui</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur. Cras lectus in ligula sit. Dolor in vitae leo arcu etiam rhoncus feugiat nec. Ornare sit amet sed nec suspendisse ornare.</p>
+                            <h3>Workshops</h3>
+                            <p>Capacítate con especialistas súper reconocidos en la industria en workshops de asistencia reducida, en los que podrás interactuar y poner en práctica tus conocimientos de la mano de experimentados profesionales del Marketing Digital.</p>
                         </div>
                     </li>
                     <li class="emms__grid__item">
@@ -156,13 +156,13 @@ require_once('././src/components/cacheSettings.php');
                             <img src="src/img/editions/emms2018.png" alt="Image">
                         </div>
                         <div class="emms__grid__item__text">
-                            <h3>Titulo aqui</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur. Cras lectus in ligula sit. Dolor in vitae leo arcu etiam rhoncus feugiat nec. Ornare sit amet sed nec suspendisse ornare.</p>
+                            <h3>Contenidos descargables</h3>
+                            <p>Encuentra E-books, infografías, guías, plantillas y muchos más contenidos descargables y gratuitos en la sección Contenidos Premium.</p>
                         </div>
                     </li>
                 </ul>
                 <div class="emms__grid__bottom">
-                    <a href="https://4844832.wixsite.com/emms" target="_blank" class="emms__cta">ADQUIRÍ TUS ENTRADAS</a>
+                    <a href="#entradas" class="emms__cta">RESERVA TU CUPO</a>
                 </div>
             </div>
         </section>
@@ -171,22 +171,23 @@ require_once('././src/components/cacheSettings.php');
         <!-- Event numbers -->
         <section class="emms__eventnumbers emms__eventnumbers--large" id="boxNumberLarge">
             <div class="emms__container--lg">
-                <h2 class="emms__fade-in">Eventos y asistentes a lo largo del tiempo</h2>
+                <h2 class="emms__fade-in">EMMS a lo largo del tiempo</h2>
                 <ul class="emms__fade-in">
                     <li>
-                        <p class="number" id="count1L">250</p>
-                        <span>Inscriptos</span>
+                        <p class="number" id="count1L">265</p>
+                        <span>REGISTRADOS</span>
                     </li>
-                    <li>
-                        <p class="number" id="count2L">15</p>
-                        <span>Ediciones</span>
-                    </li>
+
                     <li>
                         <p class="number" id="count3L">10</p>
                         <span>Países</span>
                     </li>
                     <li>
-                        <p class="number" id="count4L">180</p>
+                        <p class="number" id="count2L">16</p>
+                        <span>Ediciones</span>
+                    </li>
+                    <li>
+                        <p class="number" id="count4L">190</p>
                         <span>Speakers</span>
                     </li>
                 </ul>
@@ -197,8 +198,8 @@ require_once('././src/components/cacheSettings.php');
         <section class="emms__calendar" id="agenda">
             <div class="emms__container--lg">
                 <div class="emms__calendar__title emms__fade-in">
-                    <h2>Agenda</h2>
-                    <p>Estos son los <strong>ponentes</strong> que nos acompañarán en esta edición y las <strong>temáticas</strong> de sus charlas. </p>
+                    <h2>Speakers del EMMS Digital Trends 2023</h2>
+                    <p>Conoce a los conferencistas que te compartirán las técnicas implementadas por las principales compañías de la industria. Seguiremos confirmando speakers muy pronto.</p>
                 </div>
                 <!-- Speakers -->
                 <?php include('./src/components/speakers.php') ?>
@@ -216,17 +217,16 @@ require_once('././src/components/cacheSettings.php');
                 <div class="emms__plans__benefits--dk emms__fade-in">
                     <ul>
                         <h3>Beneficios</h3>
-                        <li>Acceso a todas las conferencias en vivo</li>
-                        <li>Acceso a casos de éxito en vivo</li>
-                        <li>Acceso a entrevistas en vivo</li>
-                        <li>Acceso a todas las conferencias grabadas</li>
-                        <li>Acceso a todos los contenidos premium</li>
-                        <li>Acceso a los sorteos</li>
+                        <li>Acceso a todas las conferencias</li>
+                        <li>Acceso a los casos de éxito</li>
+                        <li>Acceso a las entrevistas</li>
+                        <li>Volver a ver las conferencias todas las veces que quieras</li>
+                        <li>Participación en los sorteos</li>
                         <li>Descuentos en herramientas y cursos</li>
-                        <li>Certificado de participación</li>
-                        <li>Acceso a grupos de Slack con la comunidad EMMS</li>
-                        <li>Acceso ilimitado a todos los workshops prácticos</li>
-                        <li>Acceso a licencias en las herramientas de los WS</li>
+                        <li>Certificado de participación a las conferencias</li>
+                        <li>Acceso ilimitado a todos los Workshops prácticos</li>
+                        <li>Certificado de asistencia a Workshops</li>
+                        <li>Acceso a licencias y descuentos en herramientas para tu estrategia digital</li>
                         <li>Networking con participantes y speakers</li>
                     </ul>
                 </div>
@@ -237,55 +237,52 @@ require_once('././src/components/cacheSettings.php');
                             <div class="emms__plans__card__inside__top">
                                 <div class="emms__plans__card__inside__top--container">
                                     <h4>Gratis</h4>
-                                    <a class="dtCursorPointer activeFormButton eventHiddenElements"><span class="button__text">Botón</span></a>
-                                    <a class="dtCursorPointer activeButtonWithoutForm eventShowElements"><span class="button__text">Botón</span></a>
+                                    <a class="dtCursorPointer activeFormButton eventHiddenElements"><span class="button__text">Accede</span></a>
+                                    <a class="dtCursorPointer activeButtonWithoutForm eventShowElements"><span class="button__text">Accede</span></a>
                                 </div>
                             </div>
                             <div class="emms__plans__card__inside__list">
                                 <ul class="emms__collapse__list close">
                                     <h4>Beneficios</h4>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Acceso a todas las conferencias</p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Acceso a los casos de éxito</p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Acceso a las entrevistas</p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Volver a ver las conferencias todas las veces que quieras</p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Participación en los sorteos</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Descuentos en herramientas y cursos</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Certificado de participación a las conferencias</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
-                                    </li>
-                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Acceso ilimitado a todos los Workshops prácticos</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Certificado de asistencia a Workshops</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Acceso a licencias y descuentos en herramientas para tu estrategia digital</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Networking con participantes y speakers</p>
                                     </li>
                                     <button class="emms__collapse-btn"></button>
                                 </ul>
                             </div>
                             <div class="emms__plans__card__inside__bottom">
-                                <a class="dtCursorPointer activeFormButton eventHiddenElements"><span class="button__text">Botón</span></a>
-                                <a class="dtCursorPointer activeButtonWithoutForm eventShowElements"><span class="button__text">Botón</span></a>
+                                <a class="dtCursorPointer activeFormButton eventHiddenElements"><span class="button__text">Accede</span></a>
+                                <a class="dtCursorPointer activeButtonWithoutForm eventShowElements"><span class="button__text">Accede</span></a>
                             </div>
                         </div>
                     </div>
@@ -295,53 +292,50 @@ require_once('././src/components/cacheSettings.php');
                             <div class="emms__plans__card__inside__top">
                                 <div class="emms__plans__card__inside__top--container">
                                     <h4>U$S 10</h4>
-                                    <a href="https://4844832.wixsite.com/emms" target="_blank">Botón</a>
+                                    <a href="https://4844832.wixsite.com/emms" target="_blank">Accede</a>
                                 </div>
                             </div>
                             <div class="emms__plans__card__inside__list">
                                 <ul class="emms__collapse__list close">
                                     <h4>Beneficios</h4>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Acceso a todas las conferencias</p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Acceso a los casos de éxito</p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Acceso a las entrevistas</p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Volver a ver las conferencias todas las veces que quieras</p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Participación en los sorteos</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Descuentos en herramientas y cursos</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Certificado de participación a las conferencias</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Acceso ilimitado a todos los Workshops prácticos</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Certificado de asistencia a Workshops</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Acceso a licencias y descuentos en herramientas para tu estrategia digital</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
-                                    </li>
-                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias en vivo</p>
+                                        <p>Networking con participantes y speakers</p>
                                     </li>
                                     <button class="emms__collapse-btn"></button>
                                 </ul>
                             </div>
                             <div class="emms__plans__card__inside__bottom">
-                                <a href="https://4844832.wixsite.com/emms" target="_blank">Botón</a>
+                                <a href="https://4844832.wixsite.com/emms" target="_blank">Accede</a>
                             </div>
                         </div>
                     </div>
@@ -355,53 +349,50 @@ require_once('././src/components/cacheSettings.php');
                                     </div>
                                     <div class="emms__plans__card__inside__top--container">
                                         <h4><span>5 entradas</span>U$S 42,50</h4>
-                                        <a href="https://4844832.wixsite.com/emms" target="_blank">Botón</a>
+                                        <a href="https://4844832.wixsite.com/emms" target="_blank">Accede</a>
                                     </div>
                                 </div>
                                 <div class="emms__plans__card__inside__list">
                                     <ul class="emms__collapse__list close">
                                         <h4>Beneficios</h4>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Acceso a todas las conferencias</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Acceso a los casos de éxito</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Acceso a las entrevistas</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Volver a ver las conferencias todas las veces que quieras</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Participación en los sorteos</p>
                                         </li>
                                         <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Descuentos en herramientas y cursos</p>
                                         </li>
                                         <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Certificado de participación a las conferencias</p>
                                         </li>
                                         <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Acceso ilimitado a todos los Workshops prácticos</p>
                                         </li>
                                         <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Certificado de asistencia a Workshops</p>
                                         </li>
                                         <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Acceso a licencias y descuentos en herramientas para tu estrategia digital</p>
                                         </li>
                                         <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
-                                        </li>
-                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Networking con participantes y speakers</p>
                                         </li>
                                         <button class="emms__collapse-btn"></button>
                                     </ul>
                                 </div>
                                 <div class="emms__plans__card__inside__bottom">
-                                    <a href="https://4844832.wixsite.com/emms" target="_blank">Botón</a>
+                                    <a href="https://4844832.wixsite.com/emms" target="_blank">Accede</a>
                                 </div>
                             </div>
                             <div class="emms__plans__card__inside">
@@ -411,52 +402,49 @@ require_once('././src/components/cacheSettings.php');
                                     </div>
                                     <div class="emms__plans__card__inside__top--container">
                                         <h4><span>10 entradas</span>U$S 42,50</h4>
-                                        <a href="https://4844832.wixsite.com/emms" target="_blank">Botón</a>
+                                        <a href="https://4844832.wixsite.com/emms" target="_blank">Accede</a>
                                     </div>
                                 </div>
                                 <div class="emms__plans__card__inside__list">
                                     <ul>
                                         <h4>Beneficios</h4>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Acceso a todas las conferencias</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Acceso a los casos de éxito</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Acceso a las entrevistas</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Volver a ver las conferencias todas las veces que quieras</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Participación en los sorteos</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Descuentos en herramientas y cursos</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Certificado de participación a las conferencias</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Acceso ilimitado a todos los Workshops prácticos</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Certificado de asistencia a Workshops</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Acceso a licencias y descuentos en herramientas para tu estrategia digital</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
-                                        </li>
-                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias en vivo</p>
+                                            <p>Networking con participantes y speakers</p>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="emms__plans__card__inside__bottom">
-                                    <a href="https://4844832.wixsite.com/emms" target="_blank">Botón</a>
+                                    <a href="https://4844832.wixsite.com/emms" target="_blank">Accede</a>
                                 </div>
                             </div>
                         </div>
@@ -471,14 +459,8 @@ require_once('././src/components/cacheSettings.php');
             <div class="emms__register-modal__window">
                 <!-- Form -->
                 <form class="emms__form" id="popUpForm" novalidate autocomplete="off">
-                    <h4>Regístrate gratis para acceder a este contenido 🙂</h4>
+                    <h4><strong>Regístrate al EMMS DT 2023 ✍</strong><br>Reserva tu cupo en el máximo evento de Marketing Digital en Latam y España</h4>
                     <ul class="emms__form__field-group">
-                        <li class="emms__form__field-item">
-                            <div class="holder">
-                                <label class="required-label" for="name">Nombre *</label>
-                                <input type="text" name="name" id="name" placeholder="Tu nombre" class="required error-name nameLength" autocomplete="off">
-                            </div>
-                        </li>
                         <li class="emms__form__field-item">
                             <div class="holder">
                                 <label class="required-label" for="email">Email *</label>
@@ -487,8 +469,8 @@ require_once('././src/components/cacheSettings.php');
                         </li>
                         <li class="emms__form__field-item">
                             <div class="holder">
-                                <label class="required-label" for="telefono">Teléfono</label>
-                                <input type="tel" name="phone" id="phone" class="phone phone-number" autocomplete="off">
+                                <label class="required-label" for="name">Nombre *</label>
+                                <input type="text" name="name" id="name" placeholder="Tu nombre" class="required error-name nameLength" autocomplete="off">
                             </div>
                         </li>
                         <li class="emms__form__field-item">
@@ -502,10 +484,27 @@ require_once('././src/components/cacheSettings.php');
                                 <label class="required-label" for="jobPosition">Cargo *</label>
                                 <select class="required" name="jobPosition" id="jobPosition" autocomplete="off">
                                     <option disabled selected value>Elige un cargo</option>
-                                    <option value="Contenido 1">Contenido 1</option>
-                                    <option value="Contenido 2">Contenido 2</option>
-                                    <option value="Contenido 3">Contenido 3</option>
+                                    <option value="CEO / Director General">CEO / Director General</option>
+                                    <option value="CMO / Marketing Manager">CMO / Marketing Manager</option>
+                                    <option value="Gerente de Ventas">Gerente de Ventas</option>
+                                    <option value="E-commerce Manager">E-commerce Manager</option>
+                                    <option value="Project Manager / Líder de equipo">Project Manager / Líder de equipo</option>
+                                    <option value="Especialista y/o consultor en Marketing">Especialista y/o consultor en Marketing</option>
+                                    <option value="Digital">Digital</option>
+                                    <option value="Asistente de Marketing / Comunicación / Ventas">Asistente de Marketing / Comunicación / Ventas</option>
+                                    <option value="Ejecutivo/a de Cuentas">Ejecutivo/a de Cuentas</option>
+                                    <option value="Redactor/a de contenidos / Copywriter">Redactor/a de contenidos / Copywriter</option>
+                                    <option value="Diseñador/a Gráfico / Web">Diseñador/a Gráfico / Web</option>
+                                    <option value="Pasante / interno / trainee">Pasante / interno / trainee</option>
+                                    <option value="Estudiante">Estudiante</option>
+                                    <option value="Otros">Otros</option>
                                 </select>
+                            </div>
+                        </li>
+                        <li class="emms__form__field-item">
+                            <div class="holder">
+                                <label class="required-label" for="telefono">Teléfono</label>
+                                <input type="tel" name="phone" id="phone" class="phone phone-number" autocomplete="off">
                             </div>
                         </li>
                     </ul>
@@ -525,7 +524,7 @@ require_once('././src/components/cacheSettings.php');
                         </li>
                     </ul>
                     <div class="emms__form__btn">
-                        <button class="emms__cta" id="register-button" type="button"><span class="button__text">RESERVA TU LUGAR</span></button>
+                        <button class="emms__cta" id="register-button" type="button"><span class="button__text">REGÍSTRATE GRATIS</span></button>
                     </div>
                     <div class="emms__form__legal close">
                         <a class="emms__form__legal__btn" id="legalBtn">Información básica sobre privacidad </a>
@@ -550,8 +549,8 @@ require_once('././src/components/cacheSettings.php');
         <div class="emms__features emms__features--icon-top">
             <div class="emms__features__title emms__fade-in">
                 <img class="icon-vip" src="src/img/icons/icon-star-gradient.png" alt="Icon">
-                <h2>Módulo parte VIP</h2>
-                <p>Lorem ipsum dolor sit amet consectetur. Enim viverra enim lorem mauris.<br>Ut sit arcu sed fermentum sit in euismod sed mattis</p>
+                <h2>Exclusivo para asistentes VIP y Packs Empresas</h2>
+                <p>Adquiere tus entradas VIP y accede a todos los workshops, sesiones de networking y contenidos exclusivos para vivir a pleno tu evento de Marketing preferido.</p>
             </div>
             <div class="emms__features__divisor"></div>
             <div class="emms__features__item emms__fade-in emms__features__item--reverse">
@@ -560,9 +559,9 @@ require_once('././src/components/cacheSettings.php');
                         <img src="src/img/editions/emms2018.png" alt="Image">
                     </div>
                     <div class="emms__features__item__text">
-                        <h3>Lorem ipsum dolor sit</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur. Id at purus ut id. Nisi mauris faucibus nibh velit. Luctus cursus maecenas vitae mauris. Venenatis vitae aliquam lacus aliquam arcu. Facilisi.</p>
-                        <a href="https://4844832.wixsite.com/emms" target="_blank" class="emms__cta">COMPRA TUS ENTRADAS</a>
+                        <h3>Workshops</h3>
+                        <p>Salas reducidas de asistentes en las que podrás aprender con empresas referentes y profesionales que más admiras. Serán sesiones interactivas, donde podrás hacer preguntas y llevarte planes de acción resueltos.</p>
+                        <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
                     </div>
                 </div>
             </div>
@@ -573,9 +572,9 @@ require_once('././src/components/cacheSettings.php');
                         <img src="src/img/editions/emms2018.png" alt="Image">
                     </div>
                     <div class="emms__features__item__text">
-                        <h3>Lorem ipsum dolor sit</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur. Id at purus ut id. Nisi mauris faucibus nibh velit. Luctus cursus maecenas vitae mauris. Venenatis vitae aliquam lacus aliquam arcu. Facilisi.</p>
-                        <a href="https://4844832.wixsite.com/emms" target="_blank" class="emms__cta">COMPRA TUS ENTRADAS</a>
+                        <h3>Networking</h3>
+                        <p>Disfruta de espacios de intercambio en los que podrás reunirte con colegas, extender las redes de tu negocio y entablar conversaciones uno a uno con empresas líderes en la industria.</p>
+                        <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
                     </div>
                 </div>
             </div>
@@ -585,14 +584,14 @@ require_once('././src/components/cacheSettings.php');
         <section class="emms__centralvideo">
             <div class="emms__container--md">
                 <div class="emms__centralvideo__title emms__fade-in">
-                    <h2>Por qué EMMS Digital Trends 2023</h2>
-                    <p>Descubre en este vídeo por qué el EMMS Digital Trends 2023 es el lugar ideal para capacitarte e inspirarte con las últimas tendencias en Marketing Digital</p>
+                    <h2>Por qué EMMS Digital Trends</h2>
+                    <p>Descubre en este video por qué el EMMS Digital Trends 2023 es el lugar ideal para capacitarte e inspirarte con las últimas tendencias en Marketing Digital.</p>
                 </div>
                 <div class="emms__centralvideo__video emms__fade-in">
-                    <video src="src/img/EmmsDigitalTrends.mp4" controls></video>
+                    <video src="https://goemms.com/src/img/EmmsDigitalTrends.mp4" controls></video>
                 </div>
                 <div class="emms__centralvideo__cta emms__fade-in eventHiddenElements">
-                    <a class="emms__cta activeFormButton">REGÍSTRATE GRATIS</a>
+                    <a href="#entradas" class="emms__cta">REGÍSTRATE AHORA</a>
                     <small class="eventHiddenElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                     <small class="eventHiddenElements eventShowElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./registrado#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                 </div>
@@ -635,10 +634,10 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                 </ul>
                 <div class="emms__userscomments__cta eventHiddenElements">
-                    <a class="emms__cta emms__fade-in activeFormButton">REGÍSTRATE GRATIS</a>
+                    <a href="#entradas" class="emms__cta emms__fade-in">RESERVA TU ENTRADA</a>
                 </div>
                 <div class="emms__userscomments__cta digitalTrendsBtn eventHiddenElements eventShowElements">
-                    <a class="emms__cta emms__fade-in activeButtonWithoutForm"><span class="button__text">REGÍSTRATE GRATIS</span></a>
+                    <a href="#entradas" class="emms__cta emms__fade-in"><span class="button__text">RESERVA TU ENTRADA</span></a>
                 </div>
             </div>
         </section>
@@ -666,7 +665,7 @@ require_once('././src/components/cacheSettings.php');
                         <li class="emms__companies__list__item"><img src="src/img/logos/logo-airbnb.png" alt="Airbnb"></li>
                         <li class="emms__companies__list__item"><img src="src/img/logos/logo-woocomerce.png" alt="Woocommerce"></li>
                     </ul>
-                    <small class="emms__fade-in">¿Quieres ser Media Partner del EMMS? Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></small>
+                    <small class="emms__fade-in">¿Quieres ser Partner del EMMS? Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a></small>
                 </div>
             </section>
         <?php else : ?>
