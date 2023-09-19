@@ -297,9 +297,20 @@ require_once('./utils/DB.php');
                                 <label class="required-label" for="jobPosition">Cargo *</label>
                                 <select class="required" name="jobPosition" id="jobPosition" autocomplete="off">
                                     <option disabled selected value>Elige un cargo</option>
-                                    <option value="Contenido 1">Contenido 1</option>
-                                    <option value="Contenido 2">Contenido 2</option>
-                                    <option value="Contenido 3">Contenido 3</option>
+                                    <option value="CEO / Director General">CEO / Director General</option>
+                                    <option value="CMO / Marketing Manager">CMO / Marketing Manager</option>
+                                    <option value="Gerente de Ventas">Gerente de Ventas</option>
+                                    <option value="E-commerce Manager">E-commerce Manager</option>
+                                    <option value="Project Manager / Líder de equipo">Project Manager / Líder de equipo</option>
+                                    <option value="Especialista y/o consultor en Marketing">Especialista y/o consultor en Marketing</option>
+                                    <option value="Digital">Digital</option>
+                                    <option value="Asistente de Marketing / Comunicación / Ventas">Asistente de Marketing / Comunicación / Ventas</option>
+                                    <option value="Ejecutivo/a de Cuentas">Ejecutivo/a de Cuentas</option>
+                                    <option value="Redactor/a de contenidos / Copywriter">Redactor/a de contenidos / Copywriter</option>
+                                    <option value="Diseñador/a Gráfico / Web">Diseñador/a Gráfico / Web</option>
+                                    <option value="Pasante / interno / trainee">Pasante / interno / trainee</option>
+                                    <option value="Estudiante">Estudiante</option>
+                                    <option value="Otros">Otros</option>
                                 </select>
                             </div>
                         </li>

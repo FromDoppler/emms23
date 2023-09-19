@@ -561,7 +561,7 @@ require_once('././src/components/cacheSettings.php');
                     <div class="emms__features__item__text">
                         <h3>Workshops</h3>
                         <p>Salas reducidas de asistentes en las que podrás aprender con empresas referentes y profesionales que más admiras. Serán sesiones interactivas, donde podrás hacer preguntas y llevarte planes de acción resueltos.</p>
-                        <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
+                        <a href="https://www.digital-trends.goemms.com/" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
                     </div>
                 </div>
             </div>
@@ -574,7 +574,7 @@ require_once('././src/components/cacheSettings.php');
                     <div class="emms__features__item__text">
                         <h3>Networking</h3>
                         <p>Disfruta de espacios de intercambio en los que podrás reunirte con colegas, extender las redes de tu negocio y entablar conversaciones uno a uno con empresas líderes en la industria.</p>
-                        <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
+                        <a href="https://www.digital-trends.goemms.com/" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
                     </div>
                 </div>
             </div>
