@@ -133,7 +133,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="image" class="form-label">Image:</label>
                             </td>
                             <td>
-                                <input type="file" class="form-control" id="image" name="image" required placeholder="Image">
+                                <input type="file" class="form-control" id="image" name="image"  placeholder="Image">
                             </td>
                         </tr>
                         <tr>
@@ -141,7 +141,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="alt_image" class="form-label">Alt_image:</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" id="alt_image" name="alt_image" required placeholder="Alt_image">
+                                <input type="text" class="form-control" id="alt_image" name="alt_image"  placeholder="Alt_image">
                             </td>
                         </tr>
                         <tr>
@@ -149,7 +149,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="job" class="form-label">Job:</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" id="job" name="job" required placeholder="Job">
+                                <input type="text" class="form-control" id="job" name="job"  placeholder="Job">
                             </td>
                         </tr>
                         <tr>
@@ -189,7 +189,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="description" class="form-label">Description:</label>
                             </td>
                             <td>
-                                <textarea rows="5" id="description" name="description" required></textarea>
+                                <textarea rows="5" id="description" name="description" ></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -197,7 +197,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="bio" class="form-label">Bio:</label>
                             </td>
                             <td>
-                                <textarea rows="5" id="bio" name="bio" required></textarea>
+                                <textarea rows="5" id="bio" name="bio" ></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -205,7 +205,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="image_company" class="form-label">Image_company:</label>
                             </td>
                             <td>
-                                <input type="file" class="form-control" id="image_company" name="image_company" required placeholder="Image_company">
+                                <input type="file" class="form-control" id="image_company" name="image_company"  placeholder="Image_company">
                             </td>
                         </tr>
                         <tr>
@@ -213,7 +213,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="alt_image_company" class="form-label">Alt_image_company:</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" id="alt_image_company" name="alt_image_company" required placeholder="Alt_image_company">
+                                <input type="text" class="form-control" id="alt_image_company" name="alt_image_company"  placeholder="Alt_image_company">
                             </td>
                         </tr>
                         <tr>
@@ -259,7 +259,7 @@ if (isset($_POST['btn-save'])) {
                                 <label for="slug" class="form-label">Slug:</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" id="slug" name="slug" required placeholder="Slug">
+                                <input type="text" class="form-control" id="slug" name="slug"  placeholder="Slug">
                             </td>
                         </tr>
                         <tr>
