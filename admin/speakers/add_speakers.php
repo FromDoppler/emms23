@@ -93,12 +93,13 @@ if (isset($_POST['btn-save'])) {
                         <tr>
                             <td align="center"><a href="index.php?token=<?= $_GET['token'] ?>">back to main page</a></td>
                         </tr>
-                        <tr>
+                       <tr>
                             <td>
                                 <label for="event" class="form-label">Evento:</label>
                             </td>
                             <td>
-                                <select name="event" class="form-select">
+                                <select name="event" class="form-select" required>
+                                    <option value="" disabled selected>Seleccione un tipo de evento</option>
                                     <option value="ecommerce">Ecommerce</option>
                                     <option value="digital-trends">Digital Trends</option>
                                 </select>
@@ -109,10 +110,13 @@ if (isset($_POST['btn-save'])) {
                                 <label for="exposes" class="form-label">Tipo de Exposición:</label>
                             </td>
                             <td>
-                                <select name="exposes" class="form-select">
+                                <select name="exposes" class="form-select" required>
+                                    <option value="" disabled selected>Seleccione el tipo de speaker</option>
                                     <option value="conference">Conferencia</option>
                                     <option value="interview">Entrevista</option>
                                     <option value="successful-case">Caso de Exito</option>
+                                    <option value="workshop">Workshop</option>
+                                    <option value="networking">Networking</option>
                                 </select>
                             </td>
                         </tr>
