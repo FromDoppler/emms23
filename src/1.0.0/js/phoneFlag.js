@@ -1,6 +1,5 @@
 
 const setPhoneFlagByUserIp = (input) => {
-console.log('called');
     window.intlTelInput(input, {
         initialCountry: "auto",
         geoIpLookup: callback => {
