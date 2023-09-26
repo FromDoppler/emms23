@@ -3,16 +3,17 @@
 }
 
 .emms__calendar__vip__title{
-    text-align: center;
-    margin: 0 0 30px 0;
+    margin: 0 auto 25px auto;
+    max-width: 960px;
 }
 
 .emms__calendar__vip__title h4{
-    font-size: 30px;
+    font-size: 17px;
     line-height: 32px;
     font-weight: 700;
-    color: #212121;
-    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    color: #550871;
+    margin: 0;
 }
 
 .emms__calendar__vip__title p{
