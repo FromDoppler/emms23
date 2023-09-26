@@ -35,7 +35,7 @@ require_once('././config.php');
                         </ul>
                     </li>
                     <li><a href="/digital-trends">digital trends</a></li>
-                    <li><a href="/sponsors">contenido exclusivo</a></li>
+                    <li><a href="/sponsors">biblioteca de recursos</a></li>
                     <li><a href="/ediciones-anteriores">ediciones anteriores</a></li>
                 </ul>
             </nav>

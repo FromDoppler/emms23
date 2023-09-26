@@ -46,9 +46,10 @@ require_once('././src/components/cacheSettings.php');
                             <li><a href="#vip">secciones VIP</a></li>
                         </ul>
                     </li>
-                    <li><a href="/sponsors">contenido exclusivo</a></li>
-                    <li><a href="https://www.digital-trends.goemms.com/">entradas</a></li>
+                    <li><a href="/sponsors">biblioteca de recursos</a></li>
+                    <li><a href="#entradas">entradas</a></li>
                     <li><a href="/ediciones-anteriores">ediciones anteriores</a></li>
+                    <li><a href="https://www.digital-trends.goemms.com/">VIP</a></li>
                 </ul>
             </nav>
         </div>
@@ -204,6 +205,9 @@ require_once('././src/components/cacheSettings.php');
                 <!-- Speakers -->
                 <?php include('./src/components/speakers.php') ?>
                 <!-- End list -->
+                <div class="emms__calendar__bottom emms__fade-in">
+                    <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
+                </div>
             </div>
             <div id="entradas"></div>
         </section>
@@ -292,7 +296,7 @@ require_once('././src/components/cacheSettings.php');
                             <div class="emms__plans__card__inside__top">
                                 <div class="emms__plans__card__inside__top--container">
                                     <h4>U$S 10</h4>
-                                    <a href="https://4844832.wixsite.com/emms" target="_blank">Accede</a>
+                                    <a href="https://www.digital-trends.goemms.com/entradas/payment/eyJpbnRlZ3JhdGlvbkRhdGEiOnt9LCJwbGFuSWQiOiI5YTNjYmFiMi0yMjkyLTQ2NGEtYTYzZS1hZmRhNmRlNmVmNzEifQ">Accede</a>
                                 </div>
                             </div>
                             <div class="emms__plans__card__inside__list">
@@ -335,7 +339,7 @@ require_once('././src/components/cacheSettings.php');
                                 </ul>
                             </div>
                             <div class="emms__plans__card__inside__bottom">
-                                <a href="https://4844832.wixsite.com/emms" target="_blank">Accede</a>
+                                <a href="https://www.digital-trends.goemms.com/entradas/payment/eyJpbnRlZ3JhdGlvbkRhdGEiOnt9LCJwbGFuSWQiOiI5YTNjYmFiMi0yMjkyLTQ2NGEtYTYzZS1hZmRhNmRlNmVmNzEifQ">Accede</a>
                             </div>
                         </div>
                     </div>
@@ -349,7 +353,7 @@ require_once('././src/components/cacheSettings.php');
                                     </div>
                                     <div class="emms__plans__card__inside__top--container">
                                         <h4><span>5 entradas</span>U$S 42,50</h4>
-                                        <a href="https://4844832.wixsite.com/emms" target="_blank">Accede</a>
+                                        <a href="https://www.digital-trends.goemms.com/entradas/payment/eyJpbnRlZ3JhdGlvbkRhdGEiOnt9LCJwbGFuSWQiOiI1YjRkM2IxMS00NTI1LTQyYTktYTMwYi0xMGEzZGM4YmM2ZGQifQ">Accede</a>
                                     </div>
                                 </div>
                                 <div class="emms__plans__card__inside__list">
@@ -392,7 +396,7 @@ require_once('././src/components/cacheSettings.php');
                                     </ul>
                                 </div>
                                 <div class="emms__plans__card__inside__bottom">
-                                    <a href="https://4844832.wixsite.com/emms" target="_blank">Accede</a>
+                                    <a href="https://www.digital-trends.goemms.com/entradas/payment/eyJpbnRlZ3JhdGlvbkRhdGEiOnt9LCJwbGFuSWQiOiI1YjRkM2IxMS00NTI1LTQyYTktYTMwYi0xMGEzZGM4YmM2ZGQifQ">Accede</a>
                                 </div>
                             </div>
                             <div class="emms__plans__card__inside">
@@ -402,7 +406,7 @@ require_once('././src/components/cacheSettings.php');
                                     </div>
                                     <div class="emms__plans__card__inside__top--container">
                                         <h4><span>10 entradas</span>U$S 42,50</h4>
-                                        <a href="https://4844832.wixsite.com/emms" target="_blank">Accede</a>
+                                        <a href="https://www.digital-trends.goemms.com/entradas/payment/eyJpbnRlZ3JhdGlvbkRhdGEiOnt9LCJwbGFuSWQiOiI3ZjU2M2U0Ni1lNjA2LTRmYzktYTQ2OC01Yzk3OTFmMzFjMGIifQ">Accede</a>
                                     </div>
                                 </div>
                                 <div class="emms__plans__card__inside__list">
@@ -444,7 +448,7 @@ require_once('././src/components/cacheSettings.php');
                                     </ul>
                                 </div>
                                 <div class="emms__plans__card__inside__bottom">
-                                    <a href="https://4844832.wixsite.com/emms" target="_blank">Accede</a>
+                                    <a href="https://www.digital-trends.goemms.com/entradas/payment/eyJpbnRlZ3JhdGlvbkRhdGEiOnt9LCJwbGFuSWQiOiI3ZjU2M2U0Ni1lNjA2LTRmYzktYTQ2OC01Yzk3OTFmMzFjMGIifQ">Accede</a>
                                 </div>
                             </div>
                         </div>
@@ -561,7 +565,7 @@ require_once('././src/components/cacheSettings.php');
                     <div class="emms__features__item__text">
                         <h3>Workshops</h3>
                         <p>Salas reducidas de asistentes en las que podrás aprender con empresas referentes y profesionales que más admiras. Serán sesiones interactivas, donde podrás hacer preguntas y llevarte planes de acción resueltos.</p>
-                        <a href="https://www.digital-trends.goemms.com/" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
+                        <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
                     </div>
                 </div>
             </div>
@@ -574,7 +578,7 @@ require_once('././src/components/cacheSettings.php');
                     <div class="emms__features__item__text">
                         <h3>Networking</h3>
                         <p>Disfruta de espacios de intercambio en los que podrás reunirte con colegas, extender las redes de tu negocio y entablar conversaciones uno a uno con empresas líderes en la industria.</p>
-                        <a href="https://www.digital-trends.goemms.com/" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
+                        <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
                     </div>
                 </div>
             </div>
