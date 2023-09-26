@@ -200,7 +200,7 @@ require_once('././src/components/cacheSettings.php');
             <div class="emms__container--lg">
                 <div class="emms__calendar__title emms__fade-in">
                     <h2>Speakers del EMMS Digital Trends 2023</h2>
-                    <p>Conoce a los conferencistas que te compartirán las técnicas implementadas por las principales compañías de la industria. Seguiremos confirmando speakers muy pronto.</p>
+                    <p>¡Seguiremos confirmando speakers muy pronto!</p>
                 </div>
                 <!-- Speakers -->
                 <?php include('./src/components/speakers.php') ?>
@@ -222,8 +222,6 @@ require_once('././src/components/cacheSettings.php');
                     <ul>
                         <h3>Beneficios</h3>
                         <li>Acceso a todas las conferencias</li>
-                        <li>Acceso a los casos de éxito</li>
-                        <li>Acceso a las entrevistas</li>
                         <li>Volver a ver las conferencias todas las veces que quieras</li>
                         <li>Participación en los sorteos</li>
                         <li>Descuentos en herramientas y cursos</li>
@@ -252,12 +250,6 @@ require_once('././src/components/cacheSettings.php');
                                         <p>Acceso a todas las conferencias</p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a los casos de éxito</p>
-                                    </li>
-                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a las entrevistas</p>
-                                    </li>
-                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Volver a ver las conferencias todas las veces que quieras</p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
@@ -269,7 +261,7 @@ require_once('././src/components/cacheSettings.php');
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Certificado de participación a las conferencias</p>
                                     </li>
-                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
                                         <p>Acceso ilimitado a todos los Workshops prácticos</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
@@ -304,12 +296,6 @@ require_once('././src/components/cacheSettings.php');
                                     <h4>Beneficios</h4>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Acceso a todas las conferencias</p>
-                                    </li>
-                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a los casos de éxito</p>
-                                    </li>
-                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a las entrevistas</p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Volver a ver las conferencias todas las veces que quieras</p>
@@ -363,12 +349,6 @@ require_once('././src/components/cacheSettings.php');
                                             <p>Acceso a todas las conferencias</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a los casos de éxito</p>
-                                        </li>
-                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a las entrevistas</p>
-                                        </li>
-                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Volver a ver las conferencias todas las veces que quieras</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
@@ -414,12 +394,6 @@ require_once('././src/components/cacheSettings.php');
                                         <h4>Beneficios</h4>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Acceso a todas las conferencias</p>
-                                        </li>
-                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a los casos de éxito</p>
-                                        </li>
-                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a las entrevistas</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Volver a ver las conferencias todas las veces que quieras</p>
@@ -493,12 +467,11 @@ require_once('././src/components/cacheSettings.php');
                                     <option value="Gerente de Ventas">Gerente de Ventas</option>
                                     <option value="E-commerce Manager">E-commerce Manager</option>
                                     <option value="Project Manager / Líder de equipo">Project Manager / Líder de equipo</option>
-                                    <option value="Especialista y/o consultor en Marketing">Especialista y/o consultor en Marketing</option>
-                                    <option value="Digital">Digital</option>
+                                    <option value="Especialista / Consultor en Marketing">Especialista / Consultor en Marketing Digital</option>
                                     <option value="Asistente de Marketing / Comunicación / Ventas">Asistente de Marketing / Comunicación / Ventas</option>
                                     <option value="Ejecutivo/a de Cuentas">Ejecutivo/a de Cuentas</option>
                                     <option value="Redactor/a de contenidos / Copywriter">Redactor/a de contenidos / Copywriter</option>
-                                    <option value="Diseñador/a Gráfico / Web">Diseñador/a Gráfico / Web</option>
+                                    <option value="Diseñador/a">Diseñador/a</option>
                                     <option value="Pasante / interno / trainee">Pasante / interno / trainee</option>
                                     <option value="Estudiante">Estudiante</option>
                                     <option value="Otros">Otros</option>
@@ -550,7 +523,7 @@ require_once('././src/components/cacheSettings.php');
         </div>
 
         <!-- Features -->
-        <div class="emms__features emms__features--icon-top">
+<!--         <div class="emms__features emms__features--icon-top">
             <div class="emms__features__title emms__fade-in">
                 <img class="icon-vip" src="src/img/icons/icon-star-gradient.png" alt="Icon">
                 <h2>Exclusivo para asistentes VIP y Packs Empresas</h2>
@@ -582,7 +555,7 @@ require_once('././src/components/cacheSettings.php');
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Central Video -->
         <section class="emms__centralvideo">

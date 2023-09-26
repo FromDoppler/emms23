@@ -140,10 +140,7 @@
 <!-- VIP -->
 <div class="emms__calendar__vip">
     <div class="emms__calendar__vip__title emms__fade-in">
-        <h4>¡Conoce la Agenda para Asistentes VIP!</h4>
-        <p>Accede a salas exclusivas con tus entradas VIP para hacer Networking y sumarte a Workshops donde aprenderás de forma interactiva cómo aplicar las estrategias y herramientas más novedosas junto a los especialistas y referentes más destacados.</p>
-        <br>
-        <p><strong>Acceso ilimitado a los Workshops con tu entrada VIP. Elige los que te interesen y míralos todas las veces que quieras, ¡estarán siempre disponibles!</strong></p>
+        <h4>Contenidos VIP, ¡solo con tu entrada! </h4>
     </div>
     <div class="emms__calendar__vip__card emms__calendar__vip__card--large emms__fade-in">
         <div class="emms__calendar__vip__card__title">
@@ -407,10 +404,7 @@
 <!-- VIP -->
 <div class="emms__calendar__vip">
     <div class="emms__calendar__vip__title emms__fade-in">
-        <h4>¡Conoce la Agenda para Asistentes VIP!</h4>
-        <p>Accede a salas exclusivas con tus entradas VIP para hacer Networking y sumarte a Workshops donde aprenderás de forma interactiva cómo aplicar las estrategias y herramientas más novedosas junto a los especialistas y referentes más destacados.</p>
-        <br>
-        <p><strong>Acceso ilimitado a los Workshops con tu entrada VIP. Elige los que te interesen y míralos todas las veces que quieras, ¡estarán siempre disponibles!</strong></p>
+        <h4>Contenidos VIP, ¡solo con tu entrada!</h4>
     </div>
     <div class="emms__calendar__vip__card emms__calendar__vip__card--large emms__fade-in">
         <div class="emms__calendar__vip__card__title">
@@ -673,10 +667,7 @@
 <!-- VIP -->
 <div class="emms__calendar__vip">
     <div class="emms__calendar__vip__title emms__fade-in">
-        <h4>¡Conoce la Agenda para Asistentes VIP!</h4>
-        <p>Accede a salas exclusivas con tus entradas VIP para hacer Networking y sumarte a Workshops donde aprenderás de forma interactiva cómo aplicar las estrategias y herramientas más novedosas junto a los especialistas y referentes más destacados.</p>
-        <br>
-        <p><strong>Acceso ilimitado a los Workshops con tu entrada VIP. Elige los que te interesen y míralos todas las veces que quieras, ¡estarán siempre disponibles!</strong></p>
+        <h4>Contenidos VIP, ¡solo con tu entrada! </h4>
     </div>
     <div class="emms__calendar__vip__card emms__calendar__vip__card--large emms__fade-in">
         <div class="emms__calendar__vip__card__title">
@@ -939,10 +930,7 @@
 <!-- VIP -->
 <div class="emms__calendar__vip">
     <div class="emms__calendar__vip__title emms__fade-in">
-        <h4>¡Conoce la Agenda para Asistentes VIP!</h4>
-        <p>Accede a salas exclusivas con tus entradas VIP para hacer Networking y sumarte a Workshops donde aprenderás de forma interactiva cómo aplicar las estrategias y herramientas más novedosas junto a los especialistas y referentes más destacados.</p>
-        <br>
-        <p><strong>Acceso ilimitado a los Workshops con tu entrada VIP. Elige los que te interesen y míralos todas las veces que quieras, ¡estarán siempre disponibles!</strong></p>
+        <h4>Contenidos VIP, ¡solo con tu entrada!</h4>
     </div>
     <div class="emms__calendar__vip__card emms__calendar__vip__card--large emms__fade-in">
         <div class="emms__calendar__vip__card__title">

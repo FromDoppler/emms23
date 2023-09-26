@@ -126,12 +126,11 @@ require_once('./utils/DB.php');
                                     <option value="Gerente de Ventas">Gerente de Ventas</option>
                                     <option value="E-commerce Manager">E-commerce Manager</option>
                                     <option value="Project Manager / Líder de equipo">Project Manager / Líder de equipo</option>
-                                    <option value="Especialista y/o consultor en Marketing">Especialista y/o consultor en Marketing</option>
-                                    <option value="Digital">Digital</option>
+                                    <option value="Especialista / Consultor en Marketing">Especialista / Consultor en Marketing Digital</option>
                                     <option value="Asistente de Marketing / Comunicación / Ventas">Asistente de Marketing / Comunicación / Ventas</option>
                                     <option value="Ejecutivo/a de Cuentas">Ejecutivo/a de Cuentas</option>
                                     <option value="Redactor/a de contenidos / Copywriter">Redactor/a de contenidos / Copywriter</option>
-                                    <option value="Diseñador/a Gráfico / Web">Diseñador/a Gráfico / Web</option>
+                                    <option value="Diseñador/a">Diseñador/a</option>
                                     <option value="Pasante / interno / trainee">Pasante / interno / trainee</option>
                                     <option value="Estudiante">Estudiante</option>
                                     <option value="Otros">Otros</option>
