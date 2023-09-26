@@ -257,9 +257,6 @@
             </div>
         </div>
     </div>
-    <div class="emms__calendar__bottom emms__fade-in">
-        <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
-    </div>
 </div>
 
 
@@ -527,9 +524,6 @@
             </div>
         </div>
     </div>
-    <div class="emms__calendar__bottom emms__fade-in">
-        <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
-    </div>
 </div>
 
 
@@ -796,9 +790,6 @@
             </div>
         </div>
     </div>
-    <div class="emms__calendar__bottom emms__fade-in">
-        <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
-    </div>
 </div>
 
 
@@ -1064,8 +1055,5 @@
                 <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+E-commerce%3A+d%C3%ADa+1&iso=20230516T12&p1=51&ah=1" target="_blank">Mira el horario de tu país</a>
             </div>
         </div>
-    </div>
-    <div class="emms__calendar__bottom emms__fade-in">
-        <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
     </div>
 </div>

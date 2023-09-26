@@ -51,7 +51,7 @@ require_once('./utils/DB.php');
                     <li><a href="/">home</a></li>
                     <li><a href="./ecommerce">e-commerce</a></li>
                     <li><a href="./digital-trends">digital trends</a></li>
-                    <li><a href="/sponsors">contenido exclusivo</a></li>
+                    <li><a href="/sponsors">biblioteca de recursos</a></li>
                     <li><a href="#" class="active">ediciones anteriores</a></li>
                 </ul>
             </nav>
