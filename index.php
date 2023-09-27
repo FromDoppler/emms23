@@ -62,7 +62,6 @@ require_once('././src/components/cacheSettings.php');
                     <li><a href="./digital-trends">digital trends</a></li>
                     <li><a href="/sponsors">biblioteca de recursos</a></li>
                     <li><a href="/ediciones-anteriores">ediciones anteriores</a></li>
-                    <li><a href="./digital-trends#entradas" target="_blank">entradas</a></li>
                 </ul>
             </nav>
         </div>
