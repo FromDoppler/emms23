@@ -43,11 +43,9 @@ require_once('././src/components/cacheSettings.php');
                         <ul class="emms__header__nav__submenu">
                             <li><a href="#agenda">agenda</a></li>
                             <li><a href="#entradas">entradas</a></li>
-                            <li><a href="#vip">secciones VIP</a></li>
                         </ul>
                     </li>
                     <li><a href="/sponsors">biblioteca de recursos</a></li>
-                    <li><a href="#entradas">entradas</a></li>
                     <li><a href="/ediciones-anteriores">ediciones anteriores</a></li>
                     <li><a href="https://www.digital-trends.goemms.com/">VIP</a></li>
                 </ul>
