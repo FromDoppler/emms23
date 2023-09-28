@@ -140,7 +140,7 @@
 <!-- VIP -->
 <div class="emms__calendar__vip">
     <div class="emms__calendar__vip__title emms__fade-in">
-        <h4>Contenidos VIP, ¡solo con tu entrada! </h4>
+        <h4>Contenidos exclusivos para Asistentes VIP </h4>
     </div>
     <div class="emms__calendar__vip__card emms__calendar__vip__card--large emms__fade-in">
         <div class="emms__calendar__vip__card__title">
@@ -151,7 +151,7 @@
         </div>
         <div class="emms__calendar__date__country">
             <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 12:00 a.m</span>
-            <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+E-commerce%3A+d%C3%ADa+1&iso=20230516T12&p1=51&ah=1" target="_blank">Mira el horario de tu país</a>
+            <a href="https://www.addevent.com/event/Sg18803059" target="_blank">Mira el horario de tu país</a>
         </div>
     </div>
     <div class="emms__calendar__vip__list emms__calendar__vip__list--dk emms__fade-in">
@@ -404,7 +404,7 @@
 <!-- VIP -->
 <div class="emms__calendar__vip">
     <div class="emms__calendar__vip__title emms__fade-in">
-        <h4>Contenidos VIP, ¡solo con tu entrada!</h4>
+        <h4>Contenidos exclusivos para Asistentes VIP</h4>
     </div>
     <div class="emms__calendar__vip__card emms__calendar__vip__card--large emms__fade-in">
         <div class="emms__calendar__vip__card__title">
@@ -415,7 +415,7 @@
         </div>
         <div class="emms__calendar__date__country">
             <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 12:00 a.m</span>
-            <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+E-commerce%3A+d%C3%ADa+1&iso=20230516T12&p1=51&ah=1" target="_blank">Mira el horario de tu país</a>
+            <a href="https://www.addevent.com/event/pK18803098" target="_blank">Mira el horario de tu país</a>
         </div>
     </div>
     <div class="emms__calendar__vip__list emms__calendar__vip__list--dk emms__fade-in">
@@ -667,7 +667,7 @@
 <!-- VIP -->
 <div class="emms__calendar__vip">
     <div class="emms__calendar__vip__title emms__fade-in">
-        <h4>Contenidos VIP, ¡solo con tu entrada! </h4>
+        <h4>Contenidos exclusivos para Asistentes VIP </h4>
     </div>
     <div class="emms__calendar__vip__card emms__calendar__vip__card--large emms__fade-in">
         <div class="emms__calendar__vip__card__title">
@@ -678,7 +678,7 @@
         </div>
         <div class="emms__calendar__date__country">
             <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 12:00 a.m</span>
-            <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+E-commerce%3A+d%C3%ADa+1&iso=20230516T12&p1=51&ah=1" target="_blank">Mira el horario de tu país</a>
+            <a href="https://www.addevent.com/event/qQ18803133" target="_blank">Mira el horario de tu país</a>
         </div>
     </div>
     <div class="emms__calendar__vip__list emms__calendar__vip__list--dk emms__fade-in">
@@ -930,7 +930,7 @@
 <!-- VIP -->
 <div class="emms__calendar__vip">
     <div class="emms__calendar__vip__title emms__fade-in">
-        <h4>Contenidos VIP, ¡solo con tu entrada!</h4>
+        <h4>Contenidos exclusivos para Asistentes VIP</h4>
     </div>
     <div class="emms__calendar__vip__card emms__calendar__vip__card--large emms__fade-in">
         <div class="emms__calendar__vip__card__title">
@@ -941,7 +941,7 @@
         </div>
         <div class="emms__calendar__date__country">
             <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 12:00 a.m</span>
-            <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+E-commerce%3A+d%C3%ADa+1&iso=20230516T12&p1=51&ah=1" target="_blank">Mira el horario de tu país</a>
+            <a href="https://www.addevent.com/event/oX18803134" target="_blank">Mira el horario de tu país</a>
         </div>
     </div>
     <div class="emms__calendar__vip__list emms__calendar__vip__list--dk emms__fade-in">
