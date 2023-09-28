@@ -1,7 +1,6 @@
    <script>
        const input = document.querySelector("#phone");
        const iti = window.intlTelInput(input, {
-           hiddenInput: "full_phone",
            separateDialCode: true,
            utilsScript: "src/<?= VERSION ?>/js/vendors/utils.js",
            initialCountry: "auto",
