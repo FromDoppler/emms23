@@ -98,7 +98,7 @@ require_once('././src/components/cacheSettings.php');
         <section class="emms__calendar" id="agenda">
             <div class="emms__container--lg">
                 <div class="emms__calendar__title emms__fade-in">
-                    <h2>Speakers del EMMS Digital Trends 2023</h2>
+                    <h2>Agenda EMMS Digital Trends 2023</h2>
                     <p>¡Seguiremos confirmando speakers muy pronto!</p>
                 </div>
                 <!-- Speakers -->
@@ -426,8 +426,8 @@ require_once('././src/components/cacheSettings.php');
                             <img src="src/img/editions/emms2018.png" alt="Image">
                         </div>
                         <div class="emms__grid__item__text">
-                            <h3>Contenidos descargables</h3>
-                            <p>Encuentra E-books, infografías, guías, plantillas y muchos más contenidos descargables y gratuitos en la sección Contenidos Premium.</p>
+                            <h3>Biblioteca de Recursos</h3>
+                            <p>Encuentra E-books, infografías, guías, plantillas y muchos más contenidos descargables y gratuitos en la sección Biblioteca de Recursos.</p>
                         </div>
                     </li>
                 </ul>
