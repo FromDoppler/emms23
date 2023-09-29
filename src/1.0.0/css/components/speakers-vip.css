@@ -249,6 +249,48 @@ div.emms__calendar__vip__card__title{
 }
 
 
+/* ---------------------------------------- Speakers List -------------------------------------------------- */
+
+
+.emms__calendar__vip .emms__calendar__list .emms__calendar__list__item{
+    position: relative;
+}
+.emms__calendar__vip .emms__calendar__list .emms__calendar__list__item::after{
+    content: "";
+    position: absolute;
+    left: 116px;
+    top: 18px;
+    width: 40px;
+    height: 40px;
+    background: url("../../../img/icons/icon-star-gradient.png") no-repeat;
+    background-size: contain;
+}
+
+.emms__calendar__vip .emms__calendar__list .emms__calendar__list__item__card__label{
+    background: #550871;
+}
+
+.emms__calendar__vip .emms__calendar__list .emms__calendar__list__item__card__label p{
+    background: #550871;
+    color: #fff;
+}
+
+.emms__calendar__vip .emms__calendar__list .emms__calendar__list__item__card__speaker__text{
+    padding-top: 50px;
+}
+
+@media(max-width:992px){
+    .emms__calendar__vip .emms__calendar__list .emms__calendar__list__item::after{
+        left: 110px;
+        top: 16px;
+        width: 35px;
+        height: 35px;
+    }
+    .emms__calendar__vip .emms__calendar__list .emms__calendar__list__item__card__speaker__text{
+        padding-top: 40px;
+    }
+}
+
 
 
 /* ---------------------------------------- Bottom -------------------------------------------------- */
