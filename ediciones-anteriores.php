@@ -271,8 +271,8 @@ require_once('./utils/DB.php');
             <div class="emms__register-modal__window">
                 <!-- Form -->
                 <form class="emms__form" id="editionsForm" novalidate autocomplete="off">
-                    <h3>Accede a las ediciones anteriores</h3>
-                    <h4>Regístrate aquí para revivirlas 🙂</h4>
+                    <h3>Revive las ediciones anteriores 🙂</h3>
+                    <h4>Regístrate aquí de forma gratuita para volver a ver las charlas de todas tus ediciones preferidas del EMMS, desbloquear la Biblioteca de Recursos y ¡ser parte de la próxima edición!</h4>
                     <ul class="emms__form__field-group">
                         <li class="emms__form__field-item">
                             <div class="holder">
