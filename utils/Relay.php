@@ -14,8 +14,17 @@ class Relay
     {
 
         $phase = processPhaseToShow($user['type'])["phaseToShow"];
-
-        if ($user['type'] === 'ecommerce') {
+        if (isset($user['tiketType'])) {
+            if ($user['tiketType'] === "Plan Empresa Full") {
+                $html = self::getWixEmpresaTemplate($user['encode_email'], $user['tiketType']);
+            } else if ($user['tiketType'] === "Plan Empresa Basic") {
+                $html = self::getWixEmpresaTemplate($user['encode_email'], $user['tiketType']);
+            } else if ($user['tiketType'] === "Plan VIP") {
+                $html = self::getWixVipTemplate($user['encode_email'], $user['tiketType']);
+            } else if ($user['tiketType'] === "Plan Invitado") {
+                $html = self::getWixInvitadoTemplate($user['encode_email'], $user['tiketType']);
+            }
+        } else if ($user['type'] === 'ecommerce') {
             switch ($phase) {
                 case 'pre':
                     $html = self::getEcommerceEmailTemplate($user['encode_email']);
@@ -42,7 +51,6 @@ class Relay
                     break;
             }
         }
-
         return $html;
     }
 
@@ -64,7 +72,6 @@ class Relay
 
     public static function sendEmailRegister($user, $subject)
     {
-
         $html =  self::templateEmail($user);
         $data = array(
             'from_name' => self::fromName,
@@ -3735,5 +3742,33 @@ class Relay
         ';
 
         return $html;
+    }
+
+//TEMPLATES DE WIX
+    public static function getWixEmpresaTemplate($encodeEmail, $planTitle) {
+        return "plan: $planTitle <br>
+        Mientras esperas la llegada del evento, descubre en la página web las Conferencias que te esperan en el
+        <a href='https://goemms.com/ecommerce-registrado?utm_source=emmsecom&utm_medium=goemms&utm_campaign=et-email-confirmacionregistro-emmsecom-23&dplrid=" . $encodeEmail . "' target='_blank' style='text-decoration: none; color: #008046;font-weight: bold;' class='link-hover '>EMMS E-commerce 2023</a>.
+        <br>
+
+        ";
+    }
+
+    public static function getWixVipTemplate($encodeEmail, $planTitle) {
+        return "plan: $planTitle <br>
+        Mientras esperas la llegada del evento, descubre en la página web las Conferencias que te esperan en el
+        <a href='https://goemms.com/ecommerce-registrado?utm_source=emmsecom&utm_medium=goemms&utm_campaign=et-email-confirmacionregistro-emmsecom-23&dplrid=" . $encodeEmail . "' target='_blank' style='text-decoration: none; color: #008046;font-weight: bold;' class='link-hover '>EMMS E-commerce 2023</a>.
+        <br>
+
+        ";
+    }
+
+    public static function getWixInvitadoTemplate($encodeEmail, $planTitle) {
+        return "plan: $planTitle <br>
+        Mientras esperas la llegada del evento, descubre en la página web las Conferencias que te esperan en el
+        <a href='https://goemms.com/ecommerce-registrado?utm_source=emmsecom&utm_medium=goemms&utm_campaign=et-email-confirmacionregistro-emmsecom-23&dplrid=" . $encodeEmail . "' target='_blank' style='text-decoration: none; color: #008046;font-weight: bold;' class='link-hover '>EMMS E-commerce 2023</a>.
+        <br>
+
+        ";
     }
 }
