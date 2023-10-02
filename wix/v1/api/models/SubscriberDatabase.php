@@ -4,11 +4,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/DB.php');
 class SubscriberDatabase
 {
     private $db;
-    private $user; // Almacenar el valor de $user como una propiedad
+    private $user;
 
     public function __construct($user)
     {
-        $this->user = $user; // Almacenar el valor de $user en la propiedad $user
+        $this->user = $user;
         try {
             // Initialize the database connection
             $this->db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -26,7 +26,7 @@ class SubscriberDatabase
             $this->db->saveRegistered($this->user);
             $this->db->close();
         } catch (Exception $e) {
-            $errorMessage = json_encode(["saveSubscriptionDopplerTable (Guarda en la BD subscriptions_doppler and registered)", $e->getMessage(), ['user' => $this->user]]);
+            $errorMessage = json_encode(["saveSubscriptionDopplerTable ", $e->getMessage()]);
             http_response_code(500); // Error interno del servidor
             throw new Exception($errorMessage);
         }
