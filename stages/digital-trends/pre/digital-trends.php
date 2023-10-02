@@ -47,7 +47,6 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                     <li><a href="/sponsors">biblioteca de recursos</a></li>
                     <li><a href="/ediciones-anteriores">ediciones anteriores</a></li>
-                    <li><a href="https://www.digital-trends.goemms.com/">VIP</a></li>
                 </ul>
             </nav>
         </div>
@@ -107,7 +106,7 @@ require_once('././src/components/cacheSettings.php');
                 <ul class="emms__grid__content">
                     <li class="emms__grid__item">
                         <div class="emms__grid__item__image">
-                            <img src="src/img/editions/emms2018.png" alt="Image">
+                            <img src="src/img/conferencias.png" alt="Image">
                         </div>
                         <div class="emms__grid__item__text">
                             <h3>Conferencias</h3>
@@ -116,7 +115,7 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                     <li class="emms__grid__item">
                         <div class="emms__grid__item__image">
-                            <img src="src/img/editions/emms2018.png" alt="Image">
+                            <img src="src/img/entrevistas.png" alt="Image">
                         </div>
                         <div class="emms__grid__item__text">
                             <h3>Entrevistas</h3>
@@ -125,7 +124,7 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                     <li class="emms__grid__item">
                         <div class="emms__grid__item__image">
-                            <img src="src/img/editions/emms2018.png" alt="Image">
+                            <img src="src/img/exito.png" alt="Image">
                         </div>
                         <div class="emms__grid__item__text">
                             <h3>Casos de Éxito</h3>
@@ -134,7 +133,7 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                     <li class="emms__grid__item">
                         <div class="emms__grid__item__image">
-                            <img src="src/img/editions/emms2018.png" alt="Image">
+                            <img src="src/img/networking.png" alt="Image">
                         </div>
                         <div class="emms__grid__item__text">
                             <h3>Networking</h3>
@@ -143,7 +142,7 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                     <li class="emms__grid__item">
                         <div class="emms__grid__item__image">
-                            <img src="src/img/editions/emms2018.png" alt="Image">
+                            <img src="src/img/workshop.png" alt="Image">
                         </div>
                         <div class="emms__grid__item__text">
                             <h3>Workshops</h3>
@@ -152,7 +151,7 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                     <li class="emms__grid__item">
                         <div class="emms__grid__item__image">
-                            <img src="src/img/editions/emms2018.png" alt="Image">
+                            <img src="src/img/recursos.png" alt="Image">
                         </div>
                         <div class="emms__grid__item__text">
                             <h3>Biblioteca de Recursos</h3>
@@ -333,7 +332,7 @@ require_once('././src/components/cacheSettings.php');
                             <div class="emms__plans__card__inside">
                                 <div class="emms__plans__card__inside__top">
                                     <div class="emms__plans__card__inside__top__off">
-                                        <p>5% OFF</p>
+                                        <p>15% OFF</p>
                                     </div>
                                     <div class="emms__plans__card__inside__top--container">
                                         <h4><span>5 entradas</span>U$S 42,50</h4>
@@ -380,10 +379,10 @@ require_once('././src/components/cacheSettings.php');
                             <div class="emms__plans__card__inside">
                                 <div class="emms__plans__card__inside__top">
                                     <div class="emms__plans__card__inside__top__off">
-                                        <p>15% OFF</p>
+                                        <p>20% OFF</p>
                                     </div>
                                     <div class="emms__plans__card__inside__top--container">
-                                        <h4><span>10 entradas</span>U$S 42,50</h4>
+                                        <h4><span>10 entradas</span>U$S 80</h4>
                                         <a href="https://www.digital-trends.goemms.com/entradas/payment/eyJpbnRlZ3JhdGlvbkRhdGEiOnt9LCJwbGFuSWQiOiI3ZjU2M2U0Ni1lNjA2LTRmYzktYTQ2OC01Yzk3OTFmMzFjMGIifQ">Accede</a>
                                     </div>
                                 </div>
