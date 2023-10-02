@@ -16,7 +16,7 @@ const submitFormFetch = async (form, fetchType) => {
         'userEvents': []
     }
     const encodeEmail = toHex(formData.get('email'));
-    const { dialCode } = iti.s;
+    const dialCode = document.querySelector('.iti__selected-dial-code').innerHTML;
     const userData = {
         'name': formData.get('name'),
         'email': formData.get('email'),
