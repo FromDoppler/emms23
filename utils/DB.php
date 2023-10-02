@@ -180,7 +180,7 @@ class DB
         $registered = $this->query("SELECT id FROM registered WHERE email='" . $subscription['email'] . "'");
         if ($registered->fetchArray()) {
             //update
-            $fields = "firstname ='" . $subscription['firstname'] . "', register ='" . $subscription['register'] . "', phase ='" . $subscription['form_id'] . "', phone ='" . $subscription['phone'] . "', company ='" . $subscription['company'] . "', jobPosition ='" . $subscription['jobPosition'] . "' ";
+            $fields = "firstname ='" . $subscription['firstname'] . "', register ='" . $subscription['register'] . "', phase ='" . $subscription['form_id'] . "', phone ='" . $subscription['phone'] . "', company ='" . $subscription['company'] . "', jobPosition ='" . $subscription['jobPosition'] . "', ";
             $fields .= "ecommerce ='" . $subscription['ecommerce'] . "', `digital-trends` ='" . $subscription['digital_trends'] . "', source_utm ='" . $subscription['source_utm'] . "', medium_utm ='" . $subscription['medium_utm'] . "', campaign_utm ='" . $subscription['campaign_utm'] . "', ";
             $fields .= "content_utm ='" . $subscription['content_utm'] . "', term_utm ='" . $subscription['term_utm'] . "' ";
             $update = $this->query("UPDATE registered SET $fields WHERE email='" . $subscription['email'] . "'");
