@@ -123,7 +123,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="event" class="form-label">Evento:</label>
                             </td>
                             <td>
-                                <select name="event" class="form-select">
+                                <select name="event" class="form-select" required>
                                     <option <?= ($fetched_row['event'] === 'ecommerce') ? 'selected' : '' ?> value="ecommerce">Ecommerce</option>
                                     <option <?= ($fetched_row['event'] === 'digital-trends') ? 'selected' : '' ?> value="digital-trends">Digital Trends</option>
                                 </select>
@@ -134,10 +134,12 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="exposes" class="form-label">Tipo de Exposición:</label>
                             </td>
                             <td>
-                                <select name="exposes" class="form-select">
+                                <select name="exposes" class="form-select" required>
                                     <option <?= ($fetched_row['exposes'] === 'conference') ? 'selected' : '' ?> value="conference">Conferencia</option>
                                     <option <?= ($fetched_row['exposes'] === 'interview') ? 'selected' : '' ?> value="interview">Entrevista</option>
                                     <option <?= ($fetched_row['exposes'] === 'successful-case') ? 'selected' : '' ?> value="successful-case">Caso de Exito</option>
+                                    <option <?= ($fetched_row['exposes'] === 'workshop') ? 'selected' : '' ?> value="workshop">Workshop</option>
+                                    <option <?= ($fetched_row['exposes'] === 'networking') ? 'selected' : '' ?> value="networking">Networking</option>
                                 </select>
                             </td>
                         </tr>
@@ -163,7 +165,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="alt_image" class="form-label">Alt_image:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?= $fetched_row['alt_image'] ?>" class="form-control" id="alt_image" name="alt_image" required>
+                                <input type="text" value="<?= $fetched_row['alt_image'] ?>" class="form-control" id="alt_image" name="alt_image" >
                             </td>
                         </tr>
                         <tr>
@@ -171,7 +173,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="job" class="form-label">Job:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?= $fetched_row['job'] ?>" class="form-control" id="job" name="job" required>
+                                <input type="text" value="<?= $fetched_row['job'] ?>" class="form-control" id="job" name="job" >
                             </td>
                         </tr>
                         <tr>
@@ -211,7 +213,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="description" class="form-label">Description:</label>
                             </td>
                             <td>
-                                <textarea rows="5" class="form-control" id="description" name="description" required><?= $fetched_row['description'] ?></textarea>
+                                <textarea rows="5" class="form-control" id="description" name="description" ><?= $fetched_row['description'] ?></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -219,7 +221,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="bio" class="form-label">Bio:</label>
                             </td>
                             <td>
-                                <textarea rows="5" class="form-control" id="bio" name="bio" required><?= $fetched_row['bio'] ?></textarea>
+                                <textarea rows="5" class="form-control" id="bio" name="bio" ><?= $fetched_row['bio'] ?></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -236,7 +238,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="alt_image_company" class="form-label">Alt_image_company:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?= $fetched_row['alt_image_company'] ?>" class="form-control" id="alt_image_company" name="alt_image_company" required>
+                                <input type="text" value="<?= $fetched_row['alt_image_company'] ?>" class="form-control" id="alt_image_company" name="alt_image_company">
                             </td>
                         </tr>
                         <tr>
@@ -282,7 +284,7 @@ if (isset($_POST['btn-cancel'])) {
                                 <label for="slug" class="form-label">Slug:</label>
                             </td>
                             <td>
-                                <input type="text" value="<?= $fetched_row['slug'] ?>" class="form-control" id="slug" name="slug" required>
+                                <input type="text" value="<?= $fetched_row['slug'] ?>" class="form-control" id="slug" name="slug">
                             </td>
                         </tr>
                         <tr>
