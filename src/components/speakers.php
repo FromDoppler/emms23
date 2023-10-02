@@ -154,7 +154,7 @@
             <p>¿Qué mejor que conectar con colegas y debatir sobre las últimas tendencias en la industria? ¡Disfruta de este espacio para ampliar tu red y hacer crecer tu negocio!</p>
         </div>
         <div class="emms__calendar__date__country">
-            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 12:00 a.m</span>
+            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 15:00 hs</span>
             <a href="https://www.addevent.com/event/Sg18803059" target="_blank">Mira el horario de tu país</a>
         </div>
     </div>
@@ -442,7 +442,7 @@
             <p>¿Qué mejor que conectar con colegas y debatir sobre las últimas tendencias en la industria? ¡Disfruta de este espacio para ampliar tu red y hacer crecer tu negocio!</p>
         </div>
         <div class="emms__calendar__date__country">
-            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 12:00 a.m</span>
+            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 15:00 hs</span>
             <a href="https://www.addevent.com/event/pK18803098" target="_blank">Mira el horario de tu país</a>
         </div>
     </div>
@@ -729,7 +729,7 @@
             <p>¿Qué mejor que conectar con colegas y debatir sobre las últimas tendencias en la industria? ¡Disfruta de este espacio para ampliar tu red y hacer crecer tu negocio!</p>
         </div>
         <div class="emms__calendar__date__country">
-            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 12:00 a.m</span>
+            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 15:00 hs</span>
             <a href="https://www.addevent.com/event/qQ18803133" target="_blank">Mira el horario de tu país</a>
         </div>
     </div>
@@ -1016,7 +1016,7 @@
             <p>¿Qué mejor que conectar con colegas y debatir sobre las últimas tendencias en la industria? ¡Disfruta de este espacio para ampliar tu red y hacer crecer tu negocio!</p>
         </div>
         <div class="emms__calendar__date__country">
-            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 12:00 a.m</span>
+            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 15:00 hs</span>
             <a href="https://www.addevent.com/event/oX18803134" target="_blank">Mira el horario de tu país</a>
         </div>
     </div>
