@@ -110,7 +110,7 @@ require_once('././src/components/cacheSettings.php');
                         </div>
                         <div class="emms__grid__item__text">
                             <h3>Conferencias</h3>
-                            <p>Encuentra a tus máximos referentes internacionales compartiendo ideas y experiencias en un mismo lugar. Además, descubre las últimas tendencias implementadas por las marcas más reconocidas de la industria.</p>
+                            <p>Encuentra a tus máximos referentes internacionales compartiendo ideas y experiencias en un mismo lugar para descubrir las últimas tendencias en Marketing Digital.</p>
                         </div>
                     </li>
                     <li class="emms__grid__item">
@@ -119,7 +119,7 @@ require_once('././src/components/cacheSettings.php');
                         </div>
                         <div class="emms__grid__item__text">
                             <h3>Entrevistas</h3>
-                            <p>Asiste a conversaciones íntimas en las que directivos y experimentados profesionales que marcan tendencia con sus negocios brindan sus mejores consejos, experiencias y proyecciones del mercado. </p>
+                            <p>Asiste a conversaciones con directivos y profesionales que marcan tendencia con sus negocios para escuchar sus mejores consejos, experiencias y proyecciones del mercado.</p>
                         </div>
                     </li>
                     <li class="emms__grid__item">
@@ -137,7 +137,7 @@ require_once('././src/components/cacheSettings.php');
                         </div>
                         <div class="emms__grid__item__text">
                             <h3>Networking</h3>
-                            <p>Únete a valiosas conversaciones con los exponentes del sector y expande las redes de tu negocio para impulsar su crecimiento.</p>
+                            <p>Únete a valiosas conversaciones con los exponentes del sector, conoce nuevos colegas y expande las redes de tu negocio para impulsar su crecimiento.</p>
                         </div>
                     </li>
                     <li class="emms__grid__item">
@@ -146,7 +146,7 @@ require_once('././src/components/cacheSettings.php');
                         </div>
                         <div class="emms__grid__item__text">
                             <h3>Workshops</h3>
-                            <p>Capacítate con especialistas súper reconocidos en la industria en workshops de asistencia reducida, en los que podrás interactuar y poner en práctica tus conocimientos de la mano de experimentados profesionales del Marketing Digital.</p>
+                            <p>Capacítate en talleres prácticos de asistencia reducida con especialistas destacados en la industria. Interactúa y pon en práctica tus conocimientos.</p>
                         </div>
                     </li>
                     <li class="emms__grid__item">
@@ -155,7 +155,7 @@ require_once('././src/components/cacheSettings.php');
                         </div>
                         <div class="emms__grid__item__text">
                             <h3>Biblioteca de Recursos</h3>
-                            <p>Encuentra E-books, infografías, guías, plantillas y muchos más contenidos descargables y gratuitos en la sección Biblioteca de Recursos.</p>
+                            <p>Encuentra E-books, infografías, cápsulas audiovisuales, guías, plantillas y muchos más contenidos descargables y gratuitos en la sección Biblioteca de Recursos.</p>
                         </div>
                     </li>
                 </ul>
