@@ -2,8 +2,11 @@
 import { toHex, getEncodeURLEmail } from "./common/index.js";
 
 const encodeUser = getEncodeURLEmail();
-let localStorageEvents = localStorage.getItem('events');
 
+const _setLocalStorageEvents = (userEvents) => {
+    localStorage.setItem('events', JSON.stringify(userEvents));
+    localStorage.setItem('lastEventsUpdateTime', new Date());
+}
 
 
 const checkEncodeUrl = () => {
@@ -11,25 +14,24 @@ const checkEncodeUrl = () => {
         //Check if it is an old user that was saved before the new JSON logic
         if (encodeUser.includes('{')) {
             const userData = JSON.parse(encodeUser);
-            const userEvents = JSON.parse(userData.userEvents);
-            // Check localStorage
+            const userEvents = userData.userEvents;
+            const localStorageEvents = JSON.parse(localStorage.getItem('events'));
             if (localStorageEvents) {
-                localStorageEvents = JSON.parse(localStorageEvents);
                 if (userEvents.length > localStorageEvents.length) {
-                    localStorage.setItem('events', JSON.stringify(userEvents));
-                    localStorage.setItem('lastEventsUpdateTime', new Date());
+                    _setLocalStorageEvents(userEvents);
+                } else if (userEvents.length === localStorageEvents.length && JSON.stringify(userEvents) != JSON.stringify(localStorageEvents)) {
+                    const mergedEvents = userEvents.concat(localStorageEvents)
+                    _setLocalStorageEvents(mergedEvents);
                 }
             } else {
-                localStorage.setItem('dplrid', toHex(user.email));
-                localStorage.setItem('events', JSON.stringify(events));
-                localStorage.setItem('lastEventsUpdateTime', new Date());
+                localStorage.setItem('dplrid', toHex(userData.userEmail));
+                _setLocalStorageEvents(userEvents);
             }
         } else {
             //If it is false, we know that its only event to save was ecommerce
             const oldEcommerce = ['ecommerce'];
             localStorage.setItem('dplrid', toHex(encodeUser));
-            localStorage.setItem('events', JSON.stringify(oldEcommerce));
-            localStorage.setItem('lastEventsUpdateTime', new Date());
+            _setLocalStorageEvents(oldEcommerce);
         }
     }
 }
