@@ -3751,7 +3751,7 @@ class Relay
         $paymentMethod = $user['paidplan_paymentmethod'];
         $date = $user['paidplan_startdate'];
         $amount = $user['paidplan_price'];
-        $html = `
+        $html = '
             <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="es">
 
@@ -4754,7 +4754,7 @@ max-width: 365px;
 </body>
 
 </html>
-        `;
+        ';
         return $html;
     }
 
@@ -4764,7 +4764,7 @@ max-width: 365px;
         $paymentMethod = $user['paidplan_paymentmethod'];
         $date = $user['paidplan_startdate'];
         $amount = $user['paidplan_price'];
-        $html = `
+        $html = '
             <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="es">
 
@@ -5234,7 +5234,7 @@ max-width: 365px;
                                   max-width: 520px;
                                   text-align: left;
                                 ">
-                                                            &nbsp; &nbsp;Categoría: ". $type  . "
+                                                            &nbsp; &nbsp;Categoría: '. $type  . '
                                                         </p>
                                                     </td>
                                                 </tr>
@@ -5256,7 +5256,7 @@ max-width: 365px;
                                   max-width: 520px;
                                   text-align: left;
                                 ">
-                                                            &nbsp; &nbsp;Medio de pago:  ". $paymentMethod   . "
+                                                            &nbsp; &nbsp;Medio de pago:  '. $paymentMethod   . '
                                                         </p>
                                                     </td>
                                                 </tr>
@@ -5278,7 +5278,7 @@ max-width: 365px;
                                   max-width: 520px;
                                   text-align: left;
                                 ">
-                                                            &nbsp; &nbsp;Fecha de compra:  ". $date   . "
+                                                            &nbsp; &nbsp;Fecha de compra:  '.$date.'
                                                         </p>
                                                     </td>
                                                 </tr>
@@ -5300,7 +5300,7 @@ max-width: 365px;
                                   max-width: 520px;
                                   text-align: left;
                                 ">
-                                                            &nbsp; &nbsp;Monto:  ". $amount   . "
+                                                            &nbsp; &nbsp;Monto:  '.$amount.'
                                                         </p>
                                                     </td>
                                                 </tr>
@@ -5601,13 +5601,13 @@ max-width: 365px;
 
 </html>
 
-        `;
+        ';
         return $html;
     }
 
     public static function getWixInvitadoTemplate($encodeEmail, $planTitle)
     {
-        $html = `
+        $html = '
             <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
             <html lang="es">
 
@@ -6216,8 +6216,7 @@ max-width: 365px;
                                                 ">
                                                                             Además, descubre la agenda y todo lo que aprenderás durante
                                                                             estos cuatro días de capacitación en el<a
-                                                                                href="http://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-emmsdt-confirmacion-entrada-invitado-empresa-23#agenda&dplrid=" . $encodeEmail . "
-                                                                                target="_blank" style="
+                                                                                href="http://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-emmsdt-confirmacion-entrada-invitado-empresa-23#agenda&dplrid=' . $encodeEmail . '" target="_blank" style="
                                             text-decoration: none;
                                             color: #33ad73;
                                             font-weight: 700;
@@ -6472,7 +6471,7 @@ max-width: 365px;
                                                         color: #666666;
                                                         ">
                                                                                             Este email fue enviado por
-                                                                                            <a href="http://goemms.com/?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-emmsdt-confirmacion-entrada-invitado-empresa-23&dplrid=" . $encodeEmail . "
+                                                                                            <a href="http://goemms.com/?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-emmsdt-confirmacion-entrada-invitado-empresa-23&dplrid=' . $encodeEmail . '"
                                                                                                 target="_blank" style="
                                                             color: #33ad73;
                                                             font-weight: bold;
@@ -6511,7 +6510,7 @@ max-width: 365px;
                 </body>
 
             </html>
-        `;
+        ';
         return $html;
     }
 }
