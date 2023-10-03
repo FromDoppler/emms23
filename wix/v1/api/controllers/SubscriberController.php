@@ -65,7 +65,7 @@ class SubscriberController
                 $nombre = $nombre[0];
                 $wixUserData = [
                     'contact_id' => $invitado['contactId'],
-                    'contact_name' => $nombre,
+                    'contact_name' => "",
                     'contact_email' => $invitado['email'],
                     'paidplan_title' => "Plan Empresa - Invitado",
                     'paidplan_startdate' => ($isWixMemberSuccess)?$invitado['Order']['order']['startDate']:null,
@@ -84,8 +84,9 @@ class SubscriberController
             $wixContactsModel = new WixContactsDatabase($db);
 
             $wixContactsModel->insertContact($wixUserData);
-            return $isWixMemberSuccess;
+            return $wixUserData;
     }
+
     private function proccessPackEmpresa($wixApi, $allUsersData, $compradorData) {
         foreach ($allUsersData as $index => $email) {
             //Guardar el contacto wix en la base de datos
@@ -94,11 +95,11 @@ class SubscriberController
                 $wixUserData = $wixApi->setInvitadoPlanMember($email);
                 if ($wixUserData) {
                     $wixUserData['email'] = $email;
-                    $isWixMemberSuccess = $this->CreateWixContact($compradorData, $wixUserData);
+                    $wixContactObject = $this->CreateWixContact($compradorData, $wixUserData);
                     $user = $this->CreateUserObj($email, $compradorData, true);
                 }
             }else {
-                $isWixMemberSuccess = $this->CreateWixContact($compradorData);
+                $wixContactObject = $this->CreateWixContact($compradorData);
                 $user = $this->CreateUserObj($email, $compradorData, false);
             }
 
@@ -114,9 +115,13 @@ class SubscriberController
             saveSubscriptionSpreadSheet($user);
 
             //Enviar email de nuevo usuario
-            if (isset($isWixMemberSuccess) && $isWixMemberSuccess) {
+            if (isset($wixContactObject['status']) && $wixContactObject['status'] === "success" ) {
+                $user['paidplan_title'] = $wixContactObject['paidplan_title'];
+                $user['paidplan_startdate'] = $wixContactObject['paidplan_startdate'];
+                $user['paidplan_price'] = $wixContactObject['paidplan_price'];
+                $user['paidplan_paymentmethod'] = $wixContactObject['paidplan_paymentmethod'];
                 sendEmail($user, $user['subject']);
-                $isWixMemberSuccess = null;
+                $wixContactObject = null;
             }
         }
     }
