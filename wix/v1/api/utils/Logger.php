@@ -2,7 +2,7 @@
 
 class Logger
 {
-    // Método para registrar cualquier tipo de log (ERROR o SUCCESS)
+    // Metodo para registrar cualquier tipo de log (ERROR o SUCCESS)
     public function registrarLog($status, $title, $mensaje)
     {
         $contenidoLog = strtoupper($status) ." ". $title .": " . json_encode($mensaje, JSON_UNESCAPED_UNICODE) . PHP_EOL;

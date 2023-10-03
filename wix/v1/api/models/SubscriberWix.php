@@ -18,7 +18,26 @@ class SubscriberWix
         }
     }
 
-    // Métodos públicos
+    public function getCompradorData() {
+        $datos = $this->subscribers['data'];
+        $email_parts = explode('@', $datos['contact.Email[0]']);
+        $contact_name = $email_parts[0];
+        $resultado = array(
+            'contact_id' => $datos['contact.Id'],
+            'contact_name' => $contact_name,
+            'contact_email' => $datos['contact.Email[0]'],
+            'paidplan_title' => $datos['paidplan.title'],
+            'paidplan_startdate' => $datos['paidplan.startdate'],
+            'paidplan_subscriptionid' => $datos['paidplan.subscriptionid'],
+            'paidplan_id' => $datos['paidplan.id'],
+            'paidplan_orderid' => $datos['paidplan.orderid'],
+            'paidplan_price' => $datos['paidplan.price'],
+            'paidplan_paymentmethod' => $datos['paidplan.paymentmethod']
+        );
+
+        return $resultado;
+    }
+
     public function getEmpresa()
     {
         return $this->empresa;

@@ -1,21 +1,27 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/utils/DB.php';
 require_once 'models/SubscriberWix.php';
 require_once 'models/SubscriberDopplerList.php';
 require_once 'models/SubscriberDatabase.php';
+require_once 'models/WixContactsDatabase.php';
+require_once 'utils/getCurrentPhase.php';
+require_once 'utils/sendEmail.php';
 require_once 'utils/toHex.php';
 require_once 'utils/Logger.php';
+require_once 'utils/SpreadSheetGoogle.php';
+require_once 'utils/WixApiClient.php';
 
 class SubscriberController
 {
     public function handleRequest()
     {
         try {
-            // Verificar el método de solicitud
+            // Verificar el metodo de solicitud
             if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-                http_response_code(405); // Método no permitido
-                throw new Exception('Método no permitido');
+                http_response_code(405); // Metodo no permitido
+                throw new Exception('Metodo no permitido');
             }
             $jsonData = $this->getJsonDataFromRequest();
 
@@ -37,7 +43,7 @@ class SubscriberController
         $entityBody = file_get_contents('php://input');
         $jsonData = mb_convert_encoding($entityBody, 'UTF-8');
         $jsonData = json_decode($jsonData, true);
-        // Verificar si el JSON es válido
+        // Verificar si el JSON es valido
         if (json_last_error() !== JSON_ERROR_NONE) {
             http_response_code(400); // Solicitud incorrecta
             throw new Exception('JSON incorrecto'. $jsonData);
@@ -48,60 +54,146 @@ class SubscriberController
         return $jsonData;
     }
 
-    private function processAndSaveSubscriptions(SubscriberWix $subscriberWix)
-    {
-        // Obtener datos de la empresa y de los individuales
-        $allUsersData = $subscriberWix->getAllUsers();
-        // Procesar las suscripciones
-        foreach ($allUsersData as $email) {
-            //Crear el objeto User
-            $user = $this->CreateUserObj($email);
+    private function CreateWixContact($padre, $invitado = null){
+        if (!$invitado) {
+            $wixUserData = $padre;
+            $wixUserData['status'] = 'success';
+            $isWixMemberSuccess = true;
+        }else{
+            $isWixMemberSuccess = (( isset($invitado['Order']) && isset($invitado['Order']['order']) )) || false;
+                $nombre = explode("@",  $invitado['email']);
+                $nombre = $nombre[0];
+                $wixUserData = [
+                    'contact_id' => $invitado['contactId'],
+                    'contact_name' => $nombre,
+                    'contact_email' => $invitado['email'],
+                    'paidplan_title' => "Plan Empresa - Invitado",
+                    'paidplan_startdate' => ($isWixMemberSuccess)?$invitado['Order']['order']['startDate']:null,
+                    'paidplan_subscriptionid' => ($isWixMemberSuccess)?$invitado['Order']['order']['subscriptionId']:null,
+                    'paidplan_id' => ($isWixMemberSuccess)?$invitado['Order']['order']['planId']:null,
+                    'paidplan_orderid' => ($isWixMemberSuccess)?$invitado['Order']['order']['id']:null,
+                    'paidplan_price' => '0',
+                    'paidplan_paymentmethod' => 'invited',
+                    'invited_by' => $padre['contact_email'],
+                    'status' => ($isWixMemberSuccess)?'success':'fail'
+                ];
+            }
+            //creo la conexion a la db
+            $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+            // Procesar las suscripciones
+            $wixContactsModel = new WixContactsDatabase($db);
 
-            try {
-                // Guardar la suscripción en Doppler
-                $dopplerHandler = new SubscriberDopplerList();
-                $dopplerHandler->saveSubscription($user);
+            $wixContactsModel->insertContact($wixUserData);
+            return $isWixMemberSuccess;
+    }
+    private function proccessPackEmpresa($wixApi, $allUsersData, $compradorData) {
+        foreach ($allUsersData as $index => $email) {
+            //Guardar el contacto wix en la base de datos
+            // Asignar acceso a plan invitado
+            if ($index!=="user1") {
+                $wixUserData = $wixApi->setInvitadoPlanMember($email);
+                if ($wixUserData) {
+                    $wixUserData['email'] = $email;
+                    $isWixMemberSuccess = $this->CreateWixContact($compradorData, $wixUserData);
+                    $user = $this->CreateUserObj($email, $compradorData, true);
+                }
+            }else {
+                $isWixMemberSuccess = $this->CreateWixContact($compradorData);
+                $user = $this->CreateUserObj($email, $compradorData, false);
+            }
 
-                // Guardar la suscripción en la base de datos
-                $subscriberDatabase = new SubscriberDatabase($user); // Pasar $user al constructor
-                $subscriberDatabase->saveSubscriptionToDatabase();
-            } catch (Exception $e) {
-                http_response_code(500); // Error interno del servidor
-                throw new Exception($e->getMessage());
+            // Guardar la suscripcion en Doppler
+            $dopplerHandler = new SubscriberDopplerList();
+            $dopplerHandler->saveSubscription($user);
+
+            // Guardar la suscripcion en la base de datos
+            $subscriberDatabase = new SubscriberDatabase($user);
+            $subscriberDatabase->saveSubscriptionToDatabase();
+
+            // Guardar la suscripcion en el SpreadSheet
+            saveSubscriptionSpreadSheet($user);
+
+            //Enviar email de nuevo usuario
+            if (isset($isWixMemberSuccess) && $isWixMemberSuccess) {
+                sendEmail($user, $user['subject']);
+                $isWixMemberSuccess = null;
             }
         }
-
-        return $allUsersData;
     }
 
-    private function CreateUserObj($email)
+    private function processAndSaveSubscriptions(SubscriberWix $subscriberWix)
     {
+        try {
+            $api_key = API_KEY_WIX;
+            $account_id = WIX_ACCOUNT_ID;
+            $site_id = WIX_SITE_ID;
+            $wixApi = new WixApiClient($api_key, $account_id, $site_id);
+            // Obtener datos de la empresa y de los individuales
+            $allUsersData = $subscriberWix->getAllUsers();
+            $compradorData = $subscriberWix->getCompradorData();
+
+            if ( $compradorData['paidplan_id'] === WIX_PLAN_PACK_EMPRESA_BASIC_ID ||
+            $compradorData['paidplan_id'] === WIX_PLAN_PACK_EMPRESA_FULL_ID ||
+            $compradorData['paidplan_id'] === WIX_PLAN_INDIVIDUAL_ID ) {
+                $this->proccessPackEmpresa($wixApi, $allUsersData, $compradorData);
+                return $allUsersData;
+            }
+        } catch (Exception $e) {
+            http_response_code(500); // Error interno del servidor
+            throw new Exception($e->getMessage());
+        }
+    }
+
+    private function getTiketType($paidplan_id, $hasPadre) {
+        $planMappings = [
+            WIX_PLAN_PACK_EMPRESA_FULL_ID => "Plan Empresa Full",
+            WIX_PLAN_PACK_EMPRESA_BASIC_ID => "Plan Empresa Basic",
+            WIX_PLAN_INDIVIDUAL_ID => "Plan VIP",
+        ];
+
+        if ($hasPadre && in_array($paidplan_id, [WIX_PLAN_PACK_EMPRESA_FULL_ID, WIX_PLAN_PACK_EMPRESA_BASIC_ID])) {
+            return "Plan Invitado";
+        }
+
+        return $planMappings[$paidplan_id] ?? null;
+    }
+
+    private function CreateUserObj($email, $compradorData, $hasPadre)
+    {
+        $emailPadre = $compradorData['contact_email'];
+        $tiketType = $this->getTiketType($compradorData['paidplan_id'], $hasPadre);
+
         $encode_email = toHex(json_encode([
             'userEmail' => $email,
-            'userEvents' => ['ecommerce', 'digital-trends']
+            'userEvents' => ['digital-trends']
         ]));
-
+        $nombre = explode("@", $email);
+        $nombre = $nombre[0];
         return [
             'register' => date("Y-m-d h:i:s A"),
-            'firstname' => null,
+            'firstname' => "",
             'email' => $email,
-            'ecommerce' => 1,
+            'company' =>  '',
+            'jobPosition' =>  '',
+            'phone' =>  '',
+            'ecommerce' => 0,
             'digital_trends' => 1,
             'encode_email' => $encode_email,
             'privacy' => true,
             'promotions' => false,
             'ip' => '',
             'country_ip' => '',
-            'source_utm' => "wix",
-            'medium_utm' => "wix",
-            'campaign_utm' => "wix",
-            'content_utm' => "wix",
-            'term_utm' => "wix",
-            'origin' => "wix",
+            'source_utm' => "WIX",
+            'medium_utm' => "",
+            'campaign_utm' => $tiketType,
+            'content_utm' => ($hasPadre)? "Invitado por $emailPadre" : "",
+            'term_utm' => "",
+            'origin' => "",
             'type' => "digital-trends",
-            'form_id' => "pre", //TODO:getCurrentPhase()
+            'tiketType' => $tiketType,
+            'form_id' => "pre",
             'list' => LIST_LANDING_DIGITALT,
-            'subject' => SUBJECT_PRE_DIGITALT //TODO: getSubjectEmail("digital-trends", $phase)
+            'subject' => (($hasPadre)? "Fuiste Invitado! - $tiketType " : "Compraste! - $tiketType")
         ];
     }
 }

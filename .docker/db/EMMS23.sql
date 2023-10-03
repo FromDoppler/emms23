@@ -23,21 +23,28 @@ SET time_zone = "+00:00";
 CREATE DATABASE IF NOT EXISTS `EMMS23` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `EMMS23`;
 
+
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `aliados_media_partner`
 --
 
-DROP TABLE IF EXISTS `aliados_media_partner`;
-CREATE TABLE IF NOT EXISTS `aliados_media_partner` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `image_home` varchar(255) DEFAULT NULL,
-  `alt_image_home` varchar(255) DEFAULT NULL,
-  `orden_home` varchar(255) DEFAULT NULL,
-  `status` enum('0','1') DEFAULT NULL,
-  PRIMARY KEY (`id`)
+DROP TABLE IF EXISTS `wix_contacts`;
+CREATE TABLE wix_contacts (
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    contact_id VARCHAR(255) NOT NULL,
+    contact_name VARCHAR(255) NOT NULL,
+    contact_email VARCHAR(255) NOT NULL,
+    paidplan_title VARCHAR(255),
+    paidplan_startdate VARCHAR(255),
+    paidplan_subscriptionid VARCHAR(255),
+    paidplan_id VARCHAR(255),
+    paidplan_orderid VARCHAR(255),
+    paidplan_price VARCHAR(255),
+    paidplan_paymentmethod VARCHAR(255),
+    invited_by VARCHAR(255),
+    `status` VARCHAR(150)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -442,6 +449,7 @@ CREATE TABLE IF NOT EXISTS `registered` (
   `country` varchar(150) DEFAULT NULL,
   `phone` varchar(300) DEFAULT NULL,
   `company` varchar(300) DEFAULT NULL,
+  `jobPosition` varchar(150) DEFAULT NULL,
   `ecommerce` tinyint(1) NOT NULL DEFAULT 1,
   `digital-trends` tinyint(1) NOT NULL DEFAULT 0,
   `source_utm` text DEFAULT NULL,
@@ -2467,6 +2475,7 @@ CREATE TABLE IF NOT EXISTS `subscriptions_doppler` (
   `phone` varchar(300) DEFAULT NULL,
   `country` varchar(150) DEFAULT NULL,
   `company` varchar(300) DEFAULT NULL,
+  `jobPosition` varchar(150) DEFAULT NULL,
   `ecommerce` tinyint(1) NOT NULL DEFAULT 1,
   `digital-trends` tinyint(1) NOT NULL DEFAULT 0,
   `ip` varchar(150) NOT NULL,
