@@ -47,8 +47,8 @@ require_once('./utils/DB.php');
         <!-- Hero -->
         <section class="emms__sponsors__hero">
             <div class="emms__sponsors__hero__title emms__fade-top">
-                <h1><em>Herramientas gratis para optimizar tu Tienda Online</em> Contenido Premium para registrados al EMMS E-commerce 2023</h1>
-                <p>Descubre todas las herramientas, recursos descargables y material audiovisual que nuestros aliados han preparado para ti</p>
+                <h1><em>Herramientas gratis para potenciar tu estrategia digital</em> Biblioteca de Recursos exclusiva para registrados al EMMS 2023</h1>
+                <p>Descubre todos los beneficios, recursos descargables y el material audiovisual que nuestros aliados han preparado para ti</p>
             </div>
         </section>
 
@@ -145,9 +145,9 @@ require_once('./utils/DB.php');
             <div class="emms__conferences__container">
                 <div class="emms__conferences__wrapper">
                     <div class="emms__conferences__title emms__fade-in">
-                        <h2>Conferencias exclusivas de nuestros Media Partners</h2>
-                        <p>Los siguientes expertos comparten contigo las últimas tendencias y estrategias en Marketing Digital para que pongas en práctica ahora mismo en tu negocio.</p>
-                        <p>¡Capacítate con EMMS 2023!</p>
+                        <h2>Más conferencias exclusivas</h2>
+                        <p>Te traemos breves videos en los que podrás descubrir las últimas tendencias y ver interesantes análisis de la mano de especialistas.</p>
+                        <p>¡Capacítate e inspírate con el EMMS 2023!</p>
                     </div>
                     <div class="emms__conferences__cards__container">
                         <div class="emms__conferences__cards emms__fade-in">

@@ -47,8 +47,8 @@ require_once('./utils/DB.php');
         <!-- Hero -->
         <section class="emms__sponsors__hero">
             <div class="emms__sponsors__hero__title emms__fade-top">
-                <h1><em>Herramientas gratuitas para potenciar tu negocio</em> Contenido Premium para registrados al EMMS E-commerce 2023</h1>
-                <p>🔒 Desbloquea ahora todas las herramientas y recursos que nuestros aliados han preparado para que puedas optimizar tu Tienda Online.</p>
+                <h1><em>Herramientas gratis para potenciar tu estrategia digital</em> Biblioteca de Recursos exclusiva para registrados al EMMS 2023</h1>
+                <p>🔒 Desbloquea beneficios, recursos descargables y material audiovisual preparados especialmente para ti</p>
                 <a class="emms__cta emms__fade-in" data-target="modalRegister" data-toggle="emms__register-modal">REGÍSTRATE GRATIS AHORA</a>
             </div>
         </section>
