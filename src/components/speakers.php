@@ -15,7 +15,7 @@
     $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     $speakers = $db->getSpeakersByDay(1);
     foreach ($speakers as $speaker) : ?>
-        <?php if (($speaker['exposes'] === "conference") || ($speaker['exposes'] === "interview") && ($speaker['event'] === "digital-trends")) : ?>
+        <?php if ((($speaker['exposes'] === "conference") || ($speaker['exposes'] === "interview")) && ($speaker['event'] === "digital-trends")) : ?>
             <li class="emms__calendar__list__item">
                 <div class="emms__calendar__list__item__card">
                     <?php if ($speaker['exposes'] === "conference") : ?>
@@ -81,7 +81,7 @@
     $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     $speakers = $db->getSpeakersByDay(1);
     foreach ($speakers as $speaker) : ?>
-        <?php if (($speaker['exposes'] === "conference") || ($speaker['exposes'] === "interview") && ($speaker['event'] === "digital-trends")) : ?>
+        <?php if ((($speaker['exposes'] === "conference") || ($speaker['exposes'] === "interview")) && ($speaker['event'] === "digital-trends")) : ?>
             <li class="emms__calendar__list__item">
                 <div class="emms__calendar__list__item__card">
                     <?php if ($speaker['exposes'] === "conference") : ?>
