@@ -90,8 +90,6 @@ function setDataRequest($ip, $countryGeo)
     );
     try {
         Validator::validateEmail($email);
-        Validator::validateRequired('company', $company);
-        Validator::validateRequired('jobPosition', $jobPosition);
         Validator::validateBool('privacy', $privacy);
         Validator::validateBool('promotions', $promotions);
         return $user;
