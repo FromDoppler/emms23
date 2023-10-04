@@ -377,6 +377,7 @@
     animation: fadeInAnimation ease 0.4s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    z-index: 1;
 }
 
 @keyframes fadeInAnimation {
