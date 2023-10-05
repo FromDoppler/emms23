@@ -3505,7 +3505,7 @@ class Relay
                                   text-align: center;
                                 ">
                                                             ¡Lleva tus conocimientos al límite! <a
-                                                                href="http://goemms.com/digital-trends?utm_source=fromdoppler&amp;utm_medium=email&amp;utm_campaign=et-emmsdt-confirmacion-entrada-invitado-empresa-23#entradas' . $encodeEmail . '"
+                                                                href="http://goemms.com/digital-trends?utm_source=fromdoppler&amp;utm_medium=email&dplrid=' . $encodeEmail . '&amp;utm_campaign=et-emmsdt-confirmacion-entrada-invitado-empresa-23#entradas"
                                                                 target="_blank" style="
                               text-decoration: none;
                               color: #33ad73;
@@ -3617,7 +3617,7 @@ max-width: 200px;
                             <v:roundrect
                               xmlns:v="urn:schemas-microsoft-com:vml"
                               xmlns:w="urn:schemas-microsoft-com:office:word"
-                              href="https://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-confirmacion-registro-free-emmsdt-23#entradas' . $encodeEmail . '"
+                              href="https://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&dplrid=' . $encodeEmail . '&utm_campaign=et-confirmacion-registro-free-emmsdt-23#entradas"
                               style="
                                 height: 47px;
                                 v-text-anchor: middle;
@@ -3652,7 +3652,7 @@ max-width: 200px;
                                   padding: 15px 40px;
                                   text-align: center;
                                 " class="button--td mobile-btn">
-                                                                            <a href="https://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-confirmacion-registro-free-emmsdt-23#entradas' . $encodeEmail . '"
+                                                                            <a href="https://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&dplrid=' . $encodeEmail . '&utm_campaign=et-confirmacion-registro-free-emmsdt-23#entradas"
                                                                                 style="
                                     color: #ffffff;
                                     font-size: 15px;
@@ -3892,7 +3892,7 @@ max-width: 200px;
                             <v:roundrect
                               xmlns:v="urn:schemas-microsoft-com:vml"
                               xmlns:w="urn:schemas-microsoft-com:office:word"
-                              href="https://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-confirmacion-registro-free-emmsdt-23#entradas' . $encodeEmail . '"
+                              href="https://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&dplrid=' . $encodeEmail . '&utm_campaign=et-confirmacion-registro-free-emmsdt-23#entradas"
                               style="
                                 height: 47px;
                                 v-text-anchor: middle;
@@ -3927,7 +3927,7 @@ max-width: 200px;
                                   padding: 15px 35px;
                                   text-align: center;
                                 " class="button--td mobile-btn">
-                                                                            <a href="https://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-confirmacion-registro-free-emmsdt-23#entradas' . $encodeEmail . '"
+                                                                            <a href="https://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&dplrid=' . $encodeEmail . '&utm_campaign=et-confirmacion-registro-free-emmsdt-23#entradas"
                                                                                 style="
                                     color: #ffffff;
                                     font-size: 15px;
@@ -4235,7 +4235,7 @@ max-width: 200px;
                                           color: #666666;
                                         ">
                                                                             Este email fue enviado por
-                                                                            <a href="http://goemms.com/?utm_source=fromdoppler&amp;utm_medium=email&amp;utm_campaign=et-confirmacion-registro-free-emmsdt-23#entradas' . $encodeEmail . '"
+                                                                            <a href="http://goemms.com/?utm_source=fromdoppler&amp;utm_medium=email&dplrid=' . $encodeEmail . '&amp;utm_campaign=et-confirmacion-registro-free-emmsdt-23#entradas"
                                                                                 target="_blank" style="
                                             color: #33ad73;
                                             font-weight: bold;
