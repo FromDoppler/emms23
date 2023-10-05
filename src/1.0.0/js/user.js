@@ -4,7 +4,7 @@ import { toHex, getEncodeURLEmail } from "./common/index.js";
 const encodeUser = getEncodeURLEmail();
 
 const _setLocalStorageEvents = (userEvents) => {
-    localStorage.setItem('events', JSON.stringify(userEvents));
+    localStorage.setItem('events', userEvents);
     localStorage.setItem('lastEventsUpdateTime', new Date());
 }
 
