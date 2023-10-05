@@ -91,7 +91,7 @@ require_once('./utils/DB.php');
                 <!-- Form -->
                 <form class="emms__form" id="sponsorsForm" novalidate autocomplete="off">
                     <h3>Regístrate aquí para acceder 🙂</h3>
-                    <h4>Regístrate aquí para desbloquear la Biblioteca de Recursos gratuitos para asistentes del EMMS. Además, al hacerlo podrás acceder a todas las charlas de tus ediciones preferidas, enterarte de los próximos eventos, acceder a ellos y ¡mucho más!</h4>
+                    <h4>Regístrate gratis. Accederás a la Biblioteca de Recursos, a las ediciones anteriores ¡y serás parte de la próxima!</h4>
                     <ul class="emms__form__field-group">
                         <li class="emms__form__field-item">
                             <div class="holder">
