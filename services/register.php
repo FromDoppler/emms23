@@ -26,15 +26,32 @@ function isSubmitValid($ip)
     }
 }
 
+function processEvents($events)
+{
+    $ecommerce = 0;
+    $digital_trends = 0;
+
+    if (is_array($events)) {
+        if (in_array('ecommerce', $events)) {
+            $ecommerce = 1;
+        }
+        if (in_array('digital-trends', $events)) {
+            $digital_trends = 1;
+        }
+    }
+
+    return ['ecommerce' => $ecommerce, 'digital_trends' => $digital_trends];
+}
+
 function setDataRequest($ip, $countryGeo)
 {
 
     $requestWithoutForm = false;
     $_POST = json_decode(file_get_contents('php://input'), true);
     $events = isset($_POST['events']) ? $_POST['events'] : null;
-    $events = json_decode($events);
-    $ecommerce = ($events[0] === 'ecommerce' || $events[1] === 'ecommerce') ? 1 : 0;
-    $digital_trends = ($events[0] === 'digital-trends' || $events[1] === 'digital-trends') ? 1 : 0;
+    $eventsData = processEvents(json_decode($events));
+    $ecommerce = $eventsData['ecommerce'];
+    $digital_trends = $eventsData['digital_trends'];
     $email = isset($_POST['email']) ? $_POST['email'] : null;
     $encode_email = isset($_POST['encodeEmail']) ? $_POST['encodeEmail'] : null;
     $company     = isset($_POST['company']) ? $_POST['company'] : null;
