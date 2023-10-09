@@ -258,10 +258,10 @@ div.emms__calendar__vip__card__title{
 .emms__calendar__vip .emms__calendar__list .emms__calendar__list__item::after{
     content: "";
     position: absolute;
-    left: 116px;
+    left: 120px;
     top: 18px;
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     background: url("../../../img/icons/icon-star-gradient.png") no-repeat;
     background-size: contain;
 }
