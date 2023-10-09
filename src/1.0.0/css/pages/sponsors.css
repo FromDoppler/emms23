@@ -279,6 +279,9 @@
     padding: 30px 18px;
     box-sizing: border-box;
 }
+.emms__conferences__cards a{
+    cursor: pointer;
+}
 .emms__conferences__cards h4 {
     color: #ffffff;
     margin: 35px 0;
@@ -313,6 +316,13 @@
 .emms__conferences__first__card__text a:hover {
     color: #008046;
     transition: all 0.35s ease;
+}
+
+.emms__conferences a[data-target="modalRegister"] img,
+.emms__conferences a[data-target="modalRegister"] h4,
+.emms__conferences a[data-target="modalRegister"] p,
+.emms__conferences a[data-target="modalRegister"] span{
+    pointer-events: none;
 }
 
 @media only screen and (max-width: 1025px) {

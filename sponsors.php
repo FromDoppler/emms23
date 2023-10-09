@@ -85,6 +85,69 @@ require_once('./utils/DB.php');
             </div>
         </section>
 
+        <!-- Section conferences -->
+        <section class="emms__conferences no-registered">
+            <div class="emms__conferences__container">
+                <div class="emms__conferences__wrapper">
+                    <div class="emms__conferences__title emms__fade-in">
+                        <h2>Más conferencias exclusivas</h2>
+                        <p>Te traemos breves videos en los que podrás descubrir las últimas tendencias y ver interesantes análisis de la mano de especialistas.</p>
+                        <p>¡Capacítate e inspírate con el EMMS 2023!</p>
+                    </div>
+                    <div class="emms__conferences__cards__container">
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a data-target="modalRegister" data-toggle="emms__register-modal">
+                                <img src="src/img/conferences/portada-youtube-mujeresqueemprenden.png" alt="Conferencias exclusivas">
+                                <h4>Trucos para vender más en tu E-commerce</h4>
+                                <p>Duración: 00:19:45</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a data-target="modalRegister" data-toggle="emms__register-modal">
+                                <img src="src/img/conferences/portada-youtube-chinarodriguez.png" alt="Conferencias exclusivas">
+                                <h4>Campañas de remarketing de alto impacto</h4>
+                                <p>Duración: 00:20:48</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a data-target="modalRegister" data-toggle="emms__register-modal">
+                                <img src="src/img/conferences/portada-youtube-realtrends.png" alt="Conferencias exclusivas">
+                                <h4>Cómo profesionalizar y optimizar la comunicación con mis compradores</h4>
+                                <p>Duración: 00:11:27</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a data-target="modalRegister" data-toggle="emms__register-modal">
+                                <img src="src/img/conferences/portada-youtube-martin-gelpi.png" alt="Conferencias exclusivas">
+                                <h4>Marketing de escasez: la clave del furor en ventas</h4>
+                                <p>Duración: 00:08:22</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a data-target="modalRegister" data-toggle="emms__register-modal">
+                                <img src="src/img/conferences/portada-youtube-christian-canizales.png" alt="Conferencias exclusivas">
+                                <h4>5 Técnicas SEO para eCommerce</h4>
+                                <p>Duración: 00:09:20</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a data-target="modalRegister" data-toggle="emms__register-modal">
+                                <img src="src/img/conferences/portada-youtube-dario-conti.png" alt="Conferencias exclusivas">
+                                <h4>Matriz de Impacto Digital para lograr aumento de ventas</h4>
+                                <p>Duración: 00:22:11</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Register modal -->
         <div id="modalRegister" class="emms__register-modal">
             <div class="emms__register-modal__window">
