@@ -64,6 +64,14 @@ if (isset($_GET['changestatus_id'])) {
                 <table class="table table-striped">
                     <tr>
                         <th colspan="5"><br /><a href="add_speakers.php?token=<?= $_GET['token'] ?>">ADD Speakers.</a></th>
+                        <th colspan="5"><br />
+                            <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                                <option value="" disabled selected>Filtrar speakers por evento</option>
+                                <option value="<?= (empty($_SERVER['HTTPS']) ? 'http' : 'https') ?>://<?= $_SERVER['HTTP_HOST'] . '/admin/speakers/index.php?token=E1111522N37r0' ?>">Todos</option>
+                                <option value="<?= (empty($_SERVER['HTTPS']) ? 'http' : 'https') ?>://<?= $_SERVER['HTTP_HOST'] . '/admin/speakers/index.php?token=E1111522N37r0&filter=ecommerce' ?>">Ecommerce</option>
+                                <option value="<?= (empty($_SERVER['HTTPS']) ? 'http' : 'https') ?>://<?= $_SERVER['HTTP_HOST'] . '/admin/speakers/index.php?token=E1111522N37r0&filter=digital-trends' ?>">Digital Trends</option>
+                            </select>
+                        </th>
                     </tr>
                     <th>Indice</th>
                     <th>Name</th>
@@ -76,7 +84,12 @@ if (isset($_GET['changestatus_id'])) {
                     <th colspan="2">Actions</th>
                     </tr>
                     <?php
-                    $sql_query = "SELECT * FROM speakers ORDER BY cast(orden as unsigned)";
+                    if (isset($_GET['filter'])) {
+                        $filter = mysqli_real_escape_string($con, $_GET['filter']);
+                        $sql_query = "SELECT * FROM speakers WHERE speakers.event = '$filter' ORDER BY cast(orden as unsigned)";
+                    } else {
+                        $sql_query = "SELECT * FROM speakers ORDER BY event, cast(orden as unsigned)";
+                    }
                     $result_set = mysqli_query($con, $sql_query);
                     $i = 1;
                     while ($row = mysqli_fetch_row($result_set)) {
