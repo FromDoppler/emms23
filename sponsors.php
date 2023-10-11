@@ -78,7 +78,11 @@ require_once('./utils/DB.php');
                             </div>
                             <h3><?= $sponsor['title'] ?></h3>
                             <p><?= $sponsor['description_card'] ?></p>
-                            <a data-target="modalRegister" data-toggle="emms__register-modal" slug=<?= $sponsor['slug'] ?>>Accede →</a>
+                            <?php if ($sponsor['slug'] === '') : ?>
+                                <a class="inactive">Accede →</a>
+                            <?php else : ?>
+                                <a data-target="modalRegister" data-toggle="emms__register-modal" slug=<?= $sponsor['slug'] ?>>Accede →</a>
+                            <?php endif ?>
                         </li>
                     <?php endforeach; ?>
                 </ul>
