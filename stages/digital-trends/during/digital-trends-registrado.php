@@ -1,26 +1,35 @@
 <?php
-require_once('././config.php');
+require_once('././src/components/cacheSettings.php');
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <?php include_once('././src/components/head-ecommerce.php'); ?>
+    <?php include_once('././src/components/head-digitaltrends.php'); ?>
     <?php include_once('././src/components/head.php'); ?>
+    <script type="module">
+        import {
+            hiddenOrShowUserUI
+        } from './src/<?= VERSION ?>/js/user.js';
+        hiddenOrShowUserUI('ecommerce');
+    </script>
 </head>
 
 <body class="emms__digitaltrends emms__digitaltrends-logueado">
     <?php include_once('././src/components/gtm.php'); ?>
+
     <!-- Header -->
     <header class="emms__header">
         <div class="emms__container--lg emms__fade-in">
             <div class="emms__header__logo emms__header__logo--ecommerce">
                 <a href="/"><img src="src/img/logos/logo-emms-digitaltrends.png" alt="Digital Trends 2023"></a>
             </div>
-            <div class="emms__header__live">
-                <p>¡ESTAMOS EN VIVO!</p>
-            </div>
+            <?php if (($settings_phase['event'] === "digital-trends") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on")) : ?>
+                <div class="emms__header__live">
+                    <p>¡ESTAMOS EN VIVO EN EMMS E-COMMERCE!</p>
+                </div>
+            <?php endif; ?>
             <a class="emms__header__nav--mb" id="btn-burger"></a>
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
                 <ul class="emms__header__nav__menu">
@@ -31,11 +40,10 @@ require_once('././config.php');
                         <ul class="emms__header__nav__submenu">
                             <li><a href="#agenda">agenda</a></li>
                             <li><a href="#entradas">entradas</a></li>
-                            <li><a href="#vip">secciones VIP</a></li>
-                            <li><a href="https://www.digital-trends.goemms.com/workshops?utm_source=manage.wix.com" target="_blank">contenido Premium</a></li>
                         </ul>
                     </li>
-                    <li><a href="/sponsors">contenido exclusivo</a></li>
+                    <li><a href="/sponsors">biblioteca de recursos</a></li>
+                    <li><a href="/ediciones-anteriores">ediciones anteriores</a></li>
                 </ul>
             </nav>
         </div>
@@ -46,17 +54,17 @@ require_once('././config.php');
         <a id="btn-share" class="emms__share__open-list"><img src="src/img/icons/icon-share.svg" alt="Share"></a>
         <ul id="list-share" class="emms__share__list">
             <li>
-                <a href="javascript: void(0);" onclick="window.open ('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgoemms.com%2Fecommerce', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
+                <a href="javascript: void(0);" onclick="window.open ('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgoemms.com%2Fdigital-trends', 'Facebook', 'toolbar=0, status=0, width=550, height=350');">
                     <img src="src/img/Facebook-w.svg" alt="Facebook">
                 </a>
             </li>
             <li>
-                <a href="javascript: void(0);" onclick="window.open ('https://twitter.com/intent/tweet?url=https%3A%2F%2Fgoemms.com%2Fecommerce&text=Vuelve%20el%20EMMS%20%C2%A1y%20con%20una%20nueva%20edici%C3%B3n!%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20la%20industria%20E-commerce.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20lugar%20ahora!%20', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
+                <a href="javascript: void(0);" onclick="window.open ('https://twitter.com/intent/tweet?url=https%3A%2F%2Fgoemms.com%2Fdigital-trends&text=', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
                     <img src="src/img/Twitter-w.svg" alt="Twitter">
                 </a>
             </li>
             <li>
-                <a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgoemms.com%2Fecommerce&title=Vuelve%20el%20EMMS%20%C2%A1y%20con%20una%20nueva%20edici%C3%B3n!%20S%C3%BAmate%20ahora%20al%20evento%20que%20te%20acercar%C3%A1%20a%20los%20mayores%20expertos%20internacionales%20en%20la%20industria%20E-commerce.%20Es%20gratis%20y%20online.%20%C2%A1Reserva%20tu%20lugar%20ahora!%20', 'Linkedin', 'toolbar=0, status=0, width=550, height=550');">
+                <a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgoemms.com%2Fdigital-trends&title=', 'Linkedin', 'toolbar=0, status=0, width=550, height=550');">
                     <img src="src/img/LinkedIn-w.svg" alt="LinkedIn">
                 </a>
             </li>
@@ -66,69 +74,411 @@ require_once('././config.php');
     <main>
 
         <!-- Hero -->
-        <section class="emms__hero-registration--registered">
-            <div class="emms__container--md">
-                <h1 class="emms__fade-top">¡Ya eres parte del EMMS Digital Trends!</h1>
-                <p class="emms__fade-in">Te damos la bienvenida a este gran evento. <a href="#agenda">Revisa la Agenda</a> que hemos planeado para ti y prepárate para vivir el primer EMMS para Tiendas Online. ¡Gracias por sumarte! :)</p>
+        <section class="emms__hero-conference emms__hero-conference--chat">
+            <div class="emms__container--lg">
+                <?php if (($settings_phase['event'] === "digital-trends") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on") && ($settings_phase['transmission'] === "youtube")) : ?>
+                    <h1 class="emms__fade-in">EN VIVO</h1>
+                    <div class="emms__hero-conference__video emms__fade-in">
+                        <div class="emms__cropper-cont-16-9">
+                            <div class="emms__cropper-cont ">
+                                <div class="emms__cropper-cont-interno">
+                                    <iframe src="https://www.youtube.com/embed/<?= $duringDaysArray[$dayDuring]['youtube'] ?>?rel=0&autoplay=1&mute=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <small>Recuerda activar el sonido 🔊</small>
+                    </div>
+                    <div class="emms__hero-conference__aside emms__fade-in emms__hero-conference__video--chat">
+                        <iframe src="https://www.youtube.com/live_chat?v=<?= $duringDaysArray[$dayDuring]['youtube'] ?>&embed_domain=<?= $_SERVER['HTTP_HOST'] ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                <?php elseif (($settings_phase['event'] === "digital-trends") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on") && ($settings_phase['transmission'] === "twitch")) : ?>
+                    <h1 class="emms__fade-in">EN VIVO</h1>
+                    <div class="emms__hero-conference__video emms__fade-in">
+                        <div class="emms__cropper-cont-16-9">
+                            <div class="emms__cropper-cont ">
+                                <div class="emms__cropper-cont-interno">
+                                    <iframe src="https://player.twitch.tv/?channel=<?= $duringDaysArray[$dayDuring]['twitch'] ?>&parent=<?= $_SERVER['HTTP_HOST'] ?>"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <small>Recuerda activar el sonido 🔊</small>
+                    </div>
+                <?php elseif (($settings_phase['event'] === "digital-trends") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on") && ($settings_phase['transmission'] === "twitch-migrate")) : ?>
+                    <img src="src/img/banner-migrate-twitch.png" alt="Se migró a Twitch" class="banner">
+                <?php elseif (($settings_phase['event'] === "digital-trends") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on") && ($settings_phase['transmission'] === "technical-problems")) : ?>
+                    <img src="src/img/banner-technical-error.png" alt="Errores técnicos" class="banner">
+                <?php elseif (($settings_phase['event'] === "digital-trends") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-off")) : ?>
+                    <div class="emms__hero-conference__video emms__hero-conference__video--transition emms__fade-in">
+                        <h2>Prepárate, ¡se viene el día 2 del EMMS E-commerce 2023!</h2>
+                        <small>Recuerda que podrás acceder a todas las grabaciones de las Conferencias una vez finalizado el evento desde la <a href="#agenda">Agenda</a>.</small>
+                    </div>
+                    <div class="emms__hero-conference__aside emms__hero-conference__aside--transition emms__fade-in">
+                        <p>Mientras te preparas para el último día, accede a todo el contenido exclusivo que hemos preparado para ti: E-books gratuitos, cápsulas audiovisuales, guías, plantillas, beneficios, descuentos ¡y mucho más!</p>
+                        <a class="emms__cta" href="/sponsors-registrado">ACCEDE AHORA</a>
+                    </div>
+                <?php endif; ?>
+                <p class="emms__hero-conference__certificate emms__fade-in">Descarga <a data-target="certificateModal" data-toggle="emms__certificate-modal">aquí</a> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag #EMMSECOMMERCE :)</p>
             </div>
         </section>
+
+        <!-- Certificate modal -->
+        <div id="certificateModal" class="emms__certificate-modal">
+            <div class="emms__certificate-modal__window">
+                <h3>¡Estás a un paso de descargar tu Certificado de Asistencia!</h3>
+                <p>Ingresa tu nombre y apellido para descargarlo ahora 🙂</p>
+                <form id="certificateForm">
+                    <input type="text" placeholder="Nombre y apellido" name="fullname">
+                    <span class="certificateError">¡Ouch! Debes ingresar al menos 2 caracteres.</span>
+                    <a class="emms__cta" type="button" id="certificateEcommerceCta">QUIERO DESCARGARLO</a>
+                    <button class="emms__certificate-modal__window__close" data-dismiss="emms__certificate-modal"></button>
+                </form>
+            </div>
+        </div>
+
 
         <!-- Calendar -->
         <section class="emms__calendar" id="agenda">
             <div class="emms__container--lg">
                 <div class="emms__calendar__title emms__fade-in">
-                    <h2>Conoce a los Speakers del EMMS Digital Trends 2023</h2>
-                    <p>Estos son los <strong>ponentes</strong> que nos acompañarán en esta edición y las <strong>temáticas</strong> de sus charlas. </p>
+                    <h2>Agenda EMMS Digital Trends 2023</h2>
+                    <p>¡Seguiremos confirmando speakers muy pronto!</p>
                 </div>
-                <!-- List -->
-                <ul class="emms__calendar__list emms__calendar__list--dk emms__fade-in">
-                    <?php include('./src/components/speakers.php') ?>
-                </ul>
-                <ul class="emms__calendar__list emms__calendar__list--mb main-carousel emms__fade-in" data-flickity>
-                    <?php include('./src/components/speakers.php') ?>
-                </ul>
+                <!-- Speakers -->
+                <?php include('./src/components/speakers.php') ?>
                 <!-- End list -->
                 <div class="emms__calendar__bottom emms__fade-in">
-                    <p>¡Presta atención! <strong>Seguimos sumando conferencias a la agenda</strong>. Te avisaremos de esto y mucho más vía Email.</p>
+                    <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
                 </div>
             </div>
+            <div id="entradas"></div>
         </section>
 
 
-        <!-- Premium content -->
-        <section class="emms__premium-content emms__premium-content--dark">
+        <!-- Prices Plans -->
+        <div class="emms__plans emms__bg-w">
             <div class="emms__container--lg">
-                <div class="emms__premium-content__text emms__fade-in">
-                    <h2>Desbloquea Contenido Premium ¡gratis! </h2>
-                    <p>Descubre <strong>recursos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas ponerlos en práctica y potenciar tu Tienda Online.</p>
-                    <a href="./sponsors" class="emms__cta emms__fade-in">DESCÚBRELO AQUÍ</a>
+                <div class="emms__plans__title emms__fade-in">
+                    <h2>Entradas</h2>
                 </div>
-                <div class="emms__premium-content__picture emms__fade-in">
-                    <img src="src/img/download--locked.png" alt="Contenido Premium">
+                <div class="emms__plans__benefits--dk emms__fade-in">
+                    <ul>
+                        <h3>Beneficios</h3>
+                        <li>Acceso a todas las conferencias</li>
+                        <li>Volver a ver las conferencias todas las veces que quieras</li>
+                        <li>Participación en los sorteos</li>
+                        <li>Descuentos en herramientas y cursos</li>
+                        <li>Certificado de participación a las conferencias</li>
+                        <li>Acceso ilimitado a todos los Workshops prácticos</li>
+                        <li>Certificado de asistencia a Workshops</li>
+                        <li>Acceso a licencias y descuentos en herramientas para tu estrategia digital</li>
+                        <li>Networking con participantes y speakers</li>
+                    </ul>
+                </div>
+                <div class="emms__plans__cards-container emms__fade-in">
+                    <div class="emms__plans__card">
+                        <h3>Asistente Free</h3>
+                        <div class="emms__plans__card__inside">
+                            <div class="emms__plans__card__inside__top">
+                                <div class="emms__plans__card__inside__top--container">
+                                    <h4>Gratis</h4>
+                                    <a class="dtCursorPointer eventHiddenElements inactive"><span class="button__text">Accede</span></a>
+                                    <a class="dtCursorPointer eventShowElements inactive"><span class="button__text">Accede</span></a>
+                                </div>
+                            </div>
+                            <div class="emms__plans__card__inside__list">
+                                <ul class="emms__collapse__list close">
+                                    <h4>Beneficios</h4>
+                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias</p>
+                                    </li>
+                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Volver a ver las conferencias todas las veces que quieras</p>
+                                    </li>
+                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Participación en los sorteos</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Descuentos en herramientas y cursos</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Certificado de participación a las conferencias</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
+                                        <p>Acceso ilimitado a todos los Workshops prácticos</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
+                                        <p>Certificado de asistencia a Workshops</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
+                                        <p>Acceso a licencias y descuentos en herramientas para tu estrategia digital</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
+                                        <p>Networking con participantes y speakers</p>
+                                    </li>
+                                    <button class="emms__collapse-btn"></button>
+                                </ul>
+                            </div>
+                            <div class="emms__plans__card__inside__bottom">
+                                <a class="dtCursorPointer activeFormButton eventHiddenElements inactive"><span class="button__text">Accede</span></a>
+                                <a class="dtCursorPointer activeButtonWithoutForm eventShowElements inactive"><span class="button__text">Accede</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="emms__plans__card emms__plans__card--premium">
+                        <h3>Asistente VIP</h3>
+                        <div class="emms__plans__card__inside">
+                            <div class="emms__plans__card__inside__top">
+                                <div class="emms__plans__card__inside__top--container">
+                                    <h4>U$S 10</h4>
+                                    <a href="https://www.digital-trends.goemms.com/entradas/payment/eyJpbnRlZ3JhdGlvbkRhdGEiOnt9LCJwbGFuSWQiOiI5YTNjYmFiMi0yMjkyLTQ2NGEtYTYzZS1hZmRhNmRlNmVmNzEifQ">Accede</a>
+                                </div>
+                            </div>
+                            <div class="emms__plans__card__inside__list">
+                                <ul class="emms__collapse__list close">
+                                    <h4>Beneficios</h4>
+                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a todas las conferencias</p>
+                                    </li>
+                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Volver a ver las conferencias todas las veces que quieras</p>
+                                    </li>
+                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Participación en los sorteos</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Descuentos en herramientas y cursos</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Certificado de participación a las conferencias</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso ilimitado a todos los Workshops prácticos</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Certificado de asistencia a Workshops</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Acceso a licencias y descuentos en herramientas para tu estrategia digital</p>
+                                    </li>
+                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                        <p>Networking con participantes y speakers</p>
+                                    </li>
+                                    <button class="emms__collapse-btn"></button>
+                                </ul>
+                            </div>
+                            <div class="emms__plans__card__inside__bottom">
+                                <a href="https://www.digital-trends.goemms.com/entradas/payment/eyJpbnRlZ3JhdGlvbkRhdGEiOnt9LCJwbGFuSWQiOiI5YTNjYmFiMi0yMjkyLTQ2NGEtYTYzZS1hZmRhNmRlNmVmNzEifQ">Accede</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="emms__plans__card emms__plans__card--double emms__plans__card--premium">
+                        <h3>Pack Empresas</h3>
+                        <div class="emms__plans__card__flex-content">
+                            <div class="emms__plans__card__inside">
+                                <div class="emms__plans__card__inside__top">
+                                    <div class="emms__plans__card__inside__top__off">
+                                        <p>15% OFF</p>
+                                    </div>
+                                    <div class="emms__plans__card__inside__top--container">
+                                        <h4><span>5 entradas</span>U$S 42,50</h4>
+                                        <a href="https://www.digital-trends.goemms.com/entradas/payment/eyJpbnRlZ3JhdGlvbkRhdGEiOnt9LCJwbGFuSWQiOiI1YjRkM2IxMS00NTI1LTQyYTktYTMwYi0xMGEzZGM4YmM2ZGQifQ">Accede</a>
+                                    </div>
+                                </div>
+                                <div class="emms__plans__card__inside__list">
+                                    <ul class="emms__collapse__list close">
+                                        <h4>Beneficios</h4>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Volver a ver las conferencias todas las veces que quieras</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Participación en los sorteos</p>
+                                        </li>
+                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Descuentos en herramientas y cursos</p>
+                                        </li>
+                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Certificado de participación a las conferencias</p>
+                                        </li>
+                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso ilimitado a todos los Workshops prácticos</p>
+                                        </li>
+                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Certificado de asistencia a Workshops</p>
+                                        </li>
+                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a licencias y descuentos en herramientas para tu estrategia digital</p>
+                                        </li>
+                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Networking con participantes y speakers</p>
+                                        </li>
+                                        <button class="emms__collapse-btn"></button>
+                                    </ul>
+                                </div>
+                                <div class="emms__plans__card__inside__bottom">
+                                    <a href="https://www.digital-trends.goemms.com/entradas/payment/eyJpbnRlZ3JhdGlvbkRhdGEiOnt9LCJwbGFuSWQiOiI1YjRkM2IxMS00NTI1LTQyYTktYTMwYi0xMGEzZGM4YmM2ZGQifQ">Accede</a>
+                                </div>
+                            </div>
+                            <div class="emms__plans__card__inside">
+                                <div class="emms__plans__card__inside__top">
+                                    <div class="emms__plans__card__inside__top__off">
+                                        <p>20% OFF</p>
+                                    </div>
+                                    <div class="emms__plans__card__inside__top--container">
+                                        <h4><span>10 entradas</span>U$S 80</h4>
+                                        <a href="https://www.digital-trends.goemms.com/entradas/payment/eyJpbnRlZ3JhdGlvbkRhdGEiOnt9LCJwbGFuSWQiOiI3ZjU2M2U0Ni1lNjA2LTRmYzktYTQ2OC01Yzk3OTFmMzFjMGIifQ">Accede</a>
+                                    </div>
+                                </div>
+                                <div class="emms__plans__card__inside__list">
+                                    <ul>
+                                        <h4>Beneficios</h4>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a todas las conferencias</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Volver a ver las conferencias todas las veces que quieras</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Participación en los sorteos</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Descuentos en herramientas y cursos</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Certificado de participación a las conferencias</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso ilimitado a todos los Workshops prácticos</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Certificado de asistencia a Workshops</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Acceso a licencias y descuentos en herramientas para tu estrategia digital</p>
+                                        </li>
+                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
+                                            <p>Networking con participantes y speakers</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="emms__plans__card__inside__bottom">
+                                    <a href="https://www.digital-trends.goemms.com/entradas/payment/eyJpbnRlZ3JhdGlvbkRhdGEiOnt9LCJwbGFuSWQiOiI3ZjU2M2U0Ni1lNjA2LTRmYzktYTQ2OC01Yzk3OTFmMzFjMGIifQ">Accede</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div id="vip"></div>
+        </div>
 
 
-        <!-- Go live -->
-        <section class="emms__golive-banner">
-            <div class="emms__background-a"></div>
+        <!-- Features -->
+<!--         <div class="emms__features emms__features--icon-top">
+            <div class="emms__features__title emms__fade-in">
+                <img class="icon-vip" src="src/img/icons/icon-star-gradient.png" alt="Icon">
+                <h2>Exclusivo para asistentes VIP y Packs Empresas</h2>
+                <p>Adquiere tus entradas VIP y accede a todos los workshops, sesiones de networking y contenidos exclusivos para vivir a pleno tu evento de Marketing preferido.</p>
+            </div>
+            <div class="emms__features__divisor"></div>
+            <div class="emms__features__item emms__fade-in emms__features__item--reverse">
+                <div class="emms__container--md">
+                    <div class="emms__features__item__image">
+                        <img src="src/img/editions/emms2018.png" alt="Image">
+                    </div>
+                    <div class="emms__features__item__text">
+                        <h3>Workshops</h3>
+                        <p>Salas reducidas de asistentes en las que podrás aprender con empresas referentes y profesionales que más admiras. Serán sesiones interactivas, donde podrás hacer preguntas y llevarte planes de acción resueltos.</p>
+                        <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="emms__features__divisor"></div>
+            <div class="emms__features__item emms__fade-in">
+                <div class="emms__container--md">
+                    <div class="emms__features__item__image">
+                        <img src="src/img/editions/emms2018.png" alt="Image">
+                    </div>
+                    <div class="emms__features__item__text">
+                        <h3>Networking</h3>
+                        <p>Disfruta de espacios de intercambio en los que podrás reunirte con colegas, extender las redes de tu negocio y entablar conversaciones uno a uno con empresas líderes en la industria.</p>
+                        <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <!-- Grid -->
+        <section class="emms__grid emms__grid--3 emms__bg-w">
             <div class="emms__container--md">
-                <div class="emms__golive-banner__picture emms__fade-in">
-                    <img src="src/img/mic.png" alt="En vivo">
+                <div class="emms__grid__title">
+                    <h2>Vive la experiencia completa en EMMS Digital Trends</h2>
                 </div>
-                <div class="emms__golive-banner__text emms__fade-in">
-                    <span>EN VIVO</span>
-                    <h2>¡No te pierdas ni un minuto más del EMMS E-commerce!</h2>
-                    <p>Estamos superando un récord de registros de diferentes partes del mundo. ¿Te lo vas a perder? Mira las temáticas que estamos abordando con referentes de la industria del E-commerce</p>
-                    <a href="/ecommerce" class="emms__cta">ACCEDE AL EVENTO</a>
+                <ul class="emms__grid__content">
+                    <li class="emms__grid__item">
+                        <div class="emms__grid__item__image">
+                            <img src="src/img/conferencias.png" alt="Image">
+                        </div>
+                        <div class="emms__grid__item__text">
+                            <h3>Conferencias</h3>
+                            <p>Encuentra a tus máximos referentes internacionales compartiendo ideas y experiencias en un mismo lugar para descubrir las últimas tendencias en Marketing Digital.</p>
+                        </div>
+                    </li>
+                    <li class="emms__grid__item">
+                        <div class="emms__grid__item__image">
+                            <img src="src/img/entrevistas.png" alt="Image">
+                        </div>
+                        <div class="emms__grid__item__text">
+                            <h3>Entrevistas</h3>
+                            <p>Asiste a conversaciones con directivos y profesionales que marcan tendencia con sus negocios para escuchar sus mejores consejos, experiencias y proyecciones del mercado. </p>
+                        </div>
+                    </li>
+                    <li class="emms__grid__item">
+                        <div class="emms__grid__item__image">
+                            <img src="src/img/exito.png" alt="Image">
+                        </div>
+                        <div class="emms__grid__item__text">
+                            <h3>Casos de Éxito</h3>
+                            <p>Escucha directamente de los representantes de compañías líderes cuáles fueron las estrategias que impulsaron el éxito de sus negocios y conoce sus mejores tácticas para vender más.</p>
+                        </div>
+                    </li>
+                    <li class="emms__grid__item">
+                        <div class="emms__grid__item__image">
+                            <img src="src/img/networking.png" alt="Image">
+                        </div>
+                        <div class="emms__grid__item__text">
+                            <h3>Networking</h3>
+                            <p>Únete a valiosas conversaciones con los exponentes del sector, conoce nuevos colegas y expande las redes de tu negocio para impulsar su crecimiento.</p>
+                        </div>
+                    </li>
+                    <li class="emms__grid__item">
+                        <div class="emms__grid__item__image">
+                            <img src="src/img/workshop.png" alt="Image">
+                        </div>
+                        <div class="emms__grid__item__text">
+                            <h3>Workshops</h3>
+                            <p>Capacítate en talleres prácticos de asistencia reducida con especialistas destacados en la industria. Interactúa y pon en práctica tus conocimientos.</p>
+                        </div>
+                    </li>
+                    <li class="emms__grid__item">
+                        <div class="emms__grid__item__image">
+                            <img src="src/img/recursos.png" alt="Image">
+                        </div>
+                        <div class="emms__grid__item__text">
+                            <h3>Biblioteca de Recursos</h3>
+                            <p>Encuentra E-books, infografías, cápsulas audiovisuales, guías, plantillas y muchos más contenidos descargables y gratuitos en la sección Biblioteca de Recursos.</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="emms__grid__bottom">
+                    <a href="#entradas" class="emms__cta">OBTÉN TU ENTRADA VIP</a>
                 </div>
             </div>
         </section>
 
-
-        <!-- Doppler Banner -->
-        <?php include_once('././src/components/doppler-academy-banner.php'); ?>
 
     </main>
 
@@ -137,6 +487,9 @@ require_once('././config.php');
     <?php include_once('././src/components/footer.php'); ?>
 
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
+    <script src="src/<?= VERSION ?>/js/certificateModal.js"></script>
+    <script src="src/<?= VERSION ?>/js/date.js"></script>
+    <script src="src/<?= VERSION ?>/js/common/certificate.js"></script>
 
 </body>
 
