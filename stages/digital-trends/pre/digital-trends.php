@@ -89,7 +89,7 @@ require_once('././src/components/cacheSettings.php');
                     <li>Workshops</li>
                 </ul>
                 <p>Reserva tu lugar en el mayor evento hispano de Marketing Digital. Regístrate ahora y desbloquea la Biblioteca de Recursos gratuita para empezar a inspirarte. </p>
-                <a href="#entradas" class="emms__cta">OBTÉN TU ENTRADA</a>
+                <a class="emms__cta activeFormButton">REGÍSTRATE GRATIS</a>
             </div>
             <div class="emms__hero-registration__bottom emms__fade-in">
                 <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
@@ -97,8 +97,51 @@ require_once('././src/components/cacheSettings.php');
             </div>
         </section>
 
-        <!-- Grid -->
-        <section class="emms__grid emms__grid--3 emms__bg-w">
+
+        <!-- Event numbers -->
+        <section class="emms__eventnumbers emms__eventnumbers--large" id="boxNumberLarge">
+            <div class="emms__container--lg">
+                <h2 class="emms__fade-in">EMMS a lo largo del tiempo</h2>
+                <ul class="emms__fade-in">
+                    <li>
+                        <p class="number" id="count1L">265</p>
+                        <span>REGISTRADOS</span>
+                    </li>
+
+                    <li>
+                        <p class="number" id="count3L">10</p>
+                        <span>Países</span>
+                    </li>
+                    <li>
+                        <p class="number" id="count2L">16</p>
+                        <span>Ediciones</span>
+                    </li>
+                    <li>
+                        <p class="number" id="count4L">190</p>
+                        <span>Speakers</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Calendar -->
+        <section class="emms__calendar" id="agenda">
+            <div class="emms__container--lg">
+                <div class="emms__calendar__title emms__fade-in">
+                    <h2>Agenda EMMS Digital Trends 2023</h2>
+                    <p>¡Seguiremos confirmando speakers muy pronto!</p>
+                </div>
+                <!-- Speakers -->
+                <?php include('./src/components/speakers.php') ?>
+                <!-- End list -->
+                <div class="emms__calendar__bottom emms__fade-in">
+                    <a class="activeFormButton emms__cta">REGÍSTRATE GRATIS</a>
+                </div>
+            </div>
+        </section>
+
+                <!-- Grid -->
+                <section class="emms__grid emms__grid--3 emms__bg-w">
             <div class="emms__container--md">
                 <div class="emms__grid__title">
                     <h2>Vive la experiencia completa en EMMS Digital Trends</h2>
@@ -160,50 +203,7 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                 </ul>
                 <div class="emms__grid__bottom">
-                    <a href="#entradas" class="emms__cta">RESERVA TU CUPO</a>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Event numbers -->
-        <section class="emms__eventnumbers emms__eventnumbers--large" id="boxNumberLarge">
-            <div class="emms__container--lg">
-                <h2 class="emms__fade-in">EMMS a lo largo del tiempo</h2>
-                <ul class="emms__fade-in">
-                    <li>
-                        <p class="number" id="count1L">265</p>
-                        <span>REGISTRADOS</span>
-                    </li>
-
-                    <li>
-                        <p class="number" id="count3L">10</p>
-                        <span>Países</span>
-                    </li>
-                    <li>
-                        <p class="number" id="count2L">16</p>
-                        <span>Ediciones</span>
-                    </li>
-                    <li>
-                        <p class="number" id="count4L">190</p>
-                        <span>Speakers</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Calendar -->
-        <section class="emms__calendar" id="agenda">
-            <div class="emms__container--lg">
-                <div class="emms__calendar__title emms__fade-in">
-                    <h2>Agenda EMMS Digital Trends 2023</h2>
-                    <p>¡Seguiremos confirmando speakers muy pronto!</p>
-                </div>
-                <!-- Speakers -->
-                <?php include('./src/components/speakers.php') ?>
-                <!-- End list -->
-                <div class="emms__calendar__bottom emms__fade-in">
-                    <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
+                    <a class="activeFormButton emms__cta">REGÍSTRATE GRATIS</a>
                 </div>
             </div>
             <div id="entradas"></div>
@@ -565,7 +565,7 @@ require_once('././src/components/cacheSettings.php');
                     <video src="https://goemms.com/src/img/EmmsDigitalTrends.mp4" controls></video>
                 </div>
                 <div class="emms__centralvideo__cta emms__fade-in eventHiddenElements">
-                    <a href="#entradas" class="emms__cta">REGÍSTRATE AHORA</a>
+                    <a class="activeFormButton emms__cta">REGÍSTRATE GRATIS</a>
                     <small class="eventHiddenElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                     <small class="eventHiddenElements eventShowElements"><i>¿Tienes dudas sobre el EMMS 2023?</i> <a href="./registrado#preguntas-frecuentes" target="_blank">Haz clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
                 </div>
@@ -608,10 +608,10 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                 </ul>
                 <div class="emms__userscomments__cta eventHiddenElements">
-                    <a href="#entradas" class="emms__cta emms__fade-in">RESERVA TU ENTRADA</a>
+                    <a class="activeFormButton emms__cta emms__fade-in">REGÍSTRATE GRATIS</a>
                 </div>
                 <div class="emms__userscomments__cta digitalTrendsBtn eventHiddenElements eventShowElements">
-                    <a href="#entradas" class="emms__cta emms__fade-in"><span class="button__text">RESERVA TU ENTRADA</span></a>
+                    <a class="activeFormButton emms__cta emms__fade-in"><span class="button__text">REGÍSTRATE GRATIS</span></a>
                 </div>
             </div>
         </section>
