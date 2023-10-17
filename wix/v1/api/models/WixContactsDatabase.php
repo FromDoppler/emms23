@@ -9,7 +9,7 @@ class WixContactsDatabase {
     public function insertContact($contactData) {
         // Crear la consulta SQL sin escapar valores
         try{
-            $query = "INSERT INTO wix_contacts (contact_id, contact_name, contact_email, paidplan_title, paidplan_startdate, paidplan_subscriptionid, paidplan_id, paidplan_orderid, paidplan_price, paidplan_paymentmethod, invited_by, `status`) VALUES (
+            $query = "INSERT INTO wix_contacts (contact_id, contact_name, contact_email, paidplan_title, paidplan_startdate, paidplan_subscriptionid, paidplan_id, paidplan_orderid, paidplan_price, paidplan_paymentmethod, invited_by, create_wix_member, add_doppler_list) VALUES (
                 '{$contactData['contact_id']}',
                 '{$contactData['contact_name']}',
                 '{$contactData['contact_email']}',
@@ -21,7 +21,9 @@ class WixContactsDatabase {
                 '{$contactData['paidplan_price']}',
                 '{$contactData['paidplan_paymentmethod']}',
                 " . (isset($contactData['invited_by']) ? "'{$contactData['invited_by']}'" : "NULL") . ",
-                '{$contactData['status']}'
+                '{$contactData['create_wix_member']}',
+                '{$contactData['add_doppler_list']}'
+
             )";
             if ($this->db->query($query)) {
                 return true; // Insercion exitosa

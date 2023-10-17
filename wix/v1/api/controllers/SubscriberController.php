@@ -54,10 +54,11 @@ class SubscriberController
         return $jsonData;
     }
 
-    private function CreateWixContact($padre, $invitado = null){
+    private function CreateWixContact($padre, $addDopplerList, $invitado = null){
         if (!$invitado) {
             $wixUserData = $padre;
-            $wixUserData['status'] = 'success';
+            $wixUserData['create_wix_member'] = 'success';
+            $wixUserData['add_doppler_list'] = $addDopplerList;
             $isWixMemberSuccess = true;
         }else{
             $isWixMemberSuccess = (( isset($invitado['Order']) && isset($invitado['Order']['order']) )) || false;
@@ -75,7 +76,8 @@ class SubscriberController
                     'paidplan_price' => '0',
                     'paidplan_paymentmethod' => 'invited',
                     'invited_by' => $padre['contact_email'],
-                    'status' => ($isWixMemberSuccess)?'success':'fail'
+                    'create_wix_member' => ($isWixMemberSuccess)?'success':'fail',
+                    'add_doppler_list' => $addDopplerList
                 ];
             }
             //creo la conexion a la db
@@ -91,21 +93,20 @@ class SubscriberController
         foreach ($allUsersData as $index => $email) {
             //Guardar el contacto wix en la base de datos
             // Asignar acceso a plan invitado
+            $dopplerHandler = new SubscriberDopplerList();
             if ($index!=="user1") {
                 $wixUserData = $wixApi->setInvitadoPlanMember($email);
                 if ($wixUserData) {
                     $wixUserData['email'] = $email;
-                    $wixContactObject = $this->CreateWixContact($compradorData, $wixUserData);
                     $user = $this->CreateUserObj($email, $compradorData, true);
+                    $addDopplerList = $dopplerHandler->saveSubscription($user);
+                    $wixContactObject = $this->CreateWixContact($compradorData, $addDopplerList, $wixUserData);
                 }
             }else {
-                $wixContactObject = $this->CreateWixContact($compradorData);
                 $user = $this->CreateUserObj($email, $compradorData, false);
+                $addDopplerList = $dopplerHandler->saveSubscription($user);
+                $wixContactObject = $this->CreateWixContact($compradorData, $addDopplerList);
             }
-
-            // Guardar la suscripcion en Doppler
-            $dopplerHandler = new SubscriberDopplerList();
-            $dopplerHandler->saveSubscription($user);
 
             // Guardar la suscripcion en la base de datos
             $subscriberDatabase = new SubscriberDatabase($user);
@@ -115,7 +116,7 @@ class SubscriberController
             saveSubscriptionSpreadSheet($user);
 
             //Enviar email de nuevo usuario
-            if (isset($wixContactObject['status']) && $wixContactObject['status'] === "success" ) {
+            if (isset($wixContactObject['create_wix_member']) && $wixContactObject['create_wix_member'] === "success" ) {
                 $user['paidplan_title'] = $wixContactObject['paidplan_title'];
                 $user['paidplan_startdate'] = $wixContactObject['paidplan_startdate'];
                 $user['paidplan_price'] = $wixContactObject['paidplan_price'];

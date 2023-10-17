@@ -44,7 +44,8 @@ CREATE TABLE wix_contacts (
     paidplan_price VARCHAR(255),
     paidplan_paymentmethod VARCHAR(255),
     invited_by VARCHAR(255),
-    `status` VARCHAR(150)
+    create_wix_member VARCHAR(150),
+    add_doppler_list VARCHAR(150)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------

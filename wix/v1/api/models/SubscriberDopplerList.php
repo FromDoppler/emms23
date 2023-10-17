@@ -1,6 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/Doppler.php');
-
+require_once 'utils/Logger.php';
 class SubscriberDopplerList
 {
     public function saveSubscription($user)
@@ -8,10 +8,13 @@ class SubscriberDopplerList
         try {
             Doppler::init(ACCOUNT_DOPPLER, API_KEY_DOPPLER);
             Doppler::subscriber($user);
+            return 'success';
         } catch (Exception $e) {
-            $errorMessage = json_encode(["saveSubscriptionDoppler (Almacena en Lista)", $e->getMessage(), ['user' => $user]]);
-            http_response_code(500); // Error interno del servidor
-            throw new Exception($errorMessage);
+            $logger = new Logger();
+            $errorMessage = json_encode(["saveSubscriptionDoppler", $e->getMessage(), ['user' => $user]]);
+            echo $errorMessage;
+            $logger->registrarLog("error", "DOPPLER API", $errorMessage);
+            return 'fail';
         }
     }
 }
