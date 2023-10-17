@@ -258,7 +258,7 @@ class DB
 
     public function getSponsorsCards($type)
     {
-        $sql = $this->query("SELECT * FROM sponsors  WHERE sponsors.visible_card = '1' AND sponsor_type = '$type' ORDER BY priority_card");
+        $sql = $this->query("SELECT * FROM sponsors  WHERE status = '1' AND sponsors.visible_card = '1' AND sponsor_type = '$type' ORDER BY priority_card");
         $result = $sql->fetchAll();
         return $result;
     }
