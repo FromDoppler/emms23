@@ -24,7 +24,7 @@ class SubscriberWix
         $contact_name = $email_parts[0];
         $resultado = array(
             'contact_id' => $datos['contact.Id'],
-            'contact_name' => $contact_name,
+            'contact_name' => "",
             'contact_email' => $datos['contact.Email[0]'],
             'paidplan_title' => $datos['paidplan.title'],
             'paidplan_startdate' => $datos['paidplan.startdate'],
