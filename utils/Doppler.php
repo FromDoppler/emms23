@@ -79,4 +79,26 @@ class Doppler
             throw new Exception('Doppler: Error ' . $response->detail . ' | errorCode= ' . $response->errorCode);
         endif;
     }
+
+    public static function dobleOptin($data)
+    {
+        $endPointSubscriber = self::urlBase . urlencode(self::$account) . '/lists/' . $data['list'] . '/subscribers/doble-optin/471?api_key=' . self::$apiKey;
+        $dataSubscriber = array(
+            "email" => $data['email']
+        );
+        $dataJson = json_encode($dataSubscriber);
+        $headers = array(
+            'Content-Type: application/json',
+            'Content: ' . strlen($dataJson)
+        );
+        $response = json_decode(self::executeCurl($endPointSubscriber, $dataJson, $headers, 'POST'));
+        if (isset($response->errors)) :
+            foreach ($response->errors as $error) :
+                throw new Exception('Doppler: Error ' . $error->key . '->' . $error->detail);
+            endforeach;
+        endif;
+        if (isset($response->errorCode)) :
+            throw new Exception('Doppler: Error ' . $response->detail . ' | errorCode= ' . $response->errorCode);
+        endif;
+    }
 }
