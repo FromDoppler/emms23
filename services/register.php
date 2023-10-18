@@ -160,6 +160,16 @@ function getCurrentPhase($type)
         exit();
     }
 }
+function sendDobleOptin($user) {
+    try {
+        Doppler::init(ACCOUNT_DOPPLER, API_KEY_DOPPLER);
+        Doppler::dobleOptin($user);
+    } catch (Exception $e) {
+        $errorMessage = $e->getMessage();
+        processError("saveSubscriptionDoppler (Almacena en Lista)", $errorMessage, ['user' => $user]);
+    }
+
+}
 
 function saveSubscriptionDoppler($user)
 {
@@ -168,7 +178,12 @@ function saveSubscriptionDoppler($user)
         Doppler::init(ACCOUNT_DOPPLER, API_KEY_DOPPLER);
         Doppler::subscriber($user);
     } catch (Exception $e) {
-        processError("saveSubscriptionDoppler (Almacena en Lista)", $e->getMessage(), ['user' => $user]);
+        $errorMessage = $e->getMessage();
+        if (stripos($errorMessage, "Unsubscribed") !== false) {
+            sendDobleOptin($user);
+        } else {
+            processError("saveSubscriptionDoppler (Almacena en Lista)", $errorMessage, ['user' => $user]);
+        }
     }
 }
 function saveSubscriptionDopplerTable($user)

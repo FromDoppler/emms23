@@ -10,11 +10,31 @@ class SubscriberDopplerList
             Doppler::subscriber($user);
             return 'success';
         } catch (Exception $e) {
+            $errorMessage = $e->getMessage();
+            if (stripos($errorMessage, "Unsubscribed") !== false) {
+                return $this->dobleOptin($user);
+            } else {
             $logger = new Logger();
             $errorMessage = json_encode(["saveSubscriptionDoppler", $e->getMessage(), ['user' => $user]]);
             echo $errorMessage;
             $logger->registrarLog("error", "DOPPLER API", $errorMessage);
             return 'fail';
+            }
+        }
+    }
+
+    private function dobleOptin($user)
+    {
+        try {
+            Doppler::init(ACCOUNT_DOPPLER, API_KEY_DOPPLER);
+            Doppler::dobleOptin($user);
+            return 'success-doble-optin';
+        } catch (Exception $e) {
+            $logger = new Logger();
+            $errorMessage = json_encode(["dobleOptinDoppler", $e->getMessage(), ['user' => $user]]);
+            echo $errorMessage;
+            $logger->registrarLog("error", "DOPPLER API", $errorMessage);
+            return 'fail-doble-optin';
         }
     }
 }
