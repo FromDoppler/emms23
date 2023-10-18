@@ -98,12 +98,20 @@ class SubscriberController
                 $wixUserData = $wixApi->setInvitadoPlanMember($email);
                 if ($wixUserData) {
                     $wixUserData['email'] = $email;
+                    //cargo el user en la lista free de DT
                     $user = $this->CreateUserObj($email, $compradorData, true);
+                    $addDopplerList = $dopplerHandler->saveSubscription($user);
+                    //cargo el user en la lista paga de DT WIX
+                    $user = $this->CreateUserObj($email, $compradorData, true, LIST_LANDING_DIGITALT_WIX);
                     $addDopplerList = $dopplerHandler->saveSubscription($user);
                     $wixContactObject = $this->CreateWixContact($compradorData, $addDopplerList, $wixUserData);
                 }
             }else {
+                //cargo el user en la lista free de DT
                 $user = $this->CreateUserObj($email, $compradorData, false);
+                $addDopplerList = $dopplerHandler->saveSubscription($user);
+                //cargo el user en la lista paga de DT WIX
+                $user = $this->CreateUserObj($email, $compradorData, false, LIST_LANDING_DIGITALT_WIX);
                 $addDopplerList = $dopplerHandler->saveSubscription($user);
                 $wixContactObject = $this->CreateWixContact($compradorData, $addDopplerList);
             }
@@ -164,7 +172,7 @@ class SubscriberController
         return $planMappings[$paidplan_id] ?? null;
     }
 
-    private function CreateUserObj($email, $compradorData, $hasPadre)
+    private function CreateUserObj($email, $compradorData, $hasPadre, $listId = LIST_LANDING_DIGITALT)
     {
         $emailPadre = $compradorData['contact_email'];
         $tiketType = $this->getTiketType($compradorData['paidplan_id'], $hasPadre);
@@ -198,7 +206,7 @@ class SubscriberController
             'type' => "digital-trends",
             'tiketType' => $tiketType,
             'form_id' => "pre",
-            'list' => LIST_LANDING_DIGITALT,
+            'list' => $listId,
             'subject' => (($hasPadre)? "Fuiste Invitado! - $tiketType " : "Compraste! - $tiketType")
         ];
     }
