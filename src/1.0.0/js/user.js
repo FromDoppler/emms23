@@ -38,9 +38,26 @@ const checkEncodeUrl = () => {
 
 
 const userRegisteredInEvent = (event) => {
-    const userEvents = localStorage.getItem('events');
-    if (userEvents) {
-        const searchedEvent = JSON.parse(userEvents).find(userEvent => userEvent === event);
+    let eventsArray = localStorage.getItem('events');
+
+    if (eventsArray) {
+        try {
+            // Try to parse the value as JSON (array)
+            eventsArray = JSON.parse(eventsArray);
+
+            if (!Array.isArray(eventsArray)) {
+                // If it is not an array, create a new array and add the value
+                eventsArray = [eventsArray];
+                localStorage.setItem('events', JSON.stringify(eventsArray));
+            }
+
+        } catch (error) {
+            // If it cannot be parsed as JSON, assume it is a single value and create a new array
+            eventsArray = [eventsArray];
+            localStorage.setItem('events', JSON.stringify(eventsArray));
+        }
+
+        const searchedEvent = eventsArray.find(userEvent => userEvent === event);
         return (searchedEvent === undefined ? false : true);
     }
     return false;

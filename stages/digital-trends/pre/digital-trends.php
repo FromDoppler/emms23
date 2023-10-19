@@ -89,7 +89,8 @@ require_once('././src/components/cacheSettings.php');
                     <li>Workshops</li>
                 </ul>
                 <p>Reserva tu lugar en el mayor evento hispano de Marketing Digital. Regístrate ahora y desbloquea la Biblioteca de Recursos gratuita para empezar a inspirarte. </p>
-                <a class="emms__cta activeFormButton">REGÍSTRATE GRATIS</a>
+                <a class="emms__cta activeFormButton eventHiddenElements">REGÍSTRATE GRATIS</a>
+                <a class="emms__cta activeButtonWithoutForm eventHiddenElements eventShowElements"><span class="button__text">REGÍSTRATE GRATIS</span></a>
             </div>
             <div class="emms__hero-registration__bottom emms__fade-in">
                 <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
@@ -135,13 +136,14 @@ require_once('././src/components/cacheSettings.php');
                 <?php include('./src/components/speakers.php') ?>
                 <!-- End list -->
                 <div class="emms__calendar__bottom emms__fade-in">
-                    <a class="activeFormButton emms__cta">REGÍSTRATE GRATIS</a>
+                    <a class="emms__cta activeFormButton eventHiddenElements">REGÍSTRATE GRATIS</a>
+                    <a class="emms__cta activeButtonWithoutForm eventHiddenElements eventShowElements"><span class="button__text">REGÍSTRATE GRATIS</span></a>
                 </div>
             </div>
         </section>
 
-                <!-- Grid -->
-                <section class="emms__grid emms__grid--3 emms__bg-w">
+        <!-- Grid -->
+        <section class="emms__grid emms__grid--3 emms__bg-w">
             <div class="emms__container--md">
                 <div class="emms__grid__title">
                     <h2>Vive la experiencia completa en EMMS Digital Trends</h2>
@@ -203,7 +205,8 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                 </ul>
                 <div class="emms__grid__bottom">
-                    <a class="activeFormButton emms__cta">REGÍSTRATE GRATIS</a>
+                    <a class="emms__cta activeFormButton eventHiddenElements">REGÍSTRATE GRATIS</a>
+                    <a class="emms__cta activeButtonWithoutForm eventHiddenElements eventShowElements"><span class="button__text">REGÍSTRATE GRATIS</span></a>
                 </div>
             </div>
             <div id="entradas"></div>
@@ -520,7 +523,7 @@ require_once('././src/components/cacheSettings.php');
         </div>
 
         <!-- Features -->
-<!--         <div class="emms__features emms__features--icon-top">
+        <!--         <div class="emms__features emms__features--icon-top">
             <div class="emms__features__title emms__fade-in">
                 <img class="icon-vip" src="src/img/icons/icon-star-gradient.png" alt="Icon">
                 <h2>Exclusivo para asistentes VIP y Packs Empresas</h2>
@@ -683,7 +686,7 @@ require_once('././src/components/cacheSettings.php');
                     <div class="emms__companies__divisor"></div>
                     <h3>MEDIA PARTNERS STARTERS</h3>
                     <ul class="emms__companies__list emms__companies__list  emms__fade-in" id="mediaPartenersStarters">
-                    <?php $sponsors = $db->getSponsorsByType('STARTER');
+                        <?php $sponsors = $db->getSponsorsByType('STARTER');
                         foreach ($sponsors as $sponsor) : ?>
                             <li class="emms__companies__list__item">
                                 <?php if ($sponsor['link_site']) : ?>
