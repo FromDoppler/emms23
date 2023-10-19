@@ -252,10 +252,10 @@ require_once('././src/components/cacheSettings.php');
                                 <div class="emms__eventCards__list__item__picture">
                                     <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
                                 </div>
-                                <?php if ($ecommerceStates['isDuring']) : ?>
+                                <?php if ($digitalTrendsStates['isDuring']) : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>NOVIEMBRE</p>
+                                            <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -264,10 +264,10 @@ require_once('././src/components/cacheSettings.php');
                                             <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
                                         </div>
                                     </div>
-                                <?php elseif ($ecommerceStates['isPost']) : ?>
+                                <?php elseif ($digitalTrendsStates['isPost']) : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>NOVIEMBRE</p>
+                                            <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -279,7 +279,7 @@ require_once('././src/components/cacheSettings.php');
                                 <?php else : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>NOVIEMBRE</p>
+                                            <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -295,10 +295,10 @@ require_once('././src/components/cacheSettings.php');
                                     <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
                                     <p>YA TE HAS REGISTRADO</p>
                                 </div>
-                                <?php if ($ecommerceStates['isDuring'] || $ecommerceStates['isPost']) : ?>
+                                <?php if ($digitalTrendsStates['isDuring'] || $digitalTrendsStates['isPost']) : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>NOVIEMBRE</p>
+                                           <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -310,7 +310,7 @@ require_once('././src/components/cacheSettings.php');
                                 <?php else : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>NOVIEMBRE</p>
+                                           <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -450,10 +450,10 @@ require_once('././src/components/cacheSettings.php');
                                 <div class="emms__eventCards__list__item__picture">
                                     <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
                                 </div>
-                                <?php if ($ecommerceStates['isDuring']) : ?>
+                                <?php if ($digitalTrendsStates['isDuring']) : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>NOVIEMBRE</p>
+                                            <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -462,10 +462,10 @@ require_once('././src/components/cacheSettings.php');
                                             <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
                                         </div>
                                     </div>
-                                <?php elseif ($ecommerceStates['isPost']) : ?>
+                                <?php elseif ($digitalTrendsStates['isPost']) : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>NOVIEMBRE</p>
+                                            <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -477,7 +477,7 @@ require_once('././src/components/cacheSettings.php');
                                 <?php else : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>NOVIEMBRE</p>
+                                            <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -493,10 +493,10 @@ require_once('././src/components/cacheSettings.php');
                                     <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
                                     <p>YA TE HAS REGISTRADO</p>
                                 </div>
-                                <?php if ($ecommerceStates['isDuring'] || $ecommerceStates['isPost']) : ?>
+                                <?php if ($digitalTrendsStates['isDuring'] || $digitalTrendsStates['isPost']) : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>NOVIEMBRE</p>
+                                            <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -508,7 +508,7 @@ require_once('././src/components/cacheSettings.php');
                                 <?php else : ?>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                            <p>NOVIEMBRE</p>
+                                            <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>

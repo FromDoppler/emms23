@@ -166,17 +166,13 @@ require_once('././src/components/cacheSettings.php');
                             </div>
                             <div class="emms__eventCards__list__item__text">
                                 <div class="emms__eventCards__list__item__text--corner">
-                                    <p>NOVIEMBRE</p>
+                                    <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
                                 </div>
                                 <h3>EMMS Digital Trends</h3>
                                 <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <?php if ($ecommerceStates['isPre']) : ?>
-                                        <p><strong>PRÓXIMAMENTE:</strong> ¡En breve te comunicaremos todas las novedades de este evento!</p>
-                                    <?php else : ?>
-                                        <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
-                                    <?php endif ?>
+                                    <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
                                 </div>
                             </div>
                         </li>
@@ -235,11 +231,7 @@ require_once('././src/components/cacheSettings.php');
                                 <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <?php if ($ecommerceStates['isPre']) : ?>
-                                        <p><strong>PRÓXIMAMENTE:</strong> ¡En breve te comunicaremos todas las novedades de este evento!</p>
-                                    <?php else : ?>
-                                        <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
-                                    <?php endif ?>
+                                    <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
                                 </div>
                             </div>
                         </li>
