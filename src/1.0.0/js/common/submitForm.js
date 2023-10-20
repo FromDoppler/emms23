@@ -51,7 +51,7 @@ const submitFormFetch = async (form, fetchType) => {
                 body: JSON.stringify(userData),
             });
             return {
-                fetchResp
+                fetchResp, encodeEmail
             };
         } catch (error) {
             customError('Fetch error', error);
