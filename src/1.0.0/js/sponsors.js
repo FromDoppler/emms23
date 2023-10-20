@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitForm = async (e) => {
         const slug = sessionStorage.getItem('currentSlug')
 
-        await submitFormFetch(sponsorsForm, 'ecommerce').then(({ fetchResp: resp, encodeEmail }) => {
+        await submitFormFetch(sponsorsForm, 'digital-trends').then(({ fetchResp: resp, encodeEmail }) => {
             if (!resp.ok) throw new Error('Server error on Sponsor fetch', resp?.status);
             localStorage.setItem('dplrid', encodeEmail);
             localStorage.setItem('lastEventsUpdateTime', new Date());
