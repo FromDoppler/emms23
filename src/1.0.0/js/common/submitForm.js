@@ -95,21 +95,34 @@ const submitWithoutForm = async (fetchType) => {
     }
 
 }
-
 const setEventInLocalStorage = (fetchType, encodeEmail) => {
-    let events;
-    if (localStorage.getItem('events')) {
-        events = JSON.parse(localStorage.getItem('events'));
+    let events = localStorage.getItem('events');
+    if (events) {
+        try {
+            // Try to parse the value as JSON (array)
+            events = JSON.parse(events);
+
+            if (!Array.isArray(events)) {
+                // If it is not an array, create a new array and add the value
+                events = [events];
+            }
+        } catch (error) {
+            // If it cannot be parsed as JSON, assume it is a single value and create a new array
+            events = [events];
+        }
+
         events.push(fetchType);
-        localStorage.setItem('events', JSON.stringify(events));
     } else {
         events = [fetchType];
         localStorage.setItem('dplrid', encodeEmail);
-        localStorage.setItem('events', JSON.stringify(events));
     }
-    localStorage.setItem('lastEventsUpdateTime', new Date());
+
+    localStorage.setItem('events', JSON.stringify(events));
+    localStorage.setItem('lastEventsUpdateTime', new Date().toString());
     return JSON.stringify(events);
 }
+
+
 
 export {
     submitFormFetch,
