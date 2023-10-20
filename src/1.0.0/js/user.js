@@ -8,8 +8,14 @@ const _setLocalStorageEvents = (userEvents) => {
     localStorage.setItem('lastEventsUpdateTime', new Date());
 }
 
+const clearUndefinedStorage = () => {
+    if (localStorage.getItem('dplrid') === "undefined") {
+        localStorage.clear();
+    }
+}
 
 const checkEncodeUrl = () => {
+    clearUndefinedStorage();
     if (encodeUser) {
         //Check if it is an old user that was saved before the new JSON logic
         if (encodeUser.includes('{')) {
