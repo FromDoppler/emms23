@@ -78,6 +78,10 @@ p {
     position: relative;
 }
 
+.emms__cta.sm{
+    padding: 12px 30px;
+}
+
 .emms__cta:hover {
     background: #026c3c;
     transition-duration: 0.2s;
