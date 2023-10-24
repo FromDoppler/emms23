@@ -63,12 +63,25 @@
     box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
     position: relative;
     padding: 0 calc(100% - 350px) 0 16px;
+    pointer-events: visible;
 }
 
 .emms__plans__benefits--dk ul li::after {
     content: "•";
     position: absolute;
     left: 0;
+}
+
+.emms__plans__benefits--dk ul li p{
+    font-weight: 600;
+}
+
+.emms__plans__benefits--dk ul li p a{
+    color: #008046;
+}
+
+.emms__plans__benefits--dk ul li p a:hover{
+    text-decoration: underline;
 }
 
 .emms__plans__cards-container {
@@ -212,7 +225,8 @@
     display: block;
 }
 
-.emms__plans__card__inside a {
+.emms__plans__card__inside__top a,
+.emms__plans__card__inside__bottom a {
     font-size: 16px;
     font-weight: 600;
     line-height: 1;
@@ -225,12 +239,14 @@
     transition-duration: .2s;
 }
 
-.emms__plans__card__inside a:hover {
+.emms__plans__card__inside__top a:hover,
+.emms__plans__card__inside__bottom a:hover  {
     box-shadow: inset 0px 0px 0 1px #008060;
     transition-duration: .2s;
 }
 
-.emms__plans__card__inside a.inactive{
+.emms__plans__card__inside__top a.inactive,
+.emms__plans__card__inside__bottom a.inactive{
     color: #B4B1A5;
     background: #E7E5DC;
     box-shadow: inset 0px 0px 0 2px #E7E5DC;
@@ -451,6 +467,14 @@
         font-weight: 600;
         color: #333;
         display: block;
+    }
+
+    .emms__plans__card__inside .emms__plans__card__inside__list ul li p a{
+        color: #008046;
+    }
+
+    .emms__plans__card__inside .emms__plans__card__inside__list ul li p a:hover{
+        text-decoration: underline;
     }
 
     .emms__plans__card__inside .emms__plans__card__inside__list .emms__collapse__list.close .emms__collapse__item {
