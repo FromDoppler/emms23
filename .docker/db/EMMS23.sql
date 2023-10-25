@@ -51,6 +51,21 @@ CREATE TABLE wix_contacts (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `subscription_doppler_list_errors`
+--
+DROP TABLE IF EXISTS `subscription_doppler_list_errors`;
+CREATE TABLE subscription_doppler_list_errors (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255),
+    list VARCHAR(255),
+    reason VARCHAR(255),
+    error_code INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `aliados_media_partner_bk`
 --
 

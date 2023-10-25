@@ -168,6 +168,16 @@ class DB
         $this->query("INSERT INTO subscriptions_doppler $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
     }
 
+    public function insertSubscriptionErrors($email, $list, $reason, $errorCode) {
+        $email = $this->connection->real_escape_string($email);
+        $list = $this->connection->real_escape_string($list);
+        $reason = $this->connection->real_escape_string($reason);
+        $errorCode = $this->connection->real_escape_string($errorCode);
+        $sql = "INSERT INTO subscription_doppler_list_errors (email, list, reason, error_code) VALUES ('$email', '$list', '$reason', '$errorCode')";
+        $this->query($sql);
+        $this->query->close();
+    }
+
     public function getSubscriptionsDoppler()
     {
         $sql = $this->query("SELECT * FROM subscriptions_doppler order by id DESC LIMIT 100");

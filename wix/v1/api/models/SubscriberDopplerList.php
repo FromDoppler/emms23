@@ -1,5 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/Doppler.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/SubscriptionErrors.php');
 require_once 'utils/Logger.php';
 class SubscriberDopplerList
 {
@@ -17,6 +18,8 @@ class SubscriberDopplerList
             $logger = new Logger();
             $errorMessage = json_encode(["saveSubscriptionDoppler", $e->getMessage(), ['user' => $user]]);
             echo $errorMessage;
+            $subscriptionErrors = new SubscriptionErrors();
+            $subscriptionErrors->saveSubscriptionErrors($user['email'], $user['list'], $errorMessage);
             $logger->registrarLog("error", "DOPPLER API", $errorMessage);
             return 'fail';
             }
