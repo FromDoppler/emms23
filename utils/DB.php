@@ -168,7 +168,8 @@ class DB
         $this->query("INSERT INTO subscriptions_doppler $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
     }
 
-    public function insertSubscriptionErrors($email, $list, $reason, $errorCode) {
+    public function insertSubscriptionErrors($email, $list, $reason, $errorCode)
+    {
         $email = $this->connection->real_escape_string($email);
         $list = $this->connection->real_escape_string($list);
         $reason = $this->connection->real_escape_string($reason);
@@ -187,37 +188,80 @@ class DB
 
     public function saveRegistered($subscription)
     {
-        $registered = $this->query("SELECT id FROM registered WHERE email='" . $subscription['email'] . "'");
+        $email = $this->connection->real_escape_string($subscription['email']);
+
+        $registered = $this->query("SELECT id FROM registered WHERE email=?", [$email]);
+
         if ($registered->fetchArray()) {
-            //update
-            $fields = "firstname ='" . $subscription['firstname'] . "', register ='" . $subscription['register'] . "', phase ='" . $subscription['form_id'] . "', phone ='" . $subscription['phone'] . "', company ='" . $subscription['company'] . "', jobPosition ='" . $subscription['jobPosition'] . "', ";
-            $fields .= "ecommerce ='" . $subscription['ecommerce'] . "', `digital-trends` ='" . $subscription['digital_trends'] . "', source_utm ='" . $subscription['source_utm'] . "', medium_utm ='" . $subscription['medium_utm'] . "', campaign_utm ='" . $subscription['campaign_utm'] . "', ";
-            $fields .= "content_utm ='" . $subscription['content_utm'] . "', term_utm ='" . $subscription['term_utm'] . "' ";
-            $update = $this->query("UPDATE registered SET $fields WHERE email='" . $subscription['email'] . "'");
+            // Update only non-null or empty fields
+            $updateFields = [];
+            $updateValues = [];
+
+            // Defines the list of fields in the database
+            $dbFields = [
+                'phase',
+                'register',
+                'firstname',
+                'phone',
+                'company',
+                'jobPosition',
+                'ecommerce',
+                'digital-trends',
+                'source_utm',
+                'medium_utm',
+                'campaign_utm',
+                'content_utm',
+                'term_utm',
+            ];
+
+            foreach ($dbFields as $field) {
+                // Use the original key, but check if it exists in $subscription
+                if ($field === 'phase' && isset($subscription['form_id'])) {
+                    $updateFields[] = "$field = ?";
+                    $updateValues[] = $this->connection->real_escape_string($subscription['form_id']);
+                } elseif ($field === 'digital-trends' && isset($subscription['digital_trends'])) {
+                    // Use backticks to escape the column name with hyphens
+                    $updateFields[] = "`$field` = ?";
+                    $updateValues[] = $this->connection->real_escape_string($subscription['digital_trends']);
+                } elseif (isset($subscription[$field]) || $subscription[$field] === 0) {
+                    $updateFields[] = "$field = ?";
+                    $updateValues[] = $this->connection->real_escape_string($subscription[$field]);
+                }
+            }
+
+            // Update the database only if there are fields to update
+            if (!empty($updateFields)) {
+                $updateFields = implode(', ', $updateFields);
+                $updateValues[] = $email;
+
+                $this->query("UPDATE registered SET $updateFields WHERE email=?", $updateValues);
+            }
         } else {
-            //insert
             $fields = "(`email`, `phase`, `register`, `firstname`, `phone`, `company`, `jobPosition`, `ecommerce`, `digital-trends`, ";
             $fields .= "`source_utm`, `medium_utm`, `campaign_utm`, `content_utm`, `term_utm`)";
 
-            $values = array(
-                $subscription['email'],
-                $subscription['form_id'],
-                $subscription['register'],
-                $subscription['firstname'],
-                $subscription['phone'],
-                $subscription['company'],
-                $subscription['jobPosition'],
-                $subscription['ecommerce'],
-                $subscription['digital_trends'],
-                $subscription['source_utm'],
-                $subscription['medium_utm'],
-                $subscription['campaign_utm'],
-                $subscription['content_utm'],
-                $subscription['term_utm']
-            );
+            $values = [
+                $email,
+                $this->connection->real_escape_string($subscription['form_id']),
+                $this->connection->real_escape_string($subscription['register']),
+                $this->connection->real_escape_string($subscription['firstname']),
+                $this->connection->real_escape_string($subscription['phone']),
+                $this->connection->real_escape_string($subscription['company']),
+                $this->connection->real_escape_string($subscription['jobPosition']),
+                $this->connection->real_escape_string($subscription['ecommerce']),
+                $this->connection->real_escape_string($subscription['digital_trends']),
+                $this->connection->real_escape_string($subscription['source_utm']),
+                $this->connection->real_escape_string($subscription['medium_utm']),
+                $this->connection->real_escape_string($subscription['campaign_utm']),
+                $this->connection->real_escape_string($subscription['content_utm']),
+                $this->connection->real_escape_string($subscription['term_utm'])
+            ];
+
             $this->query("INSERT INTO `registered` $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
         }
     }
+
+
 
     public function google_oauth_is_table_empty()
     {
