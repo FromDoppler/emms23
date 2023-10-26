@@ -77,10 +77,12 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="emms__calendar__list__item__country">
-                        <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
-                        <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
-                    </div>
+                    <?php if (($speaker['time']) != '') : ?>
+                        <div class="emms__calendar__list__item__country">
+                            <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
+                            <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>
@@ -143,10 +145,12 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="emms__calendar__list__item__country">
-                        <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
-                        <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
-                    </div>
+                    <?php if (($speaker['time']) != '') : ?>
+                        <div class="emms__calendar__list__item__country">
+                            <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
+                            <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>
@@ -235,10 +239,12 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="emms__calendar__list__item__country">
-                        <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
-                        <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
-                    </div>
+                    <?php if (($speaker['time']) != '') : ?>
+                        <div class="emms__calendar__list__item__country">
+                            <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
+                            <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>
@@ -295,10 +301,12 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="emms__calendar__list__item__country">
-                        <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
-                        <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
-                    </div>
+                    <?php if (($speaker['time']) != '') : ?>
+                        <div class="emms__calendar__list__item__country">
+                            <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
+                            <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>
@@ -387,10 +395,12 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="emms__calendar__list__item__country">
-                        <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
-                        <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
-                    </div>
+                    <?php if (($speaker['time']) != '') : ?>
+                        <div class="emms__calendar__list__item__country">
+                            <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
+                            <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>
@@ -453,10 +463,12 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="emms__calendar__list__item__country">
-                        <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
-                        <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
-                    </div>
+                    <?php if (($speaker['time']) != '') : ?>
+                        <div class="emms__calendar__list__item__country">
+                            <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
+                            <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>
@@ -546,10 +558,12 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="emms__calendar__list__item__country">
-                        <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
-                        <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
-                    </div>
+                    <?php if (($speaker['time']) != '') : ?>
+                        <div class="emms__calendar__list__item__country">
+                            <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
+                            <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>
@@ -606,10 +620,12 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="emms__calendar__list__item__country">
-                        <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
-                        <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
-                    </div>
+                    <?php if (($speaker['time']) != '') : ?>
+                        <div class="emms__calendar__list__item__country">
+                            <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
+                            <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>
@@ -697,10 +713,12 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="emms__calendar__list__item__country">
-                        <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
-                        <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
-                    </div>
+                    <?php if (($speaker['time']) != '') : ?>
+                        <div class="emms__calendar__list__item__country">
+                            <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
+                            <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>
@@ -763,10 +781,12 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="emms__calendar__list__item__country">
-                        <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
-                        <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
-                    </div>
+                    <?php if (($speaker['time']) != '') : ?>
+                        <div class="emms__calendar__list__item__country">
+                            <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
+                            <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>
@@ -856,10 +876,12 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="emms__calendar__list__item__country">
-                        <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
-                        <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
-                    </div>
+                    <?php if (($speaker['time']) != '') : ?>
+                        <div class="emms__calendar__list__item__country">
+                            <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
+                            <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>
@@ -916,10 +938,12 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="emms__calendar__list__item__country">
-                        <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
-                        <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
-                    </div>
+                    <?php if (($speaker['time']) != '') : ?>
+                        <div class="emms__calendar__list__item__country">
+                            <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
+                            <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>
@@ -1008,10 +1032,12 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="emms__calendar__list__item__country">
-                        <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
-                        <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
-                    </div>
+                    <?php if (($speaker['time']) != '') : ?>
+                        <div class="emms__calendar__list__item__country">
+                            <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
+                            <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>
@@ -1074,10 +1100,12 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="emms__calendar__list__item__country">
-                        <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
-                        <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
-                    </div>
+                    <?php if (($speaker['time']) != '') : ?>
+                        <div class="emms__calendar__list__item__country">
+                            <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
+                            <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>
@@ -1166,10 +1194,12 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="emms__calendar__list__item__country">
-                        <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
-                        <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
-                    </div>
+                    <?php if (($speaker['time']) != '') : ?>
+                        <div class="emms__calendar__list__item__country">
+                            <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
+                            <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>
@@ -1226,10 +1256,12 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="emms__calendar__list__item__country">
-                        <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
-                        <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
-                    </div>
+                    <?php if (($speaker['time']) != '') : ?>
+                        <div class="emms__calendar__list__item__country">
+                            <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
+                            <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             <?php endif; ?>
         <?php endforeach; ?>
