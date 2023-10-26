@@ -47,11 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (activeFormButton) {
+        console.log('hola?');
         const formListeners = () => {
 
             const modal = document.getElementById('modalRegister');
-            const popUpForm = document.getElementById('popUpForm');
-
+            // const popUpForm = document.getElementById('popUpForm');
+            const popUpForms = document.querySelectorAll('.popUpForm');
 
             activeFormButton.forEach(btn => {
                 btn.addEventListener('click', () => {
@@ -60,24 +61,35 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
             });
 
-            const submitForm = async (e) => {
-
-                await submitFormFetch(popUpForm, 'digital-trends').then(({ fetchResp: resp, encodeEmail }) => {
-                    popUpForm.querySelector('button').classList.add('button--loading');
+            const submitForm = async (form) => {
+                console.log(form);
+                await submitFormFetch(form, 'digital-trends').then(({ fetchResp: resp, encodeEmail }) => {
+                    const button = form.querySelector('button');
+                    button.classList.add('button--loading');
+                    button.disabled = true;
                     if (!resp.ok) throw new Error('Server error on Sponsor fetch', resp?.status);
                     localStorage.setItem('dplrid', encodeEmail);
                     localStorage.setItem('lastEventsUpdateTime', new Date());
                     window.location.href = (`/digital-trends-registrado`);
                 })
                     .catch((error) => {
-                        popUpForm.querySelector('button').classList.remove('button--loading');
+                        const button = form.querySelector('button');
+                        button.classList.remove('button--loading');
+                        button.disabled = false;
                         customError('Sponsor post error', error);
                     });
 
 
             }
+            console.log(popUpForms);
+            popUpForms.forEach(form => {
+                console.log('holaS', form);
+                form.querySelector('button').addEventListener('click', () => {
+                    console.log('entro', form);
+                    submitForm(form)
+                });
+            })
 
-            popUpForm.querySelector('button').addEventListener('click', submitForm);
         }
         formListeners();
     }

@@ -94,7 +94,7 @@ require_once('././src/components/cacheSettings.php');
                 </div>
                 <div class="emms__hero-registration__form emms__fade-in">
                     <!-- Form -->
-                    <form class="emms__form" id="popUpForm" novalidate autocomplete="off">
+                    <form class="emms__form popUpForm" id="popUpForm" novalidate autocomplete="off">
                         <ul class="emms__form__field-group">
                             <li class="emms__form__field-item">
                                 <div class="holder">
@@ -544,7 +544,7 @@ require_once('././src/components/cacheSettings.php');
         <div id="modalRegister" class="emms__register-modal">
             <div class="emms__register-modal__window">
                 <!-- Form -->
-                <form class="emms__form" id="popUpForm" novalidate autocomplete="off">
+                <form class="emms__form popUpForm" id="popUpForm" novalidate autocomplete="off">
                     <h4><strong>Regístrate al EMMS DT 2023 ✍</strong><br>Reserva tu cupo en el máximo evento de Marketing Digital en Latam y España</h4>
                     <ul class="emms__form__field-group">
                         <li class="emms__form__field-item">
@@ -589,21 +589,21 @@ require_once('././src/components/cacheSettings.php');
                         <li class="emms__form__field-item">
                             <div class="holder">
                                 <label class="required-label" for="telefono">Teléfono</label>
-                                <input type="tel" name="phone" id="phone" class="phone phone-number" autocomplete="off">
+                                <input type="tel" name="phone" id="phone2" class="phone phone-number" autocomplete="off">
                             </div>
                         </li>
                     </ul>
                     <ul class="emms__form__field-group">
                         <li class="emms__form__field-item emms__form__field-item__checkbox">
                             <div class="holder">
-                                <input name="privacy" type="checkbox" id="acepto-politicas" value="true" class="required check acept-politic"><span class="checkmark"></span><label for="acepto-politicas">
+                                <input name="privacy" type="checkbox" id="acepto-politicas2" value="true" class="required check acept-politic"><span class="checkmark"></span><label for="acepto-politicas2">
                                     Acepto la Pol&iacute;tica de Privacidad de Doppler *
                                 </label>
                             </div>
                         </li>
                         <li class="emms__form__field-item emms__form__field-item__checkbox">
                             <div class="holder">
-                                <input name="promotions" type="checkbox" id="acepto-promociones" value="true"><span class="checkmark"></span><label for="acepto-promociones">
+                                <input name="promotions" type="checkbox" id="acepto-promociones2" value="true"><span class="checkmark"></span><label for="acepto-promociones2">
                                     Acepto recibir promociones de Doppler</label>
                             </div>
                         </li>

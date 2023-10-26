@@ -446,7 +446,7 @@ require_once('././src/components/cacheSettings.php');
     <?php include_once('././src/components/footer.php'); ?>
 
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
-
+    <script src="src/<?= VERSION ?>/js/date.js"></script>
 </body>
 
 </html>
