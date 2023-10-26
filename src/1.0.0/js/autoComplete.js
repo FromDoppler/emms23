@@ -1,3 +1,4 @@
+// Example url: http://localhost/digital-trends?autocomplete=true&email=mroy&alias=true
 // Función para generar un alias aleatorio que comienza con el símbolo '+'
 const generateTimestampAlias = () => {
     const now = new Date();
@@ -71,3 +72,4 @@ const completeForms = () => {
 
 // Llama a la función para completar los formularios
 completeForms();
+// Example url: http://localhost/digital-trends?autocomplete=true&email=mroy&alias=true
