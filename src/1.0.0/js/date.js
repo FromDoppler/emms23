@@ -1,8 +1,8 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', () => {
-    const dateStr = '2023-05-16 12:00:00';
-    const utcDate = '2023-05-16T15:00:00.000Z';
+    const dateStr = '2023-05-16 11:00:00';
+    const utcDate = '2023-05-16T14:00:00.000Z';
     var eventDate = new Date(utcDate);
     const today = new Date();
 
