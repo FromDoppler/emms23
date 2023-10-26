@@ -27,6 +27,13 @@ function isSubmitValid($ip)
     }
 }
 
+function getFieldValue($field, $default = null)
+{
+    $_POST = json_decode(file_get_contents('php://input'), true);
+    return isset($_POST[$field]) ? $_POST[$field] : $default;
+}
+
+
 function processEvents($events)
 {
     $ecommerce = 0;
@@ -48,38 +55,35 @@ function setDataRequest($ip, $countryGeo)
 {
 
     $requestWithoutForm = false;
-    $_POST = json_decode(file_get_contents('php://input'), true);
-    $events = isset($_POST['events']) ? $_POST['events'] : null;
-    $eventsData = processEvents(json_decode($events));
+    $eventsData = processEvents(json_decode(getFieldValue('events')));
     $ecommerce = $eventsData['ecommerce'];
     $digital_trends = $eventsData['digital_trends'];
-    $email = isset($_POST['email']) ? $_POST['email'] : null;
-    $encode_email = isset($_POST['encodeEmail']) ? $_POST['encodeEmail'] : null;
-    $company     = isset($_POST['company']) ? $_POST['company'] : null;
-    $jobPosition     = isset($_POST['jobPosition']) ? $_POST['jobPosition'] : null;
-    $phone     = isset($_POST['phone']) ? $_POST['phone'] : null;
-    $firstname = isset($_POST['name']) ? $_POST['name'] : null;
+    $firstname = getFieldValue('name');
     if ($firstname === null) {
         $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-        $firstname = $db->getUserNameByEmail($email)[0];
+        $firstname = $db->getUserNameByEmail(getFieldValue('email'))[0]['firstname'];
         $db->close();
-        $firstname = $firstname["firstname"];
         $requestWithoutForm = true;
     }
-    $privacy = isset($_POST['acceptPolicies']) ? $_POST['acceptPolicies']     : false;
+    $email = getFieldValue('email');
+    $encode_email = getFieldValue('encodeEmail');
+    $company     =  getFieldValue('company');
+    $jobPosition     = getFieldValue('jobPosition');
+    $phone     = getFieldValue('phone');
+    $privacy = getFieldValue('acceptPolicies', false);
     if ($requestWithoutForm) {
         $privacy = true;
     }
-    $promotions = isset($_POST['acceptPromotions']) ? $_POST['acceptPromotions'] : false;
-    $source_utm = isset($_POST['utm_source']) ? $_POST['utm_source'] : null;
-    $medium_utm = isset($_POST['utm_medium']) ? $_POST['utm_medium'] : null;
-    $campaign_utm = isset($_POST['utm_campaign']) ? $_POST['utm_campaign']    : null;
-    $content_utm = isset($_POST['utm_content']) ? $_POST['utm_content'] : null;
-    $term_utm = isset($_POST['utm_term']) ? $_POST['utm_term'] : null;
-    $origin = isset($_POST['origin']) ? $_POST['origin'] : null;
-    $type = isset($_POST['type']) ? $_POST['type'] : null;
+    $promotions = getFieldValue('acceptPromotions', false);
+    $source_utm = getFieldValue('utm_source');
+    $medium_utm = getFieldValue('utm_medium');
+    $campaign_utm = getFieldValue('utm_campaign');
+    $content_utm = getFieldValue('utm_content');
+    $term_utm = getFieldValue('utm_term');
+    $origin = getFieldValue('origin');
+    $type = getFieldValue('type');
     $phase = getCurrentPhase($type);
-    $list = ($type === 'ecommerce' ? LIST_LANDING_ECOMMERCE : LIST_LANDING_DIGITALT);
+    $list = ($type === 'ecommerce') ? LIST_LANDING_ECOMMERCE : LIST_LANDING_DIGITALT;
     $subject = getSubjectEmail($type, $phase);
     $user = array(
         'register' => date("Y-m-d h:i:s A"),
@@ -113,6 +117,7 @@ function setDataRequest($ip, $countryGeo)
         return $user;
     } catch (Exception $e) {
         processError("setDataRequest (Captura datos)", $e->getMessage(), ['user' => $user]);
+        die();
     }
 }
 
@@ -161,7 +166,8 @@ function getCurrentPhase($type)
         exit();
     }
 }
-function sendDobleOptin($user) {
+function sendDobleOptin($user)
+{
     try {
         Doppler::init(ACCOUNT_DOPPLER, API_KEY_DOPPLER);
         Doppler::dobleOptin($user);
@@ -169,7 +175,6 @@ function sendDobleOptin($user) {
         $errorMessage = $e->getMessage();
         processError("saveSubscriptionDoppler (Almacena en Lista)", $errorMessage, ['user' => $user]);
     }
-
 }
 
 function saveSubscriptionDoppler($user)
