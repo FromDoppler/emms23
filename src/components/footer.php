@@ -17,7 +17,13 @@
          <a href="https://www.fromdoppler.com/es/legal/privacidad/" target="_blank">Políticas de privacidad y legales</a>
      </div>
  </footer>
-
+  <?php
+    if (!(PRODUCTION)) {
+  ?>
+    <script src="src/<?= VERSION ?>/js/autoComplete.js"></script>
+  <?php
+    }
+  ?>
  <script src="src/<?= VERSION ?>/flickity/flickity.pkgd.min.js"></script>
  <script src="src/<?= VERSION ?>/js/commonAnimations.js"></script>
  <script src="https://www.fromdoppler.com/wp-content/themes/doppler_site/utm/utm.js"></script>
