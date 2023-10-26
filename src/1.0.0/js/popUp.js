@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (activeFormButton) {
-        console.log('hola?');
+
         const formListeners = () => {
 
             const modal = document.getElementById('modalRegister');
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const submitForm = async (form) => {
-                console.log(form);
+
                 await submitFormFetch(form, 'digital-trends').then(({ fetchResp: resp, encodeEmail }) => {
                     const button = form.querySelector('button');
                     button.classList.add('button--loading');
@@ -81,11 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
             }
-            console.log(popUpForms);
+
             popUpForms.forEach(form => {
-                console.log('holaS', form);
                 form.querySelector('button').addEventListener('click', () => {
-                    console.log('entro', form);
                     submitForm(form)
                 });
             })
