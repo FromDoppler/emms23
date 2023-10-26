@@ -84,11 +84,33 @@ require_once('././src/components/cacheSettings.php');
                     <div class="emms__hero-registration__text__strong__icon"></div>
                     <p>Si aún no tienes tu Entrada VIP, adquiérela ahora para acceder a Workshops prácticos con tus referentes preferidos y sesiones de Networking con cientos de colegas.</p>
                 </div>
-                <a href="#entradas" class="emms__cta">COMPRA TU ENTRADA VIP</a>
+                <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
             </div>
-            <div class="emms__hero-registration__bottom emms__fade-in">
-                <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
-                <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
+            <div class="emms__hero-registration__bottom images emms__fade-in">
+                <p>
+                    <img src="src/img/marquee/google.png" alt="Google">
+                    <img src="src/img/marquee/meta.png" alt="Meta" class="sm">
+                    <img src="src/img/marquee/youtube.png" alt="Youtube">
+                    <img src="src/img/marquee/amazon.png" alt="Amazon">
+                    <img src="src/img/marquee/metricool.png" alt="Metricool">
+                    <img src="src/img/marquee/microsoft.png" alt="Microsoft">
+                    <img src="src/img/marquee/tiktok.png" alt="TikTok" class="sm">
+                    <img src="src/img/marquee/linkedin.png" alt="LinkedIn">
+                    <img src="src/img/marquee/spotify.png" alt="Spotify">
+                    <img src="src/img/marquee/vtex.png" alt="Vtex">
+                </p>
+                <p>
+                    <img src="src/img/marquee/google.png" alt="Google">
+                    <img src="src/img/marquee/meta.png" alt="Meta" class="sm">
+                    <img src="src/img/marquee/youtube.png" alt="Youtube">
+                    <img src="src/img/marquee/amazon.png" alt="Amazon">
+                    <img src="src/img/marquee/metricool.png" alt="Metricool">
+                    <img src="src/img/marquee/microsoft.png" alt="Microsoft">
+                    <img src="src/img/marquee/tiktok.png" alt="TikTok" class="sm">
+                    <img src="src/img/marquee/linkedin.png" alt="LinkedIn">
+                    <img src="src/img/marquee/spotify.png" alt="Spotify">
+                    <img src="src/img/marquee/vtex.png" alt="Vtex">
+                </p>
             </div>
         </section>
 

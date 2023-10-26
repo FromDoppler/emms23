@@ -86,11 +86,11 @@ require_once('././src/components/cacheSettings.php');
                 <div class="emms__hero-registration__text emms__fade-in">
                     <h1><em>EVENTO ONLINE Y GRATUITO - DEL 13 AL 16 DE NOV</em> ¡Vuelve el EMMS Digital Trends!</h1>
                     <ul class="emms__hero-registration__text__checklist">
-                        <li>SPEAKERS INTERNACIONALES</li>
-                        <li>TENDENCIAS E INNOVACIÓN</li>
-                        <li>HERRAMIENTAS Y RECURSOS</li>
+                        <li>CONFERENCIAS</li>
+                        <li>NETWORKING</li>
+                        <li>WORKSHOPS</li>
                     </ul>
-                    <p>Reserva tu lugar en el mayor evento hispano de Marketing Digital. Regístrate ahora y desbloquea la Biblioteca de Recursos gratuita para empezar a inspirarte. </p>
+                    <p>Reserva tu lugar en el mayor evento hispano de Marketing Digital. Regístrate ahora y desbloquea la Biblioteca de Recursos gratuita para empezar a inspirarte.</p>
                 </div>
                 <div class="emms__hero-registration__form emms__fade-in">
                     <!-- Form -->
@@ -158,7 +158,7 @@ require_once('././src/components/cacheSettings.php');
                             </li>
                         </ul>
                         <div class="emms__form__btn">
-                            <button class="emms__cta" id="register-button" type="button"><span class="button__text">ACCEDE GRATIS</span></button>
+                            <button class="emms__cta" id="register-button" type="button"><span class="button__text">REGÍSTRATE GRATIS</span></button>
                         </div>
                         <div class="emms__form__legal close">
                             <a class="emms__form__legal__btn" id="legalBtn">Información básica sobre privacidad </a>
@@ -177,9 +177,31 @@ require_once('././src/components/cacheSettings.php');
                     <!-- End form -->
                 </div>
             </div>
-            <div class="emms__hero-registration__bottom emms__fade-in">
-                <p>IA >> AUTOMATION MARKETING >> UX >> CRO >> MARKETPLACES >> SEO >> RETARGETING >> SOCIAL SELLING >> EMAIL MARKETING >> ESTRATEGIAS DE VENTA >></p>
-                <p>IA >> AUTOMATION MARKETING >> UX >> CRO >> MARKETPLACES >> SEO >> RETARGETING >> SOCIAL SELLING >> EMAIL MARKETING >> ESTRATEGIAS DE VENTA >></p>
+            <div class="emms__hero-registration__bottom images emms__fade-in">
+                <p>
+                    <img src="src/img/marquee/google.png" alt="Google">
+                    <img src="src/img/marquee/meta.png" alt="Meta" class="sm">
+                    <img src="src/img/marquee/youtube.png" alt="Youtube">
+                    <img src="src/img/marquee/amazon.png" alt="Amazon">
+                    <img src="src/img/marquee/metricool.png" alt="Metricool">
+                    <img src="src/img/marquee/microsoft.png" alt="Microsoft">
+                    <img src="src/img/marquee/tiktok.png" alt="TikTok" class="sm">
+                    <img src="src/img/marquee/linkedin.png" alt="LinkedIn">
+                    <img src="src/img/marquee/spotify.png" alt="Spotify">
+                    <img src="src/img/marquee/vtex.png" alt="Vtex">
+                </p>
+                <p>
+                    <img src="src/img/marquee/google.png" alt="Google">
+                    <img src="src/img/marquee/meta.png" alt="Meta" class="sm">
+                    <img src="src/img/marquee/youtube.png" alt="Youtube">
+                    <img src="src/img/marquee/amazon.png" alt="Amazon">
+                    <img src="src/img/marquee/metricool.png" alt="Metricool">
+                    <img src="src/img/marquee/microsoft.png" alt="Microsoft">
+                    <img src="src/img/marquee/tiktok.png" alt="TikTok" class="sm">
+                    <img src="src/img/marquee/linkedin.png" alt="LinkedIn">
+                    <img src="src/img/marquee/spotify.png" alt="Spotify">
+                    <img src="src/img/marquee/vtex.png" alt="Vtex">
+                </p>
             </div>
         </section>
 
@@ -195,12 +217,34 @@ require_once('././src/components/cacheSettings.php');
                     <li>Networking</li>
                     <li>Workshops</li>
                 </ul>
-                <p>Reserva tu lugar en el mayor evento hispano de Marketing Digital. Regístrate ahora y desbloquea la Biblioteca de Recursos gratuita para empezar a inspirarte. </p>
+                <p>Llega el mayor evento de Marketing Digital. Inspírate y capacítate con tus referentes mundiales, estés donde estés. </p>
                 <a class="emms__cta activeButtonWithoutForm"><span class="button__text">REGÍSTRATE GRATIS</span></a>
             </div>
-            <div class="emms__hero-registration__bottom emms__fade-in">
-                <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
-                <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
+            <div class="emms__hero-registration__bottom images emms__fade-in">
+                <p>
+                    <img src="src/img/marquee/google.png" alt="Google">
+                    <img src="src/img/marquee/meta.png" alt="Meta" class="sm">
+                    <img src="src/img/marquee/youtube.png" alt="Youtube">
+                    <img src="src/img/marquee/amazon.png" alt="Amazon">
+                    <img src="src/img/marquee/metricool.png" alt="Metricool">
+                    <img src="src/img/marquee/microsoft.png" alt="Microsoft">
+                    <img src="src/img/marquee/tiktok.png" alt="TikTok" class="sm">
+                    <img src="src/img/marquee/linkedin.png" alt="LinkedIn">
+                    <img src="src/img/marquee/spotify.png" alt="Spotify">
+                    <img src="src/img/marquee/vtex.png" alt="Vtex">
+                </p>
+                <p>
+                    <img src="src/img/marquee/google.png" alt="Google">
+                    <img src="src/img/marquee/meta.png" alt="Meta" class="sm">
+                    <img src="src/img/marquee/youtube.png" alt="Youtube">
+                    <img src="src/img/marquee/amazon.png" alt="Amazon">
+                    <img src="src/img/marquee/metricool.png" alt="Metricool">
+                    <img src="src/img/marquee/microsoft.png" alt="Microsoft">
+                    <img src="src/img/marquee/tiktok.png" alt="TikTok" class="sm">
+                    <img src="src/img/marquee/linkedin.png" alt="LinkedIn">
+                    <img src="src/img/marquee/spotify.png" alt="Spotify">
+                    <img src="src/img/marquee/vtex.png" alt="Vtex">
+                </p>
             </div>
         </section>
 
@@ -214,18 +258,17 @@ require_once('././src/components/cacheSettings.php');
                         <p class="number" id="count1L">265</p>
                         <span>REGISTRADOS</span>
                     </li>
-
+                    <li>
+                        <p class="number" id="count4L">190</p>
+                        <span>Speakers</span>
+                    </li>
                     <li>
                         <p class="number" id="count3L">10</p>
                         <span>Países</span>
                     </li>
                     <li>
-                        <p class="number" id="count2L">16</p>
-                        <span>Ediciones</span>
-                    </li>
-                    <li>
-                        <p class="number" id="count4L">190</p>
-                        <span>Speakers</span>
+                        <p class="number" id="count2L">15</p>
+                        <span>Años</span>
                     </li>
                 </ul>
             </div>
@@ -314,7 +357,7 @@ require_once('././src/components/cacheSettings.php');
                 </ul>
                 <div class="emms__grid__bottom">
                     <a class="emms__cta activeFormButton eventHiddenElements">REGÍSTRATE GRATIS</a>
-                    <a class="emms__cta activeButtonWithoutForm eventHiddenElements eventShowElements"><span class="button__text">REGÍSTRATE GRATIS</span></a>
+                    <a class="emms__cta activeButtonWithoutForm eventHiddenElements eventShowElements"><span class="button__text">INSCRÍBETE GRATIS</span></a>
                 </div>
             </div>
             <div id="entradas"></div>
@@ -329,12 +372,16 @@ require_once('././src/components/cacheSettings.php');
                 <div class="emms__plans__benefits--dk emms__fade-in">
                     <ul>
                         <h3>Beneficios</h3>
-                        <li><p>Acceso a todas las <a href="#agenda">conferencias</a></p></li>
+                        <li>
+                            <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
+                        </li>
                         <li>Volver a ver las conferencias todas las veces que quieras</li>
                         <li>Participación en los sorteos</li>
                         <li>Descuentos en herramientas y cursos</li>
                         <li>Certificado de participación a las conferencias</li>
-                        <li><p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p></li>
+                        <li>
+                            <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
+                        </li>
                         <li>Certificado de asistencia a Workshops</li>
                         <li>Acceso a licencias y descuentos en herramientas para tu estrategia digital</li>
                         <li>Networking con participantes y speakers</li>

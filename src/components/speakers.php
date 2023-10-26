@@ -12,7 +12,7 @@
     </div>
 
     <div class="emms__calendar__subtitle emms__fade-in">
-        <h4>CONTENIDO GRATUITO</h4>
+        <h4>CONFERENCIAS GRATUITAS</h4>
         <?php if (($_SERVER['PHP_SELF']) === "/digital-trends.php") : ?>
             <a class="emms__cta sm activeFormButton eventHiddenElements">REGÍSTRATE GRATIS</a>
             <a class="emms__cta sm activeButtonWithoutForm eventHiddenElements eventShowElements"><span class="button__text">REGÍSTRATE GRATIS</span></a>
@@ -170,7 +170,7 @@
     <?php else : ?>
         <div class="emms__calendar__vip__title full emms__fade-in">
             <h4>NETWORKING Y WORKSHOPS <strong>PARA ASISTENTES VIP</strong></h4>
-            <a href="#entradas" class="emms__cta sm">¡QUIERO MI ENTRADA!</a>
+            <a href="#entradas" class="emms__cta sm">ACCEDE A TU ENTRADA VIP</a>
             <p>Ya tengo mi entrada <a href="https://www.digital-trends.goemms.com/">¡QUIERO MIS ACCESOS!</a></p>
         </div>
     <?php endif ?>
@@ -330,7 +330,7 @@
     </div>
 
     <div class="emms__calendar__subtitle emms__fade-in">
-        <h4>CONTENIDO GRATUITO</h4>
+        <h4>CONFERENCIAS GRATUITAS</h4>
         <?php if (($_SERVER['PHP_SELF']) === "/digital-trends.php") : ?>
             <a class="emms__cta sm activeFormButton eventHiddenElements">REGÍSTRATE GRATIS</a>
             <a class="emms__cta sm activeButtonWithoutForm eventHiddenElements eventShowElements"><span class="button__text">REGÍSTRATE GRATIS</span></a>
@@ -482,14 +482,14 @@
     <?php if (($_SERVER['PHP_SELF']) === "/digital-trends.php") : ?>
         <div class="emms__calendar__vip__title emms__fade-in">
             <h4>NETWORKING Y WORKSHOPS <strong>PARA ASISTENTES VIP</strong>
-                <a class="activeFormButton eventHiddenElements">¡RESERVA TU LUGAR!</a>
-                <a class="activeButtonWithoutForm eventHiddenElements eventShowElements">¡RESERVA TU LUGAR!</a>
+                <a class="activeFormButton eventHiddenElements">HAZ CLIC AQUÍ Y NO TE PIERDAS NADA</a>
+                <a class="activeButtonWithoutForm eventHiddenElements eventShowElements">HAZ CLIC AQUÍ Y NO TE PIERDAS NADA</a>
             </h4>
         </div>
     <?php else : ?>
         <div class="emms__calendar__vip__title full emms__fade-in">
             <h4>NETWORKING Y WORKSHOPS <strong>PARA ASISTENTES VIP</strong></h4>
-            <a href="#entradas" class="emms__cta sm">¡QUIERO MI ENTRADA!</a>
+            <a href="#entradas" class="emms__cta sm">RESERVA TU LUGAR</a>
             <p>Ya tengo mi entrada <a href="https://www.digital-trends.goemms.com/">¡QUIERO MIS ACCESOS!</a></p>
         </div>
     <?php endif ?>
@@ -648,7 +648,7 @@
     </div>
 
     <div class="emms__calendar__subtitle emms__fade-in">
-        <h4>CONTENIDO GRATUITO</h4>
+        <h4>CONFERENCIAS GRATUITAS</h4>
         <?php if (($_SERVER['PHP_SELF']) === "/digital-trends.php") : ?>
             <a class="emms__cta sm activeFormButton eventHiddenElements">REGÍSTRATE GRATIS</a>
             <a class="emms__cta sm activeButtonWithoutForm eventHiddenElements eventShowElements"><span class="button__text">REGÍSTRATE GRATIS</span></a>
@@ -800,14 +800,14 @@
     <?php if (($_SERVER['PHP_SELF']) === "/digital-trends.php") : ?>
         <div class="emms__calendar__vip__title emms__fade-in">
             <h4>NETWORKING Y WORKSHOPS <strong>PARA ASISTENTES VIP</strong>
-                <a class="activeFormButton eventHiddenElements">¡RESERVA TU LUGAR!</a>
-                <a class="activeButtonWithoutForm eventHiddenElements eventShowElements">¡RESERVA TU LUGAR!</a>
+                <a class="activeFormButton eventHiddenElements">HAZ CLIC SI TE CONVENCIMOS :)</a>
+                <a class="activeButtonWithoutForm eventHiddenElements eventShowElements">HAZ CLIC SI TE CONVENCIMOS :)</a>
             </h4>
         </div>
     <?php else : ?>
         <div class="emms__calendar__vip__title full emms__fade-in">
             <h4>NETWORKING Y WORKSHOPS <strong>PARA ASISTENTES VIP</strong></h4>
-            <a href="#entradas" class="emms__cta sm">¡QUIERO MI ENTRADA!</a>
+            <a href="#entradas" class="emms__cta sm">QUIERO MI ENTRADA VIP</a>
             <p>Ya tengo mi entrada <a href="https://www.digital-trends.goemms.com/">¡QUIERO MIS ACCESOS!</a></p>
         </div>
     <?php endif ?>
@@ -967,7 +967,7 @@
     </div>
 
     <div class="emms__calendar__subtitle emms__fade-in">
-        <h4>CONTENIDO GRATUITO</h4>
+        <h4>CONFERENCIAS GRATUITAS</h4>
         <?php if (($_SERVER['PHP_SELF']) === "/digital-trends.php") : ?>
             <a class="emms__cta sm activeFormButton eventHiddenElements">REGÍSTRATE GRATIS</a>
             <a class="emms__cta sm activeButtonWithoutForm eventHiddenElements eventShowElements"><span class="button__text">REGÍSTRATE GRATIS</span></a>
@@ -1118,14 +1118,14 @@
     <?php if (($_SERVER['PHP_SELF']) === "/digital-trends.php") : ?>
         <div class="emms__calendar__vip__title emms__fade-in">
             <h4>NETWORKING Y WORKSHOPS <strong>PARA ASISTENTES VIP</strong>
-                <a class="activeFormButton eventHiddenElements">¡RESERVA TU LUGAR!</a>
-                <a class="activeButtonWithoutForm eventHiddenElements eventShowElements">¡RESERVA TU LUGAR!</a>
+                <a class="activeFormButton eventHiddenElements">¡GUARDA AHORA TU PLAZA!</a>
+                <a class="activeButtonWithoutForm eventHiddenElements eventShowElements">¡GUARDA AHORA TU PLAZA!</a>
             </h4>
         </div>
     <?php else : ?>
         <div class="emms__calendar__vip__title full emms__fade-in">
             <h4>NETWORKING Y WORKSHOPS <strong>PARA ASISTENTES VIP</strong></h4>
-            <a href="#entradas" class="emms__cta sm">¡QUIERO MI ENTRADA!</a>
+            <a href="#entradas" class="emms__cta sm">COMPRA TU ENTRADA VIP</a>
             <p>Ya tengo mi entrada <a href="https://www.digital-trends.goemms.com/">¡QUIERO MIS ACCESOS!</a></p>
         </div>
     <?php endif ?>
