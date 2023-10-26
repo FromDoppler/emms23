@@ -152,6 +152,23 @@
     }
 }
 
+.emms__hero-registration .emms__hero-registration__bottom.images p{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.emms__hero-registration .emms__hero-registration__bottom.images p:nth-child(2){
+    margin-left: 10px;
+}
+
+.emms__hero-registration .emms__hero-registration__bottom.images p img{
+    height: 30px;
+}
+
+.emms__hero-registration .emms__hero-registration__bottom.images p img.sm{
+    height: 20px;
+}
 
 
 /* Registered */

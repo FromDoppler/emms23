@@ -79,10 +79,6 @@
     content: "+";
 }
 
-.emms__eventnumbers ul li:nth-child(2) p::before {
-    content: none;
-}
-
 .emms__eventnumbers ul li span {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
