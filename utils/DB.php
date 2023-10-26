@@ -188,7 +188,7 @@ class DB
 
     public function saveRegistered($subscription)
     {
-        $email = $subscription['email'];
+        $email = $this->connection->real_escape_string($subscription['email']);
 
         $registered = $this->query("SELECT id FROM registered WHERE email=?", [$email]);
 
@@ -199,14 +199,14 @@ class DB
 
             // Defines the list of fields in the database
             $dbFields = [
-                'phase',        // Column name in the database
+                'phase',
                 'register',
                 'firstname',
                 'phone',
                 'company',
                 'jobPosition',
                 'ecommerce',
-                'digital-trends',  // Column name in the database
+                'digital-trends',
                 'source_utm',
                 'medium_utm',
                 'campaign_utm',
@@ -218,17 +218,16 @@ class DB
                 // Use the original key, but check if it exists in $subscription
                 if ($field === 'phase' && isset($subscription['form_id'])) {
                     $updateFields[] = "$field = ?";
-                    $updateValues[] = $subscription['form_id'];
+                    $updateValues[] = $this->connection->real_escape_string($subscription['form_id']);
                 } elseif ($field === 'digital-trends' && isset($subscription['digital_trends'])) {
                     // Use backticks to escape the column name with hyphens
                     $updateFields[] = "`$field` = ?";
-                    $updateValues[] = $subscription['digital_trends'];
+                    $updateValues[] = $this->connection->real_escape_string($subscription['digital_trends']);
                 } elseif (isset($subscription[$field]) || $subscription[$field] === 0) {
                     $updateFields[] = "$field = ?";
-                    $updateValues[] = $subscription[$field];
+                    $updateValues[] = $this->connection->real_escape_string($subscription[$field]);
                 }
             }
-
 
             // Update the database only if there are fields to update
             if (!empty($updateFields)) {
@@ -242,25 +241,26 @@ class DB
             $fields .= "`source_utm`, `medium_utm`, `campaign_utm`, `content_utm`, `term_utm`)";
 
             $values = [
-                $subscription['email'],
-                $subscription['form_id'],
-                $subscription['register'],
-                $subscription['firstname'],
-                $subscription['phone'],
-                $subscription['company'],
-                $subscription['jobPosition'],
-                $subscription['ecommerce'],
-                $subscription['digital_trends'],
-                $subscription['source_utm'],
-                $subscription['medium_utm'],
-                $subscription['campaign_utm'],
-                $subscription['content_utm'],
-                $subscription['term_utm']
+                $email,
+                $this->connection->real_escape_string($subscription['form_id']),
+                $this->connection->real_escape_string($subscription['register']),
+                $this->connection->real_escape_string($subscription['firstname']),
+                $this->connection->real_escape_string($subscription['phone']),
+                $this->connection->real_escape_string($subscription['company']),
+                $this->connection->real_escape_string($subscription['jobPosition']),
+                $this->connection->real_escape_string($subscription['ecommerce']),
+                $this->connection->real_escape_string($subscription['digital_trends']),
+                $this->connection->real_escape_string($subscription['source_utm']),
+                $this->connection->real_escape_string($subscription['medium_utm']),
+                $this->connection->real_escape_string($subscription['campaign_utm']),
+                $this->connection->real_escape_string($subscription['content_utm']),
+                $this->connection->real_escape_string($subscription['term_utm'])
             ];
 
             $this->query("INSERT INTO `registered` $fields VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $values);
         }
     }
+
 
 
     public function google_oauth_is_table_empty()
