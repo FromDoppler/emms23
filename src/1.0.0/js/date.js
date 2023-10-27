@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const dateStr = '2023-05-16 11:00:00';
     const utcDate = '2023-05-16T14:00:00.000Z';
     var eventDate = new Date(utcDate);
+    // const dateStrNetworking = '2023-05-16 14:00:00';
+    const utcDateNetworking = '2023-05-16T17:00:00.000Z';
+    var eventDateNetworking = new Date(utcDateNetworking);
     const today = new Date();
 
     // Este código utiliza el hecho de que getTimezoneOffsetdevuelve un valor mayor durante la hora estándar frente al horario de verano (DST).
@@ -23,16 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return this.getTimezoneOffset() < this.stdTimezoneOffset();
     }
 
-    function addHoursToDate(date, hours) {
+    const addHoursToDate = (date, hours) => {
         return new Date(new Date(date).setHours(date.getHours() + hours));
     }
 
-    function checkUserDts() {
+    const checkUserDts = () => {
         if (today.isDstObserved()) {
             eventDate = addHoursToDate(eventDate, 1);
         }
     }
-    function checkUserDtsSpeakers(date) {
+    const checkUserDtsSpeakers = (date) => {
         if (today.isDstObserved()) {
             date = addHoursToDate(eventDate, 1);
             return date;
@@ -40,21 +43,18 @@ document.addEventListener('DOMContentLoaded', () => {
         return date;
     }
 
-    // Checkeamos si pertenece a Daylight saving time (DST) (horario de verano)
-    checkUserDts();
+    const getCountryAndCode = async () => {
+        try {
+            const response = await fetch('/services/getCountryNameAndCode.php');
+            const countryResponse = await response.json();
+            return countryResponse;
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+    };
 
-
-    fetch('/services/getCountryNameAndCode.php')
-        .then((response) => {
-            return response.json();
-        })
-        .then(countryResponse => {
-            //  ZONA HORARIA: ' + 'UTC-' + new Date().getTimezoneOffset() / 60 '
-            const target = checkTargetCountry(countryResponse);
-            setCountryAndDate(countryResponse, eventDate, target);
-        });
-
-    function checkTargetCountry({ countryName, countryCode }) {
+    const checkTargetCountry = ({ countryName, countryCode }) => {
         const targetCountries = ['AR', 'BO', 'CL', 'CO', 'CR', 'CU', 'DO', 'EC', 'ES', 'GD', 'GF', 'GY', 'HN', 'HT', 'JM', 'MX', 'NI', 'PA', 'PE', 'PR', 'PY', 'SR', 'SV', 'UY', 'VE'];
         if (!targetCountries.includes(countryCode)) {
             eventDate = new Date(dateStr);
@@ -80,33 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    function setCountryAndDate({ countryName, countryCode }, date, target) {
-
-        const flagContainers = document.querySelectorAll('.emms__calendar__date__country span');
-
-
-        if (!target) {
-            countryCode = 'AR';
-            countryName = 'Argentina';
-        }
-
-        const img = createImgElement(countryName, countryCode);
-        let hours = date.getHours().toString();
-        hours = (hours.length < 2) ? '0' + hours : hours;
-
-        if (countryCode === "ES") {
-            changeCountryHour(countryCode, flagContainers, img)
-        } else {
-            flagContainers.forEach(flagContainer => {
-                flagContainer.innerHTML = '';
-                flagContainer.appendChild(img);
-                flagContainer.innerHTML += '(' + (countryCode === 'AR' ? 'ARG' : countryCode) + ') ' + hours + ':00';
-            });
-        }
-        changeSpeakerHours(countryName, countryCode);
-    }
-
-    function createImgElement(countryName, countryCode) {
+    const createImgElement = (countryName, countryCode) => {
         const img = document.createElement("img");
         img.src = `src/img/flags/${countryCode}.png`;
         img.alt = countryName;
@@ -115,12 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return img;
     }
 
+    const printCountryHourSpeakers = (eventHours, countryName, countryCode, filterEventDateContainer) => {
 
-
-    const printCountryHourSpeakers = (eventHours, countryName, countryCode) => {
-
-        const eventDateContainer = document.querySelectorAll('.emms__calendar__list__item__country');
-        eventDateContainer.forEach((container, index) => {
+        filterEventDateContainer.forEach((container, index) => {
             const span = container.querySelector('span');
             span.innerHTML = '';
             const img = createImgElement(countryName, countryCode);
@@ -133,12 +104,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const changeSpeakerHours = (countryName, countryCode) => {
+    const setCountryDateGeneric = (countryCode, filterFlagContainers, img, date) => {
+        let hours = date.getHours().toString();
+        hours = (hours.length < 2) ? '0' + hours : hours;
 
-        const eventDateContainer = document.querySelectorAll('.emms__calendar__list__item__country');
-        let eventHours = [];
+        if (countryCode === "ES") {
+            changeCountryHour(countryCode, filterFlagContainers, img);
+        } else {
+            filterFlagContainers.forEach(flagContainer => {
+                flagContainer.innerHTML = '';
+                flagContainer.appendChild(img);
+                flagContainer.innerHTML += '(' + (countryCode === 'AR' ? 'ARG' : countryCode) + ') ' + hours + ':00';
+            });
+        }
+    }
 
-        eventDateContainer.forEach(container => {
+    const setCountryAndDateSpeakers = ({ countryName, countryCode }, date, target) => {
+        const flagContainers = document.querySelectorAll('.emms__calendar__date__country span');
+        // Filtra los elementos flagContainers que no tienen la clase hermana "networking"
+        const speakersFlagsContainers = Array.from(flagContainers).filter(flagContainer => {
+            return !flagContainer.parentElement.classList.contains('networking');
+        });
+
+        if (!target) {
+            countryCode = 'AR';
+            countryName = 'Argentina';
+        }
+
+        const img = createImgElement(countryName, countryCode);
+        setCountryDateGeneric(countryCode, speakersFlagsContainers, img, date);
+    }
+
+    const setCountryAndDateNetworking = ({ countryName, countryCode }, date, target) => {
+        const flagNetworkingContainers = document.querySelectorAll('.emms__calendar__date__country.networking span');
+
+        if (!target) {
+            countryCode = 'AR';
+            countryName = 'Argentina';
+        }
+
+        const img = createImgElement(countryName, countryCode);
+        setCountryDateGeneric(countryCode, flagNetworkingContainers, img, date);
+    }
+
+
+
+    const changeSpeakerHoursGeneric = (countryCode, countryName, eventDateContainers) => {
+        const eventHours = [];
+
+        eventDateContainers.forEach(container => {
             const txt = container.querySelector('span').innerHTML;
             let numb = txt.match(/\d/g);
             numb = numb.join("");
@@ -147,11 +161,46 @@ document.addEventListener('DOMContentLoaded', () => {
             eventHours.push(structuredClone(newDate));
         });
 
-        eventHours.forEach(date => { date = checkUserDtsSpeakers(date) });
-        printCountryHourSpeakers(eventHours, countryName, countryCode);
+        eventHours.forEach(date => {
+            date = checkUserDtsSpeakers(date);
+        });
 
+        printCountryHourSpeakers(eventHours, countryName, countryCode, eventDateContainers);
     }
 
+    const changeSpeakerHoursSpeakers = ({ countryName, countryCode }) => {
+        const eventDateContainers = document.querySelectorAll('.emms__calendar__list__item__country');
+        // Filtra los elementos eventDateContainers que no tienen la clase hermana "workshop"
+        const filterEventDateContainers = Array.from(eventDateContainers).filter(container => {
+            return !container.classList.contains('workshop');
+        });
+
+        changeSpeakerHoursGeneric(countryCode, countryName, filterEventDateContainers);
+    }
+
+    const changeSpeakerHoursWorkshops = ({ countryName, countryCode }) => {
+        const eventDateContainers = document.querySelectorAll('.emms__calendar__list__item__country.workshop');
+        changeSpeakerHoursGeneric(countryCode, countryName, eventDateContainers);
+    }
+
+
+    const initDateChanges = async () => {
+
+        // Checkeamos si pertenece a Daylight saving time (DST) (horario de verano)
+        checkUserDts();
+        // Obtenemos el pais del usuario
+        const countryResponse = await getCountryAndCode();
+        // Checkeamos si es un pais target
+        const target = checkTargetCountry(countryResponse);
+        // Ponemos el horarios en las banderitas de los dias
+        setCountryAndDateSpeakers(countryResponse, eventDate, target);
+        setCountryAndDateNetworking(countryResponse, eventDateNetworking, target);
+        // Adapta la hora de cada speaker al pais correspondiente y lo imprime en su contenedor
+        changeSpeakerHoursSpeakers(countryResponse);
+        changeSpeakerHoursWorkshops(countryResponse);
+    }
+
+    initDateChanges();
 
 });
 

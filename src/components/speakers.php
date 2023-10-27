@@ -182,8 +182,8 @@
         <div class="emms__calendar__vip__card__description">
             <p>¿Qué mejor que conectar con colegas y debatir sobre las últimas tendencias en la industria? ¡Disfruta de este espacio para ampliar tu red y hacer crecer tu negocio!</p>
         </div>
-        <div class="emms__calendar__date__country">
-            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 15:00 hs</span>
+        <div class="emms__calendar__date__country networking">
+            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 14:00 hs</span>
             <a href="https://www.addevent.com/event/Sg18803059" target="_blank">Mira el horario de tu país</a>
         </div>
     </div>
@@ -240,7 +240,7 @@
                         </div>
                     </div>
                     <?php if (($speaker['time']) != '') : ?>
-                        <div class="emms__calendar__list__item__country">
+                        <div class="emms__calendar__list__item__country worshop">
                             <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
@@ -501,8 +501,8 @@
         <div class="emms__calendar__vip__card__description">
             <p>¿Qué mejor que conectar con colegas y debatir sobre las últimas tendencias en la industria? ¡Disfruta de este espacio para ampliar tu red y hacer crecer tu negocio!</p>
         </div>
-        <div class="emms__calendar__date__country">
-            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 15:00 hs</span>
+        <div class="emms__calendar__date__country networking">
+            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 14:00 hs</span>
             <a href="https://www.addevent.com/event/pK18803098" target="_blank">Mira el horario de tu país</a>
         </div>
     </div>
@@ -559,7 +559,7 @@
                         </div>
                     </div>
                     <?php if (($speaker['time']) != '') : ?>
-                        <div class="emms__calendar__list__item__country">
+                        <div class="emms__calendar__list__item__country worshop">
                             <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
@@ -819,8 +819,8 @@
         <div class="emms__calendar__vip__card__description">
             <p>¿Qué mejor que conectar con colegas y debatir sobre las últimas tendencias en la industria? ¡Disfruta de este espacio para ampliar tu red y hacer crecer tu negocio!</p>
         </div>
-        <div class="emms__calendar__date__country">
-            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 15:00 hs</span>
+        <div class="emms__calendar__date__country networking">
+            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 14:00 hs</span>
             <a href="https://www.addevent.com/event/qQ18803133" target="_blank">Mira el horario de tu país</a>
         </div>
     </div>
@@ -877,7 +877,7 @@
                         </div>
                     </div>
                     <?php if (($speaker['time']) != '') : ?>
-                        <div class="emms__calendar__list__item__country">
+                        <div class="emms__calendar__list__item__country worshop">
                             <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
@@ -1137,8 +1137,8 @@
         <div class="emms__calendar__vip__card__description">
             <p>¿Qué mejor que conectar con colegas y debatir sobre las últimas tendencias en la industria? ¡Disfruta de este espacio para ampliar tu red y hacer crecer tu negocio!</p>
         </div>
-        <div class="emms__calendar__date__country">
-            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 15:00 hs</span>
+        <div class="emms__calendar__date__country networking">
+            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 14:00 hs</span>
             <a href="https://www.addevent.com/event/oX18803134" target="_blank">Mira el horario de tu país</a>
         </div>
     </div>
@@ -1195,7 +1195,7 @@
                         </div>
                     </div>
                     <?php if (($speaker['time']) != '') : ?>
-                        <div class="emms__calendar__list__item__country">
+                        <div class="emms__calendar__list__item__country worshop">
                             <span><img src="src/img/flags/arg.png" alt="">(ARG) <?= $speaker['time'] ?></span>
                             <a href="<?= $speaker['link_time'] ?>" target="_blank">Mira el horario de tu país</a>
                         </div>
