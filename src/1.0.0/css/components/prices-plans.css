@@ -471,10 +471,12 @@
 
     .emms__plans__card__inside .emms__plans__card__inside__list ul li p a{
         color: #008046;
+        background: transparent;
     }
 
     .emms__plans__card__inside .emms__plans__card__inside__list ul li p a:hover{
         text-decoration: underline;
+        background: transparent;
     }
 
     .emms__plans__card__inside .emms__plans__card__inside__list .emms__collapse__list.close .emms__collapse__item {

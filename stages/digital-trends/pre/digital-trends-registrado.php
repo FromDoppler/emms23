@@ -467,6 +467,7 @@ require_once('././src/components/cacheSettings.php');
     <!-- Footer -->
     <?php include_once('././src/components/footer.php'); ?>
 
+    <script src="src/<?= VERSION ?>/js/collapsibles.js"></script>
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
     <script src="src/<?= VERSION ?>/js/date.js"></script>
 </body>
