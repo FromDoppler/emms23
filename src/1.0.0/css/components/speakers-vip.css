@@ -361,8 +361,15 @@ div.emms__calendar__vip__card__title{
 }
 
 .emms__calendar__vip .emms__calendar__list .emms__calendar__list__item__card__label p{
-    background: #550871;
+    font-size: 14px;
+    line-height: 1;
+    text-align: right;
     color: #fff;
+    background: #550871;
+    width: 70%;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    padding: 7px 16px 6px 16px;
 }
 
 

@@ -554,25 +554,25 @@ require_once('././src/components/cacheSettings.php');
         <div class="emms__separator mb"></div>
 
         <!-- Event numbers -->
-        <section class="emms__eventnumbers" id="boxNumber">
+        <section class="emms__eventnumbers emms__eventnumbers--large" id="boxNumberLarge">
             <div class="emms__container--lg">
-                <h2 class="emms__fade-in">El EMMS en números</h2>
+                <h2 class="emms__fade-in">EMMS a lo largo del tiempo</h2>
                 <ul class="emms__fade-in">
                     <li>
-                        <p class="number" id="count1">250.000</p>
-                        <span>Inscritos</span>
+                        <p class="number" id="count1L">265</p>
+                        <span>REGISTRADOS</span>
                     </li>
                     <li>
-                        <p class="number" id="count2">15</p>
-                        <span>Ediciones</span>
+                        <p class="number" id="count4L">190</p>
+                        <span>Speakers</span>
                     </li>
                     <li>
-                        <p class="number" id="count3">10</p>
+                        <p class="number" id="count3L">10</p>
                         <span>Países</span>
                     </li>
                     <li>
-                        <p class="number" id="count4">150</p>
-                        <span>Speakers</span>
+                        <p class="number" id="count2L">15</p>
+                        <span>Años</span>
                     </li>
                 </ul>
             </div>
