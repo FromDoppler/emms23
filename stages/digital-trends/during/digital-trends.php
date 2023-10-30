@@ -30,7 +30,7 @@ require_once('././src/components/cacheSettings.php');
             </div>
             <?php if (($settings_phase['event'] === "digital-trends") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on")) : ?>
                 <div class="emms__header__live">
-                    <p>¡ESTAMOS EN VIVO EN EMMS DIGITAL TREND!</p>
+                    <p>¡ESTAMOS EN VIVO EN EMMS DIGITAL TRENDS!</p>
                 </div>
             <?php endif; ?>
             <a class="emms__header__nav--mb" id="btn-burger"></a>
@@ -76,26 +76,223 @@ require_once('././src/components/cacheSettings.php');
 
     <main>
 
+        <!-- Hero with form-->
+        <section class="emms__hero-registration emms__hero-registration--video eventHiddenElements" id="registro">
+            <div class="emms__hero-registration__back emms__fade-in">
+                <video src="https://goemms.com/src/img/video-back-dt.mp4" muted autoplay loop></video>
+            </div>
+            <div class="emms__hero-registration__columns">
+                <div class="emms__hero-registration__text emms__fade-in">
+                    <h1><em>EVENTO ONLINE Y GRATUITO - DEL 13 AL 16 DE NOV</em> ¡Ya comenzó el<br>EMMS Digital Trends!</h1>
+                    <ul class="emms__hero-registration__text__checklist">
+                        <li>CONFERENCIAS</li>
+                        <li>NETWORKING</li>
+                        <li>WORKSHOPS</li>
+                    </ul>
+                    <p>Reserva tu lugar en el mayor evento hispano de Marketing Digital. Regístrate ahora y desbloquea la Biblioteca de Recursos gratuita para empezar a inspirarte.</p>
+                </div>
+                <div class="emms__hero-registration__form emms__fade-in">
+                    <!-- Form -->
+                    <form class="emms__form popUpForm" id="popUpForm" novalidate autocomplete="off">
+                        <ul class="emms__form__field-group">
+                            <li class="emms__form__field-item">
+                                <div class="holder">
+                                    <label class="required-label" for="email">Email *</label>
+                                    <input type="email" name="email" id="email" placeholder="&iexcl;No olvides usar @!" class="email required" autocomplete="off">
+                                </div>
+                            </li>
+                            <li class="emms__form__field-item">
+                                <div class="holder">
+                                    <label class="required-label" for="name">Nombre *</label>
+                                    <input type="text" name="name" id="name" placeholder="Tu nombre" class="required error-name nameLength" autocomplete="off">
+                                </div>
+                            </li>
+                            <li class="emms__form__field-item">
+                                <div class="holder">
+                                    <label class="required-label" for="company">Empresa *</label>
+                                    <input type="text" name="company" id="company" placeholder="Nombre de tu empresa o negocio" class="email required" autocomplete="off">
+                                </div>
+                            </li>
+                            <li class="emms__form__field-item">
+                                <div class="holder">
+                                    <label class="required-label" for="jobPosition">Cargo *</label>
+                                    <select class="required" name="jobPosition" id="jobPosition" autocomplete="off">
+                                        <option disabled selected value>Elige un cargo</option>
+                                        <option value="CEO / Director General">CEO / Director General</option>
+                                        <option value="CMO / Marketing Manager">CMO / Marketing Manager</option>
+                                        <option value="Gerente de Ventas">Gerente de Ventas</option>
+                                        <option value="E-commerce Manager">E-commerce Manager</option>
+                                        <option value="Project Manager / Líder de equipo">Project Manager / Líder de equipo</option>
+                                        <option value="Especialista / Consultor en Marketing">Especialista / Consultor en Marketing Digital</option>
+                                        <option value="Asistente de Marketing / Comunicación / Ventas">Asistente de Marketing / Comunicación / Ventas</option>
+                                        <option value="Ejecutivo/a de Cuentas">Ejecutivo/a de Cuentas</option>
+                                        <option value="Redactor/a de contenidos / Copywriter">Redactor/a de contenidos / Copywriter</option>
+                                        <option value="Diseñador/a">Diseñador/a</option>
+                                        <option value="Pasante / interno / trainee">Pasante / interno / trainee</option>
+                                        <option value="Estudiante">Estudiante</option>
+                                        <option value="Otros">Otros</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="emms__form__field-item">
+                                <div class="holder">
+                                    <label class="required-label" for="telefono">Teléfono</label>
+                                    <input type="tel" name="phone" id="phone" class="phone phone-number" autocomplete="off">
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="emms__form__field-group">
+                            <li class="emms__form__field-item emms__form__field-item__checkbox">
+                                <div class="holder">
+                                    <input name="privacy" type="checkbox" id="acepto-politicas" value="true" class="required check acept-politic"><span class="checkmark"></span><label for="acepto-politicas">
+                                        Acepto la Pol&iacute;tica de Privacidad de Doppler *
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="emms__form__field-item emms__form__field-item__checkbox">
+                                <div class="holder">
+                                    <input name="promotions" type="checkbox" id="acepto-promociones" value="true"><span class="checkmark"></span><label for="acepto-promociones">
+                                        Acepto recibir promociones de Doppler</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="emms__form__btn">
+                            <button class="emms__cta" id="register-button" type="button"><span class="button__text">REGÍSTRATE GRATIS</span></button>
+                        </div>
+                        <div class="emms__form__legal close">
+                            <a class="emms__form__legal__btn" id="legalBtn">Información básica sobre privacidad </a>
+                            <p>Doppler te informa que los datos de car&aacute;cter personal que nos proporciones al rellenar el presente formulario ser&aacute;n tratados por Doppler LLC como responsable de esta Web.<br>
+                                <strong>Finalidad: </strong>Gestionar el alta de registro a la capacitación, enviarte material vinculado a la misma e información sobre Doppler así como nuestros futuros eventos o capacitaciones.<br>
+                                <strong>Legitimaci&oacute;n: </strong>Consentimiento del interesado. <br>
+                                <strong>Destinatarios: </strong>Tus datos ser&aacute;n guardados por Doppler y los co-organizadores del evento, Unbounce como empresa de creaci&oacute;n de Landing Pages, DigitalOcean como empresa de hosting y Zapier como herramienta de integraci&oacute;n de apps.<br>
+                                <strong>Informaci&oacute;n adicional: </strong>En la <a href="https://www.fromdoppler.com/es/legal/privacidad/" target="_blank" rel="noopener">Pol&iacute;tica de Privacidad</a> de Doppler encontrar&aacute;s informaci&oacute;n adicional
+                                sobre la recopilaci&oacute;n y el uso de su informaci&oacute;n personal por parte de Doppler, incluida
+                                informaci&oacute;n sobre acceso, conservaci&oacute;n, rectificaci&oacute;n, eliminaci&oacute;n, seguridad,
+                                transferencias
+                                transfronterizas y otros temas. <br>
+                            </p>
+                        </div>
+                    </form>
+                    <!-- End form -->
+                </div>
+            </div>
+            <div class="emms__hero-registration__bottom images emms__fade-in">
+                <p>
+                    <img src="src/img/marquee/google.png" alt="Google">
+                    <img src="src/img/marquee/meta.png" alt="Meta" class="sm">
+                    <img src="src/img/marquee/youtube.png" alt="Youtube">
+                    <img src="src/img/marquee/amazon.png" alt="Amazon">
+                    <img src="src/img/marquee/metricool.png" alt="Metricool">
+                    <img src="src/img/marquee/microsoft.png" alt="Microsoft">
+                    <img src="src/img/marquee/tiktok.png" alt="TikTok" class="sm">
+                    <img src="src/img/marquee/linkedin.png" alt="LinkedIn">
+                    <img src="src/img/marquee/spotify.png" alt="Spotify">
+                    <img src="src/img/marquee/vtex.png" alt="Vtex">
+                </p>
+                <p>
+                    <img src="src/img/marquee/google.png" alt="Google">
+                    <img src="src/img/marquee/meta.png" alt="Meta" class="sm">
+                    <img src="src/img/marquee/youtube.png" alt="Youtube">
+                    <img src="src/img/marquee/amazon.png" alt="Amazon">
+                    <img src="src/img/marquee/metricool.png" alt="Metricool">
+                    <img src="src/img/marquee/microsoft.png" alt="Microsoft">
+                    <img src="src/img/marquee/tiktok.png" alt="TikTok" class="sm">
+                    <img src="src/img/marquee/linkedin.png" alt="LinkedIn">
+                    <img src="src/img/marquee/spotify.png" alt="Spotify">
+                    <img src="src/img/marquee/vtex.png" alt="Vtex">
+                </p>
+            </div>
+        </section>
+
+
         <!-- Hero without form-->
-        <section class="emms__hero-registration emms__hero-registration--noform emms__hero-registration--video">
+        <section class="emms__hero-registration emms__hero-registration--noform emms__hero-registration--video eventHiddenElements eventShowElements">
             <div class="emms__hero-registration__back emms__fade-in">
                 <video src="https://goemms.com/src/img/video-back-dt.mp4" muted autoplay loop></video>
             </div>
             <div class="emms__hero-registration__text emms__fade-in">
-                <h1><em>EVENTO ONLINE Y GRATUITO - DEL 13 AL 16 DE NOV</em> ¡Ya comenzó el EMMS Digital Trends!</h1>
+                <h1><em>EVENTO ONLINE Y GRATUITO - DEL 13 AL 16 DE NOV</em> ¡Ya comenzó el<br>EMMS Digital Trends!</h1>
                 <ul class="emms__hero-registration__text__checklist checklist--center">
                     <li>Conferencias</li>
                     <li>Networking</li>
                     <li>Workshops</li>
                 </ul>
-                <p>Reserva tu lugar en el mayor evento hispano de Marketing Digital. Regístrate ahora y desbloquea la Biblioteca de Recursos gratuita para empezar a inspirarte. </p>
-                <a href="#entradas" class="emms__cta">OBTÉN TU ENTRADA</a>
+                <p>El mayor evento de Marketing Digital. Inspírate y capacítate con tus referentes mundiales, estés donde estés. </p>
+                <a class="emms__cta activeButtonWithoutForm"><span class="button__text">REGÍSTRATE GRATIS</span></a>
             </div>
-            <div class="emms__hero-registration__bottom emms__fade-in">
-                <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
-                <p>INTELIGENCIA ARTIFICIAL >> MARKETING AUTOMATION >> SOCIAL MEDIA >> EMAIL MARKETING >> CRO >> SEO >> SOCIAL ADS >> CONTENT MARKETING >> GOOGLE ADS >> RETARGETING >></p>
+            <div class="emms__hero-registration__bottom images emms__fade-in">
+                <p>
+                    <img src="src/img/marquee/google.png" alt="Google">
+                    <img src="src/img/marquee/meta.png" alt="Meta" class="sm">
+                    <img src="src/img/marquee/youtube.png" alt="Youtube">
+                    <img src="src/img/marquee/amazon.png" alt="Amazon">
+                    <img src="src/img/marquee/metricool.png" alt="Metricool">
+                    <img src="src/img/marquee/microsoft.png" alt="Microsoft">
+                    <img src="src/img/marquee/tiktok.png" alt="TikTok" class="sm">
+                    <img src="src/img/marquee/linkedin.png" alt="LinkedIn">
+                    <img src="src/img/marquee/spotify.png" alt="Spotify">
+                    <img src="src/img/marquee/vtex.png" alt="Vtex">
+                </p>
+                <p>
+                    <img src="src/img/marquee/google.png" alt="Google">
+                    <img src="src/img/marquee/meta.png" alt="Meta" class="sm">
+                    <img src="src/img/marquee/youtube.png" alt="Youtube">
+                    <img src="src/img/marquee/amazon.png" alt="Amazon">
+                    <img src="src/img/marquee/metricool.png" alt="Metricool">
+                    <img src="src/img/marquee/microsoft.png" alt="Microsoft">
+                    <img src="src/img/marquee/tiktok.png" alt="TikTok" class="sm">
+                    <img src="src/img/marquee/linkedin.png" alt="LinkedIn">
+                    <img src="src/img/marquee/spotify.png" alt="Spotify">
+                    <img src="src/img/marquee/vtex.png" alt="Vtex">
+                </p>
             </div>
         </section>
+
+
+        <!-- Event numbers -->
+        <section class="emms__eventnumbers emms__eventnumbers--large" id="boxNumberLarge">
+            <div class="emms__container--lg">
+                <h2 class="emms__fade-in">EMMS a lo largo del tiempo</h2>
+                <ul class="emms__fade-in">
+                    <li>
+                        <p class="number" id="count1L">265</p>
+                        <span>REGISTRADOS</span>
+                    </li>
+                    <li>
+                        <p class="number" id="count4L">190</p>
+                        <span>Speakers</span>
+                    </li>
+                    <li>
+                        <p class="number" id="count3L">10</p>
+                        <span>Países</span>
+                    </li>
+                    <li>
+                        <p class="number" id="count2L">15</p>
+                        <span>Años</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Calendar -->
+        <section class="emms__calendar" id="agenda">
+            <div class="emms__container--lg">
+                <div class="emms__calendar__title emms__fade-in">
+                    <h2>Agenda EMMS Digital Trends 2023</h2>
+                </div>
+            </div>
+            <!-- Speakers -->
+            <?php include('./src/components/speakers.php') ?>
+            <!-- End list -->
+            <div class="emms__container--lg">
+                <div class="emms__calendar__bottom emms__fade-in">
+                    <a class="emms__cta activeFormButton eventHiddenElements">REGÍSTRATE GRATIS</a>
+                    <a class="emms__cta activeButtonWithoutForm eventHiddenElements eventShowElements"><span class="button__text">REGÍSTRATE GRATIS</span></a>
+                </div>
+            </div>
+        </section>
+
 
         <!-- Grid -->
         <section class="emms__grid emms__grid--3 emms__bg-w">
@@ -166,49 +363,6 @@ require_once('././src/components/cacheSettings.php');
         </section>
 
 
-        <!-- Event numbers -->
-        <section class="emms__eventnumbers emms__eventnumbers--large" id="boxNumberLarge">
-            <div class="emms__container--lg">
-                <h2 class="emms__fade-in">EMMS a lo largo del tiempo</h2>
-                <ul class="emms__fade-in">
-                    <li>
-                        <p class="number" id="count1L">265</p>
-                        <span>REGISTRADOS</span>
-                    </li>
-
-                    <li>
-                        <p class="number" id="count3L">10</p>
-                        <span>Países</span>
-                    </li>
-                    <li>
-                        <p class="number" id="count2L">16</p>
-                        <span>Ediciones</span>
-                    </li>
-                    <li>
-                        <p class="number" id="count4L">190</p>
-                        <span>Speakers</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Calendar -->
-        <section class="emms__calendar" id="agenda">
-            <div class="emms__container--lg">
-                <div class="emms__calendar__title emms__fade-in">
-                    <h2>Agenda EMMS Digital Trends 2023</h2>
-                    <p>¡Seguiremos confirmando speakers muy pronto!</p>
-                </div>
-                <!-- Speakers -->
-                <?php include('./src/components/speakers.php') ?>
-                <!-- End list -->
-                <div class="emms__calendar__bottom emms__fade-in">
-                    <a href="#entradas" class="emms__cta">ACCEDE A TU ENTRADA VIP</a>
-                </div>
-            </div>
-            <div id="entradas"></div>
-        </section>
-
         <!-- Prices Plans -->
         <div class="emms__plans emms__bg-w">
             <div class="emms__container--lg">
@@ -218,12 +372,12 @@ require_once('././src/components/cacheSettings.php');
                 <div class="emms__plans__benefits--dk emms__fade-in">
                     <ul>
                         <h3>Beneficios</h3>
-                        <li>Acceso a todas las conferencias</li>
+                        <li><p>Acceso a todas las <a href="#agenda">conferencias</a></p></li>
                         <li>Volver a ver las conferencias todas las veces que quieras</li>
                         <li>Participación en los sorteos</li>
                         <li>Descuentos en herramientas y cursos</li>
                         <li>Certificado de participación a las conferencias</li>
-                        <li>Acceso ilimitado a todos los Workshops prácticos</li>
+                        <li><p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p></li>
                         <li>Certificado de asistencia a Workshops</li>
                         <li>Acceso a licencias y descuentos en herramientas para tu estrategia digital</li>
                         <li>Networking con participantes y speakers</li>
@@ -244,7 +398,7 @@ require_once('././src/components/cacheSettings.php');
                                 <ul class="emms__collapse__list close">
                                     <h4>Beneficios</h4>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias</p>
+                                    <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Volver a ver las conferencias todas las veces que quieras</p>
@@ -259,7 +413,7 @@ require_once('././src/components/cacheSettings.php');
                                         <p>Certificado de participación a las conferencias</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
-                                        <p>Acceso ilimitado a todos los Workshops prácticos</p>
+                                    <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
                                         <p>Certificado de asistencia a Workshops</p>
@@ -292,7 +446,7 @@ require_once('././src/components/cacheSettings.php');
                                 <ul class="emms__collapse__list close">
                                     <h4>Beneficios</h4>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las conferencias</p>
+                                    <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Volver a ver las conferencias todas las veces que quieras</p>
@@ -307,7 +461,7 @@ require_once('././src/components/cacheSettings.php');
                                         <p>Certificado de participación a las conferencias</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso ilimitado a todos los Workshops prácticos</p>
+                                    <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Certificado de asistencia a Workshops</p>
@@ -343,7 +497,7 @@ require_once('././src/components/cacheSettings.php');
                                     <ul class="emms__collapse__list close">
                                         <h4>Beneficios</h4>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias</p>
+                                        <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Volver a ver las conferencias todas las veces que quieras</p>
@@ -358,7 +512,7 @@ require_once('././src/components/cacheSettings.php');
                                             <p>Certificado de participación a las conferencias</p>
                                         </li>
                                         <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso ilimitado a todos los Workshops prácticos</p>
+                                        <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
                                         </li>
                                         <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Certificado de asistencia a Workshops</p>
@@ -390,7 +544,7 @@ require_once('././src/components/cacheSettings.php');
                                     <ul>
                                         <h4>Beneficios</h4>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a todas las conferencias</p>
+                                        <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Volver a ver las conferencias todas las veces que quieras</p>
@@ -405,7 +559,7 @@ require_once('././src/components/cacheSettings.php');
                                             <p>Certificado de participación a las conferencias</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso ilimitado a todos los Workshops prácticos</p>
+                                        <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Certificado de asistencia a Workshops</p>
@@ -520,7 +674,7 @@ require_once('././src/components/cacheSettings.php');
         </div>
 
         <!-- Features -->
-<!--         <div class="emms__features emms__features--icon-top">
+        <!--         <div class="emms__features emms__features--icon-top">
             <div class="emms__features__title emms__fade-in">
                 <img class="icon-vip" src="src/img/icons/icon-star-gradient.png" alt="Icon">
                 <h2>Exclusivo para asistentes VIP y Packs Empresas</h2>
@@ -683,7 +837,7 @@ require_once('././src/components/cacheSettings.php');
                     <div class="emms__companies__divisor"></div>
                     <h3>MEDIA PARTNERS STARTERS</h3>
                     <ul class="emms__companies__list emms__companies__list  emms__fade-in" id="mediaPartenersStarters">
-                    <?php $sponsors = $db->getSponsorsByType('STARTER');
+                        <?php $sponsors = $db->getSponsorsByType('STARTER');
                         foreach ($sponsors as $sponsor) : ?>
                             <li class="emms__companies__list__item">
                                 <?php if ($sponsor['link_site']) : ?>
