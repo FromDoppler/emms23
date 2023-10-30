@@ -75,7 +75,7 @@
     color: #838370;
 }
 
-.emms__certificate-modal__window span {
+.emms__certificate-modal__window  span:not(.button__text) {
     font-size: 13px;
     color: #ff1010;
     font-style: italic;

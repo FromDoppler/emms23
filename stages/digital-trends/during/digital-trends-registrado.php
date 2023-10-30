@@ -129,7 +129,7 @@ require_once('././src/components/cacheSettings.php');
                 <form id="certificateForm">
                     <input type="text" placeholder="Nombre y apellido" name="fullname">
                     <span class="certificateError">¡Ouch! Debes ingresar al menos 2 caracteres.</span>
-                    <a class="emms__cta" type="button" id="certificateEcommerceCta">QUIERO DESCARGARLO</a>
+                    <a class="emms__cta" type="button" id="certificateDT"><span class="button__text">QUIERO DESCARGARLO</span></a>
                     <button class="emms__certificate-modal__window__close" data-dismiss="emms__certificate-modal"></button>
                 </form>
             </div>
@@ -376,7 +376,7 @@ require_once('././src/components/cacheSettings.php');
 
 
         <!-- Features -->
-<!--         <div class="emms__features emms__features--icon-top">
+        <!--         <div class="emms__features emms__features--icon-top">
             <div class="emms__features__title emms__fade-in">
                 <img class="icon-vip" src="src/img/icons/icon-star-gradient.png" alt="Icon">
                 <h2>Exclusivo para asistentes VIP y Packs Empresas</h2>
@@ -489,7 +489,7 @@ require_once('././src/components/cacheSettings.php');
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
     <script src="src/<?= VERSION ?>/js/certificateModal.js"></script>
     <script src="src/<?= VERSION ?>/js/date.js"></script>
-    <script src="src/<?= VERSION ?>/js/common/certificate.js"></script>
+    <script src="src/<?= VERSION ?>/js/certificate/certificateDt.js" type="module"></script>
 
 </body>
 

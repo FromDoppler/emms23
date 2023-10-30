@@ -75,7 +75,7 @@ require_once('./utils/DB.php');
                 <form id="certificateForm">
                     <input type="text" placeholder="Nombre y apellido" name="fullname" class="emms__fade-in">
                     <span class="certificateError">¡Ouch! Debes ingresar al menos 2 caracteres.</span>
-                    <a class="emms__cta emms__fade-in" type="button" id="certificateEcommerceCta">QUIERO DESCARGARLO</a>
+                    <a class="emms__cta emms__fade-in" type="button" id="certificateWorkshop"><span class="button__text">QUIERO DESCARGARLO</span></a>
                 </form>
             </div>
         </section>
@@ -86,8 +86,7 @@ require_once('./utils/DB.php');
     <?php include_once('././src/components/footer.php'); ?>
 
     <script src="src/<?= VERSION ?>/js/certificateModal.js"></script>
-    <script src="src/<?= VERSION ?>/js/common/certificate.js"></script>
-
+    <script src="src/<?= VERSION ?>/js/certificate/certificateWorkshop.js"  type="module"></script>
 
 
 </body>
