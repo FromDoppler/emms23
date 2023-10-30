@@ -1,52 +1,75 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
 
-    const checkQADomain = () => {
-        return (window.location.host === 'qa.goemms.com' || window.location.host === 'localhost') ? true : false;
-    }
+const isQADomain = () => {
+    return window.location.host === 'qa.goemms.com' || window.location.host === 'localhost';
+}
 
-    function submitCertificate(e, type) {
-        const certificateForm = document.getElementById('certificateForm');
-        e.preventDefault();
-        const formData = new FormData(certificateForm);
-        const fullname = formData.get('fullname');
-        if (fullname.length < 2) {
-            certificateForm.querySelector('span').classList.add('showError');
-            return;
-        } else {
-            certificateForm.querySelector('span').classList.remove('showError');
+const forceDownload = async (fullname, type) => {
+    const encodeFullname = encodeURI(fullname);
+    const domainUrl = (isQADomain()) ? `certificate-emms2023qa.php` : `certificate-emms2023.php`;
+    const url = `https://textify.fromdoppler.com/${domainUrl}?fullname=${encodeFullname}&type=${type}`;
+    const fileName = `certificacion-emms2023-${type}.png`;
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error("Error during file download");
         }
 
-        forceDownload(fullname, type);
+        const blob = await response.blob();
+        const urlCreator = window.URL || window.webkitURL;
+        const imageUrl = urlCreator.createObjectURL(blob);
+        const tag = document.createElement('a');
+        tag.href = imageUrl;
+        tag.download = fileName;
+        document.body.appendChild(tag);
+        tag.click();
+        document.body.removeChild(tag);
+    } catch (error) {
+        console.error('Error:', error);
+        throw error;
+    }
+}
+
+const handleButtonState = (submitButton, enable, showError) => {
+    submitButton.setAttribute('data-disabled', enable ? 'true' : 'false');
+    submitButton.classList.toggle('button--loading', enable);
+    const errorSpan = document.querySelector('#certificateForm span');
+    errorSpan.classList.toggle('showError', showError);
+};
+
+
+
+const submitCertificate = async (e, type, submitButton) => {
+    e.preventDefault();
+    const certificateForm = document.getElementById('certificateForm');
+    const formData = new FormData(certificateForm);
+    const fullname = formData.get('fullname');
+    const isDisabled = submitButton.getAttribute('data-disabled') === 'true';
+    if (isDisabled) {
+        return false;
+    }
+    handleButtonState(submitButton, true, false); // Deshabilita el boton y elimina el mensaje de error
+
+    if (fullname.length < 2) {
+        handleButtonState(submitButton, false, true); // Habilita el boton y muestra el mensaje de error
+        return false;
     }
 
-    function forceDownload(fullname, type) {
-
-        const xhr = new XMLHttpRequest(),
-            encodeFullname = encodeURI(fullname),
-            domainUrl = (checkQADomain()) ? `certificate-emms2023qa.php` : `certificate-emms2023.php`,
-            url = 'https://textify.fromdoppler.com/' + domainUrl + '?fullname=' + encodeFullname + '&type=' + type,
-            fileName = `certificacion-emms2023-${type}.png`;
-
-
-        xhr.open("GET", url, true);
-        xhr.responseType = "blob";
-        xhr.onload = function () {
-            const urlCreator = window.URL || window.webkitURL;
-            const imageUrl = urlCreator.createObjectURL(this.response);
-            const tag = document.createElement('a');
-            tag.href = imageUrl;
-            tag.download = fileName;
-            document.body.appendChild(tag);
-            tag.click();
-            document.body.removeChild(tag);
-        }
-        xhr.send();
-        document.getElementById('certificateModal').classList.toggle('open');
-        document.body.style.overflowY = 'scroll';
+    try {
+        await forceDownload(fullname, type);
+        certificateForm.reset();
+        return true;
+    } catch (error) {
+        console.error(error);
+        return;
+    } finally {
+        handleButtonState(submitButton, false, false);
     }
-    const certificateCtaEcommerce = document.getElementById('certificateEcommerceCta');
-    certificateCtaEcommerce.addEventListener('click', (e) => submitCertificate(e, 'ecommerce'));
+};
 
-});
+
+
+
+export { submitCertificate }

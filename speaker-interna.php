@@ -178,7 +178,7 @@ $db->close();
                 <form id="certificateForm">
                     <input type="text" placeholder="Nombre y apellido" name="fullname">
                     <span class="certificateError">¡Ouch! Debes ingresar al menos 2 caracteres.</span>
-                    <a class="emms__cta" type="button" id="certificateEcommerceCta">QUIERO DESCARGARLO</a>
+                    <a class="emms__cta emms__fade-in" type="button" id="certificateEcommerceCta"><span class="button__text">QUIERO DESCARGARLO</span></a>
                     <button class="emms__certificate-modal__window__close" data-dismiss="emms__certificate-modal"></button>
                 </form>
             </div>
@@ -211,7 +211,7 @@ $db->close();
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
     <script src="src/<?= VERSION ?>/js/certificateModal.js"></script>
     <script src="src/<?= VERSION ?>/js/speakersInterna.js" type="module"></script>
-    <script src="src/<?= VERSION ?>/js/common/certificate.js"></script>
+    <script src="src/<?= VERSION ?>/js/certificate/certificateEcommerce.js" type="module"></script>
     <script src="src/<?= VERSION ?>/js/vendors/intlTelInput.min.js"></script>
     <?php include_once('././src/components/intellInput.php'); ?>
 
