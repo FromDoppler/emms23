@@ -6,9 +6,8 @@ const isQADomain = () => {
 }
 
 const forceDownload = async (fullname, type) => {
-    //FIXME: BOrrar el B cuando pase el PR
     const encodeFullname = encodeURI(fullname);
-    const domainUrl = (isQADomain()) ? `certificate-emms2023qab.php` : `certificate-emms2023.php`;
+    const domainUrl = (isQADomain()) ? `certificate-emms2023qa.php` : `certificate-emms2023.php`;
     const url = `https://textify.fromdoppler.com/${domainUrl}?fullname=${encodeFullname}&type=${type}`;
     const fileName = `certificacion-emms2023-${type}.png`;
 

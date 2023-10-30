@@ -2,7 +2,7 @@
 
 import { submitCertificate } from "../common/certificate.js";
 
-const startCertificateEcommerce = () => {
+const startCertificateDT = () => {
 
     document.addEventListener('DOMContentLoaded', () => {
 
@@ -10,7 +10,7 @@ const startCertificateEcommerce = () => {
         certificateCtaDT.addEventListener('click', async (e) => {
             let submitSucceeded = false;
             try {
-                submitSucceeded =  await submitCertificate(e, 'ecommerce', certificateCtaDT);
+                submitSucceeded =  await submitCertificate(e, 'digital-trends', certificateCtaDT);
             } catch (error) {
                 console.error(error);
             }
@@ -26,4 +26,4 @@ const startCertificateEcommerce = () => {
 
 }
 
-startCertificateEcommerce();
+startCertificateDT();
