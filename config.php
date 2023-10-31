@@ -123,18 +123,22 @@ if (!defined('SECRET_REFRESH')) define('SECRET_REFRESH', $SECRET_REFRESH);
 if (!defined('MEMCACHED_SERVER')) define('MEMCACHED_SERVER', "memcached");
 
 #During Days System
-$dayDuring = 1;
+$dayDuring = 3;
 $duringDaysArray = array(
     "1" => array(
         "youtube" => "0phrH-5u21U",
-        "twitch" => "duckvilleusa",
-        "banner-transition" => "placa-dia01-transition",
-        "banner-nolive" => "placa-dia01-nolive"
+        "twitch" => "duckvilleusa"
     ),
     "2" => array(
         "youtube" => "InSydaLSSlw",
-        "twitch" => "hoothouselivestream",
-        "banner-transition" => "placa-dia02-transition",
-        "banner-nolive" => "placa-dia02-nolive"
+        "twitch" => "hoothouselivestream"
+    ),
+    "3" => array(
+        "youtube" => "0phrH-5u21U",
+        "twitch" => "duckvilleusa"
+    ),
+    "4" => array(
+        "youtube" => "InSydaLSSlw",
+        "twitch" => "hoothouselivestream"
     ),
 );

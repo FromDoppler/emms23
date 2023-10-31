@@ -25,7 +25,7 @@ require_once('././src/components/cacheSettings.php');
             <div class="emms__header__logo emms__header__logo--ecommerce">
                 <a href="/"><img src="src/img/logos/logo-emms-digitaltrends.png" alt="Digital Trends 2023"></a>
             </div>
-            <?php if (($settings_phase['event'] === "digital-trends") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on")) : ?>
+            <?php if (($settings_phase_DT['event'] === "digital-trends") && ($settings_phase_DT['during'] === 1) && ($settings_phase_DT['transition'] === "live-on")) : ?>
                 <div class="emms__header__live">
                     <p>¡ESTAMOS EN VIVO EN EMMS DIGITAL TRENDS!</p>
                 </div>
@@ -76,7 +76,7 @@ require_once('././src/components/cacheSettings.php');
         <!-- Hero -->
         <section class="emms__hero-conference emms__hero-conference--chat">
             <div class="emms__container--lg">
-                <?php if (($settings_phase['event'] === "digital-trends") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on") && ($settings_phase['transmission'] === "youtube")) : ?>
+                <?php if (($settings_phase_DT['event'] === "digital-trends") && ($settings_phase_DT['during'] === 1) && ($settings_phase_DT['transition'] === "live-on") && ($settings_phase_DT['transmission'] === "youtube")) : ?>
                     <h1 class="emms__fade-in">EN VIVO</h1>
                     <div class="emms__hero-conference__video emms__fade-in">
                         <div class="emms__cropper-cont-16-9">
@@ -91,7 +91,7 @@ require_once('././src/components/cacheSettings.php');
                     <div class="emms__hero-conference__aside emms__fade-in emms__hero-conference__video--chat">
                         <iframe src="https://www.youtube.com/live_chat?v=<?= $duringDaysArray[$dayDuring]['youtube'] ?>&embed_domain=<?= $_SERVER['HTTP_HOST'] ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                <?php elseif (($settings_phase['event'] === "digital-trends") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on") && ($settings_phase['transmission'] === "twitch")) : ?>
+                <?php elseif (($settings_phase_DT['event'] === "digital-trends") && ($settings_phase_DT['during'] === 1) && ($settings_phase_DT['transition'] === "live-on") && ($settings_phase_DT['transmission'] === "twitch")) : ?>
                     <h1 class="emms__fade-in">EN VIVO</h1>
                     <div class="emms__hero-conference__video emms__fade-in">
                         <div class="emms__cropper-cont-16-9">
@@ -103,13 +103,31 @@ require_once('././src/components/cacheSettings.php');
                         </div>
                         <small>Recuerda activar el sonido 🔊</small>
                     </div>
-                <?php elseif (($settings_phase['event'] === "digital-trends") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on") && ($settings_phase['transmission'] === "twitch-migrate")) : ?>
-                    <img src="src/img/banner-migrate-twitch.png" alt="Se migró a Twitch" class="banner">
-                <?php elseif (($settings_phase['event'] === "digital-trends") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on") && ($settings_phase['transmission'] === "technical-problems")) : ?>
-                    <img src="src/img/banner-technical-error.png" alt="Errores técnicos" class="banner">
-                <?php elseif (($settings_phase['event'] === "digital-trends") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-off")) : ?>
+                <?php elseif (($settings_phase_DT['event'] === "digital-trends") && ($settings_phase_DT['during'] === 1) && ($settings_phase_DT['transition'] === "live-on") && ($settings_phase_DT['transmission'] === "twitch-migrate")) : ?>
+                    <img src="src/img/banner-migrate-twitch-DT.png" alt="Se migró a Twitch" class="banner">
+                <?php elseif (($settings_phase_DT['event'] === "digital-trends") && ($settings_phase_DT['during'] === 1) && ($settings_phase_DT['transition'] === "live-on") && ($settings_phase_DT['transmission'] === "technical-problems")) : ?>
+                    <img src="src/img/banner-technical-error-DT.png" alt="Errores técnicos" class="banner">
+                <?php elseif (($settings_phase_DT['event'] === "digital-trends") && ($settings_phase_DT['transition'] === "live-off") && ($dayDuring === 1)) : ?>
                     <div class="emms__hero-conference__video emms__hero-conference__video--transition emms__fade-in">
                         <h2>Prepárate, ¡se viene el día 2 del EMMS Digital Trends 2023!</h2>
+                        <small>Recuerda que podrás acceder a todas las grabaciones de las Conferencias una vez finalizado el evento desde la <a href="#agenda">Agenda</a>.</small>
+                    </div>
+                    <div class="emms__hero-conference__aside emms__hero-conference__aside--transition emms__fade-in">
+                        <p>Accede a todo el contenido exclusivo que hemos preparado para ti: E-books gratuitos, cápsulas audiovisuales, guías, plantillas, beneficios, descuentos ¡y mucho más!</p>
+                        <a class="emms__cta" href="/sponsors-registrado">ACCEDE AHORA</a>
+                    </div>
+                <?php elseif (($settings_phase_DT['event'] === "digital-trends") && ($settings_phase_DT['transition'] === "live-off") && ($dayDuring === 2)) : ?>
+                    <div class="emms__hero-conference__video emms__hero-conference__video--transition emms__fade-in">
+                        <h2>Prepárate, ¡se viene el día 3 del EMMS Digital Trends 2023!</h2>
+                        <small>Recuerda que podrás acceder a todas las grabaciones de las Conferencias una vez finalizado el evento desde la <a href="#agenda">Agenda</a>.</small>
+                    </div>
+                    <div class="emms__hero-conference__aside emms__hero-conference__aside--transition emms__fade-in">
+                        <p>Accede a todo el contenido exclusivo que hemos preparado para ti: E-books gratuitos, cápsulas audiovisuales, guías, plantillas, beneficios, descuentos ¡y mucho más!</p>
+                        <a class="emms__cta" href="/sponsors-registrado">ACCEDE AHORA</a>
+                    </div>
+                <?php elseif (($settings_phase_DT['event'] === "digital-trends") && ($settings_phase_DT['transition'] === "live-off") && ($dayDuring === 3)) : ?>
+                    <div class="emms__hero-conference__video emms__hero-conference__video--transition emms__fade-in">
+                        <h2>Prepárate, ¡se viene el último día del EMMS Digital Trends 2023!</h2>
                         <small>Recuerda que podrás acceder a todas las grabaciones de las Conferencias una vez finalizado el evento desde la <a href="#agenda">Agenda</a>.</small>
                     </div>
                     <div class="emms__hero-conference__aside emms__hero-conference__aside--transition emms__fade-in">
@@ -165,12 +183,16 @@ require_once('././src/components/cacheSettings.php');
                 <div class="emms__plans__benefits--dk emms__fade-in">
                     <ul>
                         <h3>Beneficios</h3>
-                        <li><p>Acceso a todas las <a href="#agenda">conferencias</a></p></li>
+                        <li>
+                            <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
+                        </li>
                         <li>Volver a ver las conferencias todas las veces que quieras</li>
                         <li>Participación en los sorteos</li>
                         <li>Descuentos en herramientas y cursos</li>
                         <li>Certificado de participación a las conferencias</li>
-                        <li><p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p></li>
+                        <li>
+                            <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
+                        </li>
                         <li>Certificado de asistencia a Workshops</li>
                         <li>Acceso a licencias y descuentos en herramientas para tu estrategia digital</li>
                         <li>Networking con participantes y speakers</li>
@@ -191,7 +213,7 @@ require_once('././src/components/cacheSettings.php');
                                 <ul class="emms__collapse__list close">
                                     <h4>Beneficios</h4>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                    <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
+                                        <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Volver a ver las conferencias todas las veces que quieras</p>
@@ -206,7 +228,7 @@ require_once('././src/components/cacheSettings.php');
                                         <p>Certificado de participación a las conferencias</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
-                                    <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
+                                        <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
                                         <p>Certificado de asistencia a Workshops</p>
@@ -239,7 +261,7 @@ require_once('././src/components/cacheSettings.php');
                                 <ul class="emms__collapse__list close">
                                     <h4>Beneficios</h4>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                    <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
+                                        <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Volver a ver las conferencias todas las veces que quieras</p>
@@ -254,7 +276,7 @@ require_once('././src/components/cacheSettings.php');
                                         <p>Certificado de participación a las conferencias</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                    <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
+                                        <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Certificado de asistencia a Workshops</p>
@@ -290,7 +312,7 @@ require_once('././src/components/cacheSettings.php');
                                     <ul class="emms__collapse__list close">
                                         <h4>Beneficios</h4>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
+                                            <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Volver a ver las conferencias todas las veces que quieras</p>
@@ -305,7 +327,7 @@ require_once('././src/components/cacheSettings.php');
                                             <p>Certificado de participación a las conferencias</p>
                                         </li>
                                         <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
+                                            <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
                                         </li>
                                         <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Certificado de asistencia a Workshops</p>
@@ -337,7 +359,7 @@ require_once('././src/components/cacheSettings.php');
                                     <ul>
                                         <h4>Beneficios</h4>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
+                                            <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Volver a ver las conferencias todas las veces que quieras</p>
@@ -352,7 +374,7 @@ require_once('././src/components/cacheSettings.php');
                                             <p>Certificado de participación a las conferencias</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
+                                            <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Certificado de asistencia a Workshops</p>

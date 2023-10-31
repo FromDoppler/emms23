@@ -1,5 +1,6 @@
 <?php
 require_once('././config.php');
+require_once('././src/components/cacheSettings.php');
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +25,11 @@ require_once('././config.php');
             <div class="emms__header__logo emms__header__logo--ecommerce">
                 <a href="/"><img src="src/img/logos/logo-emms-ecommerce.png" alt="Emms Ecommerce 2023"></a>
             </div>
+            <?php if ($digitalTrendsStates['isLive']) : ?>
+                <div class="emms__header__live">
+                    <p>¡ESTAMOS EN VIVO EN EMMS DIGITAL TRENDS!</p>
+                </div>
+            <?php endif ?>
             <a class="emms__header__nav--mb" id="btn-burger"></a>
             <nav class="emms__header__nav emms__header__nav--hidden" id="nav-mb">
                 <ul class="emms__header__nav__menu">

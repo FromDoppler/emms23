@@ -52,9 +52,9 @@ require_once('././src/components/cacheSettings.php');
             <div class="emms__header__logo">
                 <a href="/"><img src="src/img/logos/logo-emms.png" alt="Emms 2023"></a>
             </div>
-            <?php if ($ecommerceStates['isLive']) : ?>
+            <?php if ($digitalTrendsStates['isLive']) : ?>
                 <div class="emms__header__live">
-                    <p>¡ESTAMOS EN VIVO EN EMMS E-COMMERCE!</p>
+                    <p>¡ESTAMOS EN VIVO EN EMMS DIGITAL TRENDS!</p>
                 </div>
             <?php endif ?>
 
@@ -249,10 +249,25 @@ require_once('././src/components/cacheSettings.php');
                         </li>
                         <li class="emms__eventCards__list__item digitalTCard">
                             <div class="not--loged">
-                                <div class="emms__eventCards__list__item__picture">
-                                    <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
-                                </div>
-                                <?php if ($digitalTrendsStates['isDuring']) : ?>
+                                <?php if ($digitalTrendsStates['isLive']) : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                    </div>
+                                    <div class="emms__eventCards__list__item__text">
+                                        <div class="emms__eventCards__list__item__text--corner">
+                                            <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
+                                        </div>
+                                        <h3>EMMS Digital Trends <span>EN VIVO</span></h3>
+                                        <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
+                                        <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
+                                        <div class="emms__eventCards__list__item__text--bottom">
+                                            <a href="/digital-trends" class="emms__cta">ACCEDE AL VIVO</a>
+                                        </div>
+                                    </div>
+                                <?php elseif ($digitalTrendsStates['isDuring']) : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                    </div>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
                                             <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
@@ -261,22 +276,26 @@ require_once('././src/components/cacheSettings.php');
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
+                                            <a href="/digital-trends" class="emms__cta">SÚMATE AHORA</a>
                                         </div>
                                     </div>
                                 <?php elseif ($digitalTrendsStates['isPost']) : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                        <p class="top">EVENTO FINALIZADO</p>
+                                    </div>
                                     <div class="emms__eventCards__list__item__text">
-                                        <div class="emms__eventCards__list__item__text--corner">
-                                            <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
-                                        </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
+                                            <a href="/digital-trends" class="emms__cta">REVIVE EL EVENTO</a>
                                         </div>
                                     </div>
                                 <?php else : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                    </div>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
                                             <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
@@ -291,26 +310,60 @@ require_once('././src/components/cacheSettings.php');
                                 <?php endif ?>
                             </div>
                             <div class="loged">
-                                <div class="emms__eventCards__list__item__picture">
-                                    <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
-                                    <p>YA TE HAS REGISTRADO</p>
-                                </div>
-                                <?php if ($digitalTrendsStates['isDuring'] || $digitalTrendsStates['isPost']) : ?>
+                                <?php if ($digitalTrendsStates['isLive']) : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                        <p>YA TE HAS REGISTRADO</p>
+                                    </div>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                           <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
+                                            <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
+                                        </div>
+                                        <h3>EMMS Digital Trends <span>EN VIVO</span></h3>
+                                        <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
+                                        <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
+                                        <div class="emms__eventCards__list__item__text--bottom">
+                                            <a href="/digital-trends-registrado" class="emms__cta">ACCEDE AL VIVO</a>
+                                        </div>
+                                    </div>
+                                <?php elseif ($digitalTrendsStates['isDuring']) : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                        <p>YA TE HAS REGISTRADO</p>
+                                    </div>
+                                    <div class="emms__eventCards__list__item__text">
+                                        <div class="emms__eventCards__list__item__text--corner">
+                                            <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="/digital-trends-registrado" class="emms__cta">ACCEDE</a>
+                                            <a href="/digital-trends-registrado" class="emms__cta">SÚMATE AHORA</a>
+                                        </div>
+                                    </div>
+                                <?php elseif ($digitalTrendsStates['isPost']) : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                        <p class="top">EVENTO FINALIZADO</p>
+                                        <p>YA TE HAS REGISTRADO</p>
+                                    </div>
+                                    <div class="emms__eventCards__list__item__text">
+                                        <h3>EMMS Digital Trends</h3>
+                                        <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
+                                        <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
+                                        <div class="emms__eventCards__list__item__text--bottom">
+                                            <a href="/digital-trends-registrado" class="emms__cta">REVIVE EL EVENTO</a>
                                         </div>
                                     </div>
                                 <?php else : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                        <p>YA TE HAS REGISTRADO</p>
+                                    </div>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
-                                           <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
+                                            <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
                                         </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
@@ -323,6 +376,7 @@ require_once('././src/components/cacheSettings.php');
                             </div>
                         </li>
                     </ul>
+
                     <ul class="emms__eventCards__list emms__eventCards__list--mb emms__fade-in main-carousel" data-flickity>
                         <li class="emms__eventCards__list__item ecommerceCard">
                             <div class="not--loged">
@@ -447,10 +501,25 @@ require_once('././src/components/cacheSettings.php');
                         </li>
                         <li class="emms__eventCards__list__item digitalTCard">
                             <div class="not--loged">
-                                <div class="emms__eventCards__list__item__picture">
-                                    <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
-                                </div>
-                                <?php if ($digitalTrendsStates['isDuring']) : ?>
+                                <?php if ($digitalTrendsStates['isLive']) : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                    </div>
+                                    <div class="emms__eventCards__list__item__text">
+                                        <div class="emms__eventCards__list__item__text--corner">
+                                            <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
+                                        </div>
+                                        <h3>EMMS Digital Trends <span>EN VIVO</span></h3>
+                                        <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
+                                        <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
+                                        <div class="emms__eventCards__list__item__text--bottom">
+                                            <a href="/digital-trends" class="emms__cta">ACCEDE AL VIVO</a>
+                                        </div>
+                                    </div>
+                                <?php elseif ($digitalTrendsStates['isDuring']) : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                    </div>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
                                             <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
@@ -459,22 +528,26 @@ require_once('././src/components/cacheSettings.php');
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
+                                            <a href="/digital-trends" class="emms__cta">SÚMATE AHORA</a>
                                         </div>
                                     </div>
                                 <?php elseif ($digitalTrendsStates['isPost']) : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                        <p class="top">EVENTO FINALIZADO</p>
+                                    </div>
                                     <div class="emms__eventCards__list__item__text">
-                                        <div class="emms__eventCards__list__item__text--corner">
-                                            <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
-                                        </div>
                                         <h3>EMMS Digital Trends</h3>
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
+                                            <a href="/digital-trends" class="emms__cta">REVIVE EL EVENTO</a>
                                         </div>
                                     </div>
                                 <?php else : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                    </div>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
                                             <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
@@ -489,11 +562,27 @@ require_once('././src/components/cacheSettings.php');
                                 <?php endif ?>
                             </div>
                             <div class="loged">
-                                <div class="emms__eventCards__list__item__picture">
-                                    <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
-                                    <p>YA TE HAS REGISTRADO</p>
-                                </div>
-                                <?php if ($digitalTrendsStates['isDuring'] || $digitalTrendsStates['isPost']) : ?>
+                                <?php if ($digitalTrendsStates['isLive']) : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                        <p>YA TE HAS REGISTRADO</p>
+                                    </div>
+                                    <div class="emms__eventCards__list__item__text">
+                                        <div class="emms__eventCards__list__item__text--corner">
+                                            <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
+                                        </div>
+                                        <h3>EMMS Digital Trends <span>EN VIVO</span></h3>
+                                        <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
+                                        <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
+                                        <div class="emms__eventCards__list__item__text--bottom">
+                                            <a href="/digital-trends-registrado" class="emms__cta">ACCEDE AL VIVO</a>
+                                        </div>
+                                    </div>
+                                <?php elseif ($digitalTrendsStates['isDuring']) : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                        <p>YA TE HAS REGISTRADO</p>
+                                    </div>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
                                             <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
@@ -502,10 +591,28 @@ require_once('././src/components/cacheSettings.php');
                                         <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                         <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                         <div class="emms__eventCards__list__item__text--bottom">
-                                            <a href="/digital-trends-registrado" class="emms__cta">ACCEDE</a>
+                                            <a href="/digital-trends-registrado" class="emms__cta">SÚMATE AHORA</a>
+                                        </div>
+                                    </div>
+                                <?php elseif ($digitalTrendsStates['isPost']) : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                        <p class="top">EVENTO FINALIZADO</p>
+                                        <p>YA TE HAS REGISTRADO</p>
+                                    </div>
+                                    <div class="emms__eventCards__list__item__text">
+                                        <h3>EMMS Digital Trends</h3>
+                                        <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
+                                        <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
+                                        <div class="emms__eventCards__list__item__text--bottom">
+                                            <a href="/digital-trends-registrado" class="emms__cta">REVIVE EL EVENTO</a>
                                         </div>
                                     </div>
                                 <?php else : ?>
+                                    <div class="emms__eventCards__list__item__picture">
+                                        <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                        <p>YA TE HAS REGISTRADO</p>
+                                    </div>
                                     <div class="emms__eventCards__list__item__text">
                                         <div class="emms__eventCards__list__item__text--corner">
                                             <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>

@@ -49,9 +49,9 @@ require_once('././src/components/cacheSettings.php');
             <div class="emms__header__logo">
                 <a href="/"><img src="src/img/logos/logo-emms.png" alt="Emms 2023"></a>
             </div>
-            <?php if ($ecommerceStates['isLive']) : ?>
+            <?php if ($digitalTrendsStates['isLive']) : ?>
                 <div class="emms__header__live">
-                    <p>¡ESTAMOS EN VIVO EN EMMS E-COMMERCE!</p>
+                    <p>¡ESTAMOS EN VIVO EN EMMS DIGITAL TRENDS!</p>
                 </div>
             <?php endif ?>
             <a class="emms__header__nav--mb" id="btn-burger"></a>
@@ -163,16 +163,33 @@ require_once('././src/components/cacheSettings.php');
                         <li class="emms__eventCards__list__item">
                             <div class="emms__eventCards__list__item__picture">
                                 <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                <?php if ($digitalTrendsStates['isPost']) : ?>
+                                    <p class="top">EVENTO FINALIZADO</p>
+                                <?php endif ?>
                             </div>
                             <div class="emms__eventCards__list__item__text">
+                                <?php if ($digitalTrendsStates['isPre'] || $digitalTrendsStates['isDuring']) : ?>
                                 <div class="emms__eventCards__list__item__text--corner">
                                     <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
                                 </div>
-                                <h3>EMMS Digital Trends</h3>
+                                <?php endif ?>
+                                <?php if ($digitalTrendsStates['isLive']) : ?>
+                                    <h3>EMMS Digital Trends <span>EN VIVO</span></h3>
+                                <?php else : ?>
+                                    <h3>EMMS Digital Trends </h3>
+                                <?php endif ?>
                                 <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
+                                    <?php if ($digitalTrendsStates['isPre']) : ?>
+                                        <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
+                                    <?php elseif ($digitalTrendsStates['isLive']) : ?>
+                                        <a href="/digital-trends" class="emms__cta">ACCEDE AL VIVO</a>
+                                    <?php elseif ($digitalTrendsStates['isDuring']) : ?>
+                                        <a href="/digital-trends" class="emms__cta">SÚMATE AHORA</a>
+                                    <?php elseif ($digitalTrendsStates['isPost']) : ?>
+                                        <a href="/digital-trends" class="emms__cta">REVIVE EL EVENTO</a>
+                                    <?php endif ?>
                                 </div>
                             </div>
                         </li>
@@ -222,16 +239,33 @@ require_once('././src/components/cacheSettings.php');
                         <li class="emms__eventCards__list__item">
                             <div class="emms__eventCards__list__item__picture">
                                 <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
+                                <?php if ($digitalTrendsStates['isPost']) : ?>
+                                    <p class="top">EVENTO FINALIZADO</p>
+                                <?php endif ?>
                             </div>
                             <div class="emms__eventCards__list__item__text">
+                                <?php if ($digitalTrendsStates['isPre'] || $digitalTrendsStates['isDuring']) : ?>
                                 <div class="emms__eventCards__list__item__text--corner">
-                                    <p>NOVIEMBRE</p>
+                                    <p><span>13 <em>-</em> 16</span>NOVIEMBRE</p>
                                 </div>
-                                <h3>EMMS Digital Trends</h3>
+                                <?php endif ?>
+                                <?php if ($digitalTrendsStates['isLive']) : ?>
+                                    <h3>EMMS Digital Trends <span>EN VIVO</span></h3>
+                                <?php else : ?>
+                                    <h3>EMMS Digital Trends </h3>
+                                <?php endif ?>
                                 <p>Como cada año, descubre cuáles son las tendencias que aplican tus mayores <strong>referentes internacionales</strong> y nútrete de nuevas <strong>ideas para implementar en tu negocio</strong>.</p>
                                 <p class="emms__eventCards__list__item__text--feature"><img src="src/img/icons/icon-ticket.svg" alt="Icon">Online y gratuito</p>
                                 <div class="emms__eventCards__list__item__text--bottom">
-                                    <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
+                                    <?php if ($digitalTrendsStates['isPre']) : ?>
+                                        <a href="/digital-trends" class="emms__cta">REGÍSTRATE GRATIS</a>
+                                    <?php elseif ($digitalTrendsStates['isLive']) : ?>
+                                        <a href="/digital-trends" class="emms__cta">ACCEDE AL VIVO</a>
+                                    <?php elseif ($digitalTrendsStates['isDuring']) : ?>
+                                        <a href="/digital-trends" class="emms__cta">SÚMATE AHORA</a>
+                                    <?php elseif ($digitalTrendsStates['isPost']) : ?>
+                                        <a href="/digital-trends" class="emms__cta">REVIVE EL EVENTO</a>
+                                    <?php endif ?>
                                 </div>
                             </div>
                         </li>

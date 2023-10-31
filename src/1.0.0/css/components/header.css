@@ -48,14 +48,10 @@
 }
 
 .emms__header__live {
-    position: absolute;
-    top: 45px;
-    left: 50%;
-    transform: translateX(-110%);
-}
-
-.emms__header-scroll .emms__header__live{
-    top: 26px;
+    text-align: center;
+    position: initial;
+    transform: none;
+    max-width: 160px;
 }
 
 .emms__header__live p {
@@ -179,6 +175,10 @@
 .emms__header__nav .emms__header__nav__menu .emms__header__nav__submenu li a:hover {
     color: #BD7AFF;
     transition-duration: .2s;
+}
+
+.emms__header__nav--mb{
+    display: none;
 }
 
 
