@@ -37,8 +37,8 @@ require_once('././src/components/cacheSettings.php');
                             <li><a href="#entradas">entradas</a></li>
                         </ul>
                     </li>
-                    <li><a href="/sponsors">biblioteca de recursos</a></li>
-                    <li><a href="/ediciones-anteriores">ediciones anteriores</a></li>
+                    <li><a href="/sponsors-registrado">biblioteca de recursos</a></li>
+                    <li><a href="/ediciones-anteriores-registrado">ediciones anteriores</a></li>
                 </ul>
             </nav>
         </div>

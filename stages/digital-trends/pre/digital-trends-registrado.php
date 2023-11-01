@@ -42,8 +42,8 @@ require_once('././src/components/cacheSettings.php');
                             <li><a href="#entradas">entradas</a></li>
                         </ul>
                     </li>
-                    <li><a href="/sponsors">biblioteca de recursos</a></li>
-                    <li><a href="/ediciones-anteriores">ediciones anteriores</a></li>
+                    <li><a href="/sponsors-registrado">biblioteca de recursos</a></li>
+                    <li><a href="/ediciones-anteriores-registrado">ediciones anteriores</a></li>
                 </ul>
             </nav>
         </div>
@@ -144,12 +144,16 @@ require_once('././src/components/cacheSettings.php');
                 <div class="emms__plans__benefits--dk emms__fade-in">
                     <ul>
                         <h3>Beneficios</h3>
-                        <li><p>Acceso a todas las <a href="#agenda">conferencias</a></p></li>
+                        <li>
+                            <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
+                        </li>
                         <li>Volver a ver las conferencias todas las veces que quieras</li>
                         <li>Participación en los sorteos</li>
                         <li>Descuentos en herramientas y cursos</li>
                         <li>Certificado de participación a las conferencias</li>
-                        <li><p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p></li>
+                        <li>
+                            <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
+                        </li>
                         <li>Certificado de asistencia a Workshops</li>
                         <li>Acceso a licencias y descuentos en herramientas para tu estrategia digital</li>
                         <li>Networking con participantes y speakers</li>
