@@ -28,7 +28,7 @@ require_once('././src/components/cacheSettings.php');
             <div class="emms__header__logo emms__header__logo--ecommerce">
                 <a href="/"><img src="src/img/logos/logo-emms-digitaltrends.png" alt="Digital Trends 2023"></a>
             </div>
-            <?php if (($settings_phase['event'] === "digital-trends") && ($settings_phase['during'] === 1) && ($settings_phase['transition'] === "live-on")) : ?>
+            <?php if (($settings_phase_DT['event'] === "digital-trends") && ($settings_phase_DT['during'] === 1) && ($settings_phase_DT['transition'] === "live-on")) : ?>
                 <div class="emms__header__live">
                     <p>¡ESTAMOS EN VIVO EN EMMS DIGITAL TRENDS!</p>
                 </div>
