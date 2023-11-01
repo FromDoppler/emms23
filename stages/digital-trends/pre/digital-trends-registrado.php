@@ -19,8 +19,18 @@ require_once('././src/components/cacheSettings.php');
 <body class="emms__digitaltrends emms__digitaltrends-logueado">
     <?php include_once('././src/components/gtm.php'); ?>
 
+
+    <!-- Hellobar -->
+    <div class="emms__hellobar fixed">
+        <div class="emms__hellobar__container emms__fade-in">
+            <p>Accede a <strong>Workshops</strong> y <strong>Networkings</strong> para potenciar aún más tus conocimientos.</p>
+            <a href="#entradas">QUIERO MI ENTRADA VIP</a>
+        </div>
+    </div>
+
+
     <!-- Header -->
-    <header class="emms__header">
+    <header class="emms__header hellobar-space">
         <div class="emms__container--lg emms__fade-in">
             <div class="emms__header__logo emms__header__logo--ecommerce">
                 <a href="/"><img src="src/img/logos/logo-emms-digitaltrends.png" alt="Digital Trends 2023"></a>
@@ -74,7 +84,7 @@ require_once('././src/components/cacheSettings.php');
     <main>
 
         <!-- Hero -->
-        <section class="emms__hero-registration emms__hero-registration--noform emms__hero-registration--video">
+        <section class="emms__hero-registration emms__hero-registration--noform emms__hero-registration--video hellobar-space">
             <div class="emms__hero-registration__back emms__fade-in">
                 <video src="https://goemms.com/src/img/video-back-dt.mp4" muted autoplay loop></video>
             </div>

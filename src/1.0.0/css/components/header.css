@@ -28,6 +28,25 @@
     padding: 16px 0;
 }
 
+.emms__header.hellobar-space{
+    top: 49px;
+}
+
+.emms__header.emms__header-scroll.hellobar-space{
+    top: 49px;
+    animation: header-hellobar .5s;
+}
+
+@keyframes header-hellobar {
+    0% {
+        top: 0px;
+    }
+
+    100% {
+        top: 49px;
+    }
+}
+
 .emms__header .emms__container--lg {
     display: flex;
     justify-content: space-between;
@@ -272,5 +291,24 @@
 @media(max-width: 620px) {
     .emms__header__logo--ecommerce {
         width: 214px;
+    }
+
+    .emms__header.hellobar-space{
+        top: 89px;
+    }
+
+    .emms__header.emms__header-scroll.hellobar-space{
+        top: 89px;
+        animation: header-hellobar .5s;
+    }
+
+    @keyframes header-hellobar {
+        0% {
+            top: 0px;
+        }
+
+        100% {
+            top: 89px;
+        }
     }
 }
