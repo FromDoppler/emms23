@@ -1,8 +1,8 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', () => {
-    const dateStr = '2023-05-16 11:00:00';
-    const utcDate = '2023-05-16T14:00:00.000Z';
+    const dateStr = '2023-05-16 10:30:00';
+    const utcDate = '2023-05-16T13:30:00.000Z';
     var eventDate = new Date(utcDate);
     // const dateStrNetworking = '2023-05-16 14:00:00';
     const utcDateNetworking = '2023-05-16T17:00:00.000Z';
@@ -63,18 +63,20 @@ document.addEventListener('DOMContentLoaded', () => {
         return true;
     }
 
-    const changeCountryHour = (countryCode, flagContainers, img) => {
+    const changeCountryHour = (countryCode, flagContainers, img, printType) => {
         if (countryCode === "MX") {
+            const fullTime = (printType === 'networking') ? '07:30(CDMX)' : '11:00(CDMX)';
             flagContainers.forEach(flagContainer => {
                 flagContainer.innerHTML = '';
                 flagContainer.appendChild(img);
-                flagContainer.innerHTML += '(' + countryCode + ') ' + '09' + ':00 (CDMX)';
+                flagContainer.innerHTML += '(' + countryCode + ') ' + fullTime;
             });
         } else if (countryCode === "ES") {
+            const fullTime = (printType === 'networking') ? '18:00 (Madrid)' : '14:30 (Madrid)';
             flagContainers.forEach(flagContainer => {
                 flagContainer.innerHTML = '';
                 flagContainer.appendChild(img);
-                flagContainer.innerHTML += '(' + countryCode + ') ' + '17' + ':00 (Madrid)';
+                flagContainer.innerHTML += '(' + countryCode + ') ' + fullTime;
             });
         }
 
@@ -104,17 +106,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const setCountryDateGeneric = (countryCode, filterFlagContainers, img, date) => {
-        let hours = date.getHours().toString();
-        hours = (hours.length < 2) ? '0' + hours : hours;
+    const setCountryDateGeneric = (countryCode, filterFlagContainers, img, date, printType) => {
+        const hours = date.getHours().toString().padStart(2, '0');
+        const minutes = date.getMinutes().toString().padStart(2, '0');
+
 
         if (countryCode === "ES") {
-            changeCountryHour(countryCode, filterFlagContainers, img);
+            changeCountryHour(countryCode, filterFlagContainers, img, printType);
         } else {
             filterFlagContainers.forEach(flagContainer => {
                 flagContainer.innerHTML = '';
                 flagContainer.appendChild(img);
-                flagContainer.innerHTML += '(' + (countryCode === 'AR' ? 'ARG' : countryCode) + ') ' + hours + ':00';
+                flagContainer.innerHTML += `(${countryCode === 'AR' ? 'ARG' : countryCode}) ${hours}:${minutes}`;
             });
         }
     }
@@ -132,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const img = createImgElement(countryName, countryCode);
-        setCountryDateGeneric(countryCode, speakersFlagsContainers, img, date);
+        setCountryDateGeneric(countryCode, speakersFlagsContainers, img, date, 'speaker');
     }
 
     const setCountryAndDateNetworking = ({ countryName, countryCode }, date, target) => {
@@ -144,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const img = createImgElement(countryName, countryCode);
-        setCountryDateGeneric(countryCode, flagNetworkingContainers, img, date);
+        setCountryDateGeneric(countryCode, flagNetworkingContainers, img, date, 'networking');
     }
 
 
@@ -161,10 +164,12 @@ document.addEventListener('DOMContentLoaded', () => {
             eventHours.push(structuredClone(newDate));
         });
 
-        eventHours.forEach(date => {
-            date = checkUserDtsSpeakers(date);
-        });
-
+        /*
+         Queda desactivado de momento hasta analizar el por que detecta el cambio de zona horaria en españa cuando no lo es
+         eventHours.forEach(date => {
+                    date = checkUserDtsSpeakers(date);
+            });
+        */
         printCountryHourSpeakers(eventHours, countryName, countryCode, eventDateContainers);
     }
 
@@ -187,7 +192,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const initDateChanges = async () => {
 
         // Checkeamos si pertenece a Daylight saving time (DST) (horario de verano)
-        checkUserDts();
+        //Queda desactivado de momento hasta analizar el por que detecta el cambio de zona horaria en españa cuando no lo es
+        // checkUserDts();
         // Obtenemos el pais del usuario
         const countryResponse = await getCountryAndCode();
         // Checkeamos si es un pais target

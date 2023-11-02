@@ -6,7 +6,7 @@
     <div class="emms__calendar__date emms__fade-in">
         <h3><strong>DÍA 1</strong> - LUNES 13 DE NOVIEMBRE</h3>
         <div class="emms__calendar__date__country">
-            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 11:00 a.m</span>
+            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 10:30 a.m</span>
             <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+Digital+Trends%3A+d%C3%ADa+1&iso=20231113T11&p1=51&ah=6" target="_blank">Mira el horario de tu país</a>
         </div>
     </div>
@@ -324,7 +324,7 @@
     <div class="emms__calendar__date emms__fade-in">
         <h3><strong>DÍA 2</strong> - MARTES 14 DE NOVIEMBRE</h3>
         <div class="emms__calendar__date__country">
-            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 11:00 a.m</span>
+            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 10:30 a.m</span>
             <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+Digital+Trends%3A+d%C3%ADa+2&iso=20231114T11&p1=51&ah=6" target="_blank">Mira el horario de tu país</a>
         </div>
     </div>
@@ -642,7 +642,7 @@
     <div class="emms__calendar__date emms__fade-in">
         <h3><strong>DÍA 3</strong> - MIÉRCOLES 15 DE NOVIEMBRE</h3>
         <div class="emms__calendar__date__country">
-            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 11:00 a.m</span>
+            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 10:30 a.m</span>
             <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+Digital+Trends%3A+d%C3%ADa+3&iso=20231115T11&p1=51&ah=6" target="_blank">Mira el horario de tu país</a>
         </div>
     </div>
@@ -961,7 +961,7 @@
     <div class="emms__calendar__date emms__fade-in">
         <h3><strong>DÍA 4</strong> - JUEVES 16 DE NOVIEMBRE</h3>
         <div class="emms__calendar__date__country">
-            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 11:00 a.m</span>
+            <span><img src="src/img/flag-argentina.png" alt="Argentina">(ARG) 10:30 a.m</span>
             <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=EMMS+Digital+Trends%3A+d%C3%ADa+4&iso=20231116T11&p1=51&ah=6" target="_blank">Mira el horario de tu país</a>
         </div>
     </div>
