@@ -1,14 +1,18 @@
 'use strict';
 
+import { searchUrlParam } from "./utm.js";
+
 
 const isQADomain = () => {
     return window.location.host === 'qa.goemms.com' || window.location.host === 'localhost';
 }
 
 const forceDownload = async (fullname, type) => {
+    const workshopType = searchUrlParam('workshoptype');
     const encodeFullname = encodeURI(fullname);
     const domainUrl = (isQADomain()) ? `certificate-emms2023qa.php` : `certificate-emms2023.php`;
-    const url = `https://textify.fromdoppler.com/${domainUrl}?fullname=${encodeFullname}&type=${type}`;
+    const commonUrl = `https://textify.fromdoppler.com/${domainUrl}?fullname=${encodeFullname}&type=${type}`;
+    const url = workshopType ? `${commonUrl}&workshoptype=${encodeURI(workshopType)}` : commonUrl;
     const fileName = `certificacion-emms2023-${type}.png`;
 
     try {
