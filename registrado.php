@@ -746,16 +746,9 @@ require_once('././src/components/cacheSettings.php');
                         </li>
                     </ul>
                 </div>
-                <?php if ($ecommerceStates['isPre']) : ?>
-                    <small class="emms__fade-in"><strong>¡Ya puedes conocer a los speakers de EMMS Ecommerce!</strong><br>Accede y mira la agenda <a href="./ecommerce-registrado#agenda">haciendo clic aquí</a>.</small>
-                <?php endif ?>
-                <?php if ($ecommerceStates['isDuring']) : ?>
-                    <small class="emms__fade-in"><strong>¡Conoce a los speakers del EMMS E-commerce!</strong><br>Descubre quiénes son y las temáticas de sus conferencias.</small>
-                    <a href="./ecommerce#agenda" class="emms__cta">AGENDA EMMS E-COMMERCE 2023</a>
-                <?php endif ?>
-                <?php if ($ecommerceStates['isPost']) : ?>
-                    <small class="emms__fade-in"><strong>¡Está llegando el EMMS Digital Trends 2023!</strong><br>Pronto podrás descubrir a los speakers que nos acompañarán en esta nueva edición.</small>
-                    <a href="./digital-trends" class="emms__cta">DESCUBRE LAS NOVEDADES</a>
+                <?php if ($digitalTrendsStates['isPre']) : ?>
+                    <small class="emms__fade-in"><strong>¡Está llegando el EMMS Digital Trends 2023!</strong><br>Descubre a los speakers que nos acompañarán en esta nueva edición.</small>
+                    <a href="./digital-trends-registrado#agenda" class="emms__cta emms__fade-in">AGENDA EMMS DIGITAL TRENDS 2023</a>
                 <?php endif ?>
             </div>
             <div class="emms__background-a"></div>
