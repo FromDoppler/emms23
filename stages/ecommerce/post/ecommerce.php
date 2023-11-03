@@ -75,7 +75,7 @@ require_once('././src/components/cacheSettings.php');
         <!-- Hero with form-->
         <section class="emms__hero-registration eventHiddenElements" id="registro">
             <div class="emms__hero-registration__columns">
-                <div class="emms__hero-registration__text emms__fade-in">
+                <div class="emms__hero-registration__text">
                     <h1><em>EVENTO ONLINE Y GRATUITO</em> ¡El EMMS evolucionó!</h1>
                     <p>Inspírate con un evento exclusivo pensado para tu Tienda Online. Revívelo ahora</p>
                     <ul class="emms__hero-registration__text__checklist">
@@ -84,7 +84,7 @@ require_once('././src/components/cacheSettings.php');
                         <li>HERRAMIENTAS Y RECURSOS</li>
                     </ul>
                 </div>
-                <div class="emms__hero-registration__form emms__fade-in">
+                <div class="emms__hero-registration__form">
                     <!-- Form -->
                     <form class="emms__form" id="ecommerceForm" novalidate autocomplete="off">
                         <ul class="emms__form__field-group">
@@ -169,7 +169,7 @@ require_once('././src/components/cacheSettings.php');
                     <!-- End form -->
                 </div>
             </div>
-            <div class="emms__hero-registration__bottom emms__fade-in">
+            <div class="emms__hero-registration__bottom">
                 <p>IA >> AUTOMATION MARKETING >> UX >> CRO >> MARKETPLACES >> SEO >> RETARGETING >> SOCIAL SELLING >> EMAIL MARKETING >> ESTRATEGIAS DE VENTA >></p>
                 <p>IA >> AUTOMATION MARKETING >> UX >> CRO >> MARKETPLACES >> SEO >> RETARGETING >> SOCIAL SELLING >> EMAIL MARKETING >> ESTRATEGIAS DE VENTA >></p>
             </div>
@@ -177,12 +177,12 @@ require_once('././src/components/cacheSettings.php');
 
         <!-- Hero without form-->
         <section class="emms__hero-registration emms__hero-registration--noform eventHiddenElements eventShowElements" id="registro">
-            <div class="emms__hero-registration__text emms__fade-in">
+            <div class="emms__hero-registration__text">
                 <h1>¡Estás a un paso de acceder al EMMS E-commerce 2023!</h1>
                 <p>Revive el evento más importante de Latinoamérica y España sobre E-commerce. <strong>Más de 10.000 personas ya lo disfrutaron</strong>. ¡Ahora te toca a ti!</p>
                 <button type="button" class="emms__cta ecommerceBtn"><span class="button__text">REVIVE EL EVENTO</span></button>
             </div>
-            <div class="emms__hero-registration__bottom emms__fade-in">
+            <div class="emms__hero-registration__bottom">
                 <p>IA >> AUTOMATION MARKETING >> UX >> CRO >> MARKETPLACES >> SEO >> RETARGETING >> SOCIAL SELLING >> EMAIL MARKETING >> ESTRATEGIAS DE VENTA >></p>
                 <p>IA >> AUTOMATION MARKETING >> UX >> CRO >> MARKETPLACES >> SEO >> RETARGETING >> SOCIAL SELLING >> EMAIL MARKETING >> ESTRATEGIAS DE VENTA >></p>
             </div>

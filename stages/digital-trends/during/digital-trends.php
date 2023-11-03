@@ -279,7 +279,7 @@ require_once('././src/components/cacheSettings.php');
         <section class="emms__calendar" id="agenda">
             <div class="emms__container--lg">
                 <div class="emms__calendar__title emms__fade-in">
-                    <h2>Agenda EMMS Digital Trends 2023</h2>
+                    <h2 class="lg">Agenda EMMS Digital Trends 2023</h2>
                 </div>
             </div>
             <!-- Speakers -->
