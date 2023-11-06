@@ -209,6 +209,14 @@ require_once('././src/components/cacheSettings.php');
                                 <span>¡No te lo pierdas!</span>
                             </a>
                         </div>
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a href="https://www.youtube.com/watch?v=dA214KV7oS8" target="_blank">
+                                <img src="src/img/conferences/portada-youtube-mundobrandes-min.png" alt="Conferencias exclusivas">
+                                <h4>5 Errores Comunes al Iniciar en el Ecommerce</h4>
+                                <p>Duración: 00:14:11</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
