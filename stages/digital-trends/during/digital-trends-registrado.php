@@ -54,12 +54,12 @@ require_once('././src/components/cacheSettings.php');
                 </a>
             </li>
             <li>
-                <a href="javascript: void(0);" onclick="window.open ('https://twitter.com/intent/tweet?url=https%3A%2F%2Fgoemms.com%2Fdigital-trends&text=', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
+                <a href="javascript: void(0);" onclick="window.open ('https://twitter.com/intent/tweet?url=https%3A%2F%2Fgoemms.com%2Fdigital-trends&text=EMMS%20Digital%20Trends%202023%3A%20El%20mayor%20evento%20de%20Marketing%20Digital.%20Ya%20comenz%C3%B3%20una%20nueva%20edici%C3%B3n%20del%20evento%20m%C3%A1s%20esperado%20por%20la%20comunidad%20del%20Marketing.%20Descubre%20las%20%C3%BAltimas%20tendencias%20y%20las%20estrategias%20que%20implementan%20los%20l%C3%ADderes%20del%20mundo%20para%20hacer%20crecer%20sus%20negocios.%20Gratis%20y%20online.%20%C2%A1Reserva%20tu%20cupo%20ahora!', 'Twitter', 'toolbar=0, status=0, width=550, height=350');">
                     <img src="src/img/Twitter-w.svg" alt="Twitter">
                 </a>
             </li>
             <li>
-                <a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgoemms.com%2Fdigital-trends&title=', 'Linkedin', 'toolbar=0, status=0, width=550, height=550');">
+                <a href="javascript: void(0);" onclick="window.open ('http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgoemms.com%2Fdigital-trends&title=EMMS%20Digital%20Trends%202023%3A%20El%20mayor%20evento%20de%20Marketing%20Digital.%20Ya%20comenz%C3%B3%20una%20nueva%20edici%C3%B3n%20del%20evento%20m%C3%A1s%20esperado%20por%20la%20comunidad%20del%20Marketing.%20Descubre%20las%20%C3%BAltimas%20tendencias%20y%20las%20estrategias%20que%20implementan%20los%20l%C3%ADderes%20del%20mundo%20para%20hacer%20crecer%20sus%20negocios.%20Gratis%20y%20online.%20%C2%A1Reserva%20tu%20cupo%20ahora!', 'Linkedin', 'toolbar=0, status=0, width=550, height=550');">
                     <img src="src/img/LinkedIn-w.svg" alt="LinkedIn">
                 </a>
             </li>
