@@ -190,7 +190,7 @@
         background: #000 url("../../img/back-hero--mb.png") no-repeat;
         background-size: 100%;
         background-position: center;
-        padding: 120px 0 165px 0;
+        padding: 100px 0 165px 0;
     }
 
     .emms__home__hero__title {
@@ -198,12 +198,16 @@
     }
 
     .emms__home__hero__title h1 {
-        font-size: 40px;
-        line-height: 44px;
+        font-size: 30px;
+        line-height: 28px;
     }
 
     .emms__home__hero__title h2 {
         font-size: 16px;
+    }
+
+    .emms__home__hero__title p{
+        display: none;
     }
 
     .emms__home__speakers {

@@ -377,7 +377,7 @@ require_once('././src/components/cacheSettings.php');
                         </li>
                     </ul>
 
-                    <ul class="emms__eventCards__list emms__eventCards__list--mb emms__fade-in main-carousel" data-flickity>
+                    <ul class="emms__eventCards__list emms__eventCards__list--mb emms__fade-in main-carousel" data-flickity='{ "initialIndex": 1 }'>
                         <li class="emms__eventCards__list__item ecommerceCard">
                             <div class="not--loged">
                                 <div class="emms__eventCards__list__item__picture">
