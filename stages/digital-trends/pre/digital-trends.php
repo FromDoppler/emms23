@@ -870,6 +870,7 @@ require_once('././src/components/cacheSettings.php');
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
     <script src="src/<?= VERSION ?>/js/popUp.js" type="module"></script>
     <script src="src/<?= VERSION ?>/js/counterAnimation.js"></script>
+    <script src="src/<?= VERSION ?>/js/date.js"></script>
     <script src="src/<?= VERSION ?>/js/vendors/intlTelInput.min.js"></script>
     <?php include_once('././src/components/intellInput.php'); ?>
 
