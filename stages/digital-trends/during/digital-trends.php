@@ -372,12 +372,16 @@ require_once('././src/components/cacheSettings.php');
                 <div class="emms__plans__benefits--dk emms__fade-in">
                     <ul>
                         <h3>Beneficios</h3>
-                        <li><p>Acceso a todas las <a href="#agenda">conferencias</a></p></li>
+                        <li>
+                            <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
+                        </li>
                         <li>Volver a ver las conferencias todas las veces que quieras</li>
                         <li>Participación en los sorteos</li>
                         <li>Descuentos en herramientas y cursos</li>
                         <li>Certificado de participación a las conferencias</li>
-                        <li><p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p></li>
+                        <li>
+                            <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
+                        </li>
                         <li>Certificado de asistencia a Workshops</li>
                         <li>Acceso a licencias y descuentos en herramientas para tu estrategia digital</li>
                         <li>Networking con participantes y speakers</li>
@@ -398,7 +402,7 @@ require_once('././src/components/cacheSettings.php');
                                 <ul class="emms__collapse__list close">
                                     <h4>Beneficios</h4>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                    <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
+                                        <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Volver a ver las conferencias todas las veces que quieras</p>
@@ -413,7 +417,7 @@ require_once('././src/components/cacheSettings.php');
                                         <p>Certificado de participación a las conferencias</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
-                                    <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
+                                        <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
                                         <p>Certificado de asistencia a Workshops</p>
@@ -446,7 +450,7 @@ require_once('././src/components/cacheSettings.php');
                                 <ul class="emms__collapse__list close">
                                     <h4>Beneficios</h4>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                    <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
+                                        <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
                                     </li>
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Volver a ver las conferencias todas las veces que quieras</p>
@@ -461,7 +465,7 @@ require_once('././src/components/cacheSettings.php');
                                         <p>Certificado de participación a las conferencias</p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                    <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
+                                        <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Certificado de asistencia a Workshops</p>
@@ -497,7 +501,7 @@ require_once('././src/components/cacheSettings.php');
                                     <ul class="emms__collapse__list close">
                                         <h4>Beneficios</h4>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
+                                            <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Volver a ver las conferencias todas las veces que quieras</p>
@@ -512,7 +516,7 @@ require_once('././src/components/cacheSettings.php');
                                             <p>Certificado de participación a las conferencias</p>
                                         </li>
                                         <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
+                                            <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
                                         </li>
                                         <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Certificado de asistencia a Workshops</p>
@@ -544,7 +548,7 @@ require_once('././src/components/cacheSettings.php');
                                     <ul>
                                         <h4>Beneficios</h4>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
+                                            <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Volver a ver las conferencias todas las veces que quieras</p>
@@ -559,7 +563,7 @@ require_once('././src/components/cacheSettings.php');
                                             <p>Certificado de participación a las conferencias</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
+                                            <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Certificado de asistencia a Workshops</p>
@@ -866,6 +870,7 @@ require_once('././src/components/cacheSettings.php');
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
     <script src="src/<?= VERSION ?>/js/popUp.js" type="module"></script>
     <script src="src/<?= VERSION ?>/js/counterAnimation.js"></script>
+    <script src="src/<?= VERSION ?>/js/date.js"></script>
     <script src="src/<?= VERSION ?>/js/vendors/intlTelInput.min.js"></script>
     <?php include_once('././src/components/intellInput.php'); ?>
 
