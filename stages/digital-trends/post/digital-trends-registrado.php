@@ -433,7 +433,7 @@ require_once('././config.php');
                     </ul>
                 </div>
                 <div class="emms__plans__cards-container emms__fade-in">
-                    <div class="emms__plans__card">
+                    <div class="emms__plans__card dk">
                         <h3>Asistente Free</h3>
                         <div class="emms__plans__card__inside">
                             <div class="emms__plans__card__inside__top">
