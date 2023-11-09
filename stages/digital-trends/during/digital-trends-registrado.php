@@ -104,33 +104,33 @@ require_once('././src/components/cacheSettings.php');
                     <img src="src/img/banner-technical-error-DT.png" alt="Errores técnicos" class="banner">
                 <?php elseif (($settings_phase_DT['event'] === "digital-trends") && ($settings_phase_DT['transition'] === "live-off") && ($dayDuring === 1)) : ?>
                     <div class="emms__hero-conference__video emms__hero-conference__video--transition emms__fade-in">
-                        <h2>Prepárate, ¡se viene el día 2 del EMMS Digital Trends 2023!</h2>
-                        <small>Recuerda que podrás acceder a todas las grabaciones de las Conferencias una vez finalizado el evento desde la <a href="#agenda">Agenda</a>.</small>
+                        <h2>¡Eso fue todo por hoy! <br>Mañana volvemos con el #EMMS2023 :)</h2>
+                        <small>Prepárate para más conferencias, networking y workshops en la siguiente jornada del EMMS Digital Trends. <br><br>Recuerda que comenzamos a las 10:30hs Arg</small>
                     </div>
                     <div class="emms__hero-conference__aside emms__hero-conference__aside--transition emms__fade-in">
-                        <p>Accede a todo el contenido exclusivo que hemos preparado para ti: E-books gratuitos, cápsulas audiovisuales, guías, plantillas, beneficios, descuentos ¡y mucho más!</p>
-                        <a class="emms__cta" href="/sponsors-registrado">ACCEDE AHORA</a>
+                        <p>¿Quieres disfrutar al máximo de otra jornada increíble? Ingresa <a href="#entradas">aquí</a> y reserva tu Entrada VIP para acceder al Networking y más de 15 Workshops prácticos. <br><br>¡Aún estás a tiempo de sumarte!</p>
+                        <a class="emms__cta" href="#entradas">COMPRA TU ENTRADA</a>
                     </div>
                 <?php elseif (($settings_phase_DT['event'] === "digital-trends") && ($settings_phase_DT['transition'] === "live-off") && ($dayDuring === 2)) : ?>
                     <div class="emms__hero-conference__video emms__hero-conference__video--transition emms__fade-in">
-                        <h2>Prepárate, ¡se viene el día 3 del EMMS Digital Trends 2023!</h2>
-                        <small>Recuerda que podrás acceder a todas las grabaciones de las Conferencias una vez finalizado el evento desde la <a href="#agenda">Agenda</a>.</small>
+                        <h2>¡Eso fue todo por hoy! <br>Mañana volvemos con el #EMMS2023 :)</h2>
+                        <small>Prepárate para más conferencias, networking y workshops en la siguiente jornada del EMMS Digital Trends. <br><br>Recuerda que comenzamos a las 10:30hs Arg</small>
                     </div>
                     <div class="emms__hero-conference__aside emms__hero-conference__aside--transition emms__fade-in">
-                        <p>Accede a todo el contenido exclusivo que hemos preparado para ti: E-books gratuitos, cápsulas audiovisuales, guías, plantillas, beneficios, descuentos ¡y mucho más!</p>
-                        <a class="emms__cta" href="/sponsors-registrado">ACCEDE AHORA</a>
+                        <p>¿Quieres disfrutar al máximo de otra jornada increíble? Ingresa <a href="#entradas">aquí</a> y reserva tu Entrada VIP para acceder al Networking y más de 15 Workshops prácticos. <br><br>¡Aún estás a tiempo de sumarte!</p>
+                        <a class="emms__cta" href="#entradas">COMPRA TU ENTRADA</a>
                     </div>
                 <?php elseif (($settings_phase_DT['event'] === "digital-trends") && ($settings_phase_DT['transition'] === "live-off") && ($dayDuring === 3)) : ?>
                     <div class="emms__hero-conference__video emms__hero-conference__video--transition emms__fade-in">
-                        <h2>Prepárate, ¡se viene el último día del EMMS Digital Trends 2023!</h2>
-                        <small>Recuerda que podrás acceder a todas las grabaciones de las Conferencias una vez finalizado el evento desde la <a href="#agenda">Agenda</a>.</small>
+                        <h2>¡Eso fue todo por hoy! <br>Mañana volvemos con el #EMMS2023 :)</h2>
+                        <small>Prepárate para más conferencias, networking y workshops en la siguiente jornada del EMMS Digital Trends. <br><br>Recuerda que comenzamos a las 10:30hs Arg</small>
                     </div>
                     <div class="emms__hero-conference__aside emms__hero-conference__aside--transition emms__fade-in">
-                        <p>Accede a todo el contenido exclusivo que hemos preparado para ti: E-books gratuitos, cápsulas audiovisuales, guías, plantillas, beneficios, descuentos ¡y mucho más!</p>
-                        <a class="emms__cta" href="/sponsors-registrado">ACCEDE AHORA</a>
+                        <p>¿Quieres disfrutar al máximo de otra jornada increíble? Ingresa <a href="#entradas">aquí</a> y reserva tu Entrada VIP para acceder al Networking y más de 15 Workshops prácticos. <br><br>¡Aún estás a tiempo de sumarte!</p>
+                        <a class="emms__cta" href="#entradas">COMPRA TU ENTRADA</a>
                     </div>
                 <?php endif; ?>
-                <p class="emms__hero-conference__certificate emms__fade-in">Descarga <a data-target="certificateModal" data-toggle="emms__certificate-modal">aquí</a> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag #EMMSDIGITALTRENDS :)</p>
+                <p class="emms__hero-conference__certificate emms__fade-in">Descarga <a data-target="certificateModal" data-toggle="emms__certificate-modal">aquí</a> tu Certificado de Asistencia y compártelo en Redes Sociales utilizando el Hashtag #EMMS2023</p>
             </div>
         </section>
 
