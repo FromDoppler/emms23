@@ -1,16 +1,27 @@
 const navbarUrl = "src/modules/navbar/navbar.html";
 import { showSponsorsPage } from "./../sponsors/components/sponsors-list/sponsorsList.js";
 import { showSettingsPage } from "./../settings/settings.js";
+import { showStatisticsPage } from "../statistics/statistics.js";
 
 export const shownavbar = async () => {
     const response = await fetch(navbarUrl);
     document.querySelector("nav").innerHTML = await response.text();
 
     addSettingsLink();
+    addStatisticsLink();
     addSponsorTypeLink("SPONSOR", "sponsorsLink");
     addSponsorTypeLink("STARTER", "starterLink");
     addSponsorTypeLink("PREMIUM", "premiumLink");
     collapseNavBar();
+};
+
+const addStatisticsLink = () => {
+    openNavOnClickMenu();
+    const statisticsLink = document.getElementById("statisticsLink");
+    statisticsLink.addEventListener("click", async () => {
+        await showStatisticsPage();
+        collapseNavBar();
+    });
 };
 
 const addSettingsLink = () => {
