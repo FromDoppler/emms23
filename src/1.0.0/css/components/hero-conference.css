@@ -365,6 +365,15 @@
     color: #fff;
 }
 
+.emms__hero-conference__aside.emms__hero-conference__aside--transition p a{
+    color: #008046;
+    font-weight: 700;
+}
+
+.emms__hero-conference__aside.emms__hero-conference__aside--transition p a:hover{
+    text-decoration: underline;
+}
+
 .emms__hero-conference__aside.emms__hero-conference__aside--transition .emms__cta {
     margin: 34px 0 0 0;
     text-align: center;

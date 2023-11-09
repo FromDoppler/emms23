@@ -93,21 +93,21 @@ require_once('././src/components/cacheSettings.php');
 
         <!-- Hero -->
         <section class="emms__home__hero">
-            <?php if ($ecommerceStates['isPre']) : ?>
+            <?php if ($digitalTrendsStates['isPre']) : ?>
                 <div class="emms__home__hero__title emms__fade-top">
                     <h1><em>TODAS LAS TENDENCIAS DE MARKETING DIGITAL EN UN SOLO LUGAR</em> Vuelve el EMMS, ¡recargado!</h1>
                     <h2>ONLINE Y GRATUITO</h2>
                     <p>Tras <strong>15 años</strong> como el evento líder en Latam y España, <strong>el EMMS evoluciona</strong>. En 2023 tendrás <strong>2 eventos exclusivos</strong> para capacitarte e inspirarte con los referentes de tu industria.</p>
                 </div>
             <?php endif ?>
-            <?php if ($ecommerceStates['isDuring']) : ?>
+            <?php if ($digitalTrendsStates['isDuring']) : ?>
                 <div class="emms__home__hero__title emms__fade-top">
                     <h1><em>LLEGÓ EL EVENTO DE MARKETING DIGITAL MÁS ESPERADO</em> Vuelve el EMMS, ¡recargado!</h1>
                     <h2>ONLINE Y GRATUITO</h2>
-                    <p>Tras <strong>15 años</strong> como el evento líder en Latam y España, <strong>el EMMS evoluciona</strong>. En 2023 tendrás <strong>2 eventos exclusivos</strong> para capacitarte e inspirarte con los referentes de tu industria, ¡ya puedes sumarte al primero!.</p>
+                    <p>Tras <strong>15 años</strong> como el evento líder en Latam y España, <strong>el EMMS evolucionó</strong>. Accede ahora a la <strong>última edición del año</strong> con 4 jornadas a puro aprendizaje, <strong>¡ya comenzó!</strong></p>
                 </div>
             <?php endif ?>
-            <?php if ($ecommerceStates['isPost']) : ?>
+            <?php if ($digitalTrendsStates['isPost']) : ?>
                 <div class="emms__home__hero__title emms__fade-top">
                     <h1><em>TODAS LAS TENDENCIAS EN MARKETING DIGITAL, EN UN SOLO LUGAR</em> Volvió el EMMS, ¡recargado!</h1>
                     <h2>ONLINE Y GRATUITO</h2>

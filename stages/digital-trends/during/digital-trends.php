@@ -83,13 +83,13 @@ require_once('././src/components/cacheSettings.php');
             </div>
             <div class="emms__hero-registration__columns">
                 <div class="emms__hero-registration__text emms__fade-in">
-                    <h1><em>EVENTO ONLINE Y GRATUITO - DEL 13 AL 16 DE NOV</em> ¡Ya comenzó el<br>EMMS Digital Trends!</h1>
+                    <h1><em>EVENTO ONLINE Y GRATUITO - DEL 13 AL 16 DE NOV</em> EMMS Digital Trends 2023</h1>
+                    <p>Inspírate y aprende con tus máximos referentes en el mayor evento de Marketing Digital. No te lo pierdas, <strong>¡ya comenzó!</strong></p>
                     <ul class="emms__hero-registration__text__checklist">
                         <li>CONFERENCIAS</li>
                         <li>NETWORKING</li>
-                        <li>WORKSHOPS</li>
+                        <li>WORKSHOPS PRÁCTICOS</li>
                     </ul>
-                    <p>Reserva tu lugar en el mayor evento hispano de Marketing Digital. Regístrate ahora y desbloquea la Biblioteca de Recursos gratuita para empezar a inspirarte.</p>
                 </div>
                 <div class="emms__hero-registration__form emms__fade-in">
                     <!-- Form -->
@@ -211,13 +211,13 @@ require_once('././src/components/cacheSettings.php');
                 <video src="https://goemms.com/src/img/video-back-dt.mp4" muted autoplay loop></video>
             </div>
             <div class="emms__hero-registration__text emms__fade-in">
-                <h1><em>EVENTO ONLINE Y GRATUITO - DEL 13 AL 16 DE NOV</em> ¡Ya comenzó el<br>EMMS Digital Trends!</h1>
+                <h1><em>EVENTO ONLINE Y GRATUITO - DEL 13 AL 16 DE NOV</em> ¡Ya casi estás! Accede al EMMS Digital Trends 2023</h1>
+                <p>Descubre las últimas estrategias para potenciar tu negocio de la mano de los referentes más destacados en Marketing Digital. Únete ahora, ¡ya comenzó!</p>
                 <ul class="emms__hero-registration__text__checklist checklist--center">
                     <li>Conferencias</li>
                     <li>Networking</li>
-                    <li>Workshops</li>
+                    <li>Workshops prácticos</li>
                 </ul>
-                <p>El mayor evento de Marketing Digital. Inspírate y capacítate con tus referentes mundiales, estés donde estés. </p>
                 <a class="emms__cta activeButtonWithoutForm"><span class="button__text">REGÍSTRATE GRATIS</span></a>
             </div>
             <div class="emms__hero-registration__bottom images emms__fade-in">
@@ -360,6 +360,7 @@ require_once('././src/components/cacheSettings.php');
                     <a href="#entradas" class="emms__cta">RESERVA TU CUPO</a>
                 </div>
             </div>
+            <div id="entradas"></div>
         </section>
 
 
