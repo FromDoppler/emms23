@@ -8,7 +8,7 @@ const isQADomain = () => {
 }
 
 const forceDownload = async (fullname, type) => {
-    const workshopType = searchUrlParam('workshoptype');
+    const workshopType = searchUrlParam('workshop');
     const encodeFullname = encodeURI(fullname);
     const domainUrl = (isQADomain()) ? `certificate-emms2023qa.php` : `certificate-emms2023.php`;
     const commonUrl = `https://textify.fromdoppler.com/${domainUrl}?fullname=${encodeFullname}&type=${type}`;
@@ -43,6 +43,25 @@ const handleButtonState = (submitButton, enable, showError) => {
     errorSpan.classList.toggle('showError', showError);
 };
 
+const submitCertificateWithoutForm = async (e, type, submitButton, userName) => {
+    e.preventDefault();
+    const isDisabled = submitButton.getAttribute('data-disabled') === 'true';
+    if (isDisabled) {
+        return false;
+    }
+    handleButtonState(submitButton, true, false); // Deshabilita el boton y elimina el mensaje de error
+
+    try {
+        console.log(userName, type);
+        await forceDownload(userName, type);
+        return true;
+    } catch (error) {
+        console.error(error);
+        return;
+    } finally {
+        handleButtonState(submitButton, false, false);
+    }
+};
 
 
 const submitCertificate = async (e, type, submitButton) => {
@@ -76,4 +95,4 @@ const submitCertificate = async (e, type, submitButton) => {
 
 
 
-export { submitCertificate }
+export { submitCertificate, submitCertificateWithoutForm }
