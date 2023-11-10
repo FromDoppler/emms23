@@ -6235,10 +6235,7 @@ max-width: 365px;
                                   max-width: 570px;
                                   text-align: left;
                                 ">
-                                                            Te hemos enviado un
-                                                            <strong>Email para establecer la contraseña de la cuenta con
-                                                                la que accederás al contenido VIP.</strong>
-                                                            Una vez confirmada, inicia sesión y ¡listo! Llegada la
+                                                            Llegada la
                                                             fecha,<a
                                                                 href="https://www.digital-trends.goemms.com/?utm_medium=email&utm_source=fromdoppler&utm_campaign=et-emmsdt-confirmacion-compra-entrada-general-23"
                                                                 target="_blank" style="
