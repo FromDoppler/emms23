@@ -4992,14 +4992,14 @@ display: none;
                                                                         <!-- Button : BEGIN -->
                                                                         <div>
                                                                             <!--[if mso]>
-              													  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://goemms.com/digital-trends-registrado?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-emmsdt-during-23#entradas" style="height:47px;v-text-anchor:middle;width:215px;" arcsize="50%" strokecolor="#008046" strokeweight="1px" fillcolor="#008046" >	<w:anchorlock/><center style="color:#ffffff;font-family:sans-serif;font-size:15px;font-weight:bold;">COMPRA TU ENTRADA</center></v:roundrect><![endif]-->
+              													  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://goemms.com/digital-trends-registrado?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-emmsdt-during-23&dplrid=' . $encodeEmail . '#entradas" style="height:47px;v-text-anchor:middle;width:215px;" arcsize="50%" strokecolor="#008046" strokeweight="1px" fillcolor="#008046" >	<w:anchorlock/><center style="color:#ffffff;font-family:sans-serif;font-size:15px;font-weight:bold;">COMPRA TU ENTRADA</center></v:roundrect><![endif]-->
                                                                             <!--[if !mso] -->
                                                                             <table cellspacing="0" cellpadding="0">
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td style="border-radius: 99px; background-color: #008046; color: #ffffff;  text-align: center;"
                                                                                             class="button--td mobile-btn mobile-padding-btn">
-                                                                                            <a href="https://goemms.com/digital-trends-registrado?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-emmsdt-during-23#entradas"
+                                                                                            <a href="https://goemms.com/digital-trends-registrado?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-emmsdt-during-23&dplrid=' . $encodeEmail . '#entradas"
                                                                                                 style="color: #ffffff; font-size:15px; font-weight: bold; font-family:sans-serif; text-decoration: none; width:100%; display:inline-block"
                                                                                                 target="_blank"><span>COMPRA
                                                                                                     TU
@@ -6280,10 +6280,7 @@ display: none;
                                   max-width: 570px;
                                   text-align: left;
                                 ">
-                                                            Te hemos enviado un
-                                                            <strong>Email para establecer la contraseña de la cuenta con
-                                                                la que accederás al contenido VIP.</strong>
-                                                            Una vez confirmada, inicia sesión y ¡listo! Llegada la
+                                                          Llegada la
                                                             fecha, <a
                                                                 href="https://www.digital-trends.goemms.com/?utm_medium=email&utm_source=fromdoppler&utm_campaign=et-emmsdt-confirmacion-compra-entrada-packempresa-23"
                                                                 target="_blank" style="
