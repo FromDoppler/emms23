@@ -2,6 +2,11 @@
 require_once('././src/components/cacheSettings.php');
 require_once('././config.php');
 require_once('./utils/DB.php');
+// If the user accesses this page without the email parameter or workshop, they will automatically be redirected to the home
+if ((!isset($_GET['email']) || !isset($_GET['workshop']))) {
+    header('Location: ' . 'index');
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -86,7 +91,7 @@ require_once('./utils/DB.php');
     <?php include_once('././src/components/footer.php'); ?>
 
     <script src="src/<?= VERSION ?>/js/certificateModal.js"></script>
-    <script src="src/<?= VERSION ?>/js/certificate/certificateWorkshop.js"  type="module"></script>
+    <script src="src/<?= VERSION ?>/js/certificate/certificateWorkshop.js" type="module"></script>
 
 
 </body>
