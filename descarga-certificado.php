@@ -28,7 +28,9 @@ if ((!isset($_GET['email']) || !isset($_GET['workshop']))) {
 </head>
 
 <body class="emms__previous-editions">
-
+    <div class="loader-page--new" id="spinner">
+        <img src="src/img/logoemms-nobg.png" class="loader-goemms" alt="Loader goemms">
+    </div>
     <!-- Header -->
     <header class="emms__header">
         <div class="emms__container--lg emms__fade-in">
@@ -42,7 +44,7 @@ if ((!isset($_GET['email']) || !isset($_GET['workshop']))) {
                     <li><a href="./ecommerce">e-commerce</a></li>
                     <li><a href="./digital-trends">digital trends</a></li>
                     <li><a href="/sponsors">biblioteca de recursos</a></li>
-                    <li><a href="#" class="active">ediciones anteriores</a></li>
+                    <li><a href="#">ediciones anteriores</a></li>
                 </ul>
             </nav>
         </div>
