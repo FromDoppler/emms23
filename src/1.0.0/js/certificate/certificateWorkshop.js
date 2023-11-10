@@ -46,7 +46,7 @@ const startCertificateWorkshop = () => {
 
         const getUserNameWithEmail = async () => {
             toggleSpinner();
-            const userEmail = getEmailFromUrl();
+            const userEmail = encodeURIComponent(getEmailFromUrl());
             const currentDomain = window.location.hostname;
             const endPoint = `https://${currentDomain}/wix/v1/api/find_contact_by_email.php?email=${userEmail}`;
             const options = {
