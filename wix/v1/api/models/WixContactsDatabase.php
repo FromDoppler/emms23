@@ -1,7 +1,7 @@
 <?php
 
 class WixContactsDatabase {
-    private $db; // Objeto de conexión a la base de datos
+    private $db; // Objeto de conexion a la base de datos
 
     public function __construct($db) {
         $this->db = $db;
@@ -51,6 +51,35 @@ class WixContactsDatabase {
             return $contacts; // Devuelve un array de contactos
         } else {
             return []; // No se encontraron contactos
+        }
+    }
+
+    public function updateContactName($email, $newName) {
+        try {
+            $query = "UPDATE wix_contacts SET contact_name = '$newName' WHERE contact_email = '$email'";
+            if ($this->db->query($query)) {
+                return true; // Actualizacion exitosa
+            } else {
+                return false; // Error en la actualizacion
+            }
+        } catch (Exception $e) {
+            $errorMessage = json_encode(["updateContactName", $e->getMessage()]);
+            http_response_code(500); // Error interno del servidor
+            throw new Exception($errorMessage);
+        }
+    }
+
+    public function findContactByEmail($email) {
+        try {
+            $query = "SELECT * FROM wix_contacts WHERE contact_email = '$email'";
+            $result = $this->db->query($query);
+
+            $result = $result->fetchAll();
+            return $result;
+        } catch (Exception $e) {
+            $errorMessage = json_encode(["findContactByEmail", $e->getMessage()]);
+            http_response_code(500); // Error interno del servidor
+            throw new Exception($errorMessage);
         }
     }
 }
