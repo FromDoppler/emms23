@@ -3,6 +3,7 @@
 import { submitCertificate, submitCertificateWithoutForm } from '../common/certificate.js';
 
 const startCertificateWorkshop = () => {
+
     document.addEventListener('DOMContentLoaded', async () => {
 
         const updateUserName = async (userName) => {
@@ -33,7 +34,8 @@ const startCertificateWorkshop = () => {
         }
 
         const toggleSpinner = () => {
-            // Implementar la logica para mostrar/ocultar el spinner
+            const spinner = document.getElementById('spinner');
+            spinner.classList.toggle('visible');
         };
 
         const getEmailFromUrl = () => {
@@ -45,7 +47,6 @@ const startCertificateWorkshop = () => {
         }
 
         const getUserNameWithEmail = async () => {
-            toggleSpinner();
             const userEmail = encodeURIComponent(getEmailFromUrl());
             const currentDomain = window.location.hostname;
             const endPoint = `https://${currentDomain}/wix/v1/api/find_contact_by_email.php?email=${userEmail}`;
@@ -111,10 +112,11 @@ const startCertificateWorkshop = () => {
             }
             toggleSpinner();
         };
-
+        toggleSpinner();
         const userName = await getUserNameWithEmail();
         initializeUI(userName);
     });
 };
 
 startCertificateWorkshop();
+
