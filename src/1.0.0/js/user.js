@@ -27,10 +27,15 @@ const checkEncodeUrl = () => {
                 _setLocalStorageEvents(userEvents);
             }
         } else {
-            //If it is false, we know that its only event to save was ecommerce
-            const oldEcommerce = ['ecommerce'];
-            localStorage.setItem('dplrid', toHex(encodeUser));
-            _setLocalStorageEvents(oldEcommerce);
+            //FIXME: Este es un hotfix puesto para los usuarios que fueron guardados erroneamente sin eventos
+            // Si se reutiliza este codigo en el futuro se debe borrar el else
+            const hardCodeEvents = ['ecommerce', 'digital-trends'];
+            const user = {
+                'userEmail': encodeUser,
+                'userEvents': hardCodeEvents
+            }
+            localStorage.setItem('dplrid', toHex(JSON.stringify(user)));
+            _setLocalStorageEvents(JSON.stringify(hardCodeEvents));
         }
     }
 }

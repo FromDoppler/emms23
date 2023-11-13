@@ -66,9 +66,13 @@ const submitWithoutForm = async (fetchType) => {
     const endPoint = './services/register.php';
     const userEmail = localStorage.getItem('dplrid');
     const userEvents = setEventInLocalStorage(fetchType, userEmail);
+    const user = {
+        'userEmail': userEmail,
+        'userEvents': userEvents
+    }
     const userData = {
         'email': fromHex(userEmail),
-        'encodeEmail': userEmail,
+        'encodeEmail': toHex(JSON.stringify(user)),
         'utm_source': (searchUrlParam('utm_source') === '') ? 'direct' : searchUrlParam('utm_source'),
         'utm_campaign': searchUrlParam('utm_campaign'),
         'utm_content': searchUrlParam('utm_content'),
