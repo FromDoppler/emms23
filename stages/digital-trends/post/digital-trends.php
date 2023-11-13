@@ -83,13 +83,13 @@ require_once('././src/components/cacheSettings.php');
             </div>
             <div class="emms__hero-registration__columns">
                 <div class="emms__hero-registration__text emms__fade-in">
-                    <h1><em>EVENTO ONLINE Y GRATUITO</em> ¡El EMMS evolucionó!</h1>
+                    <h1><em>EVENTO ONLINE Y GRATUITO</em> EMMS Digital Trends 2023</h1>
+                    <p>Inspírate y aprende con tus máximos referentes en el mayor evento de Marketing Digital. <strong>Revívelo ahora</strong></p>
                     <ul class="emms__hero-registration__text__checklist">
                         <li>CONFERENCIAS</li>
                         <li>NETWORKING</li>
-                        <li>WORKSHOPS</li>
+                        <li>WORKSHOPS PRÁCTICOS</li>
                     </ul>
-                    <p>Revive el mayor evento de Marketing Digital. Inspírate y capacítate con tus referentes mundiales, estés donde estés.</p>
                 </div>
                 <div class="emms__hero-registration__form emms__fade-in">
                     <!-- Form -->
@@ -157,7 +157,7 @@ require_once('././src/components/cacheSettings.php');
                             </li>
                         </ul>
                         <div class="emms__form__btn">
-                            <button class="emms__cta" id="register-button" type="button"><span class="button__text">REGÍSTRATE GRATIS</span></button>
+                            <button class="emms__cta" id="register-button" type="button"><span class="button__text">ACCEDE GRATIS</span></button>
                         </div>
                         <div class="emms__form__legal close">
                             <a class="emms__form__legal__btn" id="legalBtn">Información básica sobre privacidad </a>
@@ -211,14 +211,14 @@ require_once('././src/components/cacheSettings.php');
                 <video src="https://goemms.com/src/img/video-back-dt.mp4" muted autoplay loop></video>
             </div>
             <div class="emms__hero-registration__text emms__fade-in">
-                <h1><em>EVENTO ONLINE Y GRATUITO</em> ¡El EMMS evolucionó!</h1>
+                <h1><em>EVENTO ONLINE Y GRATUITO</em> ¡Estás a un paso de acceder al EMMS Digital Trends 2023!</h1>
+                <p>Revive el evento de Marketing Digital más importante del año y descubre las últimas estrategias para potenciar tu negocio de la mano de los referentes más destacados. ¡Accede ahora!</p>
                 <ul class="emms__hero-registration__text__checklist checklist--center">
                     <li>Conferencias</li>
                     <li>Networking</li>
-                    <li>Workshops</li>
+                    <li>Workshops prácticos</li>
                 </ul>
-                <p>Revive el mayor evento de Marketing Digital. Inspírate y capacítate con tus referentes mundiales, estés donde estés.</p>
-                <a class="emms__cta activeButtonWithoutForm"><span class="button__text">REGÍSTRATE GRATIS</span></a>
+                <a class="emms__cta activeButtonWithoutForm"><span class="button__text">REVIVE EL EVENTO</span></a>
             </div>
             <div class="emms__hero-registration__bottom images emms__fade-in">
                 <p>
@@ -254,7 +254,7 @@ require_once('././src/components/cacheSettings.php');
             <div class="emms__container--lg">
                 <div class="emms__calendar__title emms__fade-in">
                     <h2>Agenda EMMS Digital Trends 2023</h2>
-                    <p>Descubre a los <strong>ponentes</strong> que nos acompañaron en esta edición y las <strong>temáticas</strong> de sus charlas</p>
+                    <p>Descubre todas las conferencias y actividades VIP que formaron parte de esta gran edición. ¡Accede a las grabaciones para revivirlas!</p>
                 </div>
             </div>
             <!-- Speakers -->
