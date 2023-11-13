@@ -71,8 +71,8 @@ require_once('././config.php');
         <!-- Hero -->
         <section class="emms__hero-registration--registered">
             <div class="emms__container--md">
-                <h1 class="emms__fade-top">¡Revive el EMMS<br> Digital Trends 2023!</h1>
-                <p class="emms__fade-in">Te damos la bienvenida a este gran evento. <a href="#agenda">Revisa la Agenda</a> que hemos planeado para ti y prepárate para vivir el primer EMMS para Tiendas Online. ¡Gracias por sumarte! :)</p>
+                <h1 class="emms__fade-top">Revive las Conferencias del EMMS Digital Trends 2023</h1>
+                <p class="emms__fade-in">Aquí los máximos referentes en la industria del Marketing compartieron las últimas tendencias y sus mejores secretos para potenciar tu estrategia digital. <br><br>Mira las conferencias gratuitas o <a href="#entradas">compra tu Entrada VIP</a> y accede también a más de quince Workshops prácticos.</p>
             </div>
         </section>
 
