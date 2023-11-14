@@ -217,6 +217,38 @@ require_once('././src/components/cacheSettings.php');
                                 <span>¡No te lo pierdas!</span>
                             </a>
                         </div>
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a href="https://youtu.be/TaA1Ea9fei4" target="_blank">
+                                <img src="src/img/conferences/portada-youtube-cyberclick.png" alt="Conferencias exclusivas">
+                                <h4>5 tendencias de marketing digital para 2024</h4>
+                                <p>Duración: 00:13:53</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a href="https://youtu.be/-QlyiRGqCXY" target="_blank">
+                                <img src="src/img/conferences/portada-youtube-veronicasequeira-min.png" alt="Conferencias exclusivas">
+                                <h4>El arte de la persuasión para vender más y mejor</h4>
+                                <p>Duración: 00:18:08</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a href="https://youtu.be/tERlFk6wjMk" target="_blank">
+                                <img src="src/img/conferences/portada-youtube-lujanalonso-min.png" alt="Conferencias exclusivas">
+                                <h4>Soft Skills 2.0: habilidades blandas clave para entornos digitales</h4>
+                                <p>Duración: 00:06:09</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a href="https://youtu.be/ljJpXqGsAEQ" target="_blank">
+                                <img src="src/img/conferences/portada-natalia-tabares-min.png" alt="Conferencias exclusivas">
+                                <h4>Saca el máximo provecho de las novedades en Meta con tu tienda online en Jumpseller</h4>
+                                <p>Duración: 00:09:21</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
