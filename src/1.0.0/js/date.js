@@ -154,12 +154,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const changeSpeakerHoursGeneric = (countryCode, countryName, eventDateContainers) => {
         const eventHours = [];
-
         eventDateContainers.forEach(container => {
             const txt = container.querySelector('span').innerHTML;
             let numb = txt.match(/\d/g);
             numb = numb.join("");
             let hourAndMin = numb.match(/.{1,2}/g);
+            if (countryCode==="ES") {
+                hourAndMin[0] = hourAndMin[0]-1;
+            }
             let newDate = new Date(`2023-05-16T${hourAndMin[0]}:${hourAndMin[1]}:00.000-03:00`);
             eventHours.push(structuredClone(newDate));
         });
