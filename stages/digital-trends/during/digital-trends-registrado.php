@@ -104,8 +104,9 @@ require_once('././src/components/cacheSettings.php');
                     <img src="src/img/banner-technical-error-DT.png" alt="Errores técnicos" class="banner">
                 <?php elseif (($settings_phase_DT['event'] === "digital-trends") && ($settings_phase_DT['transition'] === "live-off") && ($dayDuring === 1)) : ?>
                     <div class="emms__hero-conference__video emms__hero-conference__video--transition emms__fade-in">
-                        <h2>¡Eso fue todo por hoy! <br>Mañana volvemos con el #EMMS2023 :)</h2>
-                        <small>Prepárate para más conferencias, networking y workshops en la siguiente jornada del EMMS Digital Trends. <br><br>Recuerda que comenzamos a las 10:30hs Arg</small>
+                        <h2>Prepárate. ¡Se viene otra jornada en el #EMMS2023!</h2>
+                        <small>Mientras nos preparamos, adquiere tu Entrada VIP y accede a más de 15 Workshops prácticos y sesiones de Networking cada día. Descubre los contenidos en la Agenda.<br><br><br></small>
+                        <a href="#entradas" class="emms__cta">QUIERO MI ENTRADA VIP</a>
                     </div>
                     <div class="emms__hero-conference__aside emms__hero-conference__aside--transition emms__fade-in">
                         <p>¿Quieres disfrutar al máximo de otra jornada increíble? Ingresa <a href="#entradas">aquí</a> y reserva tu Entrada VIP para acceder al Networking y más de 15 Workshops prácticos. <br><br>¡Aún estás a tiempo de sumarte!</p>
@@ -113,8 +114,9 @@ require_once('././src/components/cacheSettings.php');
                     </div>
                 <?php elseif (($settings_phase_DT['event'] === "digital-trends") && ($settings_phase_DT['transition'] === "live-off") && ($dayDuring === 2)) : ?>
                     <div class="emms__hero-conference__video emms__hero-conference__video--transition emms__fade-in">
-                        <h2>¡Eso fue todo por hoy! <br>Mañana volvemos con el #EMMS2023 :)</h2>
-                        <small>Prepárate para más conferencias, networking y workshops en la siguiente jornada del EMMS Digital Trends. <br><br>Recuerda que comenzamos a las 10:30hs Arg</small>
+                        <h2>Prepárate. ¡Se viene otra jornada en el #EMMS2023!</h2>
+                        <small>Mientras nos preparamos, adquiere tu Entrada VIP y accede a más de 15 Workshops prácticos y sesiones de Networking cada día. Descubre los contenidos en la Agenda.<br><br><br></small>
+                        <a href="#entradas" class="emms__cta">QUIERO MI ENTRADA VIP</a>
                     </div>
                     <div class="emms__hero-conference__aside emms__hero-conference__aside--transition emms__fade-in">
                         <p>¿Quieres disfrutar al máximo de otra jornada increíble? Ingresa <a href="#entradas">aquí</a> y reserva tu Entrada VIP para acceder al Networking y más de 15 Workshops prácticos. <br><br>¡Aún estás a tiempo de sumarte!</p>
@@ -122,8 +124,9 @@ require_once('././src/components/cacheSettings.php');
                     </div>
                 <?php elseif (($settings_phase_DT['event'] === "digital-trends") && ($settings_phase_DT['transition'] === "live-off") && ($dayDuring === 3)) : ?>
                     <div class="emms__hero-conference__video emms__hero-conference__video--transition emms__fade-in">
-                        <h2>¡Eso fue todo por hoy! <br>Mañana volvemos con el #EMMS2023 :)</h2>
-                        <small>Prepárate para más conferencias, networking y workshops en la siguiente jornada del EMMS Digital Trends. <br><br>Recuerda que comenzamos a las 10:30hs Arg</small>
+                        <h2>Prepárate. ¡Se viene otra jornada en el #EMMS2023!</h2>
+                        <small>Mientras nos preparamos, adquiere tu Entrada VIP y accede a más de 15 Workshops prácticos y sesiones de Networking cada día. Descubre los contenidos en la Agenda.<br><br><br></small>
+                        <a href="#entradas" class="emms__cta">QUIERO MI ENTRADA VIP</a>
                     </div>
                     <div class="emms__hero-conference__aside emms__hero-conference__aside--transition emms__fade-in">
                         <p>¿Quieres disfrutar al máximo de otra jornada increíble? Ingresa <a href="#entradas">aquí</a> y reserva tu Entrada VIP para acceder al Networking y más de 15 Workshops prácticos. <br><br>¡Aún estás a tiempo de sumarte!</p>
