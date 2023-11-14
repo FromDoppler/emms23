@@ -34,7 +34,10 @@ window.addEventListener('scroll', function () {
             var element = elements[i];
             var positionFromTop = elements[i].getBoundingClientRect().top;
 
-            if (positionFromTop - windowHeight <= 0) {
+            if ( window.scrollY==0){
+                element.classList.add('emms__fade-in-animation');
+                element.classList.remove('emms__fade-in');
+            }else if (positionFromTop - windowHeight <= 0) {
                 element.classList.add('emms__fade-in-animation');
                 element.classList.remove('emms__fade-in');
 
