@@ -117,7 +117,7 @@ require_once('././src/components/cacheSettings.php');
                 <div class="emms__home__hero__title emms__fade-top">
                     <h1><em>TODAS LAS TENDENCIAS EN MARKETING DIGITAL, EN UN SOLO LUGAR</em> Volvió el EMMS, ¡recargado!</h1>
                     <h2>ONLINE Y GRATUITO</h2>
-                    <p>Tras <strong>15 años</strong> como el evento líder en Latam y España, <strong>el EMMS evoluciona</strong>. En 2023 tendrás <strong>2 eventos exclusivos</strong> para capacitarte e inspirarte con los referentes de tu industria.</p>
+                    <p><span>Tras <strong>15 años</strong> como el evento líder en Marketing Digital de Latam y España, <strong>el EMMS evolucionó</strong>. </span>Accede a las <strong>ediciones E-commerce y Digital Trends</strong> para aprender e inspirarte con referentes en la industria.</p>
                     <div id="EMMS2023-ediciones"></div>
                 </div>
             <?php endif ?>
@@ -812,16 +812,16 @@ require_once('././src/components/cacheSettings.php');
                         <p class="emms__frequentquestions__list__item__content">Con tu registro podrás acceder a todas las conferencias de esta y todas las ediciones anteriores para siempre. Además, desbloquearás <strong>una biblioteca repleta de recursos como E-books, Plantillas, descuentos y material audiovisual</strong> para que puedas hacer crecer tu negocio aún más.</p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
-                        <button class="emms__frequentquestions__list__item__head">📅 ¿Cuándo se realizará el EMMS 2023?</button>
-                        <p class="emms__frequentquestions__list__item__content">El EMMS 2023 constará de 2 ediciones: <strong>E-commerce y Digital Trends</strong>, a realizarse en <strong>mayo y noviembre</strong>, respectivamente. Registrándote al evento recibirás todos las novedades por Email y la confirmación de cada fecha.</p>
+                        <button class="emms__frequentquestions__list__item__head">📅 ¿Cuándo tuvo lugar el EMMS 2023?</button>
+                        <p class="emms__frequentquestions__list__item__content">El EMMS 2023 tuvo 2 ediciones: <strong>E-commerce y Digital Trends</strong>, en <strong>mayo y noviembre</strong> respectivamente.</p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
-                        <button class="emms__frequentquestions__list__item__head">📍 ¿Dónde serán los eventos?</button>
-                        <p class="emms__frequentquestions__list__item__content">El EMMS es un evento <strong>online</strong>. Es decir, podrás verlo en vivo desde cualquier dispositivo, estés donde estés.</p>
+                        <button class="emms__frequentquestions__list__item__head">📍 ¿Dónde puedo ver los eventos?</button>
+                        <p class="emms__frequentquestions__list__item__content">El EMMS es un evento <strong>online</strong>. Es decir, podrás revivirlo desde cualquier dispositivo, estés donde estés.</p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
                         <button class="emms__frequentquestions__list__item__head">💵 ¿Tengo que pagar inscripción?</button>
-                        <p class="emms__frequentquestions__list__item__content">El EMMS tiene un registro <strong>totalmente gratuito</strong>, válido para asistir a las Conferencias, ver sus grabaciones (una vez finalizado cada evento) y para acceder a la Biblioteca de Recursos gratuita. Sin embargo, si quieres capacitarte aún más con el Networking y los Workshops prácticos del EMMS Digital Trends, deberás comprar una <a href="https://goemms.com/digital-trends#entradas">entrada VIP</a></p>
+                        <p class="emms__frequentquestions__list__item__content">El EMMS tiene un registro <strong>totalmente gratuito</strong>, válido para acceder a las Conferencias y para acceder a la Biblioteca de Recursos gratuita. Sin embargo, si además quieres capacitarte con más de 15 Workshops prácticos y tenerlos de por vida, puedes comprar una <a href="https://goemms.com/digital-trends#entradas">entrada VIP</a></p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
                         <button class="emms__frequentquestions__list__item__head">✍ ¿Puedo anotarme a otras ediciones?</button>
@@ -832,8 +832,8 @@ require_once('././src/components/cacheSettings.php');
                         <p class="emms__frequentquestions__list__item__content">Podrás ver los eventos desde esta misma Web en las fechas indicadas. Una vez que te registres, te enviaremos recordatorios y recibirás también el link para conectarte ese día. De la misma manera, para los Workshops y el Networking del EMMS DT, podrás encontrar los links de ingreso a las salas <a href="https://www.digital-trends.goemms.com/">en la página</a>, accediendo con tu usuario y contraseña.</p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
-                        <button class="emms__frequentquestions__list__item__head">🎥 ¿Van a estar disponibles las grabaciones después del evento?</button>
-                        <p class="emms__frequentquestions__list__item__content">Sí, cuando haya finalizado cada EMMS quedarán subidas al sitio web del evento las grabaciones de todas las charlas y de los Workshops si eres Asistente VIP en el EMMS DT. Podrás revivirlas las veces que desees.</p>
+                        <button class="emms__frequentquestions__list__item__head">🎥 ¿Están disponibles las grabaciones después del evento?</button>
+                        <p class="emms__frequentquestions__list__item__content">Sí, cada vez que termina una edición del EMMS las conferencias quedan subidas al sitio web del evento. Puedes revivirlas las veces que desees.</p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
                         <button class="emms__frequentquestions__list__item__head">🤔 Me anoté al evento y aún no recibí el Email de confirmación, ¿qué hago?</button>
@@ -844,12 +844,12 @@ require_once('././src/components/cacheSettings.php');
                         <p class="emms__frequentquestions__list__item__content">¡Sí claro! Comunícate al Email <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a> para que podamos contarte cuáles son las oportunidades de participar y cómo podrías sumarte.</p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
-                        <button class="emms__frequentquestions__list__item__head">🎙Quiero ser speaker del EMMS 2023, ¿puedo postularme?</button>
-                        <p class="emms__frequentquestions__list__item__content">¡Por supuesto! Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a> para comentarnos por qué deberías ser ponente en EMMS 2023 y te responderemos a la brevedad.</p>
+                        <button class="emms__frequentquestions__list__item__head">🎙Quiero ser speaker del EMMS, ¿puedo postularme?</button>
+                        <p class="emms__frequentquestions__list__item__content">¡Por supuesto! Escríbenos a <a href="mailto:partners@fromdoppler.com">partners@fromdoppler.com</a> para comentarnos por qué deberías ser ponente en EMMS y te responderemos a la brevedad.</p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
                         <button class="emms__frequentquestions__list__item__head">📝 ¿Obtengo un certificado de participación por asistir al evento?</button>
-                        <p class="emms__frequentquestions__list__item__content">¡Sí! Podrás descargar tu certificado de asistencia a cada edición del EMMS 2023 durante la transmisión del evento desde la misma página. Asimismo, podrás descargar tu certificado de asistencia a los Workshops del EMMS DT como Asistente VIP, siempre y cuando accedas al vivo. ¿Te olvidaste de hacerlo? Comunícate a <a href="mailto:soporte@fromdoppler.com">soporte@fromdoppler.com</a>.</p>
+                        <p class="emms__frequentquestions__list__item__content">¡Sí! Podrás descargar tu certificado de asistencia a la edición E-commerce 2023 y Digital Trends 2023.</p>
                     </li>
                 </ul>
             </div>

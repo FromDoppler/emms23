@@ -72,7 +72,8 @@ require_once('././config.php');
         <section class="emms__hero-registration--registered">
             <div class="emms__container--md">
                 <h1 class="emms__fade-top">Revive las Conferencias del EMMS Digital Trends 2023</h1>
-                <p class="emms__fade-in">Aquí los máximos referentes en la industria del Marketing compartieron las últimas tendencias y sus mejores secretos para potenciar tu estrategia digital. <br><br>Mira las conferencias gratuitas o <a href="#entradas">compra tu Entrada VIP</a> y accede también a más de quince Workshops prácticos.</p>
+                <p class="emms__fade-in">Aquí los máximos referentes del Marketing compartieron las últimas tendencias para potenciar tu estrategia digital. Mira las conferencias y accede también a los Workshops prácticos con tu Entrada VIP.</p>
+                <br></BR><a href="#entradas" class="emms__cta">OBTÉN TU ENTRADA VIP</a>
             </div>
         </section>
 
