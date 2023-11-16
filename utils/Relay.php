@@ -7203,7 +7203,7 @@ max-width: 365px;
                             max-width: 594px;
                           ">
                                                             Pasó otra increíble edición del <a
-                                                                href="https://goemms.com/digital-trends-registrado?utm_source=fromdoppler&amp;utm_medium=email&amp;utm_campaign=et-email-confirmacion-registro-emmsdt-during-23?dplrid=' . $encodeEmail . '#entradas"
+                                                                href="https://goemms.com/digital-trends-registrado?utm_source=fromdoppler&amp;utm_medium=email&amp;utm_campaign=et-email-confirmacion-registro-emmsdt-during-23&dplrid=' . $encodeEmail . '#entradas"
                                                                 target="_blank"
                                                                 style="color: #33AD73;font-weight: bold; text-decoration: none;"
                                                                 class="link-hover">
@@ -7225,14 +7225,14 @@ max-width: 365px;
                                                         <!-- Button : BEGIN -->
                                                         <div>
                                                             <!--[if mso]>
-              													  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-emmsdt-post-23?dplrid=' . $encodeEmail . '" style="height:47px;v-text-anchor:middle;width:215px;" arcsize="50%" strokecolor="#008046" strokeweight="1px" fillcolor="#008046" >	<w:anchorlock/><center style="color:#ffffff;font-family:sans-serif;font-size:15px;font-weight:bold;">ACCEDE AHORA</center></v:roundrect><![endif]-->
+              													  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-emmsdt-post-23&dplrid=' . $encodeEmail . '" style="height:47px;v-text-anchor:middle;width:215px;" arcsize="50%" strokecolor="#008046" strokeweight="1px" fillcolor="#008046" >	<w:anchorlock/><center style="color:#ffffff;font-family:sans-serif;font-size:15px;font-weight:bold;">ACCEDE AHORA</center></v:roundrect><![endif]-->
                                                             <!--[if !mso] -->
                                                             <table cellspacing="0" cellpadding="0">
                                                                 <tbody>
                                                                     <tr>
                                                                         <td style="border-radius: 99px; background-color: #008046; color: #ffffff;  text-align: center;"
                                                                             class="button--td mobile-btn mobile-padding-btn">
-                                                                            <a href="https://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-emmsdt-post-23?dplrid=' . $encodeEmail . '"
+                                                                            <a href="https://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-emmsdt-post-23&dplrid=' . $encodeEmail . '"
                                                                                 style="color: #ffffff; font-size:15px; font-weight: bold; font-family:sans-serif; text-decoration: none; width:100%; display:inline-block"
                                                                                 target="_blank"><span>ACCEDE
                                                                                     AHORA</span></a>
@@ -7556,14 +7556,14 @@ padding-top: 3px;
                                                                         <!-- Button : BEGIN -->
                                                                         <div>
                                                                             <!--[if mso]>
-              													  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-emmsdt-post-23" style="height:47px;v-text-anchor:middle;width:215px;" arcsize="50%" strokecolor="#008046" strokeweight="1px" fillcolor="#008046" >	<w:anchorlock/><center style="color:#ffffff;font-family:sans-serif;font-size:15px;font-weight:bold;">ACCEDE AHORA</center></v:roundrect><![endif]-->
+              													  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-emmsdt-post-23&dplrid=' . $encodeEmail . '" style="height:47px;v-text-anchor:middle;width:215px;" arcsize="50%" strokecolor="#008046" strokeweight="1px" fillcolor="#008046" >	<w:anchorlock/><center style="color:#ffffff;font-family:sans-serif;font-size:15px;font-weight:bold;">ACCEDE AHORA</center></v:roundrect><![endif]-->
                                                                             <!--[if !mso] -->
                                                                             <table cellspacing="0" cellpadding="0">
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td style="border-radius: 99px; background-color: #008046; color: #ffffff;  text-align: center;"
                                                                                             class="button--td mobile-btn mobile-padding-btn">
-                                                                                            <a href="https://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-emmsdt-post-23"
+                                                                                            <a href="https://goemms.com/digital-trends?utm_source=fromdoppler&utm_medium=email&utm_campaign=et-email-confirmacion-registro-emmsdt-post-23&dplrid=' . $encodeEmail . '"
                                                                                                 style="color: #ffffff; font-size:15px; font-weight: bold; font-family:sans-serif; text-decoration: none; width:100%; display:inline-block"
                                                                                                 target="_blank"><span>ACCEDE
                                                                                                     AHORA</span></a>
