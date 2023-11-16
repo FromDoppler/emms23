@@ -218,7 +218,7 @@ require_once('././src/components/cacheSettings.php');
                     <li>Networking</li>
                     <li>Workshops prácticos</li>
                 </ul>
-                <a class="emms__cta activeButtonWithoutForm"><span class="button__text">REVIVE EL EVENTO</span></a>
+                <a class="emms__cta activeButtonWithoutForm"><span class="button__text">FORMA PARTE</span></a>
             </div>
             <div class="emms__hero-registration__bottom images emms__fade-in">
                 <p>
