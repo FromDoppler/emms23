@@ -249,6 +249,14 @@ require_once('././src/components/cacheSettings.php');
                                 <span>¡No te lo pierdas!</span>
                             </a>
                         </div>
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a href="https://youtu.be/QUc7TKIOZQY" target="_blank">
+                                <img src="src/img/conferences/portada-mariafernanda-rangel-castillo-min.png" alt="Conferencias exclusivas">
+                                <h4>Vender es otra cosa</h4>
+                                <p>Duración: 00:07:29</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
