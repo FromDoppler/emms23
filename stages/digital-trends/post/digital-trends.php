@@ -383,7 +383,7 @@ require_once('././src/components/cacheSettings.php');
                 <?php else : ?>
                     <div class="emms__calendar__vip__title full emms__fade-in">
                         <h4>WORKSHOPS <strong>PARA ASISTENTES VIP</strong></h4>
-                        <p>Ya tengo mi entrada <a href="https://www.digital-trends.goemms.com/">¡QUIERO MIS ACCESOS!</a></p>
+                        <p>Disponibles a partir del 20/11</p>
                     </div>
                 <?php endif ?>
                 <!-- List VIP-->
@@ -427,7 +427,7 @@ require_once('././src/components/cacheSettings.php');
                                     </div>
                                     <div class="emms__calendar__list__item__card__business">
                                         <img src="./admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                                        <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>&event=digital-trends" target="_blank" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
+                                        <!-- <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>&event=digital-trends" target="_blank" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a> -->
                                     </div>
                                 </div>
                             </li>
@@ -474,7 +474,7 @@ require_once('././src/components/cacheSettings.php');
                                     </div>
                                     <div class="emms__calendar__list__item__card__business">
                                         <img src="./admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                                        <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>&event=digital-trends" target="_blank" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
+                                        <!-- <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>&event=digital-trends" target="_blank" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a> -->
                                     </div>
                                 </div>
                             </li>
