@@ -165,7 +165,7 @@ require_once('././config.php');
                                 </div>
                                 <div class="emms__calendar__list__item__card__business">
                                     <img src="./admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                                    <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>" target="_blank" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
+                                    <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>&event=digital-trends" target="_blank" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
                                 </div>
                             </div>
                         </li>
@@ -218,7 +218,7 @@ require_once('././config.php');
                                 </div>
                                 <div class="emms__calendar__list__item__card__business">
                                     <img src="./admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                                    <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>" target="_blank" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
+                                    <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>&event=digital-trends" target="_blank" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
                                 </div>
                             </div>
                         </li>
@@ -281,7 +281,7 @@ require_once('././config.php');
                                     </div>
                                     <div class="emms__calendar__list__item__card__business">
                                         <img src="./admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                                        <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>" target="_blank" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
+                                        <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>&event=digital-trends" target="_blank" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
                                     </div>
                                 </div>
                             </li>
@@ -328,7 +328,7 @@ require_once('././config.php');
                                     </div>
                                     <div class="emms__calendar__list__item__card__business">
                                         <img src="./admin/speakers/uploads/<?= $speaker['image_company'] ?>" alt="<?= $speaker['alt_image_company'] ?>">
-                                        <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>" target="_blank" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
+                                        <a href="../../../speaker-interna?slug=<?= $speaker['slug'] ?>&event=digital-trends" target="_blank" class="emms__calendar__list__item__card__btn-conference">Ver conferencia</a>
                                     </div>
                                 </div>
                             </li>

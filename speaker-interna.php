@@ -10,6 +10,7 @@ if (!isset($_GET['slug']) or (trim($_GET['slug']) === '')) {
 $db = new DB(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 $speaker = $db->getSpeakerBySlug($_GET['slug'])[0];
 $db->close();
+$event = $_GET['event'];
 ?>
 
 <!DOCTYPE html>
@@ -166,7 +167,7 @@ $db->close();
                         <?php endif; ?>
                     </ul>
                 </div>
-                <p class="emms__hero-conference__certificate emms__fade-in">Descarga <a data-target="certificateModal" data-toggle="emms__certificate-modal">aquí</a> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag #EMMSECOMMERCE :)</p>
+                <p class="emms__hero-conference__certificate emms__fade-in">Descarga <a data-target="certificateModal" data-toggle="emms__certificate-modal">aquí</a> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag <?= ($event === 'ecommerce') ?  '#EMMSECOMMERCE :)' : '#EMMSDT' ?> </p>
             </div>
         </section>
 
@@ -178,7 +179,7 @@ $db->close();
                 <form id="certificateForm">
                     <input type="text" placeholder="Nombre y apellido" name="fullname">
                     <span class="certificateError">¡Ouch! Debes ingresar al menos 2 caracteres.</span>
-                    <a class="emms__cta emms__fade-in" type="button" id="certificateEcommerceCta"><span class="button__text">QUIERO DESCARGARLO</span></a>
+                    <a class="emms__cta emms__fade-in" type="button" id="certificateCta"><span class="button__text">QUIERO DESCARGARLO</span></a>
                     <button class="emms__certificate-modal__window__close" data-dismiss="emms__certificate-modal"></button>
                 </form>
             </div>
@@ -211,7 +212,7 @@ $db->close();
     <script src="src/<?= VERSION ?>/js/calendarBio.js"></script>
     <script src="src/<?= VERSION ?>/js/certificateModal.js"></script>
     <script src="src/<?= VERSION ?>/js/speakersInterna.js" type="module"></script>
-    <script src="src/<?= VERSION ?>/js/certificate/certificateEcommerce.js" type="module"></script>
+    <script src="src/<?= VERSION ?>/js/certificate/certificateSpeaker.js" type="module"></script>
     <script src="src/<?= VERSION ?>/js/vendors/intlTelInput.min.js"></script>
     <?php include_once('././src/components/intellInput.php'); ?>
 
