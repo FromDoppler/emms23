@@ -211,28 +211,6 @@ require_once('././src/components/cacheSettings.php');
             </div>
         </section>
 
-        <!-- Separator -->
-        <div class="emms__separator"></div>
-
-        <!-- Central Video -->
-        <section class="emms__centralvideo">
-            <div class="emms__background-b"></div>
-            <div class="emms__background-a"></div>
-            <div class="emms__container--md">
-                <div class="emms__centralvideo__title emms__fade-in">
-                    <h2>¡No dejes de aprender!</br> Vuelve el EMMS Digital Trends</h2>
-                    <p>Si quieres descubrir aún más <strong>tendencias en Marketing Digital</strong> para potenciar tu negocio, en <strong>noviembre</strong> volvemos con muchas más conferencias y contenido exclusivo en el evento en español más elegido cada año por miles de profesionales.</p>
-                </div>
-                <div class="emms__centralvideo__video emms__fade-in">
-                    <video src="src/img/EmmsDigitalTrends.mp4" controls></video>
-                </div>
-                <div class="emms__centralvideo__cta emms__fade-in">
-                    <a href="./digital-trends" class="emms__cta">MÁS INFORMACIÓN</a>
-                    <small><i>¿Tienes dudas sobre el EMMS 2023?</i> Haz <a href="./registrado#preguntas-frecuentes" target="_blank">clic aquí</a> y encuentra las preguntas más frecuentes sobre el evento.</small>
-                </div>
-            </div>
-        </section>
-
         <!-- Doppler Banner -->
         <?php include_once('././src/components/doppler-academy-banner.php'); ?>
 

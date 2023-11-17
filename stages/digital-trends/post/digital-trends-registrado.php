@@ -34,11 +34,10 @@ require_once('././config.php');
                         <ul class="emms__header__nav__submenu">
                             <li><a href="#agenda">agenda</a></li>
                             <li><a href="#entradas">entradas</a></li>
-                            <li><a href="#vip">secciones VIP</a></li>
-                            <li><a href="https://www.digital-trends.goemms.com/workshops?utm_source=manage.wix.com" target="_blank">contenido Premium</a></li>
                         </ul>
                     </li>
-                    <li><a href="/sponsors">contenido exclusivo</a></li>
+                    <li><a href="/sponsors-registrado">biblioteca de recursos</a></li>
+                    <li><a href="/ediciones-anteriores-registrado">ediciones anteriores</a></li>
                 </ul>
             </nav>
         </div>
@@ -74,31 +73,6 @@ require_once('././config.php');
                 <h1 class="emms__fade-top">Revive las Conferencias del EMMS Digital Trends 2023</h1>
                 <p class="emms__fade-in">Aquí los máximos referentes del Marketing compartieron las últimas tendencias para potenciar tu estrategia digital. Mira las conferencias y accede también a los Workshops prácticos con tu Entrada VIP.</p>
                 <br></BR><a href="#entradas" class="emms__cta">OBTÉN TU ENTRADA VIP</a>
-            </div>
-        </section>
-
-        <!-- Event numbers -->
-        <section class="emms__eventnumbers emms__eventnumbers--large" id="boxNumberLarge">
-            <div class="emms__container--lg">
-                <h2 class="emms__fade-in">EMMS a lo largo del tiempo</h2>
-                <ul class="emms__fade-in">
-                    <li>
-                        <p class="number" id="count1L">265</p>
-                        <span>REGISTRADOS</span>
-                    </li>
-                    <li>
-                        <p class="number" id="count4L">190</p>
-                        <span>Speakers</span>
-                    </li>
-                    <li>
-                        <p class="number" id="count3L">10</p>
-                        <span>Países</span>
-                    </li>
-                    <li>
-                        <p class="number" id="count2L">15</p>
-                        <span>Años</span>
-                    </li>
-                </ul>
             </div>
         </section>
 
@@ -237,7 +211,8 @@ require_once('././config.php');
                 <?php else : ?>
                     <div class="emms__calendar__vip__title full emms__fade-in">
                         <h4>WORKSHOPS <strong>PARA ASISTENTES VIP</strong></h4>
-                        <p>Disponibles a partir del 20/11</p>
+                        <a href="#entradas" class="emms__cta sm">ACCEDE A LOS WORKSHOPS</a>
+                        <p>Ya tengo mi entrada VIP, <a href="https://www.digital-trends.goemms.com/">QUIERO VER LAS GRABACIONES</a></p>
                     </div>
                 <?php endif ?>
                 <!-- List VIP-->
