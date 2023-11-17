@@ -218,7 +218,7 @@ require_once('././src/components/cacheSettings.php');
                     <li>Networking</li>
                     <li>Workshops prácticos</li>
                 </ul>
-                <a class="emms__cta activeButtonWithoutForm"><span class="button__text">FORMA PARTE</span></a>
+                <a class="emms__cta activeButtonWithoutForm"><span class="button__text">REVIVE EL EVENTO</span></a>
             </div>
             <div class="emms__hero-registration__bottom images emms__fade-in">
                 <p>
@@ -377,7 +377,7 @@ require_once('././src/components/cacheSettings.php');
                     <div class="emms__calendar__vip__title emms__fade-in">
                         <h4>WORKSHOPS <strong>PARA ASISTENTES VIP</strong>
                             <a class="activeFormButton eventHiddenElements">¡RESERVA TU LUGAR!</a>
-                            <a class="activeButtonWithoutForm eventHiddenElements eventShowElements">¡RESERVA TU LUGAR!</a>
+                            <a href="#entradas">ACCEDE A LOS WORKSHOPS</a>
                         </h4>
                     </div>
                 <?php else : ?>
@@ -484,8 +484,8 @@ require_once('././src/components/cacheSettings.php');
                 <!-- End list -->
                 <div class="emms__container--lg">
                     <div class="emms__calendar__bottom emms__fade-in">
-                        <a class="emms__cta activeFormButton eventHiddenElements">REGÍSTRATE GRATIS</a>
-                        <a class="emms__cta activeButtonWithoutForm eventHiddenElements eventShowElements"><span class="button__text">REGÍSTRATE GRATIS</span></a>
+                        <a class="emms__cta activeFormButton eventHiddenElements">REVIVE EL EVENTO</a>
+                        <a class="emms__cta activeButtonWithoutForm eventHiddenElements eventShowElements"><span class="button__text">REVIVE EL EVENTO</span></a>
                     </div>
                 </div>
             </div>
@@ -646,7 +646,8 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                 </ul>
                 <div class="emms__grid__bottom">
-                    <a href="#entradas" class="emms__cta">OBTÉN TU ENTRADA VIP</a>
+                    <a class="emms__cta activeFormButton eventHiddenElements">REGÍSTRATE GRATIS</a>
+                    <a class="emms__cta activeButtonWithoutForm eventHiddenElements eventShowElements" style="max-width: 200px; margin: 0 auto;"><span class="button__text">REGÍSTRATE GRATIS</span></a>
                 </div>
                 <div id="entradas"></div>
             </div>
