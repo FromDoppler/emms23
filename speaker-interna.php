@@ -73,7 +73,8 @@ $event = $_GET['event'];
                     <div id="formContainer" class="dp--none">
                         <!-- Registro con Form -->
                         <form class="emms__form emms__fade-in eventHiddenElements" novalidate autocomplete="off" id="speakerForm">
-                            <ul class="emms__form__field-group">
+                        <h2>Regístrate gratis ahora y accede a todas las conferencias del EMMS</h2><br>
+                        <ul class="emms__form__field-group">
                                 <li class="emms__form__field-item">
                                     <div class="holder">
                                         <label class="required-label" for="name">Nombre *</label>
@@ -167,7 +168,7 @@ $event = $_GET['event'];
                         <?php endif; ?>
                     </ul>
                 </div>
-                <p class="emms__hero-conference__certificate emms__fade-in">Descarga <a data-target="certificateModal" data-toggle="emms__certificate-modal">aquí</a> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag <?= ($event === 'ecommerce') ?  '#EMMSECOMMERCE :)' : '#EMMSDT' ?> </p>
+                <p class="emms__hero-conference__certificate emms__fade-in">Descarga <a data-target="certificateModal" data-toggle="emms__certificate-modal">aquí</a> tu Certificado de Asistencia y compártelo en Redes Sociales usando el Hashtag #EMMS2023</p>
             </div>
         </section>
 
@@ -190,9 +191,9 @@ $event = $_GET['event'];
             <div class="emms__background-a"></div>
             <div class="emms__container--lg">
                 <div class="emms__premium-content__text emms__fade-in">
-                    <h2>Desbloquea Contenido Premium ¡gratis! </h2>
-                    <p>Descubre <strong>recursos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas ponerlos en práctica y potenciar tu Tienda Online.</p>
-                    <a href="./sponsors-registrado" class="emms__cta emms__fade-in">DESCÚBRELO AQUÍ</a>
+                    <h2>Accede a la Biblioteca de Recursos ¡gratis!</h2>
+                    <p>Descubre <strong>contenidos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas potenciar al máximo tu negocio.</p>
+                    <a href="./sponsors-registrado" class="emms__cta emms__fade-in">ACCEDE AQUÍ</a>
                 </div>
                 <div class="emms__premium-content__picture emms__fade-in">
                     <img src="src/img/download--locked.png" alt="Contenido Premium">

@@ -21,6 +21,11 @@
     grid-gap: 20px;
 }
 
+.emms__grid.emms__grid--2 .emms__grid__content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
 .emms__grid__item .emms__grid__item__image {
     margin: 0 0 24px 0;
 }
@@ -70,7 +75,8 @@
         margin: 0 0 50px 0;
     }
 
-    .emms__grid.emms__grid--3 .emms__grid__content {
+    .emms__grid.emms__grid--3 .emms__grid__content,
+    .emms__grid.emms__grid--2 .emms__grid__content {
         grid-template-columns: repeat(1, 1fr);
     }
 

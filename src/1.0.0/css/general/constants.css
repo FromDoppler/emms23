@@ -171,6 +171,11 @@ p {
     margin: 0 auto;
 }
 
+/* Hide */
+.hide{
+    display: none;
+}
+
 /* Hide in responsive */
 
 .mb, .mb--tablet__on {

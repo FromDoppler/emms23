@@ -70,9 +70,9 @@ require_once('././config.php');
         <!-- Hero -->
         <section class="emms__hero-registration--registered">
             <div class="emms__container--md">
-                <h1 class="emms__fade-top">Revive las Conferencias del EMMS Digital Trends 2023</h1>
-                <p class="emms__fade-in">Aquí los máximos referentes del Marketing compartieron las últimas tendencias para potenciar tu estrategia digital. Mira las conferencias y accede también a los Workshops prácticos con tu Entrada VIP.</p>
-                <br></BR><a href="#entradas" class="emms__cta">OBTÉN TU ENTRADA VIP</a>
+                <h1 class="emms__fade-top">Revive el EMMS Digital Trends 2023</h1>
+                <p class="emms__fade-in">Accede a todas las ponencias gratuitas y, si aún no tienes tu Acceso VIP, ¡cómpralo ahora para ver también los Workshops!</p>
+                <br></BR><a href="#entradas" class="emms__cta">ACCEDE A LOS CONTENIDOS VIP</a>
             </div>
         </section>
 
@@ -82,7 +82,7 @@ require_once('././config.php');
             <div class="emms__container--lg">
                 <div class="emms__calendar__title emms__fade-in">
                     <h2>Agenda EMMS Digital Trends 2023</h2>
-                    <p>Descubre a los <strong>ponentes</strong> que nos acompañaron en esta edición y las <strong>temáticas</strong> de sus charlas</p>
+                    <p>Descubre todas las conferencias y actividades VIP que formaron parte de esta gran edición. ¡Accede a las grabaciones para revivirlas!</p>
                 </div>
             </div>
             <!-- Speakers -->
@@ -315,10 +315,10 @@ require_once('././config.php');
 
 
         <!-- Grid -->
-        <section class="emms__grid emms__grid--3 emms__bg-w">
+        <section class="emms__grid emms__grid--2 emms__bg-w">
             <div class="emms__container--md">
                 <div class="emms__grid__title">
-                    <h2>Vive la experiencia completa en EMMS Digital Trends</h2>
+                    <h2>Revive la experiencia completa en EMMS Digital Trends</h2>
                 </div>
                 <ul class="emms__grid__content">
                     <li class="emms__grid__item">
@@ -332,29 +332,11 @@ require_once('././config.php');
                     </li>
                     <li class="emms__grid__item">
                         <div class="emms__grid__item__image">
-                            <img src="src/img/entrevistas.png" alt="Image">
-                        </div>
-                        <div class="emms__grid__item__text">
-                            <h3>Entrevistas</h3>
-                            <p>Asiste a conversaciones con directivos y profesionales que marcan tendencia con sus negocios para escuchar sus mejores consejos, experiencias y proyecciones del mercado. </p>
-                        </div>
-                    </li>
-                    <li class="emms__grid__item">
-                        <div class="emms__grid__item__image">
                             <img src="src/img/exito.png" alt="Image">
                         </div>
                         <div class="emms__grid__item__text">
                             <h3>Casos de Éxito</h3>
                             <p>Escucha directamente de los representantes de compañías líderes cuáles fueron las estrategias que impulsaron el éxito de sus negocios y conoce sus mejores tácticas para vender más.</p>
-                        </div>
-                    </li>
-                    <li class="emms__grid__item">
-                        <div class="emms__grid__item__image">
-                            <img src="src/img/networking.png" alt="Image">
-                        </div>
-                        <div class="emms__grid__item__text">
-                            <h3>Networking</h3>
-                            <p>Únete a valiosas conversaciones con los exponentes del sector, conoce nuevos colegas y expande las redes de tu negocio para impulsar su crecimiento.</p>
                         </div>
                     </li>
                     <li class="emms__grid__item">
@@ -397,15 +379,12 @@ require_once('././config.php');
                             <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
                         </li>
                         <li>Volver a ver las conferencias todas las veces que quieras</li>
-                        <li>Participación en los sorteos</li>
                         <li>Descuentos en herramientas y cursos</li>
                         <li>Certificado de participación a las conferencias</li>
                         <li>
                             <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
                         </li>
                         <li>Certificado de asistencia a Workshops</li>
-                        <li>Acceso a licencias y descuentos en herramientas para tu estrategia digital</li>
-                        <li>Networking con participantes y speakers</li>
                     </ul>
                 </div>
                 <div class="emms__plans__cards-container emms__fade-in">
@@ -428,9 +407,6 @@ require_once('././config.php');
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Volver a ver las conferencias todas las veces que quieras</p>
                                     </li>
-                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Participación en los sorteos</p>
-                                    </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Descuentos en herramientas y cursos</p>
                                     </li>
@@ -442,12 +418,6 @@ require_once('././config.php');
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
                                         <p>Certificado de asistencia a Workshops</p>
-                                    </li>
-                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
-                                        <p>Acceso a licencias y descuentos en herramientas para tu estrategia digital</p>
-                                    </li>
-                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
-                                        <p>Networking con participantes y speakers</p>
                                     </li>
                                     <button class="emms__collapse-btn"></button>
                                 </ul>
@@ -476,9 +446,6 @@ require_once('././config.php');
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Volver a ver las conferencias todas las veces que quieras</p>
                                     </li>
-                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Participación en los sorteos</p>
-                                    </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Descuentos en herramientas y cursos</p>
                                     </li>
@@ -490,12 +457,6 @@ require_once('././config.php');
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Certificado de asistencia a Workshops</p>
-                                    </li>
-                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a licencias y descuentos en herramientas para tu estrategia digital</p>
-                                    </li>
-                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Networking con participantes y speakers</p>
                                     </li>
                                     <button class="emms__collapse-btn"></button>
                                 </ul>
@@ -527,9 +488,6 @@ require_once('././config.php');
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Volver a ver las conferencias todas las veces que quieras</p>
                                         </li>
-                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Participación en los sorteos</p>
-                                        </li>
                                         <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Descuentos en herramientas y cursos</p>
                                         </li>
@@ -541,12 +499,6 @@ require_once('././config.php');
                                         </li>
                                         <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Certificado de asistencia a Workshops</p>
-                                        </li>
-                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a licencias y descuentos en herramientas para tu estrategia digital</p>
-                                        </li>
-                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Networking con participantes y speakers</p>
                                         </li>
                                         <button class="emms__collapse-btn"></button>
                                     </ul>
@@ -575,9 +527,6 @@ require_once('././config.php');
                                             <p>Volver a ver las conferencias todas las veces que quieras</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Participación en los sorteos</p>
-                                        </li>
-                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Descuentos en herramientas y cursos</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
@@ -588,12 +537,6 @@ require_once('././config.php');
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Certificado de asistencia a Workshops</p>
-                                        </li>
-                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a licencias y descuentos en herramientas para tu estrategia digital</p>
-                                        </li>
-                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Networking con participantes y speakers</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -613,9 +556,9 @@ require_once('././config.php');
         <section class="emms__premium-content emms__premium-content--dark">
             <div class="emms__container--lg">
                 <div class="emms__premium-content__text emms__fade-in">
-                    <h2>Desbloquea Contenido Premium ¡gratis! </h2>
-                    <p>Descubre <strong>recursos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas ponerlos en práctica y potenciar tu Tienda Online.</p>
-                    <a href="./sponsors" class="emms__cta emms__fade-in">DESCÚBRELO AQUÍ</a>
+                    <h2>Accede a la Biblioteca de Recursos ¡gratis!</h2>
+                    <p>Descubre <strong>contenidos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas potenciar al máximo tu negocio.</p>
+                    <a href="./sponsors" class="emms__cta emms__fade-in">ACCEDE AQUÍ</a>
                 </div>
                 <div class="emms__premium-content__picture emms__fade-in">
                     <img src="src/img/download--locked.png" alt="Contenido Premium">

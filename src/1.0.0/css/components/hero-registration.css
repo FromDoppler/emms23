@@ -44,7 +44,8 @@
 }
 
 .emms__hero-registration .emms__hero-registration__text .emms__hero-registration__text__checklist {
-    margin: 30px 0 0 0;
+    max-width: 380px;
+    margin: 30px auto 0 auto;
 }
 
 .emms__hero-registration .emms__hero-registration__text .emms__hero-registration__text__checklist li {
