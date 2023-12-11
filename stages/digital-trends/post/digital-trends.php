@@ -83,8 +83,8 @@ require_once('././src/components/cacheSettings.php');
             </div>
             <div class="emms__hero-registration__columns">
                 <div class="emms__hero-registration__text emms__fade-in">
-                    <h1><em>EVENTO ONLINE Y GRATUITO</em> EMMS Digital Trends 2023</h1>
-                    <p>Inspírate y aprende con tus máximos referentes en el mayor evento de Marketing Digital. <strong>Revívelo ahora</strong></p>
+                    <h1><em>EVENTO ONLINE Y GRATUITO</em> Revive el EMMS <br> Digital Trends 2023</h1>
+                    <p>Inspírate y aprende con tus máximos referentes en el mayor evento de Marketing Digital. <strong>Accede ahora</strong></p>
                     <ul class="emms__hero-registration__text__checklist">
                         <li>CONFERENCIAS</li>
                         <li>NETWORKING</li>
@@ -235,14 +235,13 @@ require_once('././src/components/cacheSettings.php');
                 <video src="https://goemms.com/src/img/video-back-dt.mp4" muted autoplay loop></video>
             </div>
             <div class="emms__hero-registration__text emms__fade-in">
-                <h1><em>EVENTO ONLINE Y GRATUITO</em> ¡Estás a un paso de acceder al EMMS Digital Trends 2023!</h1>
-                <p>Revive el evento de Marketing Digital más importante del año y descubre las últimas estrategias para potenciar tu negocio de la mano de los referentes más destacados. ¡Accede ahora!</p>
+                <h1><em>EVENTO ONLINE Y GRATUITO</em> Estás a un paso, ¡revive el EMMS Digital Trends 2023!</h1>
+                <p>Descubre ahora las conferencias y workshops que vivimos en el evento de Marketing Digital más importante del año. ¡Accede ahora!</p>
                 <ul class="emms__hero-registration__text__checklist checklist--center">
-                    <li>Conferencias</li>
-                    <li>Networking</li>
+                    <li>Conferencias gratuitas</li>
                     <li>Workshops prácticos</li>
                 </ul>
-                <a class="emms__cta activeButtonWithoutForm"><span class="button__text">REVIVE EL EVENTO</span></a>
+                <a class="emms__cta activeButtonWithoutForm"><span class="button__text">ACCEDE AHORA</span></a>
             </div>
             <div class="emms__hero-registration__bottom images emms__fade-in">
                 <p>
@@ -309,8 +308,8 @@ require_once('././src/components/cacheSettings.php');
             <div class="emms__calendar__subtitle emms__fade-in">
                 <h4>CONFERENCIAS GRATUITAS</h4>
                 <?php if (($_SERVER['PHP_SELF']) === "/digital-trends.php") : ?>
-                    <a class="emms__cta sm activeFormButton eventHiddenElements">REGÍSTRATE GRATIS</a>
-                    <a class="emms__cta sm activeButtonWithoutForm eventHiddenElements eventShowElements"><span class="button__text">REGÍSTRATE GRATIS</span></a>
+                    <a class="emms__cta sm activeFormButton eventHiddenElements">REVÍVELAS AHORA</a>
+                    <a class="emms__cta sm activeButtonWithoutForm eventHiddenElements eventShowElements"><span class="button__text">REVÍVELAS AHORA</span></a>
                 <?php endif ?>
             </div>
             <ul class="emms__calendar__list emms__calendar__list--dk emms__fade-in">
@@ -424,8 +423,7 @@ require_once('././src/components/cacheSettings.php');
                 <?php if (($_SERVER['PHP_SELF']) === "/digital-trends.php") : ?>
                     <div class="emms__calendar__vip__title emms__fade-in">
                         <h4>WORKSHOPS <strong>PARA ASISTENTES VIP</strong>
-                            <a class="activeFormButton eventHiddenElements">¡RESERVA TU LUGAR!</a>
-                            <a href="#entradas">ACCEDE A LOS WORKSHOPS</a>
+                            <a href="#entradas">¡ACCEDE!</a>
                         </h4>
                     </div>
                 <?php else : ?>
@@ -632,10 +630,10 @@ require_once('././src/components/cacheSettings.php');
 
 
         <!-- Grid -->
-        <section class="emms__grid emms__grid--3 emms__bg-w">
+        <section class="emms__grid emms__grid--2 emms__bg-w">
             <div class="emms__container--md">
                 <div class="emms__grid__title">
-                    <h2>Vive la experiencia completa en EMMS Digital Trends</h2>
+                    <h2>Revive la experiencia completa en EMMS Digital Trends</h2>
                 </div>
                 <ul class="emms__grid__content">
                     <li class="emms__grid__item">
@@ -649,29 +647,11 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                     <li class="emms__grid__item">
                         <div class="emms__grid__item__image">
-                            <img src="src/img/entrevistas.png" alt="Image">
-                        </div>
-                        <div class="emms__grid__item__text">
-                            <h3>Entrevistas</h3>
-                            <p>Asiste a conversaciones con directivos y profesionales que marcan tendencia con sus negocios para escuchar sus mejores consejos, experiencias y proyecciones del mercado. </p>
-                        </div>
-                    </li>
-                    <li class="emms__grid__item">
-                        <div class="emms__grid__item__image">
                             <img src="src/img/exito.png" alt="Image">
                         </div>
                         <div class="emms__grid__item__text">
                             <h3>Casos de Éxito</h3>
                             <p>Escucha directamente de los representantes de compañías líderes cuáles fueron las estrategias que impulsaron el éxito de sus negocios y conoce sus mejores tácticas para vender más.</p>
-                        </div>
-                    </li>
-                    <li class="emms__grid__item">
-                        <div class="emms__grid__item__image">
-                            <img src="src/img/networking.png" alt="Image">
-                        </div>
-                        <div class="emms__grid__item__text">
-                            <h3>Networking</h3>
-                            <p>Únete a valiosas conversaciones con los exponentes del sector, conoce nuevos colegas y expande las redes de tu negocio para impulsar su crecimiento.</p>
                         </div>
                     </li>
                     <li class="emms__grid__item">
@@ -694,8 +674,8 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                 </ul>
                 <div class="emms__grid__bottom">
-                    <a class="emms__cta activeFormButton eventHiddenElements">REGÍSTRATE GRATIS</a>
-                    <a class="emms__cta activeButtonWithoutForm eventHiddenElements eventShowElements" style="max-width: 200px; margin: 0 auto;"><span class="button__text">REGÍSTRATE GRATIS</span></a>
+                    <a class="emms__cta activeFormButton eventHiddenElements">REVIVE EL EVENTO</a>
+                    <a class="emms__cta activeButtonWithoutForm eventHiddenElements eventShowElements" style="max-width: 200px; margin: 0 auto;"><span class="button__text">REVIVE EL EVENTO</span></a>
                 </div>
                 <div id="entradas"></div>
             </div>
@@ -715,15 +695,12 @@ require_once('././src/components/cacheSettings.php');
                             <p>Acceso a todas las <a href="#agenda">conferencias</a></p>
                         </li>
                         <li>Volver a ver las conferencias todas las veces que quieras</li>
-                        <li>Participación en los sorteos</li>
                         <li>Descuentos en herramientas y cursos</li>
                         <li>Certificado de participación a las conferencias</li>
                         <li>
                             <p>Acceso ilimitado a todos los <a href="#agenda">Workshops prácticos</a></p>
                         </li>
                         <li>Certificado de asistencia a Workshops</li>
-                        <li>Acceso a licencias y descuentos en herramientas para tu estrategia digital</li>
-                        <li>Networking con participantes y speakers</li>
                     </ul>
                 </div>
                 <div class="emms__plans__cards-container emms__fade-in">
@@ -746,9 +723,6 @@ require_once('././src/components/cacheSettings.php');
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Volver a ver las conferencias todas las veces que quieras</p>
                                     </li>
-                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Participación en los sorteos</p>
-                                    </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Descuentos en herramientas y cursos</p>
                                     </li>
@@ -760,12 +734,6 @@ require_once('././src/components/cacheSettings.php');
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
                                         <p>Certificado de asistencia a Workshops</p>
-                                    </li>
-                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
-                                        <p>Acceso a licencias y descuentos en herramientas para tu estrategia digital</p>
-                                    </li>
-                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-wrong.svg" alt="no">
-                                        <p>Networking con participantes y speakers</p>
                                     </li>
                                     <button class="emms__collapse-btn"></button>
                                 </ul>
@@ -794,9 +762,6 @@ require_once('././src/components/cacheSettings.php');
                                     <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Volver a ver las conferencias todas las veces que quieras</p>
                                     </li>
-                                    <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Participación en los sorteos</p>
-                                    </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Descuentos en herramientas y cursos</p>
                                     </li>
@@ -808,12 +773,6 @@ require_once('././src/components/cacheSettings.php');
                                     </li>
                                     <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                         <p>Certificado de asistencia a Workshops</p>
-                                    </li>
-                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Acceso a licencias y descuentos en herramientas para tu estrategia digital</p>
-                                    </li>
-                                    <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                        <p>Networking con participantes y speakers</p>
                                     </li>
                                     <button class="emms__collapse-btn"></button>
                                 </ul>
@@ -845,9 +804,6 @@ require_once('././src/components/cacheSettings.php');
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Volver a ver las conferencias todas las veces que quieras</p>
                                         </li>
-                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Participación en los sorteos</p>
-                                        </li>
                                         <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Descuentos en herramientas y cursos</p>
                                         </li>
@@ -859,12 +815,6 @@ require_once('././src/components/cacheSettings.php');
                                         </li>
                                         <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Certificado de asistencia a Workshops</p>
-                                        </li>
-                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a licencias y descuentos en herramientas para tu estrategia digital</p>
-                                        </li>
-                                        <li class="emms__collapse__item"><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Networking con participantes y speakers</p>
                                         </li>
                                         <button class="emms__collapse-btn"></button>
                                     </ul>
@@ -893,9 +843,6 @@ require_once('././src/components/cacheSettings.php');
                                             <p>Volver a ver las conferencias todas las veces que quieras</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Participación en los sorteos</p>
-                                        </li>
-                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Descuentos en herramientas y cursos</p>
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
@@ -906,12 +853,6 @@ require_once('././src/components/cacheSettings.php');
                                         </li>
                                         <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
                                             <p>Certificado de asistencia a Workshops</p>
-                                        </li>
-                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Acceso a licencias y descuentos en herramientas para tu estrategia digital</p>
-                                        </li>
-                                        <li><img src="src/img/icons/icon-check--violet.svg" alt="sí">
-                                            <p>Networking con participantes y speakers</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -931,8 +872,8 @@ require_once('././src/components/cacheSettings.php');
         <section class="emms__premium-content">
             <div class="emms__container--lg">
                 <div class="emms__premium-content__text emms__fade-in">
-                    <h2>Desbloquea Contenido Premium ¡gratis! </h2>
-                    <p>Descubre <strong>recursos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas ponerlos en práctica y potenciar tu E-commerce.</p>
+                    <h2>Desbloquea la Biblioteca de Recursos ¡gratis!</h2>
+                    <p>Descubre contenidos descargables, herramientas y conferencias on-demand que te traen nuestros aliados para que puedas poner en práctica.</p>
                     <a href="./sponsors" class="emms__cta emms__fade-in">ACCEDE AQUÍ</a>
                 </div>
                 <div class="emms__premium-content__picture emms__fade-in">

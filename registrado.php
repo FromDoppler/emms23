@@ -115,9 +115,9 @@ require_once('././src/components/cacheSettings.php');
             <?php endif ?>
             <?php if ($digitalTrendsStates['isPost']) : ?>
                 <div class="emms__home__hero__title emms__fade-top">
-                    <h1><em>TODAS LAS TENDENCIAS EN MARKETING DIGITAL, EN UN SOLO LUGAR</em> Volvió el EMMS, ¡recargado!</h1>
+                    <h1><em>TODAS LAS TENDENCIAS EN MARKETING DIGITAL, EN UN SOLO LUGAR</em> Revive el EMMS 2023</h1>
                     <h2>ONLINE Y GRATUITO</h2>
-                    <p><span>Tras <strong>15 años</strong> como el evento líder en Marketing Digital de Latam y España, <strong>el EMMS evolucionó</strong>. </span>Accede a las <strong>ediciones E-commerce y Digital Trends</strong> para aprender e inspirarte con referentes en la industria.</p>
+                    <p><span>Tras <strong>15 años</strong> como el evento líder en Marketing Digital de Latam y España, <strong>el EMMS evolucionó</strong>. </span>Revive las <strong>ediciones E-commerce y Digital Trends</strong> para aprender e inspirarte con referentes en la industria.</p>
                     <div id="EMMS2023-ediciones"></div>
                 </div>
             <?php endif ?>
@@ -131,7 +131,7 @@ require_once('././src/components/cacheSettings.php');
                                 <div class="emms__eventCards__list__item__picture">
                                     <img src="src/img/card-image-ecommerce.png" alt="Image Ecommerce">
                                     <?php if ($ecommerceStates['isPost']) : ?>
-                                        <p class="top">EVENTO FINALIZADO</p>
+                                        <p class="top hide">EVENTO FINALIZADO</p>
                                     <?php endif ?>
                                 </div>
                                 <?php if ($ecommerceStates['isLive']) : ?>
@@ -217,7 +217,7 @@ require_once('././src/components/cacheSettings.php');
                                 <?php elseif ($ecommerceStates['isPost']) : ?>
                                     <div class="emms__eventCards__list__item__picture">
                                         <img src="src/img/card-image-ecommerce.png" alt="Image Ecommerce">
-                                        <p class="top">EVENTO FINALIZADO</p>
+                                        <p class="top hide">EVENTO FINALIZADO</p>
                                         <p>YA TE HAS REGISTRADO</p>
                                     </div>
                                     <div class="emms__eventCards__list__item__text">
@@ -282,7 +282,7 @@ require_once('././src/components/cacheSettings.php');
                                 <?php elseif ($digitalTrendsStates['isPost']) : ?>
                                     <div class="emms__eventCards__list__item__picture">
                                         <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
-                                        <p class="top">EVENTO FINALIZADO</p>
+                                        <p class="top hide">EVENTO FINALIZADO</p>
                                     </div>
                                     <div class="emms__eventCards__list__item__text">
                                         <h3>EMMS Digital Trends</h3>
@@ -345,7 +345,7 @@ require_once('././src/components/cacheSettings.php');
                                 <?php elseif ($digitalTrendsStates['isPost']) : ?>
                                     <div class="emms__eventCards__list__item__picture">
                                         <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
-                                        <p class="top">EVENTO FINALIZADO</p>
+                                        <p class="top hide">EVENTO FINALIZADO</p>
                                         <p>YA TE HAS REGISTRADO</p>
                                     </div>
                                     <div class="emms__eventCards__list__item__text">
@@ -383,7 +383,7 @@ require_once('././src/components/cacheSettings.php');
                                 <div class="emms__eventCards__list__item__picture">
                                     <img src="src/img/card-image-ecommerce.png" alt="Image Ecommerce">
                                     <?php if ($ecommerceStates['isPost']) : ?>
-                                        <p class="top">EVENTO FINALIZADO</p>
+                                        <p class="top hide">EVENTO FINALIZADO</p>
                                     <?php endif ?>
                                 </div>
                                 <?php if ($ecommerceStates['isLive']) : ?>
@@ -469,7 +469,7 @@ require_once('././src/components/cacheSettings.php');
                                 <?php elseif ($ecommerceStates['isPost']) : ?>
                                     <div class="emms__eventCards__list__item__picture">
                                         <img src="src/img/card-image-ecommerce.png" alt="Image Ecommerce">
-                                        <p class="top">EVENTO FINALIZADO</p>
+                                        <p class="top hide">EVENTO FINALIZADO</p>
                                         <p>YA TE HAS REGISTRADO</p>
                                     </div>
                                     <div class="emms__eventCards__list__item__text">
@@ -534,7 +534,7 @@ require_once('././src/components/cacheSettings.php');
                                 <?php elseif ($digitalTrendsStates['isPost']) : ?>
                                     <div class="emms__eventCards__list__item__picture">
                                         <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
-                                        <p class="top">EVENTO FINALIZADO</p>
+                                        <p class="top hide">EVENTO FINALIZADO</p>
                                     </div>
                                     <div class="emms__eventCards__list__item__text">
                                         <h3>EMMS Digital Trends</h3>
@@ -597,7 +597,7 @@ require_once('././src/components/cacheSettings.php');
                                 <?php elseif ($digitalTrendsStates['isPost']) : ?>
                                     <div class="emms__eventCards__list__item__picture">
                                         <img src="src/img/card-image-digitaltrends.png" alt="Image Digital Trends">
-                                        <p class="top">EVENTO FINALIZADO</p>
+                                        <p class="top hide">EVENTO FINALIZADO</p>
                                         <p>YA TE HAS REGISTRADO</p>
                                     </div>
                                     <div class="emms__eventCards__list__item__text">
@@ -647,7 +647,7 @@ require_once('././src/components/cacheSettings.php');
                     <?php endif ?>
                     <?php if ($ecommerceStates['isPost']) : ?>
                         <h2>¡El EMMS se renovó! Ahora, disfruta de dos ediciones imperdibles</h2>
-                        <p>Descubre en este video con qué te sorprenderá este año el EMMS, el evento más elegido por profesionales y expertos del Marketing Digital.</p>
+                        <p>Descubre en este video todo lo que el EMMS trajo en este 2023 junto a los máximos referentes en Marketing Digital y las marcas más reconocidas de la industria.</p>
                     <?php endif ?>
                 </div>
                 <div class="emms__centralvideo__video emms__fade-in">
@@ -746,10 +746,8 @@ require_once('././src/components/cacheSettings.php');
                         </li>
                     </ul>
                 </div>
-                <?php if ($digitalTrendsStates['isPre']) : ?>
-                    <small class="emms__fade-in"><strong>¡Está llegando el EMMS Digital Trends 2023!</strong><br>Descubre a los speakers que nos acompañarán en esta nueva edición.</small>
-                    <a href="./digital-trends-registrado#agenda" class="emms__cta emms__fade-in">AGENDA EMMS DIGITAL TRENDS 2023</a>
-                <?php endif ?>
+                <small class="emms__fade-in">Regístrate gratis para ver las conferencias de este año y recibir todas las novedades sobre la edición 2024.</small>
+                <a href="#registro" class="emms__cta emms__fade-in">RESERVA TU LUGAR</a>
             </div>
             <div class="emms__background-a"></div>
         </section>
@@ -758,9 +756,9 @@ require_once('././src/components/cacheSettings.php');
         <section class="emms__premium-content emms__premium-content--dark">
             <div class="emms__container--lg">
                 <div class="emms__premium-content__text emms__fade-in">
-                    <h2>Desbloquea Contenido Premium ¡gratis! </h2>
-                    <p>Descubre <strong>recursos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas ponerlos en práctica y potenciar tu negocio.</p>
-                    <a href="./sponsors-registrado" class="emms__cta emms__fade-in">ACCEDE AHORA</a>
+                    <h2>Accede a la Biblioteca de Recursos ¡gratis!</h2>
+                    <p>Descubre <strong>contenidos descargables, herramientas y conferencias on-demand</strong> que te traen nuestros aliados para que puedas potenciar al máximo tu negocio.</p>
+                    <a href="./sponsors" class="emms__cta emms__fade-in">ACCEDE AQUÍ</a>
                 </div>
                 <div class="emms__premium-content__picture emms__fade-in">
                     <img src="src/img/download--locked.png" alt="Contenido Premium">
