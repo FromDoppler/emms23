@@ -15,9 +15,11 @@ class SubscriptionErrors
     public function saveSubscriptionErrorsTable($email, $list, $reason, $errorCode)
     {
         try {
+            // Convertir cadena vacía a null
+            $errorCode = $errorCode !== '' ? $errorCode : null;
             $this->db->insertSubscriptionErrors($email, $list, $reason, $errorCode);
         } catch (Exception $e) {
-            throw new Exception("saveSubscriptionErrorsTable ". $e->getMessage(). 'email '. $email);
+            throw new Exception("saveSubscriptionErrorsTable: ". json_encode($e).' email '. $email);
         }
     }
 
@@ -42,8 +44,9 @@ class SubscriptionErrors
         }
 
         return array(
-            'reason' => $reason,
-            'errorCode' => $errorCode
+            'reason' => ($reason)?$reason:$errorMessage,
+            'errorCode' =>  ($errorCode)?$errorCode:0
         );
+
     }
 }
