@@ -124,7 +124,8 @@
 .emms__sponsors__list .emms__sponsors__list__content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
+    column-gap: 8%;
     max-width: 1080px;
     margin: 0 auto;
     animation-delay: .3s;
