@@ -209,6 +209,14 @@ require_once('././src/components/cacheSettings.php');
                                 <span>¡No te lo pierdas!</span>
                             </a>
                         </div>
+                        <div class="emms__conferences__cards emms__fade-in">
+                            <a data-target="modalRegister" data-toggle="emms__register-modal">
+                                <img src="src/img/conferences/portada-juancruz-arocena.png" alt="Conferencias exclusivas">
+                                <h4>Hacks para impulsar tu marca personal</h4>
+                                <p>Duración: 00:17:40</p>
+                                <span>¡No te lo pierdas!</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
