@@ -108,10 +108,10 @@ require_once('././src/components/cacheSettings.php');
                 </div>
             <?php endif ?>
             <?php if ($digitalTrendsStates['isPost']) : ?>
-                <div class="emms__home__hero__title emms__fade-top" id="registro">
+                <div class="emms__home__hero__title emms__fade-top">
                     <h1><em>TODAS LAS TENDENCIAS EN MARKETING DIGITAL, EN UN SOLO LUGAR</em> Revive el EMMS 2023</h1>
                     <h2>ONLINE Y GRATUITO</h2>
-                    <p><span>Tras <strong>15 años</strong> como el evento líder en Marketing Digital de Latam y España, <strong>el EMMS evolucionó</strong>. </span>Accede a las <strong>ediciones E-commerce y Digital Trends</strong> para aprender e inspirarte con referentes en la industria.</p>
+                    <p id="registro"><span>Tras <strong>15 años</strong> como el evento líder en Marketing Digital de Latam y España, <strong>el EMMS evolucionó</strong>. </span>Accede a las <strong>ediciones E-commerce y Digital Trends</strong> para aprender e inspirarte con referentes en la industria.</p>
                 </div>
             <?php endif ?>
 
@@ -376,7 +376,7 @@ require_once('././src/components/cacheSettings.php');
                     </ul>
                 </div>
                 <small class="emms__fade-in">Regístrate gratis para ver las conferencias de este año y recibir todas las novedades sobre la edición 2024.</small>
-                <a href="#registro" class="emms__cta emms__fade-in">RESERVA TU LUGAR</a>
+                <a href="#registro" class="emms__cta emms__fade-in">REVIVE EL EMMS</a>
             </div>
         </section>
 

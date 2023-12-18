@@ -87,7 +87,6 @@ require_once('././src/components/cacheSettings.php');
                     <p>Inspírate y aprende con tus máximos referentes en el mayor evento de Marketing Digital. <strong>Accede ahora</strong></p>
                     <ul class="emms__hero-registration__text__checklist">
                         <li>CONFERENCIAS</li>
-                        <li>NETWORKING</li>
                         <li>WORKSHOPS PRÁCTICOS</li>
                     </ul>
                 </div>
@@ -912,10 +911,10 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                 </ul>
                 <div class="emms__userscomments__cta eventHiddenElements">
-                    <a href="#entradas" class="emms__cta emms__fade-in">RESERVA TU ENTRADA</a>
+                    <a href="#entradas" class="emms__cta emms__fade-in">REVIVE EL EMMS</a>
                 </div>
                 <div class="emms__userscomments__cta digitalTrendsBtn eventHiddenElements eventShowElements">
-                    <a href="#entradas" class="emms__cta emms__fade-in"><span class="button__text">RESERVA TU ENTRADA</span></a>
+                    <a href="#entradas" class="emms__cta emms__fade-in"><span class="button__text">REVIVE EL EMMS</span></a>
                 </div>
             </div>
         </section>
