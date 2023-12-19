@@ -746,8 +746,8 @@ require_once('././src/components/cacheSettings.php');
                         </li>
                     </ul>
                 </div>
-                <small class="emms__fade-in">Regístrate gratis para ver las conferencias de este año y recibir todas las novedades sobre la edición 2024.</small>
-                <a href="#registro" class="emms__cta emms__fade-in">RESERVA TU LUGAR</a>
+<!--                 <small class="emms__fade-in">Regístrate gratis para ver las conferencias de este año y recibir todas las novedades sobre la edición 2024.</small>
+                <a href="#registro" class="emms__cta emms__fade-in">REVIVE EL EMMS</a> -->
             </div>
             <div class="emms__background-a"></div>
         </section>
@@ -819,15 +819,15 @@ require_once('././src/components/cacheSettings.php');
                     </li>
                     <li class="emms__frequentquestions__list__item close">
                         <button class="emms__frequentquestions__list__item__head">💵 ¿Tengo que pagar inscripción?</button>
-                        <p class="emms__frequentquestions__list__item__content">El EMMS tiene un registro <strong>totalmente gratuito</strong>, válido para acceder a las Conferencias y para acceder a la Biblioteca de Recursos gratuita. Sin embargo, si además quieres capacitarte con más de 15 Workshops prácticos y tenerlos de por vida, puedes comprar una <a href="https://goemms.com/digital-trends#entradas">entrada VIP</a></p>
+                        <p class="emms__frequentquestions__list__item__content">El EMMS tiene un registro <strong>totalmente gratuito</strong>, válido para acceder a las Conferencias y para acceder a la Biblioteca de Recursos gratuita. Si además quieres capacitarte con más de 15 Workshops prácticos y tenerlos de por vida, puedes comprar una <a href="https://goemms.com/digital-trends-registrado#entradas">entrada VIP</a></p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
                         <button class="emms__frequentquestions__list__item__head">✍ ¿Puedo anotarme a otras ediciones?</button>
                         <p class="emms__frequentquestions__list__item__content">¡Sí! Cuando la fecha del evento se encuentre confirmada, podrás eligir <a href="#EMMS2023-ediciones">aquí</a> la edición a la que te interese para inscribirte gratis. Completa tus datos y ¡listo! Tu lugar ya quedará reservado.</p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
-                        <button class="emms__frequentquestions__list__item__head">💻 ¿Cómo accedo a la transmisión del EMMS una vez registrado?</button>
-                        <p class="emms__frequentquestions__list__item__content">Podrás ver los eventos desde esta misma Web en las fechas indicadas. Una vez que te registres, te enviaremos recordatorios y recibirás también el link para conectarte ese día. De la misma manera, para los Workshops y el Networking del EMMS DT, podrás encontrar los links de ingreso a las salas <a href="https://www.digital-trends.goemms.com/">en la página</a>, accediendo con tu usuario y contraseña.</p>
+                        <button class="emms__frequentquestions__list__item__head">💻 ¿Cómo accedo a la transmisión del EMMS una vez que me registré?</button>
+                        <p class="emms__frequentquestions__list__item__content">Las conferencias de las ediciones pasadas están grabadas y puedes acceder desde esta misma Web. Elige Digital Trends, EMMS E-commerce o dirígete en la navigation bar a Ediciones Anteriores para ver otras.</p>
                     </li>
                     <li class="emms__frequentquestions__list__item close">
                         <button class="emms__frequentquestions__list__item__head">🎥 ¿Están disponibles las grabaciones después del evento?</button>
