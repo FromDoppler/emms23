@@ -87,6 +87,7 @@ require_once('././src/components/cacheSettings.php');
                     <p>Inspírate y aprende con tus máximos referentes en el mayor evento de Marketing Digital. <strong>Accede ahora</strong></p>
                     <ul class="emms__hero-registration__text__checklist">
                         <li>CONFERENCIAS</li>
+                        <li>BIBLIOTECA DE RECURSOS</li>
                         <li>WORKSHOPS PRÁCTICOS</li>
                     </ul>
                 </div>
